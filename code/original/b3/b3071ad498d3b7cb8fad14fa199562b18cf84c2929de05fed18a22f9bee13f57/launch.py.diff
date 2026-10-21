@@ -1,0 +1,8 @@
+--- baseline/launch.py
++++ launch.py
+@@ -1,4 +1,4 @@
+-"""Combined-storage approval entrypoint, PREPARED ONLY. One attempt; exec retains one supervisor PID."""
++"""Journal-diagnostic approval entrypoint, PREPARED ONLY. One attempt; exec retains one supervisor PID."""
+ from pathlib import Path
+ import os,sys,json,time,hashlib,datetime
+ B=Path(__file__).resolve().parent

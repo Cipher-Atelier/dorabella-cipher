@@ -1,0 +1,24 @@
+P1 trace data-only audit, v1, 2026-10-18. One execution; no search/scoring/foreign imports.
+Inputs: exact saved BE_W16_v2 P1 events, evaluator/truth.json, decoder/inputs.json,
+case seal, frozen manifest, source driver.pl and original/Utils.pm; compare them with
+the already materialized exact Library result ZIP SHA256
+438bc53783e04e1eb20d79ebade8341acde6cb410475ac39736586b22ce64794.
+No other case is analyzed. No model tables read. Original files remain unchanged.
+Bounds: 30 seconds cooperative, RLIMIT_AS 128 MiB, CPU 30 s; at most 32000 event
+lines, event file <=8 MiB, result bundle <=16 MiB; output <=16 MiB per file.
+Every window record is counted. Empty means no candidate key and is not treated
+as an eligible/generated key. Statuses identity/scored/eligible retain source meanings.
+For every saved key, map its letters in the saved initialization alphabet order
+onto the saved 87-position pattern. Compare resulting full text and observed-key
+restriction with evaluator truth. This is direct data interpretation, not Assume,
+segmentation, scoring or candidate generation. Do not infer missing full26 keys.
+For scored records also compare their saved full26 encryption alphabet with truth,
+validate stored plaintext and inverse rows; no numerical scores are recomputed.
+Check counts, coordinate coverage, source-status consistency, selected-to-eligible
+and score-to-selected joins, completion record, and exact input hashes.
+Record all 30960 window rows, all selected/scored rows with byte offsets and flags.
+Report both occurrences and distinct observed keys. Stop on any inconsistency,
+preserve error, no repeat. Absence from proposals does not assess scorer quality or
+prove global unreachability. P1 is development. Old STOPs remain unchanged.
+Save raw tool result, data result, source references, code and per-record TSV.
+Library readback checks archive and member bytes only, without repeating analysis.

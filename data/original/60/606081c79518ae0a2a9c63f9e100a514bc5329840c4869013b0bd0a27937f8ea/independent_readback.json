@@ -1,0 +1,236 @@
+{
+  "status": "A2_PASS",
+  "scope": "Saved contract observations on22 frozen synthetic cases only",
+  "readback_method": "JSON/byte/hash/identity checks only; no imports or calls of mathematical procedures, no regenerated vectors",
+  "counts": {
+    "cases": 22,
+    "positive": 11,
+    "forced_missing": 3,
+    "invalid": 8,
+    "positions_per_positive": 87
+  },
+  "zip_sha256": "fab02cc29049c33950dabdd0899b2d90e849f91b33f303973dc6293f8c2a399d",
+  "manifest_sha256": "9564da52e4e2b776920b36eeb686bd95a37f717d1b47d50c2e124a8cd7047863",
+  "terminal_sha256": "55a60296734a306c451e53093fe94bb26e4f3827cdd2893c7d3ab0b3f0f25f17",
+  "started_sha256": "8242121245452633648fb78ae1eed6445e1c49bd58da902f0b130520e2989baf",
+  "observed_exit_code": 0,
+  "session_id_returned": false,
+  "abort_present": false,
+  "sources_unchanged_after_execution": 17,
+  "observer_start_utc": "2026-10-16T12:45:39.680Z",
+  "observer_end_utc": "2026-10-16T12:45:40.409Z",
+  "started_marker_utc": "2026-10-16T12:45:40.018264+00:00",
+  "elapsed_seconds": {
+    "runner_terminal_snapshot": 0.08315423099702457,
+    "runner_stdout_after_terminal_write": 0.08338774499861756,
+    "tool_wait_observation": 0.096366883,
+    "observer_call_including_overhead": 0.729
+  },
+  "timing_limit": "30s cooperative main-clock, not hard kill; exact OS process exit timestamp is not separately exposed; exit0 observed by call return.",
+  "repeat_count": 0,
+  "review_v1_T0": null,
+  "cases": [
+    {
+      "id": "anchor_identity",
+      "sha256": "ccef7c5971e4c71ce3ef3055fc3121b3995fb72f68779e8b14d0f5996a91c822",
+      "bytes": 36361,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": "identity_first24"
+    },
+    {
+      "id": "anchor_reverse_shift",
+      "sha256": "f4f4e3d53f117e76c30306655a268bb00659c652a8858191e4e0785558d3a8fe",
+      "bytes": 36370,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": "reverse_shift1"
+    },
+    {
+      "id": "anchor_all_z",
+      "sha256": "1e84c3c251be43f7b912df91f961b23d2c9fba9e8c2126690414d42ad87c1ccc",
+      "bytes": 36271,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": "z87"
+    },
+    {
+      "id": "route_000",
+      "sha256": "5a922711b372102ae26068ef1afdbd2c6cf9e4986e971b800e4a57c94f044198",
+      "bytes": 36254,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_001",
+      "sha256": "fb6d6eb26b9b708d47247d2bb1f4e4fa1ea66bf9e4c372e345105a3da3a5407f",
+      "bytes": 36286,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_010",
+      "sha256": "29ca72d1bb27445227c054885315d2a09716c5dd1a4ada00bcd9341f9b366e43",
+      "bytes": 36253,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_011",
+      "sha256": "0b69a29ca2a7f2d1f7180a1f1fc9d8d6f8fe9def10a1cf845aac5b2976ae6a2b",
+      "bytes": 36287,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_100",
+      "sha256": "5695ad3dcf0dcda61d78de1dffc715a739f859c3beaed4a8117751f86f8d8c73",
+      "bytes": 36257,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_101",
+      "sha256": "feb8ef7ed0daf722c117221d34ddbbb3f2bf3e8f3306c48c19e87bec9d32ab51",
+      "bytes": 36288,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_110",
+      "sha256": "ab0838d95f0da22fcfa215ebc70e47a0d11e6e8d63fcd640f77303a902585e1e",
+      "bytes": 36253,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "route_111",
+      "sha256": "7c8a5974f25821bb27eed8f4cb5005ba6c418028c778342c756c1b036f5caac8",
+      "bytes": 36286,
+      "outcome": "PASS",
+      "kind": "positive",
+      "exact_positions": 87,
+      "stored_golden": null
+    },
+    {
+      "id": "missing_00",
+      "sha256": "b26468cec55b1c7edd270c4b8635b9455d8955868acc9898dd59f68214a88f59",
+      "bytes": 10789,
+      "outcome": "PASS",
+      "kind": "forced_missing",
+      "refusal": "OUTSIDE_DOMAIN",
+      "missing_positions": [
+        42
+      ]
+    },
+    {
+      "id": "missing_12",
+      "sha256": "48058d195b2bd652c05ecb74d41fc3bab283242af2fe0f0c043e0e8e4275a7cc",
+      "bytes": 10792,
+      "outcome": "PASS",
+      "kind": "forced_missing",
+      "refusal": "OUTSIDE_DOMAIN",
+      "missing_positions": [
+        42
+      ]
+    },
+    {
+      "id": "missing_24",
+      "sha256": "680091737c05a6d883bb52e5087a3ce30fc2dff960e6e111d5495ea73f66ebb1",
+      "bytes": 10792,
+      "outcome": "PASS",
+      "kind": "forced_missing",
+      "refusal": "OUTSIDE_DOMAIN",
+      "missing_positions": [
+        42
+      ]
+    },
+    {
+      "id": "text86",
+      "sha256": "7f845db5191953f567db06c79ab1d20f034db26a650e184afc1fc8e33bf4f4e7",
+      "bytes": 1928,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "LENGTH_OUTSIDE"
+    },
+    {
+      "id": "text88",
+      "sha256": "1f5f5f3f6a53209d1b9081aba64530629b5d150f41c35c696b60ce7ddfe1ec12",
+      "bytes": 1930,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "LENGTH_OUTSIDE"
+    },
+    {
+      "id": "text_j87",
+      "sha256": "009d5fecb0de73960dae938b1cc0f4f79259354e5901535d7d28b84a704ca6b7",
+      "bytes": 2005,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "ALPHABET_OUTSIDE"
+    },
+    {
+      "id": "glyph86",
+      "sha256": "bf7a8ef85ae2c0c52bf0a05eb8fcadb588e63c15dfc536ebf4d0d01e6fece63a",
+      "bytes": 2388,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "GLYPHS"
+    },
+    {
+      "id": "glyph88",
+      "sha256": "388e68237fd4b56e25127edec8b11cd5d2a71c7f419e6d9341e3638727f23f08",
+      "bytes": 2402,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "GLYPHS"
+    },
+    {
+      "id": "glyph24",
+      "sha256": "e84aed7d70ad66f7a872d4e3f9f51eb4c9fa4ea8397891910a0a4c3950be82dd",
+      "bytes": 2396,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "GLYPHS"
+    },
+    {
+      "id": "route_duplicate",
+      "sha256": "294c45c14a563a6fd46649e049a789fd762eaf1810a891c8671d1de63dad3159",
+      "bytes": 2423,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "NOT_A_PERMUTATION"
+    },
+    {
+      "id": "arcs_duplicate",
+      "sha256": "3a8d5e1ff7de3ea673f01dc0e9c3cd5fb5bc7c104eef6fa5b4b3a0d46e19ba32",
+      "bytes": 2398,
+      "outcome": "PASS",
+      "kind": "invalid",
+      "refusal": "ARCS"
+    }
+  ],
+  "limitations": [
+    "Not original NumPy/Numba G0/G1",
+    "No sensitivity or plaintext recovery claim",
+    "Shared-error limits of frozen comparators remain",
+    "No permission for a subsequent series"
+  ]
+}

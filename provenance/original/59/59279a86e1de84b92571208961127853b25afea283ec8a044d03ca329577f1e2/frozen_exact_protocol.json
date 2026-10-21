@@ -1,0 +1,33 @@
+{
+  "protocol": {
+    "id": "round8-exact-trigram-geometry-crib-v1",
+    "frozen_utc": "2026-10-01T10:58:01.133222+00:00",
+    "input": "original round7 Hauer and Hartmeier, no glyph corrections",
+    "primary_statistic": "T12 = ||sum vectors row1||^2 + ||sum vectors row2||^2; lower is more closed; vectors direction 45*orientation degrees, length zero_based_arcs+1",
+    "secondary_statistics": [
+      "T123 sum squared radii all rows",
+      "each of three squared radii",
+      "two-row lower orthant (descriptive only)",
+      "fixed first12 crib equality-pattern mismatch",
+      "minimum equality-pattern mismatch over all76 windows"
+    ],
+    "crib": "FORLIMALVERN",
+    "row_lengths": [
+      29,
+      31,
+      27
+    ],
+    "null": "uniform over ALL DISTINCT strings with fixed directed trigrams, first two and last two glyphs; complete exact enumeration",
+    "small_toys": "compare enumerator and matrix-tree formula with full multiset permutations; independent high-precision comparison",
+    "prior_selection": "Exploratory continuation. Header and first-two-row closure selected in previous handoff. This is a frozen computation, not preregistration of the discovery.",
+    "no_language_solver": "No new MASC or language-score p-values; previous 105/999 not replicated here.",
+    "reporting": "transcriptions separate; no selection of the smaller fraction; primary and secondary labels fixed before enumeration"
+  },
+  "python": "3.13.5",
+  "sha256": {
+    "round8/exact_study.py": "e53403d9221cfd9b23fda8194cbcad76e683ba87ad75e3e8c78b35daa4a3fb1d",
+    "round8/enumerate_kgrams.cpp": "bc25e0b302faad5527be7880c62fb27594a820f50157b735ee5baa62926599c1",
+    "results/v7/conditional/inputs.json": "c5459b7f7bc4025fd329b3bcbe1a77a9f71f40ac320fd5dae3d817fd6c9fcb39",
+    "count_bigrams_v7.py": "887198748de7f0698977ddb859b2e10e1b016b45a074f506f27aa9476085c92c"
+  }
+}

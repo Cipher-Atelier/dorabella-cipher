@@ -1,0 +1,210 @@
+{
+  "scope": "saved-data sizing only",
+  "start_utc": "2026-10-17T17:55:43.534197+00:00",
+  "lists": [
+    {
+      "pattern": "a",
+      "count": 26,
+      "old_single_frame_bytes": 110,
+      "sum_value_bytes": 26,
+      "max_value_bytes": 1
+    },
+    {
+      "pattern": "aa",
+      "count": 41,
+      "old_single_frame_bytes": 211,
+      "sum_value_bytes": 82,
+      "max_value_bytes": 2
+    },
+    {
+      "pattern": "ab",
+      "count": 925,
+      "old_single_frame_bytes": 4631,
+      "sum_value_bytes": 1850,
+      "max_value_bytes": 2
+    },
+    {
+      "pattern": "aba",
+      "count": 224,
+      "old_single_frame_bytes": 1350,
+      "sum_value_bytes": 672,
+      "max_value_bytes": 3
+    },
+    {
+      "pattern": "abc",
+      "count": 3818,
+      "old_single_frame_bytes": 22914,
+      "sum_value_bytes": 11454,
+      "max_value_bytes": 3
+    },
+    {
+      "pattern": "abcdefgh",
+      "count": 63911,
+      "old_single_frame_bytes": 703027,
+      "sum_value_bytes": 511288,
+      "max_value_bytes": 8
+    },
+    {
+      "pattern": "!",
+      "count": 0,
+      "old_single_frame_bytes": 9,
+      "sum_value_bytes": 0,
+      "max_value_bytes": 0
+    }
+  ],
+  "first_process_sample_after_13s": {
+    "relative_to_author_start_seconds": 13.042744375998154,
+    "snapshot": {
+      "elapsed": 17.410370724996028,
+      "members": [
+        {
+          "visible_pid": 5747,
+          "visible_ppid": 5734,
+          "visible_pgid": 5747,
+          "visible_session": 5733,
+          "state": "S",
+          "starttime": 3836595,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            5747,
+            10
+          ],
+          "nspgid": [
+            5747,
+            10
+          ],
+          "nssid": [
+            5733,
+            1
+          ],
+          "cmdline": [
+            "/usr/bin/timeout",
+            "--signal=TERM",
+            "--kill-after=2s",
+            "175.632s",
+            "/usr/bin/env",
+            "-i",
+            "PATH=/usr/bin:/bin",
+            "LC_ALL=C",
+            "TZ=UTC",
+            "PERL_HASH_SEED=2026101705",
+            "PERL_PERTURB_KEYS=0",
+            "/usr/bin/prlimit",
+            "--as=4294967296:4294967296",
+            "--cpu=150:152",
+            "--core=0:0",
+            "--nofile=64:64",
+            "--fsize=16777216:16777216",
+            "--",
+            "/usr/bin/perl",
+            "-I",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_feasibility_20261017/original",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_feasibility_20261017/original/masc_solver_mcts.pl",
+            "-n",
+            "-v",
+            "-mi",
+            "2",
+            "-pc",
+            "1",
+            "-pl",
+            "50",
+            "-cc",
+            "0.05",
+            "-c1",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm1",
+            "-c2",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm2",
+            "-c3",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm3",
+            "-w1",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm1",
+            "-w2",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm2",
+            "-w3",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm3",
+            "-nl",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.patlst"
+          ],
+          "memory_status": [
+            "VmPeak:\t    2712 kB",
+            "VmSize:\t    2712 kB",
+            "VmHWM:\t     692 kB",
+            "VmRSS:\t     692 kB"
+          ],
+          "pid": 10,
+          "pgid": 10,
+          "session": 1
+        },
+        {
+          "visible_pid": 5748,
+          "visible_ppid": 5747,
+          "visible_pgid": 5747,
+          "visible_session": 5733,
+          "state": "R",
+          "starttime": 3836601,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            5748,
+            11
+          ],
+          "nspgid": [
+            5747,
+            10
+          ],
+          "nssid": [
+            5733,
+            1
+          ],
+          "cmdline": [
+            "/usr/bin/perl",
+            "-I",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_feasibility_20261017/original",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_feasibility_20261017/original/masc_solver_mcts.pl",
+            "-n",
+            "-v",
+            "-mi",
+            "2",
+            "-pc",
+            "1",
+            "-pl",
+            "50",
+            "-cc",
+            "0.05",
+            "-c1",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm1",
+            "-c2",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm2",
+            "-c3",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm3",
+            "-w1",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm1",
+            "-w2",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm2",
+            "-w3",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm3",
+            "-nl",
+            "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.patlst"
+          ],
+          "memory_status": [
+            "VmPeak:\t 1996444 kB",
+            "VmSize:\t 1996436 kB",
+            "VmHWM:\t 1991892 kB",
+            "VmRSS:\t 1991892 kB"
+          ],
+          "pid": 11,
+          "pgid": 10,
+          "session": 1
+        }
+      ]
+    }
+  },
+  "saved_global_candidate_bound": 63911,
+  "saved_global_max_candidate_bytes": 46,
+  "chunk_size": 64,
+  "conservative_ASCII_JSON_chunk_bound_bytes": 17984,
+  "max_chunks": 999,
+  "max_candidate_payload_bytes": 2939906,
+  "status": "SIZING_COMPLETE",
+  "elapsed": 0.02336751500115497,
+  "maxrss_KiB": 19316
+}

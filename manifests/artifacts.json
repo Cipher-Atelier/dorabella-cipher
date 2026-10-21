@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "assembled_date": "2026-10-21",
+  "archive_complete": false,
+  "scope": "Four small historical originals only; full inventory pending",
+  "artifacts": [
+    {
+      "artifact_id": "local-original-001",
+      "path": "reports/legacy-round14/research-summary.original.md",
+      "original_filename": "README.md",
+      "size_bytes": 3898,
+      "sha256": "9d8248943745f0db66dfc1a3734959954f4b4aa158154724edd5fdb46c2d214e",
+      "source_context": "approved historical-cipher-research local working material",
+      "source_relative_path": "dorabella/README.md",
+      "evidence_class": [
+        "negative-result",
+        "method-limitation"
+      ],
+      "role": "project-generated historical report",
+      "rights_status": "project historical minimal deposit; no blanket license or third-party rights grant",
+      "transfer_status": "deposited",
+      "bytes_preserved": true
+    },
+    {
+      "artifact_id": "local-original-002",
+      "path": "reports/legacy-round14/counters-scope.original.md",
+      "original_filename": "README.md",
+      "size_bytes": 1565,
+      "sha256": "e440b6f07e1d20c297030b0ae95ab7fa652c0bf5d0fe7f424ae94bab72c6335f",
+      "source_context": "approved historical-cipher-research local working material",
+      "source_relative_path": "verification/experiments/dorabella/README.md",
+      "evidence_class": [
+        "historical-control",
+        "method-limitation"
+      ],
+      "role": "project-generated historical scope note",
+      "rights_status": "project historical minimal deposit; no blanket license or third-party rights grant",
+      "transfer_status": "deposited",
+      "bytes_preserved": true
+    },
+    {
+      "artifact_id": "local-original-003",
+      "path": "data/legacy-round14/facts.json",
+      "original_filename": "facts.json",
+      "size_bytes": 40226,
+      "sha256": "3c0cec5d785b0fe114460bc6a35c24f215697f07e9113ecf1e9721f09dbfb2f6",
+      "source_context": "approved historical-cipher-research local working material",
+      "source_relative_path": "verification/experiments/dorabella/facts.json",
+      "evidence_class": [
+        "historical-control",
+        "recorded-counters"
+      ],
+      "role": "minimal factual result table",
+      "rights_status": "project historical minimal deposit; no blanket license or third-party rights grant",
+      "transfer_status": "deposited",
+      "bytes_preserved": true
+    },
+    {
+      "artifact_id": "local-original-004",
+      "path": "reports/coordinate-lag-20261009/summary.original.md",
+      "original_filename": "dorabella.md",
+      "size_bytes": 1566,
+      "sha256": "e1d144afa66e9f36e2723b2601d11130049b92ac90448a965fa86a50d49419c0",
+      "source_context": "published Cipher-Atelier/research-index 9 October update, recovered through local post-merge working copy",
+      "source_url": "https://github.com/Cipher-Atelier/research-index/blob/main/research-updates/2026-10-09/dorabella.md",
+      "verified_git_blob_sha1": "54d181be3bdb31725a5ba7780570bea430094b89",
+      "evidence_class": [
+        "negative-result",
+        "historical-control",
+        "method-limitation"
+      ],
+      "rights_status": "published project summary; no third-party rights grant",
+      "transfer_status": "deposited",
+      "bytes_preserved": true
+    }
+  ]
+}

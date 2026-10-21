@@ -1,0 +1,33 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "lab": "/mnt/data/dorabella_round13_lab/dorabella_lab",
+  "engine": "round11/engine.py",
+  "input": {
+    "type": "synthetic",
+    "seed": 1301,
+    "length": 87,
+    "glyph_range": [
+      0,
+      23
+    ],
+    "sha256": "10abe79f71717da2c8e1fa71e5b82b82fd72a17a721aaff37f909c37ab8c227a"
+  },
+  "family_keys": 30965760,
+  "benchmark": {
+    "p_count": 4,
+    "keys_measured": 3072,
+    "compile_seconds": 2.1276256429996465,
+    "warm_seconds": 0.0012923499998578336,
+    "warm_keys_per_second": 2377065.036822795,
+    "estimated_one_full_search_seconds": 13.026887998566961,
+    "note": "estimate extrapolates warm scan_block throughput; not a completed search"
+  },
+  "checks": {
+    "engine_scan_block_accepts_length_87": true,
+    "round11_code_modified": false,
+    "full87_search_run": false,
+    "control_degeneracy_check": false,
+    "direct_small_key_crosscheck": false
+  },
+  "status": "benchmark_only"
+}

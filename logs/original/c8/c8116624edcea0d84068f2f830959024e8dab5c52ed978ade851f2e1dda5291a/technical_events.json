@@ -1,0 +1,23 @@
+[
+  {
+    "utc": "2026-10-01T19:57:14.713627+00:00",
+    "event": "tool_timeout_during_supplemental_unpruned_audit",
+    "running_worker_on_followup_ps": false,
+    "action": "resume unchanged code from completed block manifests; no live process duplicated or interrupted",
+    "checkpoint_counts": {
+      "bailey_05": 40,
+      "elgar_caractacus_postcard": 40,
+      "hart_real_pair_00": 31,
+      "hauer_real": 40,
+      "hauer_real_pair_00": 32,
+      "hart_real": 40
+    },
+    "completed_cases_before_resume": [
+      "bailey_05",
+      "elgar_caractacus_postcard",
+      "hauer_real",
+      "hart_real"
+    ],
+    "main94_results_already_complete_and_verified": true
+  }
+]

@@ -1,0 +1,468 @@
+{
+  "after": {
+    "memory.current": "4542648320",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.max": "8589934592",
+    "memory.stat": "anon 94834688\nfile 4302802944\nkernel 143486976\nkernel_stack 704512\npagetables 3252224\nsec_pagetables 0\npercpu 6556\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 20348928\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 35651584\nshmem_thp 0\ninactive_anon 94547968\nactive_anon 73728\ninactive_file 2411552768\nactive_file 1891225600\nunevictable 0\nslab_reclaimable 138585376\nslab_unreclaimable 891768\nslab 139477144\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 2980183\npgmajfault 0\npgrefill 0\npgactivate 472162\npgdeactivate 0\npglazyfree 17\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"
+  },
+  "after_hashes": {
+    "memory.current": "4523089920",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.max": "8589934592",
+    "memory.stat": "anon 94150656\nfile 4284481536\nkernel 142692352\nkernel_stack 720896\npagetables 3256320\nsec_pagetables 0\npercpu 6556\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 1576960\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 35651584\nshmem_thp 0\ninactive_anon 93904896\nactive_anon 73728\ninactive_file 2393391104\nactive_file 1891090432\nunevictable 0\nslab_reclaimable 137762592\nslab_unreclaimable 918256\nslab 138680848\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 2961615\npgmajfault 0\npgrefill 0\npgactivate 472148\npgdeactivate 0\npglazyfree 17\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"
+  },
+  "before": {
+    "memory.current": "4522971136",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.max": "8589934592",
+    "memory.stat": "anon 94023680\nfile 4284469248\nkernel 142671872\nkernel_stack 720896\npagetables 3260416\nsec_pagetables 0\npercpu 6732\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 1576960\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 35651584\nshmem_thp 0\ninactive_anon 93757440\nactive_anon 73728\ninactive_file 2393382912\nactive_file 1891086336\nunevictable 0\nslab_reclaimable 137727120\nslab_unreclaimable 921784\nslab 138648904\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 2956559\npgmajfault 0\npgrefill 0\npgactivate 472147\npgdeactivate 0\npglazyfree 17\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"
+  },
+  "children_usage": [
+    35.740532,
+    4.760546,
+    14712,
+    0,
+    0,
+    0,
+    13120,
+    0,
+    0,
+    40,
+    34576,
+    0,
+    0,
+    0,
+    390997,
+    9014
+  ],
+  "commands": [
+    {
+      "anchor": {
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/child_gate.py",
+          "broker",
+          "11",
+          "3",
+          "6",
+          "7",
+          "10"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35640 kB",
+          "VmSize:\t   35640 kB",
+          "VmHWM:\t    8672 kB",
+          "VmRSS:\t    8672 kB"
+        ],
+        "nspgid": [
+          3056,
+          5
+        ],
+        "nspid": [
+          3056,
+          5
+        ],
+        "nssid": [
+          3056,
+          5
+        ],
+        "pgid": 5,
+        "pid": 5,
+        "pid_namespace": "pid:[4026532277]",
+        "session": 5,
+        "starttime": 760634,
+        "state": "S",
+        "visible_pgid": 3056,
+        "visible_pid": 3056,
+        "visible_ppid": 3053,
+        "visible_session": 3056
+      },
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/child_gate.py",
+        "broker",
+        "11",
+        "3",
+        "6",
+        "7",
+        "10"
+      ],
+      "local_pid": 5,
+      "observed_utc": "2026-10-18T15:42:42.306816+00:00",
+      "role": "broker"
+    },
+    {
+      "anchor": {
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/child_gate.py",
+          "perl",
+          "11",
+          "5",
+          "4",
+          "9",
+          "8"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35640 kB",
+          "VmSize:\t   35640 kB",
+          "VmHWM:\t    8684 kB",
+          "VmRSS:\t    8684 kB"
+        ],
+        "nspgid": [
+          3057,
+          6
+        ],
+        "nspid": [
+          3057,
+          6
+        ],
+        "nssid": [
+          3057,
+          6
+        ],
+        "pgid": 6,
+        "pid": 6,
+        "pid_namespace": "pid:[4026532277]",
+        "session": 6,
+        "starttime": 760636,
+        "state": "S",
+        "visible_pgid": 3057,
+        "visible_pid": 3057,
+        "visible_ppid": 3053,
+        "visible_session": 3057
+      },
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/child_gate.py",
+        "perl",
+        "11",
+        "5",
+        "4",
+        "9",
+        "8"
+      ],
+      "local_pid": 6,
+      "observed_utc": "2026-10-18T15:42:42.333649+00:00",
+      "role": "perl"
+    }
+  ],
+  "control_inputs": 1,
+  "delivery": "PENDING_EXACT_LIBRARY_READBACK",
+  "elapsed_total": 42.39371537199986,
+  "end_utc": "2026-10-18T15:43:23.621558+00:00",
+  "error": "Stop('INCOMPLETE_OR_ERROR_CHILD_EXIT')",
+  "exit_code": 2,
+  "foreign_released": true,
+  "guard_cases": [
+    {
+      "actual": "CURRENT_SELF_OR_ANCESTOR",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "id": "self_exact"
+    },
+    {
+      "actual": "CURRENT_SELF_OR_ANCESTOR",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "id": "ancestor_exact"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "self_pid_reused"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "same_pid_different_namespace"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "same_pid_different_local_pid"
+    },
+    {
+      "actual": "STOP_MATCH_IDENTITY",
+      "expected": "STOP_MATCH_IDENTITY",
+      "id": "bad_visible_nspid"
+    },
+    {
+      "actual": "STOP_MATCH_NSPID",
+      "expected": "STOP_MATCH_NSPID",
+      "id": "bad_local_nspid"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "old_v1_runner"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "foreign_broker_namespace_unknown"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "foreign_perl"
+    },
+    {
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "id": "old_original_perl"
+    },
+    {
+      "actual": "CURRENT_INVOCATION_CARRIER",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "id": "current_exact_carrier"
+    },
+    {
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "id": "old_same_command_carrier"
+    },
+    {
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "id": "wrong_carrier_executable"
+    },
+    {
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "id": "foreign_shell_command"
+    },
+    {
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "id": "changed_carrier_command"
+    },
+    {
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "id": "carrier_future_start"
+    },
+    {
+      "actual": "UNRELATED",
+      "expected": "UNRELATED",
+      "id": "similar_unrelated_path"
+    },
+    {
+      "actual": "CURRENT_INVOCATION_CARRIER",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "id": "saved_v1_current_carrier_1"
+    },
+    {
+      "actual": "CURRENT_INVOCATION_CARRIER",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "id": "saved_v1_current_carrier_2"
+    }
+  ],
+  "limits_final": {
+    "RLIMIT_AS": [
+      134217728,
+      134217728
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_CPU": [
+      170,
+      175
+    ],
+    "RLIMIT_FSIZE": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ]
+  },
+  "limits_prepared": {
+    "actual": {
+      "RLIMIT_AS": [
+        134217728,
+        268435456
+      ],
+      "RLIMIT_CORE": [
+        0,
+        0
+      ],
+      "RLIMIT_CPU": [
+        170,
+        175
+      ],
+      "RLIMIT_FSIZE": [
+        8388608,
+        8388608
+      ],
+      "RLIMIT_NOFILE": [
+        64,
+        64
+      ]
+    },
+    "inherited": {
+      "RLIMIT_AS": [
+        -1,
+        -1
+      ],
+      "RLIMIT_CORE": [
+        0,
+        -1
+      ],
+      "RLIMIT_CPU": [
+        -1,
+        -1
+      ],
+      "RLIMIT_FSIZE": [
+        -1,
+        -1
+      ],
+      "RLIMIT_NOFILE": [
+        16384,
+        16384
+      ]
+    },
+    "staged": {
+      "RLIMIT_AS": [
+        134217728,
+        268435456
+      ],
+      "RLIMIT_CORE": [
+        0,
+        0
+      ],
+      "RLIMIT_CPU": [
+        170,
+        175
+      ],
+      "RLIMIT_FSIZE": [
+        8388608,
+        8388608
+      ],
+      "RLIMIT_NOFILE": [
+        64,
+        64
+      ]
+    }
+  },
+  "namespace_self": {
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-B",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/run_profile.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   39804 kB",
+      "VmSize:\t   38740 kB",
+      "VmHWM:\t   12660 kB",
+      "VmRSS:\t   12660 kB"
+    ],
+    "nspgid": [
+      3052,
+      1
+    ],
+    "nspid": [
+      3053,
+      2
+    ],
+    "nssid": [
+      3052,
+      1
+    ],
+    "pgid": 1,
+    "pid": 2,
+    "pid_namespace": "pid:[4026532277]",
+    "session": 1,
+    "starttime": 760524,
+    "state": "R",
+    "visible_pgid": 3052,
+    "visible_pid": 3053,
+    "visible_ppid": 3052,
+    "visible_session": 3052
+  },
+  "partial_observations": {
+    "completed_iterations": [],
+    "distinct_scored_strings": 0,
+    "last_event": {
+      "cpu": 6.071502,
+      "type": "segmentation_progress",
+      "value": {
+        "calls": 147,
+        "maxdepth": 13,
+        "memory_KiB": {
+          "VmHWM": 13084,
+          "VmPeak": 17620,
+          "VmRSS": 13084,
+          "VmSize": 17620
+        },
+        "top": 4
+      },
+      "wall": 7.56833481788635
+    },
+    "not_full_acceptance": true,
+    "scored_records": 0,
+    "status": "PARTIAL_OBSERVATIONS_ONLY",
+    "unparsed_tail_bytes": 0
+  },
+  "prior_fixture": "REUSED_FINITE_BYTES_ONLY",
+  "release_elapsed": 1.1398901289994683,
+  "release_resource": {
+    "memory.current": "4533448704",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.max": "8589934592",
+    "memory.stat": "anon 104337408\nfile 4284489728\nkernel 143060992\nkernel_stack 753664\npagetables 3452928\nsec_pagetables 0\npercpu 6908\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 1589248\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 35651584\nshmem_thp 0\ninactive_anon 103936000\nactive_anon 81920\ninactive_file 2393391104\nactive_file 1891090432\nunevictable 0\nslab_reclaimable 137820840\nslab_unreclaimable 986200\nslab 138807040\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 2966517\npgmajfault 0\npgrefill 0\npgactivate 472148\npgdeactivate 0\npglazyfree 17\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"
+  },
+  "signals": [
+    {
+      "group": [],
+      "role": "perl",
+      "signal": 15,
+      "utc": "2026-10-18T15:43:23.616264+00:00"
+    }
+  ],
+  "stages": [
+    {
+      "elapsed": 42.38395537299948,
+      "exit": 1,
+      "role": "broker",
+      "terminal_group": []
+    }
+  ],
+  "start_utc": "2026-10-18T15:42:41.244121+00:00",
+  "status": "INCOMPLETE_BUDGET",
+  "supervisor_CPU": 4.831965794,
+  "supervisor_maxrss_KiB": 14712,
+  "target_inputs": 0,
+  "terminal": [
+    {
+      "exit": 1,
+      "group": [],
+      "role": "broker",
+      "utc": "2026-10-18T15:43:23.617727+00:00"
+    },
+    {
+      "exit": 255,
+      "group": [],
+      "role": "perl",
+      "utc": "2026-10-18T15:43:23.619532+00:00"
+    }
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/run_profile.py\", line 110, in main\n    if c['p'].returncode!=0:raise Stop('INCOMPLETE_OR_ERROR_CHILD_EXIT')\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnamespace_view.Stop: INCOMPLETE_OR_ERROR_CHILD_EXIT\n",
+  "verified_termination": true,
+  "version": "TS-RECOVERED-SEARCH-v2"
+}

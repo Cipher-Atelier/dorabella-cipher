@@ -1,0 +1,692 @@
+{
+  "status": "READBACK_VERIFIED_FINITE_DIFFERENTIAL_ONLY",
+  "utc": "2026-10-17T17:48:39.778587+00:00",
+  "method": "Read saved bytes/JSON and /proc only; no imports of solver/adapter and no scores/decoder rerun",
+  "outer_exit": 0,
+  "checks_passed": 318,
+  "checks": [
+    "raw tool exit0",
+    "runner PASS",
+    "runner elapsed in budget",
+    "all process exits zero and empty terminal groups",
+    "no stop signals",
+    "runner saved hashes",
+    "unchanged COMPUTE_OBSERVERS.diff",
+    "unchanged CompactPatList.pm",
+    "unchanged MINIMAL_INTEGRATION.diff",
+    "unchanged OBSERVATION_MAP.json",
+    "unchanged PLAN_RU.md",
+    "unchanged STATIC_REVIEW.json",
+    "unchanged adapter.py",
+    "unchanged broker.py",
+    "unchanged child_gate.py",
+    "unchanged differential.pl",
+    "unchanged fixtures/cases.json",
+    "unchanged fixtures/char.1",
+    "unchanged fixtures/char.2",
+    "unchanged fixtures/char.3",
+    "unchanged fixtures/fixture.patlst",
+    "unchanged fixtures/fixture.sqlite",
+    "unchanged fixtures/word.1",
+    "unchanged fixtures/word.2",
+    "unchanged fixtures/word.3",
+    "unchanged harness_prefix.txt",
+    "unchanged masc_solver_mcts.compact.pl",
+    "unchanged namespace_view.py",
+    "unchanged original/FreqAnalysis.pm",
+    "unchanged original/JMSmoothing.pm",
+    "unchanged original/LICENCE",
+    "unchanged original/NoSpace.pm",
+    "unchanged original/ReadLM.pm",
+    "unchanged original/Utils.pm",
+    "unchanged original/masc_solver_mcts.pl",
+    "unchanged original_compute.inc",
+    "unchanged run_differential.py",
+    "unchanged traced_compute.inc",
+    "unchanged /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "unchanged /usr/bin/perl",
+    "unchanged /usr/lib/x86_64-linux-gnu/perl/5.38.2/Config.pm",
+    "unchanged /usr/lib/x86_64-linux-gnu/perl/5.38.2/Config_heavy.pl",
+    "unchanged /usr/share/perl/5.38.2/JSON/PP.pm",
+    "unchanged /usr/lib/x86_64-linux-gnu/perl/5.38.2/IO/Handle.pm",
+    "unchanged /usr/lib/x86_64-linux-gnu/perl/5.38.2/auto/IO/IO.so",
+    "unchanged /usr/share/perl/5.38.2/sort.pm",
+    "unchanged /usr/share/perl/5.38.2/strict.pm",
+    "unchanged /usr/share/perl/5.38.2/warnings.pm",
+    "unchanged /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/sqlite3/__init__.py",
+    "unchanged /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/sqlite3/dbapi2.py",
+    "manifest unchanged",
+    "original ZIP unchanged",
+    "all trace bytes identical",
+    "complete 300 events",
+    "no ABORT in trace",
+    "explicit terminal accounting",
+    "golden groups exactly",
+    "membership exact",
+    "segmentation exact",
+    "all 64 stored bitstrings",
+    "cat dog exact bit tie",
+    "C1 one root/winner",
+    "C1 original root and slot order",
+    "C1 exact two ordered iterations",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C1 stored full roundtrip",
+    "C1 stored slot correspondence",
+    "C2 one root/winner",
+    "C2 original root and slot order",
+    "C2 exact two ordered iterations",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C2 stored full roundtrip",
+    "C2 stored slot correspondence",
+    "C3 one root/winner",
+    "C3 original root and slot order",
+    "C3 exact two ordered iterations",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "C3 stored full roundtrip",
+    "C3 stored slot correspondence",
+    "all 118 roundtrip records",
+    "all IPC sequence ids",
+    "close acknowledgment",
+    "reference_stderr.txt empty",
+    "adapted_stderr.txt empty",
+    "broker_stderr.txt empty",
+    "supervisor stderr empty",
+    "reference exact limits",
+    "broker exact limits",
+    "adapted exact limits",
+    "all original child identities absent",
+    "independent no live matches"
+  ],
+  "trace_sha256": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290",
+  "events_per_arm": 300,
+  "event_counts_per_arm": {
+    "list": 6,
+    "word": 7,
+    "segment": 8,
+    "score": 64,
+    "root": 3,
+    "selection": 6,
+    "candidates": 84,
+    "candidate": 56,
+    "child": 56,
+    "iteration": 6,
+    "winner": 3,
+    "complete": 1
+  },
+  "score_calls_per_arm": 64,
+  "direct_score_probes_per_arm": 8,
+  "search_score_calls_per_arm": 56,
+  "roundtrips_per_arm": 118,
+  "per_case": [
+    {
+      "id": "C1",
+      "input": "abcabc",
+      "alphabet": [
+        "a",
+        "b",
+        "c"
+      ],
+      "root": "cat",
+      "counts": {
+        "root": 1,
+        "selection": 2,
+        "candidates": 32,
+        "candidate": 24,
+        "score": 24,
+        "child": 24,
+        "iteration": 2,
+        "winner": 1
+      },
+      "winner": [
+        "abc",
+        "abcabc",
+        [
+          [
+            1,
+            "a",
+            "a",
+            "a"
+          ],
+          [
+            2,
+            "b",
+            "b",
+            "b"
+          ],
+          [
+            3,
+            "c",
+            "c",
+            "c"
+          ],
+          [
+            4,
+            "a",
+            "a",
+            "a"
+          ],
+          [
+            5,
+            "b",
+            "b",
+            "b"
+          ],
+          [
+            6,
+            "c",
+            "c",
+            "c"
+          ]
+        ]
+      ],
+      "iterations": [
+        [
+          "C1",
+          "iteration",
+          1,
+          "abc",
+          [
+            [
+              "abc",
+              "5142e1f5295e26c0",
+              1,
+              "5142e1f5295e26c0"
+            ]
+          ]
+        ],
+        [
+          "C1",
+          "iteration",
+          2,
+          "abc",
+          [
+            [
+              "abc",
+              "5142e1f5295e26c0",
+              2,
+              "8d929c37bf3025c0"
+            ],
+            [
+              "abc",
+              "5142e1f5295e26c0",
+              2,
+              "8d929c37bf3025c0"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "C2",
+      "input": "abcabc",
+      "alphabet": [
+        "a",
+        "b",
+        "c"
+      ],
+      "root": "dog",
+      "counts": {
+        "root": 1,
+        "selection": 2,
+        "candidates": 32,
+        "candidate": 26,
+        "score": 26,
+        "child": 26,
+        "iteration": 2,
+        "winner": 1
+      },
+      "winner": [
+        "cat",
+        "catcat",
+        [
+          [
+            1,
+            "a",
+            "c",
+            "a"
+          ],
+          [
+            2,
+            "b",
+            "a",
+            "b"
+          ],
+          [
+            3,
+            "c",
+            "t",
+            "c"
+          ],
+          [
+            4,
+            "a",
+            "c",
+            "a"
+          ],
+          [
+            5,
+            "b",
+            "a",
+            "b"
+          ],
+          [
+            6,
+            "c",
+            "t",
+            "c"
+          ]
+        ]
+      ],
+      "iterations": [
+        [
+          "C2",
+          "iteration",
+          1,
+          "cat",
+          [
+            [
+              "cat",
+              "a0387896b53e26c0",
+              1,
+              "a0387896b53e26c0"
+            ]
+          ]
+        ],
+        [
+          "C2",
+          "iteration",
+          2,
+          "cat",
+          [
+            [
+              "cat",
+              "a0387896b53e26c0",
+              2,
+              "dc8833d84a1125c0"
+            ],
+            [
+              "cat",
+              "a0387896b53e26c0",
+              2,
+              "dc8833d84a1125c0"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "C3",
+      "input": "ababab",
+      "alphabet": [
+        "a",
+        "b"
+      ],
+      "root": "to",
+      "counts": {
+        "root": 1,
+        "selection": 2,
+        "candidates": 20,
+        "candidate": 6,
+        "score": 6,
+        "child": 6,
+        "iteration": 2,
+        "winner": 1
+      },
+      "winner": [
+        "go",
+        "gogogo",
+        [
+          [
+            1,
+            "a",
+            "g",
+            "a"
+          ],
+          [
+            2,
+            "b",
+            "o",
+            "b"
+          ],
+          [
+            3,
+            "a",
+            "g",
+            "a"
+          ],
+          [
+            4,
+            "b",
+            "o",
+            "b"
+          ],
+          [
+            5,
+            "a",
+            "g",
+            "a"
+          ],
+          [
+            6,
+            "b",
+            "o",
+            "b"
+          ]
+        ]
+      ],
+      "iterations": [
+        [
+          "C3",
+          "iteration",
+          1,
+          "go",
+          [
+            [
+              "go",
+              "6be9e7cff54619c0",
+              1,
+              "6be9e7cff54619c0"
+            ]
+          ]
+        ],
+        [
+          "C3",
+          "iteration",
+          2,
+          "go",
+          [
+            [
+              "go",
+              "6be9e7cff54619c0",
+              2,
+              "e3895e5320ec16c0"
+            ],
+            [
+              "go",
+              "6be9e7cff54619c0",
+              2,
+              "e3895e5320ec16c0"
+            ]
+          ]
+        ]
+      ]
+    }
+  ],
+  "cat_dog_bit_tie": "b2eddf6334c915c0",
+  "ipc_requests": 1495,
+  "elapsed_runner_seconds": 0.6657960500015179,
+  "children_ru_maxrss_KiB": 14584,
+  "sampled_process_memory": {
+    "reference": {
+      "VmPeak_observed_max_KiB": 8308,
+      "VmSize_observed_max_KiB": 8308,
+      "VmHWM_observed_max_KiB": 3104,
+      "VmRSS_observed_max_KiB": 3104
+    },
+    "broker": {
+      "VmPeak_observed_max_KiB": 36452,
+      "VmSize_observed_max_KiB": 36452,
+      "VmHWM_observed_max_KiB": 11048,
+      "VmRSS_observed_max_KiB": 11048
+    },
+    "adapted": {
+      "VmPeak_observed_max_KiB": 11720,
+      "VmSize_observed_max_KiB": 11720,
+      "VmHWM_observed_max_KiB": 7148,
+      "VmRSS_observed_max_KiB": 7148
+    }
+  },
+  "sampled_cgroup_max_bytes": 6693486592,
+  "observation_samples": 4,
+  "memory_limits": "rusage is a maximum for reaped children, not their sum; sampled /proc maxima are lower bounds on unobserved peaks; cgroup includes unrelated processes/cache",
+  "process_identity_readback": [
+    {
+      "visible_pid": 8782,
+      "saved_starttime": 5878318,
+      "current": "absent",
+      "same_process_present": false
+    },
+    {
+      "visible_pid": 8783,
+      "saved_starttime": 5878328,
+      "current": "absent",
+      "same_process_present": false
+    },
+    {
+      "visible_pid": 8784,
+      "saved_starttime": 5878331,
+      "current": "absent",
+      "same_process_present": false
+    }
+  ],
+  "live_matches": [],
+  "unreadable_proc_entries": [],
+  "new_execution_after_attempt": false
+}

@@ -1,0 +1,7 @@
+{
+  "chunk_id": "89ace9",
+  "wall_time_seconds": 0.000024386,
+  "exit_code": 0,
+  "original_token_count": 142,
+  "output": "{\"status\": \"DELIVERY_BOUND_STOP_OR_INCOMPLETE\", \"scientific_status\": \"INCOMPLETE_BUDGET\", \"zip_sha256\": \"96b60d4d83145c36ec01b727bd4c38d9b340b229429c660f6ba0d86e3d66008a\", \"raw_receipt_sha256\": \"58b3674775152082b77dde7154193cfab877635c1165fd75061ba87a573dd3d1\", \"seal_sha256\": \"6d4e40984bd3f92fd57c17d6373fde95f2b9eeca64847cb1f7b3f7aca47c7004\", \"tool_provenance_limit\": \"receipt must contain exact tool-returned JSON and observed stdout, never a model paraphrase; this checker cannot attest provenance of a fabricated receipt\", \"no_old_STOP_reclassification\": true}\n"
+}

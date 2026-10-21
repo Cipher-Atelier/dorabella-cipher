@@ -1,0 +1,35 @@
+{
+  "result_zip_sha256": "96b60d4d83145c36ec01b727bd4c38d9b340b229429c660f6ba0d86e3d66008a",
+  "files": [
+    {
+      "path": "library_readback.json",
+      "bytes": 582,
+      "sha256": "d7ebcd326dca6c5e568913973368b97ddf320ea66e1c440f7098517fa1d4aaf4"
+    },
+    {
+      "path": "materialize_tool_raw.json",
+      "bytes": 1349,
+      "sha256": "85e31c04bb96b85dcf437521cbb36aa94f1e73d2c9730618db14311b827bd748"
+    },
+    {
+      "path": "readback_tool_raw.json",
+      "bytes": 721,
+      "sha256": "0c35a0be30fedf4d32ec3b500a0bc701b338ff02c1ddbacfe2af1aff3bd01e44"
+    },
+    {
+      "path": "zip_computed_tool_raw.json",
+      "bytes": 541,
+      "sha256": "ef3ed9ccee7b32cb8332108bb38c455cf64cc3262eb9b2055522d4b05e5e2b1d"
+    },
+    {
+      "path": "zip_upload_tool_raw.json",
+      "bytes": 1258,
+      "sha256": "2400c0431137870024a70b73a2818536db6b2c6b83f6df5e2f35f95c71954d32"
+    },
+    {
+      "path": "Dorabella_TS_RECOVERED_SEARCH_v3_result_20261018.md",
+      "bytes": 6631,
+      "sha256": "c01f9183a3d0d41b428bca7d7c39b49585d50ddcb5de098021a508975bd14017"
+    }
+  ]
+}

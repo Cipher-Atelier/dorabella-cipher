@@ -1,0 +1,945 @@
+{
+  "all_before": {
+    "RLIMIT_AS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_CORE": [
+      0,
+      -1
+    ],
+    "RLIMIT_CPU": [
+      -1,
+      -1
+    ],
+    "RLIMIT_DATA": [
+      -1,
+      -1
+    ],
+    "RLIMIT_FSIZE": [
+      -1,
+      -1
+    ],
+    "RLIMIT_MEMLOCK": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_MSGQUEUE": [
+      819200,
+      819200
+    ],
+    "RLIMIT_NICE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      16384,
+      16384
+    ],
+    "RLIMIT_NPROC": [
+      39792,
+      39792
+    ],
+    "RLIMIT_OFILE": [
+      16384,
+      16384
+    ],
+    "RLIMIT_RSS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_RTPRIO": [
+      0,
+      0
+    ],
+    "RLIMIT_RTTIME": [
+      -1,
+      -1
+    ],
+    "RLIMIT_SIGPENDING": [
+      39792,
+      39792
+    ],
+    "RLIMIT_STACK": [
+      8388608,
+      -1
+    ]
+  },
+  "all_final": {
+    "RLIMIT_AS": [
+      134217728,
+      134217728
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_CPU": [
+      170,
+      175
+    ],
+    "RLIMIT_DATA": [
+      -1,
+      -1
+    ],
+    "RLIMIT_FSIZE": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_MEMLOCK": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_MSGQUEUE": [
+      819200,
+      819200
+    ],
+    "RLIMIT_NICE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ],
+    "RLIMIT_NPROC": [
+      39792,
+      39792
+    ],
+    "RLIMIT_OFILE": [
+      64,
+      64
+    ],
+    "RLIMIT_RSS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_RTPRIO": [
+      0,
+      0
+    ],
+    "RLIMIT_RTTIME": [
+      -1,
+      -1
+    ],
+    "RLIMIT_SIGPENDING": [
+      39792,
+      39792
+    ],
+    "RLIMIT_STACK": [
+      8388608,
+      -1
+    ]
+  },
+  "all_prepared": {
+    "RLIMIT_AS": [
+      134217728,
+      268435456
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_CPU": [
+      170,
+      175
+    ],
+    "RLIMIT_DATA": [
+      -1,
+      -1
+    ],
+    "RLIMIT_FSIZE": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_MEMLOCK": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_MSGQUEUE": [
+      819200,
+      819200
+    ],
+    "RLIMIT_NICE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ],
+    "RLIMIT_NPROC": [
+      39792,
+      39792
+    ],
+    "RLIMIT_OFILE": [
+      64,
+      64
+    ],
+    "RLIMIT_RSS": [
+      -1,
+      -1
+    ],
+    "RLIMIT_RTPRIO": [
+      0,
+      0
+    ],
+    "RLIMIT_RTTIME": [
+      -1,
+      -1
+    ],
+    "RLIMIT_SIGPENDING": [
+      39792,
+      39792
+    ],
+    "RLIMIT_STACK": [
+      8388608,
+      -1
+    ]
+  },
+  "children_ready": [
+    {
+      "anchor": {
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/child_stub.py",
+          "broker",
+          "3",
+          "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke_attempt"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35640 kB",
+          "VmSize:\t   35640 kB",
+          "VmHWM:\t    8652 kB",
+          "VmRSS:\t    8652 kB"
+        ],
+        "nspgid": [
+          2458,
+          5
+        ],
+        "nspid": [
+          2458,
+          5
+        ],
+        "nssid": [
+          2458,
+          5
+        ],
+        "pgid": 5,
+        "pid": 5,
+        "pid_namespace": "pid:[4026532277]",
+        "session": 5,
+        "starttime": 650596,
+        "state": "S",
+        "visible_pgid": 2458,
+        "visible_pid": 2458,
+        "visible_ppid": 2454,
+        "visible_session": 2458
+      },
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/child_stub.py",
+        "broker",
+        "3",
+        "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke_attempt"
+      ],
+      "independent_proc_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              120                  125                  seconds   \nMax file size             8388608              8388608              bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            64                   64                   files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         134217728            134217728            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+      "record": {
+        "after": {
+          "RLIMIT_AS": [
+            134217728,
+            134217728
+          ],
+          "RLIMIT_CORE": [
+            0,
+            0
+          ],
+          "RLIMIT_CPU": [
+            120,
+            125
+          ],
+          "RLIMIT_DATA": [
+            -1,
+            -1
+          ],
+          "RLIMIT_FSIZE": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MEMLOCK": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MSGQUEUE": [
+            819200,
+            819200
+          ],
+          "RLIMIT_NICE": [
+            0,
+            0
+          ],
+          "RLIMIT_NOFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_NPROC": [
+            39792,
+            39792
+          ],
+          "RLIMIT_OFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_RSS": [
+            -1,
+            -1
+          ],
+          "RLIMIT_RTPRIO": [
+            0,
+            0
+          ],
+          "RLIMIT_RTTIME": [
+            -1,
+            -1
+          ],
+          "RLIMIT_SIGPENDING": [
+            39792,
+            39792
+          ],
+          "RLIMIT_STACK": [
+            8388608,
+            -1
+          ]
+        },
+        "before": {
+          "RLIMIT_AS": [
+            134217728,
+            268435456
+          ],
+          "RLIMIT_CORE": [
+            0,
+            0
+          ],
+          "RLIMIT_CPU": [
+            170,
+            175
+          ],
+          "RLIMIT_DATA": [
+            -1,
+            -1
+          ],
+          "RLIMIT_FSIZE": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MEMLOCK": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MSGQUEUE": [
+            819200,
+            819200
+          ],
+          "RLIMIT_NICE": [
+            0,
+            0
+          ],
+          "RLIMIT_NOFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_NPROC": [
+            39792,
+            39792
+          ],
+          "RLIMIT_OFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_RSS": [
+            -1,
+            -1
+          ],
+          "RLIMIT_RTPRIO": [
+            0,
+            0
+          ],
+          "RLIMIT_RTTIME": [
+            -1,
+            -1
+          ],
+          "RLIMIT_SIGPENDING": [
+            39792,
+            39792
+          ],
+          "RLIMIT_STACK": [
+            8388608,
+            -1
+          ]
+        },
+        "identity": {
+          "local_pgid": 5,
+          "local_pid": 5,
+          "local_sid": 5,
+          "namespace": "pid:[4026532277]",
+          "starttime": 650596,
+          "status": "Name:\tpython3.12\nUmask:\t0022\nState:\tR (running)\nTgid:\t2458\nNgid:\t0\nPid:\t2458\nPPid:\t2454\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t64\nGroups:\t \nNStgid:\t2458\t5\nNSpid:\t2458\t5\nNSpgid:\t2458\t5\nNSsid:\t2458\t5\nKthread:\t0\nVmPeak:\t   35640 kB\nVmSize:\t   35640 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t    8572 kB\nVmRSS:\t    8572 kB\nRssAnon:\t    4912 kB\nRssFile:\t    3660 kB\nRssShmem:\t       0 kB\nVmData:\t    6604 kB\nVmStk:\t     132 kB\nVmExe:\t   21452 kB\nVmLib:\t       0 kB\nVmPTE:\t      96 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t1\nSigQ:\t0/39792\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000000000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tvulnerable\nSpeculationIndirectBranch:\talways enabled\nCpus_allowed:\t1ff\nCpus_allowed_list:\t0-8\nMems_allowed:\t00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t0\nnonvoluntary_ctxt_switches:\t0\n",
+          "visible_pid": 2458
+        },
+        "mode": "NO_FOREIGN_EXEC",
+        "proc_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              120                  125                  seconds   \nMax file size             8388608              8388608              bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            64                   64                   files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         134217728            134217728            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n"
+      },
+      "role": "broker"
+    },
+    {
+      "anchor": {
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/child_stub.py",
+          "perl",
+          "3",
+          "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke_attempt"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35640 kB",
+          "VmSize:\t   35640 kB",
+          "VmHWM:\t    8652 kB",
+          "VmRSS:\t    8652 kB"
+        ],
+        "nspgid": [
+          2459,
+          6
+        ],
+        "nspid": [
+          2459,
+          6
+        ],
+        "nssid": [
+          2459,
+          6
+        ],
+        "pgid": 6,
+        "pid": 6,
+        "pid_namespace": "pid:[4026532277]",
+        "session": 6,
+        "starttime": 650600,
+        "state": "S",
+        "visible_pgid": 2459,
+        "visible_pid": 2459,
+        "visible_ppid": 2454,
+        "visible_session": 2459
+      },
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/child_stub.py",
+        "perl",
+        "3",
+        "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke_attempt"
+      ],
+      "independent_proc_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              120                  125                  seconds   \nMax file size             8388608              8388608              bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            64                   64                   files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         268435456            268435456            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+      "record": {
+        "after": {
+          "RLIMIT_AS": [
+            268435456,
+            268435456
+          ],
+          "RLIMIT_CORE": [
+            0,
+            0
+          ],
+          "RLIMIT_CPU": [
+            120,
+            125
+          ],
+          "RLIMIT_DATA": [
+            -1,
+            -1
+          ],
+          "RLIMIT_FSIZE": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MEMLOCK": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MSGQUEUE": [
+            819200,
+            819200
+          ],
+          "RLIMIT_NICE": [
+            0,
+            0
+          ],
+          "RLIMIT_NOFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_NPROC": [
+            39792,
+            39792
+          ],
+          "RLIMIT_OFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_RSS": [
+            -1,
+            -1
+          ],
+          "RLIMIT_RTPRIO": [
+            0,
+            0
+          ],
+          "RLIMIT_RTTIME": [
+            -1,
+            -1
+          ],
+          "RLIMIT_SIGPENDING": [
+            39792,
+            39792
+          ],
+          "RLIMIT_STACK": [
+            8388608,
+            -1
+          ]
+        },
+        "before": {
+          "RLIMIT_AS": [
+            134217728,
+            268435456
+          ],
+          "RLIMIT_CORE": [
+            0,
+            0
+          ],
+          "RLIMIT_CPU": [
+            170,
+            175
+          ],
+          "RLIMIT_DATA": [
+            -1,
+            -1
+          ],
+          "RLIMIT_FSIZE": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MEMLOCK": [
+            8388608,
+            8388608
+          ],
+          "RLIMIT_MSGQUEUE": [
+            819200,
+            819200
+          ],
+          "RLIMIT_NICE": [
+            0,
+            0
+          ],
+          "RLIMIT_NOFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_NPROC": [
+            39792,
+            39792
+          ],
+          "RLIMIT_OFILE": [
+            64,
+            64
+          ],
+          "RLIMIT_RSS": [
+            -1,
+            -1
+          ],
+          "RLIMIT_RTPRIO": [
+            0,
+            0
+          ],
+          "RLIMIT_RTTIME": [
+            -1,
+            -1
+          ],
+          "RLIMIT_SIGPENDING": [
+            39792,
+            39792
+          ],
+          "RLIMIT_STACK": [
+            8388608,
+            -1
+          ]
+        },
+        "identity": {
+          "local_pgid": 6,
+          "local_pid": 6,
+          "local_sid": 6,
+          "namespace": "pid:[4026532277]",
+          "starttime": 650600,
+          "status": "Name:\tpython3.12\nUmask:\t0022\nState:\tR (running)\nTgid:\t2459\nNgid:\t0\nPid:\t2459\nPPid:\t2454\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t64\nGroups:\t \nNStgid:\t2459\t6\nNSpid:\t2459\t6\nNSpgid:\t2459\t6\nNSsid:\t2459\t6\nKthread:\t0\nVmPeak:\t   35640 kB\nVmSize:\t   35640 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t    8572 kB\nVmRSS:\t    8572 kB\nRssAnon:\t    4912 kB\nRssFile:\t    3660 kB\nRssShmem:\t       0 kB\nVmData:\t    6604 kB\nVmStk:\t     132 kB\nVmExe:\t   21452 kB\nVmLib:\t       0 kB\nVmPTE:\t      96 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t1\nSigQ:\t0/39792\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000000000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tvulnerable\nSpeculationIndirectBranch:\talways enabled\nCpus_allowed:\t1ff\nCpus_allowed_list:\t0-8\nMems_allowed:\t00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t0\nnonvoluntary_ctxt_switches:\t0\n",
+          "visible_pid": 2459
+        },
+        "mode": "NO_FOREIGN_EXEC",
+        "proc_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              120                  125                  seconds   \nMax file size             8388608              8388608              bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            64                   64                   files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         268435456            268435456            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n"
+      },
+      "role": "perl"
+    }
+  ],
+  "elapsed": 0.13142197399974975,
+  "events": [
+    {
+      "elapsed": 0.0411189229998854,
+      "kind": "SUPERVISOR_STAGED",
+      "limits": {
+        "RLIMIT_AS": [
+          134217728,
+          268435456
+        ],
+        "RLIMIT_CORE": [
+          0,
+          0
+        ],
+        "RLIMIT_CPU": [
+          170,
+          175
+        ],
+        "RLIMIT_FSIZE": [
+          8388608,
+          8388608
+        ],
+        "RLIMIT_NOFILE": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "elapsed": 0.07800851199954195,
+      "kind": "CHILD_READY_BLOCKED",
+      "limits": {
+        "RLIMIT_AS": [
+          134217728,
+          134217728
+        ],
+        "RLIMIT_CORE": [
+          0,
+          0
+        ],
+        "RLIMIT_CPU": [
+          120,
+          125
+        ],
+        "RLIMIT_FSIZE": [
+          8388608,
+          8388608
+        ],
+        "RLIMIT_NOFILE": [
+          64,
+          64
+        ]
+      },
+      "role": "broker"
+    },
+    {
+      "elapsed": 0.10366444200008118,
+      "kind": "CHILD_READY_BLOCKED",
+      "limits": {
+        "RLIMIT_AS": [
+          268435456,
+          268435456
+        ],
+        "RLIMIT_CORE": [
+          0,
+          0
+        ],
+        "RLIMIT_CPU": [
+          120,
+          125
+        ],
+        "RLIMIT_FSIZE": [
+          8388608,
+          8388608
+        ],
+        "RLIMIT_NOFILE": [
+          64,
+          64
+        ]
+      },
+      "role": "perl"
+    },
+    {
+      "elapsed": 0.10374382999998488,
+      "kind": "SUPERVISOR_FINAL_BEFORE_RELEASE",
+      "limits": {
+        "RLIMIT_AS": [
+          134217728,
+          134217728
+        ],
+        "RLIMIT_CORE": [
+          0,
+          0
+        ],
+        "RLIMIT_CPU": [
+          170,
+          175
+        ],
+        "RLIMIT_FSIZE": [
+          8388608,
+          8388608
+        ],
+        "RLIMIT_NOFILE": [
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "elapsed": 0.10376920700036862,
+      "kind": "RELEASE",
+      "role": "broker"
+    },
+    {
+      "elapsed": 0.10377911199975642,
+      "kind": "RELEASE",
+      "role": "perl"
+    }
+  ],
+  "exit_code": 0,
+  "final_limits": {
+    "RLIMIT_AS": [
+      134217728,
+      134217728
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_CPU": [
+      170,
+      175
+    ],
+    "RLIMIT_FSIZE": [
+      8388608,
+      8388608
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ]
+  },
+  "final_proc_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              170                  175                  seconds   \nMax file size             8388608              8388608              bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            64                   64                   files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         134217728            134217728            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "foreign_exec": false,
+  "maxrss_KiB": 42240,
+  "memory_before": {
+    "memory.current": "4504436736",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.max": "8589934592"
+  },
+  "prepared": {
+    "actual": {
+      "RLIMIT_AS": [
+        134217728,
+        268435456
+      ],
+      "RLIMIT_CORE": [
+        0,
+        0
+      ],
+      "RLIMIT_CPU": [
+        170,
+        175
+      ],
+      "RLIMIT_FSIZE": [
+        8388608,
+        8388608
+      ],
+      "RLIMIT_NOFILE": [
+        64,
+        64
+      ]
+    },
+    "inherited": {
+      "RLIMIT_AS": [
+        -1,
+        -1
+      ],
+      "RLIMIT_CORE": [
+        0,
+        -1
+      ],
+      "RLIMIT_CPU": [
+        -1,
+        -1
+      ],
+      "RLIMIT_FSIZE": [
+        -1,
+        -1
+      ],
+      "RLIMIT_NOFILE": [
+        16384,
+        16384
+      ]
+    },
+    "staged": {
+      "RLIMIT_AS": [
+        134217728,
+        268435456
+      ],
+      "RLIMIT_CORE": [
+        0,
+        0
+      ],
+      "RLIMIT_CPU": [
+        170,
+        175
+      ],
+      "RLIMIT_FSIZE": [
+        8388608,
+        8388608
+      ],
+      "RLIMIT_NOFILE": [
+        64,
+        64
+      ]
+    }
+  },
+  "prepared_proc_limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              170                  175                  seconds   \nMax file size             8388608              8388608              bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    0                    bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             39792                39792                processes \nMax open files            64                   64                   files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         134217728            268435456            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       39792                39792                signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "prior_exact_processes": [],
+  "pure_negative_fixtures": [
+    {
+      "case": "RLIMIT_AS",
+      "rejected": "STOP_INHERITED_HARD:RLIMIT_AS"
+    },
+    {
+      "case": "RLIMIT_CPU",
+      "rejected": "STOP_INHERITED_HARD:RLIMIT_CPU"
+    },
+    {
+      "case": "RLIMIT_FSIZE",
+      "rejected": "STOP_INHERITED_HARD:RLIMIT_FSIZE"
+    },
+    {
+      "case": "RLIMIT_NOFILE",
+      "rejected": "STOP_INHERITED_HARD:RLIMIT_NOFILE"
+    },
+    {
+      "case": "invalid_pair",
+      "rejected": "STOP_LIMIT_PAIR:broker:RLIMIT_CORE"
+    }
+  ],
+  "scientific_runs": 0,
+  "self_identity": {
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-B",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/run_smoke.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   71924 kB",
+      "VmSize:\t   41752 kB",
+      "VmHWM:\t   42240 kB",
+      "VmRSS:\t   12276 kB"
+    ],
+    "nspgid": [
+      2453,
+      1
+    ],
+    "nspid": [
+      2454,
+      2
+    ],
+    "nssid": [
+      2453,
+      1
+    ],
+    "pgid": 1,
+    "pid": 2,
+    "pid_namespace": "pid:[4026532277]",
+    "session": 1,
+    "starttime": 650588,
+    "state": "R",
+    "visible_pgid": 2453,
+    "visible_pid": 2454,
+    "visible_ppid": 2453,
+    "visible_session": 2453
+  },
+  "signals": [
+    {
+      "group": [
+        {
+          "cmdline": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-I",
+            "-S",
+            "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/child_stub.py",
+            "perl",
+            "3",
+            "/workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke_attempt"
+          ],
+          "memory_status": [
+            "VmPeak:\t   35640 kB",
+            "VmSize:\t   35640 kB",
+            "VmHWM:\t    8668 kB",
+            "VmRSS:\t    8668 kB"
+          ],
+          "nspgid": [
+            2459,
+            6
+          ],
+          "nspid": [
+            2459,
+            6
+          ],
+          "nssid": [
+            2459,
+            6
+          ],
+          "pgid": 6,
+          "pid": 6,
+          "pid_namespace": "pid:[4026532277]",
+          "session": 6,
+          "starttime": 650600,
+          "state": "S",
+          "visible_pgid": 2459,
+          "visible_pid": 2459,
+          "visible_ppid": 2454,
+          "visible_session": 2459
+        }
+      ],
+      "role": "perl",
+      "signal": 15
+    }
+  ],
+  "status": "PASS_WRAPPER_LIMITS_ONLY",
+  "terminal": [
+    {
+      "exit": 0,
+      "group": [],
+      "role": "broker"
+    },
+    {
+      "exit": -15,
+      "group": [],
+      "role": "perl"
+    }
+  ],
+  "utc_end": "2026-10-18T15:24:22.020623+00:00",
+  "utc_start": "2026-10-18T15:24:21.889190+00:00",
+  "verified_cleanup": true,
+  "version": "TS-RLIMIT-ORDER-REPAIR-v1-smoke"
+}

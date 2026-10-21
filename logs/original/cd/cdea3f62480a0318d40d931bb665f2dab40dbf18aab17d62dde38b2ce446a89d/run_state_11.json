@@ -1,0 +1,15 @@
+{
+  "case_count": 78,
+  "command": [
+    "dorabella_round13/code/run.py",
+    "--kind",
+    "null",
+    "--workers",
+    "4"
+  ],
+  "completed_utc": "2026-10-02T09:17:36.025202+00:00",
+  "pid": 11,
+  "started_utc": "2026-10-02T09:16:13.281985+00:00",
+  "status": "completed",
+  "workers": 4
+}

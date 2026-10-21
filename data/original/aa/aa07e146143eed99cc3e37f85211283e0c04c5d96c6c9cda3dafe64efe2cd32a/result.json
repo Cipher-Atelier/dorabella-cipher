@@ -1,0 +1,27 @@
+{
+  "version": "TS-PATLST-CENSUS-v1",
+  "status": "COMPLETED_CENSUS",
+  "start_utc": "2026-10-17T13:16:17.692073+00:00",
+  "deadline_seconds": 60,
+  "AS_bytes": 268435456,
+  "source": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.patlst",
+  "expected_bytes": 340083717,
+  "expected_sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd",
+  "passes": 1,
+  "index_built": false,
+  "lines": 7548932,
+  "bytes": 340083717,
+  "sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd",
+  "max_raw_line_bytes": 118052,
+  "raw_pattern_bytes_sum": 135172398,
+  "max_raw_pattern_bytes": 48,
+  "tab_bytes": 18211254,
+  "physical_orders": {
+    "1": 18270,
+    "2": 1407594,
+    "3": 6123068
+  },
+  "elapsed": 6.618644738002331,
+  "maxrss_KiB": 10112,
+  "end_utc": "2026-10-17T13:16:24.310742+00:00"
+}

@@ -1,0 +1,220 @@
+[
+  {
+    "archive": "result",
+    "member": "execution/attempt/result.json",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 24997,
+        "line": 703
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "native",
+        "pointer": "$/file_hashes/observations.jsonl",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "result",
+    "member": "independent/Dorabella_TS_JOURNAL_DIAGNOSTIC_v1_result_20261018.md",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 5334,
+        "line": 35
+      },
+      {
+        "label": "actual",
+        "start_byte": 5462,
+        "line": 36
+      }
+    ],
+    "json_pointers": []
+  },
+  {
+    "archive": "result",
+    "member": "independent/SEALED_HASH_AUDIT.json",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 1267,
+        "line": 35
+      },
+      {
+        "label": "native",
+        "start_byte": 5684,
+        "line": 149
+      },
+      {
+        "label": "actual",
+        "start_byte": 1358,
+        "line": 36
+      },
+      {
+        "label": "actual",
+        "start_byte": 5775,
+        "line": 150
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "native",
+        "pointer": "$/files/4/sealed_sha256",
+        "exact_scalar": true
+      },
+      {
+        "label": "actual",
+        "pointer": "$/files/4/actual_sha256",
+        "exact_scalar": true
+      },
+      {
+        "label": "native",
+        "pointer": "$/mismatches/0/sealed_sha256",
+        "exact_scalar": true
+      },
+      {
+        "label": "actual",
+        "pointer": "$/mismatches/0/actual_sha256",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "result",
+    "member": "RESULT_MANIFEST.json",
+    "occurrences": [
+      {
+        "label": "actual",
+        "start_byte": 969,
+        "line": 27
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "actual",
+        "pointer": "$/files/3/sha256",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "audit",
+    "member": "AUDIT_EVIDENCE.json",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 898,
+        "line": 22
+      },
+      {
+        "label": "actual",
+        "start_byte": 1235,
+        "line": 31
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "native",
+        "pointer": "$/native_seal/sha256",
+        "exact_scalar": true
+      },
+      {
+        "label": "actual",
+        "pointer": "$/saved_readback/sha256",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "audit",
+    "member": "Dorabella_TS_JOURNAL_observations_audit_20261018.md",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 2272,
+        "line": 13
+      },
+      {
+        "label": "actual",
+        "start_byte": 2480,
+        "line": 14
+      }
+    ],
+    "json_pointers": []
+  },
+  {
+    "archive": "audit",
+    "member": "PREFIX_HASHES.json",
+    "occurrences": [
+      {
+        "label": "actual",
+        "start_byte": 8098,
+        "line": 311
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "actual",
+        "pointer": "$/51/sha256",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "audit",
+    "member": "saved_attempt/result.json",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 24997,
+        "line": 703
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "native",
+        "pointer": "$/file_hashes/observations.jsonl",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "audit",
+    "member": "verdicts/native_result_PASS.json",
+    "occurrences": [
+      {
+        "label": "native",
+        "start_byte": 24997,
+        "line": 703
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "native",
+        "pointer": "$/file_hashes/observations.jsonl",
+        "exact_scalar": true
+      }
+    ]
+  },
+  {
+    "archive": "audit",
+    "member": "AUDIT_MANIFEST.json",
+    "occurrences": [
+      {
+        "label": "actual",
+        "start_byte": 2363,
+        "line": 70
+      }
+    ],
+    "json_pointers": [
+      {
+        "label": "actual",
+        "pointer": "$/files/12/sha256",
+        "exact_scalar": true
+      }
+    ]
+  }
+]

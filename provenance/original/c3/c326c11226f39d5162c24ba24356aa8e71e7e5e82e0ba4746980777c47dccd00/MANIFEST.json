@@ -1,0 +1,32 @@
+{
+  "census_or_prior_readback_repeated": false,
+  "files": {
+    "Dorabella_TS_profile_recovery_blocker_20261018.md": {
+      "bytes": 11941,
+      "sha256": "97f534f347776812a6c6b80802913e81612addd58c7c8dbb82de1734417d219e"
+    },
+    "PREPARATION_SCOPE.json": {
+      "bytes": 361,
+      "sha256": "0fcb20861bbc474acf495391c7ad282b5262559e7aefe0bdc8ed2ade35e40691"
+    },
+    "evidence/current_state.json": {
+      "bytes": 747,
+      "sha256": "645284d05849056777d1a16febeb39a5d0c8d8520c9c4f169e7fdf19b16f464e"
+    },
+    "evidence/library_exact_search.json": {
+      "bytes": 895,
+      "sha256": "12b2e9a139ab58a173e2206f670a6be0da254ffaa35afbe3d465cf07756a55f0"
+    },
+    "evidence/library_recent_complete_list.json": {
+      "bytes": 2977,
+      "sha256": "9d9125c69aa5ae89336b82d0956dab366077e4321d9a164040a523ef24b8620d"
+    },
+    "evidence/parent_primary_read.json": {
+      "bytes": 19454,
+      "sha256": "762f5a8c4d0b2cd7021072f32193c700d207742401221c306aab48b256b78109"
+    }
+  },
+  "profile_recreated": false,
+  "scientific_execution": false,
+  "status": "BLOCKED_MISSING_PROFILE_BYTES"
+}

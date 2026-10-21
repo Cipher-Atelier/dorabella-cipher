@@ -1,0 +1,40 @@
+bailey_01 87 1.0542835670057684
+bailey_02 87 0.1464345099957427
+bailey_03 87 0.14483651300542988
+bailey_04 87 0.10904903800110333
+bailey_05 87 0.12986557799740694
+bailey_06 87 0.15433349899831228
+bailey_07 87 0.07724442699691281
+bailey_08 87 0.1044845440046629
+bailey_09 87 0.24173899699235335
+brewer_01 87 0.267479625006672
+brewer_02 87 0.1929056669905549
+brewer_03 87 0.23673562100157142
+elgar_march_1897 87 0.1922714160027681
+elgar_caractacus_postcard 87 0.26263597400975414
+GATE {'exact': 14, 'correct_letters': 1218, 'passed': True}
+hauer_real -7.149013175926935 0.3232478990103118
+hauer_real_fresh_004 -7.097595222335737 0.28839737200178206
+hauer_real_fresh_024 -7.0728865693484835 0.29419991599570494
+hauer_real_fresh_044 -7.355000643150179 0.2994642670091707
+hauer_real_fresh_064 -7.402531646998611 0.3088277979986742
+hauer_real_fresh_084 -7.2894531914533385 0.29365660800249316
+hauer_real_fresh_104 -7.330733758213918 0.28702787500515115
+hauer_real_fresh_124 -7.327099063834746 0.3092912910069572
+hauer_real_fresh_144 -7.063153511980832 0.2921473030000925
+hauer_real_fresh_164 -7.1527720557497085 0.27922043099533767
+hauer_real_fresh_184 -7.186849004057649 0.3075560459983535
+hart_real -7.1230278330481145 0.2576968619978288
+hart_real_fresh_004 -7.178322300950403 0.2847576729982393
+hart_real_fresh_024 -7.320342456677951 0.31006451399298385
+hart_real_fresh_044 -6.887223524282391 0.251030906001688
+hart_real_fresh_064 -7.4810864314276095 0.28968065600201953
+hart_real_fresh_084 -7.365626271472796 0.30496139799652155
+hart_real_fresh_104 -7.272029580761478 0.3083441850030795
+hart_real_fresh_124 -7.339779615503602 0.2754597029997967
+hart_real_fresh_144 -7.377903335546856 0.32528797899431083
+hart_real_fresh_164 -7.347039344598362 0.2959746590058785
+hart_real_fresh_184 -7.188679736981758 0.29913587200280745
+SUMMARY {"cases": 414, "sensitivity": {"exact": 14, "correct_letters": 1218, "passed": true}, "versions": {"hauer_real": {"id": "hauer_real", "kind": "real", "source": null, "S": -7.149013175926935, "C": -4.656704920239572, "W": -4.984616511374722, "key_id": 106130, "tie_count": 1, "all_ties": [106130], "table": [1, 9, 2], "route": [0, 1, 1, 34], "plaintext": "hubylanwiezenqfxeactthinboissqckgpsiewahhedninhueeatpplinmwuduhereqdwnzbfheqsitsiwhunir", "baseline_S": -7.763189678107233, "baseline_key_id": 80779, "gain": 0.6141765021802978, "char_evaluations": 133632, "word_evaluations": 131420, "seconds": 0.3232478990103118, "independent_score_error": 1.7763568394002505e-15, "reencryption_exact": true, "n_null": 199, "null_ge_S": 31, "plus_one_tail_S": 0.16, "null_ge_gain": 30, "plus_one_tail_gain": 0.155, "null_score_min": -7.5406826881681255, "null_score_max": -6.875648841296355}, "hart_real": {"id": "hart_real", "kind": "real", "source": null, "S": -7.1230278330481145, "C": -4.6079787026417405, "W": -5.030098260812747, "key_id": 81416, "tie_count": 1, "all_ties": [81416], "table": [1, 3, 2], "route": [1, 1, 1, 28], "plaintext": "tnmxaxquwirkfaeaxksenasfawdsrkinlppteaasfinibafferanupgmbournocllerzhfarfinarelymboudwh", "baseline_S": -7.86553935553548, "baseline_key_id": 80779, "gain": 0.7425115224873657, "char_evaluations": 133632, "word_evaluations": 130910, "seconds": 0.2576968619978288, "independent_score_error": 0.0, "reencryption_exact": true, "n_null": 199, "null_ge_S": 31, "plus_one_tail_S": 0.16, "null_ge_gain": 30, "plus_one_tail_gain": 0.155, "null_score_min": -7.589337799387639, "null_score_max": -6.790841150138618}}}
+UNPRUNED PASSED
+Fresh replay verified 414

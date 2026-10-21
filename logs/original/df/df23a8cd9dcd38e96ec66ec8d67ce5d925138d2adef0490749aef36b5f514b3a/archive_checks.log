@@ -1,0 +1,14 @@
+{
+  "initial_conditional_records": 518,
+  "refined_conditional_records": 200,
+  "noisy_records": 76,
+  "noisy_candidates_including_selected_again": 532,
+  "frozen_hashes_match": true,
+  "checked_candidate_entries": 1250,
+  "maximum_score_error": 0.0,
+  "old_archive_check": "Archive not present in this environment; not asserted.",
+  "noisy_full_deterministic_repeats": [
+    "hauer_real",
+    "hart_real"
+  ]
+}

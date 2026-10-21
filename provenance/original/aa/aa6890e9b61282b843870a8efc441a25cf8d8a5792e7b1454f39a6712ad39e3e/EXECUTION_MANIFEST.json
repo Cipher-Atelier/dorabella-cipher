@@ -1,0 +1,297 @@
+{
+  "entry_command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_JOURNAL_DIAGNOSTIC_v1/launch.py",
+  "max_processes": 3,
+  "child_invocations": 2,
+  "foreign_roles": [
+    "real_broker",
+    "real_perl"
+  ],
+  "executable_sources": [
+    {
+      "path": "launch.py",
+      "sha256": "fd26c08a66c19c318dee3aecf2e23edd6dbcd8da0b114779bbe491104636c4e8",
+      "bytes": 1089
+    },
+    {
+      "path": "run.py",
+      "sha256": "48e16c1622f93bf9a14b65344f0f6f3940011f20d16200b9734e3a58867e94c6",
+      "bytes": 14333
+    },
+    {
+      "path": "child_gate.py",
+      "sha256": "16b1b2f82863dd0510a3fa19a32b5be7ca27618dcab08e7697d6a9799d667990",
+      "bytes": 1523
+    },
+    {
+      "path": "broker.py",
+      "sha256": "87fefb44f15e66b38ea56036dec09588a0873aa72ae43e0192b8a166271bd87b",
+      "bytes": 5741
+    },
+    {
+      "path": "evidence_io.py",
+      "sha256": "47e66b9b6887729d2933828e0692c3dfcae08e3e92467e09f2a382d5d556319c",
+      "bytes": 10353
+    },
+    {
+      "path": "verifier_binding.py",
+      "sha256": "9ce60b8ce68232d9935c0b0c3dd15fe542b79e05dd0b607a222d8713d1fe18dd",
+      "bytes": 6098
+    },
+    {
+      "path": "readback.py",
+      "sha256": "3c5e1917172c84ef61d56e947d6f283d3dde2096542703ab1ada563d1a722296",
+      "bytes": 7072
+    },
+    {
+      "path": "namespace_view.py",
+      "sha256": "fb6973ca6437684641a23a21b78e9e6e3938bf286c7d80c2df6ee9654080c843",
+      "bytes": 6090
+    },
+    {
+      "path": "process_guard.py",
+      "sha256": "fa518b80754ce67b5a0e6966001f2555e533f566de5e367a5fee3f74594cddd3",
+      "bytes": 4295
+    },
+    {
+      "path": "transport_probe.pl",
+      "sha256": "fbe649c039f662b410aff96a0a8959339fa68474382bdf6d5dd86836c2f44f14",
+      "bytes": 2783
+    },
+    {
+      "path": "Prefetch.pm",
+      "sha256": "7230db9e5817efd2f39d1c0b7ac337f0db1cb43a869851d494fbd5ce6cab29fc",
+      "bytes": 4123
+    },
+    {
+      "path": "CompactPatList.pm",
+      "sha256": "4e9aec832acdbb5963a2ced572161ee02c03389284941fdcd0b14d1520de5ed0",
+      "bytes": 4540
+    },
+    {
+      "path": "adapter.py",
+      "sha256": "ded17814f6ca5256dc893f670dbd64e4afb9280c7f2852a4262878f1390bb09a",
+      "bytes": 5305
+    },
+    {
+      "path": "disk_contract.py",
+      "sha256": "69810e4fc997a3797ab55026cc526716cf0af1ec49db19e67aed9f6b51d0d880",
+      "bytes": 4757
+    },
+    {
+      "path": "wire.py",
+      "sha256": "389209dcf9b98255cfae2a20952e468a3e471128b83719821307088fb06aa1bb",
+      "bytes": 1997
+    },
+    {
+      "path": "transport_contract.py",
+      "sha256": "58f6bde704e4682081c089ae99932db32f497f20f45a28b33df4a85b7aa1969e",
+      "bytes": 1967
+    },
+    {
+      "path": "original/JMSmoothing.pm",
+      "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357",
+      "bytes": 1857
+    },
+    {
+      "path": "original/Utils.pm",
+      "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e",
+      "bytes": 2765
+    },
+    {
+      "path": "original/NoSpace.pm",
+      "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188",
+      "bytes": 1097
+    }
+  ],
+  "original_readback_source_unchanged": true,
+  "io_hooks": [
+    "iter_rows",
+    "load"
+  ],
+  "models": [
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm1",
+      "bytes": 479,
+      "sha256": "b1c7c75049963f55bb0e1ff104453113cf4be50b98272b776f3870aed11d8648",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm1.idx",
+      "bytes": 232,
+      "sha256": "dff7a134c2946a5ab6256620e360a75e21bbb6c68bdd09067e69f29e8eb34655",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm2",
+      "bytes": 14882,
+      "sha256": "b9523db152557f04a2f40e102f76d255e5d0ff562b60ee6dec54bcc751f25505",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm2.idx",
+      "bytes": 6216,
+      "sha256": "2c01aa2ca93c212e79b6fe57bbaa40d76965e2fe60eeb79212dfa689a48cd7f1",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm3",
+      "bytes": 268707,
+      "sha256": "299aa762b04e6f9211a9b3105c7a982f3d8d99aeed19b08690ac9f917240d294",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm3.idx",
+      "bytes": 101232,
+      "sha256": "bccd0b54da215aefdbb9fb04dc0fde8c604ccb7878ead5487660c53786cf41dd",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm1",
+      "bytes": 2928837,
+      "sha256": "da7c99e5eee36efeb1db7a6535e3175883176d685cf7cabf4c20e99d665d48f0",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm4.idx",
+      "bytes": 988976,
+      "sha256": "9a070f632a37ee3bb2bf912daaeb0ae1f2876b7d6053d4af6d24dd8f9cdd83a5",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm2",
+      "bytes": 86639772,
+      "sha256": "2e84f0d4a94bf37234128cfe516dcde16074f203842ca3797c26b4f454b50ef3",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm5.idx",
+      "bytes": 23909696,
+      "sha256": "492264312b065baad1052350f862a8c8ac174ffbaed890db79e065ef62a15bb0",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm3",
+      "bytes": 273680649,
+      "sha256": "c17a1148beb488067f4d4c7b90af1d67fd6aacf7e933ea15ee4bc577ed809921",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm6.idx",
+      "bytes": 65586424,
+      "sha256": "fbdf8640f4a75a7ab38562799b8b1d1373b23f3d3e7824907562c5ceb745d3f6",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.patlst",
+      "bytes": 340083717,
+      "sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd",
+      "role": "unchanged_model",
+      "external": true
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_COMPACT_STORE_v2/attempt/patlst_index.sqlite",
+      "bytes": 537591808,
+      "sha256": "c35f28462555da9982ed975b713a291b654a0e2b0d514e7d498f717bdf386070",
+      "external": true
+    }
+  ],
+  "runtime": [
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "external": true,
+      "bytes": 30894944,
+      "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+    },
+    {
+      "path": "/usr/bin/perl",
+      "external": true,
+      "bytes": 4019312,
+      "sha256": "38d70f54fd18d614e9e6cc35c960b45f54e7b991894b8308e704ae9953c86ce4"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/Config.pm",
+      "external": true,
+      "bytes": 3279,
+      "sha256": "612aae6d4a4a12b5f52c9d3a174cb1abb03a55efceb772bcdd3e7e5c0e47835d"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/Config_heavy.pl",
+      "external": true,
+      "bytes": 58427,
+      "sha256": "3379f82fc54c4cacd3be5f02960baec60e241ff66ec02fc08829c8d62aa1b540"
+    },
+    {
+      "path": "/usr/share/perl/5.38.2/JSON/PP.pm",
+      "external": true,
+      "bytes": 100523,
+      "sha256": "118c7968259493f8e0270a5b4744b1a0223292dc0d9acd896d9be89a17beb47a"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/IO/Handle.pm",
+      "external": true,
+      "bytes": 16650,
+      "sha256": "415b6d15ca558a2a73cf13df0eccc2ac47e31e58e072ba327e47d0d1cdea6dad"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/auto/IO/IO.so",
+      "external": true,
+      "bytes": 27232,
+      "sha256": "a43d48cc61fa3670ca2d6b9d33e2994b1502512e956ee52ecdd53eec0018d60c"
+    },
+    {
+      "path": "/usr/share/perl/5.38.2/sort.pm",
+      "external": true,
+      "bytes": 2992,
+      "sha256": "81dd8c70055572328963678b14edbbe19c535b3e1305cda8d8e9ed66472da56a"
+    },
+    {
+      "path": "/usr/share/perl/5.38.2/strict.pm",
+      "external": true,
+      "bytes": 4783,
+      "sha256": "f1296224730dceb5dd308ee1e72c452c8b13ced7f3bf742ccd16e1e1c416bcb5"
+    },
+    {
+      "path": "/usr/share/perl/5.38.2/warnings.pm",
+      "external": true,
+      "bytes": 57069,
+      "sha256": "01d1e55728ac5bed27e861658776221da6407012de1449e0a5f389a073da188b"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/Time/HiRes.pm",
+      "external": true,
+      "bytes": 25689,
+      "sha256": "43ccd5b396f0f51094fac95a8eea0aa4947cc28535c33db2d1e8ce41c55670f5"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/auto/Time/HiRes/HiRes.so",
+      "external": true,
+      "bytes": 35392,
+      "sha256": "1b4201b610444211e46e13b2f9a138d4c479f4a8d5e988fc4f44613b7d03a5ad"
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/sqlite3/__init__.py",
+      "external": true,
+      "bytes": 2501,
+      "sha256": "f7cc982617b68e147540ef352d38310fe4d25c2c9c2542b67d0590c871df09a8"
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/sqlite3/dbapi2.py",
+      "external": true,
+      "bytes": 3631,
+      "sha256": "7c5c8d98df1f2c50c4062a3be2c0f0499190c179fa4fc281507a1ef763a98f28"
+    }
+  ],
+  "outside_scope": [
+    "reference_perl",
+    "adapted_perl",
+    "full_model_hash_load_into_Perl",
+    "solver",
+    "scoring",
+    "87-control",
+    "target",
+    "network",
+    "install",
+    "retry",
+    "resume"
+  ]
+}

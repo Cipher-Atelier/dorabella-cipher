@@ -1,0 +1,440 @@
+"""CH3-v1: one bounded, frozen attempt. Standard library only; no child jobs.
+
+Do not import to test: the only authorized invocation is the single main call.
+The decoder receives glyphs, branch ID and published model, never control truth.
+"""
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import math
+import os
+import random
+import sys
+import time
+import traceback
+
+ROOT = Path(__file__).resolve().parent
+FROZEN = ROOT / 'frozen'
+OUT = ROOT / 'attempt'
+AZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+BRANCHES = ('B0', 'B1', 'B2', 'B3')
+CASE_IDS = ('P01', 'P02', 'P03', 'P04', 'N01', 'N02', 'N03', 'N04', 'hauer_real', 'hart_real')
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def utc():
+    return datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+
+def save(path, obj):
+    data = (json.dumps(obj, ensure_ascii=False, indent=2, allow_nan=False) + '\n').encode('utf-8')
+    with path.open('xb') as f:
+        f.write(data)
+        f.flush()
+        os.fsync(f.fileno())
+    return sha(data)
+
+
+class GlobalStop(Exception):
+    pass
+
+
+class Budget:
+    def __init__(self, t0):
+        self.t0 = t0
+        self.proposals = 0
+        self.initial_scores = 0
+        self.truth_scores = 0
+
+    def elapsed(self):
+        return time.monotonic() - self.t0
+
+    def check(self):
+        if self.elapsed() >= 180.0:
+            raise GlobalStop('GLOBAL_COOPERATIVE_180S')
+
+    def snapshot(self):
+        return {'proposals': self.proposals, 'initial_scores': self.initial_scores,
+                'truth_scores': self.truth_scores, 'elapsed_seconds': self.elapsed()}
+
+
+class LyonsModel:
+    def __init__(self, path, budget):
+        counts = {}
+        with path.open('r', encoding='ascii') as f:
+            for line_number, line in enumerate(f, 1):
+                key, count = line.split()
+                if len(key) != 4 or any(c not in AZ for c in key) or key in counts or int(count) <= 0:
+                    raise ValueError('Malformed/duplicate model row')
+                counts[key] = int(count)
+                if line_number % 4096 == 0:
+                    budget.check()
+        self.N = sum(counts.values())
+        self.ngrams = {}
+        for i, (key, count) in enumerate(counts.items()):
+            self.ngrams[key] = math.log10(float(count) / self.N)
+            if i % 4096 == 0:
+                budget.check()
+        self.floor = math.log10(0.01 / self.N)
+        budget.check()
+
+    def score(self, text):
+        if len(text) != 87:
+            raise ValueError('Score length != 87')
+        score = 0
+        get = self.ngrams.get
+        floor = self.floor
+        for i in range(84):
+            score += get(text[i:i + 4], floor)
+        return score
+
+
+def groups_for(branch):
+    if branch not in BRANCHES:
+        raise ValueError('Unknown branch')
+    pairs = []
+    if branch in ('B1', 'B3'):
+        pairs.append((5, 15))
+    if branch in ('B2', 'B3'):
+        pairs.append((22, 8))
+    reserved = {g for cycle in pairs for g in cycle}
+    return sorted(pairs + [(g,) for g in range(24) if g not in reserved], key=min)
+
+
+def check_glyphs(glyphs):
+    if len(glyphs) != 87 or any(type(x) is not int or not 0 <= x < 24 for x in glyphs):
+        raise ValueError('Invalid 87-glyph input')
+
+
+def structural(glyphs, groups):
+    evidence = []
+    for cycle in groups:
+        positions = [i for i, g in enumerate(glyphs) if g in cycle]
+        projection = [glyphs[i] for i in positions]
+        violations = [{'position1': i + 1, 'seen': glyphs[i], 'expected': cycle[j % len(cycle)]}
+                      for j, i in enumerate(positions) if glyphs[i] != cycle[j % len(cycle)]]
+        evidence.append({'cycle': cycle, 'positions1': [i + 1 for i in positions],
+                         'projection': projection, 'violations': violations})
+    return not any(x['violations'] for x in evidence), evidence
+
+
+def encode(text, key):
+    visits = {letter: 0 for letter in key}
+    glyphs = []
+    for letter in text:
+        cycle = key[letter]
+        glyphs.append(cycle[visits[letter] % len(cycle)])
+        visits[letter] += 1
+    return glyphs
+
+
+def inverse_record(text, glyphs, key):
+    # Independent prefix-count oracle, not encode()'s mutable counters.
+    check_glyphs(glyphs)
+    if len(text) != 87 or any(c not in AZ for c in text):
+        raise ValueError('Invalid inverse plaintext')
+    owner = {}
+    for letter, cycle in key.items():
+        for g in cycle:
+            if g in owner:
+                raise ValueError('Non-disjoint key')
+            owner[g] = letter
+    recovered = ''.join(owner[g] for g in glyphs)
+    positions = []
+    for i, (letter, g) in enumerate(zip(text, glyphs)):
+        cycle = key[letter]
+        visit = text[:i].count(letter)
+        expected = cycle[visit % len(cycle)]
+        positions.append({'position1': i + 1, 'letter': letter, 'visit0': visit,
+                          'cycle': list(cycle), 'glyph': g, 'reencoded_glyph': expected,
+                          'decoded_letter': owner[g], 'match': expected == g and owner[g] == letter})
+    if recovered != text or not all(x['match'] for x in positions):
+        raise ValueError('CORRECTNESS_INVERSE_MISMATCH')
+    return {'matched': 87, 'recovered_plaintext87': recovered,
+            'reencoded_glyphs87': [x['reencoded_glyph'] for x in positions], 'positions': positions}
+
+
+def prepare_controls(budget):
+    rows = json.loads((FROZEN / 'controls.json').read_text())
+    if [r['id'] for r in rows] != list(CASE_IDS[:4]):
+        raise ValueError('Control order changed')
+    positives, negatives, private = [], [], []
+    for n, row in enumerate(rows):
+        budget.check()
+        p = row['plaintext87']
+        branch = row['assigned_branch']
+        if branch != BRANCHES[n] or sha(p.encode('ascii')) != row['plaintext_sha256']:
+            raise ValueError('Control identity mismatch')
+        if len(p) != 87 or any(c not in AZ for c in p):
+            raise ValueError('Invalid frozen control alphabet/length')
+        key = {'E': (5, 15) if branch in ('B1', 'B3') else (5,),
+               'T': (22, 8) if branch in ('B2', 'B3') else (22,)}
+        reserved = {g for cycle in key.values() for g in cycle}
+        free = [g for g in range(24) if g not in reserved]
+        other = sorted(set(p) - set('ET'))
+        weak = [letter for letter, cycle in key.items() if len(cycle) > 1 and p.count(letter) < 3]
+        info = {'id': row['id'], 'assigned_branch': branch, 'plaintext87': p,
+                'plaintext_sha256': row['plaintext_sha256'], 'source': row['source'],
+                'other_letters': other, 'free_glyphs': free, 'weak_cycles': weak}
+        if len(other) > len(free) or weak:
+            info.update(status='CONTROL_DOMAIN_FAIL', key=None)
+            positives.append({'id': row['id'], 'status': 'CONTROL_DOMAIN_FAIL'})
+            negatives.append({'id': 'N' + row['id'][1:], 'status': 'CONTROL_DOMAIN_FAIL'})
+            private.append(info)
+            continue
+        key.update({letter: (g,) for letter, g in zip(other, free)})
+        negative = ''.join(p[(2 * i) % 87] for i in range(87))
+        pg, ng = encode(p, key), encode(negative, key)
+        info.update(status='REPRESENTABLE', key=key, positive_glyphs87=pg,
+                    positive_inverse=inverse_record(p, pg, key), negative_plaintext87=negative,
+                    negative_glyphs87=ng, negative_inverse=inverse_record(negative, ng, key))
+        private.append(info)
+        positives.append({'id': row['id'], 'status': 'READY', 'glyph': pg})
+        negatives.append({'id': 'N' + row['id'][1:], 'status': 'READY', 'glyph': ng})
+    save(OUT / 'private_control_truth.json', private)
+    save(OUT / 'decoder_control_inputs.json', positives + negatives)
+    return positives + negatives
+
+
+def decode(glyphs, groups, key):
+    table = {g: key[i] for i, cycle in enumerate(groups) for g in cycle}
+    return ''.join(table[g] for g in glyphs)
+
+
+def candidate_record(text, score, key, glyphs, groups):
+    if len(key) != 26 or sorted(key) != list(AZ):
+        raise ValueError('Non-permutation key')
+    encoder = {key[i]: cycle for i, cycle in enumerate(groups)}
+    return {'plaintext87': text, 'score': score, 'key26': ''.join(key),
+            'class_table': [{'class_index0': i, 'cycle': cycle, 'letter': key[i],
+                             'observed': any(g in glyphs for g in cycle)} for i, cycle in enumerate(groups)],
+            'unused_letters': ''.join(key[len(groups):]),
+            'inverse': inverse_record(text, glyphs, encoder)}
+
+
+def run_branch(case_id, glyphs, branch, model, budget):
+    started = time.monotonic()
+    deadline = started + 4.0
+    groups = groups_for(branch)
+    valid, evidence = structural(glyphs, groups)
+    result = {'case_id': case_id, 'branch': branch, 'started_elapsed': started - budget.t0,
+              'structural': evidence, 'restarts': [], 'status': 'STRUCTURAL_REJECT' if not valid else 'COMPLETE'}
+    if not valid:
+        result['elapsed_seconds'] = time.monotonic() - started
+        return result
+    for r in range(5):
+        budget.check()
+        if time.monotonic() >= deadline:
+            result['status'] = 'BRANCH_TIME_LIMIT'
+            for missing in range(r, 5):
+                result['restarts'].append({'r': missing, 'status': 'NOT_STARTED_BRANCH_TIME'})
+            break
+        restart_start = time.monotonic()
+        seed_text = f'CH3-v1|2026101703|{case_id}|{branch}|{r}'
+        seed = int.from_bytes(hashlib.sha256(seed_text.encode('utf-8')).digest(), 'big')
+        rng = random.Random(seed)
+        parentkey = list(AZ)
+        rng.shuffle(parentkey)
+        parenttext = decode(glyphs, groups, parentkey)
+        parentscore = model.score(parenttext)
+        budget.initial_scores += 1
+        if budget.initial_scores > 200:
+            raise ValueError('Initial-score cap')
+        count = 0
+        proposals = 0
+        accepted = 0
+        reason = 'PROPOSAL_CAP'
+        global_stop = False
+        for proposal in range(5000):
+            try:
+                budget.check()
+            except GlobalStop:
+                reason = 'GLOBAL_TIME_LIMIT'
+                global_stop = True
+                break
+            if time.monotonic() >= deadline:
+                reason = 'BRANCH_TIME_LIMIT'
+                result['status'] = 'BRANCH_TIME_LIMIT'
+                break
+            if budget.proposals >= 1000000:
+                raise ValueError('Proposal cap exceeded')
+            a = rng.randrange(26)
+            b = rng.randrange(26)
+            child = parentkey[:]
+            child[a], child[b] = child[b], child[a]
+            text = decode(glyphs, groups, child)
+            score = model.score(text)
+            proposals += 1
+            budget.proposals += 1
+            if score > parentscore:
+                parentscore = score
+                parentkey = child[:]
+                parenttext = text
+                count = 0
+                accepted += 1
+            count = count + 1
+            if count >= 1000:
+                reason = 'COUNT_1000'
+                break
+        rec = {'case_id': case_id, 'branch': branch, 'r': r, 'seed_text': seed_text,
+               'seed_integer': seed, 'reason': reason, 'proposals': proposals,
+               'accepted': accepted, 'count': count, 'search_elapsed_seconds': time.monotonic() - restart_start,
+               'candidate': candidate_record(parenttext, parentscore, parentkey, glyphs, groups)}
+        name = f'{case_id}_{branch}_r{r}.json'
+        digest = save(OUT / 'restarts' / name, rec)
+        result['restarts'].append({'r': r, 'file': 'restarts/' + name, 'sha256': digest, 'status': reason})
+        if global_stop:
+            result['status'] = 'GLOBAL_TIME_LIMIT'
+            result['elapsed_seconds'] = time.monotonic() - started
+            save(OUT / 'branches' / f'{case_id}_{branch}.json', result)
+            raise GlobalStop('GLOBAL_COOPERATIVE_180S')
+    result['elapsed_seconds'] = time.monotonic() - started
+    return result
+
+
+def aggregate_case(case_id, branches):
+    distinct = {}
+    for branch in branches:
+        for item in branch['restarts']:
+            if 'file' not in item:
+                continue
+            record = json.loads((OUT / item['file']).read_text())
+            candidate = record['candidate']
+            p = candidate['plaintext87']
+            if p not in distinct:
+                distinct[p] = {'plaintext87': p, 'score': candidate['score'], 'origins': []}
+            elif distinct[p]['score'] != candidate['score']:
+                raise ValueError('Same text has different scores')
+            distinct[p]['origins'].append({'branch': branch['branch'], 'r': item['r'], 'file': item['file']})
+    ranked = sorted(distinct.values(), key=lambda row: (-row['score'], row['plaintext87']))
+    best = ranked[0]['score'] if ranked else None
+    return {'case_id': case_id, 'distinct_count': len(ranked), 'ranked': ranked,
+            'top_tied_strings': [row['plaintext87'] for row in ranked if row['score'] == best], 'best_score': best}
+
+
+def postsearch(combined, model, budget):
+    # This is the first post-preparation read of control truth. Search is over.
+    private = json.loads((OUT / 'private_control_truth.json').read_text())
+    positive, negative = [], []
+    for row in private:
+        budget.check()
+        case_id = row['id']
+        if row['status'] != 'REPRESENTABLE':
+            positive.append({'id': case_id, 'status': row['status']})
+            negative.append({'id': 'N' + case_id[1:], 'status': row['status']})
+            continue
+        truth = row['plaintext87']
+        truth_score = model.score(truth)
+        budget.truth_scores += 1
+        result = combined[case_id]
+        positive.append({'id': case_id, 'status': 'ASSESSED', 'truth_score': truth_score,
+                         'best_score': result['best_score'],
+                         'truth_minus_best': truth_score - result['best_score'] if result['best_score'] is not None else None,
+                         'exact_top': truth in result['top_tied_strings'],
+                         'exact_any_retained': any(x['plaintext87'] == truth for x in result['ranked']),
+                         'top_matches87': [sum(a == b for a, b in zip(p, truth)) for p in result['top_tied_strings']],
+                         'top_tied_strings': result['top_tied_strings']})
+        neg_id = 'N' + case_id[1:]
+        nr = combined[neg_id]
+        negative.append({'id': neg_id, 'status': 'ASSESSED', 'paired_positive': case_id,
+                         'paired_truth_score': truth_score, 'best_score': nr['best_score'],
+                         'reached_paired_truth_score': nr['best_score'] is not None and nr['best_score'] >= truth_score,
+                         'top_tied_strings': nr['top_tied_strings']})
+    return {'positive': positive, 'negative': negative,
+            'targets': {k: combined[k] for k in CASE_IDS[-2:]}}
+
+
+def main():
+    # Exclusive directory is the attempt lock. No resume/retry path exists.
+    t0 = time.monotonic()
+    started_utc = utc()
+    OUT.mkdir(exist_ok=False)
+    budget = Budget(t0)
+    save(OUT / 'T0.json', {'utc': started_utc, 'monotonic': t0, 'pid': os.getpid(),
+                         'python': sys.version, 'executable': sys.executable, 'uname': list(os.uname()),
+                         'flags': {'isolated': sys.flags.isolated, 'no_site': sys.flags.no_site},
+                         'meaning': 'CH3 only; includes freeze verification, control prep and model loading'})
+    print(json.dumps({'event': 'START', 'T0_utc': started_utc, 'pid': os.getpid()}), flush=True)
+    state = {'status': 'INCOMPLETE', 'case_order': list(CASE_IDS), 'branches_completed': [], 'case_results': {}}
+    exit_code = 2
+    try:
+        freeze = json.loads((ROOT / 'FREEZE_MANIFEST.json').read_text())
+        if sys.version != freeze['runtime']['version'] or sys.executable != freeze['runtime']['executable']:
+            raise ValueError('Pinned runtime mismatch')
+        if sys.flags.isolated != 1 or sys.flags.no_site != 1:
+            raise ValueError('Need -I -S')
+        if sha(Path(sys.executable).read_bytes()) != freeze['runtime']['binary_sha256']:
+            raise ValueError('Pinned interpreter binary mismatch')
+        for path, digest in freeze['runtime']['dependency_files'].items():
+            budget.check()
+            if sha(Path(path).read_bytes()) != digest:
+                raise ValueError('Pinned runtime dependency mismatch: ' + path)
+        for name, info in freeze['files'].items():
+            budget.check()
+            if sha((ROOT / name).read_bytes()) != info['sha256']:
+                raise ValueError('Frozen file mismatch: ' + name)
+        (OUT / 'restarts').mkdir()
+        (OUT / 'branches').mkdir()
+        (OUT / 'cases').mkdir()
+        controls = prepare_controls(budget)
+        raw = json.loads((FROZEN / 'search_inputs.json').read_text())
+        targets = []
+        for case_id in CASE_IDS[-2:]:
+            rows = [r for r in raw if r['id'] == case_id]
+            if len(rows) != 1:
+                raise ValueError('Target missing/duplicate')
+            check_glyphs(rows[0]['glyph'])
+            targets.append({'id': case_id, 'status': 'READY', 'glyph': rows[0]['glyph']})
+        cases = controls + targets
+        save(OUT / 'decoder_inputs.json', cases)
+        print(json.dumps({'event': 'CONTROLS_PREPARED', 'cases': [{'id': r['id'], 'status': r['status']} for r in controls],
+                          'elapsed': budget.elapsed()}), flush=True)
+        model = LyonsModel(FROZEN / 'method_sources/quadgrams.txt', budget)
+        save(OUT / 'model_identity.json', {'N': model.N, 'floor': model.floor, 'entries': len(model.ngrams),
+                                         'quadgrams_sha256': sha((FROZEN / 'method_sources/quadgrams.txt').read_bytes())})
+        for case in cases:
+            budget.check()
+            branch_results = []
+            for branch in BRANCHES:
+                budget.check()
+                if case['status'] != 'READY':
+                    result = {'case_id': case['id'], 'branch': branch, 'status': 'CONTROL_DOMAIN_FAIL', 'restarts': []}
+                else:
+                    result = run_branch(case['id'], case['glyph'], branch, model, budget)
+                name = f"{case['id']}_{branch}.json"
+                digest = save(OUT / 'branches' / name, result)
+                branch_results.append(result)
+                state['branches_completed'].append({'case_id': case['id'], 'branch': branch, 'status': result['status'],
+                                                    'file': 'branches/' + name, 'sha256': digest})
+                print(json.dumps({'event': 'BRANCH_END', 'case': case['id'], 'branch': branch, 'status': result['status'],
+                                  'budget': budget.snapshot()}), flush=True)
+            aggregate = aggregate_case(case['id'], branch_results)
+            save(OUT / 'cases' / (case['id'] + '.json'), aggregate)
+            state['case_results'][case['id']] = aggregate
+        budget.check()
+        save(OUT / 'postsearch_assessment.json', postsearch(state['case_results'], model, budget))
+        budget.check()
+        state['status'] = 'COMPLETED_EXPLORATORY'
+        exit_code = 0
+    except GlobalStop as error:
+        state.update(status='STOP_GLOBAL_TIME', error=str(error))
+    except BaseException as error:
+        state.update(status='STOP_ERROR', error=repr(error), traceback=traceback.format_exc())
+    state.update(ended_utc=utc(), budget=budget.snapshot(), intended_exit_code=exit_code)
+    save(OUT / 'state.json', state)
+    files = {str(p.relative_to(OUT)): sha(p.read_bytes()) for p in sorted(OUT.rglob('*')) if p.is_file()}
+    terminal = {'status': state['status'], 'T0_utc': started_utc, 'ended_utc': utc(),
+                'budget': budget.snapshot(), 'intended_exit_code': exit_code, 'files_sha256': files,
+                'limit_note': 'Cooperative checks; terminal/checkpoint writes can extend observation beyond a deadline. No hard-kill claim.'}
+    save(OUT / 'terminal.json', terminal)
+    print(json.dumps({'event': 'TERMINAL', 'status': terminal['status'], 'budget': terminal['budget'],
+                      'intended_exit_code': exit_code, 'terminal_sha256': sha((OUT / 'terminal.json').read_bytes())}), flush=True)
+    return exit_code
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

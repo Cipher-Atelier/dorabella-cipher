@@ -1,0 +1,170 @@
+{
+  "version": "TS-ADAPTER-CONTRACT-v2",
+  "status": "PASS_ADAPTER_CONTRACT_ONLY",
+  "author_executions": 0,
+  "solver_calls": 0,
+  "score_calls": 0,
+  "target_inputs": 0,
+  "events": [
+    {
+      "phase": "authenticate_frozen_inputs",
+      "utc": "2026-10-17T13:49:53.324358+00:00",
+      "elapsed": 0.0021473349988809787
+    },
+    {
+      "phase": "golden_and_negative_fixture_contracts",
+      "utc": "2026-10-17T13:49:54.005619+00:00",
+      "elapsed": 0.683411897996848
+    },
+    {
+      "phase": "single_full_stream_selected_reference",
+      "utc": "2026-10-17T13:49:54.025284+00:00",
+      "elapsed": 0.7030778339976678
+    },
+    {
+      "phase": "real_read_only_adapter_and_cache",
+      "utc": "2026-10-17T13:50:05.572803+00:00",
+      "elapsed": 12.250600530998781
+    },
+    {
+      "phase": "seal_and_input_unchanged",
+      "utc": "2026-10-17T13:50:05.782196+00:00",
+      "elapsed": 12.459994008000649
+    }
+  ],
+  "start_utc": "2026-10-17T13:49:53.324138+00:00",
+  "limits": {
+    "RLIMIT_AS": [
+      268435456,
+      268435456
+    ],
+    "RLIMIT_CPU": [
+      170,
+      180
+    ],
+    "RLIMIT_FSIZE": [
+      33554432,
+      33554432
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ]
+  },
+  "before": {
+    "current": 6649712640,
+    "maximum": "8589934592",
+    "events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "proc": [
+      "VmPeak:\t   40332 kB",
+      "VmSize:\t   40324 kB",
+      "VmHWM:\t   11136 kB",
+      "VmRSS:\t   11136 kB"
+    ]
+  },
+  "phase": "seal_and_input_unchanged",
+  "identities_verified": true,
+  "fixtures": {
+    "golden_groups": 5,
+    "golden_segmentation": 10,
+    "negative_domain": 6,
+    "negative_storage": 8,
+    "passed": true
+  },
+  "reference": {
+    "rows": 7548932,
+    "bytes": 340083717,
+    "candidate_occurrences": 10662322,
+    "selected_candidates": 68945,
+    "words": 123619,
+    "maxlen": 46,
+    "source_sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd"
+  },
+  "adapter": {
+    "patterns": 7,
+    "full_list_comparisons": 23,
+    "query_stats": {
+      "list_calls": 19,
+      "list_hits": 4,
+      "list_misses": 13,
+      "evictions": 11,
+      "peak_cache_bytes": 3299788,
+      "rows_read": 84,
+      "candidates_read": 137890,
+      "word_calls": 51,
+      "word_hits": 12,
+      "word_queries": 39
+    },
+    "reopen_stats": {
+      "list_calls": 7,
+      "list_hits": 0,
+      "list_misses": 7,
+      "evictions": 5,
+      "peak_cache_bytes": 3299788,
+      "rows_read": 42,
+      "candidates_read": 68945,
+      "word_calls": 0,
+      "word_hits": 0,
+      "word_queries": 0
+    },
+    "word_probes": 16,
+    "segmentation_reference_cases": 6,
+    "rebuilds": 0,
+    "all_equal": true,
+    "counts": {
+      "a": 26,
+      "aa": 41,
+      "ab": 925,
+      "aba": 224,
+      "abc": 3818,
+      "abcdefgh": 63911,
+      "!": 0
+    }
+  },
+  "output_hashes": {
+    "T0.json": "2400c2216b5218672aaf49dd7f44dc5e77e5f5e6769ad033c855ed8f76873d72",
+    "duplicate_loss.patlst": "71362d5aaa1100c489b24e028e747dd34d165db3e8e9a46a619617d6db68dccf",
+    "fixture_results.json": "29553c7cf2388156b8eb2beddaef70c3284583b621e2a5ff702f21e231c15aad",
+    "golden_oracle_expected.json": "7530af6c1014544aeaaf48c92ec23771b62f0b5fe027e4c5930a992abd75ee5a",
+    "negative_0.sqlite": "6a1fe5f0eadce4c11dd1a72872a6796d68986a1ccfcd08c005f9d86412338ef8",
+    "negative_1.sqlite": "e2f7f725bbed81853ba16a5a8ed49c49eac6af8bd2a129f533502da2ef7c50e7",
+    "negative_2.sqlite": "08f7e6fc62a83f5d0da805bba5db48a011de9db59e56b4462205d6bec32268af",
+    "negative_3.sqlite": "750fc175a2ffe3a0da4e2f56f71af82db5f2c2da5e51b4c088a600a0950861dc",
+    "negative_4.sqlite": "1b5c551660fb988d4da897df88019a11f9c3a5d705b749051bf50fe359481414",
+    "negative_5.sqlite": "bea95ba5b18702d56cc087bcc9c7cff6ca69c3dff54cb73aef92da61a301ab30",
+    "oracle_expected.json": "19f66d31d988dd37034b2b4aee0915ce0d62bf1b186d31d4933f796a17c9dda6",
+    "oracle_fixture.patlst": "4492586f6600fbb68c5aa20d20fb7dba8d5b0765a896b27c77abaf9e31b296b2",
+    "oracle_subset_provenance.json": "bebca994f7cc7e2296ac7d4f976a4914ab1582e7a5263b4829a79d190434aeea",
+    "real_lists.json": "002ed437c9636553ad39f45b90405b56c5c463217cf70af7923cf0c8c2e457a7",
+    "real_lookup_receipts.json": "c326533a3c42a7f588272317e45719107683146ea895e88a9de8c7952b8f95a5",
+    "real_membership.json": "dd2c5fdcc8f8ff5b81ee55d003dc02085913896fd9c086435b1d81121b3d9e3d",
+    "real_segmentation.json": "f20e106c700d83eafa194ef983e5e120bc031562939983a0164f42657a7d30f1",
+    "reorder.patlst": "6c4716003c3072ba23173a9a97caae94b3f6a20f9485562c114a688001e4ef8f"
+  },
+  "not_proved": [
+    "Perl execution equivalence",
+    "numerical LM equivalence",
+    "native Perl bridge",
+    "solver trajectory/ties",
+    "full-search RAM/time",
+    "87/87 control or target"
+  ],
+  "end_utc": "2026-10-17T13:50:06.423251+00:00",
+  "elapsed_seconds": 13.101048835997062,
+  "ru_maxrss_KiB": 47304,
+  "after": {
+    "current": 6680838144,
+    "maximum": "8589934592",
+    "events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "proc": [
+      "VmPeak:\t   76472 kB",
+      "VmSize:\t   64276 kB",
+      "VmHWM:\t   47304 kB",
+      "VmRSS:\t   35376 kB"
+    ]
+  }
+}

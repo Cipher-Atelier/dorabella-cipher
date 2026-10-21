@@ -1,0 +1,36 @@
+{
+  "protocol": {
+    "id": "round10-notebook-block-exact-v1",
+    "formula": "key[3*o+c] = ALPHABET[3*perm8[o]+perm3[c]]; SAME perm3 for every direction",
+    "alphabet": "ABCDEFGHIKLMNOPQRSTUWXYZ",
+    "definitions": 241920,
+    "unique_full_keys": 241920,
+    "reading": "87 unchanged glyphs, left to right; ignore dots/row breaks as commands",
+    "character_model": "archived english_merged24_v5.npz, unchanged",
+    "score": "S = mean conditional log 4gram + 0.5 * Viterbi word segmentation / length; unchanged v5 score",
+    "search": "Exhaustive: compute full char and word scores for EVERY key, no early rejection",
+    "secondary": "Choose key using first 43 glyphs only by same S; evaluate suffix 44 with that key, no suffix refinement; fixed before scores",
+    "tie": "First key in lexicographic perm8, then perm3 order selected by numpy.argmax; comparisons allow 1e-10",
+    "controls": "39 independently generated global directed-bigram-preserving controls for each published transcription, with fixed first/last glyph; each gets full search. Do not select best transcription.",
+    "null_count_each": 39,
+    "null_seed": 202610011010,
+    "positives": "12 new published Elgar letter openings, known random keys; first87 ASCII letters after salutation, j->i,v->u; two old regression texts separate",
+    "interpretation": "Language score is heuristic, no probability of plaintext. Exploratory family chosen after nine rounds; no global multiple-search correction."
+  },
+  "hashes": {
+    "round10/prepare.py": "08ce6e0ce9af439ae9a6702611a8a9a653b9dbbff38af16f775bf91d64ba277f",
+    "round10/table_search.py": "15680e28ab7634d33d40c3fda38fbf9e68a55428127b7898113ce5ac1d1d5d75",
+    "round10/data/elgar_letters.json": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240",
+    "round10/data/inputs.json": "00cdd89351009449bd2f837bbf2788b5ca3544d966187a1b2e19be0aa3bc758e",
+    "model_v5.py": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b",
+    "wordpolish_v3.py": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "conditional_v7.py": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+    "data/english_merged24_v5.npz": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c"
+  },
+  "dictionary": {
+    "dictionary_sha256": "eade91558167fe09a481abf59e176af8643ad78678cc53dd5aeaf2a8b30fa332",
+    "words": 29127,
+    "tokens": 1096363,
+    "normalisation": "ASCII lower; j->i and v->u; merge counts; unchanged segmentation penalties"
+  }
+}

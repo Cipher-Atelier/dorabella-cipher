@@ -1,0 +1,38 @@
+[
+  {
+    "function": "fast_word",
+    "source": "dorabella_audit/test_lab/wordpolish_v3.py",
+    "source_sha256": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "body_ast_sha256": "6cca8d82aba0feb213732c5fd70b6f34053946d119a1c9be50b3b84335de5920"
+  },
+  {
+    "function": "char_score",
+    "source": "dorabella_audit/test_lab/wordpolish_v3.py",
+    "source_sha256": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "body_ast_sha256": "b9144e0116f7696cfec45bb4c92497350dc3cf87f2850a4af96ebc771b9a42d6"
+  },
+  {
+    "function": "key_at",
+    "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+    "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "body_ast_sha256": "a2dbcfb666453979079d9da0e53b61a1b4cb1129ac4dbc17e3d3287466d7abb7"
+  },
+  {
+    "function": "ambiguous_word",
+    "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+    "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "body_ast_sha256": "5c4de8e170ee190ba05dbfca344788984b5fb8c54fc81271cd300a3f8a81cac4"
+  },
+  {
+    "function": "scan_block",
+    "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+    "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "body_ast_sha256": "277781dc0040911bb4608a66f1559cc789b01772ca634da2fd4c5d11e7b3e04a"
+  },
+  {
+    "function": "brute_block",
+    "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+    "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "body_ast_sha256": "2faa46576e02db39761fa8750ceaaeb9b7daef2c5739c326559b0127ba9ff8eb"
+  }
+]

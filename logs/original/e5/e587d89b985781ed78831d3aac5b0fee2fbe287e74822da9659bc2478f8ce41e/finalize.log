@@ -1,0 +1,293 @@
+{
+  "status": "completed_and_verified_no_solution",
+  "protocol_sha256": "991b60f70f3f5826c9803938ad572beea5c90f16b32affbb473cd32cb9a29867",
+  "case_count": 94,
+  "keys_per_input": 30965760,
+  "main_character_key_input_evaluations": 2910781440,
+  "main_fully_evaluated_word_scores": 80553,
+  "main_safe_bound_pruned_word_scores": 2910700887,
+  "main_checkpoint_blocks_verified": 3760,
+  "max_independent_score_error": 6.217248937900877e-15,
+  "all_stored_complete_key_char_scores_independently_verified": 80553,
+  "python_word_score_checks": 3364,
+  "positives": {
+    "positive": {
+      "n": 12,
+      "train43_exact": 12,
+      "test44_exact": 11,
+      "train_correct_letters": 516,
+      "test_correct_letters": 524,
+      "unique_training_key": 9,
+      "unambiguous_correct_suffix_across_all_maximum_training_keys": 10,
+      "per_case": [
+        {
+          "id": "bailey_01",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.1858538959224845,
+          "true_prefix_score": -3.1858538959224854
+        },
+        {
+          "id": "bailey_02",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.436039318848774,
+          "true_prefix_score": -3.436039318848774
+        },
+        {
+          "id": "bailey_03",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -2.9942366121903556,
+          "true_prefix_score": -2.994236612190355
+        },
+        {
+          "id": "bailey_04",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.324088459974061,
+          "true_prefix_score": -3.3240884599740608
+        },
+        {
+          "id": "bailey_05",
+          "train_correct": 43,
+          "test_correct": 40,
+          "full_correct": 83,
+          "exact_tie_count": 8,
+          "distinct_suffixes_among_exact_training_ties": 4,
+          "train_score": -3.010477642456775,
+          "true_prefix_score": -3.0104776424567747
+        },
+        {
+          "id": "bailey_06",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 4,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.2538059627777156,
+          "true_prefix_score": -3.253805962777715
+        },
+        {
+          "id": "bailey_07",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 2,
+          "distinct_suffixes_among_exact_training_ties": 2,
+          "train_score": -2.995880372565031,
+          "true_prefix_score": -2.995880372565031
+        },
+        {
+          "id": "bailey_08",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.007237077484354,
+          "true_prefix_score": -3.0072370774843535
+        },
+        {
+          "id": "bailey_09",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.66566064657378,
+          "true_prefix_score": -3.66566064657378
+        },
+        {
+          "id": "brewer_01",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.955657191608231,
+          "true_prefix_score": -3.95565719160823
+        },
+        {
+          "id": "brewer_02",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.738584064252363,
+          "true_prefix_score": -3.738584064252363
+        },
+        {
+          "id": "brewer_03",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -3.114553071610593,
+          "true_prefix_score": -3.1145530716105934
+        }
+      ]
+    },
+    "regression": {
+      "n": 2,
+      "train43_exact": 1,
+      "test44_exact": 1,
+      "train_correct_letters": 82,
+      "test_correct_letters": 83,
+      "unique_training_key": 1,
+      "unambiguous_correct_suffix_across_all_maximum_training_keys": 0,
+      "per_case": [
+        {
+          "id": "elgar_march_1897",
+          "train_correct": 43,
+          "test_correct": 44,
+          "full_correct": 87,
+          "exact_tie_count": 4,
+          "distinct_suffixes_among_exact_training_ties": 2,
+          "train_score": -3.110423860797647,
+          "true_prefix_score": -3.1104238607976464
+        },
+        {
+          "id": "elgar_caractacus_postcard",
+          "train_correct": 39,
+          "test_correct": 39,
+          "full_correct": 78,
+          "exact_tie_count": 1,
+          "distinct_suffixes_among_exact_training_ties": 1,
+          "train_score": -4.563313033208676,
+          "true_prefix_score": -4.719258213775418
+        }
+      ]
+    }
+  },
+  "real": {
+    "hauer_real": {
+      "train_S43": -5.8897086467466515,
+      "test_S44": -10.325431017236411,
+      "null_count": 39,
+      "test_controls_ge": 39,
+      "descriptive_test_tail_plus1": 1.0,
+      "train_controls_ge": 29,
+      "key_id": 9244453,
+      "perm8": [
+        2,
+        3,
+        6,
+        1,
+        5,
+        0,
+        7,
+        4
+      ],
+      "middle_rank": 0,
+      "mask": 37,
+      "exact_training_ties": 1,
+      "full_readout_NOT_solution": "gskhityhenmaclauaatssalonowmbyaytohedhkaaktwcyamatxbcloeeombkbtxbklxzwbkatxcbwhswbthloh",
+      "suffix_null_range": [
+        -10.149230474813134,
+        -7.528685850056562
+      ]
+    },
+    "hart_real": {
+      "train_S43": -5.970817805852386,
+      "test_S44": -10.268241166932572,
+      "null_count": 39,
+      "test_controls_ge": 38,
+      "descriptive_test_tail_plus1": 0.975,
+      "train_controls_ge": 30,
+      "key_id": 9249076,
+      "perm8": [
+        2,
+        3,
+        6,
+        1,
+        7,
+        0,
+        5,
+        4
+      ],
+      "middle_rank": 0,
+      "mask": 52,
+      "exact_training_ties": 1,
+      "full_readout_NOT_solution": "gykihtrienmaclauaatyyalonowmbrartriedikaaktwcramatqbcloeeombkbtqbklqswbkatqcbliywbtiloi",
+      "suffix_null_range": [
+        -10.877450951890731,
+        -7.464082650101773
+      ]
+    }
+  },
+  "bounded_full_repeats": [
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "bailey_01"
+    },
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "bailey_08"
+    },
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "elgar_march_1897"
+    },
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "hauer_real"
+    },
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "hart_real"
+    },
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "hauer_real_pair_00"
+    },
+    {
+      "all30965760_keys_repeated": true,
+      "all40checkpoint_arrays_identical": true,
+      "case": "hart_real_pair_00"
+    }
+  ],
+  "unpruned_verification": {
+    "all_agree": true,
+    "all_keys_fully_scored": 185794560,
+    "cases": 6
+  },
+  "round10_recomputed": [
+    {
+      "id": "bailey_01",
+      "keys": 241920,
+      "scores_sha256": "98d50d10e85b32075217001c27f8aa83d829da5201f83d3074f263b97251f1f0",
+      "seconds": 1.2109348773956299
+    },
+    {
+      "id": "hauer_real",
+      "keys": 241920,
+      "scores_sha256": "35c876885ab47dbaa93a75339d068938dbe71d620eab5babe51d5a82ed1ee314",
+      "seconds": 0.598423957824707
+    }
+  ],
+  "old_files": {
+    "changed": [],
+    "verified": 7500
+  }
+}

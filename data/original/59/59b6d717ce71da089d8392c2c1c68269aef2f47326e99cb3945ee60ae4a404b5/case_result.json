@@ -1,0 +1,15 @@
+{
+  "accepted_bytes": 0,
+  "ack": false,
+  "actual_error": "INCOMPLETE_BUDGET_DEADLINE",
+  "checks": {},
+  "chunks_opened": 0,
+  "cleanup_error": null,
+  "closed": false,
+  "expected_error": "INCOMPLETE_BUDGET_DEADLINE",
+  "failed": true,
+  "fd_cleanup": true,
+  "name": "NEG_DEADLINE",
+  "receipt_bytes": 0,
+  "trace": []
+}

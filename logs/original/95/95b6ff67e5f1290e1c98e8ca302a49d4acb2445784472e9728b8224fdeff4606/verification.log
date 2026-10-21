@@ -1,0 +1,84 @@
+verified positive_00
+verified positive_01
+verified positive_02
+verified positive_03
+verified positive_04
+verified positive_05
+verified positive_06
+verified positive_07
+verified positive_08
+verified positive_09
+verified positive_10
+verified positive_11
+verified hauer_real
+verified hart_real
+verified hauer_real_fresh_000
+verified hart_real_fresh_000
+verified hauer_real_fresh_001
+verified hart_real_fresh_001
+verified hauer_real_fresh_002
+verified hart_real_fresh_002
+verified hauer_real_fresh_003
+verified hart_real_fresh_003
+verified hauer_real_fresh_004
+verified hart_real_fresh_004
+verified hauer_real_fresh_005
+verified hart_real_fresh_005
+verified hauer_real_fresh_006
+verified hart_real_fresh_006
+verified hauer_real_fresh_007
+verified hart_real_fresh_007
+verified hauer_real_fresh_008
+verified hart_real_fresh_008
+verified hauer_real_fresh_009
+verified hart_real_fresh_009
+verified hauer_real_fresh_010
+verified hart_real_fresh_010
+verified hauer_real_fresh_011
+verified hart_real_fresh_011
+verified hauer_real_fresh_012
+verified hart_real_fresh_012
+verified hauer_real_fresh_013
+verified hart_real_fresh_013
+verified hauer_real_fresh_014
+verified hart_real_fresh_014
+verified hauer_real_fresh_015
+verified hart_real_fresh_015
+verified hauer_real_fresh_016
+verified hart_real_fresh_016
+verified hauer_real_fresh_017
+verified hart_real_fresh_017
+verified hauer_real_fresh_018
+verified hart_real_fresh_018
+{
+  "sensitivity": {
+    "n": 12,
+    "exact": 10,
+    "at_least90pct": 12,
+    "correct_letters": 1041,
+    "total_letters": 1044,
+    "status": "previously_seen_regressions_not_blind",
+    "no12of12_gate": true
+  },
+  "tails": {
+    "hauer_real": {
+      "real_S": -4.199298930609018,
+      "controls_not_lower": 0,
+      "n": 19,
+      "descriptive_plus_one_tail": 0.05
+    },
+    "hart_real": {
+      "real_S": -4.271301410369731,
+      "controls_not_lower": 2,
+      "n": 19,
+      "descriptive_plus_one_tail": 0.15
+    },
+    "paired_max": {
+      "real_T": -4.199298930609018,
+      "controls_not_lower": 1,
+      "n_pairs": 19,
+      "descriptive_plus_one_tail": 0.1,
+      "screening_flag": false
+    }
+  }
+}

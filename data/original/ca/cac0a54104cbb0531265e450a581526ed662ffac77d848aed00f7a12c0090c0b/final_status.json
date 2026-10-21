@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-01T20:04:30.969517+00:00",
+  "active_round11_research_processes": [],
+  "main_inputs_complete": 94,
+  "main_inputs_verified": 94,
+  "main_checkpoint_blocks_verified": 3760,
+  "seven_primary_repeats_complete": true,
+  "six_unpruned_audits_complete": true,
+  "two_additional_fresh_reproducer_smoke_tests_complete": true,
+  "old_files_verified_unchanged": 7500,
+  "frozen_protocol_hashes_verified": true,
+  "pending_scientific_jobs": 0,
+  "blockers_remaining_for_requested_computations": [],
+  "solution_established": false
+}

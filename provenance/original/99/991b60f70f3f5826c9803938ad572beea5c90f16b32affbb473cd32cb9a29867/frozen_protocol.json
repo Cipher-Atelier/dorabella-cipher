@@ -1,0 +1,113 @@
+{
+  "hashes": {
+    "conditional_v7.py": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+    "data/english_merged24_v5.npz": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c",
+    "model_v5.py": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b",
+    "round10/data/elgar_letters.json": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240",
+    "round10/data/inputs_base.json": "cf453ad6d292e53f90b2e03ea4d7d68bb269107acb78f83801831c5bd253484d",
+    "round11/data/cases.json": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+    "round11/data/model_metadata.json": "713cd16397a0399378926ea3f5a547cb3f91580f69a37514cb76cf914b7ce4a5",
+    "round11/data/protocol.json": "a4e80712abe32abd08cb63f4bd0b106868a00c30430f137e5e4bcc3536f6a594",
+    "round11/data/scoring.npz": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+    "round11/data/search_inputs.json": "29a64d350806e684c3dcaf7268020f8a8fae443fa913fb28d72a8b61b3e6a921",
+    "round11/engine.py": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "round11/prepare.py": "dee28ed23b139b453a444041029d8f67fc59c8b707158bda73a357adb4146b8b",
+    "round11/run.py": "20a6fac74904cf542c4e62de39716ff2053b718ef33ff239da8e1491d6521530",
+    "round11/verify.py": "1aeaa0ff7d119fae5e7767078480f3f71a386ec1d574b07edfb6aa46d039cbf3",
+    "wordpolish_v3.py": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "wordscore_v3.py": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790"
+  },
+  "protocol": {
+    "execution_order": "all14 positive/regression prefixes finalized and independently checked before real transcriptions; then two real, then78 negatives, same search",
+    "family": {
+      "P8": "all 40320 lexicographic permutations of 0..7",
+      "Q_m": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "alphabet": "ABCDEFGHIKLMNOPQRSTUWXYZ",
+      "canonical_id": "768*lex_rank(P8) + 256*m + mask",
+      "duplicates_removed": "6 common P3 * 256 masks has a global-reversal redundancy of 2; canonical Q endpoints ascending removes it",
+      "formula": "key[3*o+c] = ASCII_index(A24[3*P8[o] + Q_m[2-c if bit(mask,o) else c]])",
+      "mask": "all integers 0..255; bit o reverses input arcs 1<->3 for orientation o",
+      "round10_included": "all Q with mask=0 or mask=255; 241920 distinct keys",
+      "scope": "No glyph corrections, no position reordering, no state/dot commands. Same fixed triples, common middle rank; not all substitutions, not all 6^8 internal permutations.",
+      "triples": [
+        "ABC",
+        "DEF",
+        "GHI",
+        "KLM",
+        "NOP",
+        "QRS",
+        "TUW",
+        "XYZ"
+      ],
+      "unique_full_keys": 30965760
+    },
+    "id": "round11-direction-reversal-prefix-exact-v1",
+    "interpretation": "Exploratory family selected after ten rounds. Exact numerical max does not mean semantic solution or exclusion of every English reading; no new original manuscript evidence.",
+    "negative_controls": {
+      "coupling": "Same RNG initial state, different graphs consume it differently. NOT identical positional permutations and not a validated joint null for max across versions.",
+      "method": "archived directed-bigram Euler shuffle with fixed endpoints, independently uniform for each transcription; paired by replicate using same reset RNG seed per replicate for both versions",
+      "n_pairs": 39,
+      "seed_root": 202610011102,
+      "selection": "Each version analyzed separately. No choosing better version or multiplying p-values. Controls preserve full glyph counts, directed bigrams, endpoints, not necessarily prefix counts.",
+      "tail": "(1+count(test_control>=test_real-1e-10))/(39+1); descriptive conditional tail, not probability true/false plaintext; no global adaptive-search correction"
+    },
+    "objective": {
+      "character": "unchanged archived data/english_merged24_v5.npz, mean natural log conditional 4gram in original window order",
+      "key_selection": "Strict largest float64 S43; if EXACT equal, smallest canonical key ID. All exact ties retained. 1e-10 is reporting comparison tolerance for tail counts only, not key selection.",
+      "not_probability": true,
+      "test": "Last44 decrypted once with selected key, scored with same C44+0.5*W44 using within-suffix windows only. No cross-boundary 4grams, no suffix-based key choice, stopping, tuning or tie breaking.",
+      "train": "S43 = C43 + 0.5*W43 only on first 43 glyphs",
+      "whole87": "Only readout with training-selected key; no full-text fit in this round",
+      "word": "unchanged merged24 TextBlob unigram Viterbi; max word24, unknown-8/letter, partial endpoints -2; no added words"
+    },
+    "positive_controls": {
+      "key_generation": "uniform P8 permutation, uniform m in0..2, uniform mask in1..254 (exclude old common-order subfamily); independent by excerpt order",
+      "limitations": "convenience linked letter openings, repeated recipients, merged letters; no guarantee external dictionary lacks author",
+      "n_main": 12,
+      "n_regression": 2,
+      "normalization": "reuse exactly the existing 87 normalized ASCII letters; j->i and v->u; no modernizing spelling",
+      "seed": 202610011101,
+      "source": "unchanged archived round10 letter excerpts; 12 Bailey/Brewer plus 2 round8 regressions",
+      "status": "All 14 texts were already seen in prior rounds. Regression/sensitivity tests, NOT independent new historical holdouts. Fresh nonuniform direction masks, unknown to solver."
+    },
+    "search": {
+      "block_P8": 1024,
+      "budget": "All 40320 P8 * 3 canonical Q * 256 masks. No top-K cut, stochastic search, or data-dependent early stopping.",
+      "checkpoint": "atomic NPZ+JSON after each P8 block, before next block; cumulative score, exact-tie keys, bounds, sparse complete scores, hashes",
+      "method": "Exact enumeration of all 30965760 character scores per input; evaluate W unless admissible ambiguity-word upper bound proves S cannot match incumbent. Bound allows independent lo/hi choices at every position, a superset of all 256 masks for fixed P8,m.",
+      "prune": "C+.5*W_upper < incumbent - 1e-9; conservative float safety margin",
+      "sequential_order": "P8 lexicographic, m0..2. Within group character champion first then remaining mask IDs ascending; ties resolved by canonical ID regardless of order"
+    },
+    "verification": {
+      "development": "5 complete two-P8 synthetic toy exhaustive comparisons, before freeze; no actual case scores used",
+      "independent": "Python word scorer and direct C evaluation of selected keys; brute full masks on deterministic sampled blocks; checkpoint chaining, admissible bound checks; reencrypt all87; regenerate seeds; verify7500oldfiles",
+      "initial": "existing process/files inventory and archive SHA256; no prior round11 found in accessible runtime/archives; withdrawn12/12 not evidence",
+      "repeat_cases": [
+        "bailey_01",
+        "bailey_08",
+        "elgar_march_1897",
+        "hauer_real",
+        "hart_real",
+        "hauer_real_pair_00",
+        "hart_real_pair_00"
+      ],
+      "repeat_rule": "missing case name substituted ONLY by actual first old-regression case name before freeze"
+    }
+  }
+}

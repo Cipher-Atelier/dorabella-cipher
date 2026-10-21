@@ -1,0 +1,23 @@
+{
+  "hauer_real": {
+    "score": -4.4721404160180125,
+    "initial_score": -4.686481681057513,
+    "mean": -4.613301876552282,
+    "ge": 3,
+    "n": 99,
+    "p_plus_one": 0.04,
+    "text": "gfroztcondwaspalaatffapidimwecactionboraartmscawathespinniweretherphumerathsemofmetopio",
+    "segmentation": "\u2026g fro ?z ?t cond was pal a at ff a ?p i dim we ?c action ?b or a art ?m sca ?w a the spin ?n i were the ?r ?p hume raths em of me to pio\u2026"
+  },
+  "hart_real": {
+    "score": -4.586690081762917,
+    "initial_score": -4.586690081762917,
+    "mean": -4.621447161693841,
+    "ge": 36,
+    "n": 99,
+    "p_plus_one": 0.37,
+    "text": "fbdaysmancrepteveesbbetocourimemsmanladeedsupmereshiptonnoridishidthguideshpitabuisatoa",
+    "segmentation": "\u2026f ?b days man crept eve es ?b be to ?c our i me ms man la deeds up mere ship to ?n no rid is hid th guides ?h pit a bu is a to a"
+  },
+  "records": 200
+}

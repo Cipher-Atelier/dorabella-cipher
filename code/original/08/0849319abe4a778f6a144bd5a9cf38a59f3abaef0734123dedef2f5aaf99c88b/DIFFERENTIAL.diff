@@ -1,0 +1,42 @@
+--- LM-v1/differential.pl
++++ combined-v1/differential.pl
+@@ -10,14 +10,15 @@
+ use Utils;
+ use NoSpace;
+ use Prefetch;
++use CompactPatList;
+ BEGIN {
+   die "RUNTIME_MISMATCH" unless "$^V" eq 'v5.38.2'
+     && $Config{archname} eq 'x86_64-linux-gnu-thread-multi'
+     && $Config{nvtype} eq 'double' && $Config{nvsize}==8;
+ }
+ $|=1;
+-my ($mode,$fixture,$read_fd,$write_fd)=@ARGV;
+-die "ARGS" unless ($mode eq 'reference' && @ARGV==2) || ($mode eq 'adapted' && @ARGV==4);
++my ($mode,$fixture,$read_fd,$write_fd,$pat_read_fd,$pat_write_fd)=@ARGV;
++die "ARGS" unless ($mode eq 'reference' && @ARGV==2) || ($mode eq 'adapted' && @ARGV==6);
+ my $json=JSON::PP->new->ascii(1)->canonical(1);
+ open my $in,'<',"$fixture/cases.json" or die $!;
+ my $spec=$json->decode(do {local $/;<$in>});close $in or die $!;
+@@ -39,7 +40,12 @@
+ my $global_iteration_count=0;
+ my ($grams_with_pattern,$is_word,$maxlen)=([0,{},{},{}],{},0);
+ my $bridge=$mode eq 'adapted' ? Prefetch->attach($read_fd,$write_fd) : undef;
+-Utils::ReadPList("$fixture/fixture.patlst",$grams_with_pattern,$is_word,\$maxlen,1);
++my $patbridge;
++if ($mode eq 'reference') {
++ Utils::ReadPList("$fixture/fixture.patlst",$grams_with_pattern,$is_word,\$maxlen,1);
++} else {
++ ($patbridge,$grams_with_pattern,$is_word,$maxlen)=CompactPatList->attach($pat_read_fd,$pat_write_fd);
++}
+ die "MAXLEN" unless $maxlen==6;
+ my $event_count=0;
+ my $score_calls=0;
+@@ -103,6 +109,7 @@
+ Trace('complete',{cases=>scalar(@{$spec->{cases}}),score_calls=>$score_calls});
+ EdgeTests();
+ $bridge->close() if defined $bridge;
++$patbridge->close() if defined $patbridge;
+ exit 0;
+ 
+ sub MCTS {

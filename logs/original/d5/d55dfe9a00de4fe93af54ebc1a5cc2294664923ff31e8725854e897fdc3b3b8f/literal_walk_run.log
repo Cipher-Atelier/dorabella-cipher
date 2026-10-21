@@ -1,0 +1,90 @@
+{
+  "hauer_real": {
+    "unit_compass": {
+      "counts": {
+        "continuous": 67,
+        "same_origin_row_resets": 69,
+        "separate_rows": [
+          26,
+          22,
+          22
+        ]
+      },
+      "rank": 3,
+      "minor": {
+        "row_indices_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "determinant": "5/2 - sqrt(2)/2",
+        "nonzero": true
+      }
+    },
+    "cartesian_eight_directions": {
+      "counts": {
+        "continuous": 59,
+        "same_origin_row_resets": 55,
+        "separate_rows": [
+          24,
+          21,
+          21
+        ]
+      },
+      "rank": 3,
+      "minor": {
+        "row_indices_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "determinant": "2",
+        "nonzero": true
+      }
+    }
+  },
+  "hart_real": {
+    "unit_compass": {
+      "counts": {
+        "continuous": 66,
+        "same_origin_row_resets": 68,
+        "separate_rows": [
+          26,
+          21,
+          22
+        ]
+      },
+      "rank": 3,
+      "minor": {
+        "row_indices_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "determinant": "7 - 3*sqrt(2)",
+        "nonzero": true
+      }
+    },
+    "cartesian_eight_directions": {
+      "counts": {
+        "continuous": 59,
+        "same_origin_row_resets": 60,
+        "separate_rows": [
+          24,
+          21,
+          21
+        ]
+      },
+      "rank": 3,
+      "minor": {
+        "row_indices_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "determinant": "4",
+        "nonzero": true
+      }
+    }
+  }
+}

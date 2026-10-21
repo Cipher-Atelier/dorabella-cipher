@@ -1,0 +1,136 @@
+{
+  "version": "TS-INTEGRATION87-BOUND-v1",
+  "status": "BLOCKED_BEFORE_EXECUTABLE",
+  "source_diff": "none",
+  "foreign_executions": 0,
+  "own_metadata_census_attempts": 1,
+  "freeze_sha256": "181af9cbcc4016959f4051ca7d63017da165a27bfb92a84fbe383f8bee9a8580",
+  "members": [
+    {
+      "path": "BOUND_RESULT.json",
+      "bytes": 363864,
+      "sha256": "9585c38ab5c9933a9cce209b65491f0a94a888f87bc590b1e48c98041595e71a"
+    },
+    {
+      "path": "COUNT_READBACK.json",
+      "bytes": 822,
+      "sha256": "226e80db464a70f80459598f9c6347510a34f52ca94a8f8dfd5aa68d32ea773b"
+    },
+    {
+      "path": "Dorabella_integration87_bound_blocker_20261018.md",
+      "bytes": 16254,
+      "sha256": "07334639704bf4c0757352c4a9d72409d0f2d7234b47705456dd5b39d0ea6ad7"
+    },
+    {
+      "path": "FREEZE_BLOCKED.json",
+      "bytes": 1142,
+      "sha256": "181af9cbcc4016959f4051ca7d63017da165a27bfb92a84fbe383f8bee9a8580"
+    },
+    {
+      "path": "PREP_STATIC_FREEZE.json",
+      "bytes": 648,
+      "sha256": "8fe9bf1cf9c798c5bca022a01dd1d0e8675f13f177c14c37e2909f1e2e94dc78"
+    },
+    {
+      "path": "RAW_PREPARATION_RECEIPT.json",
+      "bytes": 2607,
+      "sha256": "c4c50ada3494f2b195949c0cbdc6b5049ef87444334bcbe66c67a219032ada62"
+    },
+    {
+      "path": "SELECTION_FREEZE.json",
+      "bytes": 2756,
+      "sha256": "c1ac1e56623ac11e8068b26dd490f9d56fcb36befef759f4091334c4f74a702e"
+    },
+    {
+      "path": "SOURCE_DIFF_STATUS.json",
+      "bytes": 636,
+      "sha256": "64966cc7a8a51e6465dce8ea01766bf745849d5609a9b384e74b53b59da699fc"
+    },
+    {
+      "path": "SOURCE_IDENTITIES.json",
+      "bytes": 3485,
+      "sha256": "0da7e244ad870c6a9cfc0bb813136c9dc8cb5abad9ac27dab4c74d8738467389"
+    },
+    {
+      "path": "decoder_input.json",
+      "bytes": 325,
+      "sha256": "f525433cea3af6736f23d32d8b2d8702b4e3538afea208428ecc3f003529081e"
+    },
+    {
+      "path": "prepare_bound.py",
+      "bytes": 7262,
+      "sha256": "dd5971925e0e467169432c1852a497806071fc599ea3ef8b30c719c258ffc791"
+    },
+    {
+      "path": "sources/original/FreqAnalysis.pm",
+      "bytes": 2133,
+      "sha256": "563cce6d2e3af583cebd0f922e5cd7680ae138786572367d72fc9f01465b8f12"
+    },
+    {
+      "path": "sources/original/JMSmoothing.pm",
+      "bytes": 1857,
+      "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357"
+    },
+    {
+      "path": "sources/original/LICENCE",
+      "bytes": 1189,
+      "sha256": "ee9e6e82d5ea179ff189f330b3a54eff791ee4f4874b340fefcf7a1227c300bf"
+    },
+    {
+      "path": "sources/original/NoSpace.pm",
+      "bytes": 1097,
+      "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188"
+    },
+    {
+      "path": "sources/original/Utils.pm",
+      "bytes": 2765,
+      "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e"
+    },
+    {
+      "path": "sources/original/masc_solver_mcts.pl",
+      "bytes": 14627,
+      "sha256": "5021fcef107d606f641fa4b24e4544bb3eeb159efefb26dc6d4d3966a7068f17"
+    },
+    {
+      "path": "sources/storage/CompactPatList.pm",
+      "bytes": 4540,
+      "sha256": "4e9aec832acdbb5963a2ced572161ee02c03389284941fdcd0b14d1520de5ed0"
+    },
+    {
+      "path": "sources/storage/Prefetch.pm",
+      "bytes": 4123,
+      "sha256": "7230db9e5817efd2f39d1c0b7ac337f0db1cb43a869851d494fbd5ce6cab29fc"
+    },
+    {
+      "path": "sources/storage/adapter.py",
+      "bytes": 5305,
+      "sha256": "ded17814f6ca5256dc893f670dbd64e4afb9280c7f2852a4262878f1390bb09a"
+    },
+    {
+      "path": "sources/storage/broker.py",
+      "bytes": 5708,
+      "sha256": "7d6c4ba51313f8957314bbda37201af0237d1e1f7693904e20c0c409a66ca5b8"
+    },
+    {
+      "path": "sources/storage/disk_contract.py",
+      "bytes": 4757,
+      "sha256": "69810e4fc997a3797ab55026cc526716cf0af1ec49db19e67aed9f6b51d0d880"
+    },
+    {
+      "path": "sources/storage/transport_contract.py",
+      "bytes": 1967,
+      "sha256": "58f6bde704e4682081c089ae99932db32f497f20f45a28b33df4a85b7aa1969e"
+    },
+    {
+      "path": "sources/storage/wire.py",
+      "bytes": 1997,
+      "sha256": "389209dcf9b98255cfae2a20952e468a3e471128b83719821307088fb06aa1bb"
+    },
+    {
+      "path": "truth.json",
+      "bytes": 6611,
+      "sha256": "503436a6b053ffc8c95903314c1027f4ebbe606c8e354693d7255368b8da2ff4"
+    }
+  ],
+  "manifest_self_excluded": true
+}

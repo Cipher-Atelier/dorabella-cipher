@@ -1,0 +1,10 @@
+{
+  "cases": 216,
+  "control_sequences_replayed": 59798,
+  "relabels_replayed": 19998,
+  "independent_scores": 416,
+  "max_independent_error": 6.821210263296962e-13,
+  "normalized_conditional_contexts": 2304,
+  "protocol_and_original_result_hashes_verified": true,
+  "summary_counts_verified": true
+}

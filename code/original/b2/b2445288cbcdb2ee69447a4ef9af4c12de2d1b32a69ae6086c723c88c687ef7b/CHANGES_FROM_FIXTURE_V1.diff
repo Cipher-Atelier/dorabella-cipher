@@ -1,0 +1,656 @@
+--- completed_fixture_v1/CompactPatList.pm
++++ prepared_transport_profile_v1/CompactPatList.pm
+@@ -1,4 +1,4 @@
+-# Own glue; PREPARED ONLY. No subprocess creation and no numerical model access.
++# Own transport-v2 glue; PREPARED ONLY. Chunked complete lists, no numeric model access.
+ package CompactPatList;
+ use strict;
+ use warnings;
+@@ -13,7 +13,7 @@
+   open my $wr, '>&=', $write_fd or die "BRIDGE_WRITE: $!";
+   binmode $rd; binmode $wr; $wr->autoflush(1);
+   my $self=bless {rd=>$rd,wr=>$wr,seq=>0,closed=>0,
+-                 json=>JSON::PP->new->ascii(1)->canonical(1)},$class;
++                 buffer=>'',json=>JSON::PP->new->ascii(1)->canonical(1)},$class;
+   my $meta=$self->request('meta','');
+   die "META_DOMAIN" unless ref($meta) eq 'HASH' && $meta->{maxlen} >= 1 && $meta->{maxlen} <= 46;
+   my (%patterns,%words);
+@@ -29,18 +29,58 @@
+   my $line=$self->{json}->encode([$self->{seq},$op,$value])."\n";
+   die "FRAME_BOUND" if length($line)>65536;
+   print {$self->{wr}} $line or die "BRIDGE_SEND: $!";
+-  # Character-at-a-time read bounds a malicious/incorrect unframed response.
+-  my $reply='';
+-  while (length($reply)<=65536) {
+-    my $n=sysread($self->{rd},my $c,1);
+-    die "BRIDGE_EOF_OR_READ" unless defined($n) && $n==1;
+-    $reply.=$c;last if $c eq "\n";
++  return $self->_response($self->{seq},$op);
++}
++sub _frame {
++  my ($self)=@_;
++  while (index($self->{buffer},"\n")<0) {
++    die "FRAME_BOUND" if length($self->{buffer})>=65536;
++    my $room=65536-length($self->{buffer});$room=4096 if $room>4096;
++    my $n=sysread($self->{rd},my $part,$room);
++    die "BRIDGE_EOF_OR_READ" unless defined($n) && $n>0;
++    $self->{buffer}.=$part;
+   }
+-  die "FRAME_BOUND" unless length($reply)<=65536 && $reply =~ /\n$/;
+-  my $v=$self->{json}->decode($reply);
+-  die "RESPONSE_ID" unless ref($v) eq 'ARRAY' && @$v==2 && $v->[0]==$self->{seq};
+-  return $v->[1];
++  my $length=index($self->{buffer},"\n")+1;
++  die "FRAME_BOUND" if $length>65536;
++  my $raw=substr($self->{buffer},0,$length,'');
++  return $self->{json}->decode($raw);
+ }
++sub _uint {
++  my ($x,$max)=@_;
++  return defined($x) && !ref($x) && $x =~ /^(?:0|[1-9][0-9]*)$/ && $x<=$max;
++}
++sub _response {
++  my ($self,$seq,$op)=@_;
++  my $h=$self->_frame();
++  die "RESPONSE_ID" unless ref($h) eq 'ARRAY' && @$h>=3 && _uint($h->[0],80000) && $h->[0]==$seq;
++  if ($h->[1] eq 'value') {
++    die "VALUE_SHAPE" unless @$h==3;
++    die "LIST_VALUE" if $op eq 'list' && defined($h->[2]);
++    return $h->[2];
++  }
++  die "LIST_BEGIN" unless $op eq 'list' && @$h==3 && $h->[1] eq 'begin' && _uint($h->[2],63911);
++  my $count=$h->[2];my @values;my $bytes=0;my $frames=0;
++  while (@values<$count) {
++    die "CHUNK_COUNT" if ++$frames>999;
++    my $c=$self->_frame();
++    die "CHUNK_SHAPE" unless ref($c) eq 'ARRAY' && @$c==4 && _uint($c->[0],80000)
++      && $c->[0]==$seq && $c->[1] eq 'chunk' && _uint($c->[2],63911)
++      && $c->[2]==@values && ref($c->[3]) eq 'ARRAY' && @{$c->[3]}>0 && @{$c->[3]}<=64;
++    die "COUNT_OVERFLOW" if @values+@{$c->[3]}>$count;
++    for my $v (@{$c->[3]}) {
++      die "CANDIDATE_DOMAIN" unless defined($v) && !ref($v) && length($v)>0 && length($v)<=46
++        && $v !~ /[^\x09-\x0d\x20-\x7e]/;
++      $bytes+=length($v);die "PAYLOAD_BOUND" if $bytes>2939906;
++      push @values,$v;
++    }
++  }
++  my $end=$self->_frame();
++  die "LIST_END" unless ref($end) eq 'ARRAY' && @$end==4 && _uint($end->[0],80000)
++    && $end->[0]==$seq && $end->[1] eq 'end' && _uint($end->[2],63911)
++    && $end->[2]==$count && _uint($end->[3],2939906) && $end->[3]==$bytes;
++  return \@values;
++}
++
+ sub close {
+   my ($self)=@_; return if $self->{closed};
+   die "CLOSE_ACK" unless $self->request('close','') eq 'closed';
+--- completed_fixture_v1/broker.py
++++ prepared_transport_profile_v1/broker.py
+@@ -1,60 +1,79 @@
+-"""Prepared only. Small-fixture readonly bridge, never a solver or model scorer."""
++"""PREPARED ONLY: chunked transport; readonly adapter unchanged; no scoring."""
+ from pathlib import Path
+-import sys, json, time, hashlib, sqlite3
+-sys.dont_write_bytecode = True
+-BASE = Path(__file__).resolve().parent
+-sys.path.insert(0, str(BASE))
++import sys,json,time,sqlite3
++sys.dont_write_bytecode=True
++BASE=Path(__file__).resolve().parent
++sys.path.insert(0,str(BASE))
+ from adapter import CompactPatList
+ 
+ def main():
+-    if sys.version_info[:3] != (3,12,14) or sqlite3.sqlite_version != '3.53.1':
+-        raise RuntimeError('RUNTIME_MISMATCH')
+-    freeze = json.loads((BASE/'FREEZE.json').read_text())
+-    for name in ('fixture.sqlite','fixture.patlst'):
+-        p=BASE/'fixtures'/name
+-        if hashlib.sha256(p.read_bytes()).hexdigest() != freeze['fixture_hashes'][name]:
+-            raise RuntimeError('FIXTURE_HASH')
+-    deadline=json.loads((BASE/'attempt/T0.json').read_text())['deadline']
++    role=sys.argv[1]
++    if role not in ('fixture_broker','large_broker','profile_broker'):raise RuntimeError('ROLE')
++    if sys.version_info[:3]!=(3,12,14) or sqlite3.sqlite_version!='3.53.1':raise RuntimeError('RUNTIME')
++    freeze=json.loads((BASE/'FREEZE.json').read_text())
++    stage='P' if role=='profile_broker' else 'A'
++    deadline=json.loads((BASE/'attempt'/f'{stage}_deadline.json').read_text())['deadline']
+     def tick():
+-        if time.monotonic() >= deadline: raise RuntimeError('DEADLINE')
+-    tick()
+-    store=CompactPatList(BASE/'fixtures/fixture.sqlite',BASE/'fixtures/fixture.patlst',tick)
+-    seq=0
+-    closed=False
+-    with (BASE/'attempt/broker_ipc.jsonl').open('x',encoding='ascii') as log:
+-        try:
+-            while seq < 80000:
+-                tick()
+-                raw=sys.stdin.buffer.readline(65537)
+-                if not raw or len(raw)>65536 or not raw.endswith(b'\n'):
+-                    raise RuntimeError('REQUEST_EOF_OR_FRAME')
+-                request=json.loads(raw)
+-                if not isinstance(request,list) or len(request)!=3:
+-                    raise RuntimeError('REQUEST_SHAPE')
+-                number,op,value=request
+-                seq+=1
+-                if type(number) is not int or number!=seq or not isinstance(value,str):
+-                    raise RuntimeError('REQUEST_ID_OR_TYPE')
+-                arg=value.encode('ascii')
+-                if op=='meta' and value=='': answer={'maxlen':store.maxlen}
+-                elif op=='list':
+-                    v=store.candidates(arg)
+-                    answer=None if v is None else [s.decode('ascii') for s in v]
+-                elif op=='word': answer=1 if store.is_word(arg) else 0
+-                elif op=='close' and value=='': answer='closed';closed=True
+-                else: raise RuntimeError('OP_DOMAIN')
+-                response=json.dumps([seq,answer],ensure_ascii=True,separators=(',',':')).encode()+b'\n'
+-                if len(response)>65536: raise RuntimeError('RESPONSE_BOUND')
+-                log.write(json.dumps({'request':request,'response':[seq,answer]},separators=(',',':'))+'\n')
+-                log.flush()
+-                sys.stdout.buffer.write(response);sys.stdout.buffer.flush()
+-                if closed: break
+-            if not closed: raise RuntimeError('REQUEST_BOUND')
+-        finally:
+-            stats=store.stats.copy()
+-            store.close()
+-        if not closed: raise RuntimeError('UNCLEAN_CLOSE')
+-    (BASE/'attempt/broker_terminal.json').write_text(json.dumps(
+-        {'closed':closed,'requests':seq,'stats':stats},indent=2)+'\n')
++        if time.monotonic()>=deadline:raise RuntimeError('DEADLINE')
++    store=None;saved=None
++    if role=='fixture_broker':
++        store=CompactPatList(BASE/'fixtures/fixture.sqlite',BASE/'fixtures/fixture.patlst',tick)
++    elif role=='profile_broker':
++        store=CompactPatList(freeze['full_index']['path'],freeze['patlst']['path'],tick)
++    else:saved=json.loads((BASE/'evidence/real_lists.json').read_text())
++    maxlen=store.maxlen if store else 46
++    stats={'requests':0,'response_frames':0,'response_bytes':0,'max_frame_bytes':0,
++           'max_list_count':0,'closed':False}
++    log=(BASE/'attempt'/f'{role}_ipc.jsonl').open('x',encoding='ascii')
++    def send(seq,value):
++        tick();raw=json.dumps([seq,*value],ensure_ascii=True,separators=(',',':')).encode()+b'\n'
++        if len(raw)>65536:raise RuntimeError('FRAME_BOUND')
++        stats['response_frames']+=1;stats['response_bytes']+=len(raw)
++        stats['max_frame_bytes']=max(stats['max_frame_bytes'],len(raw))
++        log.write(json.dumps({'response':[seq,*value]},separators=(',',':'))+'\n');log.flush()
++        sys.stdout.buffer.write(raw);sys.stdout.buffer.flush()
++    try:
++        for seq in range(1,80001):
++            tick();raw=sys.stdin.buffer.readline(65537)
++            if not raw or len(raw)>65536 or not raw.endswith(b'\n'):raise RuntimeError('REQUEST_FRAME_OR_EOF')
++            request=json.loads(raw)
++            if not isinstance(request,list) or len(request)!=3:raise RuntimeError('REQUEST_SHAPE')
++            number,op,value=request
++            if type(number) is not int or number!=seq or not isinstance(value,str):raise RuntimeError('REQUEST_ID')
++            arg=value.encode('ascii');CompactPatList._bytes(arg,87)
++            stats['requests']=seq;log.write(json.dumps({'request':request},separators=(',',':'))+'\n')
++            if op=='meta' and not value:send(seq,['value',{'maxlen':maxlen}])
++            elif op=='word' and store:send(seq,['value',1 if store.is_word(arg) else 0])
++            elif op=='list':
++                CompactPatList._bytes(arg,46)
++                if store:values=store.candidates(arg)
++                else:
++                    if value not in saved:raise RuntimeError('UNFROZEN_SAVED_QUERY')
++                    values=saved[value]
++                if values is None:send(seq,['value',None]);continue
++                count=len(values)
++                if count>63911:raise RuntimeError('LIST_BOUND')
++                stats['max_list_count']=max(stats['max_list_count'],count)
++                send(seq,['begin',count]);payload=0
++                # No whole-list conversion to str/JSON: at most 64 decoded candidates per frame.
++                for offset in range(0,count,64):
++                    tick();part=[]
++                    for item in values[offset:offset+64]:
++                        v=item.decode('ascii') if isinstance(item,bytes) else item
++                        encoded=v.encode('ascii');CompactPatList._bytes(encoded,46)
++                        if not encoded:raise RuntimeError('EMPTY_CANDIDATE')
++                        payload+=len(encoded);part.append(v)
++                    if payload>2939906:raise RuntimeError('PAYLOAD_BOUND')
++                    send(seq,['chunk',offset,part])
++                send(seq,['end',count,payload])
++                values=None # avoid retaining the previous caller copy during the next FETCH
++            elif op=='close' and not value:
++                send(seq,['value','closed']);stats['closed']=True;break
++            else:raise RuntimeError('OP_DOMAIN')
++        if not stats['closed']:raise RuntimeError('REQUEST_BOUND')
++    finally:
++        if store:stats['adapter']=store.stats.copy();store.close()
++        log.close()
++    (BASE/'attempt'/f'{role}_terminal.json').write_text(json.dumps(stats,indent=2)+'\n')
+ 
+-if __name__=='__main__': main()
++if __name__=='__main__':main()
+--- completed_fixture_v1/child_gate.py
++++ prepared_transport_profile_v1/child_gate.py
+@@ -1,25 +1,29 @@
+-"""Own gated launcher; no import of author/glue code until approved execution."""
++"""Prepared gated exec for the six named roles only; no new execution during preparation."""
+ from pathlib import Path
+-import os, sys, json, resource
+-base=Path(__file__).resolve().parent
++import os,sys,json,resource
++BASE=Path(__file__).resolve().parent
+ role,gate,*ipc=sys.argv[1:]
+-if role not in ('reference','adapted','broker'): raise SystemExit('ROLE')
+-freeze=json.loads((base/'FREEZE.json').read_text())
+-limits=freeze['limits']['child']
+-for key,pair in limits.items(): resource.setrlimit(getattr(resource,key),tuple(pair))
++freeze=json.loads((BASE/'FREEZE.json').read_text())
++if role not in freeze['roles']:raise SystemExit('ROLE')
++spec=freeze['roles'][role]
++limits=freeze['limits'][spec['limit_class']]
++for key,pair in limits.items():resource.setrlimit(getattr(resource,key),tuple(pair))
+ ready={'pid_local':os.getpid(),'pgid_local':os.getpgrp(),'sid_local':os.getsid(0),
+-       'visible_self':int(os.readlink('/proc/self')),'pid_namespace':os.readlink('/proc/self/ns/pid'),
+-       'proc_status':Path('/proc/self/status').read_text(),'proc_stat':Path('/proc/self/stat').read_text(),
+-       'proc_limits':Path('/proc/self/limits').read_text(),
+-       'limits':{k:resource.getrlimit(getattr(resource,k)) for k in limits}}
+-p=base/'attempt'/f'{role}_ready.json'
+-tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(ready,indent=2)+'\n');os.replace(tmp,p)
++ 'visible_self':int(os.readlink('/proc/self')),'pid_namespace':os.readlink('/proc/self/ns/pid'),
++ 'proc_status':Path('/proc/self/status').read_text(),'proc_stat':Path('/proc/self/stat').read_text(),
++ 'proc_limits':Path('/proc/self/limits').read_text(),
++ 'limits':{k:resource.getrlimit(getattr(resource,k)) for k in limits}}
++p=BASE/'attempt'/f'{role}_ready.json';tmp=p.with_suffix('.tmp')
++tmp.write_text(json.dumps(ready,indent=2)+'\n');os.replace(tmp,p)
+ token=os.read(int(gate),1);os.close(int(gate))
+-if token!=b'G': raise SystemExit(3)
+-if role=='broker':
+-    argv=[freeze['python'],'-I','-S',str(base/'broker.py')]
++if token!=b'G':raise SystemExit(3)
++if role.endswith('_broker'):
++ if ipc:raise SystemExit('IPC_ARGS')
++ argv=[freeze['python'],'-I','-S',str(BASE/'broker.py'),role]
+ else:
+-    argv=[freeze['perl'],'-I',str(base/'original'),'-I',str(base),
+-          str(base/'differential.pl'),role,str(base/'fixtures'),*ipc]
+-os.chdir(base/'attempt/work')
++ if len(ipc)!=2:raise SystemExit('IPC_ARGS')
++ args={'fixture_perl':['adapted',str(BASE/'fixtures')],
++       'large_perl':[str(BASE)],'profile_perl':[str(BASE)]}[role]
++ argv=[freeze['perl'],'-I',str(BASE/'original'),'-I',str(BASE),str(BASE/spec['program']),*args,*ipc]
++os.chdir(BASE/'attempt/work')
+ os.execve(argv[0],argv,freeze['environment'])
+--- completed_fixture_v1/run_differential.py
++++ prepared_transport_profile_v1/run_staged.py
+@@ -1,4 +1,4 @@
+-"""PREPARED ONLY. One fixed differential attempt; requires separate user approval."""
++"""PREPARED ONLY: one staged transport/load-profile attempt; separate approval required."""
+ from pathlib import Path
+ import os, sys, json, time, datetime, hashlib, resource, subprocess, signal, traceback
+ sys.dont_write_bytecode=True
+@@ -8,10 +8,12 @@
+ ATTEMPT=BASE/'attempt'
+ 
+ def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat()
+-def digest(path):
++def digest(path,check=None):
+     h=hashlib.sha256()
+     with Path(path).open('rb') as f:
+-        for block in iter(lambda:f.read(1048576),b''): h.update(block)
++        for block in iter(lambda:f.read(1048576),b''):
++            h.update(block)
++            if check:check()
+     return h.hexdigest()
+ def memory():
+     return {k:(Path('/sys/fs/cgroup')/k).read_text().strip()
+@@ -25,21 +27,23 @@
+ def main():
+     if ATTEMPT.exists(): print('REFUSED_EXISTING_ATTEMPT');return 3
+     ATTEMPT.mkdir();(ATTEMPT/'work').mkdir()
+-    start=time.monotonic();deadline=start+60
+-    result={'version':'TS-DIFF-BRIDGE-v1','status':'INCOMPLETE','start_utc':utc(),
+-            'commands':[],'signals':[],'phases':[],'target_inputs':0,'full_model_loads':0}
+-    dump('T0.json',{'utc':result['start_utc'],'monotonic':start,'deadline':deadline})
++    start=time.monotonic();global_deadline=start+180;deadline=start+60
++    result={'version':'TS-TRANSPORT-PROFILE-v1','status':'INCOMPLETE','start_utc':utc(),
++            'commands':[],'signals':[],'phases':[],'target_inputs':0,'control_87_inputs':0,'full_model_loads':0,'stages':{}}
++    dump('T0.json',{'utc':result['start_utc'],'monotonic':start,'global_deadline':global_deadline})
+     children=[];handles=[];parent_fds=set();ns=None
+     def tick():
+-        if time.monotonic()>=deadline: raise Stop('STOP_WALL_DEADLINE')
+-        if int(memory()['memory.current'])>=15*1024**3//2: raise Stop('STOP_SHARED_MEMORY')
++        if time.monotonic()>=min(deadline,global_deadline)-4: raise Stop('STOP_WALL_DEADLINE')
++        if int(memory()['memory.current'])>=7*1024**3: raise Stop('STOP_SHARED_MEMORY')
+         for p in ATTEMPT.iterdir():
+             if p.is_file() and p.stat().st_size>8388608: raise Stop('STOP_OUTPUT_BOUND')
++        if sum(p.stat().st_size for p in ATTEMPT.iterdir() if p.is_file())>64*1024**2:
++            raise Stop('STOP_TOTAL_OUTPUT_BOUND')
+         active=0
+         for child in children:
+             p=child['p']
+             if p.poll() is None: active+=1
+-            if child['anchor'] is not None:
++            if child['anchor'] is not None and not child.get('retired',False):
+                 group=ns.group(child['anchor'],child['known'])
+                 if len(group)>1: raise Stop('STOP_UNEXPECTED_DESCENDANT')
+         if active>2: raise Stop('STOP_PROCESS_COUNT')
+@@ -72,7 +76,7 @@
+         if os.getpgid(p.pid)!=p.pid or p.pid==os.getpgrp(): raise Stop('STOP_ADDRESSING')
+         if (ready['pid_local'],ready['pgid_local'],ready['sid_local'],ready['visible_self'],ready['pid_namespace']) != (
+                 p.pid,p.pid,p.pid,a['visible_pid'],ns.ns): raise Stop('STOP_NAMESPACE_MAPPING')
+-        if ready['limits']!=freeze['limits']['child']: raise Stop('STOP_LIMITS')
++        if ready['limits']!=freeze['limits'][freeze['roles'][role]['limit_class']]: raise Stop('STOP_LIMITS')
+         child['anchor']=a;child['known'].add((a['visible_pid'],a['starttime']))
+         ns.group(a,child['known'])
+         result['commands'][-1]['anchor']=a
+@@ -94,6 +98,7 @@
+                 'group':group,'utc':utc(),'elapsed':time.monotonic()-start})
+             if group or c['p'].returncode!=0: raise Stop('STOP_EXIT_OR_GROUP:'+c['role'])
+             if (ATTEMPT/(c['role']+'_stderr.txt')).stat().st_size: raise Stop('STOP_STDERR:'+c['role'])
++            c['retired']=True
+     def signal_owned(child,sig):
+         a=child['anchor']
+         group=ns.group(a,child['known'])
+@@ -104,90 +109,67 @@
+             try:os.killpg(a['pid'],sig)
+             except ProcessLookupError:pass
+         result['signals'].append({'role':child['role'],'signal':int(sig),'group':group,'utc':utc()})
++    def verify(entries):
++        for entry in entries:
++            p=Path(entry['path']) if entry.get('external',True) else BASE/entry['path']
++            if p.stat().st_size!=entry['bytes'] or digest(p,tick)!=entry['sha256']:
++                raise Stop('STOP_HASH:'+str(p))
++    def pair(prefix):
++        request_read,request_write=pipe();response_read,response_write=pipe()
++        broker=launch(prefix+'_broker',request_read,response_write)
++        perl=launch(prefix+'_perl',subprocess.DEVNULL,log_handle(prefix+'_perl.jsonl'),(response_read,request_write))
++        for fd in (request_read,request_write,response_read,response_write):close_fd(fd)
++        release(broker);release(perl);observe_until_done([broker,perl])
+     try:
+         freeze=json.loads((BASE/'FREEZE.json').read_text())
+         result['manifest_sha256']=digest(BASE/'FREEZE.json')
+         for k,v in freeze['limits']['supervisor'].items():resource.setrlimit(getattr(resource,k),tuple(v))
+         if sys.version_info[:3]!=(3,12,14):raise Stop('STOP_PYTHON_VERSION')
+         result['before']=memory()
+-        if result['before']['memory.max']!='8589934592' or int(result['before']['memory.current'])>7*1024**3:
+-            raise Stop('STOP_RESOURCE_GATE')
+-        for entry in freeze['identities']:
+-            p=Path(entry['path']) if entry['external'] else BASE/entry['path']
+-            if p.stat().st_size!=entry['bytes'] or digest(p)!=entry['sha256']:raise Stop('STOP_HASH:'+str(p))
+-            tick()
++        result['memory_stat_before']=Path('/sys/fs/cgroup/memory.stat').read_text()
++        if result['before']['memory.max']!='8589934592' or int(result['before']['memory.current'])>freeze['resource']['A_enter_current_max']:
++            raise Stop('STOP_A_RESOURCE_GATE')
++        verify(freeze['identities'])
+         ns=NamespaceView();result['namespace_self']=ns.self_record
+-        matches=[r for r in ns.snapshot() if any(
+-            str(BASE/name) in r['cmdline'] for name in ('child_gate.py','broker.py','differential.pl'))]
++        excluded={ns.visible_self,*[x['visible_pid'] for x in ns.ancestors]}
++        tokens=(str(BASE),str(BASE.parent/'TS_DIFF_BRIDGE_v1/child_gate.py'),str(BASE.parent/'TS_DIFF_BRIDGE_v1/broker.py'),str(BASE.parent/'TS_DIFF_BRIDGE_v1/differential.pl'),str(BASE.parent/'TREESEARCH_feasibility_20261017/original/masc_solver_mcts.pl'))
++        matches=[r for r in ns.snapshot() if r['visible_pid'] not in excluded and any(any(token in arg for token in tokens) for arg in r['cmdline'])]
+         result['prior_live_matches']=matches
+         if matches:raise Stop('STOP_PREVIOUS_LIVE_PROCESS')
+         result['hashes_verified']=True
+-        reference=launch('reference',subprocess.DEVNULL,log_handle('reference.jsonl'))
+-        release(reference);observe_until_done([reference])
+-        request_read,request_write=pipe();response_read,response_write=pipe()
+-        broker=launch('broker',request_read,response_write)
+-        adapted=launch('adapted',subprocess.DEVNULL,log_handle('adapted.jsonl'),(response_read,request_write))
+-        for fd in (request_read,request_write,response_read,response_write):close_fd(fd)
+-        release(broker);release(adapted);observe_until_done([broker,adapted])
+-        for h in handles:h.close()
+-        handles=[]
+-        reference_raw=(ATTEMPT/'reference.jsonl').read_bytes();adapted_raw=(ATTEMPT/'adapted.jsonl').read_bytes()
+-        if reference_raw!=adapted_raw:raise Stop('STOP_DIFFERENTIAL_EXACT_BYTES')
+-        events=[json.loads(line) for line in reference_raw.splitlines()]
+-        spec=json.loads((BASE/'fixtures/cases.json').read_text())
+-        by_kind=lambda kind:[e for e in events if e[1]==kind]
+-        lists={e[2]:e[3] for e in by_kind('list')}
+-        if lists!=spec['expected_groups']:raise Stop('STOP_GOLDEN_LISTS')
+-        if [e[3] for e in by_kind('word')]!=spec['expected_words']:raise Stop('STOP_GOLDEN_WORDS')
+-        if [e[3] for e in by_kind('segment')]!=spec['expected_segments']:raise Stop('STOP_GOLDEN_SEGMENTS')
+-        pre_scores={e[2]:e[4] for e in by_kind('score') if e[0]=='prelude'}
+-        if pre_scores['cat']!=pre_scores['dog']:raise Stop('STOP_TIE_FIXTURE')
+-        if len(by_kind('winner'))!=3 or len(by_kind('iteration'))!=6:raise Stop('STOP_TRAJECTORY_COUNT')
+-        if [e[0] for e in by_kind('winner')]!=[c['id'] for c in spec['cases']]:
+-            raise Stop('STOP_CASE_ORDER')
+-        for case,root_event in zip(spec['cases'],by_kind('root')):
+-            if root_event[0]!=case['id'] or root_event[2]!=case['alphabet'] or root_event[3][0]!=case['root']:
+-                raise Stop('STOP_ROOT_IDENTITY')
+-            if [e[2] for e in by_kind('iteration') if e[0]==case['id']]!=[1,2]:
+-                raise Stop('STOP_CASE_ITERATIONS')
+-        if {e[2] for e in by_kind('candidates')}!={1,2}:raise Stop('STOP_ORDER_PHASE_COVERAGE')
+-        if events[-1][0:2]!=['terminal','complete'] or events[-1][2]['cases']!=3:
+-            raise Stop('STOP_TERMINAL_EVENT')
+-        # Readback only: every emitted roundtrip was checked in Perl, require complete saved positions.
+-        roundtrips=[]
+-        for e in events:
+-            if e[1] in ('root','winner'):rt=e[-1]
+-            elif e[1] in ('candidate','child'):rt=e[-1]
+-            else:continue
+-            if len(rt[1])!=6 or len(rt[2])!=6 or [r[0] for r in rt[2]]!=[1,2,3,4,5,6]:
+-                raise Stop('STOP_ROUNDTRIP_ACCOUNTING')
+-            if any(r[1]!=r[3] for r in rt[2]):raise Stop('STOP_ROUNDTRIP_READBACK')
+-            roundtrips.append(rt)
+-        broker_end=json.loads((ATTEMPT/'broker_terminal.json').read_text())
+-        if broker_end['closed'] is not True or not 1<=broker_end['requests']<=80000:
+-            raise Stop('STOP_BROKER_TERMINAL')
+-        ipc_count=0
+-        with (ATTEMPT/'broker_ipc.jsonl').open() as f:
+-            for line in f:
+-                item=json.loads(line);ipc_count+=1
+-                if item['request'][0]!=ipc_count or item['response'][0]!=ipc_count:
+-                    raise Stop('STOP_IPC_READBACK_ORDER')
+-        if ipc_count!=broker_end['requests']:raise Stop('STOP_IPC_READBACK_COUNT')
+-        for entry in freeze['identities']:
+-            p=Path(entry['path']) if entry['external'] else BASE/entry['path']
+-            if digest(p)!=entry['sha256']:raise Stop('STOP_POST_HASH:'+str(p))
+-            tick()
+-        if digest(BASE/'FREEZE.json')!=result['manifest_sha256']:raise Stop('STOP_MANIFEST_CHANGED')
+-        result['comparison']={'exact_bytes':True,'events':len(events),
+-            'score_calls_per_arm':len(by_kind('score')),'iterations_per_arm':len(by_kind('iteration')),
+-            'roundtrips_per_arm':len(roundtrips),'broker':broker_end,
+-            'trace_sha256':hashlib.sha256(reference_raw).hexdigest()}
+-        result['status']='PASS_FINITE_DIFFERENTIAL_ONLY';code=0
++        dump('A_deadline.json',{'deadline':deadline-4,'wall_deadline':deadline,'global_deadline':global_deadline})
++        pair('fixture');pair('large')
++        from readback import stage_a,stage_p
++        tick();result['stages']['A']=stage_a();tick()
++        result['stages']['A']['elapsed_including_initial_checks']=time.monotonic()-start
++        dump('stage_A.json',result['stages']['A'])
++        # Conditional load-only profile. No memory reclamation, waiting for resources, or retries.
++        pstart=time.monotonic();deadline=min(global_deadline,pstart+60)
++        dump('P_deadline.json',{'deadline':deadline-4,'wall_deadline':deadline,'global_deadline':global_deadline})
++        pgate=memory();result['P_pre_hash_resource']=pgate
++        if int(pgate['memory.current'])>freeze['resource']['P_pre_hash_current_max']:
++            result['stages']['P']={'status':'SKIPPED_RESOURCE','reason':'PRE_HASH_CURRENT','observed':pgate}
++            result['status']='PASS_A_PROFILE_SKIPPED_RESOURCE';code=0
++        else:
++            verify(freeze['six_lm']+[freeze['patlst'],freeze['full_index']])
++            pgate=memory();result['P_post_hash_resource']=pgate
++            if int(pgate['memory.current'])>freeze['resource']['P_post_hash_current_max']:
++                result['stages']['P']={'status':'SKIPPED_RESOURCE','reason':'POST_HASH_CURRENT','observed':pgate}
++                result['status']='PASS_A_PROFILE_SKIPPED_RESOURCE';code=0
++            else:
++                result['profile_launch_requested']=True
++                pair('profile');result['full_model_loads']=1
++                tick();result['stages']['P']=stage_p();tick()
++                verify(freeze['six_lm']+[freeze['patlst'],freeze['full_index']])
++                result['stages']['P']['elapsed_including_identity_checks']=time.monotonic()-pstart
++                result['status']='PASS_TRANSPORT_AND_LOAD_PROFILE_ONLY';code=0
++        dump('stage_P.json',result['stages']['P'])
++        verify(freeze['identities'])
++        if digest(BASE/'FREEZE.json',tick)!=result['manifest_sha256']:raise Stop('STOP_MANIFEST_CHANGED')
+     except BaseException as e:
+         result['status']='STOP';result['error']=repr(e);result['traceback']=traceback.format_exc();code=2
+     finally:
+         for fd in list(parent_fds):close_fd(fd)
+-        # All own groups receive TERM before the shared grace; then KILL, no replacements.
+         try:
+             for c in children:
+                 if c['anchor'] is not None and ns.group(c['anchor'],c['known']):signal_owned(c,signal.SIGTERM)
+@@ -203,18 +185,26 @@
+                 terminal.append({'role':c['role'],'exit':c['p'].poll(),'group':group})
+             result['terminal']=terminal
+             result['terminal_confirmed']=all(t['exit'] is not None and t['group']==[] for t in terminal)
+-            if children and not result['terminal_confirmed']:
+-                result['status']='UNKNOWN';code=2
++            if children and not result['terminal_confirmed']:result['status']='UNKNOWN';code=2
+         except BaseException as e:
+             result['termination_error']=repr(e);result['status']='UNKNOWN';code=2
+         for h in handles:h.close()
+     result['elapsed']=time.monotonic()-start;result['end_utc']=utc();result['after']=memory()
+-    if result['status']=='PASS_FINITE_DIFFERENTIAL_ONLY' and result['elapsed']>=60:
++    result['memory_stat_after']=Path('/sys/fs/cgroup/memory.stat').read_text()
++    if result['status'].startswith('PASS') and (result['elapsed']>=180 or time.monotonic()>=deadline):
+         result['status']='STOP';result['error']='STOP_FINAL_WALL_ACCOUNTING';code=2
++    before_events=dict(line.split() for line in result.get('before',{}).get('memory.events','').splitlines())
++    after_events=dict(line.split() for line in result['after']['memory.events'].splitlines())
++    if any(int(after_events.get(k,0))>int(before_events.get(k,0)) for k in ('oom','oom_kill','oom_group_kill')):
++        result['status']='STOP';result['error']='STOP_SHARED_OOM_EVENT';code=2
+     result['children_peak_rss_KiB']=resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss
++    result['self_peak_rss_KiB']=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+     result['file_hashes']={p.name:digest(p) for p in ATTEMPT.iterdir() if p.is_file() and p.name!='result.json'}
++    result['elapsed']=time.monotonic()-start;result['end_utc']=utc()
++    if result['status'].startswith('PASS') and (result['elapsed']>=180 or time.monotonic()>=deadline):
++        result['status']='STOP';result['error']='STOP_SEAL_WALL_ACCOUNTING';code=2
+     dump('result.json',result)
+-    print(json.dumps({k:result.get(k) for k in ('status','elapsed','terminal_confirmed','comparison','error')}),flush=True)
++    print(json.dumps({k:result.get(k) for k in ('status','elapsed','terminal_confirmed','stages','error')}),flush=True)
+     return code
+ 
+ if __name__=='__main__':raise SystemExit(main())
+--- /dev/null
++++ prepared_transport_profile_v1/transport_probe.pl
+@@ -0,0 +1,32 @@
++# PREPARED ONLY. Finite transport contract; no solver/scorer or numerical models.
++use strict;use warnings;
++use JSON::PP;use Config;use CompactPatList;
++BEGIN {die 'RUNTIME' unless "$^V" eq 'v5.38.2' && $Config{archname} eq 'x86_64-linux-gnu-thread-multi';}
++$|=1;
++die 'ARGS' unless @ARGV==3;
++my ($base,$read_fd,$write_fd)=@ARGV;
++my $json=JSON::PP->new->ascii(1)->canonical(1);
++sub emit {print $json->encode([@_]),"\n" or die $!;}
++open my $input,'<',"$base/negative/index.json" or die $!;
++my $tests=$json->decode(do{local $/;<$input>});close $input or die $!;
++for my $test (@$tests) {
++  open my $rd,'<',"$base/negative/$test->{file}" or die $!;binmode $rd;
++  my $client=bless {rd=>$rd,buffer=>'',json=>$json},'CompactPatList';
++  my $ok=eval {$client->_response(1,'list');1};my $error=$@;
++  close $rd or die $!;
++  die "NEGATIVE_ACCEPTED:$test->{name}" if $ok;
++  die "WRONG_REJECTION:$test->{name}:$error" unless index($error,$test->{error_prefix})==0;
++  emit('negative',$test->{name},$test->{error_prefix});
++}
++open my $rd,'<',"$base/negative/positive_chunks.jsonl" or die $!;binmode $rd;
++my $client=bless {rd=>$rd,buffer=>'',json=>$json},'CompactPatList';
++my $positive=$client->_response(1,'list');close $rd or die $!;
++die 'POSITIVE_CHUNKS' unless $json->encode($positive) eq '["aa","aa","bb"]';
++emit('positive_chunks',$positive);
++my ($bridge,$groups,$words,$maxlen)=CompactPatList->attach($read_fd,$write_fd);
++die 'MAXLEN' unless $maxlen==46;
++for my $pattern ('a','aa','ab','aba','abc','abcdefgh','!','abcdefgh') {
++  my $values=$groups->[1]{$pattern};emit('list',$pattern,$values);
++  $values->[0]='MUTATED_CALLER_COPY' if defined($values) && $pattern eq 'abcdefgh';
++}
++$bridge->close();emit('complete',{list_fetches=>8,negative=>10,positive_chunks=>1});
+--- /dev/null
++++ prepared_transport_profile_v1/load_profile.pl
+@@ -0,0 +1,37 @@
++# PREPARED ONLY. Six unchanged LM loaders + readonly storage; NO search, score, or input.
++use strict;use warnings;
++use Config;use JSON::PP;use Time::HiRes qw(time);
++use ReadLM;use NoSpace;use CompactPatList;
++BEGIN {die 'RUNTIME' unless "$^V" eq 'v5.38.2' && $Config{archname} eq 'x86_64-linux-gnu-thread-multi';}
++$|=1;
++die 'ARGS' unless @ARGV==3;
++my ($base,$read_fd,$write_fd)=@ARGV;
++my $json=JSON::PP->new->ascii(1)->canonical(1);
++open my $fh,'<',"$base/FREEZE.json" or die $!;
++my $freeze=$json->decode(do{local $/;<$fh>});close $fh or die $!;
++my $t=time();
++sub emit {print $json->encode([@_]),"\n" or die $!;}
++sub snapshot {
++  my ($phase)=@_;open my $p,'<','/proc/self/status' or die $!;
++  my @memory=grep {/^(?:VmPeak|VmSize|VmHWM|VmRSS):/} <$p>;
++  close $p or die $!;chomp @memory;emit('profile',$phase,time()-$t,\@memory);
++}
++my @models=({},{},{},{},{},{}); # all six remain live together until process exit
++snapshot('before_six_LM');
++for my $i (0..5) {
++  my $item=$freeze->{six_lm}[$i];emit('load_begin',$i+1,$item->{path});
++  if ($i==0 || $i==3) {ReadLM::ReadUnigramLM($item->{path},$models[$i]);}
++  elsif ($i==1 || $i==4) {ReadLM::ReadBigramLM($item->{path},$models[$i]);}
++  else {ReadLM::ReadTrigramLM($item->{path},$models[$i]);}
++  snapshot('after_LM_'.($i+1));
++}
++my ($bridge,$groups,$words,$maxlen)=CompactPatList->attach($read_fd,$write_fd);
++die 'MAXLEN' unless $maxlen==46;snapshot('readonly_storage_attached');
++for my $pattern ('a','aa','ab','aba','abc','abcdefgh','!','abcdefgh') {
++  my $values=$groups->[1]{$pattern};emit('list',$pattern,$values);snapshot('lookup_'.$pattern);
++}
++for my $str ('to','togo','xxyyzz','catdog',''," \t ") {
++  emit('segment',$str,NoSpace::FindWords($str,$words,$maxlen));
++}
++snapshot('all_six_retained_after_storage_probes');
++$bridge->close();emit('complete',{lm_loads=>6,list_fetches=>8,segmentations=>6,search_calls=>0,score_calls=>0,input_bytes=>0});
+--- /dev/null
++++ prepared_transport_profile_v1/readback.py
+@@ -0,0 +1,65 @@
++"""Own data-only readback, no solver/adapter imports; used only after staged approval."""
++from pathlib import Path
++import json,hashlib
++BASE=Path(__file__).resolve().parent
++ATT=BASE/'attempt'
++def require(value,why):
++    if not value:raise RuntimeError('READBACK_'+why)
++def events(role):return [json.loads(s) for s in (ATT/(role+'.jsonl')).read_bytes().splitlines()]
++def compare_large(role):
++    rows=events(role);saved=json.loads((BASE/'evidence/real_lists.json').read_text())
++    selected=[e for e in rows if e[0]=='list']
++    require([e[1] for e in selected]==['a','aa','ab','aba','abc','abcdefgh','!','abcdefgh'],'QUERY_ORDER')
++    for e in selected:require(e[2]==saved[e[1]],'ALL_LIST_VALUES_ORDER_DUPLICATES')
++    return {'full_list_queries':len(selected),'candidate_occurrences':sum(len(e[2]) for e in selected if e[2]),
++            'max_list_count':max(len(e[2]) for e in selected if e[2])}
++def broker(role):
++    end=json.loads((ATT/(role+'_terminal.json')).read_text())
++    require(end['closed'] is True and end['max_frame_bytes']<=65536,'BROKER_TERMINAL')
++    seq=0;response_frames=0;last=None
++    with (ATT/(role+'_ipc.jsonl')).open() as f:
++        for line in f:
++            item=json.loads(line)
++            if 'request' in item:
++                seq+=1;require(item['request'][0]==seq,'IPC_SEQ')
++            else:
++                require(item['response'][0]==seq,'IPC_RESPONSE_SEQ');response_frames+=1;last=item['response']
++    require(seq==end['requests'] and response_frames==end['response_frames'],'IPC_ACCOUNTING')
++    require(last==[seq,'value','closed'],'CLOSE_ACK')
++    return end
++def stage_a():
++    actual=(ATT/'fixture_perl.jsonl').read_bytes();prior=(BASE/'evidence/prior_reference.jsonl').read_bytes()
++    require(actual==prior,'FIXTURE_COMPLETE_TRACE_BYTES')
++    rows=[json.loads(s) for s in actual.splitlines()]
++    require(len(rows)==300 and rows[-1]==['terminal','complete',{'cases':3,'score_calls':64}],'FIXTURE_ACCOUNTING')
++    for e in rows:
++        if e[1] in ('root','winner','candidate','child'):
++            key,plain,positions=e[-1]
++            require(len(positions)==6 and [x[0] for x in positions]==[1,2,3,4,5,6] and all(x[1]==x[3] for x in positions),'INVERSE_RECORD')
++    large=compare_large('large_perl');lr=events('large_perl')
++    negatives=json.loads((BASE/'negative/index.json').read_text())
++    require([e[1:] for e in lr if e[0]=='negative']==[[x['name'],x['error_prefix']] for x in negatives],'TEN_NEGATIVES')
++    require([e[1] for e in lr if e[0]=='positive_chunks']==[['aa','aa','bb']],'POSITIVE_CHUNKS')
++    require(lr[-1]==['complete',{'list_fetches':8,'negative':10,'positive_chunks':1}],'TRANSPORT_TERMINAL')
++    return {'status':'PASS_A_TRANSPORT_ONLY','fixture_trace_sha256':hashlib.sha256(actual).hexdigest(),
++            'fixture_events':300,'large':large,'negative_count':10,
++            'brokers':{role:broker(role) for role in ('fixture_broker','large_broker')}}
++def stage_p():
++    rows=events('profile_perl');loads=[e for e in rows if e[0]=='load_begin']
++    require([e[1] for e in loads]==[1,2,3,4,5,6],'SIX_LOADS')
++    freeze=json.loads((BASE/'FREEZE.json').read_text())
++    require([e[2] for e in loads]==[x['path'] for x in freeze['six_lm']],'LM_PATHS')
++    require(rows[-1]==['complete',{'lm_loads':6,'list_fetches':8,'segmentations':6,'search_calls':0,'score_calls':0,'input_bytes':0}],'PROFILE_TERMINAL')
++    expected=json.loads((BASE/'evidence/real_segmentation.json').read_text())
++    require([e[1:] for e in rows if e[0]=='segment']==[[x['input'],x['output']] for x in expected],'SEGMENTATION')
++    ipc=[json.loads(line) for line in (ATT/'profile_broker_ipc.jsonl').read_text().splitlines()]
++    word_trace=[]
++    for index,item in enumerate(ipc):
++        if 'request' in item and item['request'][1]=='word':
++            seq,_,word=item['request'];reply=ipc[index+1].get('response')
++            require(reply is not None and reply[:2]==[seq,'value'] and reply[2] in (0,1),'WORD_REPLY')
++            word_trace.append([word,bool(reply[2])])
++    require(word_trace==[t for e in expected for t in e['membership_trace']],'SEGMENTATION_ORDERED_WORD_TRACE')
++    large=compare_large('profile_perl')
++    return {'status':'PASS_P_LOAD_PROFILE_ONLY','large':large,'profile_snapshots':[e for e in rows if e[0]=='profile'],
++            'broker':broker('profile_broker'),'search_bound_established':False,'control_87_authorized':False}

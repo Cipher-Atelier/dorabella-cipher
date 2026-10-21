@@ -1,0 +1,29 @@
+{
+  "id": "coordinate-lag-mixed-radix-v1",
+  "frozen_utc": "2026-10-09T11:19:26.623699+00:00",
+  "hypothesis": "The orientation and arc-count components encode different positions; a fixed cyclic displacement re-pairs the two streams.",
+  "motivation": "Natural 8-direction by3-arc geometry; new transform absent from inspected frozen round1-14 code. Not an authenticated historical key or a claim of world-first novelty.",
+  "alphabet": "abcdefghiklmnopqrstuwxyz",
+  "map": "P(o)=(s*o+h) mod8, s in [1,-1], h=0..7; Q any of six permutations of0..2. Letter index3P(o)+Q(c) OR8Q(c)+P(o).",
+  "routes": "k=-43..43, shifting arcs OR orientation; global cyclic OR separately within rows29/31/27; forward OR reversed input. Reversed row lengths27/31/29. Each stream retains all87symbols.",
+  "table_count": 192,
+  "route_count": 696,
+  "parameter_definitions": 133632,
+  "key_id": "table_id*696+route_id; tables lexicographic layout,pi,qi; routes lexicographic reversal,reset,anchor,k. Duplicates retained with exact ties; smallest ID is canonical.",
+  "score": "Archived S=C+.5W unchanged; all84character4grams, same dictionary segmentation. W<=0 hence C<best-1e-12 safely skips W. No score retraining or crib.",
+  "baseline": "Best k=0 rule over same maps and remaining route definitions; report total gain as descriptive secondary outcome. Nulls receive identical full search.",
+  "positives": "14 previously inspected87letter historical texts freshly encrypted with balanced route factors and nonzero lag. Regression sensitivity, not blind validation.",
+  "gate": "Before any real/null search: >=12/14exact87/87 and >=1194/1218letters. Failure stops real scoring without retuning.",
+  "nulls": "199fresh directed-bigram/endpoints/count-preserving sequences per transcription using directed Wilson last-exit tree sampler. Separate real ranks and plus-one tails; no pooling/cherry-pick. Exploratory reused real data, not confirmatory significance.",
+  "stop": "Only these414cases after gate; stop on audit failure. No parameter expansion or manuscript correction. No solving claim without coherent complete plaintext and independent corroboration.",
+  "seed": 202610091117,
+  "audits": "96 roundtrips,696independent route constructions,small exact shuffle supports,independent every final score+inverse; full unpruned reruns for first positive and2real.",
+  "source_preservation": "Read-only copies from prior round14. Prior corpus unchanged; all new files in separate directory.",
+  "hashes": {
+    "code/experiment.py": "47a1c123813e08f61a13ff5c1c0e60f957e1ae5c4ebdc23f696d301dd659b227",
+    "data/scoring.npz": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+    "data/search_inputs.json": "20213ef608d401bd393ff545ba4c854cfc2cd1ddc546f55a96db4917c6f68894",
+    "data/positive_truth.json": "e2c4a9075b3a659eada44815ae82e05edc3c8aea47e1836ac3a66d6fb904cc94",
+    "checks/preflight.json": "5da77297db4ad7402de272712a5ae2b5ff0ae9ed5d7dd168e1402fab17dec9de"
+  }
+}

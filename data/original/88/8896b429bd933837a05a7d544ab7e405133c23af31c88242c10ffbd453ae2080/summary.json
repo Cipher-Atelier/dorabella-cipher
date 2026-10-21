@@ -1,0 +1,182 @@
+{
+  "round": 3,
+  "status": "No decryption, no new mechanism established",
+  "development": {
+    "n": 8,
+    "old_ge90": 5,
+    "new_ge90": 7,
+    "mean_old": 0.853448275862069,
+    "mean_new": 0.9339080459770115
+  },
+  "new_validation": {
+    "n": 12,
+    "old_ge90": 10,
+    "new_ge90": 10,
+    "old_mean": 0.8955938697318007,
+    "new_mean": 0.9233716475095787,
+    "min_accuracy": 0.25287356321839083,
+    "cases": [
+      {
+        "id": "lamb_00",
+        "old": 0.9195402298850575,
+        "new": 0.9770114942528736,
+        "best_available": 0.9770114942528736
+      },
+      {
+        "id": "lamb_01",
+        "old": 1.0,
+        "new": 1.0,
+        "best_available": 1.0
+      },
+      {
+        "id": "lamb_02",
+        "old": 0.9540229885057471,
+        "new": 1.0,
+        "best_available": 1.0
+      },
+      {
+        "id": "lamb_03",
+        "old": 0.9195402298850575,
+        "new": 0.9885057471264368,
+        "best_available": 0.9885057471264368
+      },
+      {
+        "id": "lamb_04",
+        "old": 1.0,
+        "new": 1.0,
+        "best_available": 1.0
+      },
+      {
+        "id": "lamb_05",
+        "old": 1.0,
+        "new": 1.0,
+        "best_available": 1.0
+      },
+      {
+        "id": "lamb_06",
+        "old": 0.25287356321839083,
+        "new": 0.25287356321839083,
+        "best_available": 0.5057471264367817
+      },
+      {
+        "id": "lamb_07",
+        "old": 0.8505747126436781,
+        "new": 0.8850574712643678,
+        "best_available": 0.8850574712643678
+      },
+      {
+        "id": "lamb_08",
+        "old": 0.9195402298850575,
+        "new": 1.0,
+        "best_available": 1.0
+      },
+      {
+        "id": "lamb_09",
+        "old": 0.9655172413793104,
+        "new": 0.9770114942528736,
+        "best_available": 0.9770114942528736
+      },
+      {
+        "id": "lamb_10",
+        "old": 0.9655172413793104,
+        "new": 1.0,
+        "best_available": 1.0
+      },
+      {
+        "id": "lamb_11",
+        "old": 1.0,
+        "new": 1.0,
+        "best_available": 1.0
+      }
+    ]
+  },
+  "fresh_controls": {
+    "n": 39,
+    "all_proposal_searches_computed_fresh": true,
+    "comparisons": {
+      "best_score": {
+        "real": -4.47838745417297,
+        "null_mean": -4.6897527593668675,
+        "exceedances": 1,
+        "p_add_one": 0.05
+      },
+      "identity_score": {
+        "real": -4.594507870019965,
+        "null_mean": -5.087335485458865,
+        "exceedances": 0,
+        "p_add_one": 0.025
+      },
+      "improvement": {
+        "real": 0.11612041584699462,
+        "null_mean": 0.3975827260919977,
+        "exceedances": 37,
+        "p_add_one": 0.95
+      }
+    }
+  },
+  "cached_controls": {
+    "n_controls": 99,
+    "proposal_banks_reused_not_recomputed": true,
+    "all_word_refinements_new": true,
+    "real": {
+      "best_score": -4.47838745417297,
+      "identity_score": -4.594507870019965,
+      "improvement": 0.11612041584699462,
+      "best_index": 1,
+      "identity_index": 0
+    },
+    "comparisons": {
+      "best_score": {
+        "real": -4.47838745417297,
+        "null_mean": -4.698822981897791,
+        "exceedances": 0,
+        "p_add_one": 0.01
+      },
+      "identity_score": {
+        "real": -4.594507870019965,
+        "null_mean": -5.113612212411055,
+        "exceedances": 1,
+        "p_add_one": 0.02
+      },
+      "improvement": {
+        "real": 0.11612041584699462,
+        "null_mean": 0.4147892305132644,
+        "exceedances": 94,
+        "p_add_one": 0.95
+      }
+    }
+  },
+  "keypool_diagnostic": {
+    "id": "history_03",
+    "diagnostic_not_independent_validation": true,
+    "no_oracle_automaton_used": true,
+    "finalists": [
+      0,
+      90,
+      178,
+      253,
+      256,
+      257,
+      281,
+      282,
+      284
+    ],
+    "restarts_per_finalist": 64,
+    "iterations": 20000,
+    "unique_key_hypotheses": 575,
+    "best_by_old_char_accuracy": 0.6666666666666666,
+    "best_by_new_word_accuracy": 0.6666666666666666,
+    "seconds": 20.936010889000045
+  },
+  "checks": {
+    "python_vs_numba_word_score_cases": 200,
+    "max_error": 0.0,
+    "polish_invariant_cases": 30,
+    "candidate_reencryptions_checked": 453,
+    "true_encryption_roundtrips": 12,
+    "full_dorabella_v2_proposal_recomputed_matches": true,
+    "full_dorabella_v3_repeated_matches": true,
+    "frozen_source_and_model_hashes_match": true,
+    "dictionary_hash_matches": true
+  }
+}

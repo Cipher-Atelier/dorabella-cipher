@@ -1,0 +1,24 @@
+{
+  "completed_iterations": [],
+  "distinct_scored_strings": 0,
+  "last_event": {
+    "cpu": 6.071502,
+    "type": "segmentation_progress",
+    "value": {
+      "calls": 147,
+      "maxdepth": 13,
+      "memory_KiB": {
+        "VmHWM": 13084,
+        "VmPeak": 17620,
+        "VmRSS": 13084,
+        "VmSize": 17620
+      },
+      "top": 4
+    },
+    "wall": 7.56833481788635
+  },
+  "not_full_acceptance": true,
+  "scored_records": 0,
+  "status": "PARTIAL_OBSERVATIONS_ONLY",
+  "unparsed_tail_bytes": 0
+}

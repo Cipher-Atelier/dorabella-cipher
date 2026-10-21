@@ -1,0 +1,18 @@
+{
+  "all_old_source_members_unchanged": true,
+  "closed_files_checked": 36,
+  "closed_files_sha256": "7c923fb1638418d5fbf49b890865bff23b39eeec2462f53d2e06d26629af2268",
+  "exit": 0,
+  "library_delivery": "PENDING_EXACT_READBACK",
+  "maxrss_KiB": 11520,
+  "native_payload_limit": "elapsed excludes final seal hashing; external tool-call observation bounds include the full command",
+  "negative_expected_rejections": 13,
+  "old_STOP_seals_unchanged": true,
+  "own_fds_closed": true,
+  "positive_cases": 2,
+  "result_sha256": "27325e8f2fc645202b324457a41416717314c143da3a553d90d4d3af6a276a96",
+  "runner_elapsed_before_final_sealing": 0.11362240800008294,
+  "status": "DATA_ONLY_READBACK_PASS_SMOKE_ONLY",
+  "tool_observed_call_seconds": 0.693,
+  "tool_wall_time_seconds": 0.094638568
+}

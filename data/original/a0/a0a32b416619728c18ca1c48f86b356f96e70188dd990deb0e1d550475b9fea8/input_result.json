@@ -1,0 +1,145 @@
+{
+  "cases": [
+    {
+      "alphabet_types": 21,
+      "case": "P1",
+      "ciphertext_sha256": "42343f6aca5d1111082ff93654ae209999713b4527b067bac78de4c85b3393ee",
+      "length": 87,
+      "opaque_id": "9051330e31edbae8b92c0235"
+    },
+    {
+      "alphabet_types": 21,
+      "case": "N1",
+      "ciphertext_sha256": "6954001be61857822d96f794fe0599bb31ac8548dab7c0fbe54fb8353a8ca3f8",
+      "length": 87,
+      "opaque_id": "f87cf0c3b763ad16bd186e2a"
+    },
+    {
+      "alphabet_types": 22,
+      "case": "P2",
+      "ciphertext_sha256": "dc6a35ce212e9cbf6090d31217126e7797508cfc4a77580223283286c1ef24c5",
+      "length": 87,
+      "opaque_id": "6d256e5c8f1a72e1f9ec7e12"
+    },
+    {
+      "alphabet_types": 22,
+      "case": "N2",
+      "ciphertext_sha256": "05992f92da792d43eed92564b823d28cb61b67d1fda94c8758d54d37d5e5c5b9",
+      "length": 87,
+      "opaque_id": "2085e9cc440881c9ef3e65ea"
+    },
+    {
+      "alphabet_types": 18,
+      "case": "P3",
+      "ciphertext_sha256": "74006722f3bafad3bb4d0f1a02963b1a44c158e86e6ced2ae4df70f423159e12",
+      "length": 87,
+      "opaque_id": "d1eb794e7cfdd5a40b973de1"
+    },
+    {
+      "alphabet_types": 18,
+      "case": "N3",
+      "ciphertext_sha256": "5aab8d5f37105ac732d1c142320ce6bcee029c7ef98058f65f28a42df3f77655",
+      "length": 87,
+      "opaque_id": "7c47e0455c2a763d76972c1e"
+    },
+    {
+      "alphabet_types": 19,
+      "case": "P4",
+      "ciphertext_sha256": "c5e231df120e203849c023a9735b30e62e4a40708ae6283696fb2eb0f71bb30e",
+      "length": 87,
+      "opaque_id": "5ffffa312ee4fbc2a71bb145"
+    },
+    {
+      "alphabet_types": 19,
+      "case": "N4",
+      "ciphertext_sha256": "d1b801392551cae0f13d2cf1879cb471afa0eed8bab6c76c0183e48f77907a24",
+      "length": 87,
+      "opaque_id": "8a8157f4175dd765c635c3b5"
+    }
+  ],
+  "collisions": [],
+  "completed_utc": "2026-10-18T16:33:07.143017+00:00",
+  "elapsed": 0.033360446999722626,
+  "freshness_scope": "Compared exactly the 12 preserved inventories listed; not training-corpus disjointness, not global historical absence. No model/table/score read.",
+  "inventories": [
+    {
+      "bytes": 12193,
+      "path": "Dorabella_R6_A3_representability_v1_20261016/data/positive_source_prefixes.json",
+      "sha256": "a142aca9d82d2b6c616a4cd4fbf990f143de667879d4a08360fd0368dd0b294e",
+      "strings_examined": 35
+    },
+    {
+      "bytes": 96787,
+      "path": "Dorabella_R6_A3_representability_v1_20261016/data/regression_inputs_original.json",
+      "sha256": "0d91979dc0aa9834598e9a97f481f9f7595fae022d7a8b33f004b314492eaf7a",
+      "strings_examined": 15
+    },
+    {
+      "bytes": 6518,
+      "path": "Dorabella_R6_section7_implementation_review_20261016/original/inputs_v7.py",
+      "sha256": "512ffad501fd2ebdcbfe6f0e5a79c645c9ea94536f2c5d8b1befc10e4ab9dc4d",
+      "strings_examined": 14
+    },
+    {
+      "bytes": 3390,
+      "path": "Dorabella_R6_section7_implementation_review_20261016/original/results/v6/fraction/inputs.json",
+      "sha256": "e5ca1c17497d8c02d34c7cf9c989583ad0ea1ea1e35aafa237147c925e275919",
+      "strings_examined": 0
+    },
+    {
+      "bytes": 96787,
+      "path": "Dorabella_R6_section7_implementation_review_20261016/original/round8/results/elgar/inputs.json",
+      "sha256": "0d91979dc0aa9834598e9a97f481f9f7595fae022d7a8b33f004b314492eaf7a",
+      "strings_examined": 15
+    },
+    {
+      "bytes": 3206,
+      "path": "CH2_v1_prepare/control_selection.json",
+      "sha256": "576a979afbe39931fd1aef8b9e5ecb9893de040a64412e1d16a85a1d5b102b4f",
+      "strings_examined": 1
+    },
+    {
+      "bytes": 504272,
+      "path": "CH2_v1_prepare/preflight_output/private_control_truth.json",
+      "sha256": "76e468d91d1e983922c91a2a751d4b57459d863646c9a6e002d7c63bb64d0439",
+      "strings_examined": 49
+    },
+    {
+      "bytes": 2803,
+      "path": "Dorabella_CH3_v1_execution_20261017/frozen/controls.json",
+      "sha256": "bad4b38c09ff998d9c8cbb658f50bee6a4edf9f3c63c5b9c0e141dda530bcc52",
+      "strings_examined": 4
+    },
+    {
+      "bytes": 203993,
+      "path": "Dorabella_CH3_v1_execution_20261017/attempt/private_control_truth.json",
+      "sha256": "23c8e60c24f77a8b8ed69a17f6d7b8b2fd6bf7722da101c9819974f29db831df",
+      "strings_examined": 16
+    },
+    {
+      "bytes": 203993,
+      "path": "CH3_tabu_dev_v1_20261017/private/control_truth.json",
+      "sha256": "23c8e60c24f77a8b8ed69a17f6d7b8b2fd6bf7722da101c9819974f29db831df",
+      "strings_examined": 16
+    },
+    {
+      "bytes": 203993,
+      "path": "CH3_SA_dev_v1_execution_20261017/private/control_truth.json",
+      "sha256": "23c8e60c24f77a8b8ed69a17f6d7b8b2fd6bf7722da101c9819974f29db831df",
+      "strings_examined": 16
+    },
+    {
+      "bytes": 6611,
+      "path": "TS_RECOVERED_SEARCH_v3/truth/truth.json",
+      "sha256": "503436a6b053ffc8c95903314c1027f4ebbe606c8e354693d7255368b8da2ff4",
+      "strings_examined": 2
+    }
+  ],
+  "maxrss_KiB": 13984,
+  "negative_generation_inverses": 4,
+  "negative_inverse_is_not_recovery": true,
+  "positions_per_case": 87,
+  "positive_inverses": 4,
+  "started_utc": "2026-10-18T16:33:07.109674+00:00",
+  "status": "PASS_INPUT_DATA_ONLY"
+}

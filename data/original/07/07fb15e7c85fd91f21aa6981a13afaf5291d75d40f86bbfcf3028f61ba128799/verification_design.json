@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-15T18:17:07.524036+00:00",
+  "scope": "all checkpoint injectivity+87inverse; all middle/final and first routeID%101==0 independent scores; winner selection and all52statistics recomputed",
+  "code_sha256": "76b472c9c7c47be0aa3c56e2731dfea2aff17fcc01f8809148a6f1b32323c35c",
+  "before_first_new_real_or_null_result": true,
+  "syntax_fix_utc": "2026-10-15T18:38:57.266091+00:00",
+  "syntax_fix": "Closing brace in summary print only; no validation/search/statistic logic changed"
+}

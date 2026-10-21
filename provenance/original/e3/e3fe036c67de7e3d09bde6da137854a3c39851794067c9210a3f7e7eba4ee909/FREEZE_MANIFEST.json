@@ -1,0 +1,273 @@
+{
+  "version": "CH3-tabu-dev-v1",
+  "created_utc": "2026-10-17T03:32:33.986804+00:00",
+  "status": "FROZEN_BEFORE_FIRST_ATTEMPT",
+  "runtime": {
+    "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "binary_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "dependency_files": {
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/random.py": "de48263a837339c7e01cf9f3c4d756696e0e0775f7778eb9cf81ad5b00134569",
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/hashlib.py": "6dbdebf270868b391080e21dc9687eddfaf321c965ad979f68d3f5c423c613ab"
+    },
+    "module_origins": {
+      "math": {
+        "origin": "built-in",
+        "file": null,
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      },
+      "random": {
+        "origin": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/random.py",
+        "file": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/random.py",
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      },
+      "_random": {
+        "origin": "built-in",
+        "file": null,
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      },
+      "hashlib": {
+        "origin": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/hashlib.py",
+        "file": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/hashlib.py",
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      }
+    },
+    "uname": [
+      "Linux",
+      "5eebc2aacaf2",
+      "6.18.55",
+      "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+      "x86_64"
+    ],
+    "flags": [
+      "-I",
+      "-S"
+    ]
+  },
+  "files": {
+    "PLAN_RU.md": {
+      "sha256": "b6a35cff70ed45eea35d501ac96fd56822f9be2ea8af4fdc495bfc325a64db1e",
+      "bytes": 5215
+    },
+    "STATIC_REVIEW.json": {
+      "sha256": "dc1c963bcf4da59110418856d0cf573fd1fd82cd0939d0472a6c0fa0c851eda1",
+      "bytes": 3263
+    },
+    "frozen/decoder_controls.json": {
+      "sha256": "74c44ea9113a9bc93abdfbcec2270221b194f8a7c8007d92fa8bd7bf1ae688e8",
+      "bytes": 7187
+    },
+    "frozen/initial_states.json": {
+      "sha256": "3f35f25f792829938b47148edefc4227e1e64e30e7ea60a85246431fd19cecd5",
+      "bytes": 1199455
+    },
+    "frozen/original_run_ch3.py.txt": {
+      "sha256": "37df8cd01cf5da1bc51a64ba282117fcf10afb23adfc842a33af9611c6effca8",
+      "bytes": 20384
+    },
+    "frozen/protocol.json": {
+      "sha256": "25aa5ecf7549042810c53e9d445351ad9805978e1b8230e8e90ca48e2cbc1d06",
+      "bytes": 2908
+    },
+    "frozen/quadgrams.txt": {
+      "sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+      "bytes": 3289600
+    },
+    "frozen/source_restarts/N01_B0_r0.json": {
+      "sha256": "f72579d07d8d73c11721f399e35d78ed5b05cfadbda84f41c5fbb34dda71ec05",
+      "bytes": 27397
+    },
+    "frozen/source_restarts/N01_B0_r1.json": {
+      "sha256": "4f8f42865fa7ab506863a424df1c8acda0dcc42284de4baa1e9f2436211a0f15",
+      "bytes": 27395
+    },
+    "frozen/source_restarts/N01_B0_r2.json": {
+      "sha256": "dd2545de2ca898f83fd7a1e96a72d0d7fe219e5af3877c5e94e724e35bc51f02",
+      "bytes": 27396
+    },
+    "frozen/source_restarts/N01_B0_r3.json": {
+      "sha256": "3fbd6f76c318dac4b85d64c655d096a87a2665bf884bf25ff5af4bea92630911",
+      "bytes": 27397
+    },
+    "frozen/source_restarts/N01_B0_r4.json": {
+      "sha256": "adff47d16465582dcdfa17c948a300859455bb367c1b928170a3487966584bea",
+      "bytes": 27397
+    },
+    "frozen/source_restarts/N02_B1_r0.json": {
+      "sha256": "96cda862afe12befcb5a9de6b71d01dfaaceb5543e1c276261b678d18dcc8756",
+      "bytes": 27389
+    },
+    "frozen/source_restarts/N02_B1_r1.json": {
+      "sha256": "e50fcc02d6943aa303a9ac8b761bbd73bf15ed346a4cea69da2ec9142eae184c",
+      "bytes": 27389
+    },
+    "frozen/source_restarts/N02_B1_r2.json": {
+      "sha256": "81c835e872752ce7378849b915df16f66119079948336eac22a2e8c990c1dfe9",
+      "bytes": 27389
+    },
+    "frozen/source_restarts/N02_B1_r3.json": {
+      "sha256": "42866e9f75e36f1e47ec522373a1afebe6d65d11245d4a52f0a74339d86dd628",
+      "bytes": 27388
+    },
+    "frozen/source_restarts/N02_B1_r4.json": {
+      "sha256": "c81a29844c87b847e4ec6d80c840e55247ecf75b16174bca71a83bb43794d117",
+      "bytes": 27389
+    },
+    "frozen/source_restarts/N03_B2_r0.json": {
+      "sha256": "1ed246653669925d0d083ed011a15d7ef7c3669b3b144c6e84e4f28ceea8bb94",
+      "bytes": 27386
+    },
+    "frozen/source_restarts/N03_B2_r1.json": {
+      "sha256": "91b7e9c2e1f7e3f722cb169bb1402d4c100cd957b131074a6f183dd7b007e688",
+      "bytes": 27386
+    },
+    "frozen/source_restarts/N03_B2_r2.json": {
+      "sha256": "0933882a7b50d843ac9997feab5ca4495a2e586200aafea8734dc4d0bf071d20",
+      "bytes": 27386
+    },
+    "frozen/source_restarts/N03_B2_r3.json": {
+      "sha256": "f6d8d04b50567fdb764c7c4098821caf4cc1f67a04243b8b5819345eb5e8eb0f",
+      "bytes": 27387
+    },
+    "frozen/source_restarts/N03_B2_r4.json": {
+      "sha256": "9ae702b3492d856ef2bd94eef075e45beee9e0973fcf625c9c30b9bdc0b80cbd",
+      "bytes": 27386
+    },
+    "frozen/source_restarts/N04_B3_r0.json": {
+      "sha256": "ee381fcb223c0d2b4f75ae86f83fe361502c55365582784fa1b594343732cc8d",
+      "bytes": 27381
+    },
+    "frozen/source_restarts/N04_B3_r1.json": {
+      "sha256": "7e58563846f6bab41b5cd6ef40443fb7c4107b023c7370e37158d6cfb82f52fa",
+      "bytes": 27383
+    },
+    "frozen/source_restarts/N04_B3_r2.json": {
+      "sha256": "2aacb84ea511f3a3b7f70c220decdcdeba1290743ab4c8e66974725769e461b5",
+      "bytes": 27384
+    },
+    "frozen/source_restarts/N04_B3_r3.json": {
+      "sha256": "19c38f2924290da1c0ae3211e41a257c733ee86de9d3b9457c0e4c025c7c33aa",
+      "bytes": 27383
+    },
+    "frozen/source_restarts/N04_B3_r4.json": {
+      "sha256": "f4b333cd1b3c9e7cb593e80ab8e71b7f72873131b80d8f67bebf41be67194463",
+      "bytes": 27383
+    },
+    "frozen/source_restarts/P01_B0_r0.json": {
+      "sha256": "c5d9a9ae98a4f257d989c6ae4618de92feacf5d17a8b474c891b6418e9b9326b",
+      "bytes": 27396
+    },
+    "frozen/source_restarts/P01_B0_r1.json": {
+      "sha256": "a8e09bf945e044499558404f39d3675909e1faf4bd18ae089f468b9c6fed5a5b",
+      "bytes": 27397
+    },
+    "frozen/source_restarts/P01_B0_r2.json": {
+      "sha256": "47000fb50150a9594de0948e71718f3f0e604c2011a144110403b46ad0f98bec",
+      "bytes": 27395
+    },
+    "frozen/source_restarts/P01_B0_r3.json": {
+      "sha256": "d9c18ad8ffea188548044c7a5088cdc040f4dc79d63dda8894b9cf77ddb5d2ef",
+      "bytes": 27397
+    },
+    "frozen/source_restarts/P01_B0_r4.json": {
+      "sha256": "5e3295ac4855eeb893ffee01b365b182193f5190489abe6b5d0d725b8fad08ac",
+      "bytes": 27396
+    },
+    "frozen/source_restarts/P02_B1_r0.json": {
+      "sha256": "9abdc640915febe3c56468d3b8c291200491dbbaa6a55fee15d313ab3d87bc67",
+      "bytes": 27389
+    },
+    "frozen/source_restarts/P02_B1_r1.json": {
+      "sha256": "701731042f13f2aa1555d0b3985b3d2f8b3743fc5f0e57e6b645830f3783f28f",
+      "bytes": 27389
+    },
+    "frozen/source_restarts/P02_B1_r2.json": {
+      "sha256": "ca7486352a4e7cf4750da36ac35aa18dd6adedf6dc0cbae12cd8c76127b7f28b",
+      "bytes": 27392
+    },
+    "frozen/source_restarts/P02_B1_r3.json": {
+      "sha256": "9173f9a2d66704315b10f04f66dbd9cd248bbb84de09f8e23c5a2cd21ba0f7f4",
+      "bytes": 27390
+    },
+    "frozen/source_restarts/P02_B1_r4.json": {
+      "sha256": "c978565ffa5bb91430251afbf20d04f25cdf07aa7fc023f5962bc937d1ebe331",
+      "bytes": 27388
+    },
+    "frozen/source_restarts/P03_B2_r0.json": {
+      "sha256": "7dd0ef2b5376e76a54b69d99430b7f1fd3c2a8c24017a4607303ac9adb08ab1a",
+      "bytes": 27385
+    },
+    "frozen/source_restarts/P03_B2_r1.json": {
+      "sha256": "0dd5369cfeab513173f7d3a2df2baa561f0afd0f143d7332a0472bc350414d17",
+      "bytes": 27386
+    },
+    "frozen/source_restarts/P03_B2_r2.json": {
+      "sha256": "9a0ac10062459c956469afaf74eb4db29ffc7177c0995bdcb0ba78a659118af5",
+      "bytes": 27388
+    },
+    "frozen/source_restarts/P03_B2_r3.json": {
+      "sha256": "ffbae352388e1f4b58a3e9b7d7154c54cb29748b094d00f5d4f4a0abe0beb925",
+      "bytes": 27387
+    },
+    "frozen/source_restarts/P03_B2_r4.json": {
+      "sha256": "b6a2649b265250bb2cbeaedec936b0f9c9096072d4db33e80ac65afbb778a6d6",
+      "bytes": 27386
+    },
+    "frozen/source_restarts/P04_B3_r0.json": {
+      "sha256": "a72f7329fcc1657dfbe32ce8544391548ad902e5d6a7957450a6c09b6b08aad1",
+      "bytes": 27381
+    },
+    "frozen/source_restarts/P04_B3_r1.json": {
+      "sha256": "bcc46a8b800d9cfb80ba3911f8d291a28aae615100d596895afa499af3d267fc",
+      "bytes": 27381
+    },
+    "frozen/source_restarts/P04_B3_r2.json": {
+      "sha256": "e65fdb2ee244d20685bb5d4eea8c8bcbef084c5a731212ea5247747b29be26d3",
+      "bytes": 27383
+    },
+    "frozen/source_restarts/P04_B3_r3.json": {
+      "sha256": "3becb3a06d4a2680e1424199c4cdc20b0d7dde08548835c6a2200b79c6be0cfe",
+      "bytes": 27382
+    },
+    "frozen/source_restarts/P04_B3_r4.json": {
+      "sha256": "1d779252c4c7695b642ecafd8692407d60c14cd15a3a049ab128a71d135db0c7",
+      "bytes": 27383
+    },
+    "preflight.json": {
+      "sha256": "2fef1d3fb1ea1c030a54d91bd80c7b93d672790dafc9caa8f78db90b4c92307b",
+      "bytes": 7250
+    },
+    "prepare_freeze.py": {
+      "sha256": "7b7168c11532c6d56e65c69f6dc1ba08954ae099acaa63abf4672bf408a087f1",
+      "bytes": 6075
+    },
+    "private/control_truth.json": {
+      "sha256": "23c8e60c24f77a8b8ed69a17f6d7b8b2fd6bf7722da101c9819974f29db831df",
+      "bytes": 203993
+    },
+    "private/old_assessment_controls.json": {
+      "sha256": "8fa0c95f30d42e16cab4ca5c6ff656b348825b0c95a4631d4ce5a2e1374d79b5",
+      "bytes": 3179
+    },
+    "readback_assess.py": {
+      "sha256": "e72afa42fd7482a59423759996accf11a0de72d7e9a342204375b8338aa24fed",
+      "bytes": 8372
+    },
+    "runner.py": {
+      "sha256": "e410d6fecde8f35a2a73625f6edec32c707f88e63e91cb2a6e95fedf0335cd34",
+      "bytes": 17007
+    },
+    "static_freeze.py": {
+      "sha256": "0d86074a16e51f74c1d81aed3ffe7d806c26d508a9a8a729ba1884d86490f0d2",
+      "bytes": 3950
+    }
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-I",
+    "-S",
+    "/workspace/scratch/f24f8fae4976/CH3_tabu_dev_v1_20261017/runner.py"
+  ],
+  "limit_seconds": 60.0,
+  "max_evaluations": 260000
+}

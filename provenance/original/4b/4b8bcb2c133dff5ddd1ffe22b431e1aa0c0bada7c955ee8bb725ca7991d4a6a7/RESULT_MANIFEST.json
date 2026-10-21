@@ -1,0 +1,175 @@
+{
+  "version": "TS-JOURNAL-DIAGNOSTIC-v1-result",
+  "utc": "2026-10-18T11:10:57.966108+00:00",
+  "native_status": "PASS_DIAGNOSTIC_THIS_ATTEMPT_ONLY",
+  "acceptance_status": "STOP_EVIDENCE_HASH_MISMATCH",
+  "attempts": 1,
+  "unresolved": "observations.jsonl actual SHA differs from native seal; historical journal-loss cause unknown",
+  "files": [
+    {
+      "path": "frozen/Dorabella_TS_JOURNAL_DIAGNOSTIC_v1_20261018_package.zip",
+      "bytes": 398353,
+      "sha256": "11132f985e07148e76308d5ca67d7a33b513883bac2923e767cec993ac414d33"
+    },
+    {
+      "path": "execution/launch_evidence.json",
+      "bytes": 467,
+      "sha256": "cc4f7f95a22df98c89ef4ff9b8a3fa16d13bdfb715f8771a36abbe4feff294de"
+    },
+    {
+      "path": "execution/attempt/T0.json",
+      "bytes": 116,
+      "sha256": "2d9b9790b8bcfe1876dc97a3fe95411b02e6e8d417bee84d066577d928501545"
+    },
+    {
+      "path": "execution/attempt/observations.jsonl",
+      "bytes": 79635,
+      "sha256": "b02b9907fb123b78064ea0b9454dbcacfacfbaaaa50bf0a0435ad382ce347654"
+    },
+    {
+      "path": "execution/attempt/phase_deadline.json",
+      "bytes": 69,
+      "sha256": "e7c62b39b2b1ddfac5459a824719d9685a6098b1d65196ee16f55f91cf882934"
+    },
+    {
+      "path": "execution/attempt/prior_synthetic_admission.json",
+      "bytes": 490,
+      "sha256": "0e5472728f3e64440ebcb68dd8e2909de757b46150c57dcfd7d2c8c640608b5a"
+    },
+    {
+      "path": "execution/attempt/process_guard.json",
+      "bytes": 11907,
+      "sha256": "1519a4cf5337d9c4cae6a712754896a110136ce9e8a4c35c8298fee528d2f381"
+    },
+    {
+      "path": "execution/attempt/real_broker_ipc.jsonl",
+      "bytes": 1966951,
+      "sha256": "b73ede2b89f6dfd056ae94d73a2e335e3b2724d0a8d4c1ec23050749f1572ae5"
+    },
+    {
+      "path": "execution/attempt/real_broker_ipc_writer_completion.json",
+      "bytes": 1254,
+      "sha256": "a77e2fddcafa98f87dcebff6a35a9f8b43c40ed24e78adf53c4234ddb6dc589c"
+    },
+    {
+      "path": "execution/attempt/real_broker_ipc_writer_events.jsonl",
+      "bytes": 2711050,
+      "sha256": "28ab5d04fb02ff56b633151822956e914c48fd0d9966a0ad97bdf9204cdae9f3"
+    },
+    {
+      "path": "execution/attempt/real_broker_ready.json",
+      "bytes": 3223,
+      "sha256": "684e47664519fc1547645433a9588862610be0167a474f841d5a76e2ec3f1a9f"
+    },
+    {
+      "path": "execution/attempt/real_broker_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "execution/attempt/real_broker_stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "execution/attempt/real_broker_terminal.json",
+      "bytes": 870,
+      "sha256": "2f93f3dbbeb6c6d4ef45ae34a17040cf528bd906d1af103ba734562fbd7faa9f"
+    },
+    {
+      "path": "execution/attempt/real_perl.jsonl",
+      "bytes": 1652705,
+      "sha256": "8c2c887593bb558ca3dccdea536a407e3752f8f9f9e1724a5952ac398ef7524e"
+    },
+    {
+      "path": "execution/attempt/real_perl_ready.json",
+      "bytes": 3223,
+      "sha256": "3661ea7299b02272eb8cea5359d84d70541b6f8a6327654cfe70dfe426e067af"
+    },
+    {
+      "path": "execution/attempt/real_perl_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "execution/attempt/result.json",
+      "bytes": 26528,
+      "sha256": "707f62ab34ea03145240795f4e51dfc7c3fa1e07554c33badaca97718f02ec03"
+    },
+    {
+      "path": "execution/attempt/seal_binding.json",
+      "bytes": 12319,
+      "sha256": "61f7fcda43461722f0899c5a6c9fd16f49297c529b129f7899844e83c2d9379a"
+    },
+    {
+      "path": "execution/attempt/seal_observations.json",
+      "bytes": 9682,
+      "sha256": "57d3d2b1be6f596ea076063d088ea763c43e8e31f7b968bd6851b4e0cf9ae2d5"
+    },
+    {
+      "path": "execution/attempt/stage_real.json",
+      "bytes": 463,
+      "sha256": "de879adbdc17d0c2b91ff59b81c598ea939c19fcc3ad7280d417c1f5db8ccd63"
+    },
+    {
+      "path": "execution/attempt/verifier_call_receipt.json",
+      "bytes": 8279,
+      "sha256": "cc21886e032a37d269334938f0204a5a96ae0da6f8e7ff7b55407352a91294f1"
+    },
+    {
+      "path": "execution/attempt/wait_before_verifier.json",
+      "bytes": 391,
+      "sha256": "feeb961c9eeaefc7fb806dc20e6acf40b9c2605fcba0ca932c8e82908d7b37d7"
+    },
+    {
+      "path": "independent/Dorabella_TS_JOURNAL_DIAGNOSTIC_v1_result_20261018.md",
+      "bytes": 8262,
+      "sha256": "3e8f4d51fa27ef1f9e63676629005d5c3fdac8aa20c497f800c35e0d71bf8b2c"
+    },
+    {
+      "path": "independent/INDEPENDENT_READBACK.json",
+      "bytes": 864,
+      "sha256": "a1e19e177a8242f21679952d4e80db416835f92a97611aa292c02ccc7fe9a4c8"
+    },
+    {
+      "path": "independent/JOURNAL_OFFSETS.json",
+      "bytes": 364466,
+      "sha256": "4b7c41877bcf899bbe2be041859ab7b3fee07616a7e0fb9909adf90ed92d43b0"
+    },
+    {
+      "path": "independent/PREFLIGHT_READONLY.json",
+      "bytes": 21044,
+      "sha256": "68688a4439ab17fb69dece61864b6ef0b0b609885426d7a3ff6272e1d5af2455"
+    },
+    {
+      "path": "independent/PREFLIGHT_ZIP_ROOT_CORRECTION.json",
+      "bytes": 9142,
+      "sha256": "83f0856883d5df54ba8c9d47c33e240970dde81c1fefef7f98645ba031299269"
+    },
+    {
+      "path": "independent/RAW_EXECUTION_RECEIPT.json",
+      "bytes": 2161,
+      "sha256": "4a50745832b903ebcdeadc7cc45f6243cf0991afa5a32de89d46cc1f0c16eec4"
+    },
+    {
+      "path": "independent/SAVED_DATA_FAILURE_AUDIT.json",
+      "bytes": 1859,
+      "sha256": "4f6498e6fbd8abc99595ddcc1b17afe7bdac132e7b8cbdfd7f4cea746029d0fc"
+    },
+    {
+      "path": "independent/SEALED_HASH_AUDIT.json",
+      "bytes": 5875,
+      "sha256": "397dc12fdae619cde72d508ccc57c9d2ab26fb60e98fb1759f2128752e020388"
+    },
+    {
+      "path": "independent/independent_readback.py",
+      "bytes": 13449,
+      "sha256": "9ee8253b3c8ae4ceb1201363160bac5d5059395fc4db99dbeba42ef82af564ff"
+    },
+    {
+      "path": "independent/saved_data_failure_audit.py",
+      "bytes": 13746,
+      "sha256": "6709c0537258f7f9cc2d1487a8cc01d603e1b9cd0e150b2a78d21a56435fc876"
+    }
+  ]
+}

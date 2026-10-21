@@ -1,0 +1,44 @@
+{
+  "spec": {
+    "id": "geometric-second-order-heldout-20261002",
+    "seed": 202610021401,
+    "train_length": 43,
+    "test_length": 44,
+    "real_controls": 9999,
+    "geometric_relabels": 9999,
+    "synthetic_each_kind": 100,
+    "synthetic_controls": 199,
+    "factorizations": [
+      [
+        "axis_mod4",
+        "polarity",
+        "arcs_mod3"
+      ],
+      [
+        "orientation_mod8",
+        "arcs_mod3"
+      ]
+    ],
+    "model": "Equal-weight sequence mixture of the two factorizations. Each factor has first-order KT smoothing (0.5/cell). Second-order rows shrink to the fitted first-order row with concentration 2.0. Prefix-only parameter fitting; no suffix updating.",
+    "primary": "Heldout bits = log2(P_second_order(suffix|prefix)/P_first_order(suffix|prefix)).",
+    "conditional_null": "Keep positions 1..43 fixed. Uniform Euler shuffle of positions 43..87, preserving its first/last signs and all directed bigram counts. Thus all global directed bigrams and symbol counts are unchanged.",
+    "relabel_null": "Uniform permutation of all 24 glyph identities onto the 24 geometric forms; refit prefix and score suffix with identical models.",
+    "decision": "Investigate only if gain>0 and upper-tail plus-one fraction<=0.01 for BOTH conditional and geometric-relabel controls on BOTH transcriptions, synthetic second-order detection>=80/100, and first-order false positives<=5/100. Otherwise close this model without retuning. Both transcriptions are dependent, not independent replications.",
+    "synthetic": "Independent uniform initial feature pairs. Each axis(4), polarity(2), arc(3) has a random deterministic table. At each later step use table with probability 0.90, else uniform. Negative table has one lag; positive table has two lags. Same lengths, fitting and conditional test; no real-derived parameters.",
+    "calibration_scope": "Synthetic detectability checks for deliberately strong local dependence only, not historical or language validation. Previously seen 14 letters are descriptive challenge cases, not new positives for geometric generation.",
+    "limits": "Adaptive research on an already studied document. Split is computational only, not new unseen historical evidence. A pass would not establish no-language, hoax, original intent, a cipher key or decipherment. A fail only stops this specific predictive model."
+  },
+  "created_utc": "2026-10-02T09:32:35.723201+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0"
+  },
+  "hashes": {
+    "dorabella_symbol_prediction/experiment.py": "6816f67b9edca0bd8965c4ec27820b8a8b52170c06005636a24c2dd4fc194fa8",
+    "dorabella_symbol_prediction/data/cases.json": "e62c293ecfaea1bfede50869f7899bba37b2dba6749820418de392dc9eb17e08",
+    "dorabella_round13/data/cases.json": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+    "dorabella_audit/round10/dorabella_lab/conditional_v7.py": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+    "dorabella_audit/round10/dorabella_lab/count_bigrams_v7.py": "887198748de7f0698977ddb859b2e10e1b016b45a074f506f27aa9476085c92c"
+  }
+}

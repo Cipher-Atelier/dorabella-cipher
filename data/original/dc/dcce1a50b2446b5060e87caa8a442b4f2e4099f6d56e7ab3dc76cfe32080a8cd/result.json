@@ -1,0 +1,16 @@
+{
+  "status": "CATALOGUE_RECONSTRUCTED_EXACT",
+  "new_version": true,
+  "source_rows": 7548932,
+  "source_bytes": 340083717,
+  "source_sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd",
+  "selected_entries": 682961,
+  "catalogue_bytes": 6221764,
+  "catalogue_sha256": "8e29af726d88e0c2e711e03ab4019a3b0666fb0d4184302080edd6733013e76e",
+  "matches_previous_visible_hash": true,
+  "elapsed": 8.849012796999887,
+  "ru_maxrss_KiB": 31104,
+  "exit": 0,
+  "utc": "2026-10-18T14:24:23.255987+00:00",
+  "foreign_execution": false
+}

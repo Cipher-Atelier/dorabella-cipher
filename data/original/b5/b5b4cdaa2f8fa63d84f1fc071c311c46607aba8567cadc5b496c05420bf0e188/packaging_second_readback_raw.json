@@ -1,0 +1,7 @@
+{
+  "chunk_id": "d49afb",
+  "wall_time_seconds": 0.000020932,
+  "exit_code": 1,
+  "original_token_count": 106,
+  "output": "Traceback (most recent call last):\n  File \"/workspace/scratch/f24f8fae4976/ts_execution_pack_evidence_v2.py\", line 28, in <module>\n    assert value['all_sealed_hashes_match'] and value['all_manifest_members_match'] and value['primary_stdout_seal_exact'] and not matches\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

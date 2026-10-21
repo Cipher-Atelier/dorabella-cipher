@@ -1,0 +1,32 @@
+{
+  "id": "wide_selection_v2",
+  "family_definitions": 672,
+  "screen": {
+    "restarts": 8,
+    "iterations": 16000,
+    "keep": 32
+  },
+  "middle": {
+    "restarts": 32,
+    "iterations": 20000,
+    "keep": 8
+  },
+  "final": {
+    "restarts": 128,
+    "iterations": 20000
+  },
+  "identity_always_included": true,
+  "keep_max_across_stages": true,
+  "stages_have_independent_deterministic_seeds": true,
+  "seed_rule": "SHA256(canonical equality pattern + stage name), first 4 bytes little-endian",
+  "development_cases": "same 8 cases as round 1, NOT independent validation",
+  "new_positive_cases": "lee.cor documents 28..43, 16 disjoint documents; seed 729031",
+  "null_cases": "99 full-glyph permutations, fresh seed 729032; rerun the entire pipeline on each",
+  "limitations": [
+    "same two-state polarity-XOR family only",
+    "modern news language model",
+    "search not globally exhaustive",
+    "all transformations leave axis and arcs unchanged",
+    "historically exploratory family; this is NOT a preregistered claim about Dorabella"
+  ]
+}

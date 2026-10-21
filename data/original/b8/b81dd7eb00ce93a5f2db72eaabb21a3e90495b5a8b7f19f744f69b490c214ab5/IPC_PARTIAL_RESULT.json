@@ -1,0 +1,41 @@
+{
+  "status": "CONFIRMED_PARTIAL_IPC_CHAIN_NOT_OVERALL_PASS",
+  "provenance": "Carried forward from the completed prior independent data-only audit, not recomputed in this turn.",
+  "overall_status": "STOP_INDEPENDENT_READBACK",
+  "known_failure": "SEALED_FILE:observations.jsonl",
+  "confirmed": {
+    "journal_records": 2244,
+    "journal_bytes": 1966951,
+    "journal_sha256": "b73ede2b89f6dfd056ae94d73a2e335e3b2724d0a8d4c1ec23050749f1572ae5",
+    "audit_records": 6734,
+    "writer_inode": {
+      "st_dev": 27,
+      "st_ino": 655506,
+      "st_mode": 33188,
+      "st_nlink": 1,
+      "st_size": 1966951,
+      "st_mtime_ns": 1792321589478136114,
+      "st_ctime_ns": 1792321589478136114
+    },
+    "verifier_outcome": "RETURNED",
+    "consumed_files": 7,
+    "ipc_requests": {
+      "lm": 10,
+      "pat": 45
+    },
+    "ipc_frames": {
+      "lm": 58,
+      "pat": 2131
+    },
+    "lm_lookups": 6244,
+    "candidate_occurrences": 132856,
+    "segmentations": 6
+  },
+  "does_not_establish": [
+    "overall evidence integrity",
+    "cause of old journal loss",
+    "87-control readiness",
+    "solver sensitivity",
+    "decipherment"
+  ]
+}

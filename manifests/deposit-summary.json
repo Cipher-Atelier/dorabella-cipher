@@ -1,0 +1,24 @@
+{
+  "scope": "Reviewed own-research text/code/results only; not original source ZIPs",
+  "source_inventory_objects": 233,
+  "originals_acquired": 232,
+  "original_bytes_acquired": 1516034060,
+  "standalone_third_party_image_not_acquired": 1,
+  "byte_hash_algorithm": "SHA-256",
+  "unique_reviewed_objects": 109726,
+  "reviewed_object_bytes": 457327462,
+  "provenance_records": 147496,
+  "object_categories": {
+    "reports": 163,
+    "code": 308,
+    "data": 108908,
+    "provenance": 113,
+    "logs": 234
+  },
+  "git_original_objects": 1178,
+  "git_original_bytes": 12470981,
+  "source_archive_bytes_preserved": "Retained outside Git in exact Library versions and local originals; hashes in private transfer ledger",
+  "excluded_or_held_unique_candidates": 49,
+  "no_research_execution": true,
+  "review_method": "Static file-format, archive-membership, prior metadata dispositions, byte hashes, content-marker checks and explicit source exclusions. Original bytes remain unchanged. Unclear-rights/binary assets and operational/private-locator records held externally."
+}

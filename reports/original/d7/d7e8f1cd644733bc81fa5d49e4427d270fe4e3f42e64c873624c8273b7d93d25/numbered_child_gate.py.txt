@@ -1,0 +1,27 @@
+   1 """Own gate stub. Sets frozen limits before exec; no imports of author code."""
+   2 import os,sys,pathlib,json,resource,time,select
+   3 B=pathlib.Path(__file__).resolve().parent;R=B.parent
+   4 sys.path[:0]=[str(B),str(B/'reused')]
+   5 from common import put
+   6 from namespace_view import NamespaceView
+   7 role,gate,*ipc=sys.argv[1:];gate=int(gate);ipc=list(map(int,ipc));A=pathlib.Path(os.environ['BE_ATTEMPT']);end=float(os.environ['BE_DEADLINE']);F=json.loads((R/'FREEZE.json').read_text())
+   8 if role not in ('broker','perl') or len(ipc)!=2:raise SystemExit('CHILD_ARGUMENTS')
+   9 for name,pair in F['role_limits'][role].items():
+  10  old=resource.getrlimit(getattr(resource,name))
+  11  if old[1]!=resource.RLIM_INFINITY and pair[1]>old[1]:raise SystemExit('CHILD_INHERITED_HARD')
+  12 for name,pair in F['role_limits'][role].items():resource.setrlimit(getattr(resource,name),tuple(pair))
+  13 limits={n:list(resource.getrlimit(getattr(resource,n))) for n in F['role_limits'][role]}
+  14 ns=NamespaceView();me=ns.self_record
+  15 put(A/(role+'_ready.json'),{'record':me,'limits':limits,'role':role,'closed_before_release':True})
+  16 while True:
+  17  if time.monotonic()>=end:raise SystemExit('INCOMPLETE_BUDGET_GATE')
+  18  if select.select([gate],[],[],.05)[0]:
+  19   if os.read(gate,2)!=b'G':raise SystemExit('RELEASE_REJECTED')
+  20   os.close(gate);break
+  21 for fd in ipc:os.set_inheritable(fd,True)
+  22 if role=='broker':cmd=[F['python'],'-B','-I','-S',str(B/'broker.py'),*map(str,ipc)]
+  23 else:
+  24  os.environ['BE_READ'],os.environ['BE_WRITE']=map(str,ipc)
+  25  cmd=[F['perl'],'-I'+str(B/'original'),'-I'+str(B),str(B/'driver.pl')]
+  26  if os.environ['BE_MODE']=='search':cmd.append(str(A/'decoder_input.json'))
+  27 os.execve(cmd[0],cmd,dict(os.environ))

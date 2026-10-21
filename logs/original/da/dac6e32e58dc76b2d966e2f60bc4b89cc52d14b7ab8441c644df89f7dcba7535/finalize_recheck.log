@@ -1,0 +1,38 @@
+{
+  "positive": {
+    "texts": 12,
+    "exact_prefixes": 12,
+    "exact_selected_suffixes": 11,
+    "correct_suffix_letters": 524,
+    "total_suffix_letters": 528,
+    "all_tied_keys_agree_on_correct_suffix": 10,
+    "status": "Previously used, related convenience sample; not fresh independent historical validation."
+  },
+  "dorabella": [
+    {
+      "transcription": "hauer_real",
+      "S43": -5.8897086467466515,
+      "S44": -10.325431017236411,
+      "key_id": 9244453,
+      "null_test_ge": 39,
+      "null_count": 39,
+      "tail_plus1": 1.0,
+      "null_train_ge": 29
+    },
+    {
+      "transcription": "hart_real",
+      "S43": -5.970817805852386,
+      "S44": -10.268241166932572,
+      "key_id": 9249076,
+      "null_test_ge": 38,
+      "null_count": 39,
+      "tail_plus1": 0.975,
+      "null_train_ge": 30
+    }
+  ],
+  "fresh_repeated": 18,
+  "independent_C": 80553,
+  "independent_W_checks": 3364,
+  "fresh_full_W": 18272,
+  "unchanged_original_files": 16247
+}

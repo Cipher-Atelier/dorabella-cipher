@@ -1,0 +1,7 @@
+# Dorabella: key algebra and archived counters
+
+`facts.json` contains 94 factual result records, their SHA-256 identifiers, key IDs, tie IDs and recorded evaluation counts. It omits every source-ordered transcription, regression plaintext, candidate-string excerpt and scoring asset. For the real note it includes only the unordered set of observed symbol IDs.
+
+The new verifier reconstructs the declared cyclic eight-triplet / independent-arc-permutation key family and checks key equivalence on those sets. It checks that the saved counters total 2,526,142,464 character evaluations and 9,813,214 word evaluations. These operations do not execute those evaluations or establish exhaustive-search completeness. Recorded scores are not recomputed. The 14 old regression messages and reused controls remain prior-exposed, not independent validation.
+
+Sources: Edward Elgar's 1897 note; Bradley Hauer, Colin Choi, Abram Hindle, Scott Smallwood and Grzegorz Kondrak, [“Dorabella Cipher as Musical Inspiration” (2021)](https://aclanthology.org/2021.smp-1.5/); Daniel Hartmeier, [“Clues (or red herrings) to the Dorabella Cipher”](https://www.benzedrine.ch/dorabella.html). The 2021 article is credited for one transcription tradition, not claimed as this project's finding. Modern source/control text rights were not sufficiently resolved for this minimal release, so those texts are excluded. The paper's landing page reports a CC BY 4.0 policy for post-2016 materials, but that does not settle every underlying transcription, scorer or reused control source.

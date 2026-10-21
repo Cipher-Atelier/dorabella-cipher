@@ -1,0 +1,7 @@
+loaded (209460, 26)
+check {'p0': 29902, 'p1': 29904, 'keys': 1536, 'evaluated_word': 124, 'max_error': 0.0, 'seconds': 2.4173905849456787}
+check {'p0': 6466, 'p1': 6468, 'keys': 1536, 'evaluated_word': 50, 'max_error': 0.0, 'seconds': 0.0014622211456298828}
+check {'p0': 31029, 'p1': 31031, 'keys': 1536, 'evaluated_word': 21, 'max_error': 0.0, 'seconds': 0.001194000244140625}
+check {'p0': 13474, 'p1': 13476, 'keys': 1536, 'evaluated_word': 148, 'max_error': 0.0, 'seconds': 0.001436471939086914}
+check {'p0': 33474, 'p1': 33476, 'keys': 1536, 'evaluated_word': 108, 'max_error': 0.0, 'seconds': 0.0013458728790283203}
+benchmark 0.010467052459716797 words 635 keys 196608

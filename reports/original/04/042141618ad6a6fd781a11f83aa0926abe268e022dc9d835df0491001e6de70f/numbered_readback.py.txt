@@ -1,0 +1,263 @@
+   1 """Own DATA-ONLY verifier. No Perl imports, scores, key search or solver functions."""
+   2 import hashlib,json,pathlib,sqlite3,struct,time,math
+   3 from common import Chain
+   4 def events(A):
+   5  for p in sorted(A.glob('events.*.jsonl')):
+   6   with p.open('rb') as f:
+   7    for b in f:
+   8     if not b.endswith(b'\n'):raise ValueError('INCOMPLETE_EVENT_RECORD')
+   9     yield json.loads(b)
+  10 def frames(A):
+  11  buf=b''
+  12  for p in sorted(A.glob('frames.*.bin')):
+  13   with p.open('rb') as f:
+  14    for b in iter(lambda:f.read(65536),b''):
+  15     buf+=b
+  16     while len(buf)>=5:
+  17      d,n=struct.unpack('>BI',buf[:5])
+  18      if d not in (1,2) or not 0<n<=65536:raise ValueError('FRAME_HEADER')
+  19      if len(buf)<5+n:break
+  20      yield d,buf[5:5+n];buf=buf[5+n:]
+  21  if buf:raise ValueError('INCOMPLETE_RAW_FRAME')
+  22 def reference_prefix(db,source,pattern,tick):
+  23  out=[];refs=[]
+  24  for seq,off,n in db.execute('SELECT seq,offset,raw_bytes FROM segments WHERE pattern=? ORDER BY seq',(pattern.encode(),)):
+  25   tick();source.seek(off);b=source.read(n)
+  26   if len(b)!=n or n>118052:raise ValueError('REF_PREFIX_ROW')
+  27   fields=[x for x in b.rstrip(b' \t\r\n\v\f').replace(b' ',b'').split(b'\t') if x]
+  28   values=fields[2:];take=min(50-len(out),len(values));out+=values[:take];refs.append([seq,off,n,take])
+  29   if len(out)==50:break
+  30  L=len(out);return {'length':L,'picks':[out[((2*r+1)*L)//16].decode('ascii') for r in range(8)] if L else [],'segments':refs}
+  31 def reference_lm(entry,key,handles,tick):
+  32  # Separate implementation: bisect raw key rows with rightmost-equal semantics.
+  33  if entry['id'] not in handles:handles[entry['id']]=(open(entry['path'],'rb'),open(entry['index_path'],'rb'))
+  34  data,idx=handles[entry['id']]
+  35  def row(i):
+  36   tick();idx.seek(i*8);b=idx.read(16)
+  37   if len(b)!=16:raise ValueError('REF_LM_INDEX')
+  38   x,y=struct.unpack('<QQ',b)
+  39   if not 0<y-x<=512 or y>entry['bytes']:raise ValueError('REF_LM_RANGE')
+  40   data.seek(x);b=data.read(y-x);fields=[z for z in b.removesuffix(b'\n').split(b'\t') if z]
+  41   if len(fields)!=entry['order']+1:raise ValueError('REF_LM_FIELDS')
+  42   return tuple(fields[:-1]),fields[-1]
+  43  lo=0;hi=entry['rows']
+  44  while lo<hi:
+  45   mid=(lo+hi)//2;k,_=row(mid)
+  46   if key<k:hi=mid
+  47   else:lo=mid+1
+  48  if not lo:return [False,None,None]
+  49  k,v=row(lo-1);return [True,v.hex(),lo] if k==key else [False,None,None]
+  50 def verify(R,A,dataset,mode,deadline,input_row=None):
+  51  def tick():
+  52   if time.monotonic()>=deadline:raise RuntimeError('INCOMPLETE_BUDGET_READBACK')
+  53  tick();segments=[];ends={}
+  54  for e in events(A):
+  55   tick()
+  56   if e['kind']=='segment_begin':segments.append(e['value'])
+  57   if e['kind']=='segment_end':ends[e['value']['id']]=e['value']
+  58  if len(segments)>129:raise ValueError('SEGMENT_CAP')
+  59  nonempty=[s for s in segments if s['text']];seg_cursor=0;word_cursor=0
+  60  ds=json.loads((R/'datasets_all.json').read_text())[dataset];db=sqlite3.connect(pathlib.Path(ds['index']).resolve().as_uri()+'?mode=ro',uri=True,timeout=0);db.execute('PRAGMA query_only=ON');db.execute('PRAGMA cache_size=-2048');db.execute('PRAGMA mmap_size=0')
+  61  source=open(ds['source'],'rb');handles={};lm={x['id']:x for x in ds['lm']};seq=0;pending=None;received=[];chain=Chain();prefixes={};lm_lookups=0;physical_words=0;closed=False;counts={'prefix':0,'words':0,'lm':0,'close':0}
+  62  try:
+  63   for d,b in frames(A):
+  64    tick();chain.add(d,b)
+  65    if not b.endswith(b'\n'):raise ValueError('FRAME_EOL')
+  66    x=json.loads(b)
+  67    if d==1:
+  68     if pending is not None or closed:raise ValueError('PIPELINING_AFTER_CLOSE')
+  69     seq+=1
+  70     if len(x)!=3 or x[0]!=seq:raise ValueError('REQUEST_SEQ')
+  71     pending=x;received=[]
+  72    else:
+  73     if pending is None or len(x)!=4 or x[0]!=seq or x[1]!=len(received) or type(x[3]) is not bool or len(x[2])>128:raise ValueError('RESPONSE_SEQ')
+  74     received.extend(x[2])
+  75     if not x[3]:continue
+  76     _,op,arg=pending
+  77     if op not in counts:raise ValueError('OP_ACCOUNTING')
+  78     counts[op]+=1
+  79     if op=='prefix':
+  80      expected=reference_prefix(db,source,arg,tick)
+  81      if received!=[expected] or arg in prefixes:raise ValueError('PREFIX_EXACT_REFERENCE')
+  82      prefixes[arg]=expected
+  83     elif op=='words':
+  84      keys=[bytes.fromhex(h) for h in arg];expected=[bool(db.execute('SELECT 1 FROM words WHERE word=?',(k,)).fetchone()) for k in keys]
+  85      if received!=expected or any(type(x) is not bool for x in received):raise ValueError('MEMBERSHIP_REFERENCE')
+  86      if seg_cursor>=len(nonempty):raise ValueError('EXTRA_MEMBERSHIP_BATCH')
+  87      sg=nonempty[seg_cursor];text=sg['text'];ordered=[text[s:s+l].encode() for s in range(len(text)) for l in range(1,len(text)-s+1)];presence=bytes.fromhex(sg['presence_hex'])
+  88      want=ordered[word_cursor:word_cursor+128]
+  89      if keys!=want or received!=[bool(v) for v in presence[word_cursor:word_cursor+len(want)]]:raise ValueError('PREFETCH_EVENT_ORDER')
+  90      word_cursor+=len(keys);physical_words+=len(keys)
+  91      if word_cursor==len(ordered):seg_cursor+=1;word_cursor=0
+  92     elif op=='lm':
+  93      expected=[reference_lm(lm[table],tuple(bytes.fromhex(k) for k in key),handles,tick) for table,key in arg];lm_lookups+=len(arg)
+  94      if received!=expected:raise ValueError('LM_EXACT_RAW_REFERENCE')
+  95     elif op=='close':
+  96      if received!=['closed']:raise ValueError('CLOSE_REFERENCE')
+  97      closed=True
+  98     else:raise ValueError('UNKNOWN_OP')
+  99     pending=None
+ 100   if pending or not closed or word_cursor or seg_cursor!=len(nonempty):raise ValueError('INCOMPLETE_TRANSPORT')
+ 101  finally:
+ 102   source.close();db.close()
+ 103   for a,b in handles.values():a.close();b.close()
+ 104  broker=json.loads((A/'broker_terminal.json').read_text());consumer=json.loads((A/'consumer_terminal.json').read_text())
+ 105  if broker['status']!='BROKER_COMPLETE' or not consumer['closed'] or broker['chain']!=chain.result() or consumer['chain']!=chain.result() or consumer['transactions']!=seq:raise ValueError('TERMINAL_CHAIN_MISMATCH')
+ 106  if broker['counts']['lm_lookups']!=lm_lookups or broker['physical_words']!=physical_words:raise ValueError('TERMINAL_COUNTS')
+ 107  if any(broker['counts'][k]!=v for k,v in counts.items()) or counts['prefix']>3870 or counts['words']>3870 or counts['lm']>258 or counts['close']!=1 or lm_lookups>100104 or physical_words>493812:raise ValueError('REQUEST_CAPS')
+ 108  logical=0
+ 109  for s in segments:
+ 110   tick();text=s['text'];ordered=[text[i:i+l] for i in range(len(text)) for l in range(1,len(text)-i+1)];pv=bytes.fromhex(s['presence_hex']);ids={}
+ 111   if len(pv)!=len(ordered) or any(v not in (0,1) for v in pv):raise ValueError('PRESENCE_BYTES')
+ 112   for i,k in enumerate(ordered):ids.setdefault(k,i)
+ 113   b=(A/s['member_file']).read_bytes()
+ 114   if len(b)%2 or len(b)>202620:raise ValueError('LOGICAL_TRACE_LENGTH')
+ 115   trace=[x[0] for x in struct.iter_unpack('<H',b)];cursor=0
+ 116   def fetch(k):
+ 117    nonlocal cursor
+ 118    if cursor%1024==0:tick()
+ 119    if k not in ids or cursor>=len(trace) or trace[cursor]!=ids[k]:raise ValueError('LOGICAL_ORDER_REFERENCE')
+ 120    cursor+=1;return bool(pv[ids[k]])
+ 121   # Own exact trace validator: no language scores, proposals or foreign function calls.
+ 122   def check(t):
+ 123    if not t or t=='0':return t
+ 124    if fetch(t) or not t.strip():return t
+ 125    for length in range(s['maxlen'],0,-1):
+ 126     for offset in range(len(t)-length+1):
+ 127      w=t[offset:offset+length]
+ 128      if fetch(w):
+ 129       import re
+ 130       if offset==0:return re.sub(r'\s+',' ',w+' '+check(t[length:]))
+ 131       if offset+length==len(t):return re.sub(r'\s+',' ',check(t[:offset])+' '+w)
+ 132       return re.sub(r'\s+',' ',check(t[:offset])+' '+w+' '+check(t[offset+length:]))
+ 133    return t
+ 134   result=check(text);end=ends.get(s['id'])
+ 135   if cursor!=len(trace) or end is None or end['segmented']!=result or s['logical_before']!=logical or end['logical_count']!=cursor:raise ValueError('SEGMENT_REFERENCE')
+ 136   logical+=cursor
+ 137   if end['logical_after']!=logical:raise ValueError('LOGICAL_ACCOUNTING')
+ 138  if consumer['logical_membership']!=logical or logical>13068990:raise ValueError('LOGICAL_CAP')
+ 139  if consumer['segments']!=len(segments):raise ValueError('SEGMENT_TERMINAL')
+ 140  result={'status':'PASS_FINITE_INTEGRATION' if mode=='fixture' else 'CASE_COMPLETE_CANDIDATE','chain':chain.result(),'transactions':seq,'lm_lookups':lm_lookups,'physical_words':physical_words,'logical_membership':logical,'segments':len(segments)}
+ 141  if mode=='search':
+ 142   result.update(check_search(A,input_row,prefixes,tick))
+ 143   if consumer['scores']!=result['scores']:raise ValueError('SCORE_TERMINAL')
+ 144  else:
+ 145   done=[e for e in events(A) if e['kind']=='fixture_complete']
+ 146   if len(done)!=1 or done[0]['value']['dataset']!=dataset:raise ValueError('FIXTURE_COMPLETION')
+ 147   cfg=json.loads((R/'fixtures'/dataset/'cases.json').read_text());probes=[e['value'] for e in events(A) if e['kind']=='fixture_score']
+ 148   if [x['text'] for x in probes]!=cfg['score_probes']:raise ValueError('FIXTURE_PROBES')
+ 149   for i,p in enumerate(probes):
+ 150    err=bool(p['original_error'])
+ 151    if err!=bool(p['adapted_error']) or (not err and p['original_bits']!=p['adapted_bits']):raise ValueError('FIXTURE_BITS')
+ 152    if dataset=='edge' and err!=(i in cfg['expected_error_indices']):raise ValueError('FIXTURE_EXPECTED_ERROR')
+ 153   if dataset=='edge':
+ 154    raws=[e['value'] for e in events(A) if e['kind']=='fixture_raw']
+ 155    if raws!=[{'key':k,'raw':v,'truth':t} for k,v,t in zip(cfg['raw_keys'],cfg['expected_raw'],cfg['expected_truth'])]:raise ValueError('FIXTURE_RAW_EVIDENCE')
+ 156    unknown=[e['value'] for e in events(A) if e['kind']=='fixture_unknown']
+ 157    if unknown!=[{'input':cfg['unknown_input'],'result':cfg['expected_unknown']}]:raise ValueError('FIXTURE_UNKNOWN_EVIDENCE')
+ 158  return result
+ 159 
+ 160 def number(bits):
+ 161  if len(bits)!=16:raise ValueError('SCORE_BITS')
+ 162  v=struct.unpack('<d',bytes.fromhex(bits))[0]
+ 163  if not math.isfinite(v):raise ValueError('NONFINITE_SCORE')
+ 164  return v
+ 165 def canonical(text):
+ 166  d={}
+ 167  for c in text:
+ 168   if c not in d:d[c]=chr(97+len(d))
+ 169  return ''.join(d[c] for c in text)
+ 170 def verify_proposal(alphabet,current,cw,match,claimed):
+ 171  # Independent mapping witness for the unchanged sequence of transpositions/replacements.
+ 172  mapping=dict(zip(alphabet,current));owners={v:k for k,v in mapping.items()}
+ 173  for symbol,letter in zip(cw,match):
+ 174   if symbol.isspace() or letter.isspace():continue
+ 175   old=mapping[symbol]
+ 176   if old==letter:continue
+ 177   other=owners.get(letter)
+ 178   if other is not None:mapping[other]=old;owners[old]=other
+ 179   else:del owners[old]
+ 180   mapping[symbol]=letter;owners[letter]=symbol
+ 181  if len(cw)!=len(match) or ''.join(mapping[c] for c in alphabet)!=claimed:raise ValueError('ASSUME_WITNESS')
+ 182 def check_search(A,input_row,prefixes,tick):
+ 183  scored={};by_index=[];r=-1;window_index=0;bins={};selected=[];children=[];current=None;init=None;complete=None;completed=0
+ 184  for e in events(A):
+ 185   tick();k=e['kind'];v=e['value']
+ 186   if k=='initialization':
+ 187    if init is not None or v['ciphertext']!=input_row['ciphertext'] or v['id']!=input_row['id']:raise ValueError('INITIAL_INPUT')
+ 188    init=v;current=v['key'];p=v['pattern'];mapping={};next_letter=97
+ 189    for c in input_row['ciphertext']:
+ 190     if c not in mapping:mapping[c]=chr(next_letter);next_letter+=1
+ 191    if ''.join(mapping[c] for c in input_row['ciphertext'])!=p:raise ValueError('CANONICAL_MAP')
+ 192    if len(set(v['alphabet']))!=len(v['alphabet']) or set(v['alphabet'])!=set(p):raise ValueError('INITIAL_ALPHABET')
+ 193    f=[p.count(c) for c in v['alphabet']]
+ 194    if f!=sorted(f,reverse=True) or current!='etaoinsrhldcpumfgywbvkxjzq'[:len(f)]:raise ValueError('INITIAL_FREQUENCY')
+ 195   elif k=='expansion_begin':
+ 196    if v['round']!=completed or v['key']!=current:raise ValueError('STATE_BEGIN')
+ 197    r=v['round'];window_index=0;bins={};selected=[];children=[]
+ 198   elif k=='window':
+ 199    if r<0 or (v['round'],v['start'],v['length'])!=(r,window_index//45,2+window_index%45):raise ValueError('WINDOW_ORDER')
+ 200    window_index+=1
+ 201    cell=(4*v['start']//86)*4+sum(v['length']>q for q in [4,8,16])
+ 202    if v['cell']!=cell or v['pattern'] not in prefixes:raise ValueError('WINDOW_METADATA')
+ 203    cw=init['pattern'][v['start']:v['start']+v['length']]
+ 204    if v['pattern']!=canonical(cw):raise ValueError('WINDOW_PATTERN')
+ 205    L=prefixes[v['pattern']]['length']
+ 206    if not L:
+ 207     if v['status']!='empty':raise ValueError('EMPTY_STATUS')
+ 208     continue
+ 209    if v['j']!=(2*r+1)*L//16:raise ValueError('QUANTILE')
+ 210    verify_proposal(init['alphabet'],current,cw,prefixes[v['pattern']]['picks'][r],v['key'])
+ 211    key=v['key'];status='identity' if key==current else 'scored' if key in scored else 'eligible'
+ 212    if v['status']!=status:raise ValueError('PROPOSAL_STATUS')
+ 213    if status=='eligible':
+ 214     h=hashlib.sha256(f"BE-W16-v1|window|{r}|{v['start']}|{v['length']}|{v['j']}".encode()).hexdigest()
+ 215     if v['priority']!=h:raise ValueError('PRIORITY')
+ 216     order=(h,v['start'],v['length'],v['j'])
+ 217     if cell not in bins or order<bins[cell][0]:bins[cell]=(order,key)
+ 218   elif k=='selected':
+ 219    if window_index!=3870 or v['round']!=r:raise ValueError('SELECTION_BEFORE_FULL_SCAN')
+ 220    want=[];seen=set()
+ 221    for c,(_,key) in sorted(bins.items()):
+ 222     if key not in seen:want.append((c,key));seen.add(key)
+ 223    n=len(selected)
+ 224    if n>=len(want) or (v['cell'],v['key'])!=want[n]:raise ValueError('SELECTED_ORDER')
+ 225    selected.append(want[n])
+ 226   elif k=='score':
+ 227    key=v['key'];text=v['plaintext'];enc=v['encryption_alphabet'];s=number(v['score_bits'])
+ 228    if v['index']!=len(by_index) or key in scored or len(text)!=87 or len(set(enc))!=26 or set(enc)!=set('abcdefghijklmnopqrstuvwxyz'):raise ValueError('SCORE_IDENTITY')
+ 229    expected=''.join(enc[ord(c)-97] for c in text)
+ 230    if expected!=input_row['ciphertext']:raise ValueError('INVERSE87')
+ 231    inverse=[[i+1,text[i],expected[i],text[i]] for i in range(87)]
+ 232    if v['inverse']!=inverse or v['segmented'].replace(' ','')!=text:raise ValueError('POSITIONAL_INVERSE')
+ 233    if ''.join(dict(zip(init['alphabet'],key))[c] for c in init['pattern'])!=text:raise ValueError('KEY_ORIENTATION')
+ 234    if r<0:
+ 235     if key!=current or by_index:raise ValueError('ROOT_SCORE')
+ 236    else:
+ 237     if len(children)>=len(selected) or key!=selected[len(children)][1]:raise ValueError('SCORED_SELECTION')
+ 238     children.append(v)
+ 239    scored[key]=v;by_index.append(v)
+ 240   elif k=='expansion_complete':
+ 241    wantkeys=[]
+ 242    for cell,(_,key) in sorted(bins.items()):
+ 243     if key not in wantkeys:wantkeys.append(key)
+ 244    if v['round']!=r or v['previous']!=current or window_index!=3870 or [x['key'] for x in children]!=wantkeys or v['scored_children']!=len(children):raise ValueError('EXPANSION_ACCOUNTING')
+ 245    if children:current=min(children,key=lambda x:(-number(x['score_bits']),x['plaintext'],x['key']))['key']
+ 246    if v['next']!=current:raise ValueError('STATE_TRANSITION')
+ 247    completed+=1
+ 248   elif k=='search_complete':complete=v
+ 249  if completed!=8 or complete is None or len(by_index)>129:raise ValueError('INCOMPLETE_SEARCH')
+ 250  best=max(number(x['score_bits']) for x in by_index);co={x['plaintext']:x for x in by_index if number(x['score_bits'])==best};ordered=sorted(co.values(),key=lambda x:(x['plaintext'],x['key']))
+ 251  if complete['scores']!=len(by_index) or complete['expansions']!=8 or complete['best_indices']!=[x['index'] for x in ordered] or complete['best_plaintexts']!=[x['plaintext'] for x in ordered] or number(complete['best_score_bits'])!=best:raise ValueError('BEST_ACCOUNTING')
+ 252  return {'scores':len(by_index),'expansions':8,'best_plaintexts':[x['plaintext'] for x in ordered],'best_score_bits':ordered[0]['score_bits'],'unique_best':len(ordered)==1,'inverse_all_scores':True}
+ 253 
+ 254 def evaluate_all(R,case_results):
+ 255  # Called only after every scheduled search has terminated or been recorded unstarted.
+ 256  truth=json.loads((R/'evaluator/truth.json').read_text());positives=[];pairs=[]
+ 257  for t in truth['cases']:
+ 258   p=case_results.get(t['decoder_ids'][0],{});n=case_results.get(t['decoder_ids'][1],{})
+ 259   good=p.get('status')=='CASE_COMPLETE_CANDIDATE';ngood=n.get('status')=='CASE_COMPLETE_CANDIDATE'
+ 260   positives.append({'id':t['id'],'exact_unique_recovery':good and p.get('best_plaintexts')==[t['plaintext87']],'truth_in_tied_best':good and t['plaintext87'] in p.get('best_plaintexts',[]) and not p.get('unique_best',False)})
+ 261   pairs.append({'id':t['id'],'positive_strictly_above_negative':good and ngood and number(p['best_score_bits'])>number(n['best_score_bits'])})
+ 262  completed=sum(x.get('status')=='CASE_COMPLETE_CANDIDATE' for x in case_results.values());recoveries=sum(x['exact_unique_recovery'] for x in positives);ordered=sum(x['positive_strictly_above_negative'] for x in pairs)
+ 263  return {'decision':'GO_CANDIDATE_PENDING_DELIVERY' if completed==8 and recoveries>=3 and ordered==4 else 'NO_GO','completed':completed,'exact_unique_recovery':recoveries,'paired_strict_scores':ordered,'positives':positives,'pairs':pairs,'no_p_value':True,'no_target_authorization':True}

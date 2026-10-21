@@ -1,0 +1,11 @@
+--- TS_RECOVERED_SEARCH_v2/sources/storage/wire.py
++++ runtime/wire.py
+@@ -26,7 +26,7 @@
+   result.append((t,k))
+  return dataset,result
+ def packet(seq,offset,values,done):
+- if type(seq) is not int or not 1<=seq<=512 or type(offset) is not int or not 0<=offset<=776 or type(done) is not bool or len(values)>128:raise ValueError('PACKET_HEADER')
++ if type(seq) is not int or not 1<=seq<=2049 or type(offset) is not int or not 0<=offset<=776 or type(done) is not bool or len(values)>128:raise ValueError('PACKET_HEADER')
+  for row in values:
+   if type(row) is not list or len(row)!=3 or type(row[0]) is not bool:raise ValueError('VALUE_SHAPE')
+   yes,v,n=row

@@ -1,0 +1,14 @@
+{
+  "audit_code_sha256": "26b140c60a298701a1eaeb3139c1eb6111a1355005cf58a5700e58a5334e86b1",
+  "budget": "All30965760 keys, BOTH C and W, no bounds or shortlist. Prefix43 only. Same strict maximum and lexID tie.",
+  "cases": [
+    "bailey_05",
+    "elgar_caractacus_postcard",
+    "hauer_real",
+    "hart_real",
+    "hauer_real_pair_00",
+    "hart_real_pair_00"
+  ],
+  "full_matrices": "Not retained; block hashes and extrema retained. Script regenerates all matrices.",
+  "main_protocol_sha256": "991b60f70f3f5826c9803938ad572beea5c90f16b32affbb473cd32cb9a29867"
+}

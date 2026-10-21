@@ -1,0 +1,100 @@
+{
+  "protocol": {
+    "n_null": 99,
+    "n_positive": 32,
+    "seed_null": 2026092605,
+    "seed_positive": 2026092615,
+    "n_rules": 32768,
+    "alphabet": "ABCDEFGHIKLMNOPQRSTUWXYZ",
+    "score": "merged C + 0.5 merged W; no learned substitution",
+    "rows": "concatenated; no dot/line resets",
+    "transcriptions": [
+      "Hauer SMP2021 Fig2",
+      "Hartmeier literal transcription"
+    ],
+    "positive_status": "32 already-used historical excerpts; all re-encrypted; sensitivity only",
+    "comparison": "same permutation for both transcriptions; individual and max-across-two null maxima"
+  },
+  "n_completed": 232,
+  "comparisons": {
+    "hauer": {
+      "real": {
+        "best_score": -7.690494649912582,
+        "best_static_score": -8.024047054777578,
+        "improvement": 0.3335524048649958,
+        "raw_notebook_score": -9.75380928912665
+      },
+      "best": {
+        "n": 99,
+        "hits": 28,
+        "threshold": -7.690494649912582,
+        "p_plus_one": 0.29,
+        "mc_probability_interval95": [
+          0.19686169383081728,
+          0.3822163983693277
+        ],
+        "null_mean": -7.730321869834966
+      },
+      "gain": {
+        "n": 99,
+        "hits": 91,
+        "threshold": 0.3335524048649958,
+        "p_plus_one": 0.92,
+        "mc_probability_interval95": [
+          0.8469730200198541,
+          0.9644664837399237
+        ],
+        "null_mean": 0.7244288548987442
+      }
+    },
+    "hart": {
+      "real": {
+        "best_score": -7.722658324493233,
+        "best_static_score": -8.151638252310004,
+        "improvement": 0.42897992781677097,
+        "raw_notebook_score": -9.581894649217354
+      },
+      "best": {
+        "n": 99,
+        "hits": 42,
+        "threshold": -7.722658324493233,
+        "p_plus_one": 0.43,
+        "mc_probability_interval95": [
+          0.3254762424902184,
+          0.5276637658268699
+        ],
+        "null_mean": -7.725906455176059
+      },
+      "gain": {
+        "n": 99,
+        "hits": 91,
+        "threshold": 0.42897992781677097,
+        "p_plus_one": 0.92,
+        "mc_probability_interval95": [
+          0.8469730200198541,
+          0.9644664837399237
+        ],
+        "null_mean": 0.7718941328297856
+      }
+    }
+  },
+  "max_over_both_transcriptions": {
+    "n": 99,
+    "hits": 45,
+    "threshold": -7.690494649912582,
+    "p_plus_one": 0.46,
+    "mc_probability_interval95": [
+      0.3541366204227695,
+      0.5577461514284967
+    ],
+    "null_mean": -7.656271964217817
+  },
+  "sensitivity": {
+    "n": 32,
+    "mean_accuracy": 0.9978448275862069,
+    "minimum_accuracy": 0.9885057471264368,
+    "exact": 26,
+    "at_least90": 32,
+    "correct_rules_top_tied": 26
+  }
+}

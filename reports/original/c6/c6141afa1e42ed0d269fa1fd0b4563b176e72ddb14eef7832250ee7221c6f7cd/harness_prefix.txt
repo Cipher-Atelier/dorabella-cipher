@@ -1,0 +1,106 @@
+# Generated fixture harness. PREPARED ONLY, not the production solver entrypoint.
+use strict;
+use warnings;
+use sort 'stable';
+no warnings 'recursion';
+use Config;
+use JSON::PP;
+use ReadLM;
+use JMSmoothing;
+use Utils;
+use NoSpace;
+use CompactPatList;
+BEGIN {
+  die "RUNTIME_MISMATCH" unless "$^V" eq 'v5.38.2'
+    && $Config{archname} eq 'x86_64-linux-gnu-thread-multi'
+    && $Config{nvtype} eq 'double' && $Config{nvsize}==8;
+}
+$|=1;
+my ($mode,$fixture,$read_fd,$write_fd)=@ARGV;
+die "ARGS" unless ($mode eq 'reference' && @ARGV==2) || ($mode eq 'adapted' && @ARGV==4);
+my $json=JSON::PP->new->ascii(1)->canonical(1);
+open my $in,'<',"$fixture/cases.json" or die $!;
+my $spec=$json->decode(do {local $/;<$in>});close $in or die $!;
+my ($charlm1,$charlm2,$charlm3,$wordlm1,$wordlm2,$wordlm3)=({},{},{},{},{},{});
+ReadLM::ReadUnigramLM("$fixture/char.1",$charlm1);
+ReadLM::ReadBigramLM("$fixture/char.2",$charlm2);
+ReadLM::ReadTrigramLM("$fixture/char.3",$charlm3);
+ReadLM::ReadUnigramLM("$fixture/word.1",$wordlm1);
+ReadLM::ReadBigramLM("$fixture/word.2",$wordlm2);
+ReadLM::ReadTrigramLM("$fixture/word.3",$wordlm3);
+my ($wl1,$wl2,$wl3)=(0.129793302623898,0.226872659329747,0.643334038046355);
+my ($cl1,$cl2,$cl3)=(0.0950848948641174,0.229797965264228,0.675117139871655);
+my $x=0.05;
+my ($nospace,$ngramorder,$maxit,$patternlimit,$ucbParamC)=(1,3,2,50,1);
+our $verbose=0;
+my @C;
+my $global_iteration_count=0;
+my ($grams_with_pattern,$is_word,$maxlen)=([0,{},{},{}],{},0);
+my $bridge;
+if ($mode eq 'reference') {
+  Utils::ReadPList("$fixture/fixture.patlst",$grams_with_pattern,$is_word,\$maxlen,1);
+} else {
+  ($bridge,$grams_with_pattern,$is_word,$maxlen)=CompactPatList->attach($read_fd,$write_fd);
+}
+die "MAXLEN" unless $maxlen==6;
+my $event_count=0;
+my $score_calls=0;
+my $trace_case='prelude';
+my $trace_ctext='';
+sub Trace {
+  die "TRACE_COUNT_BOUND" if ++$event_count>20000;
+  print $json->encode([$trace_case,@_]),"\n" or die "TRACE_WRITE";
+}
+sub Bits { return unpack('H*',pack('d<',$_[0])); }
+sub Roundtrip {
+  my ($ctext,$key)=@_;
+  die "KEY_LENGTH" unless length($key)==@C;
+  my (%enc,%dec);
+  for my $i (0..$#C) {
+    my $p=substr($key,$i,1);
+    die "KEY_INJECTIVITY" if exists $enc{$p};
+    $enc{$p}=$C[$i];$dec{$C[$i]}=$p;
+  }
+  my $plain=Utils::Decipher($ctext,$key,@C);
+  my @positions;
+  for my $i (0..length($ctext)-1) {
+    my $c=substr($ctext,$i,1);my $p=substr($plain,$i,1);
+    die "ROUNDTRIP" unless exists($enc{$p}) && $enc{$p} eq $c && $dec{$c} eq $p;
+    push @positions,[$i+1,$c,$p,$enc{$p}];
+  }
+  return [$key,$plain,\@positions];
+}
+sub Message { } # original diagnostic timing only; no shell/date in this harness
+my $original_probability=\&JMSmoothing::ProbCharWord;
+{
+  no warnings 'redefine';
+  *JMSmoothing::ProbCharWord=sub {
+    die "SCORE_CALL_BOUND" if ++$score_calls>2200;
+    my $answer=$original_probability->(@_);
+    Trace('score',$_[0],sprintf('%.17g',$answer),Bits($answer));
+    return $answer;
+  };
+}
+for my $p (@{$spec->{patterns}}) {
+  my $v=$grams_with_pattern->[1]{$p};
+  Trace('list',$p,$v);
+}
+for my $w (@{$spec->{word_probes}}) { Trace('word',$w,$is_word->{$w} ? 1 : 0); }
+for my $s (@{$spec->{segmentations}}) {
+  Trace('segment',$s,NoSpace::FindWords($s,$is_word,$maxlen));
+}
+for my $d (@{$spec->{score_probes}}) {
+  JMSmoothing::ProbCharWord($d,$charlm1,$charlm2,$charlm3,$wordlm1,$wordlm2,$wordlm3,
+                           $cl1,$cl2,$cl3,$wl1,$wl2,$wl3,$x);
+}
+for my $case (@{$spec->{cases}}) {
+  $trace_case=$case->{id};$trace_ctext=$case->{cipher};@C=@{$case->{alphabet}};
+  Trace('root',\@C,Roundtrip($trace_ctext,$case->{root}));
+  my $winner=MCTS($trace_ctext,$case->{root},$maxit,$ngramorder);
+  Trace('winner',Roundtrip($trace_ctext,$winner));
+}
+$bridge->close() if defined $bridge;
+$trace_case='terminal';
+Trace('complete',{cases=>scalar(@{$spec->{cases}}),score_calls=>$score_calls});
+exit 0;
+

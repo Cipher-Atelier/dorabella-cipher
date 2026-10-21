@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-10-17T23:08:56.966914+00:00",
+  "scope": "Read-only memory accounting plus one frozen own fixed-pair mathematical diagnostic; no Perl/glue/solver/search. Existing TS P remains SKIPPED_RESOURCE.",
+  "files": {
+    "MEMORY_READONLY_v1/PLAN.json": {
+      "bytes": 1162,
+      "sha256": "d94b9029b69d1328c3f3772ae18167cac98aa0c441f9466861273fd76617d682"
+    },
+    "MEMORY_READONLY_v1/observe.py": {
+      "bytes": 4373,
+      "sha256": "a8fe624d185d6233ffb35a5e9163194ff391f9e3e8e1b75231aeed683b47713d"
+    },
+    "MEMORY_READONLY_v1/raw_receipt.json": {
+      "bytes": 2562,
+      "sha256": "7b710c2e8449fc21f50f10368ebe159ada8d31a90097f1226cddb2f618effb66"
+    },
+    "MEMORY_READONLY_v1/result.json": {
+      "bytes": 22329,
+      "sha256": "3fe5139277096ca1dbe78ceacf7a9df63556415b5165f29c6528d1b25d34b996"
+    },
+    "P01_CONTEXT_READONLY_v1/FREEZE.json": {
+      "bytes": 965,
+      "sha256": "d66cd0edd6b638fc2ecaaae071dcda168f829a5d00dc58f82aa10fa18d6127fb"
+    },
+    "P01_CONTEXT_READONLY_v1/INPUTS.json": {
+      "bytes": 1276,
+      "sha256": "5d63398284cf20a8f170b465ffc30892db4908af37230b5488949e5ebe796a31"
+    },
+    "P01_CONTEXT_READONLY_v1/PLAN.md": {
+      "bytes": 4335,
+      "sha256": "bf57d5fe9f4840ecff5c79632a2477959ee113e56c723ad2a92f069167bee5a2"
+    },
+    "P01_CONTEXT_READONLY_v1/STATIC_REVIEW.json": {
+      "bytes": 1166,
+      "sha256": "5c97e63a7088daf7da2354dea8ef04753d7f4dae1af1b39f12c46c24faabbeaf"
+    },
+    "P01_CONTEXT_READONLY_v1/analyze.py": {
+      "bytes": 9816,
+      "sha256": "1cd079bb8eea07dc324af33d64c137b03b70c18806d7d1d83e007bd5b01ee2c4"
+    },
+    "P01_CONTEXT_READONLY_v1/raw_receipt.json": {
+      "bytes": 1004,
+      "sha256": "4ed57b578ffb0be92db32fddf241c3b76295fb074154e5a380fb4aa01324168f"
+    },
+    "P01_CONTEXT_READONLY_v1/readback.json": {
+      "bytes": 580,
+      "sha256": "dd8b9902b650376dae0f825a8cdcdf445f4cce9d63b767f32d098122bcf6237a"
+    },
+    "P01_CONTEXT_READONLY_v1/result.json": {
+      "bytes": 353389,
+      "sha256": "5422edb0af3ac4bf7991000f3180ff9c27aeeaa46be8168fcc19439276541676"
+    },
+    "Dorabella_memory_and_fixed_pair_20261017.md": {
+      "bytes": 15316,
+      "sha256": "09c9313a2eb3ef0a32a26e52d4cf6e15af1440a870f2b6f4e00b02f993004b0a"
+    },
+    "TS_TRANSPORT_PROFILE_v2/FREEZE.json": {
+      "bytes": 23395,
+      "sha256": "ac6f8d99cb78f414b1b0f825c2da79ae25288557a888df35fd338099fa197d98"
+    },
+    "TS_TRANSPORT_PROFILE_v2/original/JMSmoothing.pm": {
+      "bytes": 1857,
+      "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357"
+    },
+    "TS_TRANSPORT_PROFILE_v2/original/NoSpace.pm": {
+      "bytes": 1097,
+      "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188"
+    },
+    "TS_TRANSPORT_PROFILE_v2/original/ReadLM.pm": {
+      "bytes": 1078,
+      "sha256": "bda9cc75ee2303015bb7ac7df2897ebe038e21786cb826df71132d9f897cb8e9"
+    },
+    "TS_TRANSPORT_PROFILE_v2/original/Utils.pm": {
+      "bytes": 2765,
+      "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e"
+    },
+    "TS_TRANSPORT_PROFILE_v2/original/masc_solver_mcts.pl": {
+      "bytes": 14627,
+      "sha256": "5021fcef107d606f641fa4b24e4544bb3eeb159efefb26dc6d4d3966a7068f17"
+    },
+    "dorabella_readonly/tested_map.csv": {
+      "bytes": 12270,
+      "sha256": "5f12a97d89577561241afdb600ffccf0112ac3875fa47749ef39ee59a6c0b635"
+    },
+    "Dorabella_handoff_after_SA_20261017.md": {
+      "bytes": 21811,
+      "sha256": "4679d0ab10a0ff6053de5cfe3cffa25636ba349dc4c73d07ed52f674572fdb19"
+    },
+    "Dorabella_TS_TRANSPORT_PROFILE_v2_result_20261017.md": {
+      "bytes": 9573,
+      "sha256": "44c31370daf8b61db42af739cddd9a973c6dec87a5f5a9d13bb995d5c14b2859"
+    },
+    "TS_TRANSPORT_PROFILE_v2/original/LICENCE": {
+      "bytes": 1189,
+      "sha256": "ee9e6e82d5ea179ff189f330b3a54eff791ee4f4874b340fefcf7a1227c300bf"
+    },
+    "P01_CONTEXT_READONLY_v1/PROVENANCE_LICENSE.md": {
+      "bytes": 1053,
+      "sha256": "64f36e4da732caa783978d84c9e6be913a70b9de94c26c23670b644ea4b6b904"
+    }
+  }
+}

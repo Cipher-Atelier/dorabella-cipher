@@ -1,0 +1,21 @@
+0 / 0.000 : Starting run at 2026-10-18T15:42:41.244121+00:00
+0 / 0.000 : 
+Character LMs: lmtrain_nyt_word.chr.clm1, lmtrain_nyt_word.chr.clm2, lmtrain_nyt_word.chr.clm3 
+Word      LMs: lmtrain_nyt_word.unk.wlm1, lmtrain_nyt_word.unk.wlm2, lmtrain_nyt_word.unk.wlm3 
+Character LM coefficinet: 0.05 
+nglist	lmtrain_nyt_word.patlst 
+Ciphers without spaces: 1 
+Maximum iterations: 2 
+UCB Parameter C: 1 
+N-grams per pattern: 50 
+
+0 / 0.000 : Starting up...
+0 / 0.000 : Reading language models.
+0 / 0.000 : Processing n-gram list.
+0 / 0.317 : Ready to go! Timer resetting.
+0 / 0.000 : Solving [ocspcsbbzsjsesttobhgntwhojpozwdsjgiwqpzbsctozwdsbzcsstgjtgjstsdsjbssjgjsjojswjigjstsdsj].
+0 / 0.000 : Alphabets: P[e t a o i n s r h l d c p u m f g y w b v k x j z q] C[c g i k e a f m b n d o j h l p]
+
+Starting off with etaoinsrhldcpumf.
+0 / 0.000 : Iteration 1 starting.
+0 / 0.000 : Selection -- etaoinsrhldcpumf  1

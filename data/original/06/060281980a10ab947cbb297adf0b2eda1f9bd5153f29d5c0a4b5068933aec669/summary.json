@@ -1,0 +1,8 @@
+{
+  "n": 6,
+  "accuracy_mean": 0.9578544061302683,
+  "baseline_mean": 0.9386973180076628,
+  "development_only": true,
+  "configuration_adjusted_from_results": false,
+  "technical_failure": "Initial Numba compilation rejected numpy.tile; replaced with explicit allocation and assignment; no numerical result existed before repair."
+}

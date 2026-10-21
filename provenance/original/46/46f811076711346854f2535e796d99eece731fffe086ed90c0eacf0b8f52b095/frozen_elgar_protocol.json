@@ -1,0 +1,33 @@
+{
+  "protocol": {
+    "id": "round8-new-Elgar-k3-sensitivity-v1",
+    "frozen_utc": "2026-10-01T11:05:04.779032+00:00",
+    "seed": 20261001804,
+    "nulls_per_excerpt": 39,
+    "char_search": [
+      128,
+      20000
+    ],
+    "word_search": {
+      "restarts": 64,
+      "iterations": 16000
+    },
+    "known_texts": 2,
+    "kind": "convenience sample of two source-inspected genuine Elgar excerpts, new to archived lab, no population generalization",
+    "no_training": "Reuse archived model/dictionary/solver parameters. External dictionary provenance incomplete; no claim of author-level training exclusion.",
+    "null": "uniform directed trigram-preserving shuffle via archived Wilson Euler method on pair vertices; first/last2 fixed, with replacement; original draw permitted",
+    "fairness": "exactly same search stages, seeds derived from canonical input, for positives and every null; original text used only after solver for accuracy",
+    "purpose": "sensitivity of conditional controls on known author texts, not evidence Dorabella uses this mechanism; no Dorabella solver run here"
+  },
+  "sha256": {
+    "round8/elgar_sensitivity.py": "665c3705a9525fb71763ef5bc448a17364ec0c30a55f8e3733a75432e06ddeac",
+    "round8/sources/elgar_excerpts.json": "8935bbe13f2eda5d29348d251d6bf6eb24b3205eaff137a927202f1391005b52",
+    "data/english_model.npz": "a1d63163d5c10bcb15203c8feeeda449c6fc337805f6ac91107a3c368b6a9b76",
+    "fastsolve.py": "15e6f00eda8e1552baec7542d01a118ecf56dde86d4aec9eb826727463729739",
+    "wordsearch_v4.py": "eeb239249c79f9926852e8cb10038a7fb1ee3a9b74fc61c7bbcc9cf16cc2e083",
+    "wordpolish_v3.py": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "wordscore_v3.py": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790",
+    "conditional_v7.py": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+    "count_bigrams_v7.py": "887198748de7f0698977ddb859b2e10e1b016b45a074f506f27aa9476085c92c"
+  }
+}

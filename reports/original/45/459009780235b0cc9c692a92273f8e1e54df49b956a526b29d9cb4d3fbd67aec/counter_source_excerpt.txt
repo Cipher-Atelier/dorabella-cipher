@@ -1,0 +1,6 @@
+94:             evaluated=0;localbest=-1e100;localid=-1
+100:                 if cs[b]+.5*upper < best-1e-9:continue
+103:                 w=fast_word(buf,children,vals);s=cs[b]+.5*w;evaluated+=1
+104:                 sparse_ids.append(idx);sparse_c.append(cs[b]);sparse_w.append(w)
+114:             stats[row,4]=evaluated;stats[row,5]=256-evaluated;stats[row,6]=cmin
+116:     return best,bestid,np.array(ties,np.int64),stats,np.array(sparse_ids,np.int64),np.array(sparse_c),np.array(sparse_w)

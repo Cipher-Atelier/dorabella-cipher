@@ -1,0 +1,139 @@
+{
+  "status": "READBACK_VERIFIED",
+  "decision": "DEVELOPMENT_GATE_FAILED_VERSION_CLOSED",
+  "exact_unique_recovery": 0,
+  "exact_any_scored": 1,
+  "positive_tied_maxima": 0,
+  "qualifying_local_max_recovery": false,
+  "negative_reached_paired_truth_score": 0,
+  "budget": {
+    "proposals": 260000,
+    "evaluations": 260000,
+    "accepted": 38064,
+    "accepted_worse": 12091,
+    "accepted_equal": 13450,
+    "accepted_better": 12523,
+    "unchanged_proposals": 13449,
+    "completed_state_stages": 800,
+    "elapsed_seconds": 22.07128864200058
+  },
+  "unique_inverse_records_verified": 24135,
+  "terminal_sha256": "3d68b030207598ac137b8ca4db3bf2ff67784eb83d32771b475e860e5b774004",
+  "assessment": [
+    {
+      "positive": "P01",
+      "truth_score_saved": -334.2207467246346,
+      "before_best_score": -388.9037387404248,
+      "after_best_score": -332.72445280018263,
+      "after_top_strings": [
+        "THISDOCUMENTPROVIDESIMPLEMENTATIONANDOPERATIONALCONSIDERATIONSFORUSINGTLSPRESHAREDBEYST"
+      ],
+      "top_tie_count": 1,
+      "before_exact_top": false,
+      "exact_unique_top": false,
+      "exact_top_including_tie": false,
+      "exact_any_scored": true,
+      "exact_any_visited": false,
+      "truth_origins": [
+        {
+          "state_id": "P01_B0_r1",
+          "initial_strict_local_max": true,
+          "first_accepted": null
+        }
+      ],
+      "qualifying_local_max_recovery": false,
+      "truth_minus_best": -1.4962939244519475,
+      "negative": "N01",
+      "negative_before_best": -414.7387064472297,
+      "negative_best": -407.98741930304624,
+      "negative_top_strings": [
+        "LDINHEMODADMAALLORIMSLORNEDARDEBSTELTSTRACKLYTOFALSWITHPHERDEEOARDEPOTISLOTOFDUPMAYSIAT"
+      ],
+      "negative_top_tie_count": 1,
+      "negative_reached_paired_truth_score": false,
+      "positive_minus_negative": 75.2629665028636
+    },
+    {
+      "positive": "P02",
+      "truth_score_saved": -395.5170967884367,
+      "before_best_score": -437.4502882426767,
+      "after_best_score": -403.52941047835867,
+      "after_top_strings": [
+        "THISDUCKWENTDISCKSSESTHEKSAYEANDAOOFICALIFITBUMLYOFINGSTATELYOFSSHURTESTOATHMIRSTSOMEXT"
+      ],
+      "top_tie_count": 1,
+      "before_exact_top": false,
+      "exact_unique_top": false,
+      "exact_top_including_tie": false,
+      "exact_any_scored": false,
+      "exact_any_visited": false,
+      "truth_origins": [],
+      "qualifying_local_max_recovery": false,
+      "truth_minus_best": 8.012313689921996,
+      "negative": "N02",
+      "negative_before_best": -419.532554036008,
+      "negative_best": -413.455740683971,
+      "negative_top_strings": [
+        "OSLIVYLEBEENBARYATSASSMUCHYEARCHEDOETOUGOTRONEDBROSIERORECALTHIFHODFTSWOOFTENGROANSEEUP"
+      ],
+      "negative_top_tie_count": 1,
+      "negative_reached_paired_truth_score": false,
+      "positive_minus_negative": 9.926330205612317
+    },
+    {
+      "positive": "P03",
+      "truth_score_saved": -394.95098063385274,
+      "before_best_score": -407.106147804193,
+      "after_best_score": -400.3659537568204,
+      "after_top_strings": [
+        "IGERNALDCOMINOVEMORTOFDETOCOMIRVATESULDRIACOTONPOLOTADIOTRIARDSSATINGLSUSTOVEKNOWOPHIEA"
+      ],
+      "top_tie_count": 1,
+      "before_exact_top": false,
+      "exact_unique_top": false,
+      "exact_top_including_tie": false,
+      "exact_any_scored": false,
+      "exact_any_visited": false,
+      "truth_origins": [],
+      "qualifying_local_max_recovery": false,
+      "truth_minus_best": 5.414973122967638,
+      "negative": "N03",
+      "negative_before_best": -429.879448548035,
+      "negative_best": -416.5251213159064,
+      "negative_top_strings": [
+        "NLTHMITSIDERAMIDOLPRNMATEEONANDCONUCCELTBYNOUDORENELEAGLEENSACHDOEEYHAREDORCATHPASWEEKL"
+      ],
+      "negative_top_tie_count": 1,
+      "negative_reached_paired_truth_score": false,
+      "positive_minus_negative": 16.15916755908603
+    },
+    {
+      "positive": "P04",
+      "truth_score_saved": -360.50833369768384,
+      "before_best_score": -399.8647440116669,
+      "after_best_score": -399.3610571960947,
+      "after_top_strings": [
+        "STEDDCONELENUSEAFROLORDSANRICSABRUCTENUMBARESTHEWOFSELEORDSTUSLYMMIDCONELISTONRICSABRUC"
+      ],
+      "top_tie_count": 1,
+      "before_exact_top": false,
+      "exact_unique_top": false,
+      "exact_top_including_tie": false,
+      "exact_any_scored": false,
+      "exact_any_visited": false,
+      "truth_origins": [],
+      "qualifying_local_max_recovery": false,
+      "truth_minus_best": 38.85272349841085,
+      "negative": "N04",
+      "negative_before_best": -413.210312211567,
+      "negative_best": -409.7002261578634,
+      "negative_top_strings": [
+        "TEAREEYEMRRADISDISEYLITHPMEEITYFUNSOFTRISDISCASOFOTDIFITONTLYCOUDECERTFRACTQUARENCONTLY"
+      ],
+      "negative_top_tie_count": 1,
+      "negative_reached_paired_truth_score": false,
+      "positive_minus_negative": 10.339168961768735
+    }
+  ],
+  "scope": "40 fixed initial states, assigned branches, regression/development only; no target, p-value, RNG replay or rescoring"
+}

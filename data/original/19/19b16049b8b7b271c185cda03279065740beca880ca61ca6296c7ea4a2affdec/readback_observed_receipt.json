@@ -1,0 +1,10 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1_execution_evidence/independent_readback.py",
+  "tool_result": {
+    "chunk_id": "4b4f43",
+    "wall_time_seconds": 3.5142e-05,
+    "exit_code": 0,
+    "status_in_stdout": "PASS_SAVED_DATA_READBACK"
+  },
+  "scope": "data-only; no experiment procedures rerun"
+}

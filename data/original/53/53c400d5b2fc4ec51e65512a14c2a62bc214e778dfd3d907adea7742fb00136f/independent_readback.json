@@ -1,0 +1,376 @@
+{
+  "status": "COMPLETED_DIAGNOSTIC",
+  "accepted_after_readback": true,
+  "cases": [
+    {
+      "id": "fresh_00",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        0,
+        0
+      ],
+      "file_sha256": "fe4ef88ed3e317fe1b7e6dfdb99f59181583004ab5f66a0b0ae086afd974e50f"
+    },
+    {
+      "id": "fresh_01",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        0,
+        1
+      ],
+      "file_sha256": "4364d61445451e9eedf0fddd674f72379fcbb68f66fcd0f12203021d70236786"
+    },
+    {
+      "id": "fresh_02",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        1,
+        0
+      ],
+      "file_sha256": "cd42d008c104a62a177534c71397de41a74ad509a090ca58c89bdedaf3da2b13"
+    },
+    {
+      "id": "fresh_03",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        1,
+        1
+      ],
+      "file_sha256": "47e8e3ce0b290a015521947358adcf6dce77a9c979ec80fe66fabadcc0e6ae08"
+    },
+    {
+      "id": "fresh_04",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        1,
+        0,
+        0
+      ],
+      "file_sha256": "ba25a771adf91e15163478f1298742e50af84eedac73c04f4e92f5145cee1eff"
+    },
+    {
+      "id": "fresh_05",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        1,
+        0,
+        1
+      ],
+      "file_sha256": "380d37b336b300aa5953d8d081a54b3715560080d2a0ab37be7b8ba7059ecaae"
+    },
+    {
+      "id": "fresh_06",
+      "status": "ROUTE_DOMAIN_OUTSIDE",
+      "regression": false,
+      "stratum": [
+        1,
+        1,
+        0
+      ],
+      "file_sha256": "422fca72c84efb4a8a6ca9407edb07a6f7e098f0903fdcbeb2cef1efef44f96b"
+    },
+    {
+      "id": "fresh_07",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        1,
+        1,
+        1
+      ],
+      "file_sha256": "c4bad3cb97655d73b808c75c1645e176f5211d8b87886d6553afd1557840baa8"
+    },
+    {
+      "id": "fresh_08",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        0,
+        0
+      ],
+      "file_sha256": "93ef7f9162f09c6dd19f34d92c6a1608bbdec8cf608eaf9dd90a7ed53ccf2f7e"
+    },
+    {
+      "id": "fresh_09",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        0,
+        1
+      ],
+      "file_sha256": "0870b5191d40cdee43b87bc9ad4568fbeda48d4909864a7c4665cce9c4d18d8f"
+    },
+    {
+      "id": "fresh_10",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        1,
+        0
+      ],
+      "file_sha256": "93ac0eaabebb1506dd44fe5be8722401405e0331842be33bb2da39ce66a4192c"
+    },
+    {
+      "id": "fresh_11",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        0,
+        1,
+        1
+      ],
+      "file_sha256": "63f536c04a4cffc0afc3bd99f852aaff9e743c6bc0bbbf8271384b9908af1c7c"
+    },
+    {
+      "id": "fresh_12",
+      "status": "ALPHABET_OUTSIDE",
+      "regression": false,
+      "stratum": [
+        1,
+        0,
+        0
+      ],
+      "file_sha256": "cd8e8c336bd9c63cc836d939ca9d0d3c7b6933e9f5b8b8eadce0f680442771d9"
+    },
+    {
+      "id": "fresh_13",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        1,
+        0,
+        1
+      ],
+      "file_sha256": "95675f2f62a5e70b0c125befdd848e94d84def34c0b037d6054c6feae5222e96"
+    },
+    {
+      "id": "fresh_14",
+      "status": "ALPHABET_OUTSIDE",
+      "regression": false,
+      "stratum": [
+        1,
+        1,
+        0
+      ],
+      "file_sha256": "274f056cd85cae272e6988274e67f4d9838f5108a01edb6809872918427b24f2"
+    },
+    {
+      "id": "fresh_15",
+      "status": "REPRESENTABLE",
+      "regression": false,
+      "stratum": [
+        1,
+        1,
+        1
+      ],
+      "file_sha256": "92ac7abc91b69d323cfd08ad3953112071ca9d1c4cdf09ec526240c4b047d354"
+    },
+    {
+      "id": "reg_march",
+      "status": "REPRESENTABLE",
+      "regression": true,
+      "stratum": [
+        0,
+        0,
+        0
+      ],
+      "file_sha256": "f3d4a21491fbebcac51bfbe74b5eb73e6fbca7fe4a25b6b158be6b7a851e68a6"
+    },
+    {
+      "id": "reg_caractacus",
+      "status": "REPRESENTABLE",
+      "regression": true,
+      "stratum": [
+        1,
+        1,
+        1
+      ],
+      "file_sha256": "30c23d671f40067fa7aea7e2804c7fdc2b6019e7b144fe03a4c70d841fa4026c"
+    }
+  ],
+  "summary": {
+    "fresh_counts": {
+      "ALPHABET_OUTSIDE": 2,
+      "REPRESENTABLE": 13,
+      "ROUTE_DOMAIN_OUTSIDE": 1
+    },
+    "fresh_denominator": 16,
+    "interpretation": "Descriptive domain accounting; not G1 or14/16 sensitivity gate",
+    "regression_denominator": 2,
+    "regressions": [
+      {
+        "id": "reg_march",
+        "status": "REPRESENTABLE"
+      },
+      {
+        "id": "reg_caractacus",
+        "status": "REPRESENTABLE"
+      }
+    ],
+    "strata": [
+      {
+        "cases": [
+          {
+            "id": "fresh_00",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_08",
+            "status": "REPRESENTABLE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_01",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_09",
+            "status": "REPRESENTABLE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_02",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_10",
+            "status": "REPRESENTABLE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_03",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_11",
+            "status": "REPRESENTABLE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_04",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_12",
+            "status": "ALPHABET_OUTSIDE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_05",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_13",
+            "status": "REPRESENTABLE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_06",
+            "status": "ROUTE_DOMAIN_OUTSIDE"
+          },
+          {
+            "id": "fresh_14",
+            "status": "ALPHABET_OUTSIDE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "cases": [
+          {
+            "id": "fresh_07",
+            "status": "REPRESENTABLE"
+          },
+          {
+            "id": "fresh_15",
+            "status": "REPRESENTABLE"
+          }
+        ],
+        "denominator": 2,
+        "stratum": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "manifest_sha256": "0048b4a0a1d511b7881ad1081e39c584d76dbcf0125050b78dda5987dd51caf8",
+  "terminal_sha256": "db5639948e24085bf52e317601459627b54f3a21d289ad5c9537fb0aaac65847",
+  "observed_exit_code": 0,
+  "abort_present": false,
+  "repeat_allowed": false,
+  "meaning": "18-case domain accounting only; no sensitivity gate or next-stage authorization"
+}

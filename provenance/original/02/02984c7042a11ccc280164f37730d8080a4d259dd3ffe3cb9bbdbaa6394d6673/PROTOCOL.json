@@ -1,0 +1,67 @@
+{
+  "version": "TS-RECOVERED-SEARCH-v2",
+  "mode": "real blind bounded Lincoln control search plus profiling; no Dorabella",
+  "selection": "provenance/SELECTION_FREEZE.json",
+  "truth_separation": "truth/truth.json read only by post-terminal evaluator, never solver/broker",
+  "algorithm": "pinned original MCTS initialization and two complete Expansion; storage/observation only modifications",
+  "argv": [
+    "-n",
+    "-v",
+    "-mi2",
+    "-pc1",
+    "-pl50",
+    "-cc0.05",
+    "ciphertext.txt"
+  ],
+  "env": {
+    "PERL_HASH_SEED": "2026101705",
+    "PERL_PERTURB_KEYS": "0",
+    "LC_ALL": "C",
+    "TZ": "UTC"
+  },
+  "one_attempt": true,
+  "retry_resume": false,
+  "global_seconds": 180,
+  "work_deadline_seconds": 130,
+  "min_remaining_before_children_seconds": 60,
+  "AS_MiB": {
+    "supervisor": 128,
+    "broker": 128,
+    "perl": 256
+  },
+  "CPU": {
+    "supervisor": [
+      170,
+      175
+    ],
+    "children": [
+      120,
+      125
+    ]
+  },
+  "max_processes": 3,
+  "NOFILE": 64,
+  "CORE": 0,
+  "FSIZE_bytes": 8388608,
+  "score_calls": 1024,
+  "LM_requests": 2049,
+  "LM_lookups": 794624,
+  "membership_requests": 200000,
+  "pat_requests": 212000,
+  "frame_bytes": 65536,
+  "list_chunk": 64,
+  "lm_chunk": 128,
+  "output_bytes": 100663296,
+  "memory_gate": "memory.max == 8 GiB; memory.current + every unique input page rounded up + 512 MiB process AS + 128 MiB allowance < 7 GiB. No cache subtraction. Monitor shared current < 7 GiB. Not a reservation.",
+  "outcomes": [
+    "CONTROL_RECOVERED",
+    "CONTROL_NOT_RECOVERED",
+    "INCOMPLETE_BUDGET",
+    "STOP_CORRECTNESS",
+    "STOP_RESOURCE",
+    "UNKNOWN_TERMINATION"
+  ],
+  "acceptance": "Completed two original Expansion + native normal return + exact stream audit + inverse87/87 + raw receipt and exact Library ZIP readback. Recovery evaluated separately. Incomplete expansion is not a completed result.",
+  "limits_not_performance_prediction": true,
+  "new_execution_requires_review": true
+}

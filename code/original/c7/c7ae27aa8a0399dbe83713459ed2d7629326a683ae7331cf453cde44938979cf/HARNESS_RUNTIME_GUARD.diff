@@ -1,0 +1,11 @@
+--- prepared_v1/original_module_oracle.pl
++++ oracle_v1/original_module_oracle.pl
+@@ -3,6 +3,8 @@
+ use strict;
+ use warnings;
+ use JSON::PP;
++use Config;
++BEGIN { die "RUNTIME_MISMATCH\n" unless "$^V" eq "v5.38.2" && $Config{archname} eq "x86_64-linux-gnu-thread-multi"; }
+ use Utils;
+ use NoSpace;
+ die "Need two fixture/expected pairs\n" unless @ARGV == 4;

@@ -1,0 +1,697 @@
+{
+  "previous_files_retained": 7380,
+  "new_files": [
+    {
+      "path": "round10/README_ROUND10_RU.md",
+      "sha256": "dfc719631a7019d734edaefbe4de6973f837301f137197f1b6b51b75ae3448dc",
+      "bytes": 6172
+    },
+    {
+      "path": "round10/audit.py",
+      "sha256": "d510b10b5ab1269ed2326c46ac9a47f49e35199255b0b427a7b297f477565c13",
+      "bytes": 6059
+    },
+    {
+      "path": "round10/data/elgar_letters.json",
+      "sha256": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240",
+      "bytes": 10227
+    },
+    {
+      "path": "round10/data/inputs.json",
+      "sha256": "00cdd89351009449bd2f837bbf2788b5ca3544d966187a1b2e19be0aa3bc758e",
+      "bytes": 91563
+    },
+    {
+      "path": "round10/data/inputs_base.json",
+      "sha256": "cf453ad6d292e53f90b2e03ea4d7d68bb269107acb78f83801831c5bd253484d",
+      "bytes": 18555
+    },
+    {
+      "path": "round10/data/old_excerpt_structure.json",
+      "sha256": "0a523ae637495937e54bdac31a4f51dc196c9aae96027ffeafad4de5ac6df0c6",
+      "bytes": 1247
+    },
+    {
+      "path": "round10/data/old_round9_hashes.json",
+      "sha256": "e9adfc09c949c3193ed7b5be0dfef053cd906cc18ccc217f519a4b09134cdf39",
+      "bytes": 1013393
+    },
+    {
+      "path": "round10/data/source_observations.json",
+      "sha256": "d773e793809cb520a5f7ad3807ec5bc68483292d244d5fb2a2224f53f46f664e",
+      "bytes": 1982
+    },
+    {
+      "path": "round10/dorabella_round10_handoff.md",
+      "sha256": "4fce32f7931cf37637dfb70163dfa554c22db5bee8febc85f8b60687653d350c",
+      "bytes": 8169
+    },
+    {
+      "path": "round10/dorabella_round10_research_log.md",
+      "sha256": "1ee861c0f570db749a1bdcc234740bac3c2f60e59c0880b98701c584987805cb",
+      "bytes": 26863
+    },
+    {
+      "path": "round10/environment.json",
+      "sha256": "be6203aaea92c7a5e407877d77c9b72d76db93ad962042d89a42b370f61aa635",
+      "bytes": 261
+    },
+    {
+      "path": "round10/frozen_protocol.json",
+      "sha256": "b7cb99e58ec6e4d27f85e0b6c18875bb11718ef550ed9af3adef0fa43ff00313",
+      "bytes": 2537
+    },
+    {
+      "path": "round10/novel_excerpt_check.py",
+      "sha256": "5cadd9ae57746b8573430c864a64847e76314fb973e8e9c6060c1a6b24fca0ce",
+      "bytes": 1444
+    },
+    {
+      "path": "round10/prepare.py",
+      "sha256": "08ce6e0ce9af439ae9a6702611a8a9a653b9dbbff38af16f775bf91d64ba277f",
+      "bytes": 6920
+    },
+    {
+      "path": "round10/regression_diagnostic.py",
+      "sha256": "c32aca0ce9a2113631440372fad4b99b95eb6bb205695824e76ff73b2e023991",
+      "bytes": 1598
+    },
+    {
+      "path": "round10/reproduce.py",
+      "sha256": "e1d6b673c2067743fc32b36e0e4e4d1ba19eae02a05924803fd111e065ac518c",
+      "bytes": 1659
+    },
+    {
+      "path": "round10/results/audit.json",
+      "sha256": "9434d73f97fb0552ff6a46ee635868beadb001e0634db727d87e4fc7dc3d08f8",
+      "bytes": 1118
+    },
+    {
+      "path": "round10/results/audit_initial.json",
+      "sha256": "9434d73f97fb0552ff6a46ee635868beadb001e0634db727d87e4fc7dc3d08f8",
+      "bytes": 1118
+    },
+    {
+      "path": "round10/results/novel_excerpt_check.json",
+      "sha256": "446d7f83fbeb940e6883c910a1c16880fa04a23174c54c39ab103d9c73ce0138",
+      "bytes": 353
+    },
+    {
+      "path": "round10/results/records/bailey_01.json",
+      "sha256": "f22c6e711f6bee591a1faa7e889e91204dfedf74c18f25972104c8a7a3cb2c6d",
+      "bytes": 7871
+    },
+    {
+      "path": "round10/results/records/bailey_02.json",
+      "sha256": "8ce9e47e7e0d10b9fecf715c787c9dec21370c636b8fd6188259b1a9801786f4",
+      "bytes": 7918
+    },
+    {
+      "path": "round10/results/records/bailey_03.json",
+      "sha256": "c5ebbc3045283f7a22e07240d2ed8752151de6e30d0c755899a80c27c2863fef",
+      "bytes": 7913
+    },
+    {
+      "path": "round10/results/records/bailey_04.json",
+      "sha256": "675ec6931a70976a12ec4c8c23a1462365a6fa68da54ea51c9a856c25792ea6f",
+      "bytes": 7942
+    },
+    {
+      "path": "round10/results/records/bailey_05.json",
+      "sha256": "54be97c6a383722a0163496621efb6ac73d60323098a3369bd1c9eac83122ab2",
+      "bytes": 7893
+    },
+    {
+      "path": "round10/results/records/bailey_06.json",
+      "sha256": "5a3ebe1f1bc0337efa0669f362a2f7643355bf24a8120c4f1ed6ada811d6ac91",
+      "bytes": 7898
+    },
+    {
+      "path": "round10/results/records/bailey_07.json",
+      "sha256": "f7f8cd8363357de1db9098be68bcb9d765db2c7027ae9c15544e23e5c3791e03",
+      "bytes": 7869
+    },
+    {
+      "path": "round10/results/records/bailey_08.json",
+      "sha256": "5759366bcd92f794477fa65a163dd116b71f351f5e06a63cd6d9c15a83422666",
+      "bytes": 7897
+    },
+    {
+      "path": "round10/results/records/bailey_09.json",
+      "sha256": "aa44573e6b56b53667970e862420f8a0acc1f34c3bd3069f166d084d9fa6aa81",
+      "bytes": 7958
+    },
+    {
+      "path": "round10/results/records/brewer_01.json",
+      "sha256": "318e077ccd4d415b6b2dc2a42bf315f1d316d2ce2e41c45fac0f9c258af57771",
+      "bytes": 7894
+    },
+    {
+      "path": "round10/results/records/brewer_02.json",
+      "sha256": "29113c43b02951c9679d114eb009d3d07d72c1c68f2808181d7f2b871ed192f6",
+      "bytes": 7922
+    },
+    {
+      "path": "round10/results/records/brewer_03.json",
+      "sha256": "607c3493dd694fe8f06191b469fb948828b0b59b2c66495712ab55aa7d96aec8",
+      "bytes": 7894
+    },
+    {
+      "path": "round10/results/records/elgar_caractacus_postcard.json",
+      "sha256": "a2ff1efe562f8e941a6556709f1c4dc64da9856c954ef9f0f480030341109be4",
+      "bytes": 7948
+    },
+    {
+      "path": "round10/results/records/elgar_march_1897.json",
+      "sha256": "90c978d2cf3c618563a05831e3049725ba82bfd83f73070050f4474af523fce3",
+      "bytes": 7940
+    },
+    {
+      "path": "round10/results/records/hart_real.json",
+      "sha256": "d92f3357c67a4dfc5147680f058bb9bdcd7a67db38a55b935f806523efef9a5b",
+      "bytes": 7790
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_00.json",
+      "sha256": "0ef3c66240c83b8e7e6a54305c769338112ea5305471db0e40b639a04f646d79",
+      "bytes": 7836
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_01.json",
+      "sha256": "8d20bfeea71626dfec1d4db9a5f7e9b83f731fcfd9ed39188b64692bbd44082e",
+      "bytes": 7822
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_02.json",
+      "sha256": "87abc1acb68a39ed4d28d628d76adc3ec4273a6060bd16d7da58bd448ccc6fab",
+      "bytes": 7828
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_03.json",
+      "sha256": "bcf27a3207a681ed5e1068946878b383a4567ec8be09ed3f5be0e6e686a27c8b",
+      "bytes": 7823
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_04.json",
+      "sha256": "adf6740d2a95d1cfc16c1a58a5d3722bbd7f11098fd0abce035c54a9fe472d59",
+      "bytes": 7824
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_05.json",
+      "sha256": "c69a933de0bb9de6e885ce7301d593830fc957fb463063038ca735a228f5d3bb",
+      "bytes": 7783
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_06.json",
+      "sha256": "6d9280214264c388764bde07ad6f9affca0e54abb551a1d2fdbdf74785d5020a",
+      "bytes": 7828
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_07.json",
+      "sha256": "ab61a3d484e2872fd07afefc06dda0b32c1153617027e1aad4a03e193579603d",
+      "bytes": 7810
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_08.json",
+      "sha256": "c6ed695a8a66a90a8fed881998a1f24d49638acb5e4d03c654a20d6ca624db00",
+      "bytes": 7799
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_09.json",
+      "sha256": "34bddc88c05c3be148886b860e67e0dd8662076daf2325ab32813304dfc8dfc3",
+      "bytes": 7824
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_10.json",
+      "sha256": "7c725a45b54b18af136796d3fe4fcf41e49df27c31968589e4907cc817adb01e",
+      "bytes": 7815
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_11.json",
+      "sha256": "edb23af07b8595a255f4722c964146e7edd197f43aeeb44e76b7f914a8c354ba",
+      "bytes": 7825
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_12.json",
+      "sha256": "0daa0c26799a8ca5f252445e7f18969c4d819a6ca05535a0deaaebe92f5f2e30",
+      "bytes": 7867
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_13.json",
+      "sha256": "8d0e1aa7ab45b60fb5ae0796e02533355f9b4626ff3d766cae2e85d0367436be",
+      "bytes": 7816
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_14.json",
+      "sha256": "1ffe856960fa6f9cb79ffceb214b80d3d5e8cd6268f6c2a006de76c8e6f13d59",
+      "bytes": 7846
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_15.json",
+      "sha256": "9a5bd21582feca60d37851025254e45640bdd635047658d0d4e42bdcf93a941a",
+      "bytes": 7821
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_16.json",
+      "sha256": "8d5d16316b999ae981762aca15139b175fe8c273a982c2597ed3f8b27e2835a7",
+      "bytes": 7876
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_17.json",
+      "sha256": "20c29f6285603317af5c25c8508f9e558456a07d04d53a16aefdf25fcd642421",
+      "bytes": 7802
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_18.json",
+      "sha256": "d75883b1aac42a354d3dfa39a4d49a5c20761383ce41f697b7efe17c5eaf0d61",
+      "bytes": 7859
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_19.json",
+      "sha256": "2c002f6e1709ec6334eba84dfbe022820badf083257e4cbd50778dcd175c4649",
+      "bytes": 7854
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_20.json",
+      "sha256": "bc01bc5d0a10e4d1281035e9baf1d5e60b7be89cc7c6767acafac289c0856588",
+      "bytes": 7824
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_21.json",
+      "sha256": "a4eeb6e3c5965e4cc708ae89ee65dc3854a633ceebc477099eed557a2a580d7b",
+      "bytes": 7818
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_22.json",
+      "sha256": "ea4ad2a8c03fd07789c0df729d8f0fa210d61b62ccd0613cf1adb9f4e895bab6",
+      "bytes": 7870
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_23.json",
+      "sha256": "a1b5f637a4eb30ceeb75ab1889c65289db20d472c33606f109306383b1a72411",
+      "bytes": 7820
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_24.json",
+      "sha256": "6bf78e251302db312454657443534767af69b34fca8253885320c2f71ad06c41",
+      "bytes": 7830
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_25.json",
+      "sha256": "f3ac4d6f093c6c21dd3eab7eeabf88557fde1b157dd29534a1ec70ba5d85a123",
+      "bytes": 7810
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_26.json",
+      "sha256": "1a074ec1c7709ca9f45b3d14fa151622f8ea72d8cd85f8cd10a548490ee48d85",
+      "bytes": 7819
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_27.json",
+      "sha256": "7f5977dc140ca5e6a2c134f4766fe7c9c8e731da8e8a8913f580d8108c2d00af",
+      "bytes": 7828
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_28.json",
+      "sha256": "0deea28f0cd15eb8d47befd3976662aee6b5d4a4c763c5011ae1b8b47b5abbf2",
+      "bytes": 7816
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_29.json",
+      "sha256": "65e5c7c8564757651036d2a89b67a7f44706458769fa8793e63bdea5473d7080",
+      "bytes": 7752
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_30.json",
+      "sha256": "58264f56945d244f284bf082eceb19e70eb080e2c201fe3060dbeb32f0152f6c",
+      "bytes": 7780
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_31.json",
+      "sha256": "0a2f9885941e45dae07db670e93ccf55932ca9221a6b628a0d0c318148b5bd11",
+      "bytes": 7772
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_32.json",
+      "sha256": "c2284088d9454c17f8a9f8442e7aae91ae6e673c3b6331049ef38edfac0b6bdf",
+      "bytes": 7810
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_33.json",
+      "sha256": "df8196d7eb1a2c778b32df21630e96ab8ca4dc4334627b02ba32602fe2a600ad",
+      "bytes": 7807
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_34.json",
+      "sha256": "d8517c2429fb7206a512ed012df4431a68d0dd90c2c53e6832d4d3aecd84b2a3",
+      "bytes": 7846
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_35.json",
+      "sha256": "b1f44a271ce13b9099d829293730f3447095fdc4248647a79a7c06207db47b64",
+      "bytes": 7797
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_36.json",
+      "sha256": "74af00390e6e8497c84e0c3a277645639ec3f5fe21c9b95858ffeb0947104762",
+      "bytes": 7792
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_37.json",
+      "sha256": "bc47e4f36c577c0edb787a238777738994795fd13d126015590c5d640648ae8f",
+      "bytes": 7830
+    },
+    {
+      "path": "round10/results/records/hart_real_pair_38.json",
+      "sha256": "dd58f9c50deea1c0ce4201843be43cd31b1297d51b797aa47772f73ebfd74124",
+      "bytes": 7831
+    },
+    {
+      "path": "round10/results/records/hart_real_scores.npz",
+      "sha256": "fd1611bbe8293d7fe0c2781bd8a30893eb2ae0aea9dc81d0cf366738becc7b49",
+      "bytes": 7109657
+    },
+    {
+      "path": "round10/results/records/hauer_real.json",
+      "sha256": "4669907e4f13e0646dc711658b9166fd9f9bab90f14ae5f047b8eed4a4bbc21b",
+      "bytes": 7792
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_00.json",
+      "sha256": "8608b1173c00fef1ff9ce09851b7e414234ce20fcb708bbfa78064462ab8a0a5",
+      "bytes": 7856
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_01.json",
+      "sha256": "73329ad74349d120e8fe0dd2cec7ffdb1906c42e15e34c7248d2b0ca299a2283",
+      "bytes": 7765
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_02.json",
+      "sha256": "626002d06721b8d6e94237ca5bc87ba9e17e86ce12d730f9fd208147e3f781b2",
+      "bytes": 7816
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_03.json",
+      "sha256": "0b8061078e9c4629b56409a1d63de4941b74a2f875739936aed89762bca4452e",
+      "bytes": 7819
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_04.json",
+      "sha256": "735e1ca9ead49601cdac89ecc0ebee5512564c86a37b47411aa54e4cb7de0e9d",
+      "bytes": 7760
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_05.json",
+      "sha256": "22292c98f1919e3598f9af52e1b3f0fd78af197fd2d02d2387b99ab3cf0d7792",
+      "bytes": 7802
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_06.json",
+      "sha256": "e70adc589b5a32aa1e6bb00c991d348b7bbd113bcaef14aeeff39e9db4ef8e8e",
+      "bytes": 7847
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_07.json",
+      "sha256": "cb4c91b478f22954e303e97ecfe34cfaeaf500c20f993c3845aa707c7a98b4bf",
+      "bytes": 7800
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_08.json",
+      "sha256": "ec3126a7ddfd1162c9370939609037ff37fc2d19da1d51cf8010d4fd550c1e95",
+      "bytes": 7820
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_09.json",
+      "sha256": "01daffb826791eb3e6c5ecf617bc063e71ab17a4cb9155b40d5b8caf046ff7b6",
+      "bytes": 7799
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_10.json",
+      "sha256": "6f1d7f14619e1f0ecd2959a92bcb7d2c8387852e9cfb20ab798b3cff0b522810",
+      "bytes": 7805
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_11.json",
+      "sha256": "4eccedfaac67592b8d1530f34757f999d2e3b5d6bc3bb7e6b5c74706b84be4a4",
+      "bytes": 7853
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_12.json",
+      "sha256": "0bfaef456053e13059026f7bc5df436f56dc98e546c390fa36ccddcaf081248a",
+      "bytes": 7802
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_13.json",
+      "sha256": "41bbd22d28056c0c5952afde25f138a91bfb8a889bd93033d38060036e0dd07c",
+      "bytes": 7817
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_14.json",
+      "sha256": "5e819d0a931d34c0050da72ab924078f6353d093ba52ef0306623596880e5dac",
+      "bytes": 7828
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_15.json",
+      "sha256": "6f3fe7426e7aea8b4d7e5547b94c07705a1c34728359815f17bc6d8157453be6",
+      "bytes": 7841
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_16.json",
+      "sha256": "da968f58aaed33aab9c04fdcedbd00ef424f333b0cc5fc5c652bd8d324c05840",
+      "bytes": 7772
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_17.json",
+      "sha256": "3540c5c17f9d1e257b4a2caaa1b744a1b5b546a26b3496b90054afafc61f79ec",
+      "bytes": 7844
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_18.json",
+      "sha256": "90ae8e8a4cede14511396215fef4ee5e03cbf59932703e4438a2ad9ce9b11d50",
+      "bytes": 7844
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_19.json",
+      "sha256": "08afda2cf7e1ec7586c50761ce53a48c1d89063637b01e15a625b23ead5dbb11",
+      "bytes": 7840
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_20.json",
+      "sha256": "5ed251a668220cb5fd043ad2fca26cde1abc2a451a4b3f07ea1287d5d26feb8c",
+      "bytes": 7785
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_21.json",
+      "sha256": "f6b5d68c62306d3400fc53639884f6840d8f090d955cecf697ecf1f9a9dc5029",
+      "bytes": 7830
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_22.json",
+      "sha256": "2246d5808c57204d5aac667d820f1aacda7fd34af255b63592cbf6e5aed4834b",
+      "bytes": 7758
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_23.json",
+      "sha256": "1640160bad50139ec7f14057173570f823cab4f19419c2a927d9197a66ae295a",
+      "bytes": 7803
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_24.json",
+      "sha256": "0c67aa642bc6256e702f680da5621c67fe96e7962c899039ef5cf6d3098a4b5c",
+      "bytes": 7775
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_25.json",
+      "sha256": "ce1bdb5418968df3ff2fa3988d900e26ac99e8b70310f3ee9c55693d74788429",
+      "bytes": 7820
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_26.json",
+      "sha256": "e134eb350df42b0baa070cdc07b1ac59ce3a2f8e742ebce4ee23fdde7dfb6d55",
+      "bytes": 7887
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_27.json",
+      "sha256": "acfa2d75db7559e725b25e8da2a40bce86a3c497f5a459d68f32b0e41797bac5",
+      "bytes": 7837
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_28.json",
+      "sha256": "b3b1ada6732b51f14476903ef576daac3bfe17e46ca643aafb8bbdf3222e3182",
+      "bytes": 7823
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_29.json",
+      "sha256": "5ae1a667f1c8d1f6a9eee70630395865f8b75885d76bfd5fdd2d307c0898aff3",
+      "bytes": 7795
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_30.json",
+      "sha256": "696344f5647403f4a2fab47b426587edd398f7f1fd9d51ec72faf2c8dfcc7f15",
+      "bytes": 7837
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_31.json",
+      "sha256": "5cfd65e76436594c3295a2b660c512a71283f22474f27a7623ff392f3ef73c15",
+      "bytes": 7741
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_32.json",
+      "sha256": "8c4f5cdc7190e6297e0d6d24f8cfac9ea588a0b807cfe7e1a18f64509d5ff8b2",
+      "bytes": 7798
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_33.json",
+      "sha256": "ed8f6ad95968705c3c42364edb4bbc9e42541fff6025b5ef3fc8f8051818b702",
+      "bytes": 7809
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_34.json",
+      "sha256": "ca9f2bdddc045cd2ef359efd03c20f52e6229cbbbd828af28c8a6c313b0816c6",
+      "bytes": 7810
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_35.json",
+      "sha256": "0cac2038f48381dcb7f8864670e2175733a7ca7ac511e3a4871f0c1d8545b722",
+      "bytes": 7809
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_36.json",
+      "sha256": "430f649f996593c6c655dcd693dc3d0c09028541c70ff1ad390230923c30f370",
+      "bytes": 7862
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_37.json",
+      "sha256": "3ac3494dc22ba20675c9d8db369709d5dca7e656085e4d4f5c1a0c3eaa53d3b0",
+      "bytes": 7833
+    },
+    {
+      "path": "round10/results/records/hauer_real_pair_38.json",
+      "sha256": "7cc2c97c175a3f4aa8551e7a4868a542cc592b5444aeb01b3db43c8817c1436e",
+      "bytes": 7825
+    },
+    {
+      "path": "round10/results/records/hauer_real_scores.npz",
+      "sha256": "108de50dd0dc08c6e2ddb6613fe13379904999166b95001f235308ef503ce3bf",
+      "bytes": 7114296
+    },
+    {
+      "path": "round10/results/regression_diagnostic.json",
+      "sha256": "16a78ef1cc5b7094fe6652f8a9e14b56a8843fbef2e28292ab9d9d8341efdbea",
+      "bytes": 435
+    },
+    {
+      "path": "round10/results/score_matrix_manifest.json",
+      "sha256": "cfabceaf684c9ed15ffb5b481a01119558bb4ba2cd8aaa55559696a96f774f77",
+      "bytes": 17791
+    },
+    {
+      "path": "round10/results/summary.json",
+      "sha256": "b519a56a115eeed4f04823f796c2b89fb0c81eab4a449e58f30773f400abcafc",
+      "bytes": 25521
+    },
+    {
+      "path": "round10/table_search.py",
+      "sha256": "15680e28ab7634d33d40c3fda38fbf9e68a55428127b7898113ce5ac1d1d5d75",
+      "bytes": 7341
+    }
+  ],
+  "full_score_matrices_deliberately_omitted": [
+    "round10/results/records/bailey_01_scores.npz",
+    "round10/results/records/bailey_02_scores.npz",
+    "round10/results/records/bailey_03_scores.npz",
+    "round10/results/records/bailey_04_scores.npz",
+    "round10/results/records/bailey_05_scores.npz",
+    "round10/results/records/bailey_06_scores.npz",
+    "round10/results/records/bailey_07_scores.npz",
+    "round10/results/records/bailey_08_scores.npz",
+    "round10/results/records/bailey_09_scores.npz",
+    "round10/results/records/brewer_01_scores.npz",
+    "round10/results/records/brewer_02_scores.npz",
+    "round10/results/records/brewer_03_scores.npz",
+    "round10/results/records/elgar_caractacus_postcard_scores.npz",
+    "round10/results/records/elgar_march_1897_scores.npz",
+    "round10/results/records/hart_real_pair_00_scores.npz",
+    "round10/results/records/hart_real_pair_01_scores.npz",
+    "round10/results/records/hart_real_pair_02_scores.npz",
+    "round10/results/records/hart_real_pair_03_scores.npz",
+    "round10/results/records/hart_real_pair_04_scores.npz",
+    "round10/results/records/hart_real_pair_05_scores.npz",
+    "round10/results/records/hart_real_pair_06_scores.npz",
+    "round10/results/records/hart_real_pair_07_scores.npz",
+    "round10/results/records/hart_real_pair_08_scores.npz",
+    "round10/results/records/hart_real_pair_09_scores.npz",
+    "round10/results/records/hart_real_pair_10_scores.npz",
+    "round10/results/records/hart_real_pair_11_scores.npz",
+    "round10/results/records/hart_real_pair_12_scores.npz",
+    "round10/results/records/hart_real_pair_13_scores.npz",
+    "round10/results/records/hart_real_pair_14_scores.npz",
+    "round10/results/records/hart_real_pair_15_scores.npz",
+    "round10/results/records/hart_real_pair_16_scores.npz",
+    "round10/results/records/hart_real_pair_17_scores.npz",
+    "round10/results/records/hart_real_pair_18_scores.npz",
+    "round10/results/records/hart_real_pair_19_scores.npz",
+    "round10/results/records/hart_real_pair_20_scores.npz",
+    "round10/results/records/hart_real_pair_21_scores.npz",
+    "round10/results/records/hart_real_pair_22_scores.npz",
+    "round10/results/records/hart_real_pair_23_scores.npz",
+    "round10/results/records/hart_real_pair_24_scores.npz",
+    "round10/results/records/hart_real_pair_25_scores.npz",
+    "round10/results/records/hart_real_pair_26_scores.npz",
+    "round10/results/records/hart_real_pair_27_scores.npz",
+    "round10/results/records/hart_real_pair_28_scores.npz",
+    "round10/results/records/hart_real_pair_29_scores.npz",
+    "round10/results/records/hart_real_pair_30_scores.npz",
+    "round10/results/records/hart_real_pair_31_scores.npz",
+    "round10/results/records/hart_real_pair_32_scores.npz",
+    "round10/results/records/hart_real_pair_33_scores.npz",
+    "round10/results/records/hart_real_pair_34_scores.npz",
+    "round10/results/records/hart_real_pair_35_scores.npz",
+    "round10/results/records/hart_real_pair_36_scores.npz",
+    "round10/results/records/hart_real_pair_37_scores.npz",
+    "round10/results/records/hart_real_pair_38_scores.npz",
+    "round10/results/records/hauer_real_pair_00_scores.npz",
+    "round10/results/records/hauer_real_pair_01_scores.npz",
+    "round10/results/records/hauer_real_pair_02_scores.npz",
+    "round10/results/records/hauer_real_pair_03_scores.npz",
+    "round10/results/records/hauer_real_pair_04_scores.npz",
+    "round10/results/records/hauer_real_pair_05_scores.npz",
+    "round10/results/records/hauer_real_pair_06_scores.npz",
+    "round10/results/records/hauer_real_pair_07_scores.npz",
+    "round10/results/records/hauer_real_pair_08_scores.npz",
+    "round10/results/records/hauer_real_pair_09_scores.npz",
+    "round10/results/records/hauer_real_pair_10_scores.npz",
+    "round10/results/records/hauer_real_pair_11_scores.npz",
+    "round10/results/records/hauer_real_pair_12_scores.npz",
+    "round10/results/records/hauer_real_pair_13_scores.npz",
+    "round10/results/records/hauer_real_pair_14_scores.npz",
+    "round10/results/records/hauer_real_pair_15_scores.npz",
+    "round10/results/records/hauer_real_pair_16_scores.npz",
+    "round10/results/records/hauer_real_pair_17_scores.npz",
+    "round10/results/records/hauer_real_pair_18_scores.npz",
+    "round10/results/records/hauer_real_pair_19_scores.npz",
+    "round10/results/records/hauer_real_pair_20_scores.npz",
+    "round10/results/records/hauer_real_pair_21_scores.npz",
+    "round10/results/records/hauer_real_pair_22_scores.npz",
+    "round10/results/records/hauer_real_pair_23_scores.npz",
+    "round10/results/records/hauer_real_pair_24_scores.npz",
+    "round10/results/records/hauer_real_pair_25_scores.npz",
+    "round10/results/records/hauer_real_pair_26_scores.npz",
+    "round10/results/records/hauer_real_pair_27_scores.npz",
+    "round10/results/records/hauer_real_pair_28_scores.npz",
+    "round10/results/records/hauer_real_pair_29_scores.npz",
+    "round10/results/records/hauer_real_pair_30_scores.npz",
+    "round10/results/records/hauer_real_pair_31_scores.npz",
+    "round10/results/records/hauer_real_pair_32_scores.npz",
+    "round10/results/records/hauer_real_pair_33_scores.npz",
+    "round10/results/records/hauer_real_pair_34_scores.npz",
+    "round10/results/records/hauer_real_pair_35_scores.npz",
+    "round10/results/records/hauer_real_pair_36_scores.npz",
+    "round10/results/records/hauer_real_pair_37_scores.npz",
+    "round10/results/records/hauer_real_pair_38_scores.npz"
+  ],
+  "omitted_matrix_count": 92,
+  "recreate": "python round10/reproduce.py --all --save",
+  "manifest_not_self_hashed": true
+}

@@ -1,0 +1,12 @@
+{
+  "release_asset": "dorabella-reviewed-own-evidence-20261021.zip",
+  "size_bytes": 161883293,
+  "sha256": "b3a6d9d8e1d156bcee216487071a3ac007225cdae65547b913c10c4c22c0e545",
+  "unique_objects_verified": 109726,
+  "provenance_mappings_verified": 147496,
+  "excluded_hash_overlap": 0,
+  "additional_credential_and_signed_url_scan_matches": 0,
+  "bytes_preserved": true,
+  "no_research_code_executed": true,
+  "credential_detector_note": "Credential prefixes are case-sensitive and token-delimited; lowercase generated cipher output is not treated as a credential."
+}

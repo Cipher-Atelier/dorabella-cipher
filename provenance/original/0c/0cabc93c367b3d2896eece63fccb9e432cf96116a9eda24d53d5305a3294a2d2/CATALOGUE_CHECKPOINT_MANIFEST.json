@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "path": "catalogue/catalogue.bin",
+      "bytes": 6221764,
+      "sha256": "8e29af726d88e0c2e711e03ab4019a3b0666fb0d4184302080edd6733013e76e"
+    },
+    {
+      "path": "catalogue/catalogue.json",
+      "bytes": 568962,
+      "sha256": "d7dda2d132232f843374f70cb6f6bd048b30a0c9724c539131f19eee8365926c"
+    },
+    {
+      "path": "catalogue/result.json",
+      "bytes": 550,
+      "sha256": "dcce1a50b2446b5060e87caa8a442b4f2e4099f6d56e7ab3dc76cfe32080a8cd"
+    },
+    {
+      "path": "rebuild_catalogue.py",
+      "bytes": 3230,
+      "sha256": "d75d1692ece733d011d69c039aea6c63782f66e5c8e3330652617fd60f1cbc79"
+    },
+    {
+      "path": "CATALOGUE_PREP_FREEZE.json",
+      "bytes": 587,
+      "sha256": "d1ddda649cccadb8bc9c9063e66cc2dd4f3794b4adef3f352faee90c3bbc6565"
+    },
+    {
+      "path": "model_inputs.json",
+      "bytes": 3165,
+      "sha256": "ef691ac69cb2a0a5f66b08b11bb024ec16093d6d4b8d0131e50e9758090c5aab"
+    },
+    {
+      "path": "datasets.json",
+      "bytes": 4124,
+      "sha256": "46989caf50bc25a0a6979cde3ea28f6eae8430ddb1c00ee764f62c2e3a094c2f"
+    },
+    {
+      "path": "RESTORATION_RECEIPT.json",
+      "bytes": 3520,
+      "sha256": "afd3ca38ff17dcc7cb3ebcd3e938d202c449465dec7dc330e41910eaf1440da1"
+    }
+  ],
+  "build_tool_observed_exit": 0,
+  "tool_session": 36070
+}

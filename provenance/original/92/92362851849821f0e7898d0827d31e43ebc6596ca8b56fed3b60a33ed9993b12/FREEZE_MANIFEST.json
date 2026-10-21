@@ -1,0 +1,119 @@
+{
+  "version": "CH3-SA-dev-v1",
+  "status": "FROZEN_BEFORE_FIRST_ATTEMPT",
+  "created_utc": "2026-10-17T03:48:47.109574+00:00",
+  "runtime": {
+    "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "binary_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "dependency_files": {
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/random.py": "de48263a837339c7e01cf9f3c4d756696e0e0775f7778eb9cf81ad5b00134569",
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/hashlib.py": "6dbdebf270868b391080e21dc9687eddfaf321c965ad979f68d3f5c423c613ab",
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/gzip.py": "ea6e194b9df26398bf0d5215e63320c7b9d801b2d8b723fb9c80619df48076e9",
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5"
+    },
+    "module_origins": {
+      "math": {
+        "origin": "built-in",
+        "file": null,
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      },
+      "random": {
+        "origin": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/random.py",
+        "file": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/random.py",
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      },
+      "_random": {
+        "origin": "built-in",
+        "file": null,
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      },
+      "hashlib": {
+        "origin": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/hashlib.py",
+        "file": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/hashlib.py",
+        "binding": "interpreter binary for built-in/frozen modules; direct hash when a source/extension file exists"
+      }
+    },
+    "uname": [
+      "Linux",
+      "5eebc2aacaf2",
+      "6.18.55",
+      "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+      "x86_64"
+    ],
+    "flags": [
+      "-I",
+      "-S"
+    ]
+  },
+  "files": {
+    "STATIC_REVIEW.json": {
+      "sha256": "af03f7d245554eed12159bd7db45b9450c37b1e1adb2b1d3dcfa6b2ce9e2b47a",
+      "bytes": 3567
+    },
+    "evidence/first_neighborhoods.json": {
+      "sha256": "42ff69fbabd1bc6853827a5f17f581ba34f8fe750691f37189dbe63a50835abe",
+      "bytes": 18807
+    },
+    "frozen/PLAN.md": {
+      "sha256": "3ad0fef1756f56304071b72bcf657a2652e92791b11d72c9d94ba2a313831aba",
+      "bytes": 15249
+    },
+    "frozen/decoder_controls.json": {
+      "sha256": "74c44ea9113a9bc93abdfbcec2270221b194f8a7c8007d92fa8bd7bf1ae688e8",
+      "bytes": 7187
+    },
+    "frozen/initial_states.json": {
+      "sha256": "3f35f25f792829938b47148edefc4227e1e64e30e7ea60a85246431fd19cecd5",
+      "bytes": 1199455
+    },
+    "frozen/original_run_ch3.py.txt": {
+      "sha256": "37df8cd01cf5da1bc51a64ba282117fcf10afb23adfc842a33af9611c6effca8",
+      "bytes": 20384
+    },
+    "frozen/quadgrams.txt": {
+      "sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+      "bytes": 3289600
+    },
+    "frozen/seeds.json": {
+      "sha256": "544c4c06f3dfe801ad0212d958e1e9d7ffabc86a73423afeb05ffce931d0d9f6",
+      "bytes": 7643
+    },
+    "preflight.json": {
+      "sha256": "a6ef5b6e33b00aa8b19e02bb5b177b3a3f5db441bb57c82cf69772166d29adc6",
+      "bytes": 3285
+    },
+    "prepare.py": {
+      "sha256": "1051d1e3bea62ddd95b1d9c56ddd77ee80373a91788354fd09be736060564cc5",
+      "bytes": 3381
+    },
+    "private/control_truth.json": {
+      "sha256": "23c8e60c24f77a8b8ed69a17f6d7b8b2fd6bf7722da101c9819974f29db831df",
+      "bytes": 203993
+    },
+    "private/old_assessment_controls.json": {
+      "sha256": "8fa0c95f30d42e16cab4ca5c6ff656b348825b0c95a4631d4ce5a2e1374d79b5",
+      "bytes": 3179
+    },
+    "readback.py": {
+      "sha256": "5a4bd1bfcd939a2cee1981dd3386f71530cfb913fc0a985cf2765e20d4ef63b5",
+      "bytes": 9737
+    },
+    "runner.py": {
+      "sha256": "d00653c2792d6fdb159c165ddc9e21d25fc2e69803c4477ebb36c59b289d27f9",
+      "bytes": 17163
+    },
+    "static_freeze.py": {
+      "sha256": "f4730ba69240c6ee5e92110875cb87aec5138ea94147b26d30ac1bfff847828d",
+      "bytes": 4407
+    }
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-I",
+    "-S",
+    "/workspace/scratch/f24f8fae4976/CH3_SA_dev_v1_execution_20261017/runner.py"
+  ],
+  "proposals": 260000,
+  "cooperative_seconds": 60.0
+}

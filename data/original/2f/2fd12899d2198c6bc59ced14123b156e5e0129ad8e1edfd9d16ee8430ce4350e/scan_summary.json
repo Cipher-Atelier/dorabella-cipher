@@ -1,0 +1,1417 @@
+{
+  "protocol": {
+    "definitions": 672,
+    "states": 2,
+    "inputs": [
+      "cipher polarity",
+      "arc count",
+      "axis"
+    ],
+    "output": "same axis and arc count, polarity XOR current state",
+    "state_initial_values": [
+      0,
+      1
+    ],
+    "read_order": "left to right, no line/dot resets",
+    "screen_restarts": 2,
+    "screen_iterations": 4000,
+    "shortlist_size": 3,
+    "refine_restarts": 128,
+    "refine_iterations": 20000,
+    "identity_always_refined": true,
+    "canonicalize_symbol_names": true,
+    "deduplicate_equivalent_equality_patterns_per_input": true,
+    "seed": "SHA256(canonical cipher bytes + stage label), first 32 bits little-endian",
+    "primary_statistic": "maximum score over all screened/refined candidates",
+    "secondary_statistic": "maximum score minus identity score",
+    "negative_reference": "permute complete input glyphs, preserve their exact frequencies",
+    "selection_correction": "repeat entire family search, ranking and refinement on every control",
+    "limitations": [
+      "Not an exhaustive search over all finite-state ciphers.",
+      "The definitions were selected using prior exploratory analysis of Dorabella.",
+      "All transformations preserve the entire axis/arc sequence.",
+      "Modern English news model, not Elgar-era personal correspondence.",
+      "Heuristic search, not a proof of a global optimum."
+    ],
+    "negative_controls": 99,
+    "end_to_end_positives": 8
+  },
+  "observed": {
+    "best_score": -2.68617950235602,
+    "identity_score": -2.736933552947282,
+    "improvement": 0.05075405059126209,
+    "distinct_patterns": 207,
+    "best_rule": {
+      "input": "axis",
+      "R": 4,
+      "table": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "initial_state": 1
+    },
+    "top_candidates": [
+      {
+        "score": -2.68617950235602,
+        "rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "initial_state": 1
+        }
+      },
+      {
+        "score": -2.736933552947282,
+        "rule": {
+          "input": "polarity",
+          "R": 2,
+          "table": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "initial_state": 0
+        }
+      },
+      {
+        "score": -2.7790051215419416,
+        "rule": {
+          "input": "arcs",
+          "R": 3,
+          "table": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "initial_state": 0
+        }
+      },
+      {
+        "score": -2.829618873261057,
+        "rule": {
+          "input": "arcs",
+          "R": 3,
+          "table": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "initial_state": 1
+        }
+      },
+      {
+        "score": -2.9136263358735044,
+        "rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "initial_state": 0
+        }
+      },
+      {
+        "score": -2.949513681212653,
+        "rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "initial_state": 0
+        }
+      }
+    ],
+    "identity_won": false,
+    "id": "dorabella",
+    "seconds": 3.9519467850000183,
+    "source_info": {},
+    "candidate_text": "WYERUTDROPIENCEMEETYRECOGOAVIDEDTOROGYSEESTANDEVETHINCOLLOVISITHISCHKAISETHNIARRAITRNOR"
+  },
+  "negative_comparison": {
+    "best_score": {
+      "observed": -2.68617950235602,
+      "null_mean": -2.834277555433718,
+      "null_sd": 0.07211460268048749,
+      "exceedances": 3,
+      "controls": 99,
+      "p_plus_one": 0.04,
+      "null_min": -2.980189891482296,
+      "null_max": -2.626400691105849
+    },
+    "improvement": {
+      "observed": 0.05075405059126209,
+      "null_mean": 0.14314012461857345,
+      "null_sd": 0.08436127672707805,
+      "exceedances": 83,
+      "controls": 99,
+      "p_plus_one": 0.84,
+      "null_min": 0.0,
+      "null_max": 0.3567876427567843
+    },
+    "identity_score": {
+      "observed": -2.736933552947282,
+      "null_mean": -2.977417680052291,
+      "null_sd": 0.07513837352350791,
+      "exceedances": 0,
+      "controls": 99,
+      "p_plus_one": 0.01,
+      "null_min": -3.186103585604719,
+      "null_max": -2.793310156974414
+    }
+  },
+  "end_to_end_positive_accuracy_mean": 0.6968390804597702,
+  "end_to_end_positives_above_90_percent": 4,
+  "positive_cases": [
+    {
+      "best_score": -2.7656240384246624,
+      "identity_score": -3.005190709647359,
+      "improvement": 0.23956667122269626,
+      "distinct_patterns": 285,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "initial_state": 1
+      },
+      "top_candidates": [
+        {
+          "score": -2.7656240384246624,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.8709705003179686,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.9276310741544007,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.9916265812003187,
+          "rule": {
+            "input": "arcs",
+            "R": 3,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              1
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.9953137296884114,
+          "rule": {
+            "input": "arcs",
+            "R": 3,
+            "table": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -3.005190709647359,
+          "rule": {
+            "input": "polarity",
+            "R": 2,
+            "table": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_00",
+      "seconds": 4.241154531999996,
+      "source_info": {
+        "document": 20,
+        "offset": 72,
+        "plaintext_sha256": "404b36429d469f5e039415bebc79c42e7cbf58d48092c3d337513896ba749ad0",
+        "generating_rule": {
+          "input": "arcs",
+          "R": 3,
+          "table": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "initial_state": 0
+        }
+      },
+      "decipherment_accuracy": 0.05747126436781609,
+      "true_plaintext_score": -1.9841480606426867
+    },
+    {
+      "best_score": -2.6216908121441542,
+      "identity_score": -2.833556766609483,
+      "improvement": 0.21186595446532916,
+      "distinct_patterns": 286,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "initial_state": 1
+      },
+      "top_candidates": [
+        {
+          "score": -2.6216908121441542,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.676909310957255,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.7469412564920956,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.7935522229771115,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.8120464169736827,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.833556766609483,
+          "rule": {
+            "input": "polarity",
+            "R": 2,
+            "table": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_01",
+      "seconds": 4.030431668999995,
+      "source_info": {
+        "document": 21,
+        "offset": 41,
+        "plaintext_sha256": "6c93b642bf68701046e16cb19afc7b7761b97915cf8c734c1836aa5fa76b4196",
+        "generating_rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "initial_state": 0
+        }
+      },
+      "decipherment_accuracy": 0.6666666666666666,
+      "true_plaintext_score": -1.9446998904811574
+    },
+    {
+      "best_score": -1.7127880343389854,
+      "identity_score": -2.7141842533007297,
+      "improvement": 1.001396218961744,
+      "distinct_patterns": 272,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "initial_state": 1
+      },
+      "top_candidates": [
+        {
+          "score": -1.7127880343389854,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -1.7195880596857065,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.650074767562932,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.6540134690416815,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.6644625437105067,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.6676727247137473,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_02",
+      "seconds": 4.27403343200001,
+      "source_info": {
+        "document": 22,
+        "offset": 149,
+        "plaintext_sha256": "6fe1e53701a2bd0b4c6302c764b7120f19de1589ab56f54a8adeef198a24952f",
+        "generating_rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "initial_state": 1
+        }
+      },
+      "decipherment_accuracy": 0.9770114942528736,
+      "true_plaintext_score": -1.7195880596857065
+    },
+    {
+      "best_score": -2.708709082747711,
+      "identity_score": -3.055591978941778,
+      "improvement": 0.34688289619406665,
+      "distinct_patterns": 288,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "initial_state": 1
+      },
+      "top_candidates": [
+        {
+          "score": -2.708709082747711,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.847997398682991,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.9294035019203157,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -3.0254350404469266,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -3.0431898526259937,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -3.049046031789261,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 0
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_03",
+      "seconds": 3.9496334780000097,
+      "source_info": {
+        "document": 23,
+        "offset": 180,
+        "plaintext_sha256": "9808295baab7f395e2639fb52aeec516bb0b038f9357eb9f906cd8bda114205d",
+        "generating_rule": {
+          "input": "arcs",
+          "R": 3,
+          "table": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "initial_state": 1
+        }
+      },
+      "decipherment_accuracy": 0.42528735632183906,
+      "true_plaintext_score": -2.1426698925702405
+    },
+    {
+      "best_score": -1.9190080981883493,
+      "identity_score": -3.0835612405650155,
+      "improvement": 1.164553142376666,
+      "distinct_patterns": 287,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "initial_state": 0
+      },
+      "top_candidates": [
+        {
+          "score": -1.9190080981883493,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -1.925265406221473,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.3526033032240425,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -3.0463464024102778,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -3.057849604368618,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -3.0588726523321013,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_04",
+      "seconds": 4.169746506000024,
+      "source_info": {
+        "document": 24,
+        "offset": 174,
+        "plaintext_sha256": "dcfa78a4881f6e4f363d1a4b91bfcad9c4778b64a5d94cb33aa90ad9c54cf287",
+        "generating_rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "initial_state": 0
+        }
+      },
+      "decipherment_accuracy": 0.9540229885057471,
+      "true_plaintext_score": -2.055005251314481
+    },
+    {
+      "best_score": -2.910933999962055,
+      "identity_score": -3.1354941273092485,
+      "improvement": 0.2245601273471935,
+      "distinct_patterns": 282,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "initial_state": 1
+      },
+      "top_candidates": [
+        {
+          "score": -2.910933999962055,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.923325703937891,
+          "rule": {
+            "input": "arcs",
+            "R": 3,
+            "table": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -3.1354941273092485,
+          "rule": {
+            "input": "polarity",
+            "R": 2,
+            "table": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -3.1380699640450365,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -3.1585009937326434,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -3.1736144740318455,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 0
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_05",
+      "seconds": 3.924530933999961,
+      "source_info": {
+        "document": 25,
+        "offset": 104,
+        "plaintext_sha256": "4684ecf94d4669b57e0a6c53a1d5f058ead61534f68a9ebd4e038b2818b76735",
+        "generating_rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "initial_state": 0
+        }
+      },
+      "decipherment_accuracy": 0.5517241379310345,
+      "true_plaintext_score": -2.4175290082830956
+    },
+    {
+      "best_score": -1.9571787899056765,
+      "identity_score": -1.9571787899056765,
+      "improvement": 0.0,
+      "distinct_patterns": 276,
+      "best_rule": {
+        "input": "polarity",
+        "R": 2,
+        "table": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "initial_state": 0
+      },
+      "top_candidates": [
+        {
+          "score": -1.9571787899056765,
+          "rule": {
+            "input": "polarity",
+            "R": 2,
+            "table": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.186022794737127,
+          "rule": {
+            "input": "arcs",
+            "R": 3,
+            "table": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.8412286949168934,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.87391709288202,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.944144192776151,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.9473170209082973,
+          "rule": {
+            "input": "arcs",
+            "R": 3,
+            "table": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 1
+          }
+        }
+      ],
+      "identity_won": true,
+      "id": "positive_06",
+      "seconds": 4.306266828000048,
+      "source_info": {
+        "document": 26,
+        "offset": 280,
+        "plaintext_sha256": "1416f5a35fec4cd83ff322cfbc5e3ae4c9a07a63afd124718e04121fedf8d9bd",
+        "generating_rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "initial_state": 1
+        }
+      },
+      "decipherment_accuracy": 0.9770114942528736,
+      "true_plaintext_score": -1.9644698245674685
+    },
+    {
+      "best_score": -2.2376049249769596,
+      "identity_score": -3.0153550731064365,
+      "improvement": 0.7777501481294767,
+      "distinct_patterns": 286,
+      "best_rule": {
+        "input": "axis",
+        "R": 4,
+        "table": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "initial_state": 0
+      },
+      "top_candidates": [
+        {
+          "score": -2.2376049249769596,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.291663356357449,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.7303118895529983,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.88960994409042,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "initial_state": 1
+          }
+        },
+        {
+          "score": -2.955076969516183,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "initial_state": 0
+          }
+        },
+        {
+          "score": -2.9561508776075165,
+          "rule": {
+            "input": "axis",
+            "R": 4,
+            "table": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "initial_state": 0
+          }
+        }
+      ],
+      "identity_won": false,
+      "id": "positive_07",
+      "seconds": 4.042028624000011,
+      "source_info": {
+        "document": 27,
+        "offset": 143,
+        "plaintext_sha256": "e18f0f3fd56c57d45d269bd699d933163ed6b9e14aad10414c8abc8c4c8c549c",
+        "generating_rule": {
+          "input": "axis",
+          "R": 4,
+          "table": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "initial_state": 1
+        }
+      },
+      "decipherment_accuracy": 0.9655172413793104,
+      "true_plaintext_score": -2.289770270821701
+    }
+  ]
+}

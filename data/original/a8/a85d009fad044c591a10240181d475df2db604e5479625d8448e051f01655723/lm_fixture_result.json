@@ -1,0 +1,777 @@
+{
+  "version": "TS-LM-PREFETCH-DIFF-v1",
+  "status": "PASS_FIXTURE_REAL_SKIPPED_RESOURCE",
+  "start_utc": "2026-10-18T00:18:26.764457+00:00",
+  "commands": [
+    {
+      "role": "reference_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/child_gate.py",
+        "reference_perl",
+        "4"
+      ],
+      "pid_local": 5,
+      "start_observed_utc": "2026-10-18T00:18:26.838857+00:00",
+      "anchor": {
+        "visible_pid": 12042,
+        "visible_ppid": 12038,
+        "visible_pgid": 12042,
+        "visible_session": 12042,
+        "state": "S",
+        "starttime": 8225046,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          12042,
+          5
+        ],
+        "nspgid": [
+          12042,
+          5
+        ],
+        "nssid": [
+          12042,
+          5
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/child_gate.py",
+          "reference_perl",
+          "4"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35620 kB",
+          "VmSize:\t   35620 kB",
+          "VmHWM:\t    8608 kB",
+          "VmRSS:\t    8608 kB"
+        ],
+        "pid": 5,
+        "pgid": 5,
+        "session": 5
+      }
+    },
+    {
+      "role": "adapted_broker",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/child_gate.py",
+        "adapted_broker",
+        "9"
+      ],
+      "pid_local": 6,
+      "start_observed_utc": "2026-10-18T00:18:26.921865+00:00",
+      "anchor": {
+        "visible_pid": 12043,
+        "visible_ppid": 12038,
+        "visible_pgid": 12043,
+        "visible_session": 12043,
+        "state": "S",
+        "starttime": 8225055,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          12043,
+          6
+        ],
+        "nspgid": [
+          12043,
+          6
+        ],
+        "nssid": [
+          12043,
+          6
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/child_gate.py",
+          "adapted_broker",
+          "9"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35620 kB",
+          "VmSize:\t   35620 kB",
+          "VmHWM:\t    8616 kB",
+          "VmRSS:\t    8616 kB"
+        ],
+        "pid": 6,
+        "pgid": 6,
+        "session": 6
+      }
+    },
+    {
+      "role": "adapted_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/child_gate.py",
+        "adapted_perl",
+        "12",
+        "7",
+        "5"
+      ],
+      "pid_local": 7,
+      "start_observed_utc": "2026-10-18T00:18:26.948281+00:00",
+      "anchor": {
+        "visible_pid": 12044,
+        "visible_ppid": 12038,
+        "visible_pgid": 12044,
+        "visible_session": 12044,
+        "state": "S",
+        "starttime": 8225057,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          12044,
+          7
+        ],
+        "nspgid": [
+          12044,
+          7
+        ],
+        "nssid": [
+          12044,
+          7
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/child_gate.py",
+          "adapted_perl",
+          "12",
+          "7",
+          "5"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35620 kB",
+          "VmSize:\t   35620 kB",
+          "VmHWM:\t    8616 kB",
+          "VmRSS:\t    8616 kB"
+        ],
+        "pid": 7,
+        "pgid": 7,
+        "session": 7
+      }
+    }
+  ],
+  "signals": [],
+  "phases": [
+    {
+      "release": "reference_perl",
+      "utc": "2026-10-18T00:18:26.864170+00:00",
+      "elapsed": 0.09997094100981485
+    },
+    {
+      "terminal": "reference_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T00:18:26.921071+00:00",
+      "elapsed": 0.15687188701122068
+    },
+    {
+      "release": "adapted_broker",
+      "utc": "2026-10-18T00:18:26.977139+00:00",
+      "elapsed": 0.21294011200370733
+    },
+    {
+      "release": "adapted_perl",
+      "utc": "2026-10-18T00:18:26.980774+00:00",
+      "elapsed": 0.21657364899874665
+    },
+    {
+      "terminal": "adapted_broker",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T00:18:27.215664+00:00",
+      "elapsed": 0.4514652290090453
+    },
+    {
+      "terminal": "adapted_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T00:18:27.217532+00:00",
+      "elapsed": 0.4533320430055028
+    }
+  ],
+  "target_inputs": 0,
+  "control_87_inputs": 0,
+  "full_model_loads": 0,
+  "stages": {
+    "fixture": {
+      "status": "PASS_FINITE_DIFFERENTIAL_ONLY",
+      "events": 320,
+      "base_score_calls": 64,
+      "edge_combined_scores": 11,
+      "tie_scores": 2,
+      "expected_log_errors": 2,
+      "perl_negative_cases": 11,
+      "trace_sha256": "16e1ec218875004c4786160c48f003b8873d45e5cba5253c6c383e375c977938",
+      "broker": {
+        "requests": 158,
+        "lookups": 2098,
+        "response_frames": 158,
+        "response_bytes": 47612,
+        "max_frame": 519,
+        "closed": true,
+        "stores": {
+          "base": {
+            "calls": 1991,
+            "hits": 188,
+            "misses": 1803,
+            "evictions": 1800,
+            "preads": 13412,
+            "read_bytes": 181142,
+            "max_comparisons": 6,
+            "cache_payload_peak": 31
+          },
+          "edge": {
+            "calls": 107,
+            "hits": 8,
+            "misses": 99,
+            "evictions": 96,
+            "preads": 790,
+            "read_bytes": 11280,
+            "max_comparisons": 5,
+            "cache_payload_peak": 63
+          }
+        }
+      }
+    },
+    "real": {
+      "status": "SKIPPED_RESOURCE",
+      "phase": "PRE_HASH",
+      "observed": {
+        "memory.max": "8589934592",
+        "memory.current": "6814613504",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      }
+    }
+  },
+  "manifest_sha256": "7009da08780275e7a917e6712098294f87035a40cceeb65fe2a388fb20ec6d86",
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "6810296320",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "memory_stat_before": "anon 97673216\nfile 6498848768\nkernel 212299776\nkernel_stack 704512\npagetables 3457024\nsec_pagetables 0\npercpu 6556\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 860160\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 50331648\nshmem_thp 0\ninactive_anon 97361920\nactive_anon 73728\ninactive_file 8851456\nactive_file 6489997312\nunevictable 0\nslab_reclaimable 207170096\nslab_unreclaimable 919592\nslab 208089688\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 13115421\npgmajfault 0\npgrefill 0\npgactivate 1697388\npgdeactivate 0\npglazyfree 105\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+  "namespace_self": {
+    "visible_pid": 12038,
+    "visible_ppid": 12037,
+    "visible_pgid": 12037,
+    "visible_session": 12037,
+    "state": "R",
+    "starttime": 8225036,
+    "pid_namespace": "pid:[4026532277]",
+    "nspid": [
+      12038,
+      2
+    ],
+    "nspgid": [
+      12037,
+      1
+    ],
+    "nssid": [
+      12037,
+      1
+    ],
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-B",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/run.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   40896 kB",
+      "VmSize:\t   40896 kB",
+      "VmHWM:\t   14548 kB",
+      "VmRSS:\t   14548 kB"
+    ],
+    "pid": 2,
+    "pgid": 1,
+    "session": 1
+  },
+  "process_guard_cases": [
+    {
+      "id": "self_exact",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "actual": "CURRENT_SELF_OR_ANCESTOR"
+    },
+    {
+      "id": "ancestor_exact",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "actual": "CURRENT_SELF_OR_ANCESTOR"
+    },
+    {
+      "id": "self_pid_reused",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "same_pid_different_namespace",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "same_pid_different_local_pid",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "bad_visible_nspid",
+      "expected": "STOP_MATCH_IDENTITY",
+      "actual": "STOP_MATCH_IDENTITY"
+    },
+    {
+      "id": "bad_local_nspid",
+      "expected": "STOP_MATCH_NSPID",
+      "actual": "STOP_MATCH_NSPID"
+    },
+    {
+      "id": "old_v1_runner",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "foreign_broker_namespace_unknown",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "foreign_perl",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "old_original_perl",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "current_exact_carrier",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    },
+    {
+      "id": "old_same_command_carrier",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "wrong_carrier_executable",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "foreign_shell_command",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "changed_carrier_command",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "carrier_future_start",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "similar_unrelated_path",
+      "expected": "UNRELATED",
+      "actual": "UNRELATED"
+    },
+    {
+      "id": "saved_v1_current_carrier_1",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    },
+    {
+      "id": "saved_v1_current_carrier_2",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    }
+  ],
+  "process_guard": {
+    "records": [
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 12030,
+          "visible_ppid": 228,
+          "visible_pgid": 12030,
+          "visible_session": 12030,
+          "state": "S",
+          "starttime": 8225033,
+          "pid_namespace": null,
+          "nspid": [
+            12030
+          ],
+          "nspgid": [
+            12030
+          ],
+          "nssid": [
+            12030
+          ],
+          "cmdline": [
+            "bwrap",
+            "--as-pid-1",
+            "--new-session",
+            "--die-with-parent",
+            "--bind",
+            "/",
+            "/",
+            "--dev",
+            "/dev",
+            "--bind-try",
+            "/dev/shm",
+            "/dev/shm",
+            "--unshare-user",
+            "--unshare-ipc",
+            "--unshare-pid",
+            "--unshare-net",
+            "--cap-drop",
+            "ALL",
+            "--argv0",
+            "codex-linux-sandbox",
+            "--",
+            "/opt/codex/bin/codex",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--apply-seccomp-then-exec",
+            "--managed-network",
+            "{\"loopbackPorts\":[40449,46523],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--proxy-route-spec",
+            "{\"routes\":[{\"env_key\":\"ALL_PROXY\",\"control_fd\":4},{\"env_key\":\"BUNDLE_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"BUNDLE_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"FTP_PROXY\",\"control_fd\":4},{\"env_key\":\"HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_PROXY\",\"control_fd\":5},{\"env_key\":\"PIP_PROXY\",\"control_fd\":5},{\"env_key\":\"WSS_PROXY\",\"control_fd\":5},{\"env_key\":\"WS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"all_proxy\",\"control_fd\":4},{\"env_key\":\"ftp_proxy\",\"control_fd\":4},{\"env_key\":\"http_proxy\",\"control_fd\":5},{\"env_key\":\"https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_http_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_proxy\",\"control_fd\":5},{\"env_key\":\"ws_proxy\",\"control_fd\":5},{\"env_key\":\"wss_proxy\",\"control_fd\":5}]}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t    3592 kB",
+            "VmSize:\t    3592 kB",
+            "VmHWM:\t     904 kB",
+            "VmRSS:\t     904 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/workspace/scratch/f24f8fae4976/bwrap"
+        }
+      },
+      {
+        "classification": "CURRENT_INVOCATION_CARRIER",
+        "record": {
+          "visible_pid": 12031,
+          "visible_ppid": 12030,
+          "visible_pgid": 12030,
+          "visible_session": 12030,
+          "state": "S",
+          "starttime": 8225035,
+          "pid_namespace": null,
+          "nspid": [
+            12031
+          ],
+          "nspgid": [
+            12030
+          ],
+          "nssid": [
+            12030
+          ],
+          "cmdline": [
+            "/root/.codex/tmp/arg0/codex-arg0s8zeyZ/codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--managed-network",
+            "{\"loopbackPorts\":[40449,46523],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t    5972 kB",
+            "VmRSS:\t    5972 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/opt/codex/bin/codex"
+        }
+      },
+      {
+        "classification": "CURRENT_INVOCATION_CARRIER",
+        "record": {
+          "visible_pid": 12032,
+          "visible_ppid": 12030,
+          "visible_pgid": 12030,
+          "visible_session": 12030,
+          "state": "S",
+          "starttime": 8225035,
+          "pid_namespace": null,
+          "nspid": [
+            12032
+          ],
+          "nspgid": [
+            12030
+          ],
+          "nssid": [
+            12030
+          ],
+          "cmdline": [
+            "/root/.codex/tmp/arg0/codex-arg0s8zeyZ/codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--managed-network",
+            "{\"loopbackPorts\":[40449,46523],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t    5972 kB",
+            "VmRSS:\t    5972 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/opt/codex/bin/codex"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 12037,
+          "visible_ppid": 12030,
+          "visible_pgid": 12037,
+          "visible_session": 12037,
+          "state": "S",
+          "starttime": 8225036,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            12037,
+            1
+          ],
+          "nspgid": [
+            12037,
+            1
+          ],
+          "nssid": [
+            12037,
+            1
+          ],
+          "cmdline": [
+            "codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--apply-seccomp-then-exec",
+            "--managed-network",
+            "{\"loopbackPorts\":[40449,46523],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--proxy-route-spec",
+            "{\"routes\":[{\"env_key\":\"ALL_PROXY\",\"control_fd\":4},{\"env_key\":\"BUNDLE_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"BUNDLE_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"FTP_PROXY\",\"control_fd\":4},{\"env_key\":\"HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_PROXY\",\"control_fd\":5},{\"env_key\":\"PIP_PROXY\",\"control_fd\":5},{\"env_key\":\"WSS_PROXY\",\"control_fd\":5},{\"env_key\":\"WS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"all_proxy\",\"control_fd\":4},{\"env_key\":\"ftp_proxy\",\"control_fd\":4},{\"env_key\":\"http_proxy\",\"control_fd\":5},{\"env_key\":\"https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_http_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_proxy\",\"control_fd\":5},{\"env_key\":\"ws_proxy\",\"control_fd\":5},{\"env_key\":\"wss_proxy\",\"control_fd\":5}]}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t   14396 kB",
+            "VmRSS:\t   14396 kB"
+          ],
+          "pid": 1,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/opt/codex/bin/codex",
+          "exe_read_error": null,
+          "argv0_realpath": "/workspace/scratch/f24f8fae4976/codex-linux-sandbox"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 12038,
+          "visible_ppid": 12037,
+          "visible_pgid": 12037,
+          "visible_session": 12037,
+          "state": "R",
+          "starttime": 8225036,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            12038,
+            2
+          ],
+          "nspgid": [
+            12037,
+            1
+          ],
+          "nssid": [
+            12037,
+            1
+          ],
+          "cmdline": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-I",
+            "-S",
+            "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/run.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t   40896 kB",
+            "VmSize:\t   40896 kB",
+            "VmHWM:\t   14652 kB",
+            "VmRSS:\t   14652 kB"
+          ],
+          "pid": 2,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "exe_read_error": null,
+          "argv0_realpath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12"
+        }
+      }
+    ],
+    "blockers": [],
+    "context": {
+      "carrier_executable": "/opt/codex/bin/codex",
+      "shell_command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/launch.py",
+      "launch_floor_ticks": 8224036,
+      "self_starttime": 8225036
+    },
+    "namespace_self": {
+      "visible_pid": 12038,
+      "visible_ppid": 12037,
+      "visible_pgid": 12037,
+      "visible_session": 12037,
+      "state": "R",
+      "starttime": 8225036,
+      "pid_namespace": "pid:[4026532277]",
+      "nspid": [
+        12038,
+        2
+      ],
+      "nspgid": [
+        12037,
+        1
+      ],
+      "nssid": [
+        12037,
+        1
+      ],
+      "cmdline": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_LM_PREFETCH_DIFF_v1/run.py"
+      ],
+      "memory_status": [
+        "VmPeak:\t   40896 kB",
+        "VmSize:\t   40896 kB",
+        "VmHWM:\t   14548 kB",
+        "VmRSS:\t   14548 kB"
+      ],
+      "pid": 2,
+      "pgid": 1,
+      "session": 1
+    },
+    "identity_exclusion": "visible_pid + starttime + full NSpid + pid_namespace; no foreign namespace blanket exclusion"
+  },
+  "prior_live_matches": [],
+  "hashes_verified": true,
+  "real_pre_hash_resource": {
+    "memory.max": "8589934592",
+    "memory.current": "6814613504",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "terminal": [
+    {
+      "role": "reference_perl",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "adapted_broker",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "adapted_perl",
+      "exit": 0,
+      "group": []
+    }
+  ],
+  "terminal_confirmed": true,
+  "elapsed": 0.5278341730008833,
+  "end_utc": "2026-10-18T00:18:27.292042+00:00",
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "6813888512",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "memory_stat_after": "anon 100581376\nfile 6499094528\nkernel 212381696\nkernel_stack 704512\npagetables 3457024\nsec_pagetables 0\npercpu 6556\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 1081344\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 50331648\nshmem_thp 0\ninactive_anon 100306944\nactive_anon 77824\ninactive_file 9039872\nactive_file 6490005504\nunevictable 0\nslab_reclaimable 207263728\nslab_unreclaimable 917936\nslab 208181664\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 13131059\npgmajfault 0\npgrefill 0\npgactivate 1697390\npgdeactivate 0\npglazyfree 105\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+  "children_peak_rss_KiB": 14592,
+  "self_peak_rss_KiB": 17076,
+  "file_hashes": {
+    "adapted_perl.jsonl": "16e1ec218875004c4786160c48f003b8873d45e5cba5253c6c383e375c977938",
+    "perl_negatives.json": "d96ae8b5c9d905d205f3f08ebf6ddc656c0ada9e65a65b6f1b5c71067f536d94",
+    "adapted_broker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapted_broker_ready.json": "61a56e5a55eb1359cf07f4f742184e7c9e936b936a75084f2feba49c4034b7bb",
+    "reference_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapted_broker_terminal.json": "e23b2d05f4109d940c22044418bed996eb3f60bc833e49b180a4c74148f4b6f4",
+    "adapted_perl_ready.json": "55fd8dcfca2a5bbfac94f5e37ed303402391a9d5330b510ac647931e29a1262f",
+    "reference_perl.jsonl": "16e1ec218875004c4786160c48f003b8873d45e5cba5253c6c383e375c977938",
+    "reference_perl_ready.json": "06db4f263f977eb5200c10a2c23bafd6c8a18afb9a5b370bb601cd3e02f8d3a6",
+    "phase_deadline.json": "47b84a11fd688ef6302996ce5b4a7deec3039a954a81b5bdafa126766bc9f4f9",
+    "process_guard.json": "acb68ac390a87655171f0569cd343298440454c3bbb873f32f1c817afaf89b87",
+    "T0.json": "8afeb4b7ab53b20d900947814d8548287b7a1a4a7577e4db138d642d0262033d",
+    "adapted_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "observations.jsonl": "4b870b6790ca801405be735ca6e28bca4eecf448aed87f5a91138363cda69571",
+    "stage_real.json": "6f598bd72e7f93bafe180adca2ea5dd98e4de960c0141a058cc00608c48ccea9",
+    "adapted_broker_ipc.jsonl": "4ad1aec9908f380b54ca9f114f0d332d4770195f243292cf1e7b2d061c1471c9",
+    "stage_fixture.json": "534361a496b2bbf71e529024b124b0274a1f6f5c0936315b49a298246657988d"
+  }
+}

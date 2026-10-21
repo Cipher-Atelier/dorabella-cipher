@@ -1,0 +1,65 @@
+{
+  "version": "TS-RLIMIT-ORDER-REPAIR-v1",
+  "status": "REVIEWABLE_PATCH_ONLY_MAIN_SEARCH_NOT_AUTHORIZED",
+  "baseline": "TS-RECOVERED-SEARCH-v2",
+  "baseline_zip_sha256": "5b97698dd667a290a0cb62844a790376d839b19c47f673d9ec1cb5facd527817",
+  "baseline_freeze_sha256": "c12035b1494d3c2acc8a3b17abcd1208c30c2758d8481013cc3c4eff445d07b5",
+  "changed_runtime_files": [
+    "runtime/run_profile.py"
+  ],
+  "added_runtime_files": [
+    "runtime/limit_order.py"
+  ],
+  "unchanged": "launch.py, child_gate.py, all foreign computational code, broker, inputs, algorithm, seeds, arithmetic, score/count/time/memory/output gates",
+  "temporary_difference": "Supervisor RLIMIT_AS soft=128 MiB from prepare onwards; hard=256 MiB until both children ready, then hard=128 MiB before G. No capability/security change; finite inherited hard below any required role ceiling => STOP before setrlimit or spawn.",
+  "smoke": {
+    "one_attempt": true,
+    "code": "own Python + own NamespaceView only",
+    "python": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "flags": [
+      "-B",
+      "-I",
+      "-S"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_RLIMIT_ORDER_REPAIR_v1/smoke/run_smoke.py",
+    "work_seconds": 10,
+    "total_seconds": 15,
+    "max_processes": 3,
+    "AS_MiB": {
+      "supervisor": 128,
+      "broker_stub": 128,
+      "perl_stub": 256
+    },
+    "CPU_soft_hard": {
+      "supervisor": [
+        170,
+        175
+      ],
+      "children": [
+        120,
+        125
+      ]
+    },
+    "FSIZE": 8388608,
+    "NOFILE": 64,
+    "CORE": 0,
+    "resource_gate": "memory.max=8589934592 and memory.current<5468942336, no cache subtraction",
+    "negative_cases": [
+      "insufficient inherited AS hard128MiB",
+      "insufficient CPU hard174s",
+      "insufficient FSIZE hard8388607B",
+      "insufficient NOFILE hard63",
+      "invalid CORE soft1/hard0"
+    ],
+    "positive_cases": [
+      "staged supervisor getrlimit and /proc agree",
+      "both children blocked before release with exact role limits and unchanged unconfigured limits",
+      "supervisor exact final limits before G",
+      "broker stub normal exit0",
+      "idle Perl-role stub safely SIGTERM, exit-15, wait and groups empty"
+    ],
+    "stop": "any mismatch => STOP_SMOKE, no automatic repeat",
+    "success": "PASS_WRAPPER_LIMITS_ONLY; no solver runtime/import/compile; no scientific or sensitivity inference",
+    "timing_limit": "finite own work, cooperative checks and bounded waits; no realtime/host-crash guarantee"
+  }
+}

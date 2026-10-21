@@ -1,0 +1,99 @@
+{
+  "old_archive": {
+    "file": "dorabella_lab_round8.zip",
+    "sha256": "026549b178ef768185f3bf39dda1784593140a19332f8f2bd4a88656c4745610",
+    "unchanged_files": 7336,
+    "all_unchanged": true
+  },
+  "frozen_protocols": {
+    "frozen_geometry_protocol.json": "all hashes match",
+    "frozen_change_point_protocol.json": "all hashes match"
+  },
+  "geometry": {
+    "hauer_real": {
+      "full_row_ensemble_entries_checked": 119904,
+      "MC": {
+        "unigram": {
+          "full_replayed_draws": 99999,
+          "all_sequences_energies_and_summary_identical": true
+        },
+        "bigram": {
+          "full_replayed_draws": 99999,
+          "all_sequences_energies_and_summary_identical": true
+        }
+      }
+    },
+    "hart_real": {
+      "full_row_ensemble_entries_checked": 149184,
+      "MC": {
+        "unigram": {
+          "full_replayed_draws": 99999,
+          "all_sequences_energies_and_summary_identical": true
+        },
+        "bigram": {
+          "full_replayed_draws": 99999,
+          "all_sequences_energies_and_summary_identical": true
+        }
+      }
+    }
+  },
+  "change_point": {
+    "hauer_real": {
+      "unigram": {
+        "full_statistic_rows_recomputed": 9999,
+        "cuts_per_row": 64,
+        "sampling_prefix_replayed": 50,
+        "all_constraints_and_summary_match": true
+      },
+      "bigram": {
+        "full_statistic_rows_recomputed": 9999,
+        "cuts_per_row": 64,
+        "sampling_prefix_replayed": 50,
+        "all_constraints_and_summary_match": true
+      },
+      "trigram": {
+        "full_statistic_rows_recomputed": 84288,
+        "cuts_per_row": 64,
+        "sampling_prefix_replayed": 0,
+        "all_constraints_and_summary_match": true
+      }
+    },
+    "hart_real": {
+      "unigram": {
+        "full_statistic_rows_recomputed": 9999,
+        "cuts_per_row": 64,
+        "sampling_prefix_replayed": 50,
+        "all_constraints_and_summary_match": true
+      },
+      "bigram": {
+        "full_statistic_rows_recomputed": 9999,
+        "cuts_per_row": 64,
+        "sampling_prefix_replayed": 50,
+        "all_constraints_and_summary_match": true
+      },
+      "trigram": {
+        "full_statistic_rows_recomputed": 42144,
+        "cuts_per_row": 64,
+        "sampling_prefix_replayed": 0,
+        "all_constraints_and_summary_match": true
+      }
+    }
+  },
+  "literal_walk": {
+    "full_symbolic_replay_identical": true,
+    "four_geometric_cases": 4,
+    "direct_symbolic_checks": 16
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "packages": {
+      "numpy": "2.3.5",
+      "numba": "0.65.1",
+      "sympy": "1.14.0",
+      "scipy": "1.17.0"
+    },
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0"
+  },
+  "wall_seconds_for_this_audit": 13.897361673000091
+}

@@ -1,0 +1,30 @@
+--- pinned/masc_solver_mcts.pl
++++ proposed/masc_solver_mcts.compact.pl
+@@ -13,6 +13,7 @@
+ use FreqAnalysis;
+ use Utils;
+ use NoSpace;
++use CompactPatList;
+ 
+ # Record current time.
+ my $start = time();
+@@ -103,7 +104,10 @@
+ my $grams_with_pattern = [0,{},{},{}];
+ my $is_word = {};
+ my $maxlen = 0;
+-Utils::ReadPList($ngramlist,$grams_with_pattern,$is_word,\$maxlen,$nospace);
++die "COMPACT_REQUIRES_NOSPACE" unless $nospace;
++my $compact_bridge;
++($compact_bridge,$grams_with_pattern,$is_word,$maxlen)=CompactPatList->attach(
++  $ENV{TS_BRIDGE_READ_FD},$ENV{TS_BRIDGE_WRITE_FD});
+ 
+ # Ready to go!
+ my $memory = {};
+@@ -150,6 +154,7 @@
+   print $verbose ? "SOLUTION:\t$solution\n\n" : "$solution\n";  
+ }
+ 
++$compact_bridge->close();
+ 
+ sub MCTS {
+   my ($ctext, $root, $maxit, $ngramorder) = @_;

@@ -1,0 +1,140 @@
+{
+  "version": "TS-LM-PREFETCH-DIFF-v1-RESULT",
+  "status": "PASS_FIXTURE_REAL_SKIPPED_RESOURCE",
+  "utc": "2026-10-18T00:21:23.814950+00:00",
+  "entries": [
+    {
+      "path": "Dorabella_TS_LM_PREFETCH_DIFF_v1_result_20261018.md",
+      "bytes": 9473,
+      "sha256": "4a6b1d5fb89a5d52149265b8265e2b918d0c594a96f7aeb5042df842d8e9e5a9"
+    },
+    {
+      "path": "Dorabella_TS_LM_PREFETCH_DIFF_v1_20261018_package.zip",
+      "bytes": 98570,
+      "sha256": "5a7fbbc2465a7e6d4433fd3ea2a44eb8545f871b4e3c07807d26af7c4cabd81e"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/launch_evidence.json",
+      "bytes": 468,
+      "sha256": "be4dd4c3289e0bcf9f4cc859edd1cfe16d13de65c2864c25472bf69be5c42482"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/T0.json",
+      "bytes": 118,
+      "sha256": "8afeb4b7ab53b20d900947814d8548287b7a1a4a7577e4db138d642d0262033d"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_broker_ipc.jsonl",
+      "bytes": 87629,
+      "sha256": "4ad1aec9908f380b54ca9f114f0d332d4770195f243292cf1e7b2d061c1471c9"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_broker_ready.json",
+      "bytes": 3235,
+      "sha256": "61a56e5a55eb1359cf07f4f742184e7c9e936b936a75084f2feba49c4034b7bb"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_broker_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_broker_terminal.json",
+      "bytes": 576,
+      "sha256": "e23b2d05f4109d940c22044418bed996eb3f60bc833e49b180a4c74148f4b6f4"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_perl.jsonl",
+      "bytes": 48074,
+      "sha256": "16e1ec218875004c4786160c48f003b8873d45e5cba5253c6c383e375c977938"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_perl_ready.json",
+      "bytes": 3236,
+      "sha256": "55fd8dcfca2a5bbfac94f5e37ed303402391a9d5330b510ac647931e29a1262f"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/adapted_perl_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/observations.jsonl",
+      "bytes": 7240,
+      "sha256": "4b870b6790ca801405be735ca6e28bca4eecf448aed87f5a91138363cda69571"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/perl_negatives.json",
+      "bytes": 246,
+      "sha256": "d96ae8b5c9d905d205f3f08ebf6ddc656c0ada9e65a65b6f1b5c71067f536d94"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/phase_deadline.json",
+      "bytes": 71,
+      "sha256": "47b84a11fd688ef6302996ce5b4a7deec3039a954a81b5bdafa126766bc9f4f9"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/process_guard.json",
+      "bytes": 11942,
+      "sha256": "acb68ac390a87655171f0569cd343298440454c3bbb873f32f1c817afaf89b87"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/reference_perl.jsonl",
+      "bytes": 48074,
+      "sha256": "16e1ec218875004c4786160c48f003b8873d45e5cba5253c6c383e375c977938"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/reference_perl_ready.json",
+      "bytes": 3236,
+      "sha256": "06db4f263f977eb5200c10a2c23bafd6c8a18afb9a5b370bb601cd3e02f8d3a6"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/reference_perl_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/result.json",
+      "bytes": 27894,
+      "sha256": "a85d009fad044c591a10240181d475df2db604e5479625d8448e051f01655723"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/stage_fixture.json",
+      "bytes": 930,
+      "sha256": "534361a496b2bbf71e529024b124b0274a1f6f5c0936315b49a298246657988d"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1/attempt/stage_real.json",
+      "bytes": 228,
+      "sha256": "6f598bd72e7f93bafe180adca2ea5dd98e4de960c0141a058cc00608c48ccea9"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1_execution_evidence/independent_readback.json",
+      "bytes": 14431,
+      "sha256": "826f108fd43cebc72ba60549ada85d622b3eaac5d164a012f84c35f51dccf0ce"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1_execution_evidence/independent_readback.py",
+      "bytes": 7258,
+      "sha256": "d42a7af1afc4e9c747f5881605033616ee319bdde6313be17e32bc123f526e4e"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1_execution_evidence/preflight.json",
+      "bytes": 17943,
+      "sha256": "005d5f0e2283d20dc2be5774287a843e715cc8a52ad90fa0656f366e10fe7090"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1_execution_evidence/raw_execution_receipt.json",
+      "bytes": 1829,
+      "sha256": "30af1a1e52d1fe0f7cb80812464cc09a300173954716d71aa4755f71d86dfcde"
+    },
+    {
+      "path": "TS_LM_PREFETCH_DIFF_v1_execution_evidence/readback_observed_receipt.json",
+      "bytes": 417,
+      "sha256": "19b16049b8b7b271c185cda03279065740beca880ca61ca6296c7ea4a2affdec"
+    }
+  ],
+  "source_unmodified": true,
+  "attempt_count": 1,
+  "no_model_or_indices_copied": true
+}

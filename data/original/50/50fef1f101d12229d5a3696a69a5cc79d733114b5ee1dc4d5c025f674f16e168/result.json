@@ -1,0 +1,313 @@
+{
+  "version": "TS-DIFF-BRIDGE-v1",
+  "status": "PASS_FINITE_DIFFERENTIAL_ONLY",
+  "start_utc": "2026-10-17T17:47:19.515687+00:00",
+  "commands": [
+    {
+      "role": "reference",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/child_gate.py",
+        "reference",
+        "4"
+      ],
+      "pid_local": 4,
+      "start_observed_utc": "2026-10-17T17:47:19.553135+00:00",
+      "anchor": {
+        "visible_pid": 8782,
+        "visible_ppid": 8780,
+        "visible_pgid": 8782,
+        "visible_session": 8782,
+        "state": "S",
+        "starttime": 5878318,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          8782,
+          4
+        ],
+        "nspgid": [
+          8782,
+          4
+        ],
+        "nssid": [
+          8782,
+          4
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/child_gate.py",
+          "reference",
+          "4"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35608 kB",
+          "VmSize:\t   35608 kB",
+          "VmHWM:\t    8580 kB",
+          "VmRSS:\t    8580 kB"
+        ],
+        "pid": 4,
+        "pgid": 4,
+        "session": 4
+      }
+    },
+    {
+      "role": "broker",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/child_gate.py",
+        "broker",
+        "9"
+      ],
+      "pid_local": 5,
+      "start_observed_utc": "2026-10-17T17:47:19.658793+00:00",
+      "anchor": {
+        "visible_pid": 8783,
+        "visible_ppid": 8780,
+        "visible_pgid": 8783,
+        "visible_session": 8783,
+        "state": "S",
+        "starttime": 5878328,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          8783,
+          5
+        ],
+        "nspgid": [
+          8783,
+          5
+        ],
+        "nssid": [
+          8783,
+          5
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/child_gate.py",
+          "broker",
+          "9"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35608 kB",
+          "VmSize:\t   35608 kB",
+          "VmHWM:\t    8588 kB",
+          "VmRSS:\t    8588 kB"
+        ],
+        "pid": 5,
+        "pgid": 5,
+        "session": 5
+      }
+    },
+    {
+      "role": "adapted",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/child_gate.py",
+        "adapted",
+        "12",
+        "7",
+        "5"
+      ],
+      "pid_local": 6,
+      "start_observed_utc": "2026-10-17T17:47:19.688647+00:00",
+      "anchor": {
+        "visible_pid": 8784,
+        "visible_ppid": 8780,
+        "visible_pgid": 8784,
+        "visible_session": 8784,
+        "state": "S",
+        "starttime": 5878331,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          8784,
+          6
+        ],
+        "nspgid": [
+          8784,
+          6
+        ],
+        "nssid": [
+          8784,
+          6
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/child_gate.py",
+          "adapted",
+          "12",
+          "7",
+          "5"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35608 kB",
+          "VmSize:\t   35608 kB",
+          "VmHWM:\t    8584 kB",
+          "VmRSS:\t    8584 kB"
+        ],
+        "pid": 6,
+        "pgid": 6,
+        "session": 6
+      }
+    }
+  ],
+  "signals": [],
+  "phases": [
+    {
+      "release": "reference",
+      "utc": "2026-10-17T17:47:19.599430+00:00",
+      "elapsed": 0.08375741400232073
+    },
+    {
+      "terminal": "reference",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T17:47:19.656739+00:00",
+      "elapsed": 0.14106520600034855
+    },
+    {
+      "release": "broker",
+      "utc": "2026-10-17T17:47:19.721693+00:00",
+      "elapsed": 0.20602055799827212
+    },
+    {
+      "release": "adapted",
+      "utc": "2026-10-17T17:47:19.727828+00:00",
+      "elapsed": 0.21215502599807223
+    },
+    {
+      "terminal": "broker",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T17:47:19.914589+00:00",
+      "elapsed": 0.3989165130042238
+    },
+    {
+      "terminal": "adapted",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T17:47:19.916138+00:00",
+      "elapsed": 0.40046148300461937
+    }
+  ],
+  "target_inputs": 0,
+  "full_model_loads": 0,
+  "manifest_sha256": "27548a13270ec8d0bfca6043c99314474ef191c734ffa9393bfa8a0a8b749577",
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "6682030080",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "namespace_self": {
+    "visible_pid": 8780,
+    "visible_ppid": 8779,
+    "visible_pgid": 8778,
+    "visible_session": 8778,
+    "state": "R",
+    "starttime": 5878310,
+    "pid_namespace": "pid:[4026532277]",
+    "nspid": [
+      8780,
+      3
+    ],
+    "nspgid": [
+      8778,
+      1
+    ],
+    "nssid": [
+      8778,
+      1
+    ],
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_DIFF_BRIDGE_v1/run_differential.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   44184 kB",
+      "VmSize:\t   43160 kB",
+      "VmHWM:\t   14584 kB",
+      "VmRSS:\t   12752 kB"
+    ],
+    "pid": 3,
+    "pgid": 1,
+    "session": 1
+  },
+  "prior_live_matches": [],
+  "hashes_verified": true,
+  "comparison": {
+    "exact_bytes": true,
+    "events": 300,
+    "score_calls_per_arm": 64,
+    "iterations_per_arm": 6,
+    "roundtrips_per_arm": 118,
+    "broker": {
+      "closed": true,
+      "requests": 1495,
+      "stats": {
+        "list_calls": 282,
+        "list_hits": 201,
+        "list_misses": 81,
+        "evictions": 79,
+        "peak_cache_bytes": 628,
+        "rows_read": 79,
+        "candidates_read": 203,
+        "word_calls": 1211,
+        "word_hits": 925,
+        "word_queries": 286
+      }
+    },
+    "trace_sha256": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290"
+  },
+  "terminal": [
+    {
+      "role": "reference",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "broker",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "adapted",
+      "exit": 0,
+      "group": []
+    }
+  ],
+  "terminal_confirmed": true,
+  "elapsed": 0.6657960500015179,
+  "end_utc": "2026-10-17T17:47:20.181479+00:00",
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "6683299840",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "children_peak_rss_KiB": 14584,
+  "file_hashes": {
+    "reference_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reference_ready.json": "57a7d1f3e33250e8499123fdd34d54962916c734416f6c383558381dbcd10757",
+    "adapted_ready.json": "47f3c7c079a4d1bf85eacfa5e2025867d4b28535be323554b784147bdf4d0936",
+    "adapted.jsonl": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290",
+    "broker_ipc.jsonl": "7de457dcb7950746306dbe3405d0920ed30b6ba528762fbbfb36dc20fd878500",
+    "T0.json": "98c46ca476d12439a7ec3d50a5581760f037ef2861ce9d16c15d4d81bfbc2a08",
+    "broker_ready.json": "15b195b71313eab0aab4de310e20435d5fb539d269863beb2bf1083b9c8b0a81",
+    "reference.jsonl": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290",
+    "observations.jsonl": "52d85413aa897f8cb0ac36aeb8654527304e2d29b0d01e2c1569f7a654e53077",
+    "broker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "broker_terminal.json": "202bbfff77566b88791e53b5467bca40838ebef578b79ddf79ab9814863eb5fd",
+    "adapted_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

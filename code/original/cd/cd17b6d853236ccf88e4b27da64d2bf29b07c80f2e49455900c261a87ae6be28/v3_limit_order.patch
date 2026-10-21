@@ -1,0 +1,89 @@
+--- a/runtime/run_profile.py
++++ b/runtime/run_profile.py
+@@ -4,6 +4,7 @@
+ from namespace_view import NamespaceView,Stop
+ from audit_io import sha_file
+ from process_guard import regression,inspect_prior
++from limit_order import prepare_supervisor_limits,seal_supervisor_limits
+ A=R/'attempt'
+ def utc():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+ def dump(n,x):
+@@ -73,7 +74,7 @@
+  try:
+   F=json.loads((R/'FREEZE.json').read_text());F['_observed_sha256']=sha_file(R/'FREEZE.json')
+   assert F['_observed_sha256']==launch['freeze_sha256']
+-  for k,v in F['role_limits']['supervisor'].items():resource.setrlimit(getattr(resource,k),tuple(v))
++  result['limits_prepared']=prepare_supervisor_limits(F['role_limits'])
+   if sys.version_info[:3]!=(3,12,14):raise Stop('STOP_PYTHON_VERSION')
+   result['before'],go=full_gate()
+   if not go:raise Stop('STOP_RESOURCE_ADMISSION')
+@@ -92,6 +93,7 @@
+   lr,lw=pipe();rr,rw=pipe();pr,pw=pipe();qr,qw=pipe()
+   bc=spawn('broker',(lr,rw,pr,qw));pc=spawn('perl',(rr,lw,qr,pw))
+   for fd in [lr,lw,rr,rw,pr,pw,qr,qw]:close(fd)
++  result['limits_final']=seal_supervisor_limits(F['role_limits'])
+   result['release_resource'],go=full_gate()
+   if not go:raise Stop('STOP_RESOURCE_RELEASE')
+   for c in [bc,pc]:tick();os.write(c['gate'],b'G');close(c['gate']);c['gate']=None
+@@ -115,6 +117,9 @@
+   result['error']=repr(e);result['traceback']=traceback.format_exc();s=str(e)
+   result['status']='INCOMPLETE_BUDGET' if s.startswith('INCOMPLETE_BUDGET') else ('STOP_RESOURCE' if s.startswith(('STOP_RESOURCE','STOP_SHARED_MEMORY')) else 'STOP_CORRECTNESS')
+  finally:
++  if 'limits_prepared' in result and 'limits_final' not in result:
++   try:result['limits_final']=seal_supervisor_limits(F['role_limits'])
++   except BaseException as le:result['limit_seal_error']=repr(le)
+   for fd in list(fds):close(fd)
+   try:
+    for c in children:
+--- /dev/null
++++ b/runtime/limit_order.py
+@@ -0,0 +1,49 @@
++"""Own limit-order repair. No process creation, imports of solver code or arithmetic."""
++import resource
++
++class LimitOrderError(RuntimeError):
++    pass
++
++def plan_limits(role_limits, inherited):
++    if set(role_limits) != {'supervisor', 'broker', 'perl'}:
++        raise LimitOrderError('STOP_ROLE_SET')
++    names = tuple(role_limits['supervisor'])
++    if any(set(role_limits[role]) != set(names) for role in role_limits):
++        raise LimitOrderError('STOP_LIMIT_KEY_SET')
++    for role, limits in role_limits.items():
++        for name, pair in limits.items():
++            if len(pair) != 2 or any(type(x) is not int or x < 0 for x in pair) or pair[0] > pair[1]:
++                raise LimitOrderError('STOP_LIMIT_PAIR:' + role + ':' + name)
++    staged = {}
++    for name in names:
++        hard = max(role_limits[role][name][1] for role in role_limits)
++        current_hard = inherited[name][1]
++        if current_hard != resource.RLIM_INFINITY and current_hard < hard:
++            raise LimitOrderError('STOP_INHERITED_HARD:' + name)
++        # Effective supervisor soft cap is never raised above the frozen value.
++        staged[name] = [role_limits['supervisor'][name][0], hard]
++    return staged
++
++def prepare_supervisor_limits(role_limits):
++    before = {name: list(resource.getrlimit(getattr(resource, name))) for name in role_limits['supervisor']}
++    staged = plan_limits(role_limits, before)  # Validate every hard ceiling before any mutation.
++    for name, pair in staged.items():
++        resource.setrlimit(getattr(resource, name), tuple(pair))
++    actual = {name: list(resource.getrlimit(getattr(resource, name))) for name in staged}
++    if actual != staged:
++        raise LimitOrderError('STOP_STAGED_EFFECTIVE_LIMITS')
++    return {'inherited': before, 'staged': staged, 'actual': actual}
++
++def seal_supervisor_limits(role_limits):
++    target = role_limits['supervisor']
++    for name, pair in target.items():
++        current = resource.getrlimit(getattr(resource, name))
++        if current[1] != resource.RLIM_INFINITY and pair[1] > current[1]:
++            raise LimitOrderError('STOP_FINAL_WOULD_RAISE_HARD:' + name)
++    for name, pair in target.items():
++        resource.setrlimit(getattr(resource, name), tuple(pair))
++    actual = {name: list(resource.getrlimit(getattr(resource, name))) for name in target}
++    if actual != target:
++        raise LimitOrderError('STOP_FINAL_EFFECTIVE_LIMITS')
++    return actual
++

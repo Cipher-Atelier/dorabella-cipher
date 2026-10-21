@@ -1,0 +1,178 @@
+{
+  "all_rules_inverse_and_arc_preserving": 32768,
+  "independent_python_transforms": 200,
+  "dictionary_score_max_error": 0.0,
+  "final_candidate_score_max_error": 0.0,
+  "checked_records": 232,
+  "checked_final_candidates": 1856,
+  "full_search_repeats": [
+    {
+      "id": "hauer_real",
+      "best_score_exact_match": true,
+      "distinct_plaintexts": 21248,
+      "all_32768_scores_bitwise_identical": true
+    },
+    {
+      "id": "hart_real",
+      "best_score_exact_match": true,
+      "distinct_plaintexts": 21248,
+      "all_32768_scores_bitwise_identical": true
+    },
+    {
+      "id": "hauer_null_000",
+      "best_score_exact_match": true,
+      "distinct_plaintexts": 21248
+    },
+    {
+      "id": "hart_null_000",
+      "best_score_exact_match": true,
+      "distinct_plaintexts": 21248
+    }
+  ],
+  "frozen_hashes_match": true,
+  "sensitivity_error_positions": [
+    {
+      "id": "positive_history_00",
+      "errors": [
+        1
+      ]
+    },
+    {
+      "id": "positive_history_01",
+      "errors": []
+    },
+    {
+      "id": "positive_history_02",
+      "errors": []
+    },
+    {
+      "id": "positive_history_03",
+      "errors": []
+    },
+    {
+      "id": "positive_history_04",
+      "errors": []
+    },
+    {
+      "id": "positive_history_05",
+      "errors": []
+    },
+    {
+      "id": "positive_history_06",
+      "errors": []
+    },
+    {
+      "id": "positive_history_07",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_00",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_01",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_02",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_03",
+      "errors": [
+        1
+      ]
+    },
+    {
+      "id": "positive_lamb_04",
+      "errors": [
+        1
+      ]
+    },
+    {
+      "id": "positive_lamb_05",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_06",
+      "errors": [
+        1
+      ]
+    },
+    {
+      "id": "positive_lamb_07",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_08",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_09",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_10",
+      "errors": []
+    },
+    {
+      "id": "positive_lamb_11",
+      "errors": [
+        1
+      ]
+    },
+    {
+      "id": "positive_austen_00",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_01",
+      "errors": [
+        1
+      ]
+    },
+    {
+      "id": "positive_austen_02",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_03",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_04",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_05",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_06",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_07",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_08",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_09",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_10",
+      "errors": []
+    },
+    {
+      "id": "positive_austen_11",
+      "errors": []
+    }
+  ],
+  "all_sensitive_errors_only_first_position": true,
+  "evaluated_rule_definitions_main_series": 7602176,
+  "note": "32768 definitions include equivalent outputs; no heuristic pruning in this finite family"
+}

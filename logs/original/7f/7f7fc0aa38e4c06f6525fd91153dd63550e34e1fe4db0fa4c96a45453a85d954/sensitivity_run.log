@@ -1,0 +1,738 @@
+{
+  "protocol": {
+    "id": "round8-postprimary-sensitivity-v1",
+    "frozen_utc": "2026-10-01T11:00:17.589596+00:00",
+    "status": "Explicitly designed AFTER seeing exact primary results, NOT independent confirmation or preregistered discovery",
+    "diagnostics": [
+      "allow each sequence to choose best two of its three printed rows",
+      "condition trigram ensemble on row arc histograms",
+      "condition on row polarity counts",
+      "condition on BOTH arc histograms and polarity counts",
+      "independent complex-number vector implementation",
+      "1000 within-row permutations must leave sums identical",
+      "repeat exact enumeration for both mixed combinations of two known orientation readings"
+    ],
+    "no_selection": "Report all diagnostics and both mixed variants, no change to primary statistic or existing results"
+  },
+  "cases": {
+    "hauer_real": {
+      "best_pair_among_all_three": {
+        "le": 217,
+        "n": 84288,
+        "conditional_fraction": 0.002574506454062263,
+        "real_2T_A_B": [
+          366,
+          -254
+        ]
+      },
+      "conditional_margins": {
+        "same_row_arc_histograms": {
+          "support": 187,
+          "le": 26,
+          "conditional_fraction": 0.13903743315508021,
+          "fraction": "26/187",
+          "scope": "complete subset of trigram ensemble; low support is a limitation"
+        },
+        "same_row_polarity_counts": {
+          "support": 1538,
+          "le": 26,
+          "conditional_fraction": 0.016905071521456438,
+          "fraction": "13/769",
+          "scope": "complete subset of trigram ensemble; low support is a limitation"
+        },
+        "same_row_arcs_and_polarity": {
+          "support": 29,
+          "le": 26,
+          "conditional_fraction": 0.896551724137931,
+          "fraction": "26/29",
+          "scope": "complete subset of trigram ensemble; low support is a limitation"
+        }
+      },
+      "within_row_shuffles_checked_identical_sums": 1000,
+      "max_squared_radius_error_against_complex_exp": 3.979039320256561e-13
+    },
+    "hart_real": {
+      "best_pair_among_all_three": {
+        "le": 390,
+        "n": 42144,
+        "conditional_fraction": 0.009253986332574031,
+        "real_2T_A_B": [
+          370,
+          -254
+        ]
+      },
+      "conditional_margins": {
+        "same_row_arc_histograms": {
+          "support": 187,
+          "le": 26,
+          "conditional_fraction": 0.13903743315508021,
+          "fraction": "26/187",
+          "scope": "complete subset of trigram ensemble; low support is a limitation"
+        },
+        "same_row_polarity_counts": {
+          "support": 1092,
+          "le": 28,
+          "conditional_fraction": 0.02564102564102564,
+          "fraction": "1/39",
+          "scope": "complete subset of trigram ensemble; low support is a limitation"
+        },
+        "same_row_arcs_and_polarity": {
+          "support": 29,
+          "le": 26,
+          "conditional_fraction": 0.896551724137931,
+          "fraction": "26/29",
+          "scope": "complete subset of trigram ensemble; low support is a limitation"
+        }
+      },
+      "within_row_shuffles_checked_identical_sums": 1000,
+      "max_squared_radius_error_against_complex_exp": 3.410605131648481e-13
+    },
+    "hauer_plus_hart_at_34": {
+      "status": "artificial mixed reading, NOT independent transcription",
+      "enumeration": {
+        "count": 42144,
+        "trees": 42144,
+        "enumerator": {
+          "strings": 42144,
+          "recursion_nodes": 1382770,
+          "reachability_prunes": 72418
+        },
+        "all_gram_counts_endpoints_unigrams_verified": true,
+        "all_unique": true,
+        "original_occurrences": 1
+      },
+      "analysis": {
+        "n": 42144,
+        "geometry": {
+          "first_two_sum_squared_radius": {
+            "le": 196,
+            "equal": 26,
+            "n": 42144,
+            "exact_fraction": "49/10536",
+            "conditional_fraction": 0.004650721336370539,
+            "less_is_more_closed": true
+          },
+          "all_three_sum_squared_radius": {
+            "le": 3595,
+            "equal": 26,
+            "n": 42144,
+            "exact_fraction": "3595/42144",
+            "conditional_fraction": 0.08530277145026575,
+            "less_is_more_closed": true
+          },
+          "row1_squared_radius": {
+            "le": 617,
+            "equal": 408,
+            "n": 42144,
+            "exact_fraction": "617/42144",
+            "conditional_fraction": 0.014640280941533789,
+            "less_is_more_closed": true
+          },
+          "row2_squared_radius": {
+            "le": 1741,
+            "equal": 86,
+            "n": 42144,
+            "exact_fraction": "1741/42144",
+            "conditional_fraction": 0.04131074411541382,
+            "less_is_more_closed": true
+          },
+          "row3_squared_radius": {
+            "le": 26678,
+            "equal": 1356,
+            "n": 42144,
+            "exact_fraction": "13339/21072",
+            "conditional_fraction": 0.6330201214882308,
+            "less_is_more_closed": true
+          },
+          "first_two_joint_orthant": {
+            "le_both": 51,
+            "n": 42144,
+            "fraction": 0.0012101366742596812,
+            "scope": "descriptive joint lower orthant frequency, not itself a calibrated p-value"
+          }
+        },
+        "header": {
+          "prefix_distance": 1,
+          "all_window_distances": [
+            1,
+            3,
+            3,
+            4,
+            3,
+            5,
+            8,
+            8,
+            8,
+            9,
+            13,
+            14,
+            10,
+            10,
+            8,
+            7,
+            7,
+            5,
+            4,
+            5,
+            5,
+            5,
+            6,
+            6,
+            5,
+            5,
+            4,
+            6,
+            7,
+            9,
+            8,
+            7,
+            6,
+            5,
+            5,
+            6,
+            6,
+            9,
+            8,
+            9,
+            6,
+            5,
+            3,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            3,
+            7,
+            7,
+            5,
+            7,
+            8,
+            7,
+            7,
+            7,
+            7,
+            10,
+            7,
+            7,
+            6,
+            7,
+            5,
+            5,
+            5,
+            3,
+            4,
+            6,
+            6,
+            5,
+            6,
+            6,
+            5,
+            7
+          ],
+          "best_window_1_based": [
+            1
+          ],
+          "prefix_le_observed": 20064,
+          "any_window_le_observed": 23008,
+          "prefix_histogram": {
+            "1": 20064,
+            "4": 22080
+          },
+          "minimum_window_histogram": {
+            "1": 23008,
+            "2": 9001,
+            "3": 9518,
+            "4": 617
+          }
+        },
+        "observed_row_2r2_A_B": [
+          [
+            180,
+            -126
+          ],
+          [
+            190,
+            -128
+          ],
+          [
+            274,
+            -108
+          ]
+        ],
+        "observed_row_radii": [
+          0.9510760066866386,
+          2.119040350753593,
+          7.786685278849586
+        ],
+        "observed_primary_T12": 5.394877578616928,
+        "position_change_mean": 65.20403853454822,
+        "max_positions_changed": 75,
+        "fixed_positions_1_based": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          85,
+          86,
+          87
+        ],
+        "distinct_symbols_per_position": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          5,
+          8,
+          10,
+          9,
+          10,
+          16,
+          15,
+          17,
+          12,
+          15,
+          17,
+          17,
+          17,
+          16,
+          18,
+          17,
+          18,
+          18,
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17,
+          18,
+          18,
+          18,
+          17,
+          18,
+          16,
+          16,
+          17,
+          12,
+          14,
+          8,
+          6,
+          5,
+          4,
+          4,
+          3,
+          1,
+          1,
+          1
+        ],
+        "different_12_symbol_prefixes": 2
+      },
+      "sensitivity": {
+        "best_pair_among_all_three": {
+          "le": 519,
+          "n": 42144,
+          "conditional_fraction": 0.01231492027334852,
+          "real_2T_A_B": [
+            370,
+            -254
+          ]
+        },
+        "conditional_margins": {
+          "same_row_arc_histograms": {
+            "support": 187,
+            "le": 26,
+            "conditional_fraction": 0.13903743315508021,
+            "fraction": "26/187",
+            "scope": "complete subset of trigram ensemble; low support is a limitation"
+          },
+          "same_row_polarity_counts": {
+            "support": 1092,
+            "le": 28,
+            "conditional_fraction": 0.02564102564102564,
+            "fraction": "1/39",
+            "scope": "complete subset of trigram ensemble; low support is a limitation"
+          },
+          "same_row_arcs_and_polarity": {
+            "support": 29,
+            "le": 26,
+            "conditional_fraction": 0.896551724137931,
+            "fraction": "26/29",
+            "scope": "complete subset of trigram ensemble; low support is a limitation"
+          }
+        },
+        "within_row_shuffles_checked_identical_sums": 1000,
+        "max_squared_radius_error_against_complex_exp": 3.979039320256561e-13
+      }
+    },
+    "hauer_plus_hart_at_78": {
+      "status": "artificial mixed reading, NOT independent transcription",
+      "enumeration": {
+        "count": 84288,
+        "trees": 21072,
+        "enumerator": {
+          "strings": 84288,
+          "recursion_nodes": 2771211,
+          "reachability_prunes": 105393
+        },
+        "all_gram_counts_endpoints_unigrams_verified": true,
+        "all_unique": true,
+        "original_occurrences": 1
+      },
+      "analysis": {
+        "n": 84288,
+        "geometry": {
+          "first_two_sum_squared_radius": {
+            "le": 88,
+            "equal": 26,
+            "n": 84288,
+            "exact_fraction": "11/10536",
+            "conditional_fraction": 0.001044039483675019,
+            "less_is_more_closed": true
+          },
+          "all_three_sum_squared_radius": {
+            "le": 8303,
+            "equal": 26,
+            "n": 84288,
+            "exact_fraction": "8303/84288",
+            "conditional_fraction": 0.09850749810174639,
+            "less_is_more_closed": true
+          },
+          "row1_squared_radius": {
+            "le": 1570,
+            "equal": 796,
+            "n": 84288,
+            "exact_fraction": "785/42144",
+            "conditional_fraction": 0.01862661351556568,
+            "less_is_more_closed": true
+          },
+          "row2_squared_radius": {
+            "le": 1876,
+            "equal": 95,
+            "n": 84288,
+            "exact_fraction": "469/21072",
+            "conditional_fraction": 0.022257023538344724,
+            "less_is_more_closed": true
+          },
+          "row3_squared_radius": {
+            "le": 56501,
+            "equal": 1356,
+            "n": 84288,
+            "exact_fraction": "56501/84288",
+            "conditional_fraction": 0.670332668944571,
+            "less_is_more_closed": true
+          },
+          "first_two_joint_orthant": {
+            "le_both": 40,
+            "n": 84288,
+            "fraction": 0.00047456340167046317,
+            "scope": "descriptive joint lower orthant frequency, not itself a calibrated p-value"
+          }
+        },
+        "header": {
+          "prefix_distance": 1,
+          "all_window_distances": [
+            1,
+            3,
+            3,
+            4,
+            3,
+            5,
+            8,
+            8,
+            8,
+            9,
+            13,
+            14,
+            10,
+            10,
+            8,
+            7,
+            7,
+            5,
+            4,
+            5,
+            5,
+            5,
+            6,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            6,
+            6,
+            9,
+            8,
+            9,
+            6,
+            5,
+            3,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            3,
+            7,
+            7,
+            5,
+            7,
+            8,
+            7,
+            7,
+            7,
+            7,
+            10,
+            7,
+            7,
+            6,
+            7,
+            5,
+            5,
+            5,
+            4,
+            3,
+            4,
+            5,
+            4,
+            5,
+            6,
+            5,
+            7
+          ],
+          "best_window_1_based": [
+            1
+          ],
+          "prefix_le_observed": 42144,
+          "any_window_le_observed": 48000,
+          "prefix_histogram": {
+            "1": 42144,
+            "4": 42144
+          },
+          "minimum_window_histogram": {
+            "1": 48000,
+            "2": 26316,
+            "3": 9888,
+            "4": 84
+          }
+        },
+        "observed_row_2r2_A_B": [
+          [
+            180,
+            -126
+          ],
+          [
+            186,
+            -128
+          ],
+          [
+            238,
+            -76
+          ]
+        ],
+        "observed_row_radii": [
+          0.9510760066866386,
+          1.5780785810985176,
+          8.07835903075757
+        ],
+        "observed_primary_T12": 3.394877578616928,
+        "position_change_mean": 67.35649202733485,
+        "max_positions_changed": 76,
+        "fixed_positions_1_based": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          86,
+          87
+        ],
+        "distinct_symbols_per_position": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          5,
+          8,
+          11,
+          9,
+          11,
+          15,
+          15,
+          18,
+          13,
+          15,
+          18,
+          17,
+          18,
+          17,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          17,
+          18,
+          16,
+          16,
+          17,
+          13,
+          14,
+          10,
+          8,
+          7,
+          5,
+          4,
+          4,
+          2,
+          1,
+          1
+        ],
+        "different_12_symbol_prefixes": 2
+      },
+      "sensitivity": {
+        "best_pair_among_all_three": {
+          "le": 159,
+          "n": 84288,
+          "conditional_fraction": 0.0018863895216400912,
+          "real_2T_A_B": [
+            366,
+            -254
+          ]
+        },
+        "conditional_margins": {
+          "same_row_arc_histograms": {
+            "support": 187,
+            "le": 26,
+            "conditional_fraction": 0.13903743315508021,
+            "fraction": "26/187",
+            "scope": "complete subset of trigram ensemble; low support is a limitation"
+          },
+          "same_row_polarity_counts": {
+            "support": 1538,
+            "le": 26,
+            "conditional_fraction": 0.016905071521456438,
+            "fraction": "13/769",
+            "scope": "complete subset of trigram ensemble; low support is a limitation"
+          },
+          "same_row_arcs_and_polarity": {
+            "support": 29,
+            "le": 26,
+            "conditional_fraction": 0.896551724137931,
+            "fraction": "26/29",
+            "scope": "complete subset of trigram ensemble; low support is a limitation"
+          }
+        },
+        "within_row_shuffles_checked_identical_sums": 1000,
+        "max_squared_radius_error_against_complex_exp": 4.547473508864641e-13
+      }
+    }
+  }
+}

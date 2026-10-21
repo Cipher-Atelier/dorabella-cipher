@@ -1,0 +1,205 @@
+BENCH {'seed': 1311, 'start': 0, 'stop': 256, 'keys': 196608, 'fresh_incumbent': True, 'seconds': 0.033499898003356066, 'word_evaluations': 2620, 'score': -7.381830799814375, 'input_sha256': 'c54fa26d08c54820b70cf10f1f9edccb3eaf366a9249d15f45dcd2e9d56ff110'}
+BENCH {'seed': 1312, 'start': 10000, 'stop': 10256, 'keys': 196608, 'fresh_incumbent': True, 'seconds': 0.031052760998136364, 'word_evaluations': 3032, 'score': -7.764640659184884, 'input_sha256': '038ede147b54338ecd397d91c7120500206865918d2dd2af093ec03f25c8ac0e'}
+BENCH {'seed': 1313, 'start': 30000, 'stop': 30256, 'keys': 196608, 'fresh_incumbent': True, 'seconds': 0.03374363100010669, 'word_evaluations': 3632, 'score': -8.31540477147757, 'input_sha256': '2b3872bfcf31ebb578b1f83d552791ce1b005b361269e7395f8b1ddec2829013'}
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "numba": "0.65.1",
+  "llvmlite": "0.47.0",
+  "cpu_count": 9,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "checks": [
+    {
+      "seed": 1301,
+      "length": 43,
+      "P8_index": 0,
+      "keys": 768,
+      "winner": 71,
+      "score": -7.694055916308908,
+      "ties": [
+        71
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1301,
+      "length": 87,
+      "P8_index": 0,
+      "keys": 768,
+      "winner": 748,
+      "score": -8.473686968875274,
+      "ties": [
+        748
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1302,
+      "length": 43,
+      "P8_index": 137,
+      "keys": 768,
+      "winner": 105251,
+      "score": -8.451219871707643,
+      "ties": [
+        105251
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1302,
+      "length": 87,
+      "P8_index": 137,
+      "keys": 768,
+      "winner": 105946,
+      "score": -8.050183373303938,
+      "ties": [
+        105946
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1303,
+      "length": 43,
+      "P8_index": 20160,
+      "keys": 768,
+      "winner": 15483033,
+      "score": -7.265984487526705,
+      "ties": [
+        15483033
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1303,
+      "length": 87,
+      "P8_index": 20160,
+      "keys": 768,
+      "winner": 15483184,
+      "score": -8.173911982503459,
+      "ties": [
+        15483184
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1304,
+      "length": 43,
+      "P8_index": 40319,
+      "keys": 768,
+      "winner": 30965078,
+      "score": -7.30134859395103,
+      "ties": [
+        30965078
+      ],
+      "passed": true
+    },
+    {
+      "seed": 1304,
+      "length": 87,
+      "P8_index": 40319,
+      "keys": 768,
+      "winner": 30965086,
+      "score": -8.306733429884865,
+      "ties": [
+        30965086
+      ],
+      "passed": true
+    }
+  ],
+  "benchmarks": [
+    {
+      "seed": 1311,
+      "start": 0,
+      "stop": 256,
+      "keys": 196608,
+      "fresh_incumbent": true,
+      "seconds": 0.033499898003356066,
+      "word_evaluations": 2620,
+      "score": -7.381830799814375,
+      "input_sha256": "c54fa26d08c54820b70cf10f1f9edccb3eaf366a9249d15f45dcd2e9d56ff110"
+    },
+    {
+      "seed": 1312,
+      "start": 10000,
+      "stop": 10256,
+      "keys": 196608,
+      "fresh_incumbent": true,
+      "seconds": 0.031052760998136364,
+      "word_evaluations": 3032,
+      "score": -7.764640659184884,
+      "input_sha256": "038ede147b54338ecd397d91c7120500206865918d2dd2af093ec03f25c8ac0e"
+    },
+    {
+      "seed": 1313,
+      "start": 30000,
+      "stop": 30256,
+      "keys": 196608,
+      "fresh_incumbent": true,
+      "seconds": 0.03374363100010669,
+      "word_evaluations": 3632,
+      "score": -8.31540477147757,
+      "input_sha256": "2b3872bfcf31ebb578b1f83d552791ce1b005b361269e7395f8b1ddec2829013"
+    }
+  ],
+  "warmup_seconds": 2.4382663989999855,
+  "parallel4": {
+    "seconds": 0.032477541997650405,
+    "runs": [
+      {
+        "seed": 1321,
+        "start": 0,
+        "stop": 256,
+        "keys": 196608,
+        "fresh_incumbent": true,
+        "seconds": 0.02580308899996453,
+        "word_evaluations": 672,
+        "score": -7.676679384060435,
+        "input_sha256": "e4d6e750b65f264a730c65705c7862ed4bf2124963d30a0c3d7e99153ba74724"
+      },
+      {
+        "seed": 1322,
+        "start": 10000,
+        "stop": 10256,
+        "keys": 196608,
+        "fresh_incumbent": true,
+        "seconds": 0.027792140001110965,
+        "word_evaluations": 2623,
+        "score": -7.9279725733272866,
+        "input_sha256": "3b12b8751279fa14c10e5c48403d8466c1b1d47853e5517756aaf6e0b4a3a491"
+      },
+      {
+        "seed": 1323,
+        "start": 20000,
+        "stop": 20256,
+        "keys": 196608,
+        "fresh_incumbent": true,
+        "seconds": 0.030937527000787668,
+        "word_evaluations": 1509,
+        "score": -7.814333458537995,
+        "input_sha256": "419d38f67debfcbaa378755934a7ad494663f518fed6c3d18f2cde14fbe89f4d"
+      },
+      {
+        "seed": 1324,
+        "start": 30000,
+        "stop": 30256,
+        "keys": 196608,
+        "fresh_incumbent": true,
+        "seconds": 0.027485907998197945,
+        "word_evaluations": 2052,
+        "score": -7.832209411389181,
+        "input_sha256": "6c1566ec5786a0e4bd79b586941b8d24bca410e532c00771c9e6876dcff3d3fb"
+      }
+    ]
+  },
+  "estimated_94_series_seconds_parallel4": 120.20750231880356
+}

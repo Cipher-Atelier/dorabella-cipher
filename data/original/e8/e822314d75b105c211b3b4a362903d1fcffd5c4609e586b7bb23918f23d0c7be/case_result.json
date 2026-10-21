@@ -1,0 +1,29 @@
+{
+  "accepted_bytes": 32,
+  "ack": true,
+  "actual_error": null,
+  "checks": {
+    "bytes": 32,
+    "sha256": "73337f479fe170d73e53e247f3052e4243cc9c2a0ffa621853d9385c619efb77"
+  },
+  "chunks_opened": 1,
+  "cleanup_error": null,
+  "closed": true,
+  "expected_error": null,
+  "failed": false,
+  "fd_cleanup": true,
+  "name": "POS_SHORT_RETURN",
+  "receipt_bytes": 389,
+  "trace": [
+    "open:frames.000.bin",
+    "flush_returned",
+    "flush_returned",
+    "fsync_returned",
+    "close_returned",
+    "verified:frames.000.bin",
+    "open:frames.000.closed.json",
+    "fsync_returned",
+    "verified:frames.000.closed.json",
+    "receipt_committed:frames.000.bin"
+  ]
+}

@@ -1,0 +1,1272 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-05T13:48:26.216329+00:00",
+  "review_scope": "Independent read-only audit of frozen search plus all 14 positive/regression result and checkpoint chains; no real or null scoring executed by reviewer. This JSON is the only written file.",
+  "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+  "frozen_hashes": [
+    {
+      "path": "data/scoring.npz",
+      "sha256": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00"
+    },
+    {
+      "path": "data/search_inputs.json",
+      "sha256": "012794b49e3dd566ec39f9f903021554112858b6c142a9ca5eba1cddbd291ebd"
+    },
+    {
+      "path": "data/positive_truth.json",
+      "sha256": "d279476d7b43fcf15690d6d0b71350e136a24b232b3040f012726f6b7f2e2e26"
+    },
+    {
+      "path": "code/engine.py",
+      "sha256": "c67d89d7f441168ec3bda7bfdd3c3fe09b1fd402199f2200c747f3e89c66871c"
+    },
+    {
+      "path": "code/run.py",
+      "sha256": "4a2eb7343f356829064c9d36b783df7484b5ea33de514bb44470a09f39f1e202"
+    },
+    {
+      "path": "code/prepare.py",
+      "sha256": "4afd7edcc50eee1072a505b1991ba77c2371ca3cef23af12425dc2faa24f34ab"
+    },
+    {
+      "path": "code/verify.py",
+      "sha256": "822aa515d8e7aeabdab4fc88f2a468568cf5e21e5cd49970031f680cdf3e97a7"
+    },
+    {
+      "path": "code/benchmark.py",
+      "sha256": "e34b0aec0e5ba4509d3f2cb905488a84f7ee2b9053fa131d36a34329f1836663"
+    },
+    {
+      "path": "code/freeze.py",
+      "sha256": "e87132fa698492af1f55a55f947279ce3546d3616202f828df79a3ca8eb42ab2"
+    },
+    {
+      "path": "checks/preflight.json",
+      "sha256": "e131578b8000e71d9e21e2195a4d9ff2fd65d38fe54f10efc5e4a106c260bf67"
+    },
+    {
+      "path": "checks/benchmark.json",
+      "sha256": "8c293a70ef40ac7af8ad50f89ad940789ce5ac651c5fecd31ce548771c793d2a"
+    }
+  ],
+  "source_scorer_identical": true,
+  "positive_cases_verified": 14,
+  "positive_exact87": 14,
+  "positive_correct_letters": 1218,
+  "positive_total_letters": 1218,
+  "sensitivity_gate_passed": true,
+  "gate_verification_snapshot_sha256": "9ee968ebef8e1f9da0a81f00ef261da573fd16f5f805d496311dc3df7f46b00f",
+  "max_independent_score_error": 0.0,
+  "all_positive_tie_and_checkpoint_scores_exact": true,
+  "records": [
+    {
+      "id": "bailey_01",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "95675d4453b1eb4e1b66a206fec4564719c18a5a6d9b55ecaa2539b6559f1783",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_01/00.json",
+          "sha256": "e8b14bde83ee7cf18337812e6dd4292cda91f0cf554963421a6a685f74d54eff"
+        },
+        {
+          "path": "checkpoints/bailey_01/01.json",
+          "sha256": "b4714af039af01b829a246600ab3ed85804948759e47a1e5733884ce3a252d2b"
+        },
+        {
+          "path": "checkpoints/bailey_01/02.json",
+          "sha256": "ff628142db0e154f95798c1b070df4b58c0cec3b7108267bd02e15d0c4c01b0a"
+        },
+        {
+          "path": "checkpoints/bailey_01/03.json",
+          "sha256": "576ca2266faa760404e7b07eba842e429f4bc2f19d4de36aca9809bb65e24c0b"
+        },
+        {
+          "path": "checkpoints/bailey_01/04.json",
+          "sha256": "205f96ae5fe32990a95596e2d691824bb386fabc833a257ca80cbfeb1c1caced"
+        },
+        {
+          "path": "checkpoints/bailey_01/05.json",
+          "sha256": "1130971f17418c5734bad9f539c95ffba0e1e787d1bac41a70ccdf6f6676a3a5"
+        },
+        {
+          "path": "checkpoints/bailey_01/06.json",
+          "sha256": "81f52ea30339f6825fb84c5de23587d31dd6ffe2f445cf780a5172085a2a1ffa"
+        },
+        {
+          "path": "checkpoints/bailey_01/07.json",
+          "sha256": "314c67d258767ec49638a5c7b2e778cf124de0478d58998fd617352418e7f8d5"
+        },
+        {
+          "path": "checkpoints/bailey_01/08.json",
+          "sha256": "b293f91bf1dbc64d1b1d4f4332915fb52e096a033a57fb3d7a8fe451542b73db"
+        },
+        {
+          "path": "checkpoints/bailey_01/09.json",
+          "sha256": "cf96aca6a0c4fd42fb66249f1f8fca2cb72eea3ccf0ccd3e20c27eaf0ec2d376"
+        },
+        {
+          "path": "checkpoints/bailey_01/10.json",
+          "sha256": "5ee13111fd3078db9c327a87cfeef7e2a8bfb6d96f67d2c8c63723487c6ef310"
+        },
+        {
+          "path": "checkpoints/bailey_01/11.json",
+          "sha256": "8545635b4b0a692f1a300def6623f4e205a8d052613ce6366fa2dddd78a8cb45"
+        },
+        {
+          "path": "checkpoints/bailey_01/12.json",
+          "sha256": "dfbb150d114546aa369d6ea02d651385699a5995ec661d64e9406da9a78d46c7"
+        },
+        {
+          "path": "checkpoints/bailey_01/13.json",
+          "sha256": "8a59058e7b465762c40db4cfffbebbe9248ba265f96ee7e32106c237d9358dd8"
+        },
+        {
+          "path": "checkpoints/bailey_01/14.json",
+          "sha256": "62c3d069910de38881050920c18e628cecfb897d0a883aa38be86ef6a0ec2772"
+        },
+        {
+          "path": "checkpoints/bailey_01/15.json",
+          "sha256": "33edf7dac0b76a50abb8f2c98015f58544f787002aa127185e651614d6dfdb94"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 165224,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 8,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_02",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "d5249c3d53cec53b15156c97d278c88dc6bd34cbfa8e52d4480f0451a847cc74",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_02/00.json",
+          "sha256": "fb44f53e3a911c1ce93893cd12732fe1a0708bf4b626d1d4adae5f9d18f3201f"
+        },
+        {
+          "path": "checkpoints/bailey_02/01.json",
+          "sha256": "950b6badda7759705349aba37c193e277022a64d5d83e542d9d952c2b464041d"
+        },
+        {
+          "path": "checkpoints/bailey_02/02.json",
+          "sha256": "38486af00b414b316a4c09df41e767c5d4441813c8881160883b2a27216b8c3c"
+        },
+        {
+          "path": "checkpoints/bailey_02/03.json",
+          "sha256": "4798e31e8b861ea2e55533a2187179661fc9c048314cc4cbed67a95a794e2fd4"
+        },
+        {
+          "path": "checkpoints/bailey_02/04.json",
+          "sha256": "acb091db0fa599fc8ce8d9a4e4c5d50f428892210576870a55eb50b3ee1bbbd6"
+        },
+        {
+          "path": "checkpoints/bailey_02/05.json",
+          "sha256": "50d3ec39e8726b1917e4685c0305fb4e49a8848ce907aa7524d7a4d57dae7d92"
+        },
+        {
+          "path": "checkpoints/bailey_02/06.json",
+          "sha256": "636926f4fb96b439a9804b5893ec2984d467283ad20c2253a5c224af79db64a3"
+        },
+        {
+          "path": "checkpoints/bailey_02/07.json",
+          "sha256": "8201ad8b83ae1c9e38fb03fc52f7dc5c1663e9385e88987673a896707f557ca0"
+        },
+        {
+          "path": "checkpoints/bailey_02/08.json",
+          "sha256": "4c883138d06a258e4688b3e8d45c48a1588d7d5d88a46d8a5d360244f46860ce"
+        },
+        {
+          "path": "checkpoints/bailey_02/09.json",
+          "sha256": "8791ca62d0f4fee00556b4164fbcdf32e523b65430a8e9b953fe3ad89b16bb22"
+        },
+        {
+          "path": "checkpoints/bailey_02/10.json",
+          "sha256": "bfa5358f2dbd4c1589e658a46b12a3853f92b767bee4dc734deb92361fb16ba6"
+        },
+        {
+          "path": "checkpoints/bailey_02/11.json",
+          "sha256": "dbc86365b48ae89989ab888e1774867b5ea32f38edeb8dc945a0dfb0d4a87753"
+        },
+        {
+          "path": "checkpoints/bailey_02/12.json",
+          "sha256": "272bc5b012d607b1e82058f871cdc9bc0821589d84113e369f31c57c8d7ba077"
+        },
+        {
+          "path": "checkpoints/bailey_02/13.json",
+          "sha256": "48f5db9efae7c488f130575f27313955632d19b753bb8f6758786c541b394134"
+        },
+        {
+          "path": "checkpoints/bailey_02/14.json",
+          "sha256": "f8a48cb1d51c34d24cc0e2cd0779b5dc5220595b13d3bcb1331da2a3b0d281f5"
+        },
+        {
+          "path": "checkpoints/bailey_02/15.json",
+          "sha256": "d36ccf71f333df0250f7388232eca0920cc67b90dd04d4955eff0e1cfb94d01a"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 138846,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 1,
+      "independent_scored_keys": 5,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_03",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "61dd6dc11c712e6acbd26df85391ecf9c05b5c19578f7a3818cffe75b64a55af",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_03/00.json",
+          "sha256": "ac3af158a3584f9be995e6b438ca71e821a19eae5dfae11c807b01271856cdb2"
+        },
+        {
+          "path": "checkpoints/bailey_03/01.json",
+          "sha256": "35ad006a73bd55d2127761e5b23705dcef0bf7441282652be2aca63fd8217787"
+        },
+        {
+          "path": "checkpoints/bailey_03/02.json",
+          "sha256": "9d9f05015b60bc1ed73f6c9c2fc979a0fbab6d3c4c65944f71c016b9f3bba050"
+        },
+        {
+          "path": "checkpoints/bailey_03/03.json",
+          "sha256": "01d818ebbe126db69e8cc139b11486738be96e4df99e319f06a3605e6a032190"
+        },
+        {
+          "path": "checkpoints/bailey_03/04.json",
+          "sha256": "607bd3b594b0b86cee0060df153195ef380d27610de0fafe3bc02709ab92ce02"
+        },
+        {
+          "path": "checkpoints/bailey_03/05.json",
+          "sha256": "a7ecfa3d629e6fcacbffd13998835e6b9a56a42176e5949a816c725db64f4152"
+        },
+        {
+          "path": "checkpoints/bailey_03/06.json",
+          "sha256": "d455ddb3b590ae3ebf3253f2caee9f3d7cadc1e395e14c88be0ab3766ffa85bc"
+        },
+        {
+          "path": "checkpoints/bailey_03/07.json",
+          "sha256": "9d7c89a4df2791b2b25d68d174a22564d26c0efd5071fc60f67f4c1baac9fda0"
+        },
+        {
+          "path": "checkpoints/bailey_03/08.json",
+          "sha256": "c8605382fa4235d3071bd6b84bed40f29470806e931f3e88374d8dd4cc826f5e"
+        },
+        {
+          "path": "checkpoints/bailey_03/09.json",
+          "sha256": "070918b6b03d0715f475a323273b97afa5001f0776556142c6ede4c6a8867735"
+        },
+        {
+          "path": "checkpoints/bailey_03/10.json",
+          "sha256": "f4af68d4f8d3a25fe40c053e06766e1351037b6fe8a5a9554573951e6c8ea526"
+        },
+        {
+          "path": "checkpoints/bailey_03/11.json",
+          "sha256": "d6cef93905152d93dfdee52c0fb0fdb85d5f2a1b9cb39e56156b60a632e2a061"
+        },
+        {
+          "path": "checkpoints/bailey_03/12.json",
+          "sha256": "66387c945ee38e97342a4b86876ab3c69efd9cdcf1868dd79a54cc97a81cbab7"
+        },
+        {
+          "path": "checkpoints/bailey_03/13.json",
+          "sha256": "74ce6622bef45ea58b8468fe32db7512c23ba1de807295731bff497f26ce38d6"
+        },
+        {
+          "path": "checkpoints/bailey_03/14.json",
+          "sha256": "5e173ceb1c3b196d46815a6e229b2f591fa10a090873076fc67636387f6814a6"
+        },
+        {
+          "path": "checkpoints/bailey_03/15.json",
+          "sha256": "fd4872017b1be5d23e538cd9bc9b88a804b646f1c21c4477cf8c84da137832d2"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 36639,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 6,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_04",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "52153dc3c98f5ea96061b95be2b9b7838c3632c74928739c431c73a2c8be6cc8",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_04/00.json",
+          "sha256": "ace8fb519d2a82e84d7afea6b73a3fc02d3bd2f9aecca74065a59e3fd251cf49"
+        },
+        {
+          "path": "checkpoints/bailey_04/01.json",
+          "sha256": "944690da0586a9e499d2f63b84200996b3dbd1196f52143f2b80289337bbdc8d"
+        },
+        {
+          "path": "checkpoints/bailey_04/02.json",
+          "sha256": "c5321289fd2e0b59ffddce0fc2ae7b1ffb9b84de1405363f15bd0857ef2f4f6a"
+        },
+        {
+          "path": "checkpoints/bailey_04/03.json",
+          "sha256": "922885cb2ea088fd06572226d0abd123c99dadf727c4a99b71e2d9d8bb2950d9"
+        },
+        {
+          "path": "checkpoints/bailey_04/04.json",
+          "sha256": "bffd0642937cf28cf786da5d4e3d7e463d31b3d2942c0bae2ea96476c1baf0bc"
+        },
+        {
+          "path": "checkpoints/bailey_04/05.json",
+          "sha256": "b9ff9718404bb2f2c99a3908ffdd6e0cd3f968061cf8cbeb16d024e615784d1b"
+        },
+        {
+          "path": "checkpoints/bailey_04/06.json",
+          "sha256": "4dd92b4b8729b9a13c5fdeaa7bdaf14280d76e7603d256397e2817242f2f93b1"
+        },
+        {
+          "path": "checkpoints/bailey_04/07.json",
+          "sha256": "aeb5127aacdbfa1437d851fb5c059e8e08a90216412b828682a2384aff6c1bde"
+        },
+        {
+          "path": "checkpoints/bailey_04/08.json",
+          "sha256": "50b6dda08ca70b709fe9e9acbd3fc0cb17f3cfa11ee307de74e4f2891ed8cd63"
+        },
+        {
+          "path": "checkpoints/bailey_04/09.json",
+          "sha256": "2cc1e1a19faee6a50e47ae9a1067b47d4d3b14a6312b6e34bbe232094e21dc4a"
+        },
+        {
+          "path": "checkpoints/bailey_04/10.json",
+          "sha256": "0b42892933f6474ffa42d56df483a5216a8858a7c65de474ed1d49817f8add8a"
+        },
+        {
+          "path": "checkpoints/bailey_04/11.json",
+          "sha256": "545c4a9c6aa9114ddf2505806af0bd5f511184950cc89e84b9d8b9cd3340380b"
+        },
+        {
+          "path": "checkpoints/bailey_04/12.json",
+          "sha256": "f733d88b6ec65a073a5d63d42282cb6d1884425faf7fa228ec4dcd7b4324d1a7"
+        },
+        {
+          "path": "checkpoints/bailey_04/13.json",
+          "sha256": "2c64b5cbcff82078cec6afd28694c4813f0028adc1e80001e14a7dbac4c9d432"
+        },
+        {
+          "path": "checkpoints/bailey_04/14.json",
+          "sha256": "97435a9f784ce6a1f8a3ecaac3d2c3678b26f064d42dc5e05d7e0efdbceaa2a7"
+        },
+        {
+          "path": "checkpoints/bailey_04/15.json",
+          "sha256": "799775e250d10c953d6ac3fd73835fe847ef2556b2f7ef0a1b07b3916ef846bf"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 28759,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 6,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_05",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "3965f64c83d8e58d59469e33ba3659b419f94a1f6b98a9edddd88a924a3445b2",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_05/00.json",
+          "sha256": "245314bb73f685de5a2933dace67f708faa55c96a0e5d94092c2aed52891caa9"
+        },
+        {
+          "path": "checkpoints/bailey_05/01.json",
+          "sha256": "a51a99c53cf282c8d227f51054ab5f36b64670dc90db4ef944259e0941d37fc5"
+        },
+        {
+          "path": "checkpoints/bailey_05/02.json",
+          "sha256": "95796c55b5230cf165686d2426402ebad5a94e95df450ee21971838bca60f1a0"
+        },
+        {
+          "path": "checkpoints/bailey_05/03.json",
+          "sha256": "a46d7f89d85da311230af3b9a9e3c2756f69c75e41e221bbc2bc4ba58d0fb99c"
+        },
+        {
+          "path": "checkpoints/bailey_05/04.json",
+          "sha256": "6a2a6ebfb3c9fe3f5c928e03cb8999fb14cd35b6756d37b296de14996071da43"
+        },
+        {
+          "path": "checkpoints/bailey_05/05.json",
+          "sha256": "e2d67f8fa2f8cd3941228c0e6c6d9dc293e46fec208985be37e31b783c8aa280"
+        },
+        {
+          "path": "checkpoints/bailey_05/06.json",
+          "sha256": "4303c7054d7adcc227e8ee2c40de413e4fa1888bcddbcf002716659da8291a8c"
+        },
+        {
+          "path": "checkpoints/bailey_05/07.json",
+          "sha256": "1448a62c3ac6cfa6871b1ee52c7d5cd816766a974913b9945090758413aa3b76"
+        },
+        {
+          "path": "checkpoints/bailey_05/08.json",
+          "sha256": "49ffe7ed370a57eea370151fa5bceddff5c59063db586849ef9d8f634cd10365"
+        },
+        {
+          "path": "checkpoints/bailey_05/09.json",
+          "sha256": "a86f30afdc56d701fae2334351bb83080dea5c80239a0858166ef6872721bda0"
+        },
+        {
+          "path": "checkpoints/bailey_05/10.json",
+          "sha256": "f6103a7dec34d80006cdce6c44432fd15ebbbc275e1539dedc5e434548074ef1"
+        },
+        {
+          "path": "checkpoints/bailey_05/11.json",
+          "sha256": "1ec625421a1d4a89fecd5a6135a43db0780be3f8cb095af0a16f82c6d3c12f4d"
+        },
+        {
+          "path": "checkpoints/bailey_05/12.json",
+          "sha256": "89dfb1a0831fdaccef0df9b7592e31e4538300b92872fec909544be86da3c890"
+        },
+        {
+          "path": "checkpoints/bailey_05/13.json",
+          "sha256": "41167344f830567e9fe57806400562ad27a3092a059143d577662db17dfc02a3"
+        },
+        {
+          "path": "checkpoints/bailey_05/14.json",
+          "sha256": "08d29493ec5911a5adfbeeeea8251579539b282519cda450673399e7ee1a2228"
+        },
+        {
+          "path": "checkpoints/bailey_05/15.json",
+          "sha256": "7470169cc8866861f7559160ccb426224e23287e60d8a6e7ca0f33f5c9f56e19"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 69776,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 10,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_06",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "32879fb1f71adc66094d80e6a68a579521f17e76410fd3d90ed357dbbfd4d623",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_06/00.json",
+          "sha256": "69ab96fe83b2ae0dbc9b9d7d45a9497acabfb4665a29e0b4f975aa3263e09a38"
+        },
+        {
+          "path": "checkpoints/bailey_06/01.json",
+          "sha256": "98430c7a0c32ca36dd0b6845d6ccccc638f9140d5b9c7cc54989fabcdc15b612"
+        },
+        {
+          "path": "checkpoints/bailey_06/02.json",
+          "sha256": "16ab337a30b9e57f744e5d8d6370ec4a1920154eaf65cace1b253b61e92383f2"
+        },
+        {
+          "path": "checkpoints/bailey_06/03.json",
+          "sha256": "7267284f43d1f65c5a80b2438071c2c9d15398f46f6528cb6ee5b8283873a43d"
+        },
+        {
+          "path": "checkpoints/bailey_06/04.json",
+          "sha256": "196593ebdfe2ee330c82a08c64f47bd240639ab3cbd0108fbecce11d6d6c4dc4"
+        },
+        {
+          "path": "checkpoints/bailey_06/05.json",
+          "sha256": "49398bdaacf09b3d3cc9296b3a5bfe6c68c73dbc5baf17830c4d49287aed2d39"
+        },
+        {
+          "path": "checkpoints/bailey_06/06.json",
+          "sha256": "a2760a0fd6cf9801661006284761b6428e959579da279639b32a4575ec1596de"
+        },
+        {
+          "path": "checkpoints/bailey_06/07.json",
+          "sha256": "7c08e7a3a59d192556c3f1930e552f5d87196a050c3d87ae9f6c63eab8554e7f"
+        },
+        {
+          "path": "checkpoints/bailey_06/08.json",
+          "sha256": "4a56b8373a56f6b1ac79cae8344d549cf39c55cf7a0bca8b0c51e1b94f41acda"
+        },
+        {
+          "path": "checkpoints/bailey_06/09.json",
+          "sha256": "54895789ee7aebcf352d06e5c7861b0e8c7bfdd94d97c38545caa392f08bcca8"
+        },
+        {
+          "path": "checkpoints/bailey_06/10.json",
+          "sha256": "35724714ac3d072c445c1044a28a89e59c0f168ca7c7b7b248a708be2856e40b"
+        },
+        {
+          "path": "checkpoints/bailey_06/11.json",
+          "sha256": "83ee99d7d7afe589c49ac92079af1d31222be6f8c83fe51ce5e6a6ee927a0b58"
+        },
+        {
+          "path": "checkpoints/bailey_06/12.json",
+          "sha256": "8e48853449a5fbb7a01558ffe9cbc339d9dca2cb82d6552594de42f7f6ec151e"
+        },
+        {
+          "path": "checkpoints/bailey_06/13.json",
+          "sha256": "1bf8dcb2306742b088da43794760d12177379039a496071bf09ef9d915d7ef9b"
+        },
+        {
+          "path": "checkpoints/bailey_06/14.json",
+          "sha256": "82861d8d6ced06a6967ebe2b58a95d3c8faa41475c0e4e08c70083272d7fc7af"
+        },
+        {
+          "path": "checkpoints/bailey_06/15.json",
+          "sha256": "e1c737098dfc9871f16054a0d49b0c4d315180f2e399f49357324f061c740edc"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 80690,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 4,
+      "independent_scored_keys": 12,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_07",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "2b036a8b6079d63246a35482d5702cce262246a43f4a71685921c8f69c46d643",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_07/00.json",
+          "sha256": "7e2c2b38aa5a12deb0b0e8af3846668a881fd9c8962e54b0d6d38867adcd4d71"
+        },
+        {
+          "path": "checkpoints/bailey_07/01.json",
+          "sha256": "fffe3dcb403d37b0828cbe57b7d58b23d0e7b8214ee9094850b0a4b8f16c8516"
+        },
+        {
+          "path": "checkpoints/bailey_07/02.json",
+          "sha256": "12fdc6d62805b1110993ed4c79c627956565f553203a7025caa38179554bd243"
+        },
+        {
+          "path": "checkpoints/bailey_07/03.json",
+          "sha256": "8a3f2d6e515a822affaff55363f6b8e2d240bfe698dc8877dd7b8f6676fc1334"
+        },
+        {
+          "path": "checkpoints/bailey_07/04.json",
+          "sha256": "5370f85961920d4d80eed5c7eaa2b465090b5903994db351550be71a3bc233db"
+        },
+        {
+          "path": "checkpoints/bailey_07/05.json",
+          "sha256": "de01f7abd117a17b573dee4eb5e40087f25766e76dd9de75fcdf23c8760fc45d"
+        },
+        {
+          "path": "checkpoints/bailey_07/06.json",
+          "sha256": "0dc3859a7e8e652a741396bcbaf509c20fac149fecf904d85d5398178c93277b"
+        },
+        {
+          "path": "checkpoints/bailey_07/07.json",
+          "sha256": "e5f43adbd774262dae3dd5840edeeed61c83c69b3c1dd32bb142bc75f41c86f9"
+        },
+        {
+          "path": "checkpoints/bailey_07/08.json",
+          "sha256": "ea705a46c488f56c51a7b184aa8c8968cc70e189c0e07ea2dc0bc265974410bf"
+        },
+        {
+          "path": "checkpoints/bailey_07/09.json",
+          "sha256": "15d3d5fceecc368cd6e83a1a9008b2fa0c330b07090d3611289468d82eb0bff5"
+        },
+        {
+          "path": "checkpoints/bailey_07/10.json",
+          "sha256": "f722997ae4a08a27f3632699090dabbfe4bee32b3345bb7c4d2872c457f7dadd"
+        },
+        {
+          "path": "checkpoints/bailey_07/11.json",
+          "sha256": "b40ca49a68039bde7e193cbb21ffbdeae866d2f34ee3e15bef485c609d090161"
+        },
+        {
+          "path": "checkpoints/bailey_07/12.json",
+          "sha256": "c76ac6dee699eb9509de989d9c8af6d9aeac969a0cf4913b10ecabc9d7002c2a"
+        },
+        {
+          "path": "checkpoints/bailey_07/13.json",
+          "sha256": "272c52b68521077f13cf550932d8241aeba8cd52cf1f2c0cfac4040ac6cc9762"
+        },
+        {
+          "path": "checkpoints/bailey_07/14.json",
+          "sha256": "e8dc655678875543694e493523bd56f5554ae5bee8b6981ab7a339842f915ebc"
+        },
+        {
+          "path": "checkpoints/bailey_07/15.json",
+          "sha256": "4bd574d8a4881706454ae43d1909a0cb3cb75d4087a80ae24a14ba9dac0a6452"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 346614,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 8,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_08",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "e6c8e2d6886102f8b34931b53aa05685d9d53947160fff88cbd478ecc3d903a4",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_08/00.json",
+          "sha256": "c1e077252e2a46357f51d41058587c56b113c1b3a413c5614eb866a51f689d5c"
+        },
+        {
+          "path": "checkpoints/bailey_08/01.json",
+          "sha256": "2455ffaba89204fe857c9d702976f43ca3a2ea535fde7792989600f33507a7e7"
+        },
+        {
+          "path": "checkpoints/bailey_08/02.json",
+          "sha256": "3df71b06d114acf013a6294065ac1cd92c0355c05865ca32ace06cda85229c0b"
+        },
+        {
+          "path": "checkpoints/bailey_08/03.json",
+          "sha256": "6efcd72a1da950d28e7348c6b2f6e6e5fd1751e10dad301f15b4876f02c5d478"
+        },
+        {
+          "path": "checkpoints/bailey_08/04.json",
+          "sha256": "a4fbd5ca3aefad4181d189b160ebc4e5f64594b99b131b80f8c2170de83ccc7d"
+        },
+        {
+          "path": "checkpoints/bailey_08/05.json",
+          "sha256": "0795e8f5d6bab220b43bd8d06c7d508657b6a352d715fed12219158868ca7117"
+        },
+        {
+          "path": "checkpoints/bailey_08/06.json",
+          "sha256": "cc3aedccc2df217c0fb9ae00b47a1c00d25f30e93f8b1e635c01d571deed1901"
+        },
+        {
+          "path": "checkpoints/bailey_08/07.json",
+          "sha256": "1a1941c668c03552016a71de9f43bef9334b391996db340829f83684a1b1c90c"
+        },
+        {
+          "path": "checkpoints/bailey_08/08.json",
+          "sha256": "d99049ff3ad55a388808934346241fd2740f5ae881b5134d92496c0f2b3ace2c"
+        },
+        {
+          "path": "checkpoints/bailey_08/09.json",
+          "sha256": "13b8677f95311afeb5f114743dd0f1d3850c9e4462baa822b393c46fb820d81b"
+        },
+        {
+          "path": "checkpoints/bailey_08/10.json",
+          "sha256": "f2774e13d774c45b8f348ab22a9039d24c629f3452be97da4a0a5cbcedbf8656"
+        },
+        {
+          "path": "checkpoints/bailey_08/11.json",
+          "sha256": "6e4cb0c25caebedf911d69131a039ead94f7b3a541a596ae93babc9f368764ad"
+        },
+        {
+          "path": "checkpoints/bailey_08/12.json",
+          "sha256": "4c94d950a6c6858191f1f6d8fd2c78e676d7bf30a2e83d8c7504648f0484efd2"
+        },
+        {
+          "path": "checkpoints/bailey_08/13.json",
+          "sha256": "4be22926f6758b997a8b51e25d719f0d7c44b65993e88e92f185007fd6044838"
+        },
+        {
+          "path": "checkpoints/bailey_08/14.json",
+          "sha256": "567ef95bf68e00a10d39a668cdadae0f3515b73a95178938cee73ea3fc125df5"
+        },
+        {
+          "path": "checkpoints/bailey_08/15.json",
+          "sha256": "5b83b0ed6e1a0f4d90e7355655f8ae087fee4eddeaeeafb751ea90871af6c64e"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 150777,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 4,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "bailey_09",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "d10c96b4b14cfe673c9d91595f719fcba3b9b10aae877ccbc4753fb6db6f23f9",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/bailey_09/00.json",
+          "sha256": "22b48a72c72f11c98efd1914402f2f1f1d7e35d2b87035739374c705fd87ae27"
+        },
+        {
+          "path": "checkpoints/bailey_09/01.json",
+          "sha256": "275c54558c9b6fa647fba4b41a8e289678abdfb53aefb02e7ff0659e664ce302"
+        },
+        {
+          "path": "checkpoints/bailey_09/02.json",
+          "sha256": "81d41975ad02ed19375fd77ef2c05eb645d01719b31a6dbe1edb5d3f449bd86c"
+        },
+        {
+          "path": "checkpoints/bailey_09/03.json",
+          "sha256": "ade7fb1f9137885722f0862e3d7d59e5d4f57f044a59888a53f7495a1947e982"
+        },
+        {
+          "path": "checkpoints/bailey_09/04.json",
+          "sha256": "8fd03259b637cb910542ecc3607d7135a4e9a23bbfe84a6d67170bcc8954b928"
+        },
+        {
+          "path": "checkpoints/bailey_09/05.json",
+          "sha256": "9123d121b53ebe53583d2602062daecb63fa0732494dee22008f9219f680570c"
+        },
+        {
+          "path": "checkpoints/bailey_09/06.json",
+          "sha256": "381a9ebf624c1bae6bf4a4c60dbd69a73b859b1f91bdf221cdbf425077dedd01"
+        },
+        {
+          "path": "checkpoints/bailey_09/07.json",
+          "sha256": "c10a2e34b933bd9a108beaa7ed6cf725486905cfa5aae860b84543e9def002be"
+        },
+        {
+          "path": "checkpoints/bailey_09/08.json",
+          "sha256": "b3434e2ae96bce8c5620fe469c78fc9bbb3ca955fdef00bdf13c25cd9d26dd26"
+        },
+        {
+          "path": "checkpoints/bailey_09/09.json",
+          "sha256": "70b1813f171c2d04f00930604a8524bae40bfff0564f092342c682bdd8ae81d3"
+        },
+        {
+          "path": "checkpoints/bailey_09/10.json",
+          "sha256": "a99a96ae922a6347341fd48944be3d371fec09dc3038d61cfd9654a341a0b61a"
+        },
+        {
+          "path": "checkpoints/bailey_09/11.json",
+          "sha256": "9f39be41771314a9757375a02350666b98a694da8fddf3a92462b8e45e287f93"
+        },
+        {
+          "path": "checkpoints/bailey_09/12.json",
+          "sha256": "af76f457bb69f12e48c5b1ace855613fd4b1e812fa49c374551ebc6769cee728"
+        },
+        {
+          "path": "checkpoints/bailey_09/13.json",
+          "sha256": "0f03bc16975bcd99fe287fc2c39dde18bffbce678338441691e6da9b76faf762"
+        },
+        {
+          "path": "checkpoints/bailey_09/14.json",
+          "sha256": "fda52624e35f8f8401bc3def31a131ec910ca34ec48b131cd03b5db58d7557a5"
+        },
+        {
+          "path": "checkpoints/bailey_09/15.json",
+          "sha256": "85489c69ed0244261542e940fca21d3a85195ae698523ea0cae43e3b70291e86"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 85607,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 8,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "brewer_01",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "fe53c39ef4d08094a97f5738afd2eabbbe5233177911f7366b4cfd97fa157191",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/brewer_01/00.json",
+          "sha256": "8023d835c2f40b2dbc8b2a160d372f379611aabc962ab2a45177b0555a47138a"
+        },
+        {
+          "path": "checkpoints/brewer_01/01.json",
+          "sha256": "a5735099bf5de3f7037619c522aac54f696ee149f4f0b319cc9b8ca3de9e8844"
+        },
+        {
+          "path": "checkpoints/brewer_01/02.json",
+          "sha256": "e97d3292ba70291e74ee55c4bbf13d6044643bbeb34511a29fffa09c06df1255"
+        },
+        {
+          "path": "checkpoints/brewer_01/03.json",
+          "sha256": "7dbce41e106e5f64c4846d1ff137403eb309885ea112d5b61c16b9928c429703"
+        },
+        {
+          "path": "checkpoints/brewer_01/04.json",
+          "sha256": "38d55a810ec2a2af5b397024a68e9c8df2a8a28e63fa726ea9f95f64f90e3cad"
+        },
+        {
+          "path": "checkpoints/brewer_01/05.json",
+          "sha256": "0a862e85dbc00bfa1997bcde9cd1ee517cd584789dde7f8b7d06a76de1081217"
+        },
+        {
+          "path": "checkpoints/brewer_01/06.json",
+          "sha256": "bc497398d4e5aebc4268441a2e26dc8c5609717f744d8f1185f3c14ca965e553"
+        },
+        {
+          "path": "checkpoints/brewer_01/07.json",
+          "sha256": "ce47b89fe6920110eab792a81b31e7afddadb38d7d318340732c00dca880f077"
+        },
+        {
+          "path": "checkpoints/brewer_01/08.json",
+          "sha256": "d980facf8d8b45bfa0fb94f0c59137cae40cf363bb5444e8efcab4fa72047571"
+        },
+        {
+          "path": "checkpoints/brewer_01/09.json",
+          "sha256": "b8689d4b808d80c4dc33328ea98f545a62032c73526700f9d06cf9922e96ea2e"
+        },
+        {
+          "path": "checkpoints/brewer_01/10.json",
+          "sha256": "d23572498ac6eba3e5af7c5826a4a718965e76ffa4270874256d6de63fe75208"
+        },
+        {
+          "path": "checkpoints/brewer_01/11.json",
+          "sha256": "51b748775898e732b2a539279a3b6ca935ded78e0d601db91454c1a282d550c1"
+        },
+        {
+          "path": "checkpoints/brewer_01/12.json",
+          "sha256": "a40d195cec7fed7244a2da4f40e11dd1c31d926d42d820fe9ca8e2b3a253b358"
+        },
+        {
+          "path": "checkpoints/brewer_01/13.json",
+          "sha256": "e44f1b653efb372aa861a84be4f6060be6e2132a9c97c0780f182551d95123c5"
+        },
+        {
+          "path": "checkpoints/brewer_01/14.json",
+          "sha256": "a0fdab3ed9c1dba10bf18cdb4b9a4c896dd3ced364ee6b973757aa1514c393c0"
+        },
+        {
+          "path": "checkpoints/brewer_01/15.json",
+          "sha256": "0562aa1b309f1d317c5c47435e9fa923287a40c56dc607916cd5330b21f46d72"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 54196,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 4,
+      "independent_scored_keys": 12,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "brewer_02",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "513e1773f0d2257f9c93be63ca6809b54c08c6508e067dc2df33a476d5dec8d1",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/brewer_02/00.json",
+          "sha256": "82b4d7ffbc1459170289f58bbf54fdd66dd3352db0403e037f647f011a1bf81e"
+        },
+        {
+          "path": "checkpoints/brewer_02/01.json",
+          "sha256": "20c59bed2030e038120f143f4dcde2aa639492f60646e37459521855aabdf998"
+        },
+        {
+          "path": "checkpoints/brewer_02/02.json",
+          "sha256": "dcc5b284654b8df49bfa7d8b68be5f43875251f2075d385861a1ae868b670c41"
+        },
+        {
+          "path": "checkpoints/brewer_02/03.json",
+          "sha256": "0069c23bc10921da0cd1093e7dba30c00d4947ac298136aa428035ea4aa604c0"
+        },
+        {
+          "path": "checkpoints/brewer_02/04.json",
+          "sha256": "f8dc143009967fdc7e1f9c82c493b7abdbc4865d3e883c084a340cd7dd9d7d92"
+        },
+        {
+          "path": "checkpoints/brewer_02/05.json",
+          "sha256": "d2b8d6520df1758488dc220ec9df7b56823405d524fa332bcbb4335045e68181"
+        },
+        {
+          "path": "checkpoints/brewer_02/06.json",
+          "sha256": "d143feab573544a2f1ceaa7428fac53778cbb4e19a8c9b26bc547c50668ecc1b"
+        },
+        {
+          "path": "checkpoints/brewer_02/07.json",
+          "sha256": "4ebc929ecf996ceeaafb8bb41685a07c84206a79b516d71d6b863d796089e89b"
+        },
+        {
+          "path": "checkpoints/brewer_02/08.json",
+          "sha256": "9f140693850c915e26601c7e963a09c7edd2d56f662ac13b50894e5eef909199"
+        },
+        {
+          "path": "checkpoints/brewer_02/09.json",
+          "sha256": "9505591c16c6caf631589eb05b452614d1a99b78c64924d793f3e7a6a38285c9"
+        },
+        {
+          "path": "checkpoints/brewer_02/10.json",
+          "sha256": "b0ee328dd23da131ae8a3e875fb355c2036d1ab12c001e4863241b8a1de4ffae"
+        },
+        {
+          "path": "checkpoints/brewer_02/11.json",
+          "sha256": "ce6f504e4107e15e7535a773be7da2765434fc1a4c788198ff1f10af577ac955"
+        },
+        {
+          "path": "checkpoints/brewer_02/12.json",
+          "sha256": "1042e04ce47fb65574bc6ca6796078bff0dea49bbd23dcc35efe2beb8805bc1c"
+        },
+        {
+          "path": "checkpoints/brewer_02/13.json",
+          "sha256": "c2501961b8476ab2631443bee0ef6051d88b6f38dca1498d0fd71db98bcd64e7"
+        },
+        {
+          "path": "checkpoints/brewer_02/14.json",
+          "sha256": "ed40e384c275e259ec7796efcd0c412f3136787c7ec0691108d9e9e96e740dd3"
+        },
+        {
+          "path": "checkpoints/brewer_02/15.json",
+          "sha256": "8f5419a2472d5d31b00e225749cfd446adccff842641b6db2709dfcccd720e5a"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 20495,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 4,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "brewer_03",
+      "kind": "positive",
+      "status": "passed",
+      "result_sha256": "3d8045f8f81760a15e8cc156afd1373f0ea8ec524ab39942146d23af5237e1ec",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/brewer_03/00.json",
+          "sha256": "9ad49f785aaad1cd35acec6cf0bc957a0dfd8c00e8c422683bb5bdc95f2d8ac2"
+        },
+        {
+          "path": "checkpoints/brewer_03/01.json",
+          "sha256": "789c64b66cb103de2176899c3df3687aa3b1d886ca4f540a50860434344fe5dc"
+        },
+        {
+          "path": "checkpoints/brewer_03/02.json",
+          "sha256": "f706ce4de52d11914b8e0ab7164451f7240483a5291aaed899f7ff9b91583a8f"
+        },
+        {
+          "path": "checkpoints/brewer_03/03.json",
+          "sha256": "e47abc77ed20b233cb965a7a4d32fc6f2cc9baf499889441058f02e5e331bbfd"
+        },
+        {
+          "path": "checkpoints/brewer_03/04.json",
+          "sha256": "7cbe846bcf89499c664afa15d9cfa64f9ab7163286555d5359f3e74b7e282fb0"
+        },
+        {
+          "path": "checkpoints/brewer_03/05.json",
+          "sha256": "cb53ee198ee6e6501f173f5a87f04e085a933863a0209b2ec1eff67221e27276"
+        },
+        {
+          "path": "checkpoints/brewer_03/06.json",
+          "sha256": "e59e9f5a9eb9fc835719f9d34dbaa084e458fbb38b899963c7d92660b0019300"
+        },
+        {
+          "path": "checkpoints/brewer_03/07.json",
+          "sha256": "3198e04a0691251daf5136587b9a20758a31423932fa2558895dacb408e8499f"
+        },
+        {
+          "path": "checkpoints/brewer_03/08.json",
+          "sha256": "978a7750bda88a1e1556533b6a5fe253f814eb6f1710f89f42fc633ba684c380"
+        },
+        {
+          "path": "checkpoints/brewer_03/09.json",
+          "sha256": "aa451af301b60b5e871dfe067930dd850bca0401d1e4b56e3e9d5545bf880147"
+        },
+        {
+          "path": "checkpoints/brewer_03/10.json",
+          "sha256": "0d065a5ce3b5b66c52b81e0038526a3fcde2d91e88951dea65cc9ae88360dab5"
+        },
+        {
+          "path": "checkpoints/brewer_03/11.json",
+          "sha256": "0229ab3809cf7de4a1dda0724fd1864d8908970939def9cd68a5684797c87cea"
+        },
+        {
+          "path": "checkpoints/brewer_03/12.json",
+          "sha256": "b74d1a658cf898dce8743e7a15e5ac8f16205b08626dcde2f910fb783adeee6d"
+        },
+        {
+          "path": "checkpoints/brewer_03/13.json",
+          "sha256": "7e5abd629a8939aed7a335efc4e679919f48ba05b5abeed575b2bb1e19769a0d"
+        },
+        {
+          "path": "checkpoints/brewer_03/14.json",
+          "sha256": "a0b5425ee537389f53db2d17f88e4421674532d2362a8678673fabec201528ec"
+        },
+        {
+          "path": "checkpoints/brewer_03/15.json",
+          "sha256": "0683b1366ff5877590b9d69cc5239fc3e5613b6461b8872d7d7d397d6d4c80d8"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 50835,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 8,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "elgar_march_1897",
+      "kind": "regression",
+      "status": "passed",
+      "result_sha256": "938f908503fa4bcf81f3d0c2698fbf5f7ff6d7db4267f10e37e9d7ccff3b031c",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/elgar_march_1897/00.json",
+          "sha256": "32470219f67f229c71311a07a49573ea68f009cf2337525e6bd52d33d9468c9e"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/01.json",
+          "sha256": "0b01866d9bd4fb3f065a1501e7d1af48dfaa3098ed2c3795c461b4ea89eb214d"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/02.json",
+          "sha256": "2d38873b52127034a2e8942be934f6b32b350321c43ee8018b90ab5a9119adda"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/03.json",
+          "sha256": "57f719e5e2f0b515ee4426db4834e53f69889f5abc6f7d8ac13cb8b44587e27a"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/04.json",
+          "sha256": "c8a1259e53421fa6cd85706a9eb3996b8829091080c8569c6afd118729bef241"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/05.json",
+          "sha256": "f976e245dfc56f1a4afaf0c249d2730d2f64648e2a5a80c328de6b3c459e78bd"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/06.json",
+          "sha256": "8f0fe44404ffa78fd3dce8985edc153f562e59f9f0af7d2d85c5f785a65cc6bc"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/07.json",
+          "sha256": "cf91f13382da679f0a0190fc01bc47177e88b6c61ad9f299c5e4f09b6aa0b020"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/08.json",
+          "sha256": "7fed9a3dbe3ad6a3a1a7e7241a3576b81cc494afbe1f6b2173fd6be725810911"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/09.json",
+          "sha256": "c33484ea822946a87a8398d1421a60c80a96763e34157c4a95df1c36ed0464f2"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/10.json",
+          "sha256": "9b9b7296da9bead7e738080dfe43b66f4eeeddb6fa5322edaa07bf16550cab19"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/11.json",
+          "sha256": "8cc80170b632df00b106c8cb5b3fb41911408979a21a47a32310d08a35f72b13"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/12.json",
+          "sha256": "d6e3b6c07fd6ce4ee9d21da32ddbcf99d6ce720838f7733e9fcbf4cb7bfe872c"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/13.json",
+          "sha256": "ee62f4edccf856b5762f92f3aab8604824fbd04c95afd8594176a59c3cb4eba6"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/14.json",
+          "sha256": "1ad9978c190bb5f63d02b7934b9e87ec20e1ca4a92b2be2d96371e11ab582b34"
+        },
+        {
+          "path": "checkpoints/elgar_march_1897/15.json",
+          "sha256": "9bfee7e6eb233bc9d788cc36381feac2a722f428117599ec0f51dc56fcfa0582"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 90860,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 2,
+      "independent_scored_keys": 8,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    },
+    {
+      "id": "elgar_caractacus_postcard",
+      "kind": "regression",
+      "status": "passed",
+      "result_sha256": "c874474945464581755eeb223087eead7254ca4a1d2f16edf63586b6d17c850e",
+      "protocol_sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996",
+      "checkpoint_count": 16,
+      "checkpoint_hashes": [
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/00.json",
+          "sha256": "9b0154040a3b37c689224ae47990c5925650e3d3af2d9766afc2e4ce1ac536d7"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/01.json",
+          "sha256": "a9d259d97d44aaf3ea1ca049170e8d8c71d34f81421b636f46edbae01a62499f"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/02.json",
+          "sha256": "f0f17ab93d219cc5193d39c923f18ec12989944035914e0d0eec46716d1c20ea"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/03.json",
+          "sha256": "87884265cf544a36e6c9640e702624767c6abee3363f502384f003f106094ffe"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/04.json",
+          "sha256": "6e2b225db6b409b9abf45e63bc4133454510c0841a07da3bbfb11f3e80947515"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/05.json",
+          "sha256": "d0b73d96022dde21ef617e8774c4317cfbf9e48b15dcb0258e941594cb8c85cc"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/06.json",
+          "sha256": "1087e6cf5d281bbb65f96752df9fba624fa04c05526b57a88a1176f121d6b47e"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/07.json",
+          "sha256": "4e75c27c6c548d425ffa41db78bb26d26c0ad2bb05237f34163862b9de3c136c"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/08.json",
+          "sha256": "d16e3889704f327c502d91a9ca4192dbaa3139a7c3e8a7233008f14bd8a3177b"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/09.json",
+          "sha256": "09444f7a912f093e4e890971e38960e7b4f52e828e108a0975b5ac26b1342291"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/10.json",
+          "sha256": "d3ea54b91fa349ec5697b044cf2a1a700cd08718d658b93dd84c7ed75caceaee"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/11.json",
+          "sha256": "f554462df5ba07bdb7dd23f9b6c88e84bd8ab711746dc6dbc549e8c70cd0603d"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/12.json",
+          "sha256": "0bfc4764271eca62b8f8e3372bff674d316bbdc87f914685cb52d5fd508e96aa"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/13.json",
+          "sha256": "5bbe8a94e623e8e090b01f19890dddf106f49f5f93a2efe7bf28453777724e11"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/14.json",
+          "sha256": "e93530b2b3433a1017643c279090b9134bd0401380ecca06f3e1223e577292b3"
+        },
+        {
+          "path": "checkpoints/elgar_caractacus_postcard/15.json",
+          "sha256": "05871e5fa1179b8065e2e190210f0536f8b5aebe5638c8595459016177aaf37a"
+        }
+      ],
+      "char_evaluations": 26873856,
+      "word_evaluations": 49112,
+      "canonical_id_verified": true,
+      "exact_tie_union_verified": true,
+      "final_tie_count": 1,
+      "independent_scored_keys": 2,
+      "score_equality": "exact float64 equality using independent sequential character sum and backward word DP",
+      "reencryption_verified": true,
+      "source_plaintext_preserved": true,
+      "seeded_truth_reproduced": true,
+      "correct": 87,
+      "true_key_among_ties": true
+    }
+  ],
+  "limitations": [
+    "Runner does not validate existing final results before reuse; this audit binds the current positive results to the frozen protocol independently.",
+    "Runner checkpoint resume checks are weaker than this audit; this does not make future resumes inherently validated.",
+    "Unpruned search audits remain separate and pending under protocol."
+  ]
+}

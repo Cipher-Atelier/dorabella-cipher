@@ -1,0 +1,97 @@
+{
+  "status": "SAVED_ARTIFACT_READBACK_OK",
+  "utc": "2026-10-17T23:25:07.910337+00:00",
+  "freeze_sha256": "71b81f761182d5dd469cf673df1f6933e1152b896c3bbc1656f817a582d91e34",
+  "result_sha256": "83acd52a37cd6c0e5d5349cd83a2cb76c9a8ea247379dc082a033b08eb934736",
+  "raw_receipt_sha256": "a9f5540f3ecf5191382f52436e9f0ad9688a479079c05d8fff06d03e81782823",
+  "normal_exit": 0,
+  "full_table_rows_reported": 11324091,
+  "source_bytes_reported": 363533326,
+  "index_bytes_verified": 90592776,
+  "unique_lookup_keys": 35,
+  "indices": [
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm1.idx",
+      "bytes": 232,
+      "sha256": "dff7a134c2946a5ab6256620e360a75e21bbb6c68bdd09067e69f29e8eb34655"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm2.idx",
+      "bytes": 6216,
+      "sha256": "2c01aa2ca93c212e79b6fe57bbaa40d76965e2fe60eeb79212dfa689a48cd7f1"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm3.idx",
+      "bytes": 101232,
+      "sha256": "bccd0b54da215aefdbb9fb04dc0fde8c604ccb7878ead5487660c53786cf41dd"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm4.idx",
+      "bytes": 988976,
+      "sha256": "9a070f632a37ee3bb2bf912daaeb0ae1f2876b7d6053d4af6d24dd8f9cdd83a5"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm5.idx",
+      "bytes": 23909696,
+      "sha256": "492264312b065baad1052350f862a8c8ac174ffbaed890db79e065ef62a15bb0"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm6.idx",
+      "bytes": 65586424,
+      "sha256": "fbdf8640f4a75a7ab38562799b8b1d1373b23f3d3e7824907562c5ceb745d3f6"
+    }
+  ],
+  "source_modules_verified": [
+    {
+      "path": "original/FreqAnalysis.pm",
+      "external": false,
+      "bytes": 2133,
+      "sha256": "563cce6d2e3af583cebd0f922e5cd7680ae138786572367d72fc9f01465b8f12"
+    },
+    {
+      "path": "original/JMSmoothing.pm",
+      "external": false,
+      "bytes": 1857,
+      "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357"
+    },
+    {
+      "path": "original/LICENCE",
+      "external": false,
+      "bytes": 1189,
+      "sha256": "ee9e6e82d5ea179ff189f330b3a54eff791ee4f4874b340fefcf7a1227c300bf"
+    },
+    {
+      "path": "original/NoSpace.pm",
+      "external": false,
+      "bytes": 1097,
+      "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188"
+    },
+    {
+      "path": "original/ReadLM.pm",
+      "external": false,
+      "bytes": 1078,
+      "sha256": "bda9cc75ee2303015bb7ac7df2897ebe038e21786cb826df71132d9f897cb8e9"
+    },
+    {
+      "path": "original/Utils.pm",
+      "external": false,
+      "bytes": 2765,
+      "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e"
+    },
+    {
+      "path": "original/masc_solver_mcts.pl",
+      "external": false,
+      "bytes": 14627,
+      "sha256": "5021fcef107d606f641fa4b24e4544bb3eeb159efefb26dc6d4d3966a7068f17"
+    }
+  ],
+  "not_rerun": [
+    "source census",
+    "lookup",
+    "fixtures",
+    "Perl",
+    "scoring",
+    "P01"
+  ],
+  "observation_limit": "Same tool session returned exit 0. No separate stderr capture or continuous RSS/AS trace; self ru_maxrss is reported peak RSS, not AS or cgroup peak."
+}

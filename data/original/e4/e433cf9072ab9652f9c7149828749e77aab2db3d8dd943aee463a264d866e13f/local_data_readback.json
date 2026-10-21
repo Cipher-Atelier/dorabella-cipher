@@ -1,0 +1,65 @@
+{
+  "actual_version": "TS-RECOVERED-SEARCH-v3",
+  "attempt_bytes_including_seal": 18220872,
+  "closed_files_verified": 17,
+  "complete_expansions": 0,
+  "freeze_sha256": "84146a52c5f0e2e53974c0220eb3cb63f698fd81c6250a522083099447050874",
+  "inverse": null,
+  "last_accepted_pat_record": {
+    "found": false,
+    "ordinal": 200003,
+    "request": "[200003,\"word\",\"htetgtertchtea\"]\n"
+  },
+  "legacy_result_label": "TS-RECOVERED-SEARCH-v2",
+  "limits": "Memory observations are sampled; VmPeak is AS, VmHWM/RSS resident; no guaranteed maximum cgroup measurement or complete scientific acceptance.",
+  "manifest_unchanged_files": 109,
+  "native_best": null,
+  "pat_journal_records": 200003,
+  "pat_request_types": {
+    "list": 2,
+    "meta": 1,
+    "word": 200000
+  },
+  "post_terminal_identity_check": [
+    {
+      "observed": "PID_ABSENT",
+      "role": "broker",
+      "starttime": 760634,
+      "visible_pid": 3056
+    },
+    {
+      "observed": "PID_ABSENT",
+      "role": "perl",
+      "starttime": 760636,
+      "visible_pid": 3057
+    }
+  ],
+  "process_observation_records": 375,
+  "profile_event_counts": {
+    "expansion_start": 1,
+    "highwater": 1,
+    "initialization": 1,
+    "observer_start": 1,
+    "segmentation_progress": 4
+  },
+  "recovery": null,
+  "sampled_cgroup_current_max": 4562579456,
+  "sampled_cgroup_current_min": 4528021504,
+  "sampled_process_memory_KiB": {
+    "broker": {
+      "VmHWM": 14500,
+      "VmPeak": 39900,
+      "VmRSS": 14500,
+      "VmSize": 39900
+    },
+    "perl": {
+      "VmHWM": 13088,
+      "VmPeak": 17620,
+      "VmRSS": 13088,
+      "VmSize": 17620
+    }
+  },
+  "score_records": 0,
+  "status": "LOCAL_CLOSED_BYTES_VERIFIED_INCOMPLETE",
+  "utc": "2026-10-18T15:44:51.296444+00:00"
+}

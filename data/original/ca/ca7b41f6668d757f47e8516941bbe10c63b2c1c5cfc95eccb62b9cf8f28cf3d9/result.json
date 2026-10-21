@@ -1,0 +1,155 @@
+{
+  "schema": "TS-COMPACT-STORE-v2",
+  "status": "PASS_STORAGE_CONTRACT_ONLY",
+  "solver_executions": 0,
+  "scoring_calls": 0,
+  "target_inputs": 0,
+  "phase": "seal",
+  "events": [
+    {
+      "phase": "frozen_positive_negative_fixtures",
+      "utc": "2026-10-17T13:22:44.558697+00:00",
+      "elapsed": 0.0016438789971289225
+    },
+    {
+      "phase": "identity",
+      "utc": "2026-10-17T13:22:44.559306+00:00",
+      "elapsed": 0.0022530690039275214
+    },
+    {
+      "phase": "build_patlst_index",
+      "utc": "2026-10-17T13:22:45.658976+00:00",
+      "elapsed": 1.101928759002476
+    },
+    {
+      "phase": "verify_all_rows_independent_parser",
+      "utc": "2026-10-17T13:23:44.182623+00:00",
+      "elapsed": 59.62557615100377
+    },
+    {
+      "phase": "verify_group_order_and_statistics",
+      "utc": "2026-10-17T13:24:34.618958+00:00",
+      "elapsed": 110.06191015899822
+    },
+    {
+      "phase": "seal",
+      "utc": "2026-10-17T13:24:42.805609+00:00",
+      "elapsed": 118.24857225699816
+    }
+  ],
+  "start_utc": "2026-10-17T13:22:44.558456+00:00",
+  "limits": {
+    "RLIMIT_AS": [
+      536870912,
+      536870912
+    ],
+    "RLIMIT_CPU": [
+      170,
+      180
+    ],
+    "RLIMIT_FSIZE": [
+      2147483648,
+      2147483648
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ]
+  },
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "3188641792",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "self_status": [
+      "VmPeak:\t   40336 kB",
+      "VmSize:\t   40336 kB",
+      "VmHWM:\t   11244 kB",
+      "VmRSS:\t   11244 kB"
+    ]
+  },
+  "fixtures": {
+    "golden_parser_cases": 4,
+    "negative_format_cases": 5,
+    "negative_stored_row_cases": 10,
+    "golden_whole_contract": 1,
+    "negative_contract_cases": 6,
+    "passed": true,
+    "oracle": "hard-coded expected lists, multiplicities, lexicon and maxlen; no score"
+  },
+  "all_identity_checks": true,
+  "build": {
+    "rows": 7548932,
+    "candidates_with_duplicates": 10662322,
+    "bytes": 340083717,
+    "per_original_order": {
+      "1": {
+        "rows": 18270,
+        "candidates": 123619
+      },
+      "2": {
+        "rows": 1407594,
+        "candidates": 2917160
+      },
+      "3": {
+        "rows": 6123068,
+        "candidates": 7621543
+      }
+    },
+    "max_raw_line_bytes": 118052,
+    "max_candidate_bytes": 46,
+    "raw_sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd"
+  },
+  "lexicon_count": 123619,
+  "full_row_readback": {
+    "rows": 7548932,
+    "candidates": 10662322,
+    "raw_sha256": "2849bc03f85c59a422f1945960ce04a4b6e66cc02c61a6484de0283c30c724fd",
+    "comparison": "exact raw bytes and full candidate lists, two independent parsers",
+    "lexicon_two_way_difference": 0,
+    "maxlen_equal": true
+  },
+  "groups": {
+    "distinct_normalized_patterns": 5927556,
+    "patterns_merging_original_orders": 290257,
+    "max_candidates_in_one_pattern": 63911,
+    "max_pattern": "abcdefgh",
+    "sequence_order_verified": true,
+    "duplicates_not_removed": true
+  },
+  "lookup_query_plan": [
+    [
+      4,
+      0,
+      62,
+      "SEARCH segments USING INDEX by_pattern (pattern=?)"
+    ]
+  ],
+  "index_bytes": 537591808,
+  "index_sha256": "c35f28462555da9982ed975b713a291b654a0e2b0d514e7d498f717bdf386070",
+  "candidate_index_eligible_for_publication": true,
+  "limits_of_result": [
+    "Not original Perl equivalence execution",
+    "Not numerical score equivalence",
+    "Not search/resource viability",
+    "No target/control decoding",
+    "Source file plus pinned index are required together"
+  ],
+  "end_utc": "2026-10-17T13:24:43.206087+00:00",
+  "elapsed": 118.64903419100301,
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "6026137600",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "self_status": [
+      "VmPeak:\t   52488 kB",
+      "VmSize:\t   52040 kB",
+      "VmHWM:\t   23732 kB",
+      "VmRSS:\t   23732 kB"
+    ]
+  },
+  "maxrss_KiB": 23648
+}

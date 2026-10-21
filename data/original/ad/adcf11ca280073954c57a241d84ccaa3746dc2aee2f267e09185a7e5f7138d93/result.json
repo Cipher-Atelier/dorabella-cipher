@@ -1,0 +1,948 @@
+{
+  "version": "TS-COMBINED-STORAGE-v1",
+  "status": "PASS_FINITE_COMBINED_STORAGE_ONLY",
+  "start_utc": "2026-10-18T10:24:20.922755+00:00",
+  "commands": [
+    {
+      "role": "reference_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+        "reference_perl",
+        "4"
+      ],
+      "pid_local": 5,
+      "start_observed_utc": "2026-10-18T10:24:22.014813+00:00",
+      "anchor": {
+        "visible_pid": 956,
+        "visible_ppid": 952,
+        "visible_pgid": 956,
+        "visible_session": 956,
+        "state": "S",
+        "starttime": 251461,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          956,
+          5
+        ],
+        "nspgid": [
+          956,
+          5
+        ],
+        "nssid": [
+          956,
+          5
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+          "reference_perl",
+          "4"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35624 kB",
+          "VmSize:\t   35624 kB",
+          "VmHWM:\t    8636 kB",
+          "VmRSS:\t    8636 kB"
+        ],
+        "pid": 5,
+        "pgid": 5,
+        "session": 5
+      }
+    },
+    {
+      "role": "adapted_broker",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+        "adapted_broker",
+        "14",
+        "4",
+        "8",
+        "9",
+        "12"
+      ],
+      "pid_local": 6,
+      "start_observed_utc": "2026-10-18T10:24:22.098852+00:00",
+      "anchor": {
+        "visible_pid": 957,
+        "visible_ppid": 952,
+        "visible_pgid": 957,
+        "visible_session": 957,
+        "state": "S",
+        "starttime": 251469,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          957,
+          6
+        ],
+        "nspgid": [
+          957,
+          6
+        ],
+        "nssid": [
+          957,
+          6
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+          "adapted_broker",
+          "14",
+          "4",
+          "8",
+          "9",
+          "12"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35624 kB",
+          "VmSize:\t   35624 kB",
+          "VmHWM:\t    8640 kB",
+          "VmRSS:\t    8640 kB"
+        ],
+        "pid": 6,
+        "pgid": 6,
+        "session": 6
+      }
+    },
+    {
+      "role": "adapted_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+        "adapted_perl",
+        "17",
+        "7",
+        "5",
+        "11",
+        "10"
+      ],
+      "pid_local": 7,
+      "start_observed_utc": "2026-10-18T10:24:22.124955+00:00",
+      "anchor": {
+        "visible_pid": 958,
+        "visible_ppid": 952,
+        "visible_pgid": 958,
+        "visible_session": 958,
+        "state": "S",
+        "starttime": 251472,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          958,
+          7
+        ],
+        "nspgid": [
+          958,
+          7
+        ],
+        "nssid": [
+          958,
+          7
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+          "adapted_perl",
+          "17",
+          "7",
+          "5",
+          "11",
+          "10"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35620 kB",
+          "VmSize:\t   35620 kB",
+          "VmHWM:\t    8644 kB",
+          "VmRSS:\t    8644 kB"
+        ],
+        "pid": 7,
+        "pgid": 7,
+        "session": 7
+      }
+    },
+    {
+      "role": "real_broker",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+        "real_broker",
+        "17",
+        "4",
+        "8",
+        "9",
+        "12"
+      ],
+      "pid_local": 8,
+      "start_observed_utc": "2026-10-18T10:24:22.600815+00:00",
+      "anchor": {
+        "visible_pid": 959,
+        "visible_ppid": 952,
+        "visible_pgid": 959,
+        "visible_session": 959,
+        "state": "S",
+        "starttime": 251519,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          959,
+          8
+        ],
+        "nspgid": [
+          959,
+          8
+        ],
+        "nssid": [
+          959,
+          8
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+          "real_broker",
+          "17",
+          "4",
+          "8",
+          "9",
+          "12"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35620 kB",
+          "VmSize:\t   35620 kB",
+          "VmHWM:\t    8640 kB",
+          "VmRSS:\t    8640 kB"
+        ],
+        "pid": 8,
+        "pgid": 8,
+        "session": 8
+      }
+    },
+    {
+      "role": "real_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+        "real_perl",
+        "21",
+        "7",
+        "5",
+        "11",
+        "10"
+      ],
+      "pid_local": 9,
+      "start_observed_utc": "2026-10-18T10:24:22.629299+00:00",
+      "anchor": {
+        "visible_pid": 960,
+        "visible_ppid": 952,
+        "visible_pgid": 960,
+        "visible_session": 960,
+        "state": "S",
+        "starttime": 251522,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          960,
+          9
+        ],
+        "nspgid": [
+          960,
+          9
+        ],
+        "nssid": [
+          960,
+          9
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-B",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/child_gate.py",
+          "real_perl",
+          "21",
+          "7",
+          "5",
+          "11",
+          "10"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35620 kB",
+          "VmSize:\t   35620 kB",
+          "VmHWM:\t    8644 kB",
+          "VmRSS:\t    8644 kB"
+        ],
+        "pid": 9,
+        "pgid": 9,
+        "session": 9
+      }
+    }
+  ],
+  "signals": [],
+  "phases": [
+    {
+      "release": "reference_perl",
+      "utc": "2026-10-18T10:24:22.040462+00:00",
+      "elapsed": 1.1179726629998186
+    },
+    {
+      "terminal": "reference_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T10:24:22.097993+00:00",
+      "elapsed": 1.1756075289999899
+    },
+    {
+      "release": "adapted_broker",
+      "utc": "2026-10-18T10:24:22.155308+00:00",
+      "elapsed": 1.2328206739998677
+    },
+    {
+      "release": "adapted_perl",
+      "utc": "2026-10-18T10:24:22.160764+00:00",
+      "elapsed": 1.2382725649999884
+    },
+    {
+      "terminal": "adapted_broker",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T10:24:22.582281+00:00",
+      "elapsed": 1.659793056000126
+    },
+    {
+      "terminal": "adapted_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T10:24:22.583702+00:00",
+      "elapsed": 1.661203640000167
+    },
+    {
+      "release": "real_broker",
+      "utc": "2026-10-18T10:24:22.661952+00:00",
+      "elapsed": 1.7394614879999608
+    },
+    {
+      "release": "real_perl",
+      "utc": "2026-10-18T10:24:22.666091+00:00",
+      "elapsed": 1.743596185000115
+    },
+    {
+      "terminal": "real_broker",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T10:24:25.970801+00:00",
+      "elapsed": 5.048312526000245
+    },
+    {
+      "terminal": "real_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-18T10:24:25.972673+00:00",
+      "elapsed": 5.0501756590001605
+    }
+  ],
+  "target_inputs": 0,
+  "control_87_inputs": 0,
+  "full_model_loads": 0,
+  "stages": {
+    "fixture": {
+      "status": "PASS_FINITE_COMBINED_DIFFERENTIAL",
+      "events": 320,
+      "inverse_records": 118,
+      "positions_each": 6,
+      "score_bits_tolerance": 0,
+      "trace_sha256": "d4a1dee32592c6fe9599a6761109f91decfe15e6f25a9eb9884cab640b53c706",
+      "ipc": {
+        "lm": {
+          "requests": 158,
+          "response_frames": 158
+        },
+        "pat": {
+          "requests": 1495,
+          "response_frames": 1925
+        }
+      }
+    },
+    "real": {
+      "status": "PASS_FINITE_COMBINED_TRANSPORT",
+      "lm_lookups": 6244,
+      "list_fetches": 8,
+      "candidates": 132856,
+      "segmentations": 6,
+      "lm_seconds": 0.217459112000142,
+      "seconds": 2.76474407299975,
+      "ipc": {
+        "lm": {
+          "requests": 10,
+          "response_frames": 58
+        },
+        "pat": {
+          "requests": 45,
+          "response_frames": 2131
+        }
+      },
+      "scope": "No real scoring/search/87-control. Finite repeated-key transport; not full-search speed."
+    }
+  },
+  "manifest_sha256": "33c953e9982803aa5fe9b6bffce9d43d8b55ac43052a73604ef9211d1adc8a0a",
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "4575014912",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "memory_stat_before": "anon 98029568\nfile 4332527616\nkernel 142667776\nkernel_stack 770048\npagetables 3313664\nsec_pagetables 0\npercpu 6556\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 163840\nfile_dirty 397312\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 35651584\nshmem_thp 0\ninactive_anon 97845248\nactive_anon 73728\ninactive_file 2504925184\nactive_file 1827602432\nunevictable 0\nslab_reclaimable 137564816\nslab_unreclaimable 965208\nslab 138530024\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 1153106\npgmajfault 0\npgrefill 0\npgactivate 445586\npgdeactivate 0\npglazyfree 7\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+  "namespace_self": {
+    "visible_pid": 952,
+    "visible_ppid": 951,
+    "visible_pgid": 951,
+    "visible_session": 951,
+    "state": "R",
+    "starttime": 251349,
+    "pid_namespace": "pid:[4026532277]",
+    "nspid": [
+      952,
+      2
+    ],
+    "nspgid": [
+      951,
+      1
+    ],
+    "nssid": [
+      951,
+      1
+    ],
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-B",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/run.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   40772 kB",
+      "VmSize:\t   39884 kB",
+      "VmHWM:\t   14400 kB",
+      "VmRSS:\t   12656 kB"
+    ],
+    "pid": 2,
+    "pgid": 1,
+    "session": 1
+  },
+  "process_guard_cases": [
+    {
+      "id": "self_exact",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "actual": "CURRENT_SELF_OR_ANCESTOR"
+    },
+    {
+      "id": "ancestor_exact",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "actual": "CURRENT_SELF_OR_ANCESTOR"
+    },
+    {
+      "id": "self_pid_reused",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "same_pid_different_namespace",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "same_pid_different_local_pid",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "bad_visible_nspid",
+      "expected": "STOP_MATCH_IDENTITY",
+      "actual": "STOP_MATCH_IDENTITY"
+    },
+    {
+      "id": "bad_local_nspid",
+      "expected": "STOP_MATCH_NSPID",
+      "actual": "STOP_MATCH_NSPID"
+    },
+    {
+      "id": "old_v1_runner",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "foreign_broker_namespace_unknown",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "foreign_perl",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "old_original_perl",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "current_exact_carrier",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    },
+    {
+      "id": "old_same_command_carrier",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "wrong_carrier_executable",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "foreign_shell_command",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "changed_carrier_command",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "carrier_future_start",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "similar_unrelated_path",
+      "expected": "UNRELATED",
+      "actual": "UNRELATED"
+    },
+    {
+      "id": "saved_v1_current_carrier_1",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    },
+    {
+      "id": "saved_v1_current_carrier_2",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    }
+  ],
+  "process_guard": {
+    "records": [
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 944,
+          "visible_ppid": 222,
+          "visible_pgid": 944,
+          "visible_session": 944,
+          "state": "S",
+          "starttime": 251346,
+          "pid_namespace": null,
+          "nspid": [
+            944
+          ],
+          "nspgid": [
+            944
+          ],
+          "nssid": [
+            944
+          ],
+          "cmdline": [
+            "bwrap",
+            "--as-pid-1",
+            "--new-session",
+            "--die-with-parent",
+            "--bind",
+            "/",
+            "/",
+            "--dev",
+            "/dev",
+            "--bind-try",
+            "/dev/shm",
+            "/dev/shm",
+            "--unshare-user",
+            "--unshare-ipc",
+            "--unshare-pid",
+            "--unshare-net",
+            "--cap-drop",
+            "ALL",
+            "--argv0",
+            "codex-linux-sandbox",
+            "--",
+            "/opt/codex/bin/codex",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--apply-seccomp-then-exec",
+            "--managed-network",
+            "{\"loopbackPorts\":[40767,45921],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--proxy-route-spec",
+            "{\"routes\":[{\"env_key\":\"ALL_PROXY\",\"control_fd\":4},{\"env_key\":\"BUNDLE_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"BUNDLE_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"FTP_PROXY\",\"control_fd\":4},{\"env_key\":\"HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_PROXY\",\"control_fd\":5},{\"env_key\":\"PIP_PROXY\",\"control_fd\":5},{\"env_key\":\"WSS_PROXY\",\"control_fd\":5},{\"env_key\":\"WS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"all_proxy\",\"control_fd\":4},{\"env_key\":\"ftp_proxy\",\"control_fd\":4},{\"env_key\":\"http_proxy\",\"control_fd\":5},{\"env_key\":\"https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_http_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_proxy\",\"control_fd\":5},{\"env_key\":\"ws_proxy\",\"control_fd\":5},{\"env_key\":\"wss_proxy\",\"control_fd\":5}]}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t    3592 kB",
+            "VmSize:\t    3592 kB",
+            "VmHWM:\t     904 kB",
+            "VmRSS:\t     904 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/workspace/scratch/f24f8fae4976/bwrap"
+        }
+      },
+      {
+        "classification": "CURRENT_INVOCATION_CARRIER",
+        "record": {
+          "visible_pid": 945,
+          "visible_ppid": 944,
+          "visible_pgid": 944,
+          "visible_session": 944,
+          "state": "S",
+          "starttime": 251348,
+          "pid_namespace": null,
+          "nspid": [
+            945
+          ],
+          "nspgid": [
+            944
+          ],
+          "nssid": [
+            944
+          ],
+          "cmdline": [
+            "/root/.codex/tmp/arg0/codex-arg01zvEiS/codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--managed-network",
+            "{\"loopbackPorts\":[40767,45921],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t    5976 kB",
+            "VmRSS:\t    5976 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/opt/codex/bin/codex"
+        }
+      },
+      {
+        "classification": "CURRENT_INVOCATION_CARRIER",
+        "record": {
+          "visible_pid": 946,
+          "visible_ppid": 944,
+          "visible_pgid": 944,
+          "visible_session": 944,
+          "state": "S",
+          "starttime": 251348,
+          "pid_namespace": null,
+          "nspid": [
+            946
+          ],
+          "nspgid": [
+            944
+          ],
+          "nssid": [
+            944
+          ],
+          "cmdline": [
+            "/root/.codex/tmp/arg0/codex-arg01zvEiS/codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--managed-network",
+            "{\"loopbackPorts\":[40767,45921],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t    5976 kB",
+            "VmRSS:\t    5976 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/opt/codex/bin/codex"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 951,
+          "visible_ppid": 944,
+          "visible_pgid": 951,
+          "visible_session": 951,
+          "state": "S",
+          "starttime": 251348,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            951,
+            1
+          ],
+          "nspgid": [
+            951,
+            1
+          ],
+          "nssid": [
+            951,
+            1
+          ],
+          "cmdline": [
+            "codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--apply-seccomp-then-exec",
+            "--managed-network",
+            "{\"loopbackPorts\":[40767,45921],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--proxy-route-spec",
+            "{\"routes\":[{\"env_key\":\"ALL_PROXY\",\"control_fd\":4},{\"env_key\":\"BUNDLE_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"BUNDLE_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"FTP_PROXY\",\"control_fd\":4},{\"env_key\":\"HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_PROXY\",\"control_fd\":5},{\"env_key\":\"PIP_PROXY\",\"control_fd\":5},{\"env_key\":\"WSS_PROXY\",\"control_fd\":5},{\"env_key\":\"WS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"all_proxy\",\"control_fd\":4},{\"env_key\":\"ftp_proxy\",\"control_fd\":4},{\"env_key\":\"http_proxy\",\"control_fd\":5},{\"env_key\":\"https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_http_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_proxy\",\"control_fd\":5},{\"env_key\":\"ws_proxy\",\"control_fd\":5},{\"env_key\":\"wss_proxy\",\"control_fd\":5}]}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/launch.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t   14396 kB",
+            "VmRSS:\t   14396 kB"
+          ],
+          "pid": 1,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/opt/codex/bin/codex",
+          "exe_read_error": null,
+          "argv0_realpath": "/workspace/scratch/f24f8fae4976/codex-linux-sandbox"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 952,
+          "visible_ppid": 951,
+          "visible_pgid": 951,
+          "visible_session": 951,
+          "state": "R",
+          "starttime": 251349,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            952,
+            2
+          ],
+          "nspgid": [
+            951,
+            1
+          ],
+          "nssid": [
+            951,
+            1
+          ],
+          "cmdline": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-B",
+            "-I",
+            "-S",
+            "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/run.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t   40772 kB",
+            "VmSize:\t   39884 kB",
+            "VmHWM:\t   14400 kB",
+            "VmRSS:\t   12768 kB"
+          ],
+          "pid": 2,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "exe_read_error": null,
+          "argv0_realpath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12"
+        }
+      }
+    ],
+    "blockers": [],
+    "context": {
+      "carrier_executable": "/opt/codex/bin/codex",
+      "shell_command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -B -I -S /workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/launch.py",
+      "launch_floor_ticks": 250349,
+      "self_starttime": 251349
+    },
+    "namespace_self": {
+      "visible_pid": 952,
+      "visible_ppid": 951,
+      "visible_pgid": 951,
+      "visible_session": 951,
+      "state": "R",
+      "starttime": 251349,
+      "pid_namespace": "pid:[4026532277]",
+      "nspid": [
+        952,
+        2
+      ],
+      "nspgid": [
+        951,
+        1
+      ],
+      "nssid": [
+        951,
+        1
+      ],
+      "cmdline": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_COMBINED_STORAGE_v1/run.py"
+      ],
+      "memory_status": [
+        "VmPeak:\t   40772 kB",
+        "VmSize:\t   39884 kB",
+        "VmHWM:\t   14400 kB",
+        "VmRSS:\t   12656 kB"
+      ],
+      "pid": 2,
+      "pgid": 1,
+      "session": 1
+    },
+    "identity_exclusion": "visible_pid + starttime + full NSpid + pid_namespace; no foreign namespace blanket exclusion"
+  },
+  "prior_live_matches": [],
+  "post_hash_resource": {
+    "memory.max": "8589934592",
+    "memory.current": "4575797248",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "hashes_verified": true,
+  "real_post_hash_resource": {
+    "memory.max": "8589934592",
+    "memory.current": "4577181696",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "terminal": [
+    {
+      "role": "reference_perl",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "adapted_broker",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "adapted_perl",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "real_broker",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "real_perl",
+      "exit": 0,
+      "group": []
+    }
+  ],
+  "terminal_confirmed": true,
+  "elapsed": 6.397817611999926,
+  "end_utc": "2026-10-18T10:24:27.320322+00:00",
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "4585324544",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "memory_stat_after": "anon 103690240\nfile 4336635904\nkernel 143409152\nkernel_stack 786432\npagetables 3645440\nsec_pagetables 0\npercpu 7084\nsock 4096\nvmalloc 4096\nshmem 0\nfile_mapped 163840\nfile_dirty 2453504\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 35651584\nshmem_thp 0\ninactive_anon 103464960\nactive_anon 69632\ninactive_file 2507649024\nactive_file 1829003264\nunevictable 0\nslab_reclaimable 137945880\nslab_unreclaimable 976880\nslab 138922760\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 1204790\npgmajfault 0\npgrefill 0\npgactivate 446404\npgdeactivate 0\npglazyfree 7\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+  "children_peak_rss_KiB": 27368,
+  "self_peak_rss_KiB": 24356,
+  "file_hashes": {
+    "reference_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "real_broker_ipc.jsonl": "17c4ca07949d33f9fc4382b1ad0da8b8fd1615f83765f620f1f5b7f3da62740a",
+    "phase_deadline.json": "1650994f38b410225f95b622871a13f58024ae4f00557b7b6e1f96865caa846f",
+    "perl_negatives.json": "d96ae8b5c9d905d205f3f08ebf6ddc656c0ada9e65a65b6f1b5c71067f536d94",
+    "observations.jsonl": "f2aaaa04c3ab66e5b7b72e4a68840eaeca825a688710238b29f100867ee9b9bf",
+    "real_broker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapted_perl_ready.json": "ffabf8e29b0bde6ff7968b74708cdec648dd1737011244bae5550f97ff669497",
+    "reference_perl.jsonl": "d4a1dee32592c6fe9599a6761109f91decfe15e6f25a9eb9884cab640b53c706",
+    "real_perl_ready.json": "c3881602abac1a40c2d4ab8e17b468e29baf9c8e8fe1dea3f1bcf38fd7a56442",
+    "real_perl.jsonl": "62444ea1abee254579da7fccaea3d607807c8998b360a624867c0a9648d05a54",
+    "adapted_broker_ready.json": "9a61713d7eec7c92ac766d69092952cde94d3a1ff4434ed5c2228d0c94c2b522",
+    "adapted_broker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reference_perl_ready.json": "fd5314c4ecdeb6ee403b8d3603cc4373bfa5d2aa1669b3bbe3949c0e686e888c",
+    "real_broker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapted_broker_terminal.json": "0a0f525f263cb458e2c2b9d18bb1621cd1a231f94979e9f649ca1bb49dd8fe59",
+    "real_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "real_broker_ready.json": "692fe74719b80c8ad038b2aef6cfe8361b849937f23238541d14e6b2f4079a66",
+    "adapted_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapted_broker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adapted_broker_ipc.jsonl": "f22e67630f25669ba68d18633deb9989b5f6220c94a8ebacdc4c7dc56c22928e",
+    "adapted_perl.jsonl": "d4a1dee32592c6fe9599a6761109f91decfe15e6f25a9eb9884cab640b53c706",
+    "real_broker_terminal.json": "2f93f3dbbeb6c6d4ef45ae34a17040cf528bd906d1af103ba734562fbd7faa9f",
+    "stage_fixture.json": "e0d6dab44d6ddcbb98bfd7c3677bae7814efdfc1a3a8746c83aedaee6d1457e4",
+    "stage_real.json": "21c5eb257d54fec463b6ae323bf9510034b38641e17d2e14c2015b582b8e8f8e",
+    "process_guard.json": "10cacaa8c78343e91257ecb3e255b3324e7950780a38b0a2cf96cafa85c62eb1",
+    "T0.json": "2c4c50de272e20a6082aa26f3cce4f94b577312c330ecb73f341cfd791885e15"
+  }
+}

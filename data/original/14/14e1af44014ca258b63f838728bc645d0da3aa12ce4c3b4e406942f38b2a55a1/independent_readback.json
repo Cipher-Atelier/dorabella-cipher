@@ -1,0 +1,130 @@
+{
+  "status": "READBACK_VERIFIED_A_PASS_P_SKIPPED",
+  "utc": "2026-10-17T22:52:09.389796+00:00",
+  "checks": {
+    "same_session_exit0": true,
+    "explicit_result": true,
+    "within_time": true,
+    "guard20": true,
+    "guard_no_blockers": true,
+    "P_resource_rule": true,
+    "no_P_commands": true,
+    "all_exits_and_groups": true,
+    "empty_stderr": true,
+    "saved_hashes": true,
+    "freeze_unchanged": true,
+    "all_small_identities": true,
+    "STOP_v1_all_files_unchanged": true,
+    "approval_and_parent_zip_unchanged": true,
+    "all_fixture_bytes": true,
+    "fixture_counts": true,
+    "all_saved_inverse_records": true,
+    "large_all_ordered_values": true,
+    "large_terminal": true,
+    "negative10": true,
+    "positive_duplicate_split": true,
+    "all_IPC_frames_and_lists": true,
+    "independent_terminal_identities": true,
+    "no_OOM_increase": true
+  },
+  "fixture_event_counts": {
+    "list": 6,
+    "word": 7,
+    "segment": 8,
+    "score": 64,
+    "root": 3,
+    "selection": 6,
+    "candidates": 84,
+    "candidate": 56,
+    "child": 56,
+    "iteration": 6,
+    "winner": 3,
+    "complete": 1
+  },
+  "fixture_saved_inverse_records": 118,
+  "fixture_trace_sha256": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290",
+  "large_queries": 8,
+  "large_candidate_occurrences": 132856,
+  "IPC": {
+    "fixture_broker": {
+      "requests": 1495,
+      "frames": 1925,
+      "wire_bytes_from_saved_frames": 38792,
+      "max_frame_bytes": 54,
+      "complete_responses": 1495
+    },
+    "large_broker": {
+      "requests": 10,
+      "frames": 2096,
+      "wire_bytes_from_saved_frames": 1476641,
+      "max_frame_bytes": 724,
+      "complete_responses": 10
+    }
+  },
+  "terminal_identities": [
+    {
+      "visible_pid": 10082,
+      "recorded_starttime": 7697392,
+      "exists": false,
+      "same_identity": false
+    },
+    {
+      "visible_pid": 10084,
+      "recorded_starttime": 7697400,
+      "exists": false,
+      "same_identity": false
+    },
+    {
+      "visible_pid": 10085,
+      "recorded_starttime": 7697402,
+      "exists": false,
+      "same_identity": false
+    },
+    {
+      "visible_pid": 10086,
+      "recorded_starttime": 7697426,
+      "exists": false,
+      "same_identity": false
+    },
+    {
+      "visible_pid": 10087,
+      "recorded_starttime": 7697429,
+      "exists": false,
+      "same_identity": false
+    }
+  ],
+  "resource": {
+    "self_peak_RSS_KiB": 29976,
+    "children_ru_maxrss_KiB_not_sum": 19712,
+    "sampled_role_peaks_KiB": {
+      "fixture_broker": {
+        "VmPeak": 36440,
+        "VmSize": 36404,
+        "VmHWM": 10404,
+        "VmRSS": 10404
+      },
+      "fixture_perl": {
+        "VmPeak": 11724,
+        "VmSize": 11724,
+        "VmHWM": 7228,
+        "VmRSS": 7228
+      },
+      "large_broker": {
+        "VmPeak": 42276,
+        "VmSize": 41224,
+        "VmHWM": 15264,
+        "VmRSS": 14720
+      },
+      "large_perl": {
+        "VmPeak": 24416,
+        "VmSize": 23768,
+        "VmHWM": 19712,
+        "VmRSS": 19124
+      }
+    },
+    "max_simultaneous_sampled_children_RSS_KiB": 33844,
+    "max_sampled_or_boundary_cgroup_bytes": 6718959616,
+    "samples": 25
+  },
+  "limits": "Finite saved-data verification only; no re-execution of score/solver/adapter or supervisor cases; P was not executed."
+}

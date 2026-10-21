@@ -1,0 +1,385 @@
+{
+  "frozen_protocol_sha256": "968ce1bb36e6e6524c225198cbc54c08bd313927988877891b09a84732aef19d",
+  "development": {
+    "mode": "development",
+    "cases": 8,
+    "mean_best_score": -2.0369219791107747,
+    "mean_accuracy": 0.9755747126436781,
+    "at_least_90_percent": 8,
+    "at_least_95_percent": 7
+  },
+  "heldout_news_old": {
+    "n": 16,
+    "mean_accuracy": 0.8635057471264367,
+    "min_accuracy": 0.022988505747126436,
+    "successes_at_90": 13,
+    "binomial_success_95_interval": [
+      0.5435434537683883,
+      0.9595262660940541
+    ],
+    "best_score_min": -2.7713713117897205,
+    "best_score_max": -1.7005962240643793,
+    "note": "Success interval presumes independent representative Bernoulli trials; historical convenience sample does not establish that."
+  },
+  "heldout_news_new": {
+    "n": 16,
+    "mean_accuracy": 0.9762931034482758,
+    "min_accuracy": 0.9425287356321839,
+    "successes_at_90": 16,
+    "binomial_success_95_interval": [
+      0.7940927857921772,
+      1.0
+    ],
+    "best_score_min": -2.330818485914636,
+    "best_score_max": -1.7005962240643793,
+    "note": "Success interval presumes independent representative Bernoulli trials; historical convenience sample does not establish that."
+  },
+  "heldout_news_exact_generating_equality_pattern_selected": 12,
+  "historical_convenience_sample": {
+    "n": 8,
+    "mean_accuracy": 0.853448275862069,
+    "min_accuracy": 0.4482758620689655,
+    "successes_at_90": 5,
+    "binomial_success_95_interval": [
+      0.2448632163665516,
+      0.9147665858627465
+    ],
+    "best_score_min": -2.4829054502606334,
+    "best_score_max": -1.9615823559208005,
+    "note": "Success interval presumes independent representative Bernoulli trials; historical convenience sample does not establish that."
+  },
+  "null_comparison": {
+    "identity_score": {
+      "observed": -2.703076842914061,
+      "null_n": 99,
+      "null_mean": -2.9616459406332907,
+      "null_sd": 0.07502832655179564,
+      "exceedances": 0,
+      "p_plus_one": 0.01,
+      "binomial_95_interval_for_tail_probability": [
+        0.0,
+        0.03657574498347893
+      ],
+      "null_min": -3.1397649748522065,
+      "null_max": -2.7902492039182287
+    },
+    "best_score": {
+      "observed": -2.6520385437697263,
+      "null_n": 99,
+      "null_mean": -2.751617227469929,
+      "null_sd": 0.0552239733327008,
+      "exceedances": 5,
+      "p_plus_one": 0.06,
+      "binomial_95_interval_for_tail_probability": [
+        0.016599911329843488,
+        0.11393581779148956
+      ],
+      "null_min": -2.8900882435839357,
+      "null_max": -2.596987125174787
+    },
+    "improvement": {
+      "observed": 0.0510382991443345,
+      "null_n": 99,
+      "null_mean": 0.21002871316336114,
+      "null_sd": 0.07819030835955242,
+      "exceedances": 96,
+      "p_plus_one": 0.97,
+      "binomial_95_interval_for_tail_probability": [
+        0.9139887356626205,
+        0.9937066527258279
+      ],
+      "null_min": 0.007856867532579161,
+      "null_max": 0.45301164592663534
+    }
+  },
+  "dorabella": {
+    "best_score": -2.6520385437697263,
+    "identity_score": -2.703076842914061,
+    "improvement": 0.0510382991443345,
+    "best_rule": {
+      "input": "axis",
+      "R": 4,
+      "table": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "initial_state": 0
+    },
+    "candidate_text": "FLSLUNDLOMVEATEWEENPLETOMORVIDEDNOLOGLESSECRADEVENCIATOBBOVISINCISTCHRISENCAIRLLRINLABL",
+    "distinct_patterns": 207
+  },
+  "paired_accuracy": [
+    {
+      "id": "heldout_00",
+      "old_accuracy": 0.9655172413793104,
+      "new_accuracy": 0.9655172413793104
+    },
+    {
+      "id": "heldout_01",
+      "old_accuracy": 0.9540229885057471,
+      "new_accuracy": 0.9885057471264368
+    },
+    {
+      "id": "heldout_02",
+      "old_accuracy": 0.9540229885057471,
+      "new_accuracy": 0.9540229885057471
+    },
+    {
+      "id": "heldout_03",
+      "old_accuracy": 0.9195402298850575,
+      "new_accuracy": 1.0
+    },
+    {
+      "id": "heldout_04",
+      "old_accuracy": 0.3563218390804598,
+      "new_accuracy": 0.9425287356321839
+    },
+    {
+      "id": "heldout_05",
+      "old_accuracy": 0.9885057471264368,
+      "new_accuracy": 0.9885057471264368
+    },
+    {
+      "id": "heldout_06",
+      "old_accuracy": 0.022988505747126436,
+      "new_accuracy": 0.9885057471264368
+    },
+    {
+      "id": "heldout_07",
+      "old_accuracy": 0.9885057471264368,
+      "new_accuracy": 0.9885057471264368
+    },
+    {
+      "id": "heldout_08",
+      "old_accuracy": 0.8735632183908046,
+      "new_accuracy": 0.9540229885057471
+    },
+    {
+      "id": "heldout_09",
+      "old_accuracy": 0.9770114942528736,
+      "new_accuracy": 0.9770114942528736
+    },
+    {
+      "id": "heldout_10",
+      "old_accuracy": 0.9655172413793104,
+      "new_accuracy": 0.9540229885057471
+    },
+    {
+      "id": "heldout_11",
+      "old_accuracy": 0.9080459770114943,
+      "new_accuracy": 0.9770114942528736
+    },
+    {
+      "id": "heldout_12",
+      "old_accuracy": 1.0,
+      "new_accuracy": 1.0
+    },
+    {
+      "id": "heldout_13",
+      "old_accuracy": 1.0,
+      "new_accuracy": 1.0
+    },
+    {
+      "id": "heldout_14",
+      "old_accuracy": 0.9770114942528736,
+      "new_accuracy": 0.9770114942528736
+    },
+    {
+      "id": "heldout_15",
+      "old_accuracy": 0.9655172413793104,
+      "new_accuracy": 0.9655172413793104
+    }
+  ],
+  "historical_cases": [
+    {
+      "id": "history_00",
+      "accuracy": 0.4482758620689655,
+      "true_score": -2.573861820702242,
+      "best_score": -2.4273644456302463
+    },
+    {
+      "id": "history_01",
+      "accuracy": 0.9885057471264368,
+      "true_score": -1.9963761820725536,
+      "best_score": -1.9906268625318353
+    },
+    {
+      "id": "history_02",
+      "accuracy": 0.9770114942528736,
+      "true_score": -2.119884580461271,
+      "best_score": -2.1046237737513116
+    },
+    {
+      "id": "history_03",
+      "accuracy": 0.5402298850574713,
+      "true_score": -2.466016303078538,
+      "best_score": -2.4829054502606334
+    },
+    {
+      "id": "history_04",
+      "accuracy": 0.896551724137931,
+      "true_score": -2.3869009210976695,
+      "best_score": -2.2756910590470634
+    },
+    {
+      "id": "history_05",
+      "accuracy": 0.9885057471264368,
+      "true_score": -2.2064800075356565,
+      "best_score": -2.1256104851243163
+    },
+    {
+      "id": "history_06",
+      "accuracy": 1.0,
+      "true_score": -2.1212129925922163,
+      "best_score": -2.1212129925922163
+    },
+    {
+      "id": "history_07",
+      "accuracy": 0.9885057471264368,
+      "true_score": -1.9631545509009558,
+      "best_score": -1.9615823559208005
+    }
+  ],
+  "historical_oracle_diagnosis": {
+    "cases": [
+      {
+        "id": "history_00",
+        "blind_accuracy": 0.4482758620689655,
+        "oracle_accuracy": 0.9080459770114943,
+        "true_plaintext_score": -2.573861820702242,
+        "blind_winning_score": -2.4273644456302463,
+        "oracle_best_score": -2.520346531517309,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "id": "history_01",
+        "blind_accuracy": 0.9885057471264368,
+        "oracle_accuracy": 1.0,
+        "true_plaintext_score": -1.9963761820725536,
+        "blind_winning_score": -1.9906268625318353,
+        "oracle_best_score": -1.9963761820725536,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "history_02",
+        "blind_accuracy": 0.9770114942528736,
+        "oracle_accuracy": 0.9770114942528736,
+        "true_plaintext_score": -2.119884580461271,
+        "blind_winning_score": -2.1046237737513116,
+        "oracle_best_score": -2.1046237737513116,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          9,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "history_03",
+        "blind_accuracy": 0.5402298850574713,
+        "oracle_accuracy": 0.4367816091954023,
+        "true_plaintext_score": -2.466016303078538,
+        "blind_winning_score": -2.4829054502606334,
+        "oracle_best_score": -2.4910086214914062,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "id": "history_04",
+        "blind_accuracy": 0.896551724137931,
+        "oracle_accuracy": 0.9080459770114943,
+        "true_plaintext_score": -2.3869009210976695,
+        "blind_winning_score": -2.2756910590470634,
+        "oracle_best_score": -2.2990104560246882,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          8,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "history_05",
+        "blind_accuracy": 0.9885057471264368,
+        "oracle_accuracy": 0.9885057471264368,
+        "true_plaintext_score": -2.2064800075356565,
+        "blind_winning_score": -2.1256104851243163,
+        "oracle_best_score": -2.1256104851243163,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "history_06",
+        "blind_accuracy": 1.0,
+        "oracle_accuracy": 1.0,
+        "true_plaintext_score": -2.1212129925922163,
+        "blind_winning_score": -2.1212129925922163,
+        "oracle_best_score": -2.1212129925922163,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          6,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "history_07",
+        "blind_accuracy": 0.9885057471264368,
+        "oracle_accuracy": 0.9885057471264368,
+        "true_plaintext_score": -1.9631545509009558,
+        "blind_winning_score": -1.9615823559208005,
+        "oracle_best_score": -1.9615823559208005,
+        "oracle_plaintext_accuracy_is_not_blind_accuracy": true,
+        "true_pattern_survived_all_stages": true,
+        "true_pattern_ranks": [
+          2,
+          1,
+          1
+        ]
+      }
+    ],
+    "caution": "True transformations are supplied to this diagnostic. This is NOT another independent accuracy estimate."
+  },
+  "completed_case_records": 148,
+  "limitations": [
+    "Two-state polarity-XOR family only, not all finite state machines",
+    "Simulated annealing is not a proof of a global optimum",
+    "Modern news language model is imperfect for 19th-century letters",
+    "Historical letter openings form a small nonrandom related sample",
+    "News recovery is NOT probability of solving Dorabella",
+    "Shuffled glyph null is NOT the null of every possible historical cipher",
+    "Geometry and candidate family were chosen exploratorily in previous rounds",
+    "Transcription ambiguity remains; no new blind glyph annotation has been performed"
+  ]
+}

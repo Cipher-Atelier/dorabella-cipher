@@ -1,0 +1,14 @@
+{
+  "case_count": 78,
+  "command": [
+    "round11/run.py",
+    "--kind",
+    "null",
+    "--workers",
+    "4"
+  ],
+  "completed_utc": "2026-10-01T19:54:19.642183+00:00",
+  "pid": 826,
+  "started_utc": "2026-10-01T19:53:51.420319+00:00",
+  "status": "completed"
+}

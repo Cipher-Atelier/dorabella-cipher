@@ -1,0 +1,1065 @@
+{
+  "all_agree": true,
+  "all_keys_fully_scored": 185794560,
+  "cases": 6,
+  "results": [
+    {
+      "C_and_W_for_every_key": true,
+      "all_keys_fully_scored": 30965760,
+      "block_manifests": [
+        {
+          "file": "audit/unpruned/bailey_05/block_000.json",
+          "sha256": "62e189f1e1cb98d7e1c1025c6a87a2a28fe20129c034f9f090640d8671fd2cda"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_001.json",
+          "sha256": "45e00ddd825d652f634d3c755dd9d12c6677f9551740ea432a5b16b8186d9672"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_002.json",
+          "sha256": "fd14494830cc3725a3d7cff13448af1737ed988a2902daf3168d64f26f5995c0"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_003.json",
+          "sha256": "35b05e6fd7bd614f6a988c8d2e79c644a422c4dc7003b40e121adb24bc0167bd"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_004.json",
+          "sha256": "06faf64fcb5727f49b2c8fb6a2c2f3991ca7077adabf1aa7500a1b87843087d8"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_005.json",
+          "sha256": "b22faeaf61cd4e5e309ca3f2aca955795e8f4036b821470d031277bf41819242"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_006.json",
+          "sha256": "5935ad018bc67e474b5af0a1436f57706fceda1c2a3c31ea15a4b74d9af707af"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_007.json",
+          "sha256": "901b82cd16abf84acf96480538b9e9ee2bc9d0ad296d22cc58c5d014687d8903"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_008.json",
+          "sha256": "ee5ec69097a8cc023e5459e6b5a5dee3991ca78cb3b7428b3b7889eb70e4081d"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_009.json",
+          "sha256": "47d6cb68f415723f748d26613e0e7458f66fd434c93c00fac19cba2559e25151"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_010.json",
+          "sha256": "f837a2e04d0154d5f4614a747fff429b3a550a2110253b75d7d51eefcc4079e4"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_011.json",
+          "sha256": "de338532ec836fddf7452ab453bfafa05eee451686fc59b1d62bb0b184decb94"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_012.json",
+          "sha256": "a7ed68f0d2c2be064c33ff60d3db487eba6e42277cfec4ba858122c01415571e"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_013.json",
+          "sha256": "27989d3b472d55fa579e04f8c9727631fd7e932416820355458c15a48b4d6c6c"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_014.json",
+          "sha256": "5c198e3629001a9ce8a2ccc7fd8126c368315a2bad2fba97970c1b959513586f"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_015.json",
+          "sha256": "f3737d937934948559672187d6fa0b3af9a6f4960ef6d7dca1f27d49d19d04f8"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_016.json",
+          "sha256": "cb113f13c410da0cdfd990dbeffa805851c1db938bae2d50bfeae658967bf5ad"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_017.json",
+          "sha256": "a8be6b6461a6233112171db69650a3c670235d5d140c9776a6e2d07e042c9797"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_018.json",
+          "sha256": "19e4d5e909f24ec1353853edf42e5054e7572ac98393b69e1b0633b2bbdb6a3f"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_019.json",
+          "sha256": "67d5120ddab8371047729a579afe1c31a4bfe638dec443c5a92fe6cd5b87e630"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_020.json",
+          "sha256": "90edb72e417875f2d67d4e8f70ffc096eef396c6139f0f1550c5534f1023b8f0"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_021.json",
+          "sha256": "30396c4ee958b8d1f2ce4d71096715dcbf2dbce46c4a228d347f6b0c14ebab3c"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_022.json",
+          "sha256": "1c6d2d94207bf304d1f07b072ed74d9b4205779b54d35714670ca39f4ff316b4"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_023.json",
+          "sha256": "e7ced1e280a4df5f9428940919723b1c74e848e614f4993a090974925ef5d60a"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_024.json",
+          "sha256": "3bfe89ad492b771231cb79c229ffc2ae76affcfe6665fbc4ccc4794167be6c2d"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_025.json",
+          "sha256": "c4bf25ca889c59dc23b1812c90bb7138931f359c2b6c8b5a13846bf9c1ff5120"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_026.json",
+          "sha256": "0ebbc3d9cc68409dfc70e0b10ea91d9bdc4aad3a48b65c57b6209586fd0a33f9"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_027.json",
+          "sha256": "0a8b979a822489767befdf02e4d909bab167e03be7e2f0ce93b2909aa5a1707e"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_028.json",
+          "sha256": "1b46986f2e947fe047436eed999aa329d3795f83620c0c1fd41e1ca9f30d35ac"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_029.json",
+          "sha256": "bd9eb73a19f65ce23da2cf41ecd62933a2064bdd2e7bd9536e8e3e4145650f37"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_030.json",
+          "sha256": "e28c7f3c804cb17f7fb5182910380c70dc225127e1a8b4c4ee4eb16ede4708e2"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_031.json",
+          "sha256": "11df2fb531e1671e2f276f48785df5e7f7dee34a431e97ca8cae24d886b728ad"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_032.json",
+          "sha256": "cfd217a835956908cdaf775ef770a2947323a503da142677d4ae996d6dd19ed5"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_033.json",
+          "sha256": "507ec8abf792ba862dea2d2f5d78d8a97e04df3a8f7e07a82846baad0c8a92a0"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_034.json",
+          "sha256": "9a63498008e43d96622d0facb49194b9cb2bf0dd10af68c0fd1bb8ea07148f00"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_035.json",
+          "sha256": "6e28d085232b116e17cfd3688855a1de45d33b0fdebce8485717b6b34fc21d71"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_036.json",
+          "sha256": "11732c793a4a22108bfce3c525327fc0ab865efc9c7db33a36738ad1352a0640"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_037.json",
+          "sha256": "78cc7373a40ba8264506fdeb1aab32f49fd14bea33207f279272562fa8ec308c"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_038.json",
+          "sha256": "1154ebb0e11ad26c6748bfd4ca67ddcc6298e9b1ae33dd37f34931abb7b9048f"
+        },
+        {
+          "file": "audit/unpruned/bailey_05/block_039.json",
+          "sha256": "8800fbcbba2f92a528572a22863d016fe75189c4bee68870abf6af962e8639ad"
+        }
+      ],
+      "case": "bailey_05",
+      "key_id": 23939598,
+      "main_best_score": -3.010477642456775,
+      "same_maximum_and_all_ties": true,
+      "seconds": 17.671598927000446,
+      "ties": [
+        23939598,
+        23939614,
+        23939662,
+        23939678,
+        23939726,
+        23939742,
+        23939790,
+        23939806
+      ],
+      "unpruned_best_score": -3.010477642456775
+    },
+    {
+      "C_and_W_for_every_key": true,
+      "all_keys_fully_scored": 30965760,
+      "block_manifests": [
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_000.json",
+          "sha256": "3cd1217b835ab4f243c612edb4feb604728d427794245dcfc4b476227f436d8b"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_001.json",
+          "sha256": "74bfa2b16f31944a67568d8d8e617b20a63733590b3c7b49b90e3b2b967f6926"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_002.json",
+          "sha256": "4f515da6800965d8e431598ae59fe759e23d8d394b95f1e5211cf83cc7ef6742"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_003.json",
+          "sha256": "d3199852b048e85890cd0def9e57c076c4ea1cd54a5659f2ac2b9ba87c1324ef"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_004.json",
+          "sha256": "e6d528b13aac0eb6e8eabd96ce5260a3b96e0335ef74006da391b85ab6b47987"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_005.json",
+          "sha256": "45889f5db230390f43b5c7799bd4333b9eaf118a45ba0c60744db9e9f8df46eb"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_006.json",
+          "sha256": "147ffe38b69947436ee0fcee7c9b1d64a6aaeabd97ec56191b9fd9bd857be6f3"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_007.json",
+          "sha256": "4e5a5e50d38bbfda0b47c11fe3d467d69578b663061a5e1f2706b80c2519c7e5"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_008.json",
+          "sha256": "504bd350814d6ca9ab7b91854ee288fe53c96bcb4f9cfec26465a34ce7cf1a9e"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_009.json",
+          "sha256": "9585645afc66473975f05789541ae6f340c5f383899c161d775a282165abf0e6"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_010.json",
+          "sha256": "1107b846e32f1606e49295fdd51b85e2dff4f50dc2697a0104b75c40a1343446"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_011.json",
+          "sha256": "ffa30d05b20b759a00cc3bacc7ed9a741774ff57e20a293484aa96943eb3ad83"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_012.json",
+          "sha256": "1d0e06b1bd350331473063cd95ead458b3bddb2a8092e6d406f11be24269ad21"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_013.json",
+          "sha256": "99513634377531c2f53eedbcfd3923d008a779092cef461048e586f43b6d89b3"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_014.json",
+          "sha256": "681a44951183d758d4728e382dc151c213723d24abcbf3683c5ff4ca6afb6a40"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_015.json",
+          "sha256": "9773460b24ab711719a0004be350584e6fcaf295fe07a1ccf124f3d4f9acfb97"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_016.json",
+          "sha256": "351fdfea2307ec0bffcba59c0e0d56e4257cd85ac94ac180449ea681186e056b"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_017.json",
+          "sha256": "4c91d32828b9bdf3645263c9a773d49332a51db090724ae80fb0996514baa805"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_018.json",
+          "sha256": "7dc3f9ee073a5924bce4962d0342ae7e040870198edc036b60eba33ed07d5d8b"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_019.json",
+          "sha256": "1b3d9da88ea6a741d2326c9346053b2a21ca128766e6bae0913218d787fdf5fe"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_020.json",
+          "sha256": "2d8253e56d75448443d2f820fdd32195335b8f4ec763a4985ad26853bcf629f6"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_021.json",
+          "sha256": "40a264c37b02b8de93e2c2e6d8625814c498d20bca9e7db31ad8d05d5ba53dd9"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_022.json",
+          "sha256": "c79cb0a045662fc4a967b93503316ec6a6db8b6b49ff6eff8fc5170075c3ad2f"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_023.json",
+          "sha256": "5dbcce94f97a4adca905cfd2e71d6d90fc6690aa9800ec5664fa7d651f6c92c0"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_024.json",
+          "sha256": "0eee1b2149e260b1de28b48ea46d461503a1cc296385d7948ab5ef1a8324922f"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_025.json",
+          "sha256": "53eb8787928bbe4abe88f913cf30df6debdf88a26a9fdd165412e640c21df4cf"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_026.json",
+          "sha256": "17b0b6c2dde5f3f26fb1f642d4ace0b3025a4ff8919e54001d6ebe4e421295ba"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_027.json",
+          "sha256": "914337fd5b68662356e343a480e229ba47c56ebc72cdcab59cd993dbcf31472e"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_028.json",
+          "sha256": "bb43125968390ec25a3c45e8d72c7bffb3a541a18e24b10a9ad26843f15a0d2a"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_029.json",
+          "sha256": "62210685ecd8f40bd0264202325ca84396a155b397c35196921256e0e5dfdb8a"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_030.json",
+          "sha256": "59d69538411f20d463ec8db849d1b24e575e149a7b3f4f2ba19188f67749024b"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_031.json",
+          "sha256": "182ce880ffb04da8d4bb758ed9484d55659f8243f36c11658ecda11e781f152c"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_032.json",
+          "sha256": "687e95c577c766dffcbd22b521282a60c59d80a8142fd514bfb114e4674bff1e"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_033.json",
+          "sha256": "7abc2edd983453179ce7afba482f986fbb386c006f21f471440ebe20131f6827"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_034.json",
+          "sha256": "aec04d201d24530a66896a6677be51636bc0a6d48827daa298b4da5c62432e72"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_035.json",
+          "sha256": "0ce0612b88815764998dd1ac71abfeab55c93f1dd388a315d614a3d1af6a548d"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_036.json",
+          "sha256": "dd32eb5cec8f16af0da5461822c6facf721132e204726c327815548abd0068fb"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_037.json",
+          "sha256": "ed69bbcfe1595a199d4602bde305fc634f2203cf19d0276dfcd17eee2558c11f"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_038.json",
+          "sha256": "4df8b55a84adbffef19730bc340c87600201fd2ed8ff9470c93ec8e5fb7622ae"
+        },
+        {
+          "file": "audit/unpruned/elgar_caractacus_postcard/block_039.json",
+          "sha256": "ce42e3e0dae12ecfca9ec73adb81a61c01ab380a114c9d12138fa77627b0faa9"
+        }
+      ],
+      "case": "elgar_caractacus_postcard",
+      "key_id": 20487201,
+      "main_best_score": -4.563313033208676,
+      "same_maximum_and_all_ties": true,
+      "seconds": 20.10308501200018,
+      "ties": [
+        20487201
+      ],
+      "unpruned_best_score": -4.563313033208676
+    },
+    {
+      "C_and_W_for_every_key": true,
+      "all_keys_fully_scored": 30965760,
+      "block_manifests": [
+        {
+          "file": "audit/unpruned/hauer_real/block_000.json",
+          "sha256": "5c92a1c3f8c05d580c2d89cbeeffe8b867865bdd8c0f2383dc35e0406ace67f9"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_001.json",
+          "sha256": "110e613fab0db9286579b2440db0223150096be2206fcaabf90d5c711a5f5b78"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_002.json",
+          "sha256": "25d4eaa275359e736fd9c53766cbbd5c3a2bbe4146e722419a94a6fdeaeb9755"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_003.json",
+          "sha256": "666ee4076e67d1eed2e162bbc5361dc9da2f285e442e258e80dc8741548d288d"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_004.json",
+          "sha256": "003c5d7c9311a6bd4871fde4c78693e2b506ead0dfab073765e26cbd2c94afe0"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_005.json",
+          "sha256": "38738b9785dd0a02989c69910a7e24527dc8b6f63d32817d0c194b823d267694"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_006.json",
+          "sha256": "97b9e5fd5e8dea8c02fc91994f234e4983fd041c429de8ba3589d9c7c3b85991"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_007.json",
+          "sha256": "e8d4f06e409cede55c6b5fcbcb5df70709fe3291030df13ffe1e05cc92feddf5"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_008.json",
+          "sha256": "714a20b6e10af4b351eb524a3447b78089b64e78b5c727943a96b7d752fd00c1"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_009.json",
+          "sha256": "00138e52b4713641cc2875e1c1a790f7d9e10d3cb34efbdc81e7c10dac3a2580"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_010.json",
+          "sha256": "d8688ab7f9a458bc514b4ae51cad7d7ccd424a5eba5406d0e6d2ffd03cc9d9ed"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_011.json",
+          "sha256": "34fb1a986fe55e9dabba40ea1fcb9b4ac85b5c79aa9189f97d46c1a6b0b932d4"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_012.json",
+          "sha256": "e2fe1e85b39b49626aa9978e5bbd56d2b2795a56d43e045191167b4428b9708e"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_013.json",
+          "sha256": "5b299a9f20f5b8caa796c561f6963b286482fb03b018afa533a7126c130fb8b4"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_014.json",
+          "sha256": "77ea3a3bf3e512859580460561d73beaf35f64d948706043a5c519e5f49cd750"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_015.json",
+          "sha256": "ebda3cffc7ac91fe5b80ed262b60ca960eb3cb9fd2b484220ef89aaebcaab7b0"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_016.json",
+          "sha256": "e035199339056c829da5aad25958eac4f2f2e29434e81fa8471e3f62805e3776"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_017.json",
+          "sha256": "3d38fd0251c3d6f634ab86123dc5f4822242711971b1a980f190c17ff4cd9d1d"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_018.json",
+          "sha256": "5a6cdc1e344869e436b6af85d4aba264de2062408c3889e8f1ed68498543d187"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_019.json",
+          "sha256": "cb36f29e2262cf5e47ce93fd7b933cc7f56db47e47c53ce52eee1c445124e82d"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_020.json",
+          "sha256": "ccd8a107758cb4519115f792648513b1cc24ef10822603682c3a9fc3e7c592cb"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_021.json",
+          "sha256": "fa3d31c0c67386c4496a53c5e52354e415658c28c60c665f6dbe699d8dbd67ea"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_022.json",
+          "sha256": "04c69a3531f1b5acccaaf65a4c8d45a821537b5426eaa184b35eeb0d291ab62a"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_023.json",
+          "sha256": "395aa0f83c5df7722ed57982dea0e45081dc1e76c4c65e5d94dcb04da4919002"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_024.json",
+          "sha256": "600d92d6da83d7ddd375e25a7c962c44ef7c221fecb9a2db8357cc53ae91836f"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_025.json",
+          "sha256": "019cb65202b4d2e8a0fe1cedf4dc331f583ed744475f7062b7696d0de593aa50"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_026.json",
+          "sha256": "f7206d426bb945010738927f3869bc871c5281968b32d3bfaea2fcf3129d00f7"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_027.json",
+          "sha256": "24dd846e46e00b2710816103b0a437f30d05201b50ce9863e5bcc83456b4ee22"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_028.json",
+          "sha256": "e36ad811ab5b0daaea5ff4bbf84aa0146ab4245d6a2a3fe577c0a3f28c59758a"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_029.json",
+          "sha256": "ddfbb9f295999ae3af2fbb4ab598f05c2dda5bb28be0a31d8551288cdf8aa824"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_030.json",
+          "sha256": "48d9c90f0c7b5859421331bb7bc8df86e3d976a3767d9a8eecd153645b64cbd8"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_031.json",
+          "sha256": "9dba543ae31c43cb276c900ee67e2e6603a073f411099f9b7ef062f408f0df86"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_032.json",
+          "sha256": "3e2180abcdd4f9b0fef23043b05da52f4b0956b7794e52b6adb767abf9537772"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_033.json",
+          "sha256": "6ce66ec48849697e402a150ec0b997b1bc2132429c753316f72289998df82b56"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_034.json",
+          "sha256": "59334f319e264b5c9be7c41749c821ed0c921e86b61fc2dd8e90357f0951ca57"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_035.json",
+          "sha256": "8b532a67e646ea5e1189d8e7cf15baa737f08e274c9c05a8cdcec5c2fa7a83a4"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_036.json",
+          "sha256": "aa67c6582446caacfcc1fd24774da6f4f7fc7f53c6844c64117e9e68ccfc28ed"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_037.json",
+          "sha256": "b33642228fb44335bf0e4b32bbde4b067422b9a0392f0b35d2d30dc4a672dfe5"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_038.json",
+          "sha256": "6d3682d7fbbfa09d0c798729fce03360aaf249db3e7e6099cc4f1a45ee7bf7fd"
+        },
+        {
+          "file": "audit/unpruned/hauer_real/block_039.json",
+          "sha256": "377e905ccfd13397b8a6cdcf873cc38e6aba2c30e46d793dcc1472b4d4cdea73"
+        }
+      ],
+      "case": "hauer_real",
+      "key_id": 9244453,
+      "main_best_score": -5.8897086467466515,
+      "same_maximum_and_all_ties": true,
+      "seconds": 20.406379357000674,
+      "ties": [
+        9244453
+      ],
+      "unpruned_best_score": -5.8897086467466515
+    },
+    {
+      "C_and_W_for_every_key": true,
+      "all_keys_fully_scored": 30965760,
+      "block_manifests": [
+        {
+          "file": "audit/unpruned/hart_real/block_000.json",
+          "sha256": "c1afc984523493b30a42184e007476857aaf83031db0ecc5ba2e6dfff9626952"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_001.json",
+          "sha256": "6d25fc3308270080260fafe971b0add0ca6140d364acdf338f46904694a11acc"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_002.json",
+          "sha256": "c9eec822eee2ec60473a6f198d0095a69b5b43148c6debd2b979467ea65c2c20"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_003.json",
+          "sha256": "8065ca6dbf9ee3a405257d10beb0adda257f5eed30ae4e09783d2f5419bc33db"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_004.json",
+          "sha256": "37ccc8a487976ffc7b3fc7f0749e71bc8c3b595760c01c660a10e6bd90368cc9"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_005.json",
+          "sha256": "2d9fc59122b0ca05fe6567649c0123fa4a18e9154a450500fe4a44e21fa7fd81"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_006.json",
+          "sha256": "8014f3f22844af4616b14657bcd9e712d16f522d4652921d4174dfeda78cfec9"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_007.json",
+          "sha256": "e4f8a0fc432561f9bc4500e6fd6521cbef8edfa06b32260ba3d42a979700b11c"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_008.json",
+          "sha256": "997fade51adec76b46b7b579e8146985f61815b815b86e0ca54eb42c2e50b112"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_009.json",
+          "sha256": "6d21748b0d9b68bdfb94daa5f9c45c46581bb51e27233780d2d3372b84820597"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_010.json",
+          "sha256": "a0fe0c397742c7c25b16e0d283e7d8eb5d599df1fda46ab5f12bd8be80940c38"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_011.json",
+          "sha256": "51d5d9ea51e1d6eb2c94be8e611110dc7a910c834b6ab916042a6744e43067dc"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_012.json",
+          "sha256": "1c8b382d6ac014618d569720d0d357d7a8ad61117d38318df847b3340f70529f"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_013.json",
+          "sha256": "80173c9b44b71efee74c7f2bba895df493667fa674f5f4f034af5ebed154b5d6"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_014.json",
+          "sha256": "a0f588bae2819537f6a271bb27839dc7776f5b12bd5039f868c9bccedbbfb10e"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_015.json",
+          "sha256": "fd8df8d487ed0670cdc2d4f8387646af59f5440683b2015ecfb3e8b38e8851fd"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_016.json",
+          "sha256": "d52bf40609a38b6ddc76cf34850f8edb89a03d627a2bf090fdc26879afc01838"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_017.json",
+          "sha256": "32d9cb0f11610f8d4f9a7caf6da8f5aaca39c9814519131c9a5960c3617180fb"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_018.json",
+          "sha256": "2e3e1c02e293c4945f121b0c864b449d646fe2a6b2b696c6865b2d9555f5a990"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_019.json",
+          "sha256": "4a63251ce7b9dca55885b0ff46a7063f1236c12f5ac25e82f5c7428c367b0b74"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_020.json",
+          "sha256": "a1cfcb60839c2edc9d43918fafef8fc5787a138e6f6a19bc15f9d70002e0a44c"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_021.json",
+          "sha256": "e62fc78d92929b9b230fe2c8cbef9562d6832c9cc7fdc71232a9d3cdb3371c17"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_022.json",
+          "sha256": "6963f6d942112d12993c11389f69780ba03ec00babeb39c3bdfe31edca16b37a"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_023.json",
+          "sha256": "905f31c1fdeb7ab92733b84b2bd1f4dc7ffc6eb3ee10bb696321a614111e859e"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_024.json",
+          "sha256": "19756a5230cd4b2899009538a75bbd9e254b05be471effdbf34f10aca67834c4"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_025.json",
+          "sha256": "484f1bfacf229eec8fcbd02441a34df25fcfedcce49bc827560c3b2e523f70b5"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_026.json",
+          "sha256": "2bd2b0406cb75e2d2f3114f66c013819327e31258e8fb7999abdc40dcb6571c2"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_027.json",
+          "sha256": "d0c952f8b13e319066d2a9d3d905e13fb040f8aa77a8fe8c1c02b0c435d617c7"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_028.json",
+          "sha256": "f3e75f592fd20d1e49613aef6824e50c67426d290359f44192367d92aa728523"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_029.json",
+          "sha256": "2572b36fa1b179641ec7a3b1efb76af83326eb809f04e9387ab2ad33b3786718"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_030.json",
+          "sha256": "2ec1c352d6ecbfd74e37d7cb6637dc4663ec6d89d138e78a3f6cf85dfbacd57b"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_031.json",
+          "sha256": "0967225f0d986c5b4e77db21d78f25480fdbf4a24dec36ebbb3fa3d6210aee66"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_032.json",
+          "sha256": "f013702611e090e430a54392a812accc808a5ada272fd7adce1a1a15b1744591"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_033.json",
+          "sha256": "8f375fb194f22372f72bc71bf0d0c3804a7ac78318295ac93706e232e008dd36"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_034.json",
+          "sha256": "e74e7c3203f4063fdca3b9da07e92aff1e4aa6bf0e12f786137c9dc4dfaf4883"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_035.json",
+          "sha256": "80c655f6e3e3c3c817a7c4dd9225bb69e01a8d291398dc6d56302879591a731e"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_036.json",
+          "sha256": "2f4b003a28951cd173c397f007a95f3dea657cd1cd20935baf74a41101968435"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_037.json",
+          "sha256": "a8cf17a5eea52214f8635f690dd122bce2caef4b9c6f5ec3f566bdc140d48f11"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_038.json",
+          "sha256": "243eb14056917349bdba2111f3f6d0135e85def5fdeb8d1f2a27a048f020805a"
+        },
+        {
+          "file": "audit/unpruned/hart_real/block_039.json",
+          "sha256": "ba71104ea3c833077f1ac40dc2070cebc31e2b82f8bebb8abc09ed3d445cb193"
+        }
+      ],
+      "case": "hart_real",
+      "key_id": 9249076,
+      "main_best_score": -5.970817805852386,
+      "same_maximum_and_all_ties": true,
+      "seconds": 19.485100617000057,
+      "ties": [
+        9249076
+      ],
+      "unpruned_best_score": -5.970817805852386
+    },
+    {
+      "C_and_W_for_every_key": true,
+      "all_keys_fully_scored": 30965760,
+      "block_manifests": [
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_000.json",
+          "sha256": "54b29d2edb099df07b475685f8637e8fe4485dad73bac36ef1424d0131b4a5d5"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_001.json",
+          "sha256": "1652922702adb734d363605369161dd759a4b232348a3e700bb61e111241f824"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_002.json",
+          "sha256": "4db6714bc6bc74ba57eba5f3859a64492b985e2dfe1543ffd5bd45a86a9e52e2"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_003.json",
+          "sha256": "8983d9259649c73ea32abec88d39e807a0c9c9f3a1b1eb31d76b9b2cfa195066"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_004.json",
+          "sha256": "22eaa47d4e41c1ad20a5dbc0cadc9be5b50b3a400c65384dbfef2a7234630024"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_005.json",
+          "sha256": "90c0d321348fa7e78050e2ed1d8d82400f66cec35346be7592b9617769966913"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_006.json",
+          "sha256": "449c04c8cfa614ed0b9c8f3cf3869145b00999b247dc0de9704b1eb26d852a22"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_007.json",
+          "sha256": "ef9c25880090bf620407f901eac3a170b082c9780b939452e26922e28fef0d01"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_008.json",
+          "sha256": "94746e7f64812fc8d2de489654fe089a7196c83a3827faed1a3bfdbb720095b8"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_009.json",
+          "sha256": "07f13146ae68627db1b3100d77e6990cf6265f08d0a3f26c60729f170895b838"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_010.json",
+          "sha256": "c652a93bd8994e8a6db4ac99c8c254a55322e6a0e7c39704d672d0d39f767fcc"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_011.json",
+          "sha256": "cb37246b7c1b3022b678837a9f8585e1867ab6c0891e6c302660263239c1b588"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_012.json",
+          "sha256": "91eea65225e91fece4701133f084a7eb6d520103d175f54663ad5040d989b68a"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_013.json",
+          "sha256": "12e70e35c590722df88699c27a76fcc62a97af5e424cb5bd40fd240a1d6f2f90"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_014.json",
+          "sha256": "2ef029490ba129b6cd24814f2a4345feed9cee32b260acf1b55be3a11e8e0bc1"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_015.json",
+          "sha256": "1d8638ee1c1c8618cd1b14ffdbe7a53ec9a6e7ec006cd8a9b9460169823cf7e4"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_016.json",
+          "sha256": "864dd8ea9cc6ba80445a7cc8136d2206c6cb766f2e6962dd0249d8baedd4b8b5"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_017.json",
+          "sha256": "0554bf318091ed863416e20ad474d86832c8a1370889d673f9e9715401655c70"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_018.json",
+          "sha256": "b5687f8ed3adad6574f2838d639983409ebc848bf4e04ac40a1b8cd3b4998de7"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_019.json",
+          "sha256": "06adcd20058ebf8c61ecbade9607176d7b83f340ae0b7bf0a7d42aef542f3ffc"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_020.json",
+          "sha256": "c3b38869fc137c7b4746692088f5db79ca63238ef59e5011f8aa00d7c63d47fa"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_021.json",
+          "sha256": "d2849fb88871b46ecb1857a95cb2dfd46112ee4a785425abd3c1c4ba2e467db2"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_022.json",
+          "sha256": "d3ba122164db8a6c55cff64010c61f40a847059fa12d5754e453ebf6a7da1260"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_023.json",
+          "sha256": "cf38447d705383a81c2221b91fade2c25d83a3cfb9c3c431f1fae16970d3da1b"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_024.json",
+          "sha256": "d3364ed07673fa21437057e82862cdf2a84c00a3ee3f30436ea6e4164ec866ea"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_025.json",
+          "sha256": "db52cfe8ace5ca1c2726101df7e8a4eef14a86dac842d796aff430a66f24a22f"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_026.json",
+          "sha256": "01349a6c0b3a9d41403d4d740c65de26cb77b6f29cafb353b9b72f782ec45660"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_027.json",
+          "sha256": "9424fdaafd09e99da75af6e76c10b1820e1e216b9bf53dbf33304829f8ff43ec"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_028.json",
+          "sha256": "38b63f49c3bcefe2bf4e4e0bccdf93bfd51c2bb73ac7ce702d28f48058d585e7"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_029.json",
+          "sha256": "08fcf3f99e37ab53c1ea20d88ab2712af9f2bb21e831cf6a783a2af39966a357"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_030.json",
+          "sha256": "dfd386957c44d13e4811b34b192f2e2e99ddd22201ecd5fcc77c7a1fd78206b3"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_031.json",
+          "sha256": "ae04c572440604dbc2bb00888ca508da4eb39bf3d079d2b68b9d7accbd46ece1"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_032.json",
+          "sha256": "49b8a443619c8d051aac1c71dfd55d39738c227f9e90eb12c86cae7c4f30805a"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_033.json",
+          "sha256": "f001829025065b4696546e3d85eb0ffd18948ab9ce4ee85032d060f1837bbe33"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_034.json",
+          "sha256": "7288655b78fbab5126c17cc7f029afa71348266f9cffdafeca10da320636490a"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_035.json",
+          "sha256": "177c04c71067780e971e3cf7cfb4374791ba3e924c80754074eba6807be2a604"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_036.json",
+          "sha256": "5c8d4ee00a07469091eaf67404b5c999dce2cc0d72d0913c46fae6b5bee4955c"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_037.json",
+          "sha256": "b09f27c7df0734a4a7d49a3edc2100ce02ed0629c0de035c774e1cfbcaf9c370"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_038.json",
+          "sha256": "0b222cdbe37303847dca8d998aa5ea730f32a67b79677956fc1aff1628fe5e92"
+        },
+        {
+          "file": "audit/unpruned/hauer_real_pair_00/block_039.json",
+          "sha256": "f297e7a1449995a0006f0ca563a45195e3a7d4379c29a826caacf4f5025d1717"
+        }
+      ],
+      "case": "hauer_real_pair_00",
+      "key_id": 9840762,
+      "main_best_score": -5.637768821286509,
+      "same_maximum_and_all_ties": true,
+      "seconds": 20.08319181799982,
+      "ties": [
+        9840762
+      ],
+      "unpruned_best_score": -5.637768821286509
+    },
+    {
+      "C_and_W_for_every_key": true,
+      "all_keys_fully_scored": 30965760,
+      "block_manifests": [
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_000.json",
+          "sha256": "2f3df45dea7ba417f6b6d00949a5dcad703f868facc29b05bb0bc16121379f5f"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_001.json",
+          "sha256": "6e911a5e279857556ce72be3c9964d5b0267645b95cd957622f6e3023b8f60c2"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_002.json",
+          "sha256": "bf7d6e83dc7662b606cfbaf2b2f0595923387454f42d61eb5dfff39948dce59d"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_003.json",
+          "sha256": "e55beb1399bdfdc567013252d838b6b45b176c7645ab5aac2955354375e4e761"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_004.json",
+          "sha256": "5a94935b1200f8f64e3c2dfa718bcec160329a801cf7dd52b73a64bfa3f76f43"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_005.json",
+          "sha256": "dcc84a163b25d997b8897bb4ebca7888f865b508f89d0055d917b77499148b5d"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_006.json",
+          "sha256": "b62e474a4d6138dca658c9da5cee59eb26a470274c919c3c8128663e66e701e3"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_007.json",
+          "sha256": "3dc4fdce95c331333126082111fc545481a205a90cfd1c07e6d004fdf4d54e75"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_008.json",
+          "sha256": "69c5d6f052f713b982f41f5ff05a66964301400dfee14270ecad998f37926187"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_009.json",
+          "sha256": "7ffced8812c9f60907609ce5984f9dfd61f7d6ab3d394f88d25831472a6f529e"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_010.json",
+          "sha256": "c329749091998ea29ef0d5fb18560e105f5ba7cf92918c291ad5826108e16b0c"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_011.json",
+          "sha256": "290bc6816d72b67ac10e9830866c0aa73b8a07cc2ed7e40953c39a8d6709ff6b"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_012.json",
+          "sha256": "914430452d429f5999ab169eac0cd109a7dc79793600db23eb5c9972d8f15227"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_013.json",
+          "sha256": "2f5452e035a398d2664f5b1b2f8aacf9543c746a3bc999c097f9dd5b7e220d74"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_014.json",
+          "sha256": "b9d9cc77fcbea986c568928ed5ec8ecbaa407d78cc2eb55a202567c1445ff8e8"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_015.json",
+          "sha256": "d71ddc4f72e67bb84e3ea4bc700d3d88c33197d7b4a25cff600881207a93f082"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_016.json",
+          "sha256": "4aea59606e5eb917bc6d56e7b5b562085c61fee52349ec6481202fabe16e79bb"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_017.json",
+          "sha256": "15232a725f995b820fa26862e94e04302a8f726d044d146d99bc8e0fb4072bfa"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_018.json",
+          "sha256": "fc81540d924e68592bac7da89445238c68e6d193932a97543e5b5c2d320a9a10"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_019.json",
+          "sha256": "8f234f1d420f519ef3e7821b2f99a41c99e7f71a0c1c2be658251c70f3281f39"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_020.json",
+          "sha256": "2186c023e8c0ec0b1b26f69e75bc60f17ba515d88f579338286ff60eec6b0dc6"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_021.json",
+          "sha256": "4c1af42093c900983397cf3079068b53d71cf28fe40f7d0ff549d279a4bd1ba7"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_022.json",
+          "sha256": "f03647e18af6b93ea0bf24c5a776f56395a100174b54b65044aa37b23553169e"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_023.json",
+          "sha256": "571625f100bd0b261f375114cad221f88cd7ab563cbf7edbd0c1ae1ecda2ba1a"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_024.json",
+          "sha256": "a5f870f7cce86dbc1eabb6780d6cc75439ae18b8c127d274524b36416f832f91"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_025.json",
+          "sha256": "119804ded103099169b71342aa21561dfdc5412b8d149de982731331543ff07f"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_026.json",
+          "sha256": "4f9758a0620046f06b307a8312423ad2f415f61655236e89f5e81e31253d9daf"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_027.json",
+          "sha256": "6538e0114153119c60833698a93b0248c9571428fa01c3ad05ccb99131811f4c"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_028.json",
+          "sha256": "8e22f21530985441b7cf3dac4ff3d7233c9c28b2e22a68e4b6af4dd2d98c63ff"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_029.json",
+          "sha256": "2e018c97d1b314494316ec4a49447c7c7b4a1406fd6218232b0f3cd2c11445d0"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_030.json",
+          "sha256": "afd9b10227a87851454977cd9a8970dc60c623c08d858d04c4be5410f3190159"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_031.json",
+          "sha256": "c5f0410a874fc9a3c80d4dda5cc904b411d4102dc88955656b4bdfb168d9e2ed"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_032.json",
+          "sha256": "24ad3e51a05f83f0872c6070172a29b691a4ab01868305cae1d01da49b902145"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_033.json",
+          "sha256": "a9efa18435df561cad803f86648550145c6af0fe1eb99ce40ef761d4feea3dcf"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_034.json",
+          "sha256": "e1e27cc1f680d00eac999ac7500e4a8b346b509196ba50201afc74989c365bbd"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_035.json",
+          "sha256": "31a5ec1aba75e0293e79db92a587b31615c57be15f41df7780fb3e864a6da9a9"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_036.json",
+          "sha256": "31cfb8b950210d771b96c41802aa5540d1f47a2a07e6e9eda79e218af486a874"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_037.json",
+          "sha256": "c45e02b3df3d12b39c2c6d73f8c5d6d2c296e43168521a901e0f317cb4c722b0"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_038.json",
+          "sha256": "642ab7a8deba151fff27fd5e299eb63f4eae8efbdd7979fc0e5ea59034044918"
+        },
+        {
+          "file": "audit/unpruned/hart_real_pair_00/block_039.json",
+          "sha256": "650653ef8a943a365e1918a0dca7fac8892b90f01955c0790857b5b76efe9489"
+        }
+      ],
+      "case": "hart_real_pair_00",
+      "key_id": 23400901,
+      "main_best_score": -5.5390472696945725,
+      "same_maximum_and_all_ties": true,
+      "seconds": 18.09750922399985,
+      "ties": [
+        23400901,
+        23400909
+      ],
+      "unpruned_best_score": -5.5390472696945725
+    }
+  ]
+}

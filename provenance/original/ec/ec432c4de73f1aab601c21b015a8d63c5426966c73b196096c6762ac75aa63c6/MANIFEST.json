@@ -1,0 +1,92 @@
+{
+  "scope": "Delivery data packaging only; no runner/source import or execution",
+  "attempts": 1,
+  "files": [
+    {
+      "member": "package/Dorabella_integrity_probe_v1_result_20261018.md",
+      "bytes": 6698,
+      "sha256": "a8a11986da1ae975697737e9642e7a398c68bf145823ff47ec875dcf68854e80"
+    },
+    {
+      "member": "package/FREEZE.json",
+      "bytes": 2844,
+      "sha256": "66e6088dfb92e0c147469ffb4828349d88c8b0a1142956ada26fbc8a9dfd7d77"
+    },
+    {
+      "member": "package/RAW_TOOL_RECEIPT.json",
+      "bytes": 7150,
+      "sha256": "1f7fcb7b5e8f959e5a80e8a3da2adfb5dead1566a0bd36efa2b1f8ff6d8964a3"
+    },
+    {
+      "member": "package/READBACK.json",
+      "bytes": 800,
+      "sha256": "60137933a465fc9eb5951bb252ed45963e1dee9891edac54959edb72cc40ca00"
+    },
+    {
+      "member": "package/READBACK_TOOL_RECEIPT.json",
+      "bytes": 939,
+      "sha256": "59b6b6f1a3b3d6b6416fd739be27929574417f7b7253595dfd1c66b774764a1e"
+    },
+    {
+      "member": "package/STATIC_FREEZE_REVIEW.json",
+      "bytes": 1358,
+      "sha256": "491e9a17cd3d294d0cced8e60cc9274f9c66bca36f41c4a06f5c7bdfb1ed15a7"
+    },
+    {
+      "member": "package/accepted_plan.md",
+      "bytes": 5498,
+      "sha256": "1b25a19a4ab206769b010d667bb346c7260ac50b324fb2498b83ceb5e7950fe5"
+    },
+    {
+      "member": "package/readback.py",
+      "bytes": 4421,
+      "sha256": "536131d68475779a4c09bb7f04e3ed5357c504d6aa197cadf45be7ae3a12290e"
+    },
+    {
+      "member": "package/runner.py",
+      "bytes": 7886,
+      "sha256": "d8c581018d4a63930b05bd0b1caa8f5d6feec6b67159a5c11a7b98c8ac16cd7a"
+    },
+    {
+      "member": "attempt/T0.json",
+      "bytes": 96,
+      "sha256": "f3e6ffc9dfdeaa23f313f749bf87f415f2e1cf584ff69877a3341df8d903b021"
+    },
+    {
+      "member": "attempt/altered.jsonl",
+      "bytes": 48,
+      "sha256": "4caedbc23e7d2670413bd3a81397953327f8c0f9468d9b254b3793e9deb63c8f"
+    },
+    {
+      "member": "attempt/artifact.zip",
+      "bytes": 5494,
+      "sha256": "865b0090df0c4b0e69b27b8bd2c84a79d7ed6e6731f48c795dab27cba1cbfec2"
+    },
+    {
+      "member": "attempt/gnu_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "attempt/gnu_stdout.txt",
+      "bytes": 160,
+      "sha256": "11717dea59c5ee9a3adb7e16b918f48e4e93ffb7cbeccf327bf3f27a642642b6"
+    },
+    {
+      "member": "attempt/payload.jsonl",
+      "bytes": 48,
+      "sha256": "fc19016a6a6b953ee2853e0642e11d19096a3f9f2a6f9c8698c9c4be9fd74935"
+    },
+    {
+      "member": "attempt/result.json",
+      "bytes": 5074,
+      "sha256": "06340c80ce5322b2a268163dd2e9a421340a66ab5bbb5cd331ae1e52c454c3c1"
+    },
+    {
+      "member": "attempt/terminal.json",
+      "bytes": 908,
+      "sha256": "9ef00d12ac07e79313bc83e30ececbe52bbf93af95f6e40f4f5ce508ed56adb5"
+    }
+  ],
+  "manifest_self_excluded": true
+}

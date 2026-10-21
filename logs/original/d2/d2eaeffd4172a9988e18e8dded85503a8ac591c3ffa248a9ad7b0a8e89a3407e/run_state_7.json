@@ -1,0 +1,16 @@
+{
+  "case_count": 1,
+  "command": [
+    "dorabella_round13/code/run.py",
+    "--case",
+    "bailey_01",
+    "--workers",
+    "1",
+    "--progress"
+  ],
+  "completed_utc": "2026-10-02T09:14:20.438566+00:00",
+  "pid": 7,
+  "started_utc": "2026-10-02T09:14:16.435100+00:00",
+  "status": "completed",
+  "workers": 1
+}

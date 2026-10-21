@@ -1,0 +1,18 @@
+{
+  "status": "DATA_ONLY_RECORD_READBACK",
+  "no_SQL_reexecution": true,
+  "one_census_exit": 0,
+  "raw_output_matches_saved_result": true,
+  "metadata_windows": 3870,
+  "hit_windows": 1283,
+  "sum_candidates_per_fetch_per_window": 5889191,
+  "first_iteration_min_bytes": 35335146,
+  "first_iteration_excess_over_8MiB": 26946538,
+  "first_iteration_excess_over_32MiB": 1780714,
+  "two_iteration_min_bytes": 88337865,
+  "two_iteration_conservative_JSON_response_upper_bytes": 1277800917,
+  "note_upper": "Includes list response frame allowance only; excludes requests, membership, LM, wrapper records, writer events, other files; not a usable total output budget",
+  "lower_bound_is_conditional_on_completing_original_loops": true,
+  "minimum_bytes_are_not_estimated_RSS": true,
+  "decision": "BLOCKED_BEFORE_EXECUTABLE"
+}

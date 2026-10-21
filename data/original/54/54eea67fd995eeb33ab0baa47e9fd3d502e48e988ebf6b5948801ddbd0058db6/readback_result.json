@@ -1,0 +1,752 @@
+{
+  "status": "READBACK_VERIFIED",
+  "utc": "2026-10-17T03:18:33.872174+00:00",
+  "runner_or_score_imported": false,
+  "search_repeated": false,
+  "score_recomputed": false,
+  "observed_exit": 0,
+  "session_id": 55668,
+  "raw_start_utc": "2026-10-17T03:16:48.756Z",
+  "raw_end_utc": "2026-10-17T03:16:59.339Z",
+  "T0_utc": "2026-10-17T03:16:48.996833+00:00",
+  "terminal_end_utc": "2026-10-17T03:16:54.922174+00:00",
+  "terminal_sha256": "ab423df7cc4ae151e3daea2f04d5bd87227d9d0859087a5e5a21e81fd8108ad5",
+  "hash_checked_attempt_files": 187,
+  "branch_status_counts": {
+    "COMPLETE": 26,
+    "STRUCTURAL_REJECT": 14
+  },
+  "restart_stop_counts": {
+    "COUNT_1000": 130
+  },
+  "completed_starts": 130,
+  "proposals": 316905,
+  "max_branch_seconds": 0.28057531299964467,
+  "elapsed_seconds": 5.925356015000034,
+  "candidate_inverse_records": 130,
+  "control_inverse_records": 8,
+  "case_summaries": [
+    {
+      "id": "P01",
+      "distinct": 5,
+      "best": {
+        "plaintext87": "SVTAHOMPLERSNDOFTHEATLNCELERSISTORIRHONEDISTORICMORATHEDISTORAGODPATRYSCANDEAVIDEHUEWAS",
+        "score": -388.9037387404248,
+        "origins": [
+          {
+            "branch": "B0",
+            "r": 4,
+            "file": "restarts/P01_B0_r4.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P02",
+      "distinct": 10,
+      "best": {
+        "plaintext87": "NDIECUSPFORNCIESPEEMENDOPEAYMARCATTHISABIHINJULBYTHIRVENANOBYTHEEDUGNMENTANDLIGENETLOWN",
+        "score": -409.9961684100228,
+        "origins": [
+          {
+            "branch": "B0",
+            "r": 3,
+            "file": "restarts/P02_B0_r3.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P03",
+      "distinct": 10,
+      "best": {
+        "plaintext87": "HGASIONTWECLIEFACESREDTAREWECHSFORAPUNTSLOWEREIBENEROTHERSLOSTPPORHIGNPUPREFAMIEVEBYLAO",
+        "score": -403.6073201519819,
+        "origins": [
+          {
+            "branch": "B0",
+            "r": 3,
+            "file": "restarts/P03_B0_r3.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P04",
+      "distinct": 20,
+      "best": {
+        "plaintext87": "OFATTHINAMANCOAUDSIMISTOUNSEHOURSCHFANCYRUSAOFPALIDOAMAISTOFCOMBYYETHINAMEOFINSEHOURSCH",
+        "score": -399.8647440116669,
+        "origins": [
+          {
+            "branch": "B3",
+            "r": 0,
+            "file": "restarts/P04_B3_r0.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N01",
+      "distinct": 5,
+      "best": {
+        "plaintext87": "HINLYSCEITICTTHHEANCOHEALSITAISFORSHRORATUGHPREDTHOWNRYBYSAISSETAISBERNOHEREDIMBCTPONTR",
+        "score": -414.7387064472297,
+        "origins": [
+          {
+            "branch": "B0",
+            "r": 3,
+            "file": "restarts/N01_B0_r3.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N02",
+      "distinct": 10,
+      "best": {
+        "plaintext87": "ETYINGYOBOOFBALGASTATTMUCHGOALCHOREOSEUPESLEFORBLETIOLELOCAYSHIDHERDSTWEEDSOFPLEAFTOOUK",
+        "score": -419.532554036008,
+        "origins": [
+          {
+            "branch": "B1",
+            "r": 3,
+            "file": "restarts/N02_B1_r3.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N03",
+      "distinct": 10,
+      "best": {
+        "plaintext87": "STLYVILDIOERAVIOUTHRSVALEEUSASONUSCNNETLPMSUCOURESETEAFTEESDANYOUEEMYAREOURNALYHADBEEXT",
+        "score": -429.879448548035,
+        "origins": [
+          {
+            "branch": "B2",
+            "r": 0,
+            "file": "restarts/N03_B2_r0.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N04",
+      "distinct": 20,
+      "best": {
+        "plaintext87": "TEAREEHEMWRADINDINEHCITYPMEEITHFLUNOFTWINDINSANOFOTDIFITOUTCHSOLDESERTFWASTGLAREUSOUTCH",
+        "score": -413.1356174341962,
+        "origins": [
+          {
+            "branch": "B2",
+            "r": 4,
+            "file": "restarts/N04_B2_r4.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hauer_real",
+      "distinct": 20,
+      "best": {
+        "plaintext87": "XTNIGSLICPRERDEFEESTTEDOPOWRALELSOICHINEENSWRLERESBARDOCCORANASBANDBYWANESBRAWITWASIDOI",
+        "score": -414.3553330194197,
+        "origins": [
+          {
+            "branch": "B1",
+            "r": 2,
+            "file": "restarts/hauer_real_B1_r2.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hart_real",
+      "distinct": 20,
+      "best": {
+        "plaintext87": "MPRIVANICKSESDEFEEAPPEDUKUTSONENANICHIREERATSNESEALOSDUCCUSOROALORDLYTOREALSODIPTOAIDUI",
+        "score": -408.065418512191,
+        "origins": [
+          {
+            "branch": "B1",
+            "r": 4,
+            "file": "restarts/hart_real_B1_r4.json"
+          }
+        ]
+      }
+    }
+  ],
+  "assessment": {
+    "positive": [
+      {
+        "id": "P01",
+        "status": "ASSESSED",
+        "truth_score": -334.2207467246346,
+        "best_score": -388.9037387404248,
+        "truth_minus_best": 54.682992015790205,
+        "exact_top": false,
+        "exact_any_retained": false,
+        "top_matches87": [
+          17
+        ],
+        "top_tied_strings": [
+          "SVTAHOMPLERSNDOFTHEATLNCELERSISTORIRHONEDISTORICMORATHEDISTORAGODPATRYSCANDEAVIDEHUEWAS"
+        ]
+      },
+      {
+        "id": "P02",
+        "status": "ASSESSED",
+        "truth_score": -395.5170967884367,
+        "best_score": -409.9961684100228,
+        "truth_minus_best": 14.479071621586115,
+        "exact_top": false,
+        "exact_any_retained": false,
+        "top_matches87": [
+          16
+        ],
+        "top_tied_strings": [
+          "NDIECUSPFORNCIESPEEMENDOPEAYMARCATTHISABIHINJULBYTHIRVENANOBYTHEEDUGNMENTANDLIGENETLOWN"
+        ]
+      },
+      {
+        "id": "P03",
+        "status": "ASSESSED",
+        "truth_score": -394.95098063385274,
+        "best_score": -403.6073201519819,
+        "truth_minus_best": 8.656339518129187,
+        "exact_top": false,
+        "exact_any_retained": false,
+        "top_matches87": [
+          43
+        ],
+        "top_tied_strings": [
+          "HGASIONTWECLIEFACESREDTAREWECHSFORAPUNTSLOWEREIBENEROTHERSLOSTPPORHIGNPUPREFAMIEVEBYLAO"
+        ]
+      },
+      {
+        "id": "P04",
+        "status": "ASSESSED",
+        "truth_score": -360.50833369768384,
+        "best_score": -399.8647440116669,
+        "truth_minus_best": 39.356410313983076,
+        "exact_top": false,
+        "exact_any_retained": false,
+        "top_matches87": [
+          0
+        ],
+        "top_tied_strings": [
+          "OFATTHINAMANCOAUDSIMISTOUNSEHOURSCHFANCYRUSAOFPALIDOAMAISTOFCOMBYYETHINAMEOFINSEHOURSCH"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "id": "N01",
+        "status": "ASSESSED",
+        "paired_positive": "P01",
+        "paired_truth_score": -334.2207467246346,
+        "best_score": -414.7387064472297,
+        "reached_paired_truth_score": false,
+        "top_tied_strings": [
+          "HINLYSCEITICTTHHEANCOHEALSITAISFORSHRORATUGHPREDTHOWNRYBYSAISSETAISBERNOHEREDIMBCTPONTR"
+        ]
+      },
+      {
+        "id": "N02",
+        "status": "ASSESSED",
+        "paired_positive": "P02",
+        "paired_truth_score": -395.5170967884367,
+        "best_score": -419.532554036008,
+        "reached_paired_truth_score": false,
+        "top_tied_strings": [
+          "ETYINGYOBOOFBALGASTATTMUCHGOALCHOREOSEUPESLEFORBLETIOLELOCAYSHIDHERDSTWEEDSOFPLEAFTOOUK"
+        ]
+      },
+      {
+        "id": "N03",
+        "status": "ASSESSED",
+        "paired_positive": "P03",
+        "paired_truth_score": -394.95098063385274,
+        "best_score": -429.879448548035,
+        "reached_paired_truth_score": false,
+        "top_tied_strings": [
+          "STLYVILDIOERAVIOUTHRSVALEEUSASONUSCNNETLPMSUCOURESETEAFTEESDANYOUEEMYAREOURNALYHADBEEXT"
+        ]
+      },
+      {
+        "id": "N04",
+        "status": "ASSESSED",
+        "paired_positive": "P04",
+        "paired_truth_score": -360.50833369768384,
+        "best_score": -413.1356174341962,
+        "reached_paired_truth_score": false,
+        "top_tied_strings": [
+          "TEAREEHEMWRADINDINEHCITYPMEEITHFLUNOFTWINDINSANOFOTDIFITOUTCHSOLDESERTFWASTGLAREUSOUTCH"
+        ]
+      }
+    ],
+    "targets": {
+      "hauer_real": {
+        "case_id": "hauer_real",
+        "distinct_count": 20,
+        "ranked": [
+          {
+            "plaintext87": "XTNIGSLICPRERDEFEESTTEDOPOWRALELSOICHINEENSWRLERESBARDOCCORANASBANDBYWANESBRAWITWASIDOI",
+            "score": -414.3553330194197,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 2,
+                "file": "restarts/hauer_real_B1_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "FPRAYMCANDHOLSODOOMPPOSIDITHECOCMIANGAROORMTLCOHOMBELSINNIHEREMBERSBUTEROMBLETAPTEMASIA",
+            "score": -416.12174928991595,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 2,
+                "file": "restarts/hauer_real_B2_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "BLACKETCHPOSOUSPSSELLSURPRIONTSTERCHMCASSAEIOTSOSEDNOURHHRONANEDNAUDYINASEDONICLINECURC",
+            "score": -419.20899127790904,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 0,
+                "file": "restarts/hauer_real_B3_r0.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "HDREGNCESPLAYMAKAANDDAMIPITLOCACNIESWERAARNTYCALANBOYMISSILORONBORMBUTORANBYOTEDTONEMIE",
+            "score": -419.88081835900607,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 3,
+                "file": "restarts/hauer_real_B0_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "BLEDWASDGIOTOUTITTALLTUNINCORSTSANDGYDETTEACOSTOTAPROUNGGNORERAPREUPMCRETAPORCDLCRADUND",
+            "score": -420.2004426111611,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 4,
+                "file": "restarts/hauer_real_B3_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "PTMAYNWASFROBLOGOONTTOLIFICREWOWNIASHAMOOMNCBWORONDEBLISSIREMENDEMLDUCEMONDBECATCENALIA",
+            "score": -422.2026251860995,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 1,
+                "file": "restarts/hauer_real_B0_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "WNTOHILOFBASADSUSSINNSDEBECARLSLIEOFPOTSSTICALSASIMRADEFFEARTRIMRTDMYCRTSIMARCONCRIODEO",
+            "score": -424.32444055945535,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 3,
+                "file": "restarts/hauer_real_B1_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "XPENDTUNCLASAMSLSSTPPSMILIOARUSUTINCHNESSETOAUSASTYRAMICCIARERTYREMYFORESTYARONPORTNMIN",
+            "score": -425.22759883366973,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 1,
+                "file": "restarts/hauer_real_B3_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "FTENPAUNGCORODRMRRATTRDICISOLURUAINGHNERREASOURORABLODIGGIOLELABLEDBYSLERABOLSNTSLANDIN",
+            "score": -427.2164655474168,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 0,
+                "file": "restarts/hauer_real_B1_r0.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "PFEIMADINBUSOLSKSSAFFSLYBYTURDSDAYINGIESSEATODSUSACROLYNNYURERACRELCHTRESACORTIFTRAILYI",
+            "score": -427.59602370772035,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 2,
+                "file": "restarts/hauer_real_B0_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "XPERGANRDTOSOLSTSSAPPSLITICOHNSNAIRDFRESSEACONSOSAMHOLIDDIOHEHAMHELMUCHESAMOHCRPCHARLIR",
+            "score": -429.5870926549297,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 3,
+                "file": "restarts/hauer_real_B3_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "GFROMAPONCESELSUSSAFFSLICITEDPSPAIONWORSSRATEPSESAYDELINNIEDRDAYDRLYHTDRSAYEDTOFTDAOLIO",
+            "score": -429.9356585462185,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 4,
+                "file": "restarts/hauer_real_B1_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "HTNUKSFULYREDMEYEESTTEMAYAPROFEFSAULJUNEENSPDFERESIODMALLARONOSIONMICPONESIDOPUTPOSUMAU",
+            "score": -432.3572130081787,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 3,
+                "file": "restarts/hauer_real_B2_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "PMGUYSDURLTETHEBEESMMEHOLOATNDEDSOURFUGEEGSATDETESINTHORROTNGNSINGHICANGESITNAUMANSUHOU",
+            "score": -432.5405089360091,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 1,
+                "file": "restarts/hauer_real_B1_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "BCTANDMALFIEPREFEEDCCEROFOHISMEMDOALWATEETDHPMEIEDUSPROLLOISTSDUSTRUGHSTEDUPSHACHSDAROA",
+            "score": -433.34172891360527,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 4,
+                "file": "restarts/hauer_real_B2_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "JOANYSUNGCELEDLCLLSOOLDICITERULUSINGHNALLASTEULELSPREDIGGIERARSPRADPMTRALSPERTNOTRSNDIN",
+            "score": -433.73107567190016,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 2,
+                "file": "restarts/hauer_real_B3_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "MPAUCHSUNBOTILTBTTHPPTLYBYFORSTSHYUNGUATTAHFISTOTHERILYNNYORARHERALEDFRATHEIRFUPFRHULYU",
+            "score": -442.979385828644,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 1,
+                "file": "restarts/hauer_real_B2_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "KGNICARILYPSOFSUSSAGGSFTYTHPERSRATILDINSSNAHORSPSAMEOFTLLTPENEAMENFMWHENSAMOEHIGHEAIFTI",
+            "score": -443.35525331029976,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 4,
+                "file": "restarts/hauer_real_B0_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "YPOCKIDCHFULEALFLLIPPLASFSTURDLDISCHMCOLLOITEDLULINREASHHSURORINROANGTROLINERTCPTRICASC",
+            "score": -446.2552986183319,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 0,
+                "file": "restarts/hauer_real_B2_r0.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "GMEINCTILWASUPSYSSCMMSPHWHBARTSTCHILDIESSECBUTSASCORUPHLLHARERCOREPOFBRESCOURBIMBRCIPHI",
+            "score": -449.93446462989857,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 0,
+                "file": "restarts/hauer_real_B0_r0.json"
+              }
+            ]
+          }
+        ],
+        "top_tied_strings": [
+          "XTNIGSLICPRERDEFEESTTEDOPOWRALELSOICHINEENSWRLERESBARDOCCORANASBANDBYWANESBRAWITWASIDOI"
+        ],
+        "best_score": -414.3553330194197
+      },
+      "hart_real": {
+        "case_id": "hart_real",
+        "distinct_count": 20,
+        "ranked": [
+          {
+            "plaintext87": "MPRIVANICKSESDEFEEAPPEDUKUTSONENANICHIREERATSNESEALOSDUCCUSOROALORDLYTOREALSODIPTOAIDUI",
+            "score": -408.065418512191,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 4,
+                "file": "restarts/hart_real_B1_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "YDERLAIRMPTSTOSUSSADDSOFPFCTHISIAIRMBRESSEACTISTSANHTOFMMFTHEHANHEONGCHESANTHORDCHAROFR",
+            "score": -410.45857496908485,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 2,
+                "file": "restarts/hart_real_B1_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "XPLAYSMANDHEUREBEESPPERIDITHOMEMSMANGALEELSTUMEHESCOURINNIHOLOSCOLRCKTOLESCUORAPTOSARIA",
+            "score": -411.86192519327716,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 2,
+                "file": "restarts/hart_real_B0_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "YSRTUNDTOPLELIEVEENSSEIMPMBLADEDNDTOFTREERNBLDELENCALIMOOMLARANCARICHBARENCLAITSBANTIMT",
+            "score": -416.0057985541597,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 1,
+                "file": "restarts/hart_real_B1_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "YFROWNDOLMTITSIMIINFFISAMACTEDIDNDOLBORIIRNCTDITINGETSALLATERENGERSGUCERINGTESOFCENOSAO",
+            "score": -419.49408807975004,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 1,
+                "file": "restarts/hart_real_B3_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "BYPAGRMANDHEUSEDEERYYESIDILHOMEMRMANCAPEEPRLUMEHERTOUSINNIHOPORTOPSTFLOPERTUOSAYLORASIA",
+            "score": -419.7500994494202,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 4,
+                "file": "restarts/hart_real_B2_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "KWSOFCHOLPRENDEPEECWWEDAPAIRTHEHCHOLMOSEESCINHERECUTNDALLARTSTCUTSDUBITSECUNTDOWITCODAO",
+            "score": -421.88529926647925,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 1,
+                "file": "restarts/hart_real_B2_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "KGCOUNFORPLASTAMAANGGATEPEYLIFAFNFORHOCAACNYSFALANDISTERRELICINDICTDBYICANDSITOGYINOTEO",
+            "score": -422.3435299276105,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 4,
+                "file": "restarts/hart_real_B0_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "HTRICUPILYDODMOYOOUTTOMAYANDEPOPUPILGIROORUNDPODOUSEDMALLADEREUSERMSKNEROUSDEMITNEUIMAI",
+            "score": -426.3313975817426,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 2,
+                "file": "restarts/hart_real_B3_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "UTNEYCLERFWASDAMAACTTADOFOHWILALCLERGENAANCHSLAWACKISDORROWINICKINDKPHINACKSIDETHICEDOE",
+            "score": -427.67792863029877,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 1,
+                "file": "restarts/hart_real_B0_r1.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "GDILHEALFPSMSOMYMMEDDMORPRUSTAMAEALFCLIMMIEUSAMSMENTSORFFRSTITENTIONBUTIMENSTOLDUTELORL",
+            "score": -430.8171738574649,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 3,
+                "file": "restarts/hart_real_B1_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "UPDAMSHALBNENREBEESPPERYBYONTHEHSHALFADEEDSONHENESITNRYLLYNTDTSITDRIGOTDESINTRAPOTSARYA",
+            "score": -431.03599340346034,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 0,
+                "file": "restarts/hart_real_B3_r0.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "FPHYWASYMDNEUREDEEAPPERIDIONTSESASYMBYHEEHAOUSENEACTURIMMINTHTACTHRCLOTHEACUTRYPOTAYRIY",
+            "score": -431.91586939540275,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 3,
+                "file": "restarts/hart_real_B2_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "GCERWAIRYBUTDOTHTTACCTOMBMLUSITIAIRYPRETTEALDITUTANSDOMYYMUSESANSEONFLSETANDSORCLSAROMR",
+            "score": -432.9174208694013,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 3,
+                "file": "restarts/hart_real_B0_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "GFORHEIRLYASAUSYSSEFFSUPYPMATISIEIRLCROSSOEMAISASENTAUPLLPATOTENTOUNDMTOSENATURFMTERUPR",
+            "score": -433.962199514726,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 4,
+                "file": "restarts/hart_real_B3_r4.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "FCDAVITALHOSOMSUSSICCSMEHEPORTSTITALBADSSDIPOTSOSINROMELLEORDRINRDMNGPRDSINORMACPRIAMEA",
+            "score": -435.29348437081404,
+            "origins": [
+              {
+                "branch": "B1",
+                "r": 0,
+                "file": "restarts/hart_real_B1_r0.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "YGIFHEDFCPURSORPRREGGROLPLAUTDRDEDFCKFIRRIEASDRURENTSOLCCLUTITENTIONMATIRENSTOFGATEFOLF",
+            "score": -439.2641473997636,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 0,
+                "file": "restarts/hart_real_B2_r0.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "KYSRDCHRIBLELOEBEECYYEONBNALTHEHCHRIMRSEESCALHELECUTLONIINLTSTCUTSOUPATSECULTORYATCRONR",
+            "score": -441.9204640786409,
+            "origins": [
+              {
+                "branch": "B3",
+                "r": 3,
+                "file": "restarts/hart_real_B3_r3.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "CHMNGSINDFBELOEFEESHHEORFRABYIEISINDUNMEEMSALIEBESTYLORDDRBYMYSTYMOTWAYMESTLYONHAYSNORN",
+            "score": -447.97698627729153,
+            "origins": [
+              {
+                "branch": "B2",
+                "r": 2,
+                "file": "restarts/hart_real_B2_r2.json"
+              }
+            ]
+          },
+          {
+            "plaintext87": "YFRSLOWSPUTEDIEBEEOFFEIMUMATHWEWOWSPCSREEROADWETEONHDIMPPMTHRHONHRINGAHREONDHISFAHOSIMS",
+            "score": -449.79733642369274,
+            "origins": [
+              {
+                "branch": "B0",
+                "r": 0,
+                "file": "restarts/hart_real_B0_r0.json"
+              }
+            ]
+          }
+        ],
+        "top_tied_strings": [
+          "MPRIVANICKSESDEFEEAPPEDUKUTSONENANICHIREERATSNESEALOSDUCCUSOROALORDLYTOREALSODIPTOAIDUI"
+        ],
+        "best_score": -408.065418512191
+      }
+    }
+  }
+}

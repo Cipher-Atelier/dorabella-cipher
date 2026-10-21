@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/broker.py", line 80, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/broker.py", line 53, in main
+    if words>=200000:raise RuntimeError('INCOMPLETE_BUDGET_MEMBERSHIP')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: INCOMPLETE_BUDGET_MEMBERSHIP

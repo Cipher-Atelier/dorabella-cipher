@@ -1,0 +1,128 @@
+{
+  "id": "R6-section7-review-v1",
+  "alphabet": "abcdefghiklmnopqrstuvwxyz",
+  "positions": 87,
+  "glyph_types": 24,
+  "coordinates": 174,
+  "class": {
+    "sign_order": [
+      1,
+      -1
+    ],
+    "rotations": [
+      0,
+      7
+    ],
+    "arcs_order": "itertools.permutations(range(3)), lexicographic",
+    "layouts": [
+      0,
+      1
+    ],
+    "missing": [
+      0,
+      24
+    ],
+    "route_periods": [
+      1,
+      87
+    ],
+    "reset": [
+      0,
+      1
+    ],
+    "inverse": [
+      0,
+      1
+    ],
+    "reverse": [
+      0,
+      1
+    ],
+    "row_bounds": [
+      0,
+      29,
+      60,
+      87
+    ],
+    "dedup": "byte sequence, first definition retained",
+    "unique_tables": 4800,
+    "table_definitions": 4800,
+    "unique_routes": 462,
+    "route_definitions": 696
+  },
+  "controls": {
+    "fresh_count": 16,
+    "regression_count": 2,
+    "fresh_order": "fresh_00 through fresh_15",
+    "fresh_routes": "product((5,17),(0,1),(0,1),(0,1)); reverse changes fastest",
+    "regression_routes": {
+      "reg_march": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "reg_caractacus": [
+        17,
+        1,
+        1,
+        1
+      ]
+    },
+    "root_label": 202610160607,
+    "key_rule": "SHA256 UTF-8 root|ID|FIELD|VALUE, no LF; minimum digest, original order tie",
+    "missing_rule": "all25 ordered hashes; first absent from z for only assigned q; no text/route replacement",
+    "normalization": "use pinned87 bytes unchanged; no J/I or U/V merge"
+  },
+  "gates": {
+    "G0": {
+      "table_roundtrips": 4800,
+      "route_roundtrips": 462,
+      "invalid_missing": 25,
+      "invalid_inputs": [
+        "a*86",
+        "a*88",
+        "j+a*86"
+      ],
+      "score_calls": 0
+    },
+    "G1": {
+      "threshold": 14,
+      "denominator": 16,
+      "strata": "all eight (reset,inverse,reverse), at least one fresh representative per stratum",
+      "inverse": "exact87/87 D(E(P))=P, E(D(g))=g and archived D equality",
+      "score_calls": 0
+    },
+    "G2": {
+      "not_implemented_or_enabled": true,
+      "winner": "literal original100–109, original argpartition32 exact-score tie behavior",
+      "ambiguity_band": 1e-08,
+      "independent_score_tolerance_strict_less_than": 1e-09
+    },
+    "G3": {
+      "not_implemented_or_enabled": true,
+      "B": 9,
+      "tail_epsilon": 1e-10,
+      "seed_rule": "PCG64(SeedSequence([202610160607,1,i,b]))",
+      "model": "independent within-row29/31/27 permutation of own positive glyphs; no Hauer/Hart pairing"
+    }
+  },
+  "budgets": {
+    "global_wall_seconds": 32400,
+    "G0_seconds": 600,
+    "positives_deadline_from_T0_seconds": 5400,
+    "case_seconds_including_verification": 180,
+    "TERM_before_deadline_seconds": 5,
+    "memory_bytes_working_tree": 2147483648,
+    "workers": 1,
+    "threads": 1,
+    "full_scores_per_unique_input": 2217600,
+    "max_scored_inputs": 162,
+    "max_main_pair_scores": 359251200,
+    "reset_T0": false,
+    "repeat_complete": false,
+    "repeat_partial_scan": false,
+    "unknown_work_charge": "full case work budget; elapsed interval until direct terminal proof"
+  },
+  "scientific_status": "Unchanged review-v1. No outcomes computed. G0/G1 procedures are dormant pending technical backend and readback."
+}

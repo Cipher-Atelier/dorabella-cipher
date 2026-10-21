@@ -1,0 +1,752 @@
+{
+  "date": "2026-09-26",
+  "status": "No verified decipherment. Candidate strings are optimization outputs, not proposed plaintexts.",
+  "selection_warning": "Families were explored adaptively. Within-family paired shuffle tests do not correct the entire research history. No pooled p-values or cross-family score comparisons.",
+  "sensitivity_warning": "All plaintext fixtures reused from prior rounds; newly encrypted examples are not new independent historical texts.",
+  "families": {
+    "whole24": {
+      "completed_records": 52,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -7.139142289783294,
+          "text": "byzwosyoderfoxebixolbwlgodiiiupofueahesnowgsbthbigregwrnweresmquowliflymgrprrqaqwitkfue",
+          "static_score": -8.156351320791178,
+          "gain": 1.0172090310078836,
+          "n_rule_evaluations": 5548032
+        },
+        "hart_real": {
+          "best_score": -7.044066692453844,
+          "text": "yqsrbyfncaiwianusmekearlitoubtcspxetnodsdflxhwarnuiniiletirnerheraiurhodsgohougzaemplis",
+          "static_score": -7.962818484873925,
+          "gain": 0.918751792420081,
+          "n_rule_evaluations": 5548032
+        }
+      },
+      "null_calibrated": true,
+      "sensitivity": {
+        "n": 12,
+        "mean_accuracy": 0.9990421455938697,
+        "min_accuracy": 0.9885057471264368,
+        "exact": 11,
+        "at_least_90pct": 12,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_01",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_02",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_03",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_04",
+            "accuracy": 0.9885057471264368
+          },
+          {
+            "id": "positive_05",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_06",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_07",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_08",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_09",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_10",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_11",
+            "accuracy": 1.0
+          }
+        ],
+        "not_independent_holdout": true
+      },
+      "nulls": {
+        "hauer": {
+          "n": 19,
+          "exceedances": 8,
+          "plus_one_tail": 0.45,
+          "mean_maximum": -7.127808383018491,
+          "gain_exceedances": 0,
+          "mean_gain": 0.6545822600262747
+        },
+        "hart": {
+          "n": 19,
+          "exceedances": 2,
+          "plus_one_tail": 0.15,
+          "mean_maximum": -7.177664672687694,
+          "gain_exceedances": 2,
+          "mean_gain": 0.6435810998656698
+        }
+      },
+      "paired_choice_between_transcriptions": {
+        "n": 19,
+        "exceedances": 6,
+        "plus_one_tail": 0.35
+      }
+    },
+    "routes": {
+      "completed_records": 52,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.199298930609018,
+          "text": "gpdownholymetrebeenpperthemenuitrallamidinuidasoaronispositunedisjuryndeedofloanhehimsa",
+          "identity_score": -4.4721404160180125,
+          "gain": 0.27284148540899444,
+          "n_routes": 1665,
+          "distinct_patterns": 1665
+        },
+        "hart_real": {
+          "best_score": -4.3259498512022665,
+          "text": "enherflipswidbypartofonebbseechtsdeedimlipspearollonhauserepusedatjundausadionisatbinah",
+          "identity_score": -4.699058498820079,
+          "gain": 0.3731086476178129,
+          "n_routes": 1665,
+          "distinct_patterns": 1665
+        }
+      },
+      "null_calibrated": true,
+      "sensitivity": {
+        "n": 12,
+        "mean_accuracy": 0.9204980842911877,
+        "min_accuracy": 0.08045977011494253,
+        "exact": 9,
+        "at_least_90pct": 11,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 0.08045977011494253
+          },
+          {
+            "id": "positive_01",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_02",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_03",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_04",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_05",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_06",
+            "accuracy": 0.9770114942528736
+          },
+          {
+            "id": "positive_07",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_08",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_09",
+            "accuracy": 0.9885057471264368
+          },
+          {
+            "id": "positive_10",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_11",
+            "accuracy": 1.0
+          }
+        ],
+        "not_independent_holdout": true
+      },
+      "nulls": {
+        "hauer": {
+          "n": 19,
+          "exceedances": 0,
+          "plus_one_tail": 0.05,
+          "mean_maximum": -4.525789261634004,
+          "gain_exceedances": 17,
+          "mean_gain": 0.4361361469458558
+        },
+        "hart": {
+          "n": 19,
+          "exceedances": 0,
+          "plus_one_tail": 0.05,
+          "mean_maximum": -4.560282838261442,
+          "gain_exceedances": 8,
+          "mean_gain": 0.3676282130099094
+        }
+      },
+      "paired_choice_between_transcriptions": {
+        "n": 19,
+        "exceedances": 0,
+        "plus_one_tail": 0.05
+      },
+      "known_screen_failure": {
+        "accuracy": 0.08045977011494253,
+        "true_pattern_finalist": false,
+        "true_pattern_ranks": [
+          47,
+          47,
+          47
+        ]
+      }
+    },
+    "localrules": {
+      "completed_records": 10,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.4721404160180125,
+          "text": "gfroztcondwaspalaatffapidimwecactionboraartmscawathespinniweretherphumerathsemofmetopio",
+          "identity_score": -4.4721404160180125,
+          "gain": 0.0,
+          "n_definitions": 7425,
+          "distinct_patterns": 6635
+        },
+        "hart_real": {
+          "best_score": -4.592602603835216,
+          "text": "xvsewidbypartheprsovercopyswamedidbynesssromgrearolichollowasilliscandussoltutbeduletob",
+          "identity_score": -4.599955843942971,
+          "gain": 0.007353240107755177,
+          "n_definitions": 7425,
+          "distinct_patterns": 6633
+        }
+      },
+      "null_calibrated": false,
+      "sensitivity": {
+        "n": 8,
+        "mean_accuracy": 0.9971264367816092,
+        "min_accuracy": 0.9885057471264368,
+        "exact": 6,
+        "at_least_90pct": 8,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_01",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_02",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_03",
+            "accuracy": 0.9885057471264368
+          },
+          {
+            "id": "positive_04",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_05",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_06",
+            "accuracy": 0.9885057471264368
+          },
+          {
+            "id": "positive_07",
+            "accuracy": 1.0
+          }
+        ],
+        "not_independent_holdout": true
+      }
+    },
+    "relax": {
+      "completed_records": 2,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.210124304491234,
+          "text": "yrobtondwaspalaatapidimweationforaartmsawathespinniweretherphumerathsemometopio",
+          "identity_score": -4.667249029447121,
+          "gain": 0.45712472495588674,
+          "n_definitions": 401,
+          "distinct_patterns": 401
+        },
+        "hart_real": {
+          "best_score": -4.164024795716632,
+          "text": "gndaywasprethebeennehopourwewwasladeedutwereithossordidhimudeithanuahoa",
+          "identity_score": -4.699058498820079,
+          "gain": 0.5350337031034478,
+          "n_definitions": 401,
+          "distinct_patterns": 401
+        }
+      },
+      "null_calibrated": false,
+      "unused_manifest_nulls": 38
+    },
+    "homophonic": {
+      "completed_records": 48,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -3.6328622095440446,
+          "text": "errenamesaheiseseearrestatthememateswereeratimeheadeistssthereadersdetereadieterteaeste",
+          "n_plain_letters": 11,
+          "n_glyphs": 20
+        },
+        "hart_real": {
+          "best_score": -3.6063643510099217,
+          "text": "straitwassheenemeetttentsthhewewtwascareerthewehetheentsstherethernheheretheenathetanta",
+          "n_plain_letters": 11,
+          "n_glyphs": 20
+        }
+      },
+      "null_calibrated": true,
+      "sensitivity": {
+        "n": 8,
+        "mean_accuracy": 0.8362068965517242,
+        "min_accuracy": 0.4942528735632184,
+        "exact": 1,
+        "at_least_90pct": 5,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 0.4942528735632184
+          },
+          {
+            "id": "positive_01",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_02",
+            "accuracy": 0.9310344827586207
+          },
+          {
+            "id": "positive_03",
+            "accuracy": 0.9195402298850575
+          },
+          {
+            "id": "positive_04",
+            "accuracy": 0.896551724137931
+          },
+          {
+            "id": "positive_05",
+            "accuracy": 0.5057471264367817
+          },
+          {
+            "id": "positive_06",
+            "accuracy": 0.9655172413793104
+          },
+          {
+            "id": "positive_07",
+            "accuracy": 0.9770114942528736
+          }
+        ],
+        "not_independent_holdout": true
+      },
+      "nulls": {
+        "hauer": {
+          "n": 19,
+          "exceedances": 2,
+          "plus_one_tail": 0.15,
+          "mean_maximum": -3.7705004497969905
+        },
+        "hart": {
+          "n": 19,
+          "exceedances": 3,
+          "plus_one_tail": 0.2,
+          "mean_maximum": -3.7441505821126233
+        }
+      },
+      "paired_choice_between_transcriptions": {
+        "n": 19,
+        "exceedances": 4,
+        "plus_one_tail": 0.25
+      }
+    },
+    "homophonic_emission": {
+      "completed_records": 48,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.267904372658979,
+          "text": "fleddiedoutstasissillsanunatheseindordesseiatestsightanoonthehigheagoahesigthadlahidand",
+          "n_plain_letters": 14,
+          "n_glyphs": 20,
+          "emission_penalty": -0.3202577952931178
+        },
+        "hart_real": {
+          "best_score": -4.239038123667028,
+          "text": "utdaysmaltheonebeesttenatahhimemsmalladeedshomehestionallahidistidntohidestoinathisanaa",
+          "n_plain_letters": 14,
+          "n_glyphs": 20,
+          "emission_penalty": -0.3361922132370254
+        }
+      },
+      "null_calibrated": true,
+      "sensitivity": {
+        "n": 8,
+        "mean_accuracy": 0.9612068965517242,
+        "min_accuracy": 0.8390804597701149,
+        "exact": 3,
+        "at_least_90pct": 7,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 0.8390804597701149
+          },
+          {
+            "id": "positive_01",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_02",
+            "accuracy": 0.9885057471264368
+          },
+          {
+            "id": "positive_03",
+            "accuracy": 0.9655172413793104
+          },
+          {
+            "id": "positive_04",
+            "accuracy": 0.9080459770114943
+          },
+          {
+            "id": "positive_05",
+            "accuracy": 0.9885057471264368
+          },
+          {
+            "id": "positive_06",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_07",
+            "accuracy": 1.0
+          }
+        ],
+        "not_independent_holdout": true
+      },
+      "nulls": {
+        "hauer": {
+          "n": 19,
+          "exceedances": 3,
+          "plus_one_tail": 0.2,
+          "mean_maximum": -4.389920177997956
+        },
+        "hart": {
+          "n": 19,
+          "exceedances": 3,
+          "plus_one_tail": 0.2,
+          "mean_maximum": -4.365844215524779
+        }
+      },
+      "paired_choice_between_transcriptions": {
+        "n": 19,
+        "exceedances": 3,
+        "plus_one_tail": 0.2
+      }
+    },
+    "periodic": {
+      "completed_records": 8,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -7.001830800064171,
+          "text": "upzdoeahukurssmwakwberuboehiwpbplidissmerodoormanzkpupisrouefpotewthowmfridawybdksydndg",
+          "n_evaluations": 11183232
+        },
+        "hart_real": {
+          "best_score": -6.915930162668952,
+          "text": "peroxuashyidnhegiawmrginitatefbayyrunhepaedzbgamhocadeidediqaegenmtsblarmywleoboxhmphsz",
+          "n_evaluations": 11183232
+        }
+      },
+      "null_calibrated": false,
+      "sensitivity": {
+        "n": 6,
+        "mean_accuracy": 1.0,
+        "min_accuracy": 1.0,
+        "exact": 6,
+        "at_least_90pct": 6,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_01",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_02",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_03",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_04",
+            "accuracy": 1.0
+          },
+          {
+            "id": "positive_05",
+            "accuracy": 1.0
+          }
+        ],
+        "not_independent_holdout": true
+      }
+    },
+    "fraction": {
+      "completed_records": 4,
+      "missing_records": [],
+      "real": {
+        "square_hauer_real": {
+          "best_score": -7.294071283305846,
+          "text": "voqamqyncsupmostwlonrofyisherrenhliralqfvrlksascbzhdaqiricernoreflubmscbustratceecwaddg",
+          "n_evaluations": 2217600
+        },
+        "square_hart_real": {
+          "best_score": -7.397062845691823,
+          "text": "ixxlilbypkfldflqlateydbnhignveedabyprsnaccraraxeaatbndkouklnnoacscorashcaatchdoiwanrnsg",
+          "n_evaluations": 2217600
+        },
+        "cube_hauer_real": {
+          "best_score": -7.74690419612457,
+          "text": "wdzuctrgcqieauthgmtyzgioggeztonncoinauttiomsjaingbpqkidihrywmeimlwyyacymeungtoqlifaiggl",
+          "n_evaluations": 133632
+        },
+        "cube_hart_real": {
+          "best_score": -7.637206709182895,
+          "text": "wdzuctrgcqinauthgmtyzgioggeztonncoinauttiomsjaingbpqlidihrywmeimlwyyacymeungtoqlifaiggl",
+          "n_evaluations": 133632
+        }
+      },
+      "null_calibrated": false
+    },
+    "header": {
+      "completed_records": 2,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.3460660721891085,
+          "text": "usalaatffasimidwecactionboraartducawatheusinniwerethershyderathuedofdetosio",
+          "homophone_score": -4.0857068984174125,
+          "homophone_text": "rneyeesttenabadwehehsailfireersdrhewesternallaweresterntoderestreditdesinai"
+        },
+        "hart_real": {
+          "best_score": -4.457878493566533,
+          "text": "steveeabbetowolfidedadupguneenalsdefearistoppofiniarintrylinearsitubliautou",
+          "homophone_score": -4.214372213190112,
+          "homophone_text": "shtuttheethereestatahardprottohesatsthatsheddestothatohavetothasthreethrher"
+        }
+      },
+      "null_calibrated": false
+    },
+    "merged_masc": {
+      "completed_records": 2,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.434395350510018,
+          "text": "mlrobtcondwaspayaatllapidiuwecactionforaartuscawathespinniweretherphguerathseuoluetopio"
+        },
+        "hart_real": {
+          "best_score": -4.590089875135998,
+          "text": "wbdaysmancreptefeesbbetocourimemsmanladeedsupmereshiptonnoridishidthguideshpitabuisatoa"
+        }
+      },
+      "null_calibrated": false
+    },
+    "keyword_tables": {
+      "completed_records": 2,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -6.28920790472603,
+          "text": "kynihsditgmarlaqaasyyalegepmodadseitwinaansprdamascorlettemonosconlcbponascropiyposilei",
+          "definitions_char_scored": 20067456,
+          "definitions_fully_scored": 10152153
+        },
+        "hart_real": {
+          "best_score": -6.507040776588749,
+          "text": "fbmonlroychauiakaalbbaipcpdherarlroygomaamldurahalteuipyyphemeltemitsdemaltueiobdeloipo",
+          "definitions_char_scored": 20067456,
+          "definitions_fully_scored": 12734345
+        }
+      },
+      "null_calibrated": false
+    },
+    "routes_wordall": {
+      "completed_records": 3,
+      "missing_records": [],
+      "real": {
+        "hauer_real": {
+          "best_score": -4.199298930609018,
+          "text": "gpdownholymetrebeenpperthemenuitrallamidinuidasoaronispositunedisjuryndeedofloanhehimsa",
+          "first_count": 1665
+        },
+        "hart_real": {
+          "best_score": -4.271301410369731,
+          "text": "oaronisporitgnediscgrdsthemengitrallamidingindeedoflohnhehimsayareupdownholymetrebeenpp",
+          "first_count": 1665
+        }
+      },
+      "null_calibrated": false,
+      "sensitivity": {
+        "n": 1,
+        "mean_accuracy": 1.0,
+        "min_accuracy": 1.0,
+        "exact": 1,
+        "at_least_90pct": 1,
+        "cases": [
+          {
+            "id": "positive_00",
+            "accuracy": 1.0
+          }
+        ],
+        "not_independent_holdout": true
+      },
+      "targeted_regression": {
+        "accuracy": 1.0,
+        "true_route_first_rank": 2,
+        "best_text": "hereiamoncemoreinthissceneofdissipationandviceandibeginalreadytofindmymoralscorruptedwe"
+      },
+      "old_null_calibration_does_not_apply": true
+    }
+  },
+  "total_completed_records": 233,
+  "checks": {
+    "complete": true,
+    "record_counts": {
+      "whole24": 52,
+      "routes": 52,
+      "localrules": 10,
+      "relax": 2,
+      "homophonic": 48,
+      "homophonic_emission": 48,
+      "periodic": 8,
+      "fraction": 4,
+      "header": 2,
+      "merged_masc": 2,
+      "keyword_tables": 2,
+      "routes_wordall": 3
+    },
+    "candidates_checked": 7854,
+    "max_score_error": 1.7763568394002505e-15,
+    "frozen_protocols_checked": [
+      "results/v6/homophonic_emission/frozen.json",
+      "results/v6/merged_masc/frozen.json",
+      "results/v6/relax/frozen.json",
+      "results/v6/routes_wordall/frozen.json",
+      "results/v6/routes/frozen.json",
+      "results/v6/periodic/frozen.json",
+      "results/v6/keyword_tables/frozen.json",
+      "results/v6/homophonic/frozen.json",
+      "results/v6/localrules/frozen.json",
+      "results/v6/whole24/frozen.json",
+      "results/v6/header/frozen.json",
+      "results/v6/fraction/frozen.json"
+    ],
+    "old_archive_entries_unchanged": 907,
+    "whole_python_reference_cases": 1000,
+    "whole_exhaustive_roundtrip_rules": 2774016,
+    "keyword_safe_bound_vs_bruteforce_cases": 420,
+    "wordall_stage_counts": {
+      "hauer_real": {
+        "first": 1665,
+        "middle": 33,
+        "final": 17
+      },
+      "hart_real": {
+        "first": 1665,
+        "middle": 33,
+        "final": 17
+      },
+      "positive_00": {
+        "first": 1665,
+        "middle": 33,
+        "final": 17
+      }
+    },
+    "routes_bijections": 1665,
+    "local_rules_roundtrips": 7425,
+    "missing_declared_cases": {
+      "whole24": [],
+      "routes": [],
+      "localrules": [],
+      "relax": [
+        "hauer_null_00",
+        "hart_null_00",
+        "hauer_null_01",
+        "hart_null_01",
+        "hauer_null_02",
+        "hart_null_02",
+        "hauer_null_03",
+        "hart_null_03",
+        "hauer_null_04",
+        "hart_null_04",
+        "hauer_null_05",
+        "hart_null_05",
+        "hauer_null_06",
+        "hart_null_06",
+        "hauer_null_07",
+        "hart_null_07",
+        "hauer_null_08",
+        "hart_null_08",
+        "hauer_null_09",
+        "hart_null_09",
+        "hauer_null_10",
+        "hart_null_10",
+        "hauer_null_11",
+        "hart_null_11",
+        "hauer_null_12",
+        "hart_null_12",
+        "hauer_null_13",
+        "hart_null_13",
+        "hauer_null_14",
+        "hart_null_14",
+        "hauer_null_15",
+        "hart_null_15",
+        "hauer_null_16",
+        "hart_null_16",
+        "hauer_null_17",
+        "hart_null_17",
+        "hauer_null_18",
+        "hart_null_18"
+      ],
+      "homophonic": [],
+      "homophonic_emission": [],
+      "periodic": []
+    },
+    "notes": [
+      "A round trip is necessary for consistency, not sufficient for historical correctness.",
+      "Null/homophone models were checked for global consistency, not unique inversion without homophone choices."
+    ],
+    "seconds": 9.160923633000039
+  }
+}

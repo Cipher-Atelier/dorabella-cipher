@@ -1,0 +1,486 @@
+{
+  "shape_each": [
+    241920,
+    4
+  ],
+  "dtype": "float64",
+  "columns": [
+    "full_character",
+    "full_word",
+    "prefix43_character",
+    "prefix43_word"
+  ],
+  "archive_selection": "two real matrices only; all others reconstructed by reproduce.py",
+  "records": [
+    {
+      "id": "bailey_01",
+      "array_content_sha256": "98d50d10e85b32075217001c27f8aa83d829da5201f83d3074f263b97251f1f0",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_02",
+      "array_content_sha256": "e0bf5f5d4e998663fe6254cbd5843844545c7e8b7669a054adf3dc3db10be750",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_03",
+      "array_content_sha256": "03cc11759b63724ea099bb3651bbe7cc1c478753722c3fce9e239092e86e8625",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_04",
+      "array_content_sha256": "506a7ab167e0c38694cd33a667fd73dd1f0a7971c1c0b569e385e432da327ca1",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_05",
+      "array_content_sha256": "52471eb62974d339a371e6bed087ac10ca92fb542a971ea7f5fba57192351811",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_06",
+      "array_content_sha256": "a2af1493f0905c1f1c5c4bd3c3185bdb294296caca3f6a962147668ff001536b",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_07",
+      "array_content_sha256": "3225c3033c3fa43795b3c41bed6b7074de3004cae1a5dc0847a8fd92477430ed",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_08",
+      "array_content_sha256": "e93c7bf1bdd3f8cdaf29f4d63b9c21411c72a79d59d3b65ae79473acd970d4ae",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "bailey_09",
+      "array_content_sha256": "8b19c0b25fd3f0e1c9769233142309e744a0bd4d907f06c248ff5a20de3b4233",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "brewer_01",
+      "array_content_sha256": "0960d32db5c54e6f3889afdd05e7b177f4637737da14af523c0490a0c086ec90",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "brewer_02",
+      "array_content_sha256": "c9869c47994eb8edb8730533fd683b524214f0238cbf79b96c6dcdc464d830f6",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "brewer_03",
+      "array_content_sha256": "724b2426955875ec4ce767abdfe6acd2dbf8b407eeadcca2ee9ebcc851e9ff92",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "elgar_caractacus_postcard",
+      "array_content_sha256": "3da8ec98f3f5265b0e0bd64aff54e16b67ab775153b4902b31afc647b9c07e89",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "elgar_march_1897",
+      "array_content_sha256": "c4eccadeab3e278c3f869dc25d25fe05eaa6b79d4ca1e24b2d2fd3c7da9cefcd",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real",
+      "array_content_sha256": "9ac98a96630a91a175d472ca4dc6be975cc796821b4a4af8229fc2eb13c06e10",
+      "included_in_compact_archive": true
+    },
+    {
+      "id": "hart_real_pair_00",
+      "array_content_sha256": "a5263ec2bdabfe053d07586bd0f516783749739f41b73e96edccfc1cb6abc242",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_01",
+      "array_content_sha256": "31811b592aea82167f5ab9c9de1b70c6a35f0b3082850b258e2581e4906079ab",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_02",
+      "array_content_sha256": "b04bb19ef0f985d3f0e66137e76f3393b739151cc1f346f74a3665d6f203934e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_03",
+      "array_content_sha256": "59a34df50f07557b1f7cea2dae92be3bca394af182d260f1085a31ff5f3d58bb",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_04",
+      "array_content_sha256": "43b667a9316b202d2a5192cf731a694908c3566b23b3edefaa2084391db20735",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_05",
+      "array_content_sha256": "eea64cbcacec4a06d5d53be5c6a31299e86507c3508086366cb55f1e5ee83b4a",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_06",
+      "array_content_sha256": "ff9c1cdf46010ea87bad1dbe4149db0dcf83d20334ab8e06dcbef32b0c2dda25",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_07",
+      "array_content_sha256": "c2c34492d3823b822171c8b5e60e011d63c283ebc551ae5ba0615cba420527f4",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_08",
+      "array_content_sha256": "7822eba3f7484763abf8d7a105fa36ff5bef34d74de19cd7a56781694f3306d8",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_09",
+      "array_content_sha256": "9159487629069c83b9bfbd97f32bf3fc9a5a7f98c62ef26c7a9bccb67cf5ab73",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_10",
+      "array_content_sha256": "87cb094bc1378d5bbe5f2fa6b9a2f76a0782b60d8714819ff09d31df90b133c7",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_11",
+      "array_content_sha256": "f7080473330d632982a25bc1241ff0d3c60989862fef842325ac07277163ec5e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_12",
+      "array_content_sha256": "b6e23a11837338141841672826700b1dc846d7c7e5af8b98ddc3d048fc5dd54b",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_13",
+      "array_content_sha256": "d3575ea6835c9694c02481760de46b3a11a24e1076cfc0585612608375098e70",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_14",
+      "array_content_sha256": "2b820e3cf45d32a699757e1c85c26feeed138d02ab65985c6eb7ef851f130c0c",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_15",
+      "array_content_sha256": "2eca8c7823376ea7daf1b61e34f4c702977a965d7b8c088406d3ec45d1359e2a",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_16",
+      "array_content_sha256": "b3afbfbb8b08608218e79eb53275162b2c9251805d00d1591e94ec2ee1a0868a",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_17",
+      "array_content_sha256": "663eebf2508d27eb4899683fccea06fc7ce56e002c67dd23a1a0dad44233c84d",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_18",
+      "array_content_sha256": "038846cf0735e0fc8544849fc5b037fb5256ba1c2e3bac0c3eb0676e6738fa1b",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_19",
+      "array_content_sha256": "9c2e5936fec27edb4b77dee2675a12caf9b80b1a2d802b49d51bd155c1e17a79",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_20",
+      "array_content_sha256": "f79c123a5badcdba0dfc5fea2f42e6f4fd9a30a1ac3811671e491eb36a2e24be",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_21",
+      "array_content_sha256": "a35be7a1b9504fecba0246aba1eccb5b2b642ae16381be9e6dfdc8fac4cb009f",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_22",
+      "array_content_sha256": "b97dd60d31f4f9ea8fd8e1c8809a0d2721e0b95ddb243b00dce7d578319919c0",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_23",
+      "array_content_sha256": "0e5e2520ab73354c2b6cf5f1ba94cf7780ec469b4967f564c24d9d6a499be89b",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_24",
+      "array_content_sha256": "9bf885f111456b4675a681a3364d30f08b35476275364893b6d2de64576f7207",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_25",
+      "array_content_sha256": "69c6aa69d4694a740cad3813ed8e81244eb05c9ca45f152b89a2a16f1f0f3b3d",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_26",
+      "array_content_sha256": "79439b453fdddce0f305bca1b64b9a1a2121cf09ac224d3734addd28cf096596",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_27",
+      "array_content_sha256": "10a3b6fbc29afeb55781afbdd444e9c307eff84ebb4776590243939168d40f9b",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_28",
+      "array_content_sha256": "1119f7d489bd783cfdfe27d01575c131b1d13c18daecf8e80ee7fc843b176b14",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_29",
+      "array_content_sha256": "808fc75da642b80b1d5a8f29b9dabbc02f11827e1274613afb42de3f825df256",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_30",
+      "array_content_sha256": "aa84725d2dac4be3cf7f1b437abc1bc3fbd64020ff14604f45914aa1b71c9c5f",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_31",
+      "array_content_sha256": "bf6d6fcd2a877f040152fb2f2611c289dede8a4c5ac3f41a36638656e0c0dabb",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_32",
+      "array_content_sha256": "5e9ce3dfc7c115d96f0ed227b728d5d362c52553acedb557a46917a2463392aa",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_33",
+      "array_content_sha256": "1408eec48f0d2434b95de3f39126149906e15a1f6c78f4f0ca9a80e261d85b5a",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_34",
+      "array_content_sha256": "3247570be3376cf28a181f3098d3c2a56f391e553a652d331090592ac1f0bb00",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_35",
+      "array_content_sha256": "6f421fd7d2938e698a1df527ee414bd8481a9a250da2d29b10265ef0448c315e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_36",
+      "array_content_sha256": "61a3b14842eedfe8212628fb21c24a017266d5cd51e796917f43bb574d81f739",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_37",
+      "array_content_sha256": "4b154cb5d241c96fc15f37b63892bfc3cec2aa07969499cdeca439a00441939e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hart_real_pair_38",
+      "array_content_sha256": "cbdc86af857cbfefa16cc9056aeb39fd8aef9ba1154f8cbe09182918fcf3e789",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real",
+      "array_content_sha256": "35c876885ab47dbaa93a75339d068938dbe71d620eab5babe51d5a82ed1ee314",
+      "included_in_compact_archive": true
+    },
+    {
+      "id": "hauer_real_pair_00",
+      "array_content_sha256": "151bbc20a47adb6605b16f1a625db0992b20d7fa779349d14297a22f18c14b4c",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_01",
+      "array_content_sha256": "c961862e353e7c49617ff9f735b811a7a33e6e3c3668483471541dad99c1bc88",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_02",
+      "array_content_sha256": "8171d087c09c58fcf6af5789d2449ee6d4b63a097f50fd26d757cca139b6926f",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_03",
+      "array_content_sha256": "b80eb12f30a1c3bcaf77bdc9ea37bef4773f8e1c1ec4fa1802a4dce7858196b7",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_04",
+      "array_content_sha256": "d527ee0053a087f1532f93b4b1888056bb61733759a9913025ec53f347361004",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_05",
+      "array_content_sha256": "2cb82a0a17fe9cb17aa05c82d76f329044227d5c5af4ab1c01d849d4011ba04c",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_06",
+      "array_content_sha256": "8291044930224477afd24d3bf5f5e79be0d5bdf3b5fb0be446d969423d299ace",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_07",
+      "array_content_sha256": "b2bddb8f651e50aa07f6fddae2085f7ecc9a43b3f38a43357d332fd1178d77eb",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_08",
+      "array_content_sha256": "439624c6eba1d145c12218a944c5c37ddc910cd8a0bef80cdac37c05166e93d5",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_09",
+      "array_content_sha256": "8d527ccd6378f82068ae09c13bef8e6379e12cadaf2e24fb9a1f445499f3c727",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_10",
+      "array_content_sha256": "dc6fd4ae22d15f082deffa4098886f237d8a55605cb0193ef6f2fea56f9f6b22",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_11",
+      "array_content_sha256": "7095be93326a8c6cc83335d7238114f42eee921774a5fffe65a01bbc9b88c87e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_12",
+      "array_content_sha256": "de26808ef98239ce9dd56fba173dbeff76c02802c674203617a330e9060b12f1",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_13",
+      "array_content_sha256": "0b64a513cd93b2f63e1bfcd0220d0b66a83ad6767eb1f5f9c09de12a7a645631",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_14",
+      "array_content_sha256": "cb62b5a83676695f8e233abf160fac4c0b16f5829720e2cf0693fd531826050d",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_15",
+      "array_content_sha256": "671c56b4232e887f8e031d8d7f4094ed26c3523c7ea2d89120ea3dab4cc437ed",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_16",
+      "array_content_sha256": "0e45af4f991e0f504a43eeb3bed65a3af214c72261deb956023e002ab811d740",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_17",
+      "array_content_sha256": "91bc2a47db51283354e45bac42795c69dd1dab84087985d10b392392c1c0fca0",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_18",
+      "array_content_sha256": "cef03433f833523bd76f9b783afff170515eef333ff898691bd7d226c0c92d79",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_19",
+      "array_content_sha256": "a1d1db8f9e40b0c6c2b0827fec5c0ff4c2dadd25be8cc4858eb77228c838e4c9",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_20",
+      "array_content_sha256": "df03625c1ef151781122c9d2e9c6cdff69847ed17ff658995f3b32c0a45398f7",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_21",
+      "array_content_sha256": "0f8dbe84e844200738a051ac4b40a70b52f68c9e03bdbec0d4fcfd075abf8a48",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_22",
+      "array_content_sha256": "4fb7f8c3b151bff010f010c4c39083d7fc146873ffbf32a585d30cd5258764a7",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_23",
+      "array_content_sha256": "22e4e0b2865b7f528a44ddb204e093f291a912accc649e8c40fd3773985608b1",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_24",
+      "array_content_sha256": "b44e41dae8f57e71075b822ef3890c852bd0b9cf1d175b47aa8c18c7c9ad545e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_25",
+      "array_content_sha256": "56fa99830d5fd299b9a2f59c1de1a328539266be027e03163a658b2fbf48c1c5",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_26",
+      "array_content_sha256": "ac34a2d9e44a12f97b5cbed1bf139fc11d3dcdf202bed337072ab47b046d6b12",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_27",
+      "array_content_sha256": "ccdad6f580655405417f7766cda36ee78296a10c1bd4a5e564322a75daced85b",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_28",
+      "array_content_sha256": "89c1f2459afd8aec3872c562f569eb723a46cd4cc1b3e867f3cbd710385c6a1e",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_29",
+      "array_content_sha256": "643aa98f6d963d104de8fe0454a636f38478796a6aa5b0ca7bcce9070192a855",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_30",
+      "array_content_sha256": "8080fd60ca9dbe5bcf26e31e6a2e1ebad615e90898ba312273f06c048b5594d4",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_31",
+      "array_content_sha256": "789c39cf40f88592f04786f026c05a4023654fe17f3d5522667a6e01e391bb12",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_32",
+      "array_content_sha256": "07cb80836fc01ce01292e2c04a9ef841bd08afd6763254bd6d06d6a2dd33fb97",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_33",
+      "array_content_sha256": "ab653d8c99c3f19f77bf410449f0fe01e8ecb7c437f7a55cf92633e46a0027d6",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_34",
+      "array_content_sha256": "2d79e32faf2c59fc171a43675059500806aa8c1ccdcb962ec99122a8f8694cfd",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_35",
+      "array_content_sha256": "9cb0e5bab2a5696d0e0a20ec01ad562b4865581f92af222a7f6c2d2d8082ff75",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_36",
+      "array_content_sha256": "6d04ab05b31f491cc0653291461fca9ccf6f0fe31ca2c021177b23341ab0b032",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_37",
+      "array_content_sha256": "0e28d6d665e5b87276c63256a361723db548ee6abedfe619dd5a8bea6000b2e5",
+      "included_in_compact_archive": false
+    },
+    {
+      "id": "hauer_real_pair_38",
+      "array_content_sha256": "3c28ee82c247e5e77a5defac83640992460316eb255ae4bb42354f8126070111",
+      "included_in_compact_archive": false
+    }
+  ]
+}

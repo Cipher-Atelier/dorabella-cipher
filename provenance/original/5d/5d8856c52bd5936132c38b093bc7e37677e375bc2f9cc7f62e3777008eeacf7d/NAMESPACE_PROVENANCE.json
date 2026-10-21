@@ -1,0 +1,10 @@
+{
+  "source": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_implementation_v2/run_ts_rc_v2.py",
+  "source_sha256": "6e3151279c7661be8275bdaed26cc12fcd7ca128ce5db8c44dd02af14583179e",
+  "class_line_range": [
+    64,
+    178
+  ],
+  "copied_class_sha256": "3d1c9d3a85fd9c42e0fb8fcc47b28517220f359358b474e102648dcb05473e1c",
+  "class_body_unchanged": true
+}

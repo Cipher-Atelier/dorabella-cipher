@@ -1,0 +1,26 @@
+{
+  "protocol": {
+    "id": "round9-order-sensitive-geometry-v1",
+    "seed": 2026100109,
+    "n_monte_carlo": 99999,
+    "primary": "sum over all three printed rows of squared cumulative radius at every glyph",
+    "direction": "orientation*pi/4; distance arcs 1..3",
+    "row_initial": "origin separately for each printed row",
+    "tail": "lower, compact paths",
+    "nulls": [
+      "rowwise uniform multiset permutation",
+      "independent uniform rowwise exact directed-bigram/endpoints ensemble"
+    ],
+    "secondary": "per-row exact tails; first two rows combined labelled diagnostic, not selected discovery",
+    "transcriptions": "both reported separately, no best-version selection",
+    "constraints": "no resets at dots, no image edits, no language or key optimisation",
+    "scope": "exploratory direction inherited from previous rounds; protocol frozen before new statistic/control results"
+  },
+  "sha256": {
+    "round9/geometry_order.py": "f51b0d82d1d5fd69b2f215d2b369b23f93839969d6156ad745075fd332fb7eb1",
+    "round8/enumerate_kgrams.cpp": "bc25e0b302faad5527be7880c62fb27594a820f50157b735ee5baa62926599c1",
+    "round8/exact_study.py": "e53403d9221cfd9b23fda8194cbcad76e683ba87ad75e3e8c78b35daa4a3fb1d",
+    "count_bigrams_v7.py": "887198748de7f0698977ddb859b2e10e1b016b45a074f506f27aa9476085c92c",
+    "results/v7/conditional/inputs.json": "c5459b7f7bc4025fd329b3bcbe1a77a9f71f40ac320fd5dae3d817fd6c9fcb39"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocol": {
+    "id": "round8-postprimary-sensitivity-v1",
+    "frozen_utc": "2026-10-01T11:00:17.589596+00:00",
+    "status": "Explicitly designed AFTER seeing exact primary results, NOT independent confirmation or preregistered discovery",
+    "diagnostics": [
+      "allow each sequence to choose best two of its three printed rows",
+      "condition trigram ensemble on row arc histograms",
+      "condition on row polarity counts",
+      "condition on BOTH arc histograms and polarity counts",
+      "independent complex-number vector implementation",
+      "1000 within-row permutations must leave sums identical",
+      "repeat exact enumeration for both mixed combinations of two known orientation readings"
+    ],
+    "no_selection": "Report all diagnostics and both mixed variants, no change to primary statistic or existing results"
+  },
+  "sha256": {
+    "round8/geometry_sensitivity.py": "3cf10bee525b85e695c66d82480215b0569199aff28d37ed24ed97980ce7f9c8",
+    "round8/exact_study.py": "e53403d9221cfd9b23fda8194cbcad76e683ba87ad75e3e8c78b35daa4a3fb1d",
+    "round8/enumerate_kgrams.cpp": "bc25e0b302faad5527be7880c62fb27594a820f50157b735ee5baa62926599c1",
+    "results/v7/conditional/inputs.json": "c5459b7f7bc4025fd329b3bcbe1a77a9f71f40ac320fd5dae3d817fd6c9fcb39"
+  }
+}

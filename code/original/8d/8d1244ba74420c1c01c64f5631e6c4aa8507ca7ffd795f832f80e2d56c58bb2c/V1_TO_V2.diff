@@ -1,0 +1,22 @@
+--- v1/adapter.py
++++ v2/adapter.py
+@@ -17,7 +17,7 @@
+ class CompactPatList:
+     def __init__(self, index, source, tick=lambda: None):
+         self.tick = tick
+-        self.db = sqlite3.connect(Path(index).resolve().as_uri() + '?mode=ro', timeout=0)
++        self.db = sqlite3.connect(Path(index).resolve().as_uri() + '?mode=ro', timeout=0, uri=True)
+         self.db.execute('PRAGMA query_only=ON')
+         self.db.execute('PRAGMA cache_size=-4096')
+         self.db.execute('PRAGMA mmap_size=0')
+--- v1/run_contract.py
++++ v2/run_contract.py
+@@ -5,7 +5,7 @@
+ BASE = Path(__file__).resolve().parent
+ ATTEMPT = BASE / 'attempt'
+ START = DEADLINE = LAST = None
+-R = {'version':'TS-ADAPTER-CONTRACT-v1','status':'INCOMPLETE',
++R = {'version':'TS-ADAPTER-CONTRACT-v2','status':'INCOMPLETE',
+      'author_executions':0,'solver_calls':0,'score_calls':0,'target_inputs':0,'events':[]}
+ 
+ def utc():

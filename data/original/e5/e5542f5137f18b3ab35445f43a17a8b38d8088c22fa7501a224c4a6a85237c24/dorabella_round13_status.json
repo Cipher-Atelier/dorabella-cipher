@@ -1,0 +1,21 @@
+{
+  "time": 1790891250.9019387,
+  "status": "preflight_complete",
+  "lab_root": "/mnt/data/dorabella_round13_lab/dorabella_lab",
+  "family_size": 30965760,
+  "benchmarks": {
+    "key_at_1000_seconds": 0.00946664810180664,
+    "estimated_key_generation_only_seconds": 293.141953125
+  },
+  "completed": [
+    "restored round10 plus round11_update into new folder",
+    "verified model_v5 import",
+    "ran key generation benchmark"
+  ],
+  "not_completed": [
+    "87-symbol full optimization",
+    "controls",
+    "positive regressions"
+  ],
+  "blocker": "No full 87-key search started because only key generation benchmark was measured; full scan needs a timed scan_block benchmark and budget decision."
+}

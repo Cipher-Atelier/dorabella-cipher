@@ -1,0 +1,7 @@
+{
+  "chunk_id": "eddc7c",
+  "wall_time_seconds": 0.000023435,
+  "exit_code": 0,
+  "original_token_count": 192,
+  "output": "{\"status\": \"PASS_LOCAL_ARTIFACT_ONLY\", \"attempts\": 1, \"exact_payload_bytes\": 48, \"negative_rejected\": true, \"gnu_exit\": 0, \"runner_exit\": 0, \"attempt_elapsed\": 0.047744937999596004, \"payload_sha256\": \"fc19016a6a6b953ee2853e0642e11d19096a3f9f2a6f9c8698c9c4be9fd74935\", \"altered_sha256\": \"4caedbc23e7d2670413bd3a81397953327f8c0f9468d9b254b3793e9deb63c8f\", \"result_sha256\": \"06340c80ce5322b2a268163dd2e9a421340a66ab5bbb5cd331ae1e52c454c3c1\", \"artifact_zip_sha256\": \"865b0090df0c4b0e69b27b8bd2c84a79d7ed6e6731f48c795dab27cba1cbfec2\", \"primary_stdout_sha256\": \"36bc8123df727314de934ae5ddbbf7a7118c5633a7d5387cde646b5354292a6d\", \"raw_stdout_result_exact\": true, \"historical_7523_not_explained\": true, \"old_STOPs_unchanged\": true, \"readback_elapsed\": 0.001146292001067195}\n"
+}

@@ -1,0 +1,139 @@
+--- TS_RECOVERED_SEARCH_v2/sources/original/masc_solver_mcts.pl
++++ runtime/profile.pl
+@@ -13,6 +13,10 @@
+ use FreqAnalysis;
+ use Utils;
+ use NoSpace;
++use Observe;
++use CompactPatList;
++use Prefetch;
++use StreamAudit;
+ 
+ # Record current time.
+ my $start = time();
+@@ -60,7 +64,7 @@
+ );
+ 
+ 
+-Message("Starting run at", `date`);
++Message("Starting run at", $ENV{TS_START_UTC}); # OBSERVE_ONLY no shell child
+ Message(
+   "\nCharacter LMs: $charlm1_file, $charlm2_file, $charlm3_file",
+   "\nWord      LMs: $wordlm1_file, $wordlm2_file, $wordlm3_file",
+@@ -86,24 +90,28 @@
+ 
+ # Read Language Models:
+ my $charlm1 = {};
+-ReadLM::ReadUnigramLM($charlm1_file, $charlm1);
++# STORAGE_ONLY prefetched per score: ReadUnigramLM($charlm1_file, $charlm1)
+ my $charlm2 = {};
+-ReadLM::ReadBigramLM($charlm2_file, $charlm2);
++# STORAGE_ONLY prefetched per score: ReadBigramLM($charlm2_file, $charlm2)
+ my $charlm3 = {};
+-ReadLM::ReadTrigramLM($charlm3_file, $charlm3);
++# STORAGE_ONLY prefetched per score: ReadTrigramLM($charlm3_file, $charlm3)
+ my $wordlm1 = {};
+-ReadLM::ReadUnigramLM($wordlm1_file, $wordlm1);
++# STORAGE_ONLY prefetched per score: ReadUnigramLM($wordlm1_file, $wordlm1)
+ my $wordlm2 = {};
+-ReadLM::ReadBigramLM($wordlm2_file, $wordlm2);
++# STORAGE_ONLY prefetched per score: ReadBigramLM($wordlm2_file, $wordlm2)
+ my $wordlm3 = {};
+-ReadLM::ReadTrigramLM($wordlm3_file, $wordlm3);
++# STORAGE_ONLY prefetched per score: ReadTrigramLM($wordlm3_file, $wordlm3)
+ 
+ # Read ngram list
+ Message("Processing n-gram list.");
+ my $grams_with_pattern = [0,{},{},{}];
+ my $is_word = {};
+ my $maxlen = 0;
+-Utils::ReadPList($ngramlist,$grams_with_pattern,$is_word,\$maxlen,$nospace);
++StreamAudit::init($ENV{TS_PACKAGE},$ENV{TS_ATTEMPT});
++my $pat_client;
++($pat_client,$grams_with_pattern,$is_word,$maxlen)=CompactPatList->attach($ENV{TS_PAT_R},$ENV{TS_PAT_W});
++my $lm_client=Prefetch->attach($ENV{TS_LM_R},$ENV{TS_LM_W});
++Observe::init($lm_client,$ENV{TS_ATTEMPT});
+ 
+ # Ready to go!
+ my $memory = {};
+@@ -133,6 +141,7 @@
+     @C = FreqAnalysis::GetSortedAlphabet(\$p);
+     Message("Alphabets: P[@P] C[@C]\n");
+     my $root = FreqAnalysis::GetFreqKey(\@P, \@C);
++    Observe::event('initialization',{pattern=>$p,alphabet=>\@C,key=>$root}); # OBSERVE_ONLY
+     
+     # Tell the user what the initaial key is.
+     #Utils::PrintKey($root,\@C);
+@@ -142,6 +151,7 @@
+     
+     $solution = Utils::Decipher($p,$key, @C); # Get solution
+     $memory->{$p} = $solution; # Store solution
++    Observe::event('native_final',{pattern=>$p,alphabet=>\@C,key=>$key,plaintext=>$solution}); # OBSERVE_ONLY
+   }
+   
+   Message("Done!");
+@@ -149,6 +159,8 @@
+   # Cipher solved (we hope).
+   print $verbose ? "SOLUTION:\t$solution\n\n" : "$solution\n";  
+ }
++
++$pat_client->close();$lm_client->close();Observe::finish();StreamAudit::finish();
+ 
+ 
+ sub MCTS {
+@@ -199,6 +211,7 @@
+     Backpropagation(\@path, $key_value, $key_visits, $key_ucb, $cscores);
+     
+     Message("Iteration $i complete.");
++    Observe::event('completed_iteration',{iteration=>$i,key=>$best,plaintext=>$bestdec,alphabet=>\@C,score_bits=>unpack('H*',pack('d<',$key_value->{$best})),children=>scalar(@{$children->{$leaf}})}); # OBSERVE_ONLY
+   }
+   
+   return $best;
+@@ -237,6 +250,7 @@
+ sub Expansion {
+   # STEP 2: create one or more child nodes and select one.
+   my ($ctext, $leaf, $children, $key_value, $key_visits, $key_ucb, $cscores) = @_;
++  Observe::event('expansion_start',{iteration=>$global_iteration_count,leaf=>$leaf}); # OBSERVE_ONLY
+   my %seen = ();  
+   
+   # decipher
+@@ -262,6 +276,7 @@
+   }
+   #@potentials = @c;
+   Message("Expansion -- Found", scalar keys %newkeyhash, "total children.");
++  Observe::event('generated',{keys=>scalar(keys %newkeyhash),seen=>scalar(keys %seen)}); # OBSERVE_ONLY
+   
+   # Now that we've collected the new keys, let's score them.
+   my %newdeciphermentscores = ();
+@@ -277,6 +292,7 @@
+     die "Error 4! No deciph" unless $newdeciph;
+     
+     my $new_key = $newkeyhash{$newdeciph};
++    Observe::event('ordered_child',{key=>$new_key,plaintext=>$newdeciph,visited=>($key_visits->{$new_key}?1:0),score_bits=>unpack('H*',pack('d<',$newdeciphermentscores{$newdeciph}))}); # OBSERVE_ONLY
+     die "Error 4! [$newdeciph], No new key" unless $new_key;
+     # Make sure we do not repeat a node.
+     next if $key_visits->{$new_key};
+@@ -375,9 +391,11 @@
+         }
+         @sorted = sort {$simhash{$b} <=> $simhash{$a}}
+                     @{$grams_with_pattern->[$k]->{$pattern_cw}};
++        Observe::highwater('simhash',scalar(keys %simhash)); # OBSERVE_ONLY
+       }
+       
+       my @candidates;
++      Observe::highwater('sorted_array',scalar(@sorted)); # OBSERVE_ONLY
+       if (@sorted > $patternlimit) {
+         @candidates = @sorted[0..($patternlimit-1)];
+       } else {
+@@ -437,9 +455,11 @@
+         }
+         @sorted = sort {$simhash{$b} <=> $simhash{$a}}
+                     @{$grams_with_pattern->[$k]->{$pattern_cw}};
++        Observe::highwater('simhash',scalar(keys %simhash)); # OBSERVE_ONLY
+       }
+       
+       my @candidates;
++      Observe::highwater('sorted_array',scalar(@sorted)); # OBSERVE_ONLY
+       if (@sorted > $patternlimit) {
+         @candidates = @sorted[0..($patternlimit-1)];
+       } else {

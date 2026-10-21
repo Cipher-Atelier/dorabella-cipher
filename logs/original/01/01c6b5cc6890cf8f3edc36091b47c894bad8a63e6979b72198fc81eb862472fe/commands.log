@@ -1,0 +1,11 @@
+2026-10-01T19:52:32Z COMMAND: python round11/verify.py --round10
+2026-10-01T19:52:36Z COMMAND: python round11/prepare.py
+2026-10-01T19:53:00Z COMMAND: python round11/run.py --kind positive,regression --workers 4
+2026-10-01T19:53:20Z COMMAND: python round11/verify.py --kind positive,regression --repeat --sample-blocks --old-files
+2026-10-01T19:53:42Z COMMAND: python round11/run.py --kind real --workers 2
+2026-10-01T19:53:50Z COMMAND: python round11/run.py --kind null --workers 4
+2026-10-01T19:55:02Z COMMAND: python round11/verify.py --kind all --repeat --sample-blocks --old-files
+2026-10-01T19:56:05Z COMMAND: python round11/audit_exhaustive.py --workers 4
+2026-10-01T19:57:14Z COMMAND: python round11/audit_exhaustive.py --workers 4 [resume after tool timeout; no live worker]
+2026-10-01T19:59:11Z COMMAND: python round11/finalize.py
+2026-10-01T20:02:44Z COMMAND: python round11/reproduce.py --case hauer_real --case hart_real

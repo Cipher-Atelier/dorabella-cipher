@@ -1,0 +1,176 @@
+{
+  "version": "observations-hash-provenance-20261018",
+  "created_utc": "2026-10-18T12:06:23.272437+00:00",
+  "files": [
+    {
+      "path": "ARTIFACT_INTEGRITY_PROBE_v1_PLAN.md",
+      "bytes": 5498,
+      "sha256": "1b25a19a4ab206769b010d667bb346c7260ac50b324fb2498b83ceb5e7950fe5"
+    },
+    {
+      "path": "DATA_ONLY_EXTRACTION_RECEIPT.json",
+      "bytes": 10597,
+      "sha256": "c3985dcae4e41297e65b72ab2567af117713979dd97d907f2441efedfe8838ee"
+    },
+    {
+      "path": "Dorabella_observations_hash_provenance_20261018.md",
+      "bytes": 8996,
+      "sha256": "1517b3a22aa548c064782aa5ba6fcadb52d1ad489aaab2927f76129a506800b2"
+    },
+    {
+      "path": "LIBRARY_INPUT_IDENTITIES.json",
+      "bytes": 855,
+      "sha256": "770ad02572e8a9cfe71b3b5f065bdedb99f896c851c8af9a178c3e14f663dc86"
+    },
+    {
+      "path": "LITERAL_PROVENANCE.json",
+      "bytes": 4271,
+      "sha256": "7f0173c35bbc093a3e9989e9bbbf2cf10eb5ae71183ae5adb7a5b58d5010f77b"
+    },
+    {
+      "path": "MEMBER_INVENTORY.json",
+      "bytes": 22775,
+      "sha256": "142cd9e08685132294dd38cb76c50e3992b33bc243e7e0d77d00e1ea627d23b7"
+    },
+    {
+      "path": "PROVENANCE_RESULT.json",
+      "bytes": 3905,
+      "sha256": "0c58134e1f9121b6b34c21521c7910e72070a45feb17cbc58be9ad73a6831074"
+    },
+    {
+      "path": "STANDARD_TOOL_RECEIPTS.json",
+      "bytes": 3470,
+      "sha256": "225cdb094bb9e4de582a0d6d95cf14c75310350637266004ea05686b6c97bc71"
+    },
+    {
+      "path": "VERDICT_SCOPE.json",
+      "bytes": 334,
+      "sha256": "24cac4a512ece5462caca958a62cd1e9497d9aebff0cb5effcfcea3056a7ce2d"
+    },
+    {
+      "path": "extracted/RAW_EXECUTION_RECEIPT.json",
+      "bytes": 2161,
+      "sha256": "4a50745832b903ebcdeadc7cc45f6243cf0991afa5a32de89d46cc1f0c16eec4"
+    },
+    {
+      "path": "extracted/audit_observations.jsonl",
+      "bytes": 79635,
+      "sha256": "b02b9907fb123b78064ea0b9454dbcacfacfbaaaa50bf0a0435ad382ce347654"
+    },
+    {
+      "path": "extracted/audit_result.json",
+      "bytes": 26528,
+      "sha256": "707f62ab34ea03145240795f4e51dfc7c3fa1e07554c33badaca97718f02ec03"
+    },
+    {
+      "path": "extracted/real_broker_ipc_writer_completion.json",
+      "bytes": 1254,
+      "sha256": "a77e2fddcafa98f87dcebff6a35a9f8b43c40ed24e78adf53c4234ddb6dc589c"
+    },
+    {
+      "path": "extracted/result_observations.jsonl",
+      "bytes": 79635,
+      "sha256": "b02b9907fb123b78064ea0b9454dbcacfacfbaaaa50bf0a0435ad382ce347654"
+    },
+    {
+      "path": "extracted/result_result.json",
+      "bytes": 26528,
+      "sha256": "707f62ab34ea03145240795f4e51dfc7c3fa1e07554c33badaca97718f02ec03"
+    },
+    {
+      "path": "extracted/seal_binding.json",
+      "bytes": 12319,
+      "sha256": "61f7fcda43461722f0899c5a6c9fd16f49297c529b129f7899844e83c2d9379a"
+    },
+    {
+      "path": "extracted/seal_observations.json",
+      "bytes": 9682,
+      "sha256": "57d3d2b1be6f596ea076063d088ea763c43e8e31f7b968bd6851b4e0cf9ae2d5"
+    },
+    {
+      "path": "extracted/tool_output_0.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "extracted/tool_output_1.txt",
+      "bytes": 943,
+      "sha256": "2286809df48cea416845c18fec669945a1de4d99071922fbfae50bba0bed1dfb"
+    },
+    {
+      "path": "extracted/verifier_call_receipt.json",
+      "bytes": 8279,
+      "sha256": "cc21886e032a37d269334938f0204a5a96ae0da6f8e7ff7b55407352a91294f1"
+    },
+    {
+      "path": "extracted/wait_before_verifier.json",
+      "bytes": 391,
+      "sha256": "feeb961c9eeaefc7fb806dc20e6acf40b9c2605fcba0ca932c8e82908d7b37d7"
+    },
+    {
+      "path": "library_inputs/Dorabella_TS_JOURNAL_DIAGNOSTIC_v1_20261018_result.zip",
+      "bytes": 1953042,
+      "sha256": "a59465d717a363de72c905ca97fe64c1bf26473a73d6121bc3349eeae2664029"
+    },
+    {
+      "path": "library_inputs/Dorabella_TS_JOURNAL_observations_audit_20261018.zip",
+      "bytes": 74979,
+      "sha256": "f787d306009e00983b08a888911a6c08b0867f99f46aa73db49baaf3dac98862"
+    },
+    {
+      "path": "literal_sources/audit/AUDIT_EVIDENCE.json",
+      "bytes": 14016,
+      "sha256": "69a71c276d1f565f586fbfa632a8dc1bc8f62e56a192e107284fa56df046582f"
+    },
+    {
+      "path": "literal_sources/audit/AUDIT_MANIFEST.json",
+      "bytes": 5052,
+      "sha256": "fe5e6f0067ab97e0160e4913160badb5939493d8473e4416fb6a89562634a9b1"
+    },
+    {
+      "path": "literal_sources/audit/PREFIX_HASHES.json",
+      "bytes": 8199,
+      "sha256": "fdbda7fd96e177604e2c88abcc1d252255a437ba2f5adb992a91ece90557bde4"
+    },
+    {
+      "path": "literal_sources/audit/saved_attempt/result.json",
+      "bytes": 26528,
+      "sha256": "707f62ab34ea03145240795f4e51dfc7c3fa1e07554c33badaca97718f02ec03"
+    },
+    {
+      "path": "literal_sources/audit/verdicts/native_result_PASS.json",
+      "bytes": 26528,
+      "sha256": "707f62ab34ea03145240795f4e51dfc7c3fa1e07554c33badaca97718f02ec03"
+    },
+    {
+      "path": "literal_sources/result/RESULT_MANIFEST.json",
+      "bytes": 6130,
+      "sha256": "4b8bcb2c133dff5ddd1ffe22b431e1aa0c0bada7c955ee8bb725ca7991d4a6a7"
+    },
+    {
+      "path": "literal_sources/result/execution/attempt/result.json",
+      "bytes": 26528,
+      "sha256": "707f62ab34ea03145240795f4e51dfc7c3fa1e07554c33badaca97718f02ec03"
+    },
+    {
+      "path": "literal_sources/result/independent/SEALED_HASH_AUDIT.json",
+      "bytes": 5875,
+      "sha256": "397dc12fdae619cde72d508ccc57c9d2ab26fb60e98fb1759f2128752e020388"
+    },
+    {
+      "path": "partial_evidence/IPC_PARTIAL_RESULT.json",
+      "bytes": 1146,
+      "sha256": "b81dd7eb00ce93a5f2db72eaabb21a3e90495b5a8b7f19f744f69b490c214ab5"
+    },
+    {
+      "path": "read_saved_provenance.py",
+      "bytes": 6671,
+      "sha256": "3e72278487a1383ea5741e3162c63069be4e1cd6f32d7c393ea88cb8adf4b38b"
+    },
+    {
+      "path": "verdicts/independent_STOP.json",
+      "bytes": 864,
+      "sha256": "a1e19e177a8242f21679952d4e80db416835f92a97611aa292c02ccc7fe9a4c8"
+    }
+  ]
+}

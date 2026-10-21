@@ -1,0 +1,349 @@
+completed: 231
+{
+  "whole24": {
+    "records": 52,
+    "sensitivity": {
+      "n": 12,
+      "mean_accuracy": 0.9990421455938697,
+      "min_accuracy": 0.9885057471264368,
+      "exact": 11,
+      "at_least_90pct": 12,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_08",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_09",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_10",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_11",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 6,
+      "plus_one_tail": 0.35
+    }
+  },
+  "routes": {
+    "records": 52,
+    "sensitivity": {
+      "n": 12,
+      "mean_accuracy": 0.9204980842911877,
+      "min_accuracy": 0.08045977011494253,
+      "exact": 9,
+      "at_least_90pct": 11,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 0.08045977011494253
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 0.9770114942528736
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_08",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_09",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_10",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_11",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 0,
+      "plus_one_tail": 0.05
+    }
+  },
+  "localrules": {
+    "records": 10,
+    "sensitivity": {
+      "n": 8,
+      "mean_accuracy": 0.9971264367816092,
+      "min_accuracy": 0.9885057471264368,
+      "exact": 6,
+      "at_least_90pct": 8,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": null
+  },
+  "relax": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "homophonic": {
+    "records": 48,
+    "sensitivity": {
+      "n": 8,
+      "mean_accuracy": 0.8362068965517242,
+      "min_accuracy": 0.4942528735632184,
+      "exact": 1,
+      "at_least_90pct": 5,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 0.4942528735632184
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 0.9310344827586207
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 0.9195402298850575
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 0.896551724137931
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 0.5057471264367817
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 0.9655172413793104
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 0.9770114942528736
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 4,
+      "plus_one_tail": 0.25
+    }
+  },
+  "homophonic_emission": {
+    "records": 48,
+    "sensitivity": {
+      "n": 8,
+      "mean_accuracy": 0.9612068965517242,
+      "min_accuracy": 0.8390804597701149,
+      "exact": 3,
+      "at_least_90pct": 7,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 0.8390804597701149
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 0.9655172413793104
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 0.9080459770114943
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 3,
+      "plus_one_tail": 0.2
+    }
+  },
+  "periodic": {
+    "records": 8,
+    "sensitivity": {
+      "n": 6,
+      "mean_accuracy": 1.0,
+      "min_accuracy": 1.0,
+      "exact": 6,
+      "at_least_90pct": 6,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": null
+  },
+  "fraction": {
+    "records": 4,
+    "sensitivity": null,
+    "paired": null
+  },
+  "header": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "merged_masc": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "keyword_tables": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "routes_wordall": {
+    "records": 1,
+    "sensitivity": null,
+    "paired": null
+  }
+}

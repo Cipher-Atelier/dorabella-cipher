@@ -1,0 +1,41 @@
+{
+  "id": "r6-wordall-completion-calibration-v1",
+  "scope": "Calibration of a previously unfinished fixed procedure, not a new cipher family, new seed, scorer or transcription",
+  "historical_mechanical_basis": "Possible transposition plus monoalphabetic substitution, discussed on Hartmeier's published2006 page https://www.benzedrine.ch/dorabella.html; unequal printed rows motivate a finite route catalogue. No historical evidence for a particular route or letter key is claimed.",
+  "prior_work": "R6 section4: original char-only shortlist missed true route47 for positive00. Archived routes_wordall_v6.py fixed this by word-aware optimization on all1665 routes but ran only2 real inputs and selected positive00. No matched null calibration or full12-case sensitivity exists for that enhanced procedure. R7 calibrated a different pipeline. Current work closes that procedural gap, without claiming novelty of encryption mechanism.",
+  "family": "Exactly byte-identical routes_v6.py routes():1665 unique permutations of all87 indices. Printed row lengths29,31,27; all row permutations and reversal masks with concatenate/column weave; widths2..31 with row,row-snake,column,column-snake,diagonal,diagonal-snake,spiral and4grid reflections; all coprime steps modulo87; inverses included, duplicate permutations removed in archived insertion order.",
+  "letter_key": "A global injective map from the m observed glyph types into26 ASCII letters, with26-slot permutation representation including unused slots. Finite mathematical space per route is26!/(26-m)! observed assignments; only heuristic search of that space. No homophones, edits, nulls, insertions or normalization changes.",
+  "objective": "Exactly archived unmerged-a-z C+0.5W from english_model.npz and WordScorer, all84conditional4gram windows and same segmentation penalties. No model/dictionary tuning. Original code hashes checked against wordall frozen.json; dictionary SHA256 eade91558167fe09a481abf59e176af8643ad78678cc53dd5aeaf2a8b30fa332.",
+  "algorithm": {
+    "first_all1665": "character32x20000; word8x6000 and12greedy sweeps",
+    "middle": "best32 plus identity; character128x20000; word32x8000 from BOTH saved first result and new character result; retain best including previous",
+    "final": "best16 plus identity; word128x16000 from saved middle result; retain previous if new score lower",
+    "defaults": "Original WordSearch CONFIG and polish untouched; middle/final default30greedy sweeps",
+    "selection": "Unchanged archived exact-float score ordering and route-ID tie break. Only final winner used for statistics and candidate selection. Saved finalists are audit records, not a new alternative-reading selection rule.",
+    "seeds": "All archived stable_seed namespaces and tags unchanged; depend on canonical sequence, not case kind. No new search seeds or retry-until-better.",
+    "identical_budget": "Every real, positive and null input receives exactly this same complete procedure; all1665 first-stage routes even if repeat patterns duplicate. No truth-assisted route or early stopping."
+  },
+  "inputs": {
+    "positive": "All12 original R6 route-positive_00..11, unchanged cipher+truth+generating route. Full mechanism covers route plus random injective substitution. All previously seen Austen texts; regression sensitivity, not independent/blind validation. positive00 was selected in old development; separately labelled.",
+    "real": "Original R6 hauer_real and hart_real; verified identical to archived inputs, no mixing or convenience choice",
+    "null": "Exactly first19 indexed conditional controls000..018 for EACH transcription from Oct9 coordinate-lag search_inputs.json (414-case source). Preserve glyph counts, directed adjacent pair multiplicities and first/last glyph. Archived Wilson last-exit sampler; no regeneration/new seeds. Reused across earlier different families, not fresh independent evidence. Each index forms one related pair, never treated as38 independent observations.",
+    "n": 52,
+    "null_strength_limit": "Global pairs/endpoints fixed; per-row pairs and row inventories not fixed. This is a conditional exploratory comparison, not every possible null model. Transcriptions are alternative readings of one object."
+  },
+  "runtime": {
+    "numba": "0.65.1 as archived",
+    "llvmlite": "0.47.0",
+    "numpy": "2.3.5 as archived",
+    "python": "3.12.14 vs archived3.13.5; require full positive00 checkpoint equivalence before remaining51cases",
+    "cpu_memory": "8CPU cgroup quota,8GiB RAM; two case processes with4route workers each; no remote compute",
+    "per_case_budget": "At most1281712000 annealing proposals plus archived fixed greedy sweeps; no expansion",
+    "total_budget": "52cases, at most66649024000 annealing proposals plus fixed greedy sweeps; total wall10800s after input preflight; per-case900s including compilation; resource exhaustion => incomplete, no statistical conclusion",
+    "checkpoint_policy": "Every route/stage record retained. No old cache used as new results. Successful archived-case matches used only for equivalence checks."
+  },
+  "preflight": "Verify all routes equal archived ordered1665 list, all code/model hashes,52full-length inputs, null invariants and12full-mechanism roundtrips. Run positive00 as first calibrated case and compare EVERY first/middle/final checkpoint's decoded text,key,seed,score to archived wordall; exact text/key/seed and score error<1e-9 required. A failed equivalence gate stops before any remaining real/null search; do not retune to pass.",
+  "sensitivity": "Report each exact87/87 result and letter accuracy, totals exact and>=90%; no requirement12/12, no posthoc gate. Prior demonstrated objective ceiling10/12 is a known limitation, not an exclusion or reason to omit null calibration. All52cases completed irrespective of positive accuracy once technical preflight passes.",
+  "statistics": "Primary descriptive statistic T=max(S_hauer,S_hart), paired-null T_i=max(S_hauer_i,S_hart_i); tail=(1+#(T_i>=T-1e-10))/20. Also each transcription separately with same rule. Report raw counts, finite resolution0.05; no multiplying tails or treating transcriptions as independent. Prespecified screening flag tail<=0.05 means0/19null pair maxima not lower; flag alone is not a decipherment. Existing repeated exploration prevents confirmatory interpretation.",
+  "acceptance_refusal": "Successful calibration requires all52 complete and independently verified. No positive sensitivity threshold is imposed. A candidate must be the unchanged procedure's winner, explain all87glyphs via one listed route and injective key, and inverse-encode all87 originalglyphIDs exactly; these algebraic requirements alone never establish historical truth. Do not accept a reading on score/tail or snippets alone; coherent complete language and independent corroboration would still be required. If winner incoherent or corroboration absent, report no verified decipherment. A weak tail or poor sensitivity limits this procedure, not the whole family.",
+  "verification": "Independent Python reference scoring of all final winners and finalists, injectivity and all87 inverse encodings; complete checkpoint counts; compare both newly recomputed real-case winners/route shortlists with archived wordall. Keep outcome if runtime reproducibility differs only after preflight passed and explicitly report difference; no reruns for a better score.",
+  "stop": "Only these52inputs. Stop on implementation/invariant/hash/equivalence failure or resource cap. No extra seeds, hypotheses, scorer changes, manuscript correction or alternative rule after real outcomes. Preserve incomplete status if52not finished."
+}

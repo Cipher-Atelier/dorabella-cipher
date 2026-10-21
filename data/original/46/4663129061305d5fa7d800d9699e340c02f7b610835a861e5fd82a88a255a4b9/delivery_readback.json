@@ -1,0 +1,9 @@
+{
+  "status": "DELIVERY_BOUND_STOP_OR_INCOMPLETE",
+  "scientific_status": "STOP_CORRECTNESS",
+  "zip_sha256": "fa9dc5370605e3943ccf21ccb4fcf0aeef25e74a0b9ba5e16a9bc08fd4c11e3c",
+  "raw_receipt_sha256": "1c330a4f8a76d95927690e1ecde9edde8b338726231417d7c0ba3327b7336d27",
+  "seal_sha256": "c7a6e3c1310f1857a55b97be25de52ccd3fab9ed22861114cd7e84fee3b85595",
+  "tool_provenance_limit": "receipt must contain exact tool-returned JSON and observed stdout, never a model paraphrase; this checker cannot attest provenance of a fabricated receipt",
+  "no_old_STOP_reclassification": true
+}

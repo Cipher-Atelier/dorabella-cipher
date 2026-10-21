@@ -1,0 +1,277 @@
+{
+  "status": "PASS_FINITE_DIFFERENTIAL_ONLY",
+  "utc": "2026-10-17T17:50:42.586617+00:00",
+  "files": [
+    {
+      "path": "TS_DIFF_BRIDGE_v1/COMPUTE_OBSERVERS.diff",
+      "bytes": 2295,
+      "sha256": "df385d34d018245d0dcebbc40b66e79f4e7a4bfcc25d8f3f1e2efb42b4a42ad2"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/CompactPatList.pm",
+      "bytes": 2939,
+      "sha256": "2285bf47efd76973eaad7c96df8b6497e7e6fef54816b8fcdb2dca9490bc9e15"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/FREEZE.json",
+      "bytes": 11186,
+      "sha256": "27548a13270ec8d0bfca6043c99314474ef191c734ffa9393bfa8a0a8b749577"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/HASHES.sha256",
+      "bytes": 2799,
+      "sha256": "3f1c6ec53bd504930ad81e128612c3308e21b0e016041d10831ab7062107f60e"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/MINIMAL_INTEGRATION.diff",
+      "bytes": 799,
+      "sha256": "a82944a3caf8b93743fc5bb5df3401823135dcac8b03a544eefe925772e7b1ee"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/OBSERVATION_MAP.json",
+      "bytes": 1089,
+      "sha256": "52acd7b95c0ee9307f98bc6962a7d2ddb863d9096ab7a8b10a6556d257266516"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/PLAN_RU.md",
+      "bytes": 16056,
+      "sha256": "1d3228683a8e3d21f5ff3091bbd9fbbcfc0c964c884c35dda673c5c543f51216"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/STATIC_REVIEW.json",
+      "bytes": 7695,
+      "sha256": "1e9838ce6445bb06f2febfb578e4b3a6a235fb9e7ec284f05c51cb090d704715"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/adapter.py",
+      "bytes": 5305,
+      "sha256": "ded17814f6ca5256dc893f670dbd64e4afb9280c7f2852a4262878f1390bb09a"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/T0.json",
+      "bytes": 111,
+      "sha256": "98c46ca476d12439a7ec3d50a5581760f037ef2861ce9d16c15d4d81bfbc2a08"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/adapted.jsonl",
+      "bytes": 46668,
+      "sha256": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/adapted_ready.json",
+      "bytes": 3361,
+      "sha256": "47f3c7c079a4d1bf85eacfa5e2025867d4b28535be323554b784147bdf4d0936"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/adapted_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/broker_ipc.jsonl",
+      "bytes": 82301,
+      "sha256": "7de457dcb7950746306dbe3405d0920ed30b6ba528762fbbfb36dc20fd878500"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/broker_ready.json",
+      "bytes": 3361,
+      "sha256": "15b195b71313eab0aab4de310e20435d5fb539d269863beb2bf1083b9c8b0a81"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/broker_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/broker_terminal.json",
+      "bytes": 296,
+      "sha256": "202bbfff77566b88791e53b5467bca40838ebef578b79ddf79ab9814863eb5fd"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/observations.jsonl",
+      "bytes": 5390,
+      "sha256": "52d85413aa897f8cb0ac36aeb8654527304e2d29b0d01e2c1569f7a654e53077"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/reference.jsonl",
+      "bytes": 46668,
+      "sha256": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/reference_ready.json",
+      "bytes": 3361,
+      "sha256": "57a7d1f3e33250e8499123fdd34d54962916c734416f6c383558381dbcd10757"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/reference_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/attempt/result.json",
+      "bytes": 8420,
+      "sha256": "50fef1f101d12229d5a3696a69a5cc79d733114b5ee1dc4d5c025f674f16e168"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/broker.py",
+      "bytes": 2981,
+      "sha256": "d28c0a61adac2524afd0ab94ad6fca4f4e069c115b18275855c186ed9b3296a3"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/child_gate.py",
+      "bytes": 1390,
+      "sha256": "343ee30ed7fe8f3b1eb8b94d6da526da7353c0e56af40362131077d9a25db7d6"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/differential.pl",
+      "bytes": 15416,
+      "sha256": "2b4257a5f17a5002e20579fa74401e0d32427d52d1801ee42096944e18657ce9"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/cases.json",
+      "bytes": 1443,
+      "sha256": "4b5d81394e8ded646d6c58f6f72244b0404622b39a8b749c3f7764f6c54c0c17"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/char.1",
+      "bytes": 282,
+      "sha256": "c244c3978cffb142ea4342d67eba43a36090ea4403a81f881077bc7cd994af82"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/char.2",
+      "bytes": 33,
+      "sha256": "aeedee7265ef495096932552a533416f3c2a2b723163b6b509b286f78d21e093"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/char.3",
+      "bytes": 25,
+      "sha256": "df39265d4bf951444e7b294b1b7147617063cbdd9e318ce8500f4dd5defd34db"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/fixture.patlst",
+      "bytes": 102,
+      "sha256": "cb1666d54cd7978262e2c73fc04ec8a02d9dbbe5b0829f417c4b963d8b2cca1d"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/fixture.sqlite",
+      "bytes": 20480,
+      "sha256": "a54c5901c46882c4adbacb6d7f4c625b83153585bb7de996618ab7149ffc4ed7"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/word.1",
+      "bytes": 120,
+      "sha256": "2b9a5b288d67fab05eb9059d86ea3b55b611a82d144c8bb7e158275d0642d85a"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/word.2",
+      "bytes": 39,
+      "sha256": "e463a8b86572ce187abc056ce8073c3ad340ff0d8b524328b0a2cd28dc2dbd09"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/fixtures/word.3",
+      "bytes": 31,
+      "sha256": "476a1f64f1a411ae6e8fd5953d961168a1be1e9feffc56013af68811112a2baa"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/harness_prefix.txt",
+      "bytes": 3865,
+      "sha256": "c6141afa1e42ed0d269fa1fd0b4563b176e72ddb14eef7832250ee7221c6f7cd"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/masc_solver_mcts.compact.pl",
+      "bytes": 14796,
+      "sha256": "02b98be4cf6e3f2cfb0367806f68b8d47eeadb5baaff73e001d9d4ccce6637c5"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/namespace_view.py",
+      "bytes": 6090,
+      "sha256": "fb6973ca6437684641a23a21b78e9e6e3938bf286c7d80c2df6ee9654080c843"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/FreqAnalysis.pm",
+      "bytes": 2133,
+      "sha256": "563cce6d2e3af583cebd0f922e5cd7680ae138786572367d72fc9f01465b8f12"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/JMSmoothing.pm",
+      "bytes": 1857,
+      "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/LICENCE",
+      "bytes": 1189,
+      "sha256": "ee9e6e82d5ea179ff189f330b3a54eff791ee4f4874b340fefcf7a1227c300bf"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/NoSpace.pm",
+      "bytes": 1097,
+      "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/ReadLM.pm",
+      "bytes": 1078,
+      "sha256": "bda9cc75ee2303015bb7ac7df2897ebe038e21786cb826df71132d9f897cb8e9"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/Utils.pm",
+      "bytes": 2765,
+      "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original/masc_solver_mcts.pl",
+      "bytes": 14627,
+      "sha256": "5021fcef107d606f641fa4b24e4544bb3eeb159efefb26dc6d4d3966a7068f17"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/original_compute.inc",
+      "bytes": 10696,
+      "sha256": "18c70a09346254e5be9065ad959aec956d5224d906dbf8bdd5869136420b1e88"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/run_differential.py",
+      "bytes": 13102,
+      "sha256": "c3884070ffb38ef27bc528e90b66ef479375dc0225e25c20ddebc693f58b7adf"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1/traced_compute.inc",
+      "bytes": 11551,
+      "sha256": "bb4d380dfcd7ab96e4d88cfcd1b3f84106e00c1219ea8476b1f76970bdf33b93"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/ACTUAL_EXEC_COMMANDS.json",
+      "bytes": 1514,
+      "sha256": "8531177759e3920400399fae2475db1ea97aabb0a55559c8f9584892e13fb569"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/PRELAUNCH.json",
+      "bytes": 2186,
+      "sha256": "f36778f6db40975ee4c313af8a3d52bcd33f98d97bcc42b3348cbd581d6ece16"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/RAW_EXECUTION_RECEIPT.json",
+      "bytes": 1076,
+      "sha256": "b1de088900ec5f3a9f7e27fcbb9fb397b9c2487181adffdf796cd4f5383cf5f6"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/READBACK_VERIFIED.json",
+      "bytes": 18465,
+      "sha256": "507f823140df8c7a6cac989b9015b65696196fa34e261748838ca87f1a2d5522"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/RESULT_RU.md",
+      "bytes": 8365,
+      "sha256": "2767cb6249ab653384e37d5d9967134088cbcf8f91f7f5c0fc9730dbf986e683"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/raw_supervisor_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TS_DIFF_BRIDGE_v1_execution_evidence/raw_supervisor_stdout.txt",
+      "bytes": 588,
+      "sha256": "ba6c220c50027232aed14f5d5a6f2b1ea0c03461541094474ee1543d2d8a0787"
+    }
+  ],
+  "no_reexecution": true
+}

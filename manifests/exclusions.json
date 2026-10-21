@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "source": "explicit parent archival restriction, 21 October 2026",
+  "excluded_objects": [
+    {
+      "original_filenames": [
+        "IMG_0562.JPG",
+        "bl_reference_IMG_0562.jpg"
+      ],
+      "original_image_sha256": "01b4bf906d55100f6d67b56539833ca422d8fa037c23bf424c8f0511f082225f",
+      "include_derivatives": false,
+      "derivative_policy": "All British Library-derived copies and crops excluded, even when derivative hashes differ.",
+      "reason": "reference-viewing only; transfer to repository prohibited",
+      "transfer_status": "excluded; not acquired or copied here"
+    }
+  ],
+  "other_exclusions": [
+    "personal correspondence",
+    "paid books",
+    "restricted scans",
+    "credentials",
+    "raw private conversations"
+  ],
+  "archive_warning": "20 October archives contain third-party images, HTML and crops; do not transfer whole archives. Round10/11 logs contain shell commands; inspect as inert text only."
+}

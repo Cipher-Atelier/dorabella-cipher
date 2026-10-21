@@ -1,0 +1,467 @@
+{
+  "status": "READBACK_VERIFIED_COMPLETED_STRUCTURAL_DIAGNOSTIC",
+  "utc": "2026-10-17T01:58:20.633886+00:00",
+  "method": "Read-only hash/schema/cross-reference verification of saved data; no import of runner, diagnostic, encoder, scorer or target procedure.",
+  "scope_limit": "First-violation selection/alternation rule verified in static code and fixed controls; readback does not rerun classification on ciphertext.",
+  "observed_exit_code": 0,
+  "session_id_returned": false,
+  "abort_absent": true,
+  "outer_observed_seconds": 0.595,
+  "runner_elapsed_after_terminal_write_seconds": 0.06851400999994439,
+  "terminal_sha256": "d9eadaefa8525ee9bac110293e0a730f032c89928a651dfdb3ac6b5662b5b49c",
+  "manifest_sha256": "9d597b40e47e34b41912d0599e6cbb434e1d1dd3ddae07e05be14e52573891cd",
+  "case_order": [
+    "P2",
+    "P3",
+    "N2",
+    "hauer_real",
+    "hart_real"
+  ],
+  "case_readback": [
+    {
+      "id": "P2",
+      "pair_records_read": 3,
+      "projection_position_records_read": 174,
+      "sha256": "0a72a29ff15764585bdfaab07a81b6941570a6a7159690b6802cf29a8851df2c"
+    },
+    {
+      "id": "P3",
+      "pair_records_read": 6,
+      "projection_position_records_read": 261,
+      "sha256": "61692446f72b6cb9d9e21495f6fe79677b254d043197393f36c048b94e878e9a"
+    },
+    {
+      "id": "N2",
+      "pair_records_read": 3,
+      "projection_position_records_read": 174,
+      "sha256": "73879ceeb165c386b196b0a5f16bcb1a19fb1143c605d049601a118d775635bf"
+    },
+    {
+      "id": "hauer_real",
+      "pair_records_read": 190,
+      "projection_position_records_read": 1653,
+      "sha256": "e59411b722b38f428fc7eb16e8dc6c2c7719b15338278991004d964d764955d2"
+    },
+    {
+      "id": "hart_real",
+      "pair_records_read": 190,
+      "projection_position_records_read": 1653,
+      "sha256": "084ece166acf39cdebe579f7891a892f7f332ed99b776086edd97b9a479a1c7f"
+    }
+  ],
+  "primary_symbol_inspections_saved": 34104,
+  "real_input_differences": [
+    {
+      "position_1based": 34,
+      "hauer": 21,
+      "hart": 18
+    },
+    {
+      "position_1based": 78,
+      "hauer": 6,
+      "hart": 3
+    }
+  ],
+  "saved_projection_difference_count": 70,
+  "saved_projection_difference_pairs": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      18
+    ],
+    [
+      0,
+      21
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      18
+    ],
+    [
+      1,
+      21
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      18
+    ],
+    [
+      2,
+      21
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      3,
+      14
+    ],
+    [
+      3,
+      15
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      3,
+      17
+    ],
+    [
+      3,
+      18
+    ],
+    [
+      3,
+      19
+    ],
+    [
+      3,
+      20
+    ],
+    [
+      3,
+      21
+    ],
+    [
+      3,
+      22
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      18
+    ],
+    [
+      4,
+      21
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      18
+    ],
+    [
+      5,
+      21
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      6,
+      14
+    ],
+    [
+      6,
+      15
+    ],
+    [
+      6,
+      16
+    ],
+    [
+      6,
+      17
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      6,
+      19
+    ],
+    [
+      6,
+      20
+    ],
+    [
+      6,
+      21
+    ],
+    [
+      6,
+      22
+    ],
+    [
+      7,
+      18
+    ],
+    [
+      7,
+      21
+    ],
+    [
+      8,
+      18
+    ],
+    [
+      8,
+      21
+    ],
+    [
+      9,
+      18
+    ],
+    [
+      9,
+      21
+    ],
+    [
+      10,
+      18
+    ],
+    [
+      10,
+      21
+    ],
+    [
+      14,
+      18
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      15,
+      18
+    ],
+    [
+      15,
+      21
+    ],
+    [
+      16,
+      18
+    ],
+    [
+      16,
+      21
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      17,
+      21
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      18,
+      20
+    ],
+    [
+      18,
+      21
+    ],
+    [
+      18,
+      22
+    ],
+    [
+      19,
+      21
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      21,
+      22
+    ]
+  ],
+  "saved_status_difference_pairs": [],
+  "repeated_evidence_compatible_pair_records": {
+    "hauer_real": [
+      {
+        "pair": [
+          5,
+          15
+        ],
+        "counts": [
+          4,
+          4
+        ],
+        "original_positions_1based": [
+          11,
+          13,
+          28,
+          45,
+          48,
+          53,
+          59,
+          76
+        ],
+        "projection": [
+          5,
+          15,
+          5,
+          15,
+          5,
+          15,
+          5,
+          15
+        ],
+        "first_violation": null,
+        "status": "PAIR_NOT_REJECTED",
+        "automatic_both_singletons": false
+      },
+      {
+        "pair": [
+          8,
+          22
+        ],
+        "counts": [
+          1,
+          2
+        ],
+        "original_positions_1based": [
+          10,
+          16,
+          25
+        ],
+        "projection": [
+          22,
+          8,
+          22
+        ],
+        "first_violation": null,
+        "status": "PAIR_NOT_REJECTED",
+        "automatic_both_singletons": false
+      }
+    ],
+    "hart_real": [
+      {
+        "pair": [
+          5,
+          15
+        ],
+        "counts": [
+          4,
+          4
+        ],
+        "original_positions_1based": [
+          11,
+          13,
+          28,
+          45,
+          48,
+          53,
+          59,
+          76
+        ],
+        "projection": [
+          5,
+          15,
+          5,
+          15,
+          5,
+          15,
+          5,
+          15
+        ],
+        "first_violation": null,
+        "status": "PAIR_NOT_REJECTED",
+        "automatic_both_singletons": false
+      },
+      {
+        "pair": [
+          8,
+          22
+        ],
+        "counts": [
+          1,
+          2
+        ],
+        "original_positions_1based": [
+          10,
+          16,
+          25
+        ],
+        "projection": [
+          22,
+          8,
+          22
+        ],
+        "first_violation": null,
+        "status": "PAIR_NOT_REJECTED",
+        "automatic_both_singletons": false
+      }
+    ]
+  }
+}

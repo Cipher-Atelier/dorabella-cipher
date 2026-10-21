@@ -1,0 +1,17 @@
+bailey_01 VERIFIED train_correct 43 test_correct 44 ties 1
+bailey_02 VERIFIED train_correct 43 test_correct 44 ties 1
+bailey_03 VERIFIED train_correct 43 test_correct 44 ties 1
+bailey_04 VERIFIED train_correct 43 test_correct 44 ties 1
+bailey_05 VERIFIED train_correct 43 test_correct 40 ties 8
+bailey_06 VERIFIED train_correct 43 test_correct 44 ties 4
+bailey_07 VERIFIED train_correct 43 test_correct 44 ties 2
+bailey_08 VERIFIED train_correct 43 test_correct 44 ties 1
+bailey_09 VERIFIED train_correct 43 test_correct 44 ties 1
+brewer_01 VERIFIED train_correct 43 test_correct 44 ties 1
+brewer_02 VERIFIED train_correct 43 test_correct 44 ties 1
+brewer_03 VERIFIED train_correct 43 test_correct 44 ties 1
+elgar_march_1897 VERIFIED train_correct 43 test_correct 44 ties 4
+elgar_caractacus_postcard VERIFIED train_correct 39 test_correct 39 ties 1
+bailey_01 COMPLETE keys 30965760 W 633 prefix_S -3.185854 ties 1 seconds 1.62
+bailey_08 COMPLETE keys 30965760 W 1544 prefix_S -3.007237 ties 1 seconds 1.605
+elgar_march_1897 COMPLETE keys 30965760 W 370 prefix_S -3.110424 ties 4 seconds 1.256

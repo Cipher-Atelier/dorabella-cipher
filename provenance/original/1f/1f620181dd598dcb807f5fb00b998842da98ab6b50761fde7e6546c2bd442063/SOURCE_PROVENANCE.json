@@ -1,0 +1,293 @@
+[
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/JMSmoothing.pm",
+    "destination": "runtime/original/JMSmoothing.pm",
+    "bytes": 1857,
+    "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/NoSpace.pm",
+    "destination": "runtime/original/NoSpace.pm",
+    "bytes": 1097,
+    "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/Utils.pm",
+    "destination": "runtime/original/Utils.pm",
+    "bytes": 2765,
+    "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/FreqAnalysis.pm",
+    "destination": "runtime/original/FreqAnalysis.pm",
+    "bytes": 2133,
+    "sha256": "563cce6d2e3af583cebd0f922e5cd7680ae138786572367d72fc9f01465b8f12"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/ReadLM.pm",
+    "destination": "runtime/original/ReadLM.pm",
+    "bytes": 1078,
+    "sha256": "bda9cc75ee2303015bb7ac7df2897ebe038e21786cb826df71132d9f897cb8e9"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/LICENCE",
+    "destination": "runtime/original/LICENCE",
+    "bytes": 1189,
+    "sha256": "ee9e6e82d5ea179ff189f330b3a54eff791ee4f4874b340fefcf7a1227c300bf"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/namespace_view.py",
+    "destination": "runtime/reused/namespace_view.py",
+    "bytes": 6090,
+    "sha256": "fb6973ca6437684641a23a21b78e9e6e3938bf286c7d80c2df6ee9654080c843"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/process_guard.py",
+    "destination": "runtime/reused/process_guard.py",
+    "bytes": 4295,
+    "sha256": "fa518b80754ce67b5a0e6966001f2555e533f566de5e367a5fee3f74594cddd3"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/process_guard_cases.json",
+    "destination": "runtime/reused/process_guard_cases.json",
+    "bytes": 57876,
+    "sha256": "e92c535e2def13f2f579e8b458e47c51acf439cb8a0a9cc1798cd1b048553e15"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/limit_order.py",
+    "destination": "runtime/reused/limit_order.py",
+    "bytes": 2423,
+    "sha256": "1474f2bbc8f42ae99c1c5612c95228fb3321b56b064cf0f2ff297decdaab60e3"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/disk_contract.py",
+    "destination": "runtime/reused/disk_contract.py",
+    "bytes": 4757,
+    "sha256": "69810e4fc997a3797ab55026cc526716cf0af1ec49db19e67aed9f6b51d0d880"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/model_inputs.json",
+    "destination": "model_inputs.json",
+    "bytes": 3165,
+    "sha256": "ef691ac69cb2a0a5f66b08b11bb024ec16093d6d4b8d0131e50e9758090c5aab"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/external_runtime.json",
+    "destination": "external_runtime.json",
+    "bytes": 3574,
+    "sha256": "d3f9fd11bca4cb7881d2456bd47fc510bd8aeac7b8173b3888ba4ae6da0b5928"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/datasets.json",
+    "destination": "datasets.json",
+    "bytes": 4124,
+    "sha256": "46989caf50bc25a0a6979cde3ea28f6eae8430ddb1c00ee764f62c2e3a094c2f"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/Dorabella_BE_W16_v1_specification_20261018.md",
+    "destination": "protocol.md",
+    "bytes": 24870,
+    "sha256": "03c81d1cc4529a8859f38e07bdb60591635070681edf96ae3e81c8ff275427ce"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/BE_W16_v1_preparation/input_checkpoint/decoder/inputs.json",
+    "destination": "decoder/inputs.json",
+    "bytes": 1350,
+    "sha256": "b28a4c18cf9084c181d2c029b88c83a42e6d6d365978598754c8ae5327a1afce"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/BE_W16_v1_preparation/input_checkpoint/evaluator/truth.json",
+    "destination": "evaluator/truth.json",
+    "bytes": 75176,
+    "sha256": "193060ec2373bb902cf5d43b09517a724453ceb1d9fec48b984ddd7b0736ddea"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/BE_W16_v1_preparation/input_checkpoint/INPUT_MANIFEST.json",
+    "destination": "evidence/INPUT_MANIFEST.json",
+    "bytes": 1034,
+    "sha256": "d099001ff4beb9cb3e3903e7db0e88bd6388261b81a3ef6e20c1f0ce8a9f6679"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/BE_W16_v1_preparation/input_checkpoint/evidence/result.json",
+    "destination": "evidence/input_result.json",
+    "bytes": 5124,
+    "sha256": "a0a32b416619728c18ca1c48f86b356f96e70188dd990deb0e1d550475b9fea8"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/cases.json",
+    "destination": "fixtures/base/cases.json",
+    "bytes": 1443,
+    "sha256": "4b5d81394e8ded646d6c58f6f72244b0404622b39a8b749c3f7764f6c54c0c17"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/char.1",
+    "destination": "fixtures/base/char.1",
+    "bytes": 282,
+    "sha256": "540847cbba881a7c4aa81bfee517d673d9b30db3e156b7c711c2feca568d1340"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/char.1.idx",
+    "destination": "fixtures/base/char.1.idx",
+    "bytes": 232,
+    "sha256": "2100015ddeb2c181446c4be0e2f50bccf73f2d58ff5f1b4d7c1d7aa867acd913"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/char.2",
+    "destination": "fixtures/base/char.2",
+    "bytes": 33,
+    "sha256": "e256be0751996f772c36798caa737756b5f7559347415d6b05c4badc94f07150"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/char.2.idx",
+    "destination": "fixtures/base/char.2.idx",
+    "bytes": 32,
+    "sha256": "3961f40aaa4b769c20480b0154fe082df4ad1188092ba2fd763702708d91a5fd"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/char.3",
+    "destination": "fixtures/base/char.3",
+    "bytes": 25,
+    "sha256": "d5c5f72374a6f250cdd35a1977363fa1faa69e169c5c42f930e451ab57afa880"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/char.3.idx",
+    "destination": "fixtures/base/char.3.idx",
+    "bytes": 24,
+    "sha256": "176ac149264c0954cb31ad2cb2085d0bf9db8dae51604312ff889a50c7f41ecd"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/fixture.patlst",
+    "destination": "fixtures/base/fixture.patlst",
+    "bytes": 102,
+    "sha256": "cb1666d54cd7978262e2c73fc04ec8a02d9dbbe5b0829f417c4b963d8b2cca1d"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/fixture.sqlite",
+    "destination": "fixtures/base/fixture.sqlite",
+    "bytes": 20480,
+    "sha256": "a54c5901c46882c4adbacb6d7f4c625b83153585bb7de996618ab7149ffc4ed7"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/word.1",
+    "destination": "fixtures/base/word.1",
+    "bytes": 120,
+    "sha256": "23a3d027163cd153d22b168046cc8f704fd2ab8b8cb2b25458a0db4600d147c3"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/word.1.idx",
+    "destination": "fixtures/base/word.1.idx",
+    "bytes": 104,
+    "sha256": "0690d6018b14f0f4f0e3f90ee2a4f7fbdc6c8b8d58c010713c0b1131ef9afd3a"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/word.2",
+    "destination": "fixtures/base/word.2",
+    "bytes": 39,
+    "sha256": "af3ae48e0dfba0d66b850db80e4be15c1cdfe7174d37efb99097601ce540a7de"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/word.2.idx",
+    "destination": "fixtures/base/word.2.idx",
+    "bytes": 32,
+    "sha256": "8fa7e63a02b6eb433ec36155335a84ffb0cd857a0e0f5c264aea09bc38653ca2"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/word.3",
+    "destination": "fixtures/base/word.3",
+    "bytes": 31,
+    "sha256": "8b2c987a7e9a50b0dd18028f16c7c8a9712cd6f24a731d9d2dcac4cad3baecea"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/base/word.3.idx",
+    "destination": "fixtures/base/word.3.idx",
+    "bytes": 24,
+    "sha256": "f5960347a8309defa790cdc79b994d0072c14f8c423f0af2280507c1f8bc577c"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/cases.json",
+    "destination": "fixtures/edge/cases.json",
+    "bytes": 541,
+    "sha256": "5519af3507d0b27c59b787ade8211f4eb11bcc33531b14f93a1a9c65bc7bcbdc"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/char.1",
+    "destination": "fixtures/edge/char.1",
+    "bytes": 125,
+    "sha256": "6322490b4885944c36d10babe40fb3bfb7fabc0effd4543db4d4a324e62cbfb4"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/char.1.idx",
+    "destination": "fixtures/edge/char.1.idx",
+    "bytes": 96,
+    "sha256": "5a7f7e4c82909829ce18b6d1526d8068ae6b2b93b4ca3750d9208e70de97d55a"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/char.2",
+    "destination": "fixtures/edge/char.2",
+    "bytes": 59,
+    "sha256": "68756a5c31364b6b4f490d00304277929ee6045856fb2dea99ca2c3cb5df212a"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/char.2.idx",
+    "destination": "fixtures/edge/char.2.idx",
+    "bytes": 48,
+    "sha256": "9da07dc2971a0195928c40cd074bb127d7789199ffec51be2bee51cb44a8bad2"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/char.3",
+    "destination": "fixtures/edge/char.3",
+    "bytes": 27,
+    "sha256": "ea441783cc5f14d98b5b51d3ac7cf60daefad2b01420db66d93f9fff70b4d562"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/char.3.idx",
+    "destination": "fixtures/edge/char.3.idx",
+    "bytes": 16,
+    "sha256": "54ef5a64858d0465b92365d99e1cbbc3b7cc59016b8ccdb098e9ceb3bf57a796"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/word.1",
+    "destination": "fixtures/edge/word.1",
+    "bytes": 125,
+    "sha256": "6322490b4885944c36d10babe40fb3bfb7fabc0effd4543db4d4a324e62cbfb4"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/word.1.idx",
+    "destination": "fixtures/edge/word.1.idx",
+    "bytes": 96,
+    "sha256": "5a7f7e4c82909829ce18b6d1526d8068ae6b2b93b4ca3750d9208e70de97d55a"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/word.2",
+    "destination": "fixtures/edge/word.2",
+    "bytes": 59,
+    "sha256": "68756a5c31364b6b4f490d00304277929ee6045856fb2dea99ca2c3cb5df212a"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/word.2.idx",
+    "destination": "fixtures/edge/word.2.idx",
+    "bytes": 48,
+    "sha256": "9da07dc2971a0195928c40cd074bb127d7789199ffec51be2bee51cb44a8bad2"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/word.3",
+    "destination": "fixtures/edge/word.3",
+    "bytes": 27,
+    "sha256": "ea441783cc5f14d98b5b51d3ac7cf60daefad2b01420db66d93f9fff70b4d562"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_v2_archives/Dorabella_TS_COMBINED_STORAGE_v1_20261018_package/TS_COMBINED_STORAGE_v1/fixtures/edge/word.3.idx",
+    "destination": "fixtures/edge/word.3.idx",
+    "bytes": 16,
+    "sha256": "54ef5a64858d0465b92365d99e1cbbc3b7cc59016b8ccdb098e9ceb3bf57a796"
+  },
+  {
+    "source": "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v3/runtime/original/masc_solver_mcts.pl",
+    "source_sha256": "5021fcef107d606f641fa4b24e4544bb3eeb159efefb26dc6d4d3966a7068f17",
+    "byte_start": 13349,
+    "byte_end_exclusive": 14523,
+    "body_sha256": "ed73bec2471ab88ac2a34b207314d16671b311c27910b7016ee2fb9219542ee9",
+    "destination": "runtime/BEOps.pm",
+    "modification": "New package/our C wrapper only; extracted author Assume body unchanged."
+  }
+]

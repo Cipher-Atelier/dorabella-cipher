@@ -1,0 +1,61 @@
+{"status": "PASS", "route_count": 1665, "cases": 52, "positive": 12, "real": 2, "conditional_null": 38, "all87_input_invariants": true, "archived_code_hashes_match": true, "numba": "0.65.1", "llvmlite": "0.47.0", "numpy": "2.3.5", "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"}
+{"utc": "2026-10-15T19:18:23.782828+00:00", "event": "technical_recovery", "already_complete": 23, "remaining": 29, "absolute_deadline": "2026-10-15T21:10:03.700003+00:00"}
+{"utc": "2026-10-15T19:18:23.785540+00:00", "event": "resume", "case": "hart_real_fresh_004", "timeout_remaining": 723.287841}
+{"utc": "2026-10-15T19:18:23.785903+00:00", "event": "resume", "case": "hauer_real_fresh_005", "timeout_remaining": 724.435504}
+{"utc": "2026-10-15T19:24:18.018976+00:00", "event": "complete", "case": "hauer_real_fresh_005", "seconds": 529.7963128720003, "score": -4.467554737251822, "accuracy": null, "resumed": true}
+{"utc": "2026-10-15T19:24:18.020616+00:00", "event": "begin", "case": "hart_real_fresh_005", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:24:58.553261+00:00", "event": "complete", "case": "hart_real_fresh_004", "seconds": 571.4792168590011, "score": -4.491189393256283, "accuracy": null, "resumed": true}
+{"utc": "2026-10-15T19:24:58.553675+00:00", "event": "begin", "case": "hauer_real_fresh_006", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:29:56.885769+00:00", "event": "complete", "case": "hart_real_fresh_005", "seconds": 338.863833718, "score": -4.385066778967018, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:29:56.887374+00:00", "event": "begin", "case": "hart_real_fresh_006", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:30:59.304646+00:00", "event": "complete", "case": "hauer_real_fresh_006", "seconds": 360.7506178149997, "score": -4.49007559659935, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:30:59.305233+00:00", "event": "begin", "case": "hauer_real_fresh_007", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:35:49.665636+00:00", "event": "complete", "case": "hart_real_fresh_006", "seconds": 352.77715753899975, "score": -4.189734029695505, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:35:49.666233+00:00", "event": "begin", "case": "hart_real_fresh_007", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:36:54.900938+00:00", "event": "complete", "case": "hauer_real_fresh_007", "seconds": 355.5954594880004, "score": -4.390530942242259, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:36:54.901459+00:00", "event": "begin", "case": "hauer_real_fresh_008", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:41:14.314534+00:00", "event": "complete", "case": "hart_real_fresh_007", "seconds": 324.64785404600116, "score": -4.3336540568514925, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:41:14.317633+00:00", "event": "begin", "case": "hart_real_fresh_008", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:42:40.178133+00:00", "event": "complete", "case": "hauer_real_fresh_008", "seconds": 345.2761704789991, "score": -4.367004958878943, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:42:40.180194+00:00", "event": "begin", "case": "hauer_real_fresh_009", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:48:03.145528+00:00", "event": "complete", "case": "hart_real_fresh_008", "seconds": 408.825662018, "score": -4.358443680576732, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:48:03.148152+00:00", "event": "begin", "case": "hart_real_fresh_009", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:48:41.336796+00:00", "event": "complete", "case": "hauer_real_fresh_009", "seconds": 361.1557568549997, "score": -4.432474055014971, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:48:41.337888+00:00", "event": "begin", "case": "hauer_real_fresh_010", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:53:10.813085+00:00", "event": "complete", "case": "hart_real_fresh_009", "seconds": 307.6633490580007, "score": -4.355012823901843, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:53:10.821296+00:00", "event": "begin", "case": "hart_real_fresh_010", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:53:30.524398+00:00", "event": "complete", "case": "hauer_real_fresh_010", "seconds": 289.18573351899977, "score": -4.484632325785766, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:53:30.524775+00:00", "event": "begin", "case": "hauer_real_fresh_011", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:58:18.085482+00:00", "event": "complete", "case": "hart_real_fresh_010", "seconds": 307.2599824709996, "score": -4.363385822353875, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:58:18.087636+00:00", "event": "begin", "case": "hart_real_fresh_011", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T19:59:06.328992+00:00", "event": "complete", "case": "hauer_real_fresh_011", "seconds": 335.803942863, "score": -4.478041984267552, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T19:59:06.331167+00:00", "event": "begin", "case": "hauer_real_fresh_012", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:03:28.981471+00:00", "event": "complete", "case": "hart_real_fresh_011", "seconds": 310.89273741500074, "score": -4.437335706114191, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:03:28.983518+00:00", "event": "begin", "case": "hart_real_fresh_012", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:03:57.588899+00:00", "event": "complete", "case": "hauer_real_fresh_012", "seconds": 291.2575018080006, "score": -4.459777781365354, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:03:57.589292+00:00", "event": "begin", "case": "hauer_real_fresh_013", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:08:48.683596+00:00", "event": "complete", "case": "hart_real_fresh_012", "seconds": 319.6992518070001, "score": -4.431620509028849, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:08:48.685036+00:00", "event": "begin", "case": "hart_real_fresh_013", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:09:03.728964+00:00", "event": "complete", "case": "hauer_real_fresh_013", "seconds": 306.13947204800024, "score": -4.379978818554246, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:09:03.729807+00:00", "event": "begin", "case": "hauer_real_fresh_014", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:14:14.225370+00:00", "event": "complete", "case": "hart_real_fresh_013", "seconds": 325.5390139250012, "score": -4.254170556292108, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:14:14.226860+00:00", "event": "begin", "case": "hart_real_fresh_014", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:14:20.096926+00:00", "event": "complete", "case": "hauer_real_fresh_014", "seconds": 316.36582018599984, "score": -4.401506483983837, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:14:20.098059+00:00", "event": "begin", "case": "hauer_real_fresh_015", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:19:50.017035+00:00", "event": "complete", "case": "hart_real_fresh_014", "seconds": 335.7896392020011, "score": -4.465213997021744, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:19:50.019744+00:00", "event": "begin", "case": "hart_real_fresh_015", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:20:29.513788+00:00", "event": "complete", "case": "hauer_real_fresh_015", "seconds": 369.4154866280005, "score": -4.431729541348803, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:20:29.515308+00:00", "event": "begin", "case": "hauer_real_fresh_016", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:25:26.601868+00:00", "event": "complete", "case": "hart_real_fresh_015", "seconds": 336.5810428139994, "score": -4.414661750109097, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:25:26.604152+00:00", "event": "begin", "case": "hart_real_fresh_016", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:25:34.035252+00:00", "event": "complete", "case": "hauer_real_fresh_016", "seconds": 304.51903560400024, "score": -4.467176972673471, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:25:34.035914+00:00", "event": "begin", "case": "hauer_real_fresh_017", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:30:41.905499+00:00", "event": "complete", "case": "hauer_real_fresh_017", "seconds": 307.8693268599982, "score": -4.355466059045878, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:30:41.907175+00:00", "event": "begin", "case": "hart_real_fresh_017", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:31:06.747862+00:00", "event": "complete", "case": "hart_real_fresh_016", "seconds": 340.14234578200194, "score": -4.378575453152097, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:31:06.748203+00:00", "event": "begin", "case": "hauer_real_fresh_018", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:36:06.449628+00:00", "event": "complete", "case": "hart_real_fresh_017", "seconds": 324.54145472600067, "score": -4.417688122846398, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:36:06.451133+00:00", "event": "begin", "case": "hart_real_fresh_018", "timeout_remaining": 900.0}
+{"utc": "2026-10-15T20:36:07.839576+00:00", "event": "complete", "case": "hauer_real_fresh_018", "seconds": 301.0911919350001, "score": -4.409486782578756, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:40:17.640880+00:00", "event": "complete", "case": "hart_real_fresh_018", "seconds": 251.18918008900073, "score": -4.3724805367845185, "accuracy": null, "resumed": false}
+{"utc": "2026-10-15T20:40:17.644088+00:00", "status": "completed", "cases": 52, "wall_seconds": 9013.943396, "technical_interruption_recovered": true}

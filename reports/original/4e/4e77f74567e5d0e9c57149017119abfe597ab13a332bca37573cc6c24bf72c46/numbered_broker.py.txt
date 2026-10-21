@@ -1,0 +1,60 @@
+   1 """Own bounded broker, NEW EXECUTABLE, PREPARED ONLY. Never computes LM scores."""
+   2 import os,sys,pathlib,json,time,select,resource
+   3 B=pathlib.Path(__file__).resolve().parent;R=B.parent;sys.path[:0]=[str(B),str(B/'reused')]
+   4 from common import raw,Shards,Chain,put
+   5 from store import Store
+   6 from disk_contract import DiskLM
+   7 def main():
+   8  A=pathlib.Path(os.environ['BE_ATTEMPT']);end=float(os.environ['BE_DEADLINE']);dataset=os.environ['BE_DATASET'];rd,wr=map(int,sys.argv[1:]);t=time.monotonic()
+   9  def tick():
+  10   if time.monotonic()>=end:raise RuntimeError('INCOMPLETE_BUDGET_DEADLINE')
+  11  def send(seq,off,part,done):
+  12   tick();b=raw([seq,off,part,done])
+  13   if len(b)>65536:raise ValueError('RESPONSE_FRAME')
+  14   packet=chain.add(2,b)
+  15   # Split the binary container, not the framed protocol.
+  16   for j in range(0,len(packet),65536):log.write(packet[j:j+65536])
+  17   view=memoryview(b)
+  18   while view:
+  19    tick();n=os.write(wr,view)
+  20    if n<=0:raise ValueError('IPC_WRITE')
+  21    view=view[n:]
+  22  ds=json.loads((R/'datasets_all.json').read_text())[dataset]
+  23  store=Store(ds['index'],ds['source'],tick);lm=DiskLM(ds['lm'],tick,4096);log=Shards(A,'frames');chain=Chain();seq=0;counts={'prefix':0,'words':0,'lm':0,'lm_lookups':0,'close':0};buffer=b'';status='STOP';error=None
+  24  try:
+  25   while True:
+  26    tick()
+  27    if b'\n' not in buffer:
+  28     if len(buffer)>=65536:raise ValueError('REQUEST_FRAME')
+  29     if not select.select([rd],[],[],.05)[0]:continue
+  30     b=os.read(rd,min(4096,65536-len(buffer)))
+  31     if not b:raise ValueError('IPC_EOF')
+  32     buffer+=b;continue
+  33    b,buffer=buffer.split(b'\n',1);b+=b'\n';q=json.loads(b);seq+=1
+  34    if type(q) is not list or len(q)!=3 or q[0]!=seq:raise ValueError('REQUEST_SEQUENCE')
+  35    packet=chain.add(1,b)
+  36    for j in range(0,len(packet),65536):log.write(packet[j:j+65536])
+  37    _,op,arg=q
+  38    if op not in counts or op=='lm_lookups':raise ValueError('OP')
+  39    counts[op]+=1
+  40    if op=='prefix':
+  41     v=store.prefix(arg);send(seq,0,[v],True)
+  42    elif op=='words':
+  43     if counts[op]>3870:raise RuntimeError('INCOMPLETE_BUDGET_WORD_BATCHES')
+  44     send(seq,0,store.words(arg),True)
+  45    elif op=='lm':
+  46     if counts['lm']>258 or not isinstance(arg,list) or len(arg)>776 or counts['lm_lookups']+len(arg)>100104:raise RuntimeError('INCOMPLETE_BUDGET_LM')
+  47     for off in (range(0,len(arg),128) if arg else [0]):
+  48      values=[]
+  49      for table,key in arg[off:off+128]:
+  50       tick();v=lm.lookup(table,tuple(bytes.fromhex(k) for k in key));values.append([v['found'],v['value_hex'],v['last_row_1based']]);counts['lm_lookups']+=1
+  51      send(seq,off,values,off+len(values)==len(arg))
+  52    else:
+  53     if arg is not None or buffer:raise ValueError('CLOSE_DOMAIN')
+  54     send(seq,0,['closed'],True);status='BROKER_COMPLETE';break
+  55  except BaseException as exc:error=repr(exc);raise
+  56  finally:
+  57   log.close();store.close();lm.close();os.close(rd);os.close(wr)
+  58   result={'status':status,'error':error,'chain':chain.result(),'counts':counts,'prefix_source_bytes':store.read_bytes,'physical_words':store.word_calls,'lm_stats':lm.stats,'elapsed':time.monotonic()-t,'CPU':time.process_time(),'maxrss_KiB':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'closed':True}
+  59   put(A/'broker_terminal.json',result);print('BROKER_COMPUTED '+raw(result).decode().strip(),flush=True)
+  60 if __name__=='__main__':main()

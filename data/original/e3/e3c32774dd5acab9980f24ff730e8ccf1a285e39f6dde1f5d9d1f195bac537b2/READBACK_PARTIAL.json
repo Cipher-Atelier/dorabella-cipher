@@ -1,0 +1,53 @@
+{
+  "scope": "saved partial-index readback only; no source parsing/solver/scoring",
+  "observed_exit": 2,
+  "status": "STOP",
+  "error": "RuntimeError: STOP_ROW_BOUND",
+  "saved_rows": 2998272,
+  "saved_max_seq": 2998272,
+  "saved_candidate_occurrences": 5258388,
+  "saved_max_raw_line_bytes": 118052,
+  "saved_max_candidate_bytes": 45,
+  "saved_last_row": [
+    2998272,
+    137020819,
+    40
+  ],
+  "saved_prefix_bytes": 137020859,
+  "saved_per_order": [
+    [
+      1,
+      18270,
+      123619
+    ],
+    [
+      2,
+      1407594,
+      2917160
+    ],
+    [
+      3,
+      1572408,
+      2217609
+    ]
+  ],
+  "saved_lexicon_entries": 123619,
+  "saved_oracle_entries": 0,
+  "independent_full_readback_executed": false,
+  "elapsed": 28.848400643997593,
+  "maxrss_KiB": 21820,
+  "index_bytes": 304541696,
+  "observed_cgroup_peak_bytes": 2700464128,
+  "observations": 117,
+  "note": "Final uncommitted transaction rolled back on DB.close; partial artifact is not a complete usable model index.",
+  "hashes": {
+    "FREEZE.json": "6554e45856ae95f7bccec5d7bac2aa90eff2b73e1d931292211927b069e376b9",
+    "PLAN_RU.md": "145c3fcc85b844c0786baf0080c401b3371e0378b9f163b2606a8cf7b7191762",
+    "STATIC_REVIEW.json": "5ef139563f72350bb9166fe7ba0765651b1e969c7373bd6e5ec9e64b2f9951bc",
+    "attempt/T0.json": "22f0b7b6c796cbd145ba0e2aa77364a8caea6ebc8450e7cccda21e6aa972dc3e",
+    "attempt/observations.jsonl": "9993ddb1aced223105b0a5ee27fc8650d7b7d3f4ab55cfdc5f9ad78f63c0d6fe",
+    "attempt/patlst_index.sqlite": "733c11aaf5ca9b11dbe6793b32be5c99f26ce9ce0c7bc7b47da6535784ad3e3e",
+    "attempt/result.json": "7724a5ae1d4f9cb4982563f981b604c74200a4a99c99845fd4502678e4e427a1",
+    "compact_check.py": "5fc657c7635f2c9662cde1bccb882f27816780da8e733b94115911c0905aeed6"
+  }
+}

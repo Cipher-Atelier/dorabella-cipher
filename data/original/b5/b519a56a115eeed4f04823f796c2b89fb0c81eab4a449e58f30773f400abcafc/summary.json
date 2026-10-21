@@ -1,0 +1,960 @@
+{
+  "records": [
+    {
+      "id": "bailey_01",
+      "kind": "positive",
+      "source": "bailey_01",
+      "score": -3.044027022020651,
+      "char_best": -2.17240923822416,
+      "suffix_score": -2.9260882838043596,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_02",
+      "kind": "positive",
+      "source": "bailey_02",
+      "score": -3.1326596779057136,
+      "char_best": -2.292746659258344,
+      "suffix_score": -2.8399431581583667,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_03",
+      "kind": "positive",
+      "source": "bailey_03",
+      "score": -3.0573175926099783,
+      "char_best": -2.154837027085218,
+      "suffix_score": -3.1703550119079695,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_04",
+      "kind": "positive",
+      "source": "bailey_04",
+      "score": -3.2416882062230754,
+      "char_best": -2.325395201119993,
+      "suffix_score": -3.290337450753426,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_05",
+      "kind": "positive",
+      "source": "bailey_05",
+      "score": -2.953081306052878,
+      "char_best": -2.100621130237661,
+      "suffix_score": -2.8883745484961545,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_06",
+      "kind": "positive",
+      "source": "bailey_06",
+      "score": -3.1725806426452543,
+      "char_best": -2.27799481934567,
+      "suffix_score": -3.2225641362391153,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_07",
+      "kind": "positive",
+      "source": "bailey_07",
+      "score": -3.05509627194607,
+      "char_best": -2.2105810844015825,
+      "suffix_score": -3.06559873508306,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_08",
+      "kind": "positive",
+      "source": "bailey_08",
+      "score": -3.2064340974023358,
+      "char_best": -2.3139855830920255,
+      "suffix_score": -3.52431513001889,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "bailey_09",
+      "kind": "positive",
+      "source": "bailey_09",
+      "score": -3.465013281260431,
+      "char_best": -2.383638945980265,
+      "suffix_score": -3.220533042632481,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "brewer_01",
+      "kind": "positive",
+      "source": "brewer_01",
+      "score": -3.537637441737017,
+      "char_best": -2.427517979570346,
+      "suffix_score": -3.3605025720313453,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "brewer_02",
+      "kind": "positive",
+      "source": "brewer_02",
+      "score": -3.9845377022135073,
+      "char_best": -2.8256771661066438,
+      "suffix_score": -4.021231877944958,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "brewer_03",
+      "kind": "positive",
+      "source": "brewer_03",
+      "score": -3.0864838528782554,
+      "char_best": -2.209627999393751,
+      "suffix_score": -3.1966328934958095,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "elgar_march_1897",
+      "kind": "regression",
+      "source": "elgar_march_1897",
+      "score": -3.7209075485163794,
+      "char_best": -2.632586696328451,
+      "suffix_score": -4.327512152067026,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "elgar_caractacus_postcard",
+      "kind": "regression",
+      "source": "elgar_caractacus_postcard",
+      "score": -4.126647077028107,
+      "char_best": -2.833782210980778,
+      "suffix_score": -3.627771412218607,
+      "correct": 87,
+      "char_correct": 87,
+      "suffix_correct": 44,
+      "true_rank_strict": 1,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real",
+      "kind": "real",
+      "source": null,
+      "score": -7.12663224379058,
+      "char_best": -4.399284373449958,
+      "suffix_score": -8.824226315101415,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real",
+      "kind": "real",
+      "source": null,
+      "score": -7.143625637216786,
+      "char_best": -4.383427855227015,
+      "suffix_score": -8.380423510260664,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_00",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.996860829782195,
+      "char_best": -4.464250393252166,
+      "suffix_score": -9.317273132401404,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_01",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.956068814403068,
+      "char_best": -4.287681852845328,
+      "suffix_score": -8.908985326395223,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_02",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.973110531516461,
+      "char_best": -4.386289411240475,
+      "suffix_score": -8.815950364013746,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_03",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.097782261609414,
+      "char_best": -4.430604383217037,
+      "suffix_score": -8.992987221069564,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_04",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.7623612425462,
+      "char_best": -4.345602309178257,
+      "suffix_score": -7.503304290026529,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_05",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.080073441436978,
+      "char_best": -4.385703523765536,
+      "suffix_score": -8.490356470643855,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_06",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.0987331008216525,
+      "char_best": -4.4550971943224695,
+      "suffix_score": -10.081657250541827,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_07",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.910116477545746,
+      "char_best": -4.355768058726875,
+      "suffix_score": -8.451726561381848,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_08",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.993077793787053,
+      "char_best": -4.368597356357557,
+      "suffix_score": -8.814483173832054,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_09",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.995270752136523,
+      "char_best": -4.298845429890839,
+      "suffix_score": -9.27056675975724,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_10",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.935785358481611,
+      "char_best": -4.331954530654424,
+      "suffix_score": -8.661632766253875,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_11",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.060569935059366,
+      "char_best": -4.328239473722148,
+      "suffix_score": -8.314758355205415,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_12",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.068655544374495,
+      "char_best": -4.488486370739812,
+      "suffix_score": -9.334977216846411,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_13",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.976100140802313,
+      "char_best": -4.377934255234174,
+      "suffix_score": -8.842015237747546,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_14",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.931275469670163,
+      "char_best": -4.359663177587654,
+      "suffix_score": -9.689809161995793,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_15",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.838119200480109,
+      "char_best": -4.395039226869381,
+      "suffix_score": -7.341030956698106,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_16",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.955441907039165,
+      "char_best": -4.3393489558570755,
+      "suffix_score": -8.236097440110271,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_17",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.984329362996597,
+      "char_best": -4.342749008527335,
+      "suffix_score": -9.508606736572938,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_18",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.9729719354207855,
+      "char_best": -4.411654733772964,
+      "suffix_score": -8.47348752451453,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_19",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.962845842048797,
+      "char_best": -4.213564251144607,
+      "suffix_score": -7.590248667556902,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_20",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.9204046800527905,
+      "char_best": -4.43476257328697,
+      "suffix_score": -8.404254517235188,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_21",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.92929279427486,
+      "char_best": -4.306625347487783,
+      "suffix_score": -8.509252561650444,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_22",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.836983072393647,
+      "char_best": -4.386767272598497,
+      "suffix_score": -8.586790639581812,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_23",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.969576011829487,
+      "char_best": -4.3705556497186375,
+      "suffix_score": -8.16104266305582,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_24",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.003553506939209,
+      "char_best": -4.408913751631117,
+      "suffix_score": -7.163653737673694,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_25",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.030666390134076,
+      "char_best": -4.405744988659805,
+      "suffix_score": -8.182952426937181,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_26",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.041231305592401,
+      "char_best": -4.350047367951982,
+      "suffix_score": -8.444622497717223,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_27",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.085754413926386,
+      "char_best": -4.413354483969976,
+      "suffix_score": -7.710752048119355,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_28",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.978760192392386,
+      "char_best": -4.298286107176759,
+      "suffix_score": -7.61780456250488,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_29",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.934858166843075,
+      "char_best": -4.347980113397894,
+      "suffix_score": -7.841033977892414,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_30",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.909669530178147,
+      "char_best": -4.264440199791476,
+      "suffix_score": -8.76945079080281,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_31",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.965636220611518,
+      "char_best": -4.344077124911926,
+      "suffix_score": -9.362772494251715,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_32",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.026437811969622,
+      "char_best": -4.4020984957406615,
+      "suffix_score": -7.7916058255316525,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_33",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.074323144317849,
+      "char_best": -4.352295149975003,
+      "suffix_score": -8.003104856350422,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_34",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.043235031902845,
+      "char_best": -4.518736096313857,
+      "suffix_score": -8.415802684845922,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_35",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.0417958072017965,
+      "char_best": -4.323807716514797,
+      "suffix_score": -8.229921487869051,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_36",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.013264757132388,
+      "char_best": -4.482148246603915,
+      "suffix_score": -9.082351170248964,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_37",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -7.109731429254136,
+      "char_best": -4.478618310496837,
+      "suffix_score": -9.508140654450997,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hauer_real_pair_38",
+      "kind": "null",
+      "source": "hauer_real",
+      "score": -6.9721229287809,
+      "char_best": -4.406882237314567,
+      "suffix_score": -8.181331176754686,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_00",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.004028102958958,
+      "char_best": -4.4549037328500445,
+      "suffix_score": -8.993938585919176,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_01",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.9632914033230096,
+      "char_best": -4.390907533570585,
+      "suffix_score": -8.144689817011411,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_02",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.778030170715278,
+      "char_best": -4.3441900551498955,
+      "suffix_score": -7.332913314579013,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_03",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.895526462378951,
+      "char_best": -4.3454782424132175,
+      "suffix_score": -7.873691345479518,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_04",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.110029419172517,
+      "char_best": -4.369036556935553,
+      "suffix_score": -9.115296242725062,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_05",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.001840438264925,
+      "char_best": -4.469369251839767,
+      "suffix_score": -8.59023538438637,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_06",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.809830758153291,
+      "char_best": -4.218025803488504,
+      "suffix_score": -7.7085985454236035,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_07",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.979407580258448,
+      "char_best": -4.330180723410718,
+      "suffix_score": -7.88775663182637,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_08",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.9544732700126275,
+      "char_best": -4.44863465930585,
+      "suffix_score": -8.241019770492429,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_09",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.093201512708834,
+      "char_best": -4.429667247684126,
+      "suffix_score": -8.878872440941047,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_10",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.003422397253296,
+      "char_best": -4.305766276039608,
+      "suffix_score": -9.341646346779703,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_11",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.0374779055590695,
+      "char_best": -4.515743674488768,
+      "suffix_score": -8.85915400063118,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_12",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.978468392093784,
+      "char_best": -4.271072692449865,
+      "suffix_score": -8.817381431347247,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_13",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.07988656477462,
+      "char_best": -4.335571754808415,
+      "suffix_score": -8.2357715813668,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_14",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.011972001371843,
+      "char_best": -4.37824877361162,
+      "suffix_score": -8.755635300985052,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_15",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.0971980118731155,
+      "char_best": -4.474497404985982,
+      "suffix_score": -9.906782542482981,
+      "prefix_tie_count": 2
+    },
+    {
+      "id": "hart_real_pair_16",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.924205423148696,
+      "char_best": -4.386986441785895,
+      "suffix_score": -9.049677388142214,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_17",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.862082849084082,
+      "char_best": -4.279053795905632,
+      "suffix_score": -9.083670333631607,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_18",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.9214250815203044,
+      "char_best": -4.193008247459462,
+      "suffix_score": -8.246776959156637,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_19",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.9044565638905055,
+      "char_best": -4.220765827138763,
+      "suffix_score": -8.98355498459309,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_20",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.096262643972748,
+      "char_best": -4.408758857666034,
+      "suffix_score": -9.012678516834427,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_21",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.070428211435997,
+      "char_best": -4.276130118064016,
+      "suffix_score": -7.970638572524852,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_22",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.7973302256087695,
+      "char_best": -4.240062990676883,
+      "suffix_score": -7.920450265404901,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_23",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.023688622876684,
+      "char_best": -4.380988354172408,
+      "suffix_score": -8.040270800320583,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_24",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.083290784526785,
+      "char_best": -4.425490732855743,
+      "suffix_score": -8.490258731223353,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_25",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.0331101763106565,
+      "char_best": -4.323554551422521,
+      "suffix_score": -8.167352264002492,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_26",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.84830725691622,
+      "char_best": -4.226851828061907,
+      "suffix_score": -10.47584791564505,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_27",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.790126687703122,
+      "char_best": -4.285095289187191,
+      "suffix_score": -8.367713637705869,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_28",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.129147804022964,
+      "char_best": -4.461112733299364,
+      "suffix_score": -9.751916526020505,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_29",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.736091113732093,
+      "char_best": -4.120458362572312,
+      "suffix_score": -6.976740823054726,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_30",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.00731911278953,
+      "char_best": -4.444642244746054,
+      "suffix_score": -9.180893624087139,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_31",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.0631566158267844,
+      "char_best": -4.420801150540052,
+      "suffix_score": -8.449461962023953,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_32",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.044082973757056,
+      "char_best": -4.405859290557065,
+      "suffix_score": -7.989895094539758,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_33",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.044293401010535,
+      "char_best": -4.4064264053859405,
+      "suffix_score": -9.253637171118918,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_34",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.073024522990409,
+      "char_best": -4.399389754861516,
+      "suffix_score": -8.484199029047812,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_35",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.004083875447549,
+      "char_best": -4.249944178623108,
+      "suffix_score": -7.895960969527481,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_36",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -6.736697183571491,
+      "char_best": -4.1970074029979845,
+      "suffix_score": -8.20002700523385,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_37",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.0087987610923665,
+      "char_best": -4.441498395068011,
+      "suffix_score": -8.214572266034777,
+      "prefix_tie_count": 1
+    },
+    {
+      "id": "hart_real_pair_38",
+      "kind": "null",
+      "source": "hart_real",
+      "score": -7.105173740191683,
+      "char_best": -4.515493079173685,
+      "suffix_score": -8.008937692491825,
+      "prefix_tie_count": 1
+    }
+  ],
+  "comparisons": {
+    "hauer_real": {
+      "score": {
+        "real": -7.12663224379058,
+        "ge": 39,
+        "n": 39,
+        "plus_one_tail": 1.0,
+        "null_min": -7.109731429254136,
+        "null_max": -6.7623612425462
+      },
+      "char_best": {
+        "real": -4.399284373449958,
+        "ge": 25,
+        "n": 39,
+        "plus_one_tail": 0.65,
+        "null_min": -4.518736096313857,
+        "null_max": -4.213564251144607
+      },
+      "suffix_score": {
+        "real": -8.824226315101415,
+        "ge": 27,
+        "n": 39,
+        "plus_one_tail": 0.7,
+        "null_min": -10.081657250541827,
+        "null_max": -7.163653737673694
+      }
+    },
+    "hart_real": {
+      "score": {
+        "real": -7.143625637216786,
+        "ge": 39,
+        "n": 39,
+        "plus_one_tail": 1.0,
+        "null_min": -7.129147804022964,
+        "null_max": -6.736091113732093
+      },
+      "char_best": {
+        "real": -4.383427855227015,
+        "ge": 21,
+        "n": 39,
+        "plus_one_tail": 0.55,
+        "null_min": -4.515743674488768,
+        "null_max": -4.120458362572312
+      },
+      "suffix_score": {
+        "real": -8.380423510260664,
+        "ge": 19,
+        "n": 39,
+        "plus_one_tail": 0.5,
+        "null_min": -10.47584791564505,
+        "null_max": -6.976740823054726
+      }
+    }
+  }
+}

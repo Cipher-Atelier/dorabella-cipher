@@ -1,0 +1,37 @@
+--- TS_RECOVERED_SEARCH_v2/sources/storage/Prefetch.pm
++++ runtime/Prefetch.pm
+@@ -4,6 +4,7 @@
+ use warnings;
+ use JSON::PP;
+ use IO::Handle;
++use StreamAudit;
+ use JMSmoothing;
+ sub attach {
+  my ($class,$r,$w)=@_;
+@@ -17,7 +18,7 @@
+  my ($raw,$seq,$offset,$total)=@_;
+  die "FRAME_BYTES" if length($raw)>65536 || $raw!~/\n\z/ || substr($raw,0,-1)=~/\n/;
+  my $x=JSON::PP->new->decode($raw);
+- die "HEADER" unless ref($x) eq 'ARRAY' && @$x==4 && _uint($x->[0],512) && $x->[0]==$seq
++ die "HEADER" unless ref($x) eq 'ARRAY' && @$x==4 && _uint($x->[0],2049) && $x->[0]==$seq
+   && _uint($x->[1],776) && $x->[1]==$offset && ref($x->[2]) eq 'ARRAY' && @{$x->[2]}<=128
+   && JSON::PP::is_bool($x->[3]);
+  die "COUNT" if $offset+@{$x->[2]}>$total || (!$x->[3] && !@{$x->[2]})
+@@ -39,13 +40,15 @@
+   my $room=65536-length($s->{buffer});$room=4096 if $room>4096;
+   my $n=sysread($s->{rd},my $part,$room);die "EOF" unless defined($n)&&$n>0;$s->{buffer}.=$part;
+  }
+- return substr($s->{buffer},0,index($s->{buffer},"\n")+1,'');
++ my $raw=substr($s->{buffer},0,index($s->{buffer},"\n")+1,'');
++ StreamAudit::response('lm',$raw);return $raw;
+ }
+ sub batch {
+  my ($s,$dataset,$items)=@_;
+  die "CLOSED" if $s->{closed};die "BATCH" unless ref($items) eq 'ARRAY' && @$items<=776;
+- die "REQUEST_BOUND" if ++$s->{seq}>512;
++ die "REQUEST_BOUND" if ++$s->{seq}>2049;
+  my $line=$s->{json}->encode([$s->{seq},$dataset,$items])."\n";die "FRAME_BOUND" if length($line)>65536;
++ StreamAudit::request('lm',$line);
+  print {$s->{wr}} $line or die "SEND";
+  my @out;
+  for (1..7) {

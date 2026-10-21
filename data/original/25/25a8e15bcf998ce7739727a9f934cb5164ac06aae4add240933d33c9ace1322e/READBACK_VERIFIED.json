@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED_ADAPTER_CONTRACT_PASS",
+  "utc": "2026-10-17T13:50:55.347605+00:00",
+  "normal_exit": 0,
+  "elapsed": 13.101048835997062,
+  "v1_unchanged": true,
+  "outputs_hash_readback": true,
+  "no_adapter_or_reference_reexecution": true,
+  "shared_cgroup_observed_max": 6680838144,
+  "candidate_counts": {
+    "a": 26,
+    "aa": 41,
+    "ab": 925,
+    "aba": 224,
+    "abc": 3818,
+    "abcdefgh": 63911,
+    "!": 0
+  },
+  "tested_equivalence_only": true
+}

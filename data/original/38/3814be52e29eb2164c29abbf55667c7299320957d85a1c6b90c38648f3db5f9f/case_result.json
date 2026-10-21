@@ -1,0 +1,18 @@
+{
+  "accepted_bytes": 0,
+  "ack": false,
+  "actual_error": "WRITER_WRITE_RETURN",
+  "checks": {},
+  "chunks_opened": 1,
+  "cleanup_error": null,
+  "closed": false,
+  "expected_error": "WRITER_WRITE_RETURN",
+  "failed": true,
+  "fd_cleanup": true,
+  "name": "NEG_RETURN_EXCESS",
+  "receipt_bytes": 0,
+  "trace": [
+    "open:frames.000.bin",
+    "close_returned"
+  ]
+}

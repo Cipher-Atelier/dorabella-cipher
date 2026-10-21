@@ -1,0 +1,190 @@
+   1 """Own finite supervisor. No author imports here. NO TARGET, RETRY OR RESUME."""
+   2 import os,sys,pathlib,json,time,datetime,resource,subprocess,signal,hashlib,traceback
+   3 B=pathlib.Path(__file__).resolve().parent;R=B.parent;sys.path[:0]=[str(B),str(B/'reused')]
+   4 from common import put,sha,admit,memory,Shards,raw
+   5 from namespace_view import NamespaceView,Stop
+   6 from process_guard import inspect_prior
+   7 from limit_order import prepare_supervisor_limits,seal_supervisor_limits
+   8 from readback import verify,evaluate_all,events,number
+   9 A=R/'attempt'
+  10 def interrupted(signum,frame):raise Stop('INCOMPLETE_BUDGET_SIGNAL:'+str(signum))
+  11 for _signal in (signal.SIGXCPU,signal.SIGTERM,signal.SIGINT):signal.signal(_signal,interrupted)
+  12 def utc():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+  13 def seal(folder,context):
+  14  rows=[]
+  15  for p in sorted(folder.rglob('*')):
+  16   if p.is_file():
+  17    os.chmod(p,0o444);a=p.stat();h=sha(p);b=p.stat()
+  18    if (a.st_dev,a.st_ino,a.st_size,a.st_mtime_ns)!=(b.st_dev,b.st_ino,b.st_size,b.st_mtime_ns):raise Stop('STOP_FILE_CHANGED_DURING_SEAL')
+  19    rows.append({'path':str(p.relative_to(folder)),'bytes':b.st_size,'sha256':h,'dev':b.st_dev,'ino':b.st_ino,'mtime_ns':b.st_mtime_ns})
+  20  value={'files':rows,'context':context,'utc':utc(),'all_writers_closed':True};put(folder/'seal.json',value);os.chmod(folder/'seal.json',0o444)
+  21  receipt={'folder':str(folder.relative_to(A)),'seal_sha256':sha(folder/'seal.json'),'files':len(rows),'bytes':sum(x['bytes'] for x in rows),'context':context}
+  22  print('CLOSED_FILES_COMPUTED '+json.dumps(receipt,sort_keys=True),flush=True);return receipt
+  23 def partial(folder):
+  24  scores=[];rounds=0;windows=0
+  25  try:
+  26   for e in events(folder):
+  27    if e['kind']=='score':scores.append(e['value'])
+  28    elif e['kind']=='expansion_complete':rounds+=1
+  29    elif e['kind']=='window':windows+=1
+  30  except Exception as e:return {'error':repr(e),'observed_scores':len(scores),'complete_rounds':rounds,'window_records':windows}
+  31  best=[]
+  32  if scores:
+  33   m=max(number(x['score_bits']) for x in scores);best=[{'index':x['index'],'key':x['key'],'plaintext':x['plaintext'],'score_bits':x['score_bits']} for x in scores if number(x['score_bits'])==m]
+  34  return {'scores_observed_only':len(scores),'complete_rounds_observed_only':rounds,'windows_observed_only':windows,'partial_best_unverified':best,'not_recovery':True}
+  35 def main():
+  36  if A.exists():print('REFUSED_PREVIOUS_ATTEMPT');return 3
+  37  A.mkdir();F=json.loads((R/'FREEZE.json').read_text());launch=json.loads((R/'launch_evidence.json').read_text());F['_observed_sha256']=sha(R/'FREEZE.json');start=launch['monotonic'];global_end=start+1500;prep_end=start+60
+  38  result={'version':'BE-W16-v1','status':'PREPARING','start':launch,'cases':[],'integration':[],'target_authorized':False,'delivery':'PENDING_EXACT_LIBRARY_READBACK'};ns=None;prepared=False;snapshots={}
+  39  def tick(deadline):
+  40   if time.monotonic()>=min(deadline,global_end):raise Stop('INCOMPLETE_BUDGET_DEADLINE')
+  41   if int(pathlib.Path('/sys/fs/cgroup/memory.current').read_text())>=7*1024**3:raise Stop('STOP_SHARED_MEMORY')
+  42  def resource_gate(deadline):
+  43   tick(deadline);m,go=admit()
+  44   if not go:raise Stop('STOP_RESOURCE_ADMISSION')
+  45   return m
+  46  def identity_gate(deadline):
+  47   for row in F['identities']:
+  48    tick(deadline);p=pathlib.Path(row['path']) if row['external'] else R/row['path'];a=p.stat();h=hashlib.sha256()
+  49    if a.st_size!=row['bytes']:raise Stop('STOP_IDENTITY_SIZE:'+str(p))
+  50    with p.open('rb') as f:
+  51     for b in iter(lambda:f.read(1048576),b''):tick(deadline);h.update(b)
+  52    z=p.stat()
+  53    if h.hexdigest()!=row['sha256'] or (a.st_dev,a.st_ino,a.st_size,a.st_mtime_ns)!=(z.st_dev,z.st_ino,z.st_size,z.st_mtime_ns):raise Stop('STOP_IDENTITY_HASH:'+str(p))
+  54    snapshots[str(p)]=(z.st_dev,z.st_ino,z.st_size,z.st_mtime_ns)
+  55  def unchanged(deadline):
+  56   for p,want in snapshots.items():
+  57    tick(deadline);s=pathlib.Path(p).stat()
+  58    if (s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns)!=want:raise Stop('STOP_INPUT_CHANGED:'+p)
+  59  def one(name,mode,dataset,case_start,deadline,work,input_row=None):
+  60   folder=A/name;folder.mkdir();rec={'name':name,'mode':mode,'dataset':dataset,'monotonic_start':case_start,'utc':utc(),'deadline':deadline,'work_deadline':work,'status':'INCOMPLETE','foreign_released':False,'commands':[],'signals':[]};children=[];handles=[];fds=set();obs=Shards(folder,'process_observations',8*1024**2)
+  61   put(folder/'T0.json',rec)
+  62   if input_row is not None:put(folder/'decoder_input.json',input_row)
+  63   def close(fd):
+  64    if fd in fds:os.close(fd);fds.remove(fd)
+  65   def pipe():
+  66    p=os.pipe();fds.update(p);return p
+  67   def watch(until=work):
+  68    tick(until);files=[p for p in folder.iterdir() if p.is_file()];sizes=[p.stat().st_size for p in files]
+  69    if any(n>8388608 for n in sizes) or sum(sizes)>100663296:raise Stop('INCOMPLETE_BUDGET_EVIDENCE')
+  70    for c in children:
+  71     if c['anchor'] is not None and len(ns.group(c['anchor'],c['known']))>1:raise Stop('STOP_UNEXPECTED_DESCENDANT')
+  72   def output(role,stream):
+  73    f=(folder/(role+'_'+stream+'.txt')).open('xb');handles.append(f);return f
+  74   def spawn(role,ipc):
+  75    gr,gw=pipe();env=dict(F['environment']);env.update(BE_PACKAGE=str(R),BE_ATTEMPT=str(folder),BE_DEADLINE=str(work),BE_MODE=mode,BE_DATASET=dataset)
+  76    cmd=[F['python'],'-B','-I','-S',str(B/'child_gate.py'),role,str(gr),*map(str,ipc)]
+  77    p=subprocess.Popen(cmd,stdin=subprocess.DEVNULL,stdout=output(role,'stdout'),stderr=output(role,'stderr'),pass_fds=(gr,*ipc),start_new_session=True,cwd=folder,env=env)
+  78    c={'role':role,'p':p,'gate':gw,'anchor':None,'known':set()};children.append(c);close(gr);rec['commands'].append({'role':role,'argv':cmd,'local_pid':p.pid,'time':utc()})
+  79    ready=folder/(role+'_ready.json')
+  80    while True:
+  81     watch()
+  82     if p.poll() is not None:raise Stop('STOP_CHILD_BEFORE_READY')
+  83     if ready.exists():
+  84      try:q=json.loads(ready.read_text());break
+  85      except json.JSONDecodeError:pass
+  86     time.sleep(.02)
+  87    a=ns.by_local(p.pid);qr=q['record']
+  88    if a is None or a['visible_ppid']!=ns.visible_self or a['pid_namespace']!=ns.ns or (a['pid'],a['pgid'],a['session'])!=(p.pid,p.pid,p.pid):raise Stop('STOP_CHILD_IDENTITY')
+  89    for k in ('visible_pid','starttime','pid_namespace','nspid','nspgid','nssid'):
+  90     if a[k]!=qr[k]:raise Stop('STOP_READY_IDENTITY')
+  91    if q['limits']!=F['role_limits'][role] or os.getpgid(p.pid)!=p.pid:raise Stop('STOP_CHILD_LIMITS_GROUP')
+  92    c['anchor']=a;c['known'].add((a['visible_pid'],a['starttime']));rec['commands'][-1]['anchor']=a;return c
+  93   def signal_owned(c,sig):
+  94    if c['anchor'] is None:
+  95     a=ns.by_local(c['p'].pid)
+  96     if a is None:return
+  97     if a['visible_ppid']!=ns.visible_self or a['pid_namespace']!=ns.ns or (a['pid'],a['pgid'],a['session'])!=(c['p'].pid,)*3:raise Stop('UNKNOWN_UNRELEASED_CHILD')
+  98     c['anchor']=a;c['known'].add((a['visible_pid'],a['starttime']))
+  99    g=ns.group(c['anchor'],c['known'])
+ 100    if g:
+ 101     if c['p'].pid==os.getpgrp():raise Stop('STOP_SELF_SIGNAL')
+ 102     try:os.killpg(c['p'].pid,sig)
+ 103     except ProcessLookupError:pass
+ 104    rec['signals'].append({'role':c['role'],'signal':int(sig),'group':g,'utc':utc()})
+ 105   try:
+ 106    rec['before']=resource_gate(work);unchanged(work)
+ 107    if (folder.parent/'Modules').exists():raise Stop('STOP_UNEXPECTED_MODULES_PATH')
+ 108    # Two IPC pipes, two release pipes; supervisor plus two children only.
+ 109    r1,w1=pipe();r2,w2=pipe();bc=spawn('broker',(r1,w2));pc=spawn('perl',(r2,w1))
+ 110    for fd in (r1,w1,r2,w2):close(fd)
+ 111    rec['release_memory']=resource_gate(work)
+ 112    for c in children:os.write(c['gate'],b'G');close(c['gate'])
+ 113    rec['foreign_released']=True;rec['release_elapsed']=time.monotonic()-case_start;print('CASE_RELEASED '+json.dumps({'name':name,'utc':utc(),'elapsed':rec['release_elapsed']}),flush=True)
+ 114    while any(c['p'].poll() is None for c in children):
+ 115     watch();record={'utc':utc(),'elapsed':time.monotonic()-case_start,'memory_current':int(pathlib.Path('/sys/fs/cgroup/memory.current').read_text()),'groups':{c['role']:ns.group(c['anchor'],c['known']) for c in children}};obs.write(raw(record))
+ 116     if any(c['p'].returncode not in (None,0) for c in children):raise Stop('STOP_CHILD_EXIT')
+ 117     time.sleep(.1)
+ 118    for c in children:
+ 119     c['p'].wait()
+ 120     if c['p'].returncode!=0:raise Stop('STOP_CHILD_EXIT')
+ 121    rec['status']='WAITING_READBACK'
+ 122   except BaseException as e:rec['error']=repr(e);rec['traceback']=traceback.format_exc();rec['status']='INCOMPLETE_BUDGET' if 'INCOMPLETE_BUDGET' in str(e) else ('STOP_RESOURCE' if str(e).startswith(('STOP_RESOURCE','STOP_SHARED_MEMORY')) else 'STOP_CORRECTNESS')
+ 123   finally:
+ 124    for fd in list(fds):close(fd)
+ 125    try:
+ 126     for c in children:
+ 127      if c['p'].poll() is None:signal_owned(c,signal.SIGTERM)
+ 128     grace=min(deadline-7,time.monotonic()+2)
+ 129     while any(c['p'].poll() is None for c in children) and time.monotonic()<grace:time.sleep(.02)
+ 130     for c in children:
+ 131      if c['p'].poll() is None:signal_owned(c,signal.SIGKILL)
+ 132     rec['terminal']=[]
+ 133     for c in children:
+ 134      c['p'].wait(timeout=max(.1,min(3,deadline-time.monotonic()-4)));g=ns.group(c['anchor'],c['known']) if c['anchor'] else []
+ 135      rec['terminal'].append({'role':c['role'],'exit':c['p'].returncode,'group':g,'utc':utc()})
+ 136      if g:raise Stop('UNKNOWN_GROUP_REMAINS')
+ 137     rec['verified_termination']=True
+ 138    except BaseException as e:rec['verified_termination']=False;rec['status']='UNKNOWN_TERMINATION';rec['cleanup_error']=repr(e)
+ 139    obs.close()
+ 140    for f in handles:f.flush();f.close()
+ 141   try:
+ 142    stderr=b''.join((folder/(c['role']+'_stderr.txt')).read_bytes() for c in children)
+ 143    if rec['status']=='STOP_CORRECTNESS' and 'CHILD_EXIT' in rec.get('error',''):
+ 144     if b'INCOMPLETE_BUDGET' in stderr or any(x['exit'] in (-24,-25) for x in rec.get('terminal',[])):rec['status']='INCOMPLETE_BUDGET'
+ 145     elif b'MemoryError' in stderr or b'Out of memory' in stderr:rec['status']='STOP_RESOURCE'
+ 146    if rec['status']=='WAITING_READBACK':
+ 147     if stderr:raise Stop('STOP_STDERR')
+ 148     unchanged(deadline-6);rb=verify(R,folder,dataset,mode,deadline-6,input_row);put(folder/'independent_readback.json',rb);rec['readback']=rb;rec['status']=rb['status']
+ 149    rec['partial_observations']=partial(folder)
+ 150   except BaseException as e:rec['readback_error']=repr(e);rec['status']='INCOMPLETE_BUDGET' if 'INCOMPLETE_BUDGET' in str(e) else 'STOP_CORRECTNESS'
+ 151   rec.update(end_utc=utc(),elapsed=time.monotonic()-case_start,after=memory(),supervisor_CPU=time.process_time(),children_usage=list(resource.getrusage(resource.RUSAGE_CHILDREN)))
+ 152   if time.monotonic()>=deadline-3:rec['status']='INCOMPLETE_BUDGET'
+ 153   put(folder/'result.json',rec);receipt=seal(folder,{'status':rec['status'],'elapsed_before_seal':rec['elapsed']});rec['seal_receipt']=receipt
+ 154   sizes=[p.stat().st_size for p in folder.iterdir() if p.is_file()]
+ 155   if any(n>8388608 for n in sizes) or sum(sizes)>100663296:rec['status']='INCOMPLETE_BUDGET';rec['sealed_output_over_cap']=True
+ 156   if time.monotonic()>=deadline:rec['status']='INCOMPLETE_BUDGET';rec['late_seal']=True
+ 157   return rec
+ 158  code=2
+ 159  try:
+ 160   if F['_observed_sha256']!=launch['freeze_sha256']:raise Stop('STOP_FREEZE_IDENTITY')
+ 161   put(A/'T0.json',launch);result['limits_prepared']=prepare_supervisor_limits(F['role_limits']);prepared=True
+ 162   if sys.version_info[:3]!=(3,12,14):raise Stop('STOP_PYTHON_VERSION')
+ 163   result['before']=resource_gate(prep_end);ns=NamespaceView();g=inspect_prior(ns,B/'reused',F,lambda:tick(prep_end));put(A/'prior_process_gate.json',g)
+ 164   if g['blockers']:raise Stop('STOP_PRIOR_LIVE_PROCESS')
+ 165   identity_gate(prep_end);put(A/'identity_snapshot.json',snapshots);result['after_identity']=resource_gate(prep_end)
+ 166   for dataset in ('base','edge'):
+ 167    now=time.monotonic();rec=one('integration_'+dataset,'fixture',dataset,now,prep_end,min(prep_end-10,now+25));result['integration'].append(rec)
+ 168    if rec['status']!='PASS_FINITE_INTEGRATION' or not rec['verified_termination']:raise Stop('STOP_INTEGRATION')
+ 169   tick(prep_end);rows=json.loads((R/'decoder/inputs.json').read_text())['cases']
+ 170   if len(rows)!=8:raise Stop('STOP_INPUT_COUNT')
+ 171   for index,row in enumerate(rows):
+ 172    if time.monotonic()>=global_end:break
+ 173    now=time.monotonic();rec=one('case_%02d'%(index+1),'search','real',now,min(now+180,global_end),min(now+130,global_end-10),row);result['cases'].append({'id':row['id'],**rec})
+ 174    if not rec['verified_termination'] or rec['status'] not in ('CASE_COMPLETE_CANDIDATE','INCOMPLETE_BUDGET'):break
+ 175   got={r['id']:r.get('readback',{}) if r['status']=='CASE_COMPLETE_CANDIDATE' else {'status':r['status']} for r in result['cases']}
+ 176   for row in rows:
+ 177    if row['id'] not in got:got[row['id']]={'status':'NOT_STARTED'}
+ 178   # Truth is parsed only here, after all children ended; preparation hashed its bytes only.
+ 179   result['evaluation']=evaluate_all(R,got);result['status']='COMPLETED_PILOT_CANDIDATE' if result['evaluation']['completed']==8 else 'INCOMPLETE_PILOT';code=0 if result['evaluation']['completed']==8 else 2
+ 180  except BaseException as e:result['status']='STOP_PREPARATION' if not result['cases'] else 'STOP';result['error']=repr(e);result['traceback']=traceback.format_exc()
+ 181  finally:
+ 182   if prepared:
+ 183    try:result['final_limits']=seal_supervisor_limits(F['role_limits'])
+ 184    except BaseException as e:result['status']='STOP_LIMIT_SEAL';result['limit_error']=repr(e);code=2
+ 185   result.update(end_utc=utc(),elapsed=time.monotonic()-start,exit_code=code,supervisor_maxrss_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,supervisor_CPU=time.process_time())
+ 186   if result['elapsed']>=1500:result['status']='INCOMPLETE_BUDGET';result['exit_code']=code=2
+ 187   put(A/'result.json',result);seal(A,{'version':'BE-W16-v1','freeze_sha256':F['_observed_sha256'],'status':result['status'],'exit_code':code})
+ 188   print('SEAL_COMPUTED_SHA256 '+sha(A/'seal.json'),flush=True)
+ 189  return code
+ 190 if __name__=='__main__':raise SystemExit(main())

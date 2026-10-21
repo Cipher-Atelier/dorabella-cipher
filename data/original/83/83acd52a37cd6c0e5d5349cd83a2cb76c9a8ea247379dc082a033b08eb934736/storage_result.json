@@ -1,0 +1,1031 @@
+{
+  "status": "PASS_FULL_CENSUS_INDEX_AND_FINITE_BYTE_CONTRACT",
+  "start_utc": "2026-10-17T23:21:43.972254+00:00",
+  "tables": [
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm1",
+      "bytes": 479,
+      "sha256": "b1c7c75049963f55bb0e1ff104453113cf4be50b98272b776f3870aed11d8648",
+      "role": "unchanged_model",
+      "id": 1,
+      "order": 1,
+      "rows": 28,
+      "index_path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm1.idx",
+      "index_sha256": "dff7a134c2946a5ab6256620e360a75e21bbb6c68bdd09067e69f29e8eb34655",
+      "index_bytes": 232,
+      "canonical_sha256": "9b9e9410f4d18eaceb15440f2a6ed870fcb1edf24ffd325ec42a39c4858c8c78",
+      "duplicates": 0,
+      "max_duplicate_run": 1,
+      "max_row_bytes": 20,
+      "max_token_bytes": 4,
+      "max_value_bytes": 14,
+      "perl_false_literal_zero_rows": 0,
+      "numeric_forms": {
+        "decimal": 28
+      },
+      "queries": [
+        [
+          "<\\s>"
+        ],
+        [
+          "_"
+        ],
+        [
+          "l"
+        ],
+        [
+          "z"
+        ],
+        [
+          "<u>"
+        ],
+        [
+          "~TS-LM-MISSING~"
+        ]
+      ],
+      "build_elapsed": 0.0002759850030997768,
+      "reference": [
+        {
+          "found": true,
+          "value_hex": "302e303038363038383331363036",
+          "last_row_1based": 1
+        },
+        {
+          "found": true,
+          "value_hex": "302e313635343531303534343638",
+          "last_row_1based": 2
+        },
+        {
+          "found": true,
+          "value_hex": "302e303334363931383030383631",
+          "last_row_1based": 14
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030393135323237313939",
+          "last_row_1based": 28
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      ],
+      "readback_elapsed": 0.0004867570096394047
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm2",
+      "bytes": 14882,
+      "sha256": "b9523db152557f04a2f40e102f76d255e5d0ff562b60ee6dec54bcc751f25505",
+      "role": "unchanged_model",
+      "id": 2,
+      "order": 2,
+      "rows": 776,
+      "index_path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm2.idx",
+      "index_sha256": "2c01aa2ca93c212e79b6fe57bbaa40d76965e2fe60eeb79212dfa689a48cd7f1",
+      "index_bytes": 6216,
+      "canonical_sha256": "9850a5264719061bf91060bb1b0fb68ac027139e9b012f050ac9f9aea9c7534d",
+      "duplicates": 0,
+      "max_duplicate_run": 1,
+      "max_row_bytes": 24,
+      "max_token_bytes": 4,
+      "max_value_bytes": 14,
+      "perl_false_literal_zero_rows": 0,
+      "numeric_forms": {
+        "decimal": 776
+      },
+      "queries": [
+        [
+          "<s>",
+          "<\\s>"
+        ],
+        [
+          "<s>",
+          "a"
+        ],
+        [
+          "l",
+          "z"
+        ],
+        [
+          "z",
+          "z"
+        ],
+        [
+          "<u>",
+          "<u>"
+        ],
+        [
+          "~TS-LM-MISSING~",
+          "~TS-LM-MISSING~"
+        ]
+      ],
+      "build_elapsed": 0.003480965009657666,
+      "reference": [
+        {
+          "found": true,
+          "value_hex": "302e303031343635343430343335",
+          "last_row_1based": 1
+        },
+        {
+          "found": true,
+          "value_hex": "302e303936343039393134333632",
+          "last_row_1based": 2
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030313439353037393338",
+          "last_row_1based": 388
+        },
+        {
+          "found": true,
+          "value_hex": "302e303435303237383230333932",
+          "last_row_1based": 776
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      ],
+      "readback_elapsed": 0.002988588996231556
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.chr.clm3",
+      "bytes": 268707,
+      "sha256": "299aa762b04e6f9211a9b3105c7a982f3d8d99aeed19b08690ac9f917240d294",
+      "role": "unchanged_model",
+      "id": 3,
+      "order": 3,
+      "rows": 12653,
+      "index_path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm3.idx",
+      "index_sha256": "bccd0b54da215aefdbb9fb04dc0fde8c604ccb7878ead5487660c53786cf41dd",
+      "index_bytes": 101232,
+      "canonical_sha256": "407f30694f4645e02cac251df25e2847bfb54e23a80ad1a65efccc4ecebb29f3",
+      "duplicates": 0,
+      "max_duplicate_run": 1,
+      "max_row_bytes": 29,
+      "max_token_bytes": 4,
+      "max_value_bytes": 14,
+      "perl_false_literal_zero_rows": 0,
+      "numeric_forms": {
+        "decimal": 12653
+      },
+      "queries": [
+        [
+          "<s>",
+          "<\\s>",
+          "<\\s>"
+        ],
+        [
+          "<s>",
+          "<s>",
+          "<\\s>"
+        ],
+        [
+          "l",
+          "a",
+          "o"
+        ],
+        [
+          "z",
+          "z",
+          "z"
+        ],
+        [
+          "<u>",
+          "<u>",
+          "<u>"
+        ],
+        [
+          "~TS-LM-MISSING~",
+          "~TS-LM-MISSING~",
+          "~TS-LM-MISSING~"
+        ]
+      ],
+      "build_elapsed": 0.05651326000224799,
+      "reference": [
+        {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 1
+        },
+        {
+          "found": true,
+          "value_hex": "302e303031343635343430343335",
+          "last_row_1based": 2
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030323138323135383536",
+          "last_row_1based": 6327
+        },
+        {
+          "found": true,
+          "value_hex": "302e303034353736363539303339",
+          "last_row_1based": 12653
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      ],
+      "readback_elapsed": 0.05019524499948602
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm1",
+      "bytes": 2928837,
+      "sha256": "da7c99e5eee36efeb1db7a6535e3175883176d685cf7cabf4c20e99d665d48f0",
+      "role": "unchanged_model",
+      "id": 4,
+      "order": 1,
+      "rows": 123621,
+      "index_path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm4.idx",
+      "index_sha256": "9a070f632a37ee3bb2bf912daaeb0ae1f2876b7d6053d4af6d24dd8f9cdd83a5",
+      "index_bytes": 988976,
+      "canonical_sha256": "b30b1ddcfc228f9cfa98662c9f4f3c69212444974301e79701c33fff8431e0bc",
+      "duplicates": 0,
+      "max_duplicate_run": 1,
+      "max_row_bytes": 46,
+      "max_token_bytes": 30,
+      "max_value_bytes": 14,
+      "perl_false_literal_zero_rows": 0,
+      "numeric_forms": {
+        "decimal": 123621
+      },
+      "queries": [
+        [
+          "<\\s>"
+        ],
+        [
+          "<u>"
+        ],
+        [
+          "leotta"
+        ],
+        [
+          "zzzzzzz"
+        ],
+        [
+          "<u>"
+        ],
+        [
+          "~TS-LM-MISSING~"
+        ]
+      ],
+      "build_elapsed": 0.4853758520039264,
+      "reference": [
+        {
+          "found": true,
+          "value_hex": "302e303437323039393435373937",
+          "last_row_1based": 1
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030303030303537343631",
+          "last_row_1based": 2
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030303030313134393232",
+          "last_row_1based": 61811
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030303030303537343631",
+          "last_row_1based": 123621
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030303030303537343631",
+          "last_row_1based": 2
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      ],
+      "readback_elapsed": 0.430129548010882
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm2",
+      "bytes": 86639772,
+      "sha256": "2e84f0d4a94bf37234128cfe516dcde16074f203842ca3797c26b4f454b50ef3",
+      "role": "unchanged_model",
+      "id": 5,
+      "order": 2,
+      "rows": 2988711,
+      "index_path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm5.idx",
+      "index_sha256": "492264312b065baad1052350f862a8c8ac174ffbaed890db79e065ef62a15bb0",
+      "index_bytes": 23909696,
+      "canonical_sha256": "4aa73d343f454f33746dcec71bde589adcdbc9fb3c16914fdca99bd2d78bf812",
+      "duplicates": 0,
+      "max_duplicate_run": 1,
+      "max_row_bytes": 55,
+      "max_token_bytes": 30,
+      "max_value_bytes": 14,
+      "perl_false_literal_zero_rows": 0,
+      "numeric_forms": {
+        "decimal": 2988711
+      },
+      "queries": [
+        [
+          "<s>",
+          "<\\s>"
+        ],
+        [
+          "<s>",
+          "<u>"
+        ],
+        [
+          "leija",
+          "<\\s>"
+        ],
+        [
+          "zzzzzzz",
+          "howard"
+        ],
+        [
+          "<u>",
+          "<u>"
+        ],
+        [
+          "~TS-LM-MISSING~",
+          "~TS-LM-MISSING~"
+        ]
+      ],
+      "build_elapsed": 14.055759886003216,
+      "reference": [
+        {
+          "found": true,
+          "value_hex": "302e303031343635343338363532",
+          "last_row_1based": 1
+        },
+        {
+          "found": true,
+          "value_hex": "302e303030303031323137313432",
+          "last_row_1based": 2
+        },
+        {
+          "found": true,
+          "value_hex": "302e303237373737373737373738",
+          "last_row_1based": 1494356
+        },
+        {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 2988711
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      ],
+      "readback_elapsed": 12.61345830699429
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_v1/model/lmtrain_nyt_word.unk.wlm3",
+      "bytes": 273680649,
+      "sha256": "c17a1148beb488067f4d4c7b90af1d67fd6aacf7e933ea15ee4bc577ed809921",
+      "role": "unchanged_model",
+      "id": 6,
+      "order": 3,
+      "rows": 8198302,
+      "index_path": "/workspace/scratch/f24f8fae4976/TS_LM_DISK_v1/attempt/lm6.idx",
+      "index_sha256": "fbdf8640f4a75a7ab38562799b8b1d1373b23f3d3e7824907562c5ceb745d3f6",
+      "index_bytes": 65586424,
+      "canonical_sha256": "5fa921e6200a008b6c56b843e735f9fe162c4a05b6de5c026ba33da5f5c2cd1b",
+      "duplicates": 0,
+      "max_duplicate_run": 1,
+      "max_row_bytes": 64,
+      "max_token_bytes": 30,
+      "max_value_bytes": 14,
+      "perl_false_literal_zero_rows": 0,
+      "numeric_forms": {
+        "decimal": 8198302
+      },
+      "queries": [
+        [
+          "<s>",
+          "<\\s>",
+          "<\\s>"
+        ],
+        [
+          "<s>",
+          "<s>",
+          "<\\s>"
+        ],
+        [
+          "license",
+          "was",
+          "temporarily"
+        ],
+        [
+          "zzzzzzz",
+          "howard",
+          "kleinberg"
+        ],
+        [
+          "<u>",
+          "<u>",
+          "<u>"
+        ],
+        [
+          "~TS-LM-MISSING~",
+          "~TS-LM-MISSING~",
+          "~TS-LM-MISSING~"
+        ]
+      ],
+      "build_elapsed": 44.143299650997506,
+      "reference": [
+        {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 1
+        },
+        {
+          "found": true,
+          "value_hex": "302e303031343635343338363532",
+          "last_row_1based": 2
+        },
+        {
+          "found": true,
+          "value_hex": "302e313131313131313131313131",
+          "last_row_1based": 4099151
+        },
+        {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 8198302
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        },
+        {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      ],
+      "readback_elapsed": 39.89699187000224
+    }
+  ],
+  "before": {
+    "memory.current": "6692470784\n",
+    "memory.max": "8589934592\n",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "memory.stat": "anon 92131328\nfile 6389600256\nkernel 209002496\nkernel_stack 720896\npagetables 3461120\nsec_pagetables 0\npercpu 10076\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 1589248\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 50331648\nshmem_thp 0\ninactive_anon 91852800\nactive_anon 73728\ninactive_file 11833344\nactive_file 6377754624\nunevictable 0\nslab_reclaimable 203777112\nslab_unreclaimable 986936\nslab 204764048\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 12142773\npgmajfault 0\npgrefill 0\npgactivate 1669113\npgdeactivate 0\npglazyfree 99\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n"
+  },
+  "reader_admission": {
+    "projected_bytes": 7314384392,
+    "threshold_exclusive": 7516192768,
+    "input_page_bytes": 363548672,
+    "index_bytes": 90592776
+  },
+  "fixtures": {
+    "positive_parse": 5,
+    "negative_checks": 17,
+    "negative_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      "query",
+      "query",
+      "offset",
+      "decreasing_order",
+      "frame",
+      "frame",
+      "frame",
+      "frame",
+      "numeric_value"
+    ],
+    "max_synthetic_response_frame_bytes": 31924,
+    "duplicate_last_write_and_missing": true,
+    "raw_numeric_strings_retained": true
+  },
+  "contract": {
+    "queries": [
+      {
+        "table": 1,
+        "query_index": 0,
+        "key_hex": [
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303038363038383331363036",
+          "last_row_1based": 1
+        }
+      },
+      {
+        "table": 1,
+        "query_index": 1,
+        "key_hex": [
+          "5f"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e313635343531303534343638",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 1,
+        "query_index": 2,
+        "key_hex": [
+          "6c"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303334363931383030383631",
+          "last_row_1based": 14
+        }
+      },
+      {
+        "table": 1,
+        "query_index": 3,
+        "key_hex": [
+          "7a"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030393135323237313939",
+          "last_row_1based": 28
+        }
+      },
+      {
+        "table": 1,
+        "query_index": 4,
+        "key_hex": [
+          "3c753e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 1,
+        "query_index": 5,
+        "key_hex": [
+          "7e54532d4c4d2d4d495353494e477e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 2,
+        "query_index": 0,
+        "key_hex": [
+          "3c733e",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303031343635343430343335",
+          "last_row_1based": 1
+        }
+      },
+      {
+        "table": 2,
+        "query_index": 1,
+        "key_hex": [
+          "3c733e",
+          "61"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303936343039393134333632",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 2,
+        "query_index": 2,
+        "key_hex": [
+          "6c",
+          "7a"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030313439353037393338",
+          "last_row_1based": 388
+        }
+      },
+      {
+        "table": 2,
+        "query_index": 3,
+        "key_hex": [
+          "7a",
+          "7a"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303435303237383230333932",
+          "last_row_1based": 776
+        }
+      },
+      {
+        "table": 2,
+        "query_index": 4,
+        "key_hex": [
+          "3c753e",
+          "3c753e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 2,
+        "query_index": 5,
+        "key_hex": [
+          "7e54532d4c4d2d4d495353494e477e",
+          "7e54532d4c4d2d4d495353494e477e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 3,
+        "query_index": 0,
+        "key_hex": [
+          "3c733e",
+          "3c5c733e",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 1
+        }
+      },
+      {
+        "table": 3,
+        "query_index": 1,
+        "key_hex": [
+          "3c733e",
+          "3c733e",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303031343635343430343335",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 3,
+        "query_index": 2,
+        "key_hex": [
+          "6c",
+          "61",
+          "6f"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030323138323135383536",
+          "last_row_1based": 6327
+        }
+      },
+      {
+        "table": 3,
+        "query_index": 3,
+        "key_hex": [
+          "7a",
+          "7a",
+          "7a"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303034353736363539303339",
+          "last_row_1based": 12653
+        }
+      },
+      {
+        "table": 3,
+        "query_index": 4,
+        "key_hex": [
+          "3c753e",
+          "3c753e",
+          "3c753e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 3,
+        "query_index": 5,
+        "key_hex": [
+          "7e54532d4c4d2d4d495353494e477e",
+          "7e54532d4c4d2d4d495353494e477e",
+          "7e54532d4c4d2d4d495353494e477e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 4,
+        "query_index": 0,
+        "key_hex": [
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303437323039393435373937",
+          "last_row_1based": 1
+        }
+      },
+      {
+        "table": 4,
+        "query_index": 1,
+        "key_hex": [
+          "3c753e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030303030303537343631",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 4,
+        "query_index": 2,
+        "key_hex": [
+          "6c656f747461"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030303030313134393232",
+          "last_row_1based": 61811
+        }
+      },
+      {
+        "table": 4,
+        "query_index": 3,
+        "key_hex": [
+          "7a7a7a7a7a7a7a"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030303030303537343631",
+          "last_row_1based": 123621
+        }
+      },
+      {
+        "table": 4,
+        "query_index": 4,
+        "key_hex": [
+          "3c753e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030303030303537343631",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 4,
+        "query_index": 5,
+        "key_hex": [
+          "7e54532d4c4d2d4d495353494e477e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 5,
+        "query_index": 0,
+        "key_hex": [
+          "3c733e",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303031343635343338363532",
+          "last_row_1based": 1
+        }
+      },
+      {
+        "table": 5,
+        "query_index": 1,
+        "key_hex": [
+          "3c733e",
+          "3c753e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303030303031323137313432",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 5,
+        "query_index": 2,
+        "key_hex": [
+          "6c65696a61",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303237373737373737373738",
+          "last_row_1based": 1494356
+        }
+      },
+      {
+        "table": 5,
+        "query_index": 3,
+        "key_hex": [
+          "7a7a7a7a7a7a7a",
+          "686f77617264"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 2988711
+        }
+      },
+      {
+        "table": 5,
+        "query_index": 4,
+        "key_hex": [
+          "3c753e",
+          "3c753e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 5,
+        "query_index": 5,
+        "key_hex": [
+          "7e54532d4c4d2d4d495353494e477e",
+          "7e54532d4c4d2d4d495353494e477e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 6,
+        "query_index": 0,
+        "key_hex": [
+          "3c733e",
+          "3c5c733e",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 1
+        }
+      },
+      {
+        "table": 6,
+        "query_index": 1,
+        "key_hex": [
+          "3c733e",
+          "3c733e",
+          "3c5c733e"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e303031343635343338363532",
+          "last_row_1based": 2
+        }
+      },
+      {
+        "table": 6,
+        "query_index": 2,
+        "key_hex": [
+          "6c6963656e7365",
+          "776173",
+          "74656d706f726172696c79"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "302e313131313131313131313131",
+          "last_row_1based": 4099151
+        }
+      },
+      {
+        "table": 6,
+        "query_index": 3,
+        "key_hex": [
+          "7a7a7a7a7a7a7a",
+          "686f77617264",
+          "6b6c65696e62657267"
+        ],
+        "result": {
+          "found": true,
+          "value_hex": "312e303030303030303030303030",
+          "last_row_1based": 8198302
+        }
+      },
+      {
+        "table": 6,
+        "query_index": 4,
+        "key_hex": [
+          "3c753e",
+          "3c753e",
+          "3c753e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      },
+      {
+        "table": 6,
+        "query_index": 5,
+        "key_hex": [
+          "7e54532d4c4d2d4d495353494e477e",
+          "7e54532d4c4d2d4d495353494e477e",
+          "7e54532d4c4d2d4d495353494e477e"
+        ],
+        "result": {
+          "found": false,
+          "value_hex": null,
+          "last_row_1based": null
+        }
+      }
+    ],
+    "cache_stats": {
+      "calls": 144,
+      "hits": 64,
+      "misses": 80,
+      "evictions": 77,
+      "preads": 2494,
+      "read_bytes": 51923,
+      "max_comparisons": 24,
+      "cache_payload_peak": 95
+    },
+    "elapsed": 0.015447031997609884,
+    "response_frame_bytes": 2663,
+    "all36_queries_exact": true,
+    "eviction_mutation_checks": 54
+  },
+  "after": {
+    "memory.current": "6788526080\n",
+    "memory.max": "8589934592\n",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "memory.stat": "anon 94568448\nfile 6480908288\nkernel 211390464\nkernel_stack 704512\npagetables 3452928\nsec_pagetables 0\npercpu 6556\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 91500544\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 50331648\nshmem_thp 0\ninactive_anon 94269440\nactive_anon 77824\ninactive_file 12398592\nactive_file 6468509696\nunevictable 0\nslab_reclaimable 206281872\nslab_unreclaimable 896944\nslab 207178816\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 12153409\npgmajfault 0\npgrefill 0\npgactivate 1691269\npgdeactivate 0\npglazyfree 99\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n"
+  },
+  "elapsed": 111.75870143099746,
+  "end_utc": "2026-10-17T23:23:35.730946+00:00",
+  "self_peak_rss_KiB": 13564
+}

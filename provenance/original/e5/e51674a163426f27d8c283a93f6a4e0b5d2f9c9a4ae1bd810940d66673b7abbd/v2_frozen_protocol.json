@@ -1,0 +1,19 @@
+{
+  "frozen_before_heldout_and_dorabella": true,
+  "utc": "2026-09-25T21:34:44.332462+00:00",
+  "sha256": {
+    "scan_v2.py": "21c0e7d72f761f5c0e307df87fda3b8cdc5780c98524cfaa9e7bb490da16f28e",
+    "fastsolve.py": "15e6f00eda8e1552baec7542d01a118ecf56dde86d4aec9eb826727463729739",
+    "data/english_model.npz": "a1d63163d5c10bcb15203c8feeeda449c6fc337805f6ac91107a3c368b6a9b76",
+    "results/v2_protocol.json": "968ce1bb36e6e6524c225198cbc54c08bd313927988877891b09a84732aef19d"
+  },
+  "development_result": {
+    "mode": "development",
+    "cases": 8,
+    "mean_best_score": -2.0369219791107747,
+    "mean_accuracy": 0.9755747126436781,
+    "at_least_90_percent": 8,
+    "at_least_95_percent": 7
+  },
+  "note": "No parameters may change for heldout/Dorabella/null runs; development controls are reused, not independent validation."
+}

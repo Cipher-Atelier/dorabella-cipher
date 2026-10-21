@@ -1,0 +1,497 @@
+{
+  "protocol": {
+    "id": "round9-order-sensitive-geometry-v1",
+    "seed": 2026100109,
+    "n_monte_carlo": 99999,
+    "primary": "sum over all three printed rows of squared cumulative radius at every glyph",
+    "direction": "orientation*pi/4; distance arcs 1..3",
+    "row_initial": "origin separately for each printed row",
+    "tail": "lower, compact paths",
+    "nulls": [
+      "rowwise uniform multiset permutation",
+      "independent uniform rowwise exact directed-bigram/endpoints ensemble"
+    ],
+    "secondary": "per-row exact tails; first two rows combined labelled diagnostic, not selected discovery",
+    "transcriptions": "both reported separately, no best-version selection",
+    "constraints": "no resets at dots, no image edits, no language or key optimisation",
+    "scope": "exploratory direction inherited from previous rounds; protocol frozen before new statistic/control results"
+  },
+  "implementation_checks": {
+    "complex_independent_checks": 1000,
+    "max_abs_error": 9.094947017729282e-12,
+    "toy_exhaustive_permutations": 120,
+    "toy_mean_matches_formula": true
+  },
+  "cases": {
+    "hauer_real": {
+      "rows": [
+        {
+          "row": 1,
+          "n": 2304,
+          "trigram_cardinality": 1,
+          "stat_observed_2E_A_B": [
+            2698,
+            -590
+          ],
+          "stat_observed": 931.806999099937,
+          "endpoint_2R2_A_B": [
+            180,
+            -126
+          ],
+          "exact_le": 2034,
+          "exact_equal": 1,
+          "mean_energy": 560.8337240100773,
+          "median_energy": 496.8175336435922,
+          "mean_changed_positions": 19.822916666666668,
+          "checks": "all strings unique; all pair counts, endpoints, unigrams, energy endpoints checked",
+          "enumerator": {
+            "strings": 2304,
+            "recursion_nodes": 30752,
+            "reachability_prunes": 5485
+          }
+        },
+        {
+          "row": 2,
+          "n": 103680,
+          "trigram_cardinality": 1,
+          "stat_observed_2E_A_B": [
+            3274,
+            -2008
+          ],
+          "stat_observed": 217.12958337741247,
+          "endpoint_2R2_A_B": [
+            186,
+            -128
+          ],
+          "exact_le": 11965,
+          "exact_equal": 1,
+          "mean_energy": 483.0070628046167,
+          "median_energy": 385.703355974969,
+          "mean_changed_positions": 25.33011188271605,
+          "checks": "all strings unique; all pair counts, endpoints, unigrams, energy endpoints checked",
+          "enumerator": {
+            "strings": 103680,
+            "recursion_nodes": 1274517,
+            "reachability_prunes": 208600
+          }
+        },
+        {
+          "row": 3,
+          "n": 13920,
+          "trigram_cardinality": 3,
+          "stat_observed_2E_A_B": [
+            2730,
+            134
+          ],
+          "stat_observed": 1459.7523086789975,
+          "endpoint_2R2_A_B": [
+            274,
+            -108
+          ],
+          "exact_le": 12208,
+          "exact_equal": 1,
+          "mean_energy": 1050.0540498293549,
+          "median_energy": 1043.0004332758886,
+          "mean_changed_positions": 20.45962643678161,
+          "checks": "all strings unique; all pair counts, endpoints, unigrams, energy endpoints checked",
+          "enumerator": {
+            "strings": 13920,
+            "recursion_nodes": 151666,
+            "reachability_prunes": 13678
+          }
+        }
+      ],
+      "joint_bigram_cardinality": "3325191782400",
+      "joint_trigram_cardinality": "3",
+      "unigram": {
+        "n": 99999,
+        "primary": {
+          "le": 60802,
+          "n": 99999,
+          "p_plus_one": 0.60803,
+          "observed_energy": 2608.6888911563465,
+          "null_mean": 2521.802215461379,
+          "null_quantiles_1_5_50_95_99": [
+            1097.6724571444543,
+            1355.4136095270192,
+            2365.7772029109155,
+            4218.587399543143,
+            5286.152987562919
+          ]
+        },
+        "first_two_diagnostic": {
+          "le": 47077,
+          "n": 99999,
+          "p_plus_one": 0.47078,
+          "observed_energy": 1148.9365824773495,
+          "null_mean": 1317.4376893071167,
+          "null_quantiles_1_5_50_95_99": [
+            462.7867746055081,
+            601.4533362243419,
+            1187.0106088820453,
+            2485.592504545959,
+            3291.044703590532
+          ]
+        },
+        "per_row_diagnostic": [
+          {
+            "le": 79623,
+            "n": 99999,
+            "p_plus_one": 0.79624,
+            "observed_energy": 931.806999099937,
+            "null_mean": 678.2175441352772,
+            "null_quantiles_1_5_50_95_99": [
+              172.95501006850733,
+              232.47181181471507,
+              563.1652967520946,
+              1524.7646752981716,
+              2206.380093112428
+            ]
+          },
+          {
+            "le": 5379,
+            "n": 99999,
+            "p_plus_one": 0.0538,
+            "observed_energy": 217.12958337741247,
+            "null_mean": 639.2201451718395,
+            "null_quantiles_1_5_50_95_99": [
+              156.80883937456287,
+              213.4551385645062,
+              520.8810255046327,
+              1473.730145360621,
+              2158.1353994628635
+            ]
+          },
+          {
+            "le": 73055,
+            "n": 99999,
+            "p_plus_one": 0.73056,
+            "observed_energy": 1459.7523086789975,
+            "null_mean": 1204.3645261542622,
+            "null_quantiles_1_5_50_95_99": [
+              343.0768404021705,
+              453.5935864602352,
+              1043.0101012677667,
+              2506.0260689597644,
+              3446.47296449614
+            ]
+          }
+        ],
+        "distinct_joint_sequences": 99999,
+        "mean_positions_changed": 79.01016010160102
+      },
+      "bigram": {
+        "n": 99999,
+        "primary": {
+          "le": 84208,
+          "n": 99999,
+          "p_plus_one": 0.84209,
+          "observed_energy": 2608.6888911563465,
+          "null_mean": 2092.94878664677,
+          "null_quantiles_1_5_50_95_99": [
+            1131.2170546205234,
+            1328.277238804665,
+            2043.9710703627557,
+            3021.8508826948996,
+            3502.937338286809
+          ]
+        },
+        "first_two_diagnostic": {
+          "le": 66567,
+          "n": 99999,
+          "p_plus_one": 0.66568,
+          "observed_energy": 1148.9365824773495,
+          "null_mean": 1042.2081123657392,
+          "null_quantiles_1_5_50_95_99": [
+            431.65078886097257,
+            529.8335731230912,
+            958.2128444980976,
+            1820.785397764772,
+            2242.7530172982774
+          ]
+        },
+        "per_row_diagnostic": [
+          {
+            "le": 88414,
+            "n": 99999,
+            "p_plus_one": 0.88415,
+            "observed_energy": 931.806999099937,
+            "null_mean": 559.5824580390316,
+            "null_quantiles_1_5_50_95_99": [
+              195.82005896053386,
+              230.4180387069805,
+              495.82005896053386,
+              1060.7805204412443,
+              1254.0583167250531
+            ]
+          },
+          {
+            "le": 11782,
+            "n": 99999,
+            "p_plus_one": 0.11783,
+            "observed_energy": 217.12958337741247,
+            "null_mean": 482.6256543267076,
+            "null_quantiles_1_5_50_95_99": [
+              150.2755163635744,
+              184.15310344327486,
+              385.57445968058437,
+              1193.9170644739531,
+              1523.865408427237
+            ]
+          },
+          {
+            "le": 87727,
+            "n": 99999,
+            "p_plus_one": 0.87728,
+            "observed_energy": 1459.7523086789975,
+            "null_mean": 1050.7406742810308,
+            "null_quantiles_1_5_50_95_99": [
+              493.157287525381,
+              561.4709960243657,
+              1045.1766235091372,
+              1636.4020202535532,
+              1825.953318805774
+            ]
+          }
+        ],
+        "distinct_joint_sequences": 99999,
+        "mean_positions_changed": 65.6110461104611
+      }
+    },
+    "hart_real": {
+      "rows": [
+        {
+          "row": 1,
+          "n": 2304,
+          "trigram_cardinality": 1,
+          "stat_observed_2E_A_B": [
+            2698,
+            -590
+          ],
+          "stat_observed": 931.806999099937,
+          "endpoint_2R2_A_B": [
+            180,
+            -126
+          ],
+          "exact_le": 2034,
+          "exact_equal": 1,
+          "mean_energy": 560.8337240100773,
+          "median_energy": 496.8175336435922,
+          "mean_changed_positions": 19.822916666666668,
+          "checks": "all strings unique; all pair counts, endpoints, unigrams, energy endpoints checked",
+          "enumerator": {
+            "strings": 2304,
+            "recursion_nodes": 30752,
+            "reachability_prunes": 5485
+          }
+        },
+        {
+          "row": 2,
+          "n": 131328,
+          "trigram_cardinality": 1,
+          "stat_observed_2E_A_B": [
+            3406,
+            -2152
+          ],
+          "stat_observed": 181.30620688654972,
+          "endpoint_2R2_A_B": [
+            190,
+            -128
+          ],
+          "exact_le": 11832,
+          "exact_equal": 1,
+          "mean_energy": 412.67106707338957,
+          "median_energy": 332.75613382360484,
+          "mean_changed_positions": 25.214775219298247,
+          "checks": "all strings unique; all pair counts, endpoints, unigrams, energy endpoints checked",
+          "enumerator": {
+            "strings": 131328,
+            "recursion_nodes": 1641498,
+            "reachability_prunes": 271109
+          }
+        },
+        {
+          "row": 3,
+          "n": 15552,
+          "trigram_cardinality": 3,
+          "stat_observed_2E_A_B": [
+            2442,
+            318
+          ],
+          "stat_observed": 1445.859956417322,
+          "endpoint_2R2_A_B": [
+            238,
+            -76
+          ],
+          "exact_le": 13652,
+          "exact_equal": 1,
+          "mean_energy": 1055.9505494553043,
+          "median_energy": 1024.8517677218592,
+          "mean_changed_positions": 20.698559670781894,
+          "checks": "all strings unique; all pair counts, endpoints, unigrams, energy endpoints checked",
+          "enumerator": {
+            "strings": 15552,
+            "recursion_nodes": 162995,
+            "reachability_prunes": 13246
+          }
+        }
+      ],
+      "joint_bigram_cardinality": "4705719681024",
+      "joint_trigram_cardinality": "3",
+      "unigram": {
+        "n": 99999,
+        "primary": {
+          "le": 55663,
+          "n": 99999,
+          "p_plus_one": 0.55664,
+          "observed_energy": 2558.9731624038086,
+          "null_mean": 2589.026944629242,
+          "null_quantiles_1_5_50_95_99": [
+            1137.4535674748754,
+            1404.6203004508852,
+            2434.3647224520964,
+            4306.323095499257,
+            5352.667217224651
+          ]
+        },
+        "first_two_diagnostic": {
+          "le": 42786,
+          "n": 99999,
+          "p_plus_one": 0.42787,
+          "observed_energy": 1113.1132059864865,
+          "null_mean": 1342.5763787593048,
+          "null_quantiles_1_5_50_95_99": [
+            477.94924444562963,
+            609.2784371094751,
+            1206.5753262323615,
+            2539.0234149355024,
+            3364.525704286523
+          ]
+        },
+        "per_row_diagnostic": [
+          {
+            "le": 79505,
+            "n": 99999,
+            "p_plus_one": 0.79506,
+            "observed_energy": 931.806999099937,
+            "null_mean": 680.4447970012407,
+            "null_quantiles_1_5_50_95_99": [
+              171.0360781354619,
+              232.50608433762213,
+              563.5816023555208,
+              1522.3556349186103,
+              2212.0708784021563
+            ]
+          },
+          {
+            "le": 2041,
+            "n": 99999,
+            "p_plus_one": 0.02042,
+            "observed_energy": 181.30620688654972,
+            "null_mean": 662.1315817580644,
+            "null_quantiles_1_5_50_95_99": [
+              161.22599492023141,
+              218.22244686086998,
+              537.1337674595186,
+              1548.0889901283124,
+              2305.930460802981
+            ]
+          },
+          {
+            "le": 70431,
+            "n": 99999,
+            "p_plus_one": 0.70432,
+            "observed_energy": 1445.859956417322,
+            "null_mean": 1246.450565869937,
+            "null_quantiles_1_5_50_95_99": [
+              369.2420858826591,
+              485.27677579342077,
+              1091.7796538894672,
+              2535.9045245444217,
+              3494.3584526111226
+            ]
+          }
+        ],
+        "distinct_joint_sequences": 99999,
+        "mean_positions_changed": 78.96235962359624
+      },
+      "bigram": {
+        "n": 99999,
+        "primary": {
+          "le": 85751,
+          "n": 99999,
+          "p_plus_one": 0.85752,
+          "observed_energy": 2558.9731624038086,
+          "null_mean": 2027.267976462072,
+          "null_quantiles_1_5_50_95_99": [
+            1126.888271743137,
+            1316.0192159857188,
+            1976.5072170133262,
+            2903.808869620096,
+            3336.147545792825
+          ]
+        },
+        "first_two_diagnostic": {
+          "le": 69966,
+          "n": 99999,
+          "p_plus_one": 0.69967,
+          "observed_energy": 1113.1132059864865,
+          "null_mean": 970.5893542467174,
+          "null_quantiles_1_5_50_95_99": [
+            406.45231666678075,
+            500.8093028959853,
+            898.2086604159915,
+            1650.7991359991129,
+            2042.6535983543781
+          ]
+        },
+        "per_row_diagnostic": [
+          {
+            "le": 88622,
+            "n": 99999,
+            "p_plus_one": 0.88623,
+            "observed_energy": 931.806999099937,
+            "null_mean": 558.5484453248952,
+            "null_quantiles_1_5_50_95_99": [
+              195.82005896053386,
+              230.4180387069805,
+              494.33477758629533,
+              1058.508442502602,
+              1254.8334777586294
+            ]
+          },
+          {
+            "le": 9072,
+            "n": 99999,
+            "p_plus_one": 0.09073,
+            "observed_energy": 181.30620688654972,
+            "null_mean": 412.0409089218222,
+            "null_quantiles_1_5_50_95_99": [
+              127.10724696000487,
+              160.24141519784337,
+              332.46176130837625,
+              985.9498787265168,
+              1322.2112498315057
+            ]
+          },
+          {
+            "le": 87759,
+            "n": 99999,
+            "p_plus_one": 0.8776,
+            "observed_energy": 1445.859956417322,
+            "null_mean": 1056.6786222153548,
+            "null_quantiles_1_5_50_95_99": [
+              521.0870862652927,
+              583.4516600406096,
+              1025.0883117545686,
+              1665.9970414071697,
+              1954.1025971044414
+            ]
+          }
+        ],
+        "distinct_joint_sequences": 99999,
+        "mean_positions_changed": 65.71715717157171
+      }
+    }
+  }
+}

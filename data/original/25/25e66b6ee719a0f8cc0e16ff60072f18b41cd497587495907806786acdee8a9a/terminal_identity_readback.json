@@ -1,0 +1,54 @@
+{
+  "UTC": "2026-10-18T17:04:12.529758+00:00",
+  "all_attempt_identities_absent": true,
+  "checks": [
+    {
+      "case": "integration_base",
+      "fresh_state": "ABSENT",
+      "observed": null,
+      "role": "broker",
+      "starttime": 1222860,
+      "visible_pid": 5275
+    },
+    {
+      "case": "integration_base",
+      "fresh_state": "ABSENT",
+      "observed": null,
+      "role": "perl",
+      "starttime": 1222865,
+      "visible_pid": 5276
+    },
+    {
+      "case": "integration_edge",
+      "fresh_state": "ABSENT",
+      "observed": null,
+      "role": "broker",
+      "starttime": 1222884,
+      "visible_pid": 5277
+    },
+    {
+      "case": "integration_edge",
+      "fresh_state": "ABSENT",
+      "observed": null,
+      "role": "perl",
+      "starttime": 1222888,
+      "visible_pid": 5278
+    },
+    {
+      "case": "case_01",
+      "fresh_state": "ABSENT",
+      "observed": null,
+      "role": "broker",
+      "starttime": 1222906,
+      "visible_pid": 5279
+    },
+    {
+      "case": "case_01",
+      "fresh_state": "ABSENT",
+      "observed": null,
+      "role": "perl",
+      "starttime": 1222911,
+      "visible_pid": 5280
+    }
+  ]
+}

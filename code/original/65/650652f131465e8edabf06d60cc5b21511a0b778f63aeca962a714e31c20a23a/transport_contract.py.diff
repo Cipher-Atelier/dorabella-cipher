@@ -1,0 +1,11 @@
+--- sources/storage/transport_contract.py
++++ runtime/transport_contract.py
+@@ -14,7 +14,7 @@
+             self.buffers[channel]=raw;return None
+         if not raw.endswith(b'\n') or b'\n' in raw[:-1]:raise ValueError('PIPELINING_FORBIDDEN')
+         self.buffers[channel]=b'';self.seq[channel]+=1
+-        if self.seq[channel]>(512 if channel=='lm' else 80000):raise ValueError('REQUEST_BOUND')
++        if self.seq[channel]>(2049 if channel=='lm' else 212000):raise ValueError('REQUEST_BOUND')
+         return raw,self.seq[channel]
+     def close(self,channel):
+         if channel not in self.closed or self.closed[channel] or self.buffers[channel]:raise ValueError('CLOSE_STATE')

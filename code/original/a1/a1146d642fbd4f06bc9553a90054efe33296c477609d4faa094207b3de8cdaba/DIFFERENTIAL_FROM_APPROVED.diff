@@ -1,0 +1,142 @@
+--- TS_DIFF_BRIDGE_v1/differential.pl
++++ TS_LM_PREFETCH_DIFF_v1/differential.pl
+@@ -9,7 +9,7 @@
+ use JMSmoothing;
+ use Utils;
+ use NoSpace;
+-use CompactPatList;
++use Prefetch;
+ BEGIN {
+   die "RUNTIME_MISMATCH" unless "$^V" eq 'v5.38.2'
+     && $Config{archname} eq 'x86_64-linux-gnu-thread-multi'
+@@ -22,12 +22,14 @@
+ open my $in,'<',"$fixture/cases.json" or die $!;
+ my $spec=$json->decode(do {local $/;<$in>});close $in or die $!;
+ my ($charlm1,$charlm2,$charlm3,$wordlm1,$wordlm2,$wordlm3)=({},{},{},{},{},{});
++if ($mode eq 'reference') {
+ ReadLM::ReadUnigramLM("$fixture/char.1",$charlm1);
+ ReadLM::ReadBigramLM("$fixture/char.2",$charlm2);
+ ReadLM::ReadTrigramLM("$fixture/char.3",$charlm3);
+ ReadLM::ReadUnigramLM("$fixture/word.1",$wordlm1);
+ ReadLM::ReadBigramLM("$fixture/word.2",$wordlm2);
+ ReadLM::ReadTrigramLM("$fixture/word.3",$wordlm3);
++}
+ my ($wl1,$wl2,$wl3)=(0.129793302623898,0.226872659329747,0.643334038046355);
+ my ($cl1,$cl2,$cl3)=(0.0950848948641174,0.229797965264228,0.675117139871655);
+ my $x=0.05;
+@@ -36,12 +38,8 @@
+ my @C;
+ my $global_iteration_count=0;
+ my ($grams_with_pattern,$is_word,$maxlen)=([0,{},{},{}],{},0);
+-my $bridge;
+-if ($mode eq 'reference') {
+-  Utils::ReadPList("$fixture/fixture.patlst",$grams_with_pattern,$is_word,\$maxlen,1);
+-} else {
+-  ($bridge,$grams_with_pattern,$is_word,$maxlen)=CompactPatList->attach($read_fd,$write_fd);
+-}
++my $bridge=$mode eq 'adapted' ? Prefetch->attach($read_fd,$write_fd) : undef;
++Utils::ReadPList("$fixture/fixture.patlst",$grams_with_pattern,$is_word,\$maxlen,1);
+ die "MAXLEN" unless $maxlen==6;
+ my $event_count=0;
+ my $score_calls=0;
+@@ -76,7 +74,9 @@
+   no warnings 'redefine';
+   *JMSmoothing::ProbCharWord=sub {
+     die "SCORE_CALL_BOUND" if ++$score_calls>2200;
+-    my $answer=$original_probability->(@_);
++    my @a=@_;my $answer;
++    if ($mode eq 'reference') {$answer=$original_probability->(@a);}
++    else {my @lm=$bridge->materialize('base',$a[0]);$answer=$original_probability->($a[0],@lm,@a[7..13]);}
+     Trace('score',$_[0],sprintf('%.17g',$answer),Bits($answer));
+     return $answer;
+   };
+@@ -99,9 +99,10 @@
+   my $winner=MCTS($trace_ctext,$case->{root},$maxit,$ngramorder);
+   Trace('winner',Roundtrip($trace_ctext,$winner));
+ }
+-$bridge->close() if defined $bridge;
+ $trace_case='terminal';
+ Trace('complete',{cases=>scalar(@{$spec->{cases}}),score_calls=>$score_calls});
++EdgeTests();
++$bridge->close() if defined $bridge;
+ exit 0;
+ 
+ sub MCTS {
+@@ -493,3 +494,77 @@
+   
+   return $newkey;
+ }
++
++# Additional finite diagnostics, never run during preparation.
++sub SmallLoad {
++ my ($name)=@_;my @lm=({},{},{},{},{},{});
++ ReadLM::ReadUnigramLM("$fixture/../$name/char.1",$lm[0]);
++ ReadLM::ReadBigramLM("$fixture/../$name/char.2",$lm[1]);
++ ReadLM::ReadTrigramLM("$fixture/../$name/char.3",$lm[2]);
++ ReadLM::ReadUnigramLM("$fixture/../$name/word.1",$lm[3]);
++ ReadLM::ReadBigramLM("$fixture/../$name/word.2",$lm[4]);
++ ReadLM::ReadTrigramLM("$fixture/../$name/word.3",$lm[5]);return @lm;
++}
++sub EdgeTests {
++ $trace_case='edge';
++ open my $e,'<',"$fixture/../edge/cases.json" or die $!;
++ my $edge=$json->decode(do {local $/;<$e>});close $e;
++ my @edge_lm=$mode eq 'reference' ? SmallLoad('edge') : ({},{},{},{},{},{});
++ my @rq=map {[1,[unpack('H*',$_)]]} @{$edge->{raw_keys}};
++ if ($mode eq 'adapted') {Prefetch::_fill(\@edge_lm,\@rq,$bridge->batch('edge',\@rq));}
++ for my $i (0..$#{$edge->{raw_keys}}) {
++  my $key=$edge->{raw_keys}[$i];my $v=$edge_lm[0]{$key};my $yes=defined($v)?1:0;
++  my $hex=defined($v)?unpack('H*',$v):undef;my $truth=$v?1:0;
++  die "RAW_TRUTH" unless $truth==$edge->{expected_truth}[$i];
++  die "RAW_HEX" unless (!defined($hex)&&!defined($edge->{expected_raw}[$i]))
++    || (defined($hex)&&defined($edge->{expected_raw}[$i])&&$hex eq $edge->{expected_raw}[$i]);
++  my $numeric=defined($v)?Bits(0+$v):undef;
++  die "ZERO_NV" if $i<3 && $numeric ne '0000000000000000';
++  Trace('raw',$key,$yes,$hex,$truth,$numeric);
++ }
++ my $unklm;
++ if ($mode eq 'reference') {$unklm=$edge_lm[0];}
++ else {
++  my @q=map {[1,[unpack('H*',$_)]]} split / /,$edge->{unknown_input};my @u=({},{},{},{},{},{});
++  Prefetch::_fill(\@u,\@q,$bridge->batch('edge',\@q));$unklm=$u[0];
++ }
++ my $unknown=JMSmoothing::replace_unknowns($edge->{unknown_input},$unklm,'<u>');
++ die "UNKNOWN_REPLACEMENT" unless $unknown eq $edge->{expected_unknown};Trace('unknown',$unknown);
++ my %expected_errors=map {$_=>1} @{$edge->{expected_error_indices}};
++ for my $i (0..$#{$edge->{score_probes}}) {
++  my $text=$edge->{score_probes}[$i];my @lm=$mode eq 'reference' ? @edge_lm : $bridge->materialize('edge',$text);
++  my (@warnings,$answer);my $ok;
++  {local $SIG{__WARN__}=sub {push @warnings,$_[0]};$ok=eval {$answer=$original_probability->($text,@lm,$cl1,$cl2,$cl3,$wl1,$wl2,$wl3,$x);1};}
++  my $error=$@;
++  die "UNEXPECTED_SCORE_EXCEPTION" if (!$ok) != !!$expected_errors{$i};
++  die "WRONG_SCORE_EXCEPTION" if !$ok && $error!~/Can't take log of 0/;
++  Trace('probe',$i,$text,$ok?Bits($answer):undef,$ok?sprintf('%.17g',$answer):undef,$error,\@warnings);
++ }
++ # Missing higher orders must stay absent, never synthesized/interpolated by storage.
++ my @rq2=([5,[map {unpack('H*',$_)} ('g','a')]],[6,[map {unpack('H*',$_)} ('a','g','a')]]);
++ my @missing;
++ if ($mode eq 'reference') {@missing=($edge_lm[4]{g}{a},$edge_lm[5]{a}{g}{a});}
++ else {my $v=$bridge->batch('edge',\@rq2);@missing=map {$_->[0]?pack('H*',$_->[1]):undef} @$v;}
++ die "MISSING_HIGHER_ORDER" if grep {defined($_)} @missing;Trace('missing_higher_order',2);
++ my @tie;
++ for my $text (@{$edge->{tie_texts}}) {
++  my @lm=$mode eq 'reference' ? ($charlm1,$charlm2,$charlm3,$wordlm1,$wordlm2,$wordlm3) : $bridge->materialize('base',$text);
++  push @tie,$original_probability->($text,@lm,$cl1,$cl2,$cl3,$wl1,$wl2,$wl3,$x);
++ }
++ die "TIE_BITS" unless Bits($tie[0]) eq Bits($tie[1]);
++ my %s=(first=>$tie[0],second=>$tie[1]);my @f;Insert('first',\%s,\@f);Insert('second',\%s,\@f);
++ my @r;Insert('second',\%s,\@r);Insert('first',\%s,\@r);
++ die "TIE_ORDER" unless join(',',@f) eq 'first,second' && join(',',@r) eq 'second,first';
++ Trace('tie',Bits($tie[0]),\@f,\@r);
++ if ($mode eq 'adapted') {
++  open my $n,'<',"$fixture/../../negative_responses.json" or die $!;
++  my $ns=$json->decode(do {local $/;<$n>});close $n;my @out;
++  for my $case (@$ns) {
++   my $ok=eval {Prefetch::parse_packet(pack('H*',$case->{raw_hex}),1,0,1);1};my $err=$@;
++   die "NEGATIVE_ACCEPTED" if $ok;die "NEGATIVE_WRONG_ERROR" unless index($err,$case->{error})==0;
++   push @out,[$case->{id},$case->{error}];
++  }
++  open my $out,'>',"$fixture/../../attempt/perl_negatives.json" or die $!;print $out $json->encode(\@out);close $out;
++ }
++ Trace('complete',{raw=>5,unknown=>1,score_probes=>11,expected_log_zero=>2,missing=>2,ties=>1});
++}

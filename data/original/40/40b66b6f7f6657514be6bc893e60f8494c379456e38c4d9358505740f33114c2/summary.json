@@ -1,0 +1,24 @@
+{
+  "n": 39,
+  "all_proposal_searches_computed_fresh": true,
+  "comparisons": {
+    "best_score": {
+      "real": -4.47838745417297,
+      "null_mean": -4.6897527593668675,
+      "exceedances": 1,
+      "p_add_one": 0.05
+    },
+    "identity_score": {
+      "real": -4.594507870019965,
+      "null_mean": -5.087335485458865,
+      "exceedances": 0,
+      "p_add_one": 0.025
+    },
+    "improvement": {
+      "real": 0.11612041584699462,
+      "null_mean": 0.3975827260919977,
+      "exceedances": 37,
+      "p_add_one": 0.95
+    }
+  }
+}

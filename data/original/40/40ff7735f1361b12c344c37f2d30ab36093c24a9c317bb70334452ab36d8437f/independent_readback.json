@@ -1,0 +1,102 @@
+{
+  "status": "VERIFIED_STOP_NO_CHILD_EXECUTION",
+  "utc": "2026-10-17T22:39:23.808631+00:00",
+  "stage_A": "NOT_STARTED",
+  "stage_P": "NOT_REACHED",
+  "checks": {
+    "outer_exit2": true,
+    "no_tool_session_id": true,
+    "no_child_commands": true,
+    "no_phases_or_stage_results": true,
+    "no_signals_or_child_terminal_records": true,
+    "zero_child_peak": true,
+    "error_exact": true,
+    "elapsed_within_limit": true,
+    "runner_stderr_empty": true,
+    "explicit_stdout_matches_saved_result": true,
+    "manifest_unchanged": true,
+    "original_zip_unchanged": true,
+    "saved_terminal_file_hashes": true,
+    "all_small_identities_unchanged": true,
+    "supervisor_identity_absent": true,
+    "both_matched_carrier_identities_absent": true,
+    "carrier_matches_exact_current_shell_command": true
+  },
+  "terminal_identity_checks": [
+    {
+      "visible_pid": 9761,
+      "recorded_starttime": 7619417,
+      "currently_exists": false,
+      "same_identity": false
+    },
+    {
+      "visible_pid": 9751,
+      "recorded_starttime": 7619414,
+      "currently_exists": false,
+      "same_identity": false
+    },
+    {
+      "visible_pid": 9752,
+      "recorded_starttime": 7619414,
+      "currently_exists": false,
+      "same_identity": false
+    }
+  ],
+  "carrier_command_evidence": [
+    {
+      "visible_pid": 9751,
+      "argv0": "/root/.codex/tmp/arg0/codex-arg0s8zeyZ/codex-linux-sandbox",
+      "has_exact_shell_command_argument": true,
+      "has_standalone_runner_argument": false,
+      "state_at_match": "S",
+      "starttime": 7619414,
+      "pid_namespace_observed": null
+    },
+    {
+      "visible_pid": 9752,
+      "argv0": "/root/.codex/tmp/arg0/codex-arg0s8zeyZ/codex-linux-sandbox",
+      "has_exact_shell_command_argument": true,
+      "has_standalone_runner_argument": false,
+      "state_at_match": "S",
+      "starttime": 7619414,
+      "pid_namespace_observed": null
+    }
+  ],
+  "resource": {
+    "before": {
+      "memory.max": "8589934592",
+      "memory.current": "6684532736",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "after": {
+      "memory.max": "8589934592",
+      "memory.current": "6686167040",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+    },
+    "self_peak_rss_KiB": 14592,
+    "children_peak_rss_KiB": 0,
+    "preflight_P_gate": false
+  },
+  "workload": {
+    "runner_invocations": 1,
+    "child_processes_launched": 0,
+    "fixture_MCTS_runs": 0,
+    "transport_list_queries": 0,
+    "negative_fixtures": 0,
+    "LM_loads": 0,
+    "search_inputs": 0,
+    "control87": 0,
+    "target": 0,
+    "note": "No A/P trace expected: stopped before first launch."
+  },
+  "timing": {
+    "start_utc": "2026-10-17T22:37:30.576112+00:00",
+    "end_utc": "2026-10-17T22:37:30.620774+00:00",
+    "runner_elapsed_seconds": 0.044668497997918166,
+    "raw_tool_observation_start_utc": "2026-10-17T22:37:30.358Z",
+    "raw_tool_observation_return_utc": "2026-10-17T22:37:30.916Z",
+    "raw_tool_wall_seconds_metadata": 3.526e-05,
+    "time_semantics": "Monotonic runner elapsed and tool-observation interval are distinct; tool wall metadata is not substituted for runner elapsed."
+  },
+  "all_checks_true": true
+}

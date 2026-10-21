@@ -1,0 +1,35 @@
+{
+  "code_sha256": "37be553d8be585da0dd3af066c590f0f7156dc52c26ccd14c2378c23c68eb484",
+  "files": [
+    {
+      "bytes": 1350,
+      "path": "decoder/inputs.json",
+      "sha256": "b28a4c18cf9084c181d2c029b88c83a42e6d6d365978598754c8ae5327a1afce"
+    },
+    {
+      "bytes": 1773,
+      "path": "evaluator/source_capture.json",
+      "sha256": "9929016fff9a76c92abecdfa3ea1668ca2b8080b234fc7f2882a49445554d9f8"
+    },
+    {
+      "bytes": 75176,
+      "path": "evaluator/truth.json",
+      "sha256": "193060ec2373bb902cf5d43b09517a724453ceb1d9fec48b984ddd7b0736ddea"
+    },
+    {
+      "bytes": 2899,
+      "path": "evidence/PLAN.json",
+      "sha256": "3885d972b859af659cdc726564d613f8b9e97bd8ae17c65929c3d5a6619b2af2"
+    },
+    {
+      "bytes": 5124,
+      "path": "evidence/result.json",
+      "sha256": "a0a32b416619728c18ca1c48f86b356f96e70188dd990deb0e1d550475b9fea8"
+    },
+    {
+      "bytes": 24870,
+      "path": "protocol.md",
+      "sha256": "03c81d1cc4529a8859f38e07bdb60591635070681edf96ae3e81c8ff275427ce"
+    }
+  ]
+}

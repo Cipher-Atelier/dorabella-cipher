@@ -1,0 +1,27 @@
+00 {'same_axis': 41, 'opposite': 27, 'exact_mirrors': 13, 'same_axis_pairing_rank': 1, 'mi_pairing_rank': 1} {'fixed_axes': {'n': 200000, 'hits': 25, 'threshold': 41.0, 'p_plus_one': 0.00012999935000325, 'mc_probability_interval95': [8.08949910439919e-05, 0.00018451916655096365], 'null_mean': 25.585255}, 'best_of105_pairings': {'n': 200000, 'hits': 539, 'threshold': 41.0, 'p_plus_one': 0.0026999865000674997, 'mc_probability_interval95': [0.0024725252367091568, 0.0029320770632161168], 'null_mean': 31.19256}, 'fixed_axes_no_line_edges': {'n': 200000, 'hits': 34, 'threshold': 40.0, 'p_plus_one': 0.00017499912500437497, 'mc_probability_interval95': [0.00011773272464018995, 0.0002375499358668395], 'null_mean': 24.9892}}
+01 {'same_axis': 42, 'opposite': 28, 'exact_mirrors': 13, 'same_axis_pairing_rank': 1, 'mi_pairing_rank': 1} {'fixed_axes': {'n': 200000, 'hits': 10, 'threshold': 42.0, 'p_plus_one': 5.4999725001374995e-05, 'mc_probability_interval95': [2.3977195520032403e-05, 9.194985144442981e-05], 'null_mean': 25.94801}, 'best_of105_pairings': {'n': 200000, 'hits': 230, 'threshold': 42.0, 'p_plus_one': 0.0011549942250288748, 'mc_probability_interval95': [0.0010062391662692906, 0.0013085183220525683], 'null_mean': 31.25539}, 'fixed_axes_no_line_edges': {'n': 200000, 'hits': 16, 'threshold': 41.0, 'p_plus_one': 8.499957500212499e-05, 'mc_probability_interval95': [4.5727581572674456e-05, 0.00012991174562870195], 'null_mean': 25.34365}}
+10 {'same_axis': 42, 'opposite': 28, 'exact_mirrors': 13, 'same_axis_pairing_rank': 1, 'mi_pairing_rank': 1} {'fixed_axes': {'n': 200000, 'hits': 11, 'threshold': 42.0, 'p_plus_one': 5.9999700001499995e-05, 'mc_probability_interval95': [2.7456111327469297e-05, 9.840805656759783e-05], 'null_mean': 25.838455}, 'best_of105_pairings': {'n': 200000, 'hits': 245, 'threshold': 42.0, 'p_plus_one': 0.0012299938500307498, 'mc_probability_interval95': [0.0010764751288712662, 0.0013882703258471722], 'null_mean': 31.257765}, 'fixed_axes_no_line_edges': {'n': 200000, 'hits': 16, 'threshold': 41.0, 'p_plus_one': 8.499957500212499e-05, 'mc_probability_interval95': [4.5727581572674456e-05, 0.00012991174562870195], 'null_mean': 25.236115}}
+11 {'same_axis': 43, 'opposite': 29, 'exact_mirrors': 13, 'same_axis_pairing_rank': 1, 'mi_pairing_rank': 1} {'fixed_axes': {'n': 200000, 'hits': 5, 'threshold': 43.0, 'p_plus_one': 2.9999850000749997e-05, 'mc_probability_interval95': [8.117480179060688e-06, 5.8340687798037695e-05], 'null_mean': 26.1785}, 'best_of105_pairings': {'n': 200000, 'hits': 101, 'threshold': 43.0, 'p_plus_one': 0.0005099974500127499, 'mc_probability_interval95': [0.0004113490330576133, 0.0006135874496733798], 'null_mean': 31.320405}, 'fixed_axes_no_line_edges': {'n': 200000, 'hits': 8, 'threshold': 42.0, 'p_plus_one': 4.4999775001124996e-05, 'mc_probability_interval95': [1.7269313984595516e-05, 7.88144164490173e-05], 'null_mean': 25.568435}}
+{
+  "historical": {
+    "n": 32,
+    "mean": 24.6875,
+    "minimum": 17,
+    "maximum": 32,
+    "at_least41": 0
+  },
+  "historical_best_pairing": {
+    "n": 32,
+    "mean": 29.375,
+    "minimum": 25,
+    "maximum": 35,
+    "at_least41": 0
+  },
+  "news": {
+    "n": 206,
+    "mean": 25.28640776699029,
+    "minimum": 13,
+    "maximum": 35,
+    "at_least41": 0
+  }
+}

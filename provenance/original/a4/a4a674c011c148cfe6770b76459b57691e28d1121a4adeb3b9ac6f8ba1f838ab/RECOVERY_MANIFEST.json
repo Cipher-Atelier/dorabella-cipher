@@ -1,0 +1,61 @@
+{
+  "kind": "data restoration evidence, not new experiment/freeze",
+  "files": [
+    {
+      "member": "Dorabella_TS_model_restore_20261018.md",
+      "bytes": 10429,
+      "sha256": "7b183061668948b856a9ae297d7e5de9840335a84a73e4e7ec6fa50f906aff29"
+    },
+    {
+      "member": "RESTORATION_RESULT.json",
+      "bytes": 72427,
+      "sha256": "eba8e0e850fef06a378b0161c7c5064558475d3b2a6d6de96c0726c1e5ea2943"
+    },
+    {
+      "member": "RESTORATION_MAPPING.json",
+      "bytes": 8261,
+      "sha256": "24956da117406b65a115bb47d0e1de043270c695f33f464fa8cb71ffc800d381"
+    },
+    {
+      "member": "RESTORE_RECEIPT.json",
+      "bytes": 1233,
+      "sha256": "6407c60fadb1911583cfbbbb048acb3df020c1d20494eb0cb77a417f7e124317"
+    },
+    {
+      "member": "LIBRARY_SOURCE_ROUTE.json",
+      "bytes": 5975,
+      "sha256": "957ce91aafcd3836e9f4e2b1dae867d529d10effde9c605752337fe721450c1c"
+    },
+    {
+      "member": "restore_exact_data.py",
+      "bytes": 11229,
+      "sha256": "e1321b01f3186f18aa3afa43779ee03c0a76612d2d398d5b414ef43b858c7728"
+    },
+    {
+      "member": "provenance/MANIFEST.json",
+      "bytes": 4677,
+      "sha256": "3781ec024c269669ef5237bc0dc30ccc85c4ca5c368f8102bf91f82c777e7935"
+    },
+    {
+      "member": "provenance/download_receipts.json",
+      "bytes": 8664,
+      "sha256": "ab28477c3b67f83f95de5d29a84beda9eab03bd661c4b25f58dcb12192d507d8"
+    },
+    {
+      "member": "provenance/archive_readback.json",
+      "bytes": 5627,
+      "sha256": "ff042697117f69ed350951a284de68acabaa81637e5718cc9040f010fb4403be"
+    },
+    {
+      "member": "original_archives/language_data_char.tar.gz",
+      "bytes": 112066,
+      "sha256": "07e4ffa5fcf625ed2ee7f450b10b491639b1216bcdfad5274058e1cce4c4cc46"
+    },
+    {
+      "member": "original_archives/language_data_word.tar.gz",
+      "bytes": 68901602,
+      "sha256": "7d98c9c17b5d8c6e838627b7655bc1ae3c37bf21355d954f045ff92621065ee9"
+    }
+  ],
+  "unchanged_combined_freeze_sha256": "33c953e9982803aa5fe9b6bffce9d43d8b55ac43052a73604ef9211d1adc8a0a"
+}

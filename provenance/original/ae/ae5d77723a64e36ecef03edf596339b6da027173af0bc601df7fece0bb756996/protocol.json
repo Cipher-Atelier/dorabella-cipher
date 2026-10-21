@@ -1,0 +1,43 @@
+{
+  "id": "round14-cyclic-triplet-independent-arcs-full87-exact-v1",
+  "frozen_utc": "2026-10-05T13:44:24.288046+00:00",
+  "hypothesis": "Fixed alphabetic triplets retain cyclic geometric group order up to rotation/reflection, but arc-letter order is independently arbitrary in every direction.",
+  "prior_scope": "Not a superset of round13. Intersection 12288 full keys; 26861568 keys newly outside round13. No claim this is an authenticated 1897 key.",
+  "alphabet": "ABCDEFGHIKLMNOPQRSTUWXYZ; merge I/J and U/V; scoring indices ASCII 0..25",
+  "group_order": "P[o]=(s*o+h)%8; s in [1,-1], then h in range(8)",
+  "arc_order": "Q lexicographic permutations of [0,1,2]; each direction independent",
+  "key_id": "pidx*6^8 + sum(q_o*6^o,o=0..7), q_0 least significant",
+  "key_formula": "key[3*o+c] = A24[3*P[o]+Q[q_o,c]]",
+  "full_keys_per_input": 26873856,
+  "positions": "All87 in existing forward order; no insertion/deletion/transposition/reversal/state changes/spelling repairs",
+  "score": "unchanged archived S87=C87+0.5W87; all84 character4grams, same word segmentation",
+  "pruning": "Every C evaluated. W skipped only when C+.5*upperW < incumbent-1e-9. upperW is exact DP over independent allowed letters at each occurrence: q5,q6,q7 fixed within a 6^5-key block; q0..q4 unconstrained to their three group letters. This is a superset, permitting inconsistent assignments per occurrence.",
+  "selection": "strict float64 maximum; retain every exact equal best key; choose smallest canonical ID. Tolerance1e-11 only verification,1e-10 descriptive comparison. No true-key tie selection.",
+  "inputs": "14 fresh encryptions of old 12 Bailey/Brewer +2 Elgar regression plaintexts;2real Hauer/Hartmeier;78archived directed-bigram-preserving controls (39each). No heldout data.",
+  "synthetic_seed": 202610051340,
+  "sensitivity_gate": "Before any real/null scoring: verify all14; require >=12 exact87/87 and >=1194/1218 letters correct. If fail, stop and report lack of sensitivity; no parameter changes within run.",
+  "controls": "Same full search on each. Verify counts,directed pairs,endpoints. Separate ranks and (k+1)/40 for each version; no pooled pair p or version cherry-pick. Adaptive exploration and reused controls: descriptive conditional tails, not confirmatory significance.",
+  "identifiability": "Each real/null87 output represented by2fullkeys due unobserved11,12,13,23 and only1observed member in orientation4; exact tie count must be even>=2. Fullkeys distinct, observed-string count13436928.",
+  "stop": "Complete frozen94inputs only after sensitivity gate and source/code checks; stop on verification failure or resource interruption, retain checkpoints. No model expansion, new cribs, score retuning, manuscript edits or external outreach. At completion report only this model result.",
+  "audit": "132 independent key/score/inverse and bound checks;12x1000synthetic pruned/unpruned checks before freeze. Recheck every final key/tie with independent implementation; independent roundtrip. Postrun complete unpruned audit for bailey_01,hauer_real,hart_real and hauer_real_pair_00.",
+  "benchmark": "synthetic random87:1,679,616keys in0.717seconds optimized; actual workload timing may vary. At most2case workers.",
+  "sources": [
+    "https://www.benzedrine.ch/dorabella.html",
+    "https://aclanthology.org/2021.smp-1.5.pdf"
+  ],
+  "prior_bundle_sha256": "f9b6839963c4d6d5f80afcbceea9c01a725dc20a777922efb6d5099fadbf18fd",
+  "prior_protocol_sha256": "43de9f2fc5dec87c13e9ec9a68d58295aed951a4d865f32c9648a0ff86f2a4a3",
+  "sha256": {
+    "data/scoring.npz": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+    "data/search_inputs.json": "012794b49e3dd566ec39f9f903021554112858b6c142a9ca5eba1cddbd291ebd",
+    "data/positive_truth.json": "d279476d7b43fcf15690d6d0b71350e136a24b232b3040f012726f6b7f2e2e26",
+    "code/engine.py": "c67d89d7f441168ec3bda7bfdd3c3fe09b1fd402199f2200c747f3e89c66871c",
+    "code/run.py": "4a2eb7343f356829064c9d36b783df7484b5ea33de514bb44470a09f39f1e202",
+    "code/prepare.py": "4afd7edcc50eee1072a505b1991ba77c2371ca3cef23af12425dc2faa24f34ab",
+    "code/verify.py": "822aa515d8e7aeabdab4fc88f2a468568cf5e21e5cd49970031f680cdf3e97a7",
+    "code/benchmark.py": "e34b0aec0e5ba4509d3f2cb905488a84f7ee2b9053fa131d36a34329f1836663",
+    "code/freeze.py": "e87132fa698492af1f55a55f947279ce3546d3616202f828df79a3ca8eb42ab2",
+    "checks/preflight.json": "e131578b8000e71d9e21e2195a4d9ff2fd65d38fe54f10efc5e4a106c260bf67",
+    "checks/benchmark.json": "8c293a70ef40ac7af8ad50f89ad940789ce5ac651c5fecd31ce548771c793d2a"
+  }
+}

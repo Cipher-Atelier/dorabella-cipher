@@ -1,0 +1,8 @@
+{
+  "mode": "heldout",
+  "cases": 16,
+  "mean_best_score": -1.993427802945059,
+  "mean_accuracy": 0.9762931034482758,
+  "at_least_90_percent": 16,
+  "at_least_95_percent": 15
+}

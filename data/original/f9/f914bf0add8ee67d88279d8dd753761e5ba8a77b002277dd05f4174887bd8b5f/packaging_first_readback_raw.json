@@ -1,0 +1,7 @@
+{
+  "chunk_id": "92f055",
+  "wall_time_seconds": 0,
+  "exit_code": 1,
+  "original_token_count": 64,
+  "output": "Traceback (most recent call last):\n  File \"/workspace/scratch/f24f8fae4976/ts_execution_pack_evidence.py\", line 16, in <module>\n    ns=os.readlink(d/'ns/pid')\n       ^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: '/proc/1/ns/pid'\n"
+}

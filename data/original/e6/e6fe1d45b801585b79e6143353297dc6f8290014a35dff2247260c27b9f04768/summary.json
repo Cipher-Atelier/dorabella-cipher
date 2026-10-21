@@ -1,0 +1,90 @@
+{
+  "cases": 414,
+  "sensitivity": {
+    "exact": 14,
+    "correct_letters": 1218,
+    "passed": true
+  },
+  "versions": {
+    "hauer_real": {
+      "id": "hauer_real",
+      "kind": "real",
+      "source": null,
+      "S": -7.149013175926935,
+      "C": -4.656704920239572,
+      "W": -4.984616511374722,
+      "key_id": 106130,
+      "tie_count": 1,
+      "all_ties": [
+        106130
+      ],
+      "table": [
+        1,
+        9,
+        2
+      ],
+      "route": [
+        0,
+        1,
+        1,
+        34
+      ],
+      "plaintext": "hubylanwiezenqfxeactthinboissqckgpsiewahhedninhueeatpplinmwuduhereqdwnzbfheqsitsiwhunir",
+      "baseline_S": -7.763189678107233,
+      "baseline_key_id": 80779,
+      "gain": 0.6141765021802978,
+      "char_evaluations": 133632,
+      "word_evaluations": 131420,
+      "seconds": 0.30056639399845153,
+      "independent_score_error": 1.7763568394002505e-15,
+      "reencryption_exact": true,
+      "n_null": 199,
+      "null_ge_S": 31,
+      "plus_one_tail_S": 0.16,
+      "null_ge_gain": 30,
+      "plus_one_tail_gain": 0.155,
+      "null_score_min": -7.5406826881681255,
+      "null_score_max": -6.875648841296355
+    },
+    "hart_real": {
+      "id": "hart_real",
+      "kind": "real",
+      "source": null,
+      "S": -7.1230278330481145,
+      "C": -4.6079787026417405,
+      "W": -5.030098260812747,
+      "key_id": 81416,
+      "tie_count": 1,
+      "all_ties": [
+        81416
+      ],
+      "table": [
+        1,
+        3,
+        2
+      ],
+      "route": [
+        1,
+        1,
+        1,
+        28
+      ],
+      "plaintext": "tnmxaxquwirkfaeaxksenasfawdsrkinlppteaasfinibafferanupgmbournocllerzhfarfinarelymboudwh",
+      "baseline_S": -7.86553935553548,
+      "baseline_key_id": 80779,
+      "gain": 0.7425115224873657,
+      "char_evaluations": 133632,
+      "word_evaluations": 130910,
+      "seconds": 0.31285625300370157,
+      "independent_score_error": 0.0,
+      "reencryption_exact": true,
+      "n_null": 199,
+      "null_ge_S": 31,
+      "plus_one_tail_S": 0.16,
+      "null_ge_gain": 30,
+      "plus_one_tail_gain": 0.155,
+      "null_score_min": -7.589337799387639,
+      "null_score_max": -6.790841150138618
+    }
+  }
+}

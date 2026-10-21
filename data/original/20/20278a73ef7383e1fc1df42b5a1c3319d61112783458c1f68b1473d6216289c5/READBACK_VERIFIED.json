@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED_ORIGINAL_MODULE_FIXTURE_PASS",
+  "utc": "2026-10-17T13:54:53.432935+00:00",
+  "outer_exit": 0,
+  "perl_exit": 0,
+  "complete_json_objects_compared": 2,
+  "tolerance": 0,
+  "comparisons": [
+    {
+      "case": 1,
+      "groups": 5,
+      "candidates": 16,
+      "words": 9,
+      "maxlen": 6,
+      "segmentations": 10,
+      "exact": true
+    },
+    {
+      "case": 2,
+      "groups": 7,
+      "candidates": 68945,
+      "words": 123619,
+      "maxlen": 46,
+      "segmentations": 6,
+      "exact": true
+    }
+  ],
+  "elapsed": 2.12222086499969,
+  "child_peak_RSS_KiB": 89432,
+  "shared_cgroup_observed_max": 6747860992,
+  "stderr_bytes": 0,
+  "terminal_group": [],
+  "exact_live_matches": [],
+  "author_sources_unchanged": true,
+  "v1_STOP_package_unchanged": true,
+  "no_original_function_reexecution_in_readback": true,
+  "not_general_numerical_or_search_equivalence": true
+}

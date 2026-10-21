@@ -1,0 +1,9 @@
+{
+  "files_verified": 170,
+  "historical_STOP_unchanged": true,
+  "primary_stdout_sha256": "29f3d2f86ba880857204f3a199f6db8b2ef0c85f87c9ae186a36e43c664ae86c",
+  "seal_sha256": "3098182951c6c10ec8e05c47c84bf50ad6e0a7fbc8b284fd91510de0c6909c49",
+  "status": "DELIVERY_VERIFIED_NO_GO",
+  "target_authorization": false,
+  "zip_sha256": "4c8fb809dc5cf62c02c83647ec84e2465029ec49bccff93ef0a9761d9e1ab155"
+}

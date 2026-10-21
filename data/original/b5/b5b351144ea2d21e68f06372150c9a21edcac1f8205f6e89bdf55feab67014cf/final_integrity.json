@@ -1,0 +1,10 @@
+{
+  "records": 72,
+  "candidates_roundtripped": 642,
+  "max_score_recompute_error": 0.0,
+  "frozen_search_and_execution_hashes_intact": true,
+  "all_input_hashes_match": true,
+  "dorabella_full_v4_repeat_identical": true,
+  "repeat_seconds": 24.075567743999954,
+  "caveat": "Repeat reuses unchanged v2/v3 finalist bank; the v4 key search itself was recomputed in full."
+}

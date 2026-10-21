@@ -1,0 +1,36 @@
+{
+  "protocol": {
+    "n_null": 99,
+    "n_positive": 32,
+    "seed_null": 2026092605,
+    "seed_positive": 2026092615,
+    "n_rules": 32768,
+    "alphabet": "ABCDEFGHIKLMNOPQRSTUWXYZ",
+    "score": "merged C + 0.5 merged W; no learned substitution",
+    "rows": "concatenated; no dot/line resets",
+    "transcriptions": [
+      "Hauer SMP2021 Fig2",
+      "Hartmeier literal transcription"
+    ],
+    "positive_status": "32 already-used historical excerpts; all re-encrypted; sensitivity only",
+    "comparison": "same permutation for both transcriptions; individual and max-across-two null maxima"
+  },
+  "hashes": {
+    "model_v5.py": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b",
+    "affine_v5.py": "8de52a788c11297c1cd7717186d5012dfd4fa7c251a8f71cfb3c123b3a6a721e",
+    "run_v5.py": "c3679ac0dc4c11eb28981b5f3a7663239e144afc8dcc093fb15ad58f376823d6",
+    "data/english_merged24_v5.npz": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c",
+    "data/dorabella_smp2021.txt": "17e9869b0bcd650c97de9dbdd8d5ca2dba7670c273bf1a578ae010722ae17b4f",
+    "results/v5/inputs.json": "2710f64980442b5376c3782673f8a50b04287c681381a9256ed1751d41fac3c0",
+    "wordscore_v3.py": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790",
+    "wordpolish_v3.py": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "language.py": "e919c8f27b5923fa1c80b9ef7fb5ace9a0fb10849e766d0be72e2798f8af9799"
+  },
+  "lexicon": {
+    "dictionary_sha256": "eade91558167fe09a481abf59e176af8643ad78678cc53dd5aeaf2a8b30fa332",
+    "words": 29127,
+    "tokens": 1096363,
+    "normalisation": "ASCII lower; j->i and v->u; merge counts; unchanged segmentation penalties"
+  },
+  "note": "Frozen before this affine search; all Dorabella work remains exploratory. Historical plaintexts already known."
+}

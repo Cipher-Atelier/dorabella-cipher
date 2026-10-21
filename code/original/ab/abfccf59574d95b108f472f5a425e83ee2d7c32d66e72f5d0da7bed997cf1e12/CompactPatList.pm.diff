@@ -1,0 +1,58 @@
+--- sources/storage/CompactPatList.pm
++++ runtime/CompactPatList.pm
+@@ -4,6 +4,7 @@
+ use warnings;
+ use JSON::PP;
+ use IO::Handle;
++use StreamAudit;
+ 
+ sub attach {
+   my ($class,$read_fd,$write_fd) = @_;
+@@ -24,10 +25,11 @@
+ sub request {
+   my ($self,$op,$value)=@_;
+   die "CLOSED" if $self->{closed};
+-  die "REQUEST_BOUND" if ++$self->{seq}>80000;
++  die "REQUEST_BOUND" if ++$self->{seq}>212000;
+   die "TEXT_DOMAIN" if ref($value) || $value =~ /[^\x09-\x0d\x20-\x7e]/ || length($value)>87;
+   my $line=$self->{json}->encode([$self->{seq},$op,$value])."\n";
+   die "FRAME_BOUND" if length($line)>65536;
++  StreamAudit::request('pat',$line);
+   print {$self->{wr}} $line or die "BRIDGE_SEND: $!";
+   return $self->_response($self->{seq},$op);
+ }
+@@ -43,6 +45,7 @@
+   my $length=index($self->{buffer},"\n")+1;
+   die "FRAME_BOUND" if $length>65536;
+   my $raw=substr($self->{buffer},0,$length,'');
++  StreamAudit::response('pat',$raw);
+   return $self->{json}->decode($raw);
+ }
+ sub _uint {
+@@ -52,7 +55,7 @@
+ sub _response {
+   my ($self,$seq,$op)=@_;
+   my $h=$self->_frame();
+-  die "RESPONSE_ID" unless ref($h) eq 'ARRAY' && @$h>=3 && _uint($h->[0],80000) && $h->[0]==$seq;
++  die "RESPONSE_ID" unless ref($h) eq 'ARRAY' && @$h>=3 && _uint($h->[0],212000) && $h->[0]==$seq;
+   if ($h->[1] eq 'value') {
+     die "VALUE_SHAPE" unless @$h==3;
+     die "LIST_VALUE" if $op eq 'list' && defined($h->[2]);
+@@ -63,7 +66,7 @@
+   while (@values<$count) {
+     die "CHUNK_COUNT" if ++$frames>999;
+     my $c=$self->_frame();
+-    die "CHUNK_SHAPE" unless ref($c) eq 'ARRAY' && @$c==4 && _uint($c->[0],80000)
++    die "CHUNK_SHAPE" unless ref($c) eq 'ARRAY' && @$c==4 && _uint($c->[0],212000)
+       && $c->[0]==$seq && $c->[1] eq 'chunk' && _uint($c->[2],63911)
+       && $c->[2]==@values && ref($c->[3]) eq 'ARRAY' && @{$c->[3]}>0 && @{$c->[3]}<=64;
+     die "COUNT_OVERFLOW" if @values+@{$c->[3]}>$count;
+@@ -75,7 +78,7 @@
+     }
+   }
+   my $end=$self->_frame();
+-  die "LIST_END" unless ref($end) eq 'ARRAY' && @$end==4 && _uint($end->[0],80000)
++  die "LIST_END" unless ref($end) eq 'ARRAY' && @$end==4 && _uint($end->[0],212000)
+     && $end->[0]==$seq && $end->[1] eq 'end' && _uint($end->[2],63911)
+     && $end->[2]==$count && _uint($end->[3],2939906) && $end->[3]==$bytes;
+   return \@values;

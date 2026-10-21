@@ -1,0 +1,11 @@
+--- TS_RECOVERED_SEARCH_v2/sources/storage/adapter.py
++++ runtime/adapter.py
+@@ -103,7 +103,7 @@
+         self.tick()
+         self._bytes(word, 87)
+         self.stats['word_calls'] += 1
+-        if self.stats['word_calls'] > 100000:
++        if self.stats['word_calls'] > 200000:
+             raise ValueError('WORD_CALL_BOUND')
+         if word in self.word_cache:
+             self.stats['word_hits'] += 1

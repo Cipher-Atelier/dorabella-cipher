@@ -1,0 +1,90 @@
+{
+  "README_RU.md": {
+    "bytes": 18774,
+    "sha256": "5b88317dc27d0a35e1f66613c20d05868ff2cc285a286a488c26c236028f0723"
+  },
+  "audit.py": {
+    "bytes": 7794,
+    "sha256": "5c4bbd3852a127109a734acb339f6d8cfd92a3660c4bdffb5e669e3bb6920cdc"
+  },
+  "automata.py": {
+    "bytes": 2064,
+    "sha256": "17a07961710c1909512489fd0eb6f6d60e585ac93fd90e258ac18e3794d92d8f"
+  },
+  "checks.py": {
+    "bytes": 3282,
+    "sha256": "4640bd55fd4b8a84d148b02b522fd2a37d189a5996329a8ebfe259c19359e12f"
+  },
+  "data/dorabella_smp2021.txt": {
+    "bytes": 261,
+    "sha256": "17e9869b0bcd650c97de9dbdd8d5ca2dba7670c273bf1a578ae010722ae17b4f"
+  },
+  "data/english_model.npz": {
+    "bytes": 3157138,
+    "sha256": "a1d63163d5c10bcb15203c8feeeda449c6fc337805f6ac91107a3c368b6a9b76"
+  },
+  "data/model_metadata.json": {
+    "bytes": 716,
+    "sha256": "68146ad7da54401a83f0cfd5bd71db84ef3ef5f02eaf936b92c2d7f84fa23e74"
+  },
+  "data/sources.json": {
+    "bytes": 618,
+    "sha256": "09c39d7d054409fb026bab7d2e3b8869902d562d5ccd7d89582f33fe6ff5c8b5"
+  },
+  "diagnose.py": {
+    "bytes": 1747,
+    "sha256": "aa1086bfcbeca5d2b858720b79cea2a4bb87a1f6f07675d238d5adbb05cbb090"
+  },
+  "environment.json": {
+    "bytes": 135,
+    "sha256": "2267c393d9c512b2a28840ed7fadf9623d23e40c180959fbd41cd0eb7faac6a8"
+  },
+  "language.py": {
+    "bytes": 6990,
+    "sha256": "e919c8f27b5923fa1c80b9ef7fb5ace9a0fb10849e766d0be72e2798f8af9799"
+  },
+  "requirements.txt": {
+    "bytes": 55,
+    "sha256": "4d3597930411847617f325f1d4e7a85915c0081f04daa18faa2cb9d38fa27a83"
+  },
+  "results/audit.json": {
+    "bytes": 35150,
+    "sha256": "6630617f1c97775f71672eabbd05c75a72bef7f9120a400657acdae62f656fde"
+  },
+  "results/audit_null_arrays.npz": {
+    "bytes": 9624366,
+    "sha256": "93789128a844ea5b229addf14d624f0b002b8f9c132fb42bc1f8e2ab1eb9f49b"
+  },
+  "results/decoder_validation.json": {
+    "bytes": 5370,
+    "sha256": "88b7572b6359d3e20c3b19346f6ff80cfa6794d51787f24e4a01452ea22487e9"
+  },
+  "results/decoder_validation_low_budget.json": {
+    "bytes": 5402,
+    "sha256": "6425569cf8f251ddc3af9c05c205ba114aa1b0bc8e79ad50b5ac7858f4b90b04"
+  },
+  "results/implementation_checks.json": {
+    "bytes": 289,
+    "sha256": "ce710f05a2c15b4f3dd68fc5d20c514933ab1dedd05bd815eb16d38f4ce44acb"
+  },
+  "results/scan_protocol.json": {
+    "bytes": 1380,
+    "sha256": "e82293038c41676c85b30e8fb514124610b955a5032ceea3486c246cb674c53e"
+  },
+  "results/scan_records.jsonl": {
+    "bytes": 116545,
+    "sha256": "55d90ffd3ea3b42d6f7cdfae2e36bb605c55d1b9e1c885f2e30a78b82e2167fe"
+  },
+  "results/scan_summary.json": {
+    "bytes": 29452,
+    "sha256": "2fd12899d2198c6bc59ced14123b156e5e0129ad8e1edfd9d16ee8430ce4350e"
+  },
+  "results/screening_diagnostic.json": {
+    "bytes": 2171,
+    "sha256": "0c5958220e55c3b16d86babbc6b0c8026e58a60e7e94c88b9c39ceadcaeba449"
+  },
+  "scan.py": {
+    "bytes": 8032,
+    "sha256": "ca360adaa76dcb7ea89ce7da6248bbe818b73489c553a593df309269915ccb68"
+  }
+}

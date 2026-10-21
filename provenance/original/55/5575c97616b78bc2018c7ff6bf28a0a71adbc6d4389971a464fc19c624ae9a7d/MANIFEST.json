@@ -1,0 +1,115 @@
+{
+  "version": "CH2-blocked--CH3-plan-v1",
+  "created_utc": "2026-10-17T02:49:43.926494+00:00",
+  "CH2_status": "BLOCKED_BEFORE_SEARCH",
+  "CH2_search_T0": null,
+  "CH3_status": "PROPOSED_NOT_EXECUTED",
+  "CH3_runner_status": "Not implemented; original reference sources plus exact bounded-port specification",
+  "CH3_allowed_target_ids": [
+    "hauer_real",
+    "hart_real"
+  ],
+  "CH3_attack_executed": false,
+  "files": {
+    "CH2/BLOCKED_BEFORE_SEARCH.md": {
+      "sha256": "84ca94c9e30aa736ce91f89428cd8c3fb4f8c5b09d216cd04cb15d65ad29c3b4",
+      "bytes": 4149
+    },
+    "CH2/PREFLIGHT_POLICY_BEFORE_RESULTS.md": {
+      "sha256": "d8aad1f81e4773baf5da399b3520f426ac2b68d0178b5d3761ffb604b43bf403",
+      "bytes": 4662
+    },
+    "CH2/accepted_plan_v0.md": {
+      "sha256": "b5a69a7c4d71312a2afc93ce75a19e0b19d5913bbd803a8c55794f982e7f7af0",
+      "bytes": 28388
+    },
+    "CH2/control_selection.json": {
+      "sha256": "576a979afbe39931fd1aef8b9e5ecb9893de040a64412e1d16a85a1d5b102b4f",
+      "bytes": 3206
+    },
+    "CH2/en-spelling.txt": {
+      "sha256": "eade91558167fe09a481abf59e176af8643ad78678cc53dd5aeaf2a8b30fa332",
+      "bytes": 321210
+    },
+    "CH2/preflight_controls.py": {
+      "sha256": "86e23cf0b8f5d844f5ba882346b26f0e099afd8bf73d8dbd1deababe2004288d",
+      "bytes": 7622
+    },
+    "CH2/preflight_output/decoder_controls.json": {
+      "sha256": "04dd9b736b4bf52e49ad93114a732ecd356f16d0bc6a4364104869119fa1f1a9",
+      "bytes": 14219
+    },
+    "CH2/preflight_output/preflight_report.json": {
+      "sha256": "f125f45a87e962e2e8697dbdebfe6296d643d0cbfa471dcd60b741485f336c6d",
+      "bytes": 20039
+    },
+    "CH2/preflight_output/private_control_truth.json": {
+      "sha256": "76e468d91d1e983922c91a2a751d4b57459d863646c9a6e002d7c63bb64d0439",
+      "bytes": 504272
+    },
+    "CH2/preflight_raw_receipt.json": {
+      "sha256": "c341287e29d32130ccc8646bb595058501555561ccd9c0bc1bfc617645512003",
+      "bytes": 2048
+    },
+    "CH2/source_books/access_receipt.json": {
+      "sha256": "0071564a32ef34fb2529473b73e71194e762a1402c0b5adf45ad63f6321fea70",
+      "bytes": 743
+    },
+    "CH2/source_books/pg35698.txt": {
+      "sha256": "aa989e769576c4f1f136a72e711da0a4b3be0edb0236ca99b3f8b605328586b5",
+      "bytes": 826316
+    },
+    "CH2/source_books/pg40307.txt": {
+      "sha256": "478b46dec828bb85ebc0b45288d325d90af888e0dd6d067dcaf0c0d061c99aa4",
+      "bytes": 672019
+    },
+    "CH3/CH1_analytic_completion.md": {
+      "sha256": "d8db46f3c42fd1dbabe869accafd56fd2e2bb094f8ccdbe765e694c5333fc8b4",
+      "bytes": 9033
+    },
+    "CH3/PLAN.md": {
+      "sha256": "ebed23fb96fe4da1eb31447ce9d8e9cf2ba9007207dd8e8e9dd7790a65f3f312",
+      "bytes": 16081
+    },
+    "CH3/control_source_access.json": {
+      "sha256": "119b3134348bf768c1682a362e46711cd59605f2cf33692c634e80b207051696",
+      "bytes": 1287
+    },
+    "CH3/controls.json": {
+      "sha256": "bad4b38c09ff998d9c8cbb658f50bee6a4edf9f3c63c5b9c0e141dda530bcc52",
+      "bytes": 2803
+    },
+    "CH3/method_sources/README.md": {
+      "sha256": "58620d0b309d2e69381cdbd8630e35aff05338803fc4d89df9503d89aeef915f",
+      "bytes": 348
+    },
+    "CH3/method_sources/access_receipt.json": {
+      "sha256": "ca2157ccff8506422998abc7a1e0bf54c1c570e0e9fe8ccee78d27657d3bf13e",
+      "bytes": 1637
+    },
+    "CH3/method_sources/break_simplesub.py": {
+      "sha256": "15d255305d71eaa4dc903ce1d09e912300a1c1f850697b0f919fb95a5fdd9eba",
+      "bytes": 1663
+    },
+    "CH3/method_sources/commit.json": {
+      "sha256": "2db5d4d10338816c97b169a8633a8850dcb7f5488a5c174ee1dad571074a8f75",
+      "bytes": 9437
+    },
+    "CH3/method_sources/licence_MIT.txt": {
+      "sha256": "ec2fb0dee9d2763b1937d6503a3bbfec0968b6136869ef76738d589fe84ac337",
+      "bytes": 1088
+    },
+    "CH3/method_sources/ngram_score.py": {
+      "sha256": "f6d9df347079ec6ba50c2ecc67229ec3a8c43b0fbd4aa296ad8a7a6912508dbd",
+      "bytes": 981
+    },
+    "CH3/method_sources/quadgrams.txt": {
+      "sha256": "b461953d6ad3b5e1f0f07c133102b7656a205529cb8697a8ecda8d45311f7a55",
+      "bytes": 3289600
+    },
+    "CH3/search_inputs.json": {
+      "sha256": "20213ef608d401bd393ff545ba4c854cfc2cd1ddc546f55a96db4917c6f68894",
+      "bytes": 387859
+    }
+  }
+}

@@ -1,0 +1,50 @@
+Liszt fragment source audit — 2026-10-20
+
+Outcome: Not an established parallel known-plaintext pair. The linked image supports a conventional count of 18 curved glyph groups, with a separate terminal dash. The quoted phrase GETS YOU TO JOY, AND HYSTERIOUS has 25 alphabetic letters (4+3+2+3+3+10). These lengths are incompatible under one glyph = one letter. This rejects that specific pairing under that assumption, not the historical phrase under every possible encoding.
+
+Exact sources retrieved:
+https://www.benzedrine.ch/dorabella.html
+https://www.benzedrine.ch/dorabella-liszt.jpg
+https://www.benzedrine.ch/dorabella-liszt-page.gif
+
+The HTML explicitly links the JPG fragment to the GIF full-page view. The JPG is 279×109; the GIF is 453×687 and visibly bears printed page number 546. The full page shows the same marginal run alongside music examples, with both ends visible. No additional handwritten cipher run is visibly established on that page. This does not establish completeness of the entire historical programme.
+
+Source hierarchy:
+- The site's 18-character description is attributed to Kevin Jones in a BBC article.
+- Its 1886/place/object attribution is the site's caption and surrounding quotation, not legible archival metadata in these images.
+- The plaintext is quoted from Jerrold Northrop Moore, with attribution to a communication from Anthony Thorley in 1977.
+- This audit did not obtain Moore's original page, Thorley's communication, an independent transcript, or a documented character-to-letter alignment. The quotation is historical reporting, not independently verified plaintext.
+
+Visual grouping record:
+Use the JPG exactly as displayed, left to right solely for inventory; no reading direction is inferred. Approximate horizontal spans in original 279×109 pixels:
+1: 42–52
+2: 51–59
+3: 61–71
+4: 78–85
+5: 87–96
+6: 99–110
+7: 111–116
+8: 117–124
+9: 124–136
+10: 142–154
+11: 155–162
+12: 162–168
+13: 176–187
+14: 188–198
+15: 200–209
+16: 211–220
+17: 223–230
+18: 232–240
+Separate dash: approximately 245–254.
+
+These are visual group intervals, not connected-component counts, exact bounding boxes, a transcription into a cipher alphabet, or distinct-symbol types. Neighboring slanted groups can overlap horizontally. Fine disconnected marks remain in the unchanged source files and crops. In particular, marks near groups 6, 11 and 15 should not be silently normalized into extra letters or discarded as certain noise. Low resolution limits stroke-level certainty; nevertheless no evidence here supplies the seven extra alphabetic units required for a 25-letter one-to-one alignment. Even treating the dash as an extra unit gives only 19.
+
+Local witnesses:
+- dorabella.html: retrieved HTML, including original relative image links.
+- dorabella-liszt.jpg: original linked fragment.
+- dorabella-liszt-page.gif: original linked full page.
+- liszt-inscription-6x.png: nearest-neighbor enlargement of JPG crop (29,24,264,68).
+- liszt-inscription-6x-smooth.png: Lanczos display enlargement of the same crop, not new evidence.
+- liszt-fullpage-margin-6x.png: nearest-neighbor enlargement of GIF margin crop (28,222,76,453), preserving its original orientation.
+
+Missing evidence needed before use as known plaintext: a reliable complete inscription transcription plus a source-backed explanation/alignment connecting the 18 visible groups to the 25-letter quotation, or evidence that the quotation refers to a different or longer inscription. None is established by this page. No cipher transformation, key test, note mapping or solver was run.

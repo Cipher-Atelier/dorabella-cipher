@@ -1,0 +1,119 @@
+--- TS_TRANSPORT_PROFILE_v2/run_staged.py
++++ TS_LM_PREFETCH_DIFF_v1/run.py
+@@ -1,4 +1,4 @@
+-"""Authorized v2 supervisor identification fix; unchanged transport, A/P and limits."""
++"""Prepared combined LM differential and optional real-byte IPC; no production solver."""
+ from pathlib import Path
+ import os, sys, json, time, datetime, hashlib, resource, subprocess, signal, traceback
+ sys.dont_write_bytecode=True
+@@ -27,8 +27,8 @@
+ def main():
+     if ATTEMPT.exists(): print('REFUSED_EXISTING_ATTEMPT');return 3
+     ATTEMPT.mkdir();(ATTEMPT/'work').mkdir()
+-    start=time.monotonic();global_deadline=start+180;deadline=start+60
+-    result={'version':'TS-TRANSPORT-PROFILE-v2','status':'INCOMPLETE','start_utc':utc(),
++    launch=json.loads((BASE/'launch_evidence.json').read_text());start=launch['monotonic'];global_deadline=launch['global_deadline'];deadline=min(start+90,global_deadline)
++    result={'version':'TS-LM-PREFETCH-DIFF-v1','status':'INCOMPLETE','start_utc':launch['utc'],
+             'commands':[],'signals':[],'phases':[],'target_inputs':0,'control_87_inputs':0,'full_model_loads':0,'stages':{}}
+     dump('T0.json',{'utc':result['start_utc'],'monotonic':start,'global_deadline':global_deadline})
+     children=[];handles=[];parent_fds=set();ns=None
+@@ -37,7 +37,7 @@
+         if int(memory()['memory.current'])>=7*1024**3: raise Stop('STOP_SHARED_MEMORY')
+         for p in ATTEMPT.iterdir():
+             if p.is_file() and p.stat().st_size>8388608: raise Stop('STOP_OUTPUT_BOUND')
+-        if sum(p.stat().st_size for p in ATTEMPT.iterdir() if p.is_file())>64*1024**2:
++        if sum(p.stat().st_size for p in ATTEMPT.iterdir() if p.is_file())>32*1024**2:
+             raise Stop('STOP_TOTAL_OUTPUT_BOUND')
+         active=0
+         for child in children:
+@@ -53,10 +53,10 @@
+         if fd in parent_fds: os.close(fd);parent_fds.remove(fd)
+     def pipe():
+         pair=os.pipe();parent_fds.update(pair);return pair
+-    def launch(role,stdin,stdout,ipc=()):
++    def launch_child(role,stdin,stdout,ipc=()):
+         tick()
+         gr,gw=pipe()
+-        argv=[freeze['python'],'-I','-S',str(BASE/'child_gate.py'),role,str(gr),*map(str,ipc)]
++        argv=[freeze['python'],'-B','-I','-S',str(BASE/'child_gate.py'),role,str(gr),*map(str,ipc)]
+         stderr=log_handle(role+'_stderr.txt')
+         p=subprocess.Popen(argv,stdin=stdin,stdout=stdout,stderr=stderr,
+             pass_fds=(gr,*ipc),start_new_session=True,cwd=ATTEMPT/'work',env=freeze['environment'])
+@@ -116,8 +116,8 @@
+                 raise Stop('STOP_HASH:'+str(p))
+     def pair(prefix):
+         request_read,request_write=pipe();response_read,response_write=pipe()
+-        broker=launch(prefix+'_broker',request_read,response_write)
+-        perl=launch(prefix+'_perl',subprocess.DEVNULL,log_handle(prefix+'_perl.jsonl'),(response_read,request_write))
++        broker=launch_child(prefix+'_broker',request_read,response_write)
++        perl=launch_child(prefix+'_perl',subprocess.DEVNULL,log_handle(prefix+'_perl.jsonl'),(response_read,request_write))
+         for fd in (request_read,request_write,response_read,response_write):close_fd(fd)
+         release(broker);release(perl);observe_until_done([broker,perl])
+     try:
+@@ -127,8 +127,9 @@
+         if sys.version_info[:3]!=(3,12,14):raise Stop('STOP_PYTHON_VERSION')
+         result['before']=memory()
+         result['memory_stat_before']=Path('/sys/fs/cgroup/memory.stat').read_text()
+-        if result['before']['memory.max']!='8589934592' or int(result['before']['memory.current'])>freeze['resource']['A_enter_current_max']:
+-            raise Stop('STOP_A_RESOURCE_GATE')
++        if result['before']['memory.max']!='8589934592' or int(result['before']['memory.current'])+freeze['resource']['small_input_page_bytes']+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
++            raise Stop('STOP_FIXTURE_RESOURCE_GATE')
++        if (ATTEMPT/'Modules').exists():raise Stop('STOP_UNEXPECTED_PERL_INCLUDE_PATH')
+         verify(freeze['identities'])
+         ns=NamespaceView();result['namespace_self']=ns.self_record
+         from process_guard import regression,inspect_prior
+@@ -140,33 +141,29 @@
+         dump('process_guard.json',guard)
+         if guard['blockers']:raise Stop('STOP_PREVIOUS_LIVE_PROCESS')
+         result['hashes_verified']=True
+-        dump('A_deadline.json',{'deadline':deadline-4,'wall_deadline':deadline,'global_deadline':global_deadline})
+-        pair('fixture');pair('large')
+-        from readback import stage_a,stage_p
+-        tick();result['stages']['A']=stage_a();tick()
+-        result['stages']['A']['elapsed_including_initial_checks']=time.monotonic()-start
+-        dump('stage_A.json',result['stages']['A'])
+-        # Conditional load-only profile. No memory reclamation, waiting for resources, or retries.
+-        pstart=time.monotonic();deadline=min(global_deadline,pstart+60)
+-        dump('P_deadline.json',{'deadline':deadline-4,'wall_deadline':deadline,'global_deadline':global_deadline})
+-        pgate=memory();result['P_pre_hash_resource']=pgate
+-        if int(pgate['memory.current'])>freeze['resource']['P_pre_hash_current_max']:
+-            result['stages']['P']={'status':'SKIPPED_RESOURCE','reason':'PRE_HASH_CURRENT','observed':pgate}
+-            result['status']='PASS_A_PROFILE_SKIPPED_RESOURCE';code=0
++        dump('phase_deadline.json',{'deadline':deadline-4,'global_deadline':global_deadline})
++        reference=launch_child('reference_perl',subprocess.DEVNULL,log_handle('reference_perl.jsonl'))
++        release(reference);observe_until_done([reference])
++        pair('adapted')
++        from readback import fixture,real
++        tick();result['stages']['fixture']=fixture();dump('stage_fixture.json',result['stages']['fixture'])
++        # Conditional real-table byte IPC. No scoring/model hash-load/patlst access.
++        deadline=min(global_deadline,time.monotonic()+60)
++        dump('phase_deadline.json',{'deadline':deadline-4,'global_deadline':global_deadline})
++        pre=memory();result['real_pre_hash_resource']=pre
++        if int(pre['memory.current'])+freeze['resource']['all_input_page_bytes']+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
++            result['stages']['real']={'status':'SKIPPED_RESOURCE','phase':'PRE_HASH','observed':pre}
++            result['status']='PASS_FIXTURE_REAL_SKIPPED_RESOURCE';code=0
+         else:
+-            verify(freeze['six_lm']+[freeze['patlst'],freeze['full_index']])
+-            pgate=memory();result['P_post_hash_resource']=pgate
+-            if int(pgate['memory.current'])>freeze['resource']['P_post_hash_current_max']:
+-                result['stages']['P']={'status':'SKIPPED_RESOURCE','reason':'POST_HASH_CURRENT','observed':pgate}
+-                result['status']='PASS_A_PROFILE_SKIPPED_RESOURCE';code=0
++            verify(freeze['real_inputs'])
++            post=memory();result['real_post_hash_resource']=post
++            if int(post['memory.current'])+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
++                result['stages']['real']={'status':'SKIPPED_RESOURCE','phase':'POST_HASH','observed':post}
++                result['status']='PASS_FIXTURE_REAL_SKIPPED_RESOURCE';code=0
+             else:
+-                result['profile_launch_requested']=True
+-                pair('profile');result['full_model_loads']=1
+-                tick();result['stages']['P']=stage_p();tick()
+-                verify(freeze['six_lm']+[freeze['patlst'],freeze['full_index']])
+-                result['stages']['P']['elapsed_including_identity_checks']=time.monotonic()-pstart
+-                result['status']='PASS_TRANSPORT_AND_LOAD_PROFILE_ONLY';code=0
+-        dump('stage_P.json',result['stages']['P'])
++                pair('real');tick();result['stages']['real']=real();tick();verify(freeze['real_inputs'])
++                result['status']='PASS_FINITE_PREFETCH_AND_IPC_ONLY';code=0
++        dump('stage_real.json',result['stages']['real'])
+         verify(freeze['identities'])
+         if digest(BASE/'FREEZE.json',tick)!=result['manifest_sha256']:raise Stop('STOP_MANIFEST_CHANGED')
+     except BaseException as e:

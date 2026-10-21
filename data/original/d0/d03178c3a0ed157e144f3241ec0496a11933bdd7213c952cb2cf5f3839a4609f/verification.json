@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "score_checks": 136,
+  "max_score_error": 1.7763568394002505e-15,
+  "inverse_encodings_87": 14,
+  "objective_obstructions": 2,
+  "scope": "Independent score/inverse audit only, not heuristic calibration or decipherment"
+}

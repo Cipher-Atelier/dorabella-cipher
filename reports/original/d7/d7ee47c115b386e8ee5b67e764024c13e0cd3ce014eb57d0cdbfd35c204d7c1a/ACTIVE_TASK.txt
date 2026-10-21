@@ -1,0 +1,6 @@
+COMPLETED:52searches and independent checks PASS. No running solver.
+Read protocol.json, technical_recovery_addendum.json, checks/results_verified.json and checks/budget_seed_audit.json.
+Regression sensitivity10/12exact,1041/1044letters. Primary paired-max tail0.10 (1/19notlower). No verified decipherment.
+Do not start run.py or resume.py as continuation; this bounded experiment is finished.
+The whole procedure remains heuristic in the letter key; it does not exclude the family.
+Bundle identity and retained version are in delivery_identity.json; use same identity for final write.

@@ -1,0 +1,19 @@
+--- baseline/broker.py
++++ broker.py
+@@ -7,6 +7,7 @@
+ from adapter import CompactPatList
+ from wire import request,packet
+ from transport_contract import Channels,pat_request,encode_pat
++from evidence_io import Journal
+ def main():
+     role,*args=sys.argv[1:]
+     if role not in ('adapted_broker','real_broker') or len(args)!=4:raise RuntimeError('ARGS')
+@@ -21,7 +22,7 @@
+     names=['real'] if role=='real_broker' else ['base','edge'];stores={};pat=None
+     counters={'lm':{'requests':0,'lookups':0,'response_frames':0,'response_bytes':0,'max_frame':0,'closed':False},
+               'pat':{'requests':0,'response_frames':0,'response_bytes':0,'max_frame':0,'max_list_count':0,'candidate_occurrences':0,'closed':False}}
+-    mux=Channels();log=(B/'attempt'/f'{role}_ipc.jsonl').open('xb')
++    mux=Channels();log=Journal(B/'attempt'/f'{role}_ipc.jsonl',tick)
+     def write_record(channel,kind,raw):
+         log.write(b'{"channel":'+json.dumps(channel).encode()+b',"'+kind.encode()+b'":'+raw.rstrip(b'\n')+b'}\n');log.flush()
+     def send(channel,raw):

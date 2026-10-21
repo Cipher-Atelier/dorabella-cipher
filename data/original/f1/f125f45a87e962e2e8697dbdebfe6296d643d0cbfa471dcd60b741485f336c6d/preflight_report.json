@@ -1,0 +1,868 @@
+{
+  "stage": "KNOWN_CONTROL_PREFLIGHT_ONLY",
+  "started_utc": "2026-10-17T02:34:50.785221+00:00",
+  "ended_utc": "2026-10-17T02:34:50.859896+00:00",
+  "solver_executed": false,
+  "selection_sha256": "576a979afbe39931fd1aef8b9e5ecb9893de040a64412e1d16a85a1d5b102b4f",
+  "dictionary_sha256": "eade91558167fe09a481abf59e176af8643ad78678cc53dd5aeaf2a8b30fa332",
+  "max_eligible_successes": 5,
+  "eligible_by_assigned_branch": {
+    "B0": 0,
+    "B1": 2,
+    "B2": 1,
+    "B3": 2
+  },
+  "gate_6of8_necessary_conditions": false,
+  "case_summary": [
+    {
+      "id": "WJ1",
+      "decoder_id": "P01",
+      "assigned_branch": "B0",
+      "plaintext87": "THISMORNINGASIWASBUSYOVERTHETENTHPAGEOFALETTERTOWILKYINHEPOPPEDANDMADEMYLABOROFNOACCOUN",
+      "plaintext_sha256": "2ea2248c3f48ec436a8bf950b9567a9548a70d7d8897a94182baf5330dc0d7b7",
+      "distinct_letters": 22,
+      "alphabet": "ABCDEFGHIKLMNOPRSTUVWY",
+      "E": 9,
+      "T": 7,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": false,
+        "reachable_boundaries0": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          11,
+          12,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          21,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          35,
+          37,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          48,
+          49,
+          50,
+          51
+        ],
+        "reason": "No complete permitted known-plaintext segmentation"
+      }
+    },
+    {
+      "id": "WJ2",
+      "decoder_id": "P02",
+      "assigned_branch": "B1",
+      "plaintext87": "IMAGINEIFYOUCANWITHWHATPALPITATIONSITOREOPENTHERUDEOUTERENVELOPEOFYOURPRECIOUSLONGLOOKE",
+      "plaintext_sha256": "b0ce8b6c7119bd2b6a03fa9507c781393a04258aaf3f70370016984a50821961",
+      "distinct_letters": 21,
+      "alphabet": "ACDEFGHIKLMNOPRSTUVWY",
+      "E": 11,
+      "T": 7,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": true,
+        "witness": [
+          {
+            "start1": 1,
+            "end1": 7,
+            "token": "IMAGINE",
+            "kind": "word"
+          },
+          {
+            "start1": 8,
+            "end1": 9,
+            "token": "IF",
+            "kind": "word"
+          },
+          {
+            "start1": 10,
+            "end1": 12,
+            "token": "YOU",
+            "kind": "word"
+          },
+          {
+            "start1": 13,
+            "end1": 15,
+            "token": "CAN",
+            "kind": "word"
+          },
+          {
+            "start1": 16,
+            "end1": 19,
+            "token": "WITH",
+            "kind": "word"
+          },
+          {
+            "start1": 20,
+            "end1": 23,
+            "token": "WHAT",
+            "kind": "word"
+          },
+          {
+            "start1": 24,
+            "end1": 26,
+            "token": "PAL",
+            "kind": "word"
+          },
+          {
+            "start1": 27,
+            "end1": 29,
+            "token": "PIT",
+            "kind": "word"
+          },
+          {
+            "start1": 30,
+            "end1": 31,
+            "token": "AT",
+            "kind": "word"
+          },
+          {
+            "start1": 32,
+            "end1": 34,
+            "token": "ION",
+            "kind": "word"
+          },
+          {
+            "start1": 35,
+            "end1": 36,
+            "token": "SI",
+            "kind": "word"
+          },
+          {
+            "start1": 37,
+            "end1": 40,
+            "token": "TORE",
+            "kind": "word"
+          },
+          {
+            "start1": 41,
+            "end1": 44,
+            "token": "OPEN",
+            "kind": "word"
+          },
+          {
+            "start1": 45,
+            "end1": 47,
+            "token": "THE",
+            "kind": "word"
+          },
+          {
+            "start1": 48,
+            "end1": 51,
+            "token": "RUDE",
+            "kind": "word"
+          },
+          {
+            "start1": 52,
+            "end1": 56,
+            "token": "OUTER",
+            "kind": "word"
+          },
+          {
+            "start1": 57,
+            "end1": 64,
+            "token": "ENVELOPE",
+            "kind": "word"
+          },
+          {
+            "start1": 65,
+            "end1": 66,
+            "token": "OF",
+            "kind": "word"
+          },
+          {
+            "start1": 67,
+            "end1": 70,
+            "token": "YOUR",
+            "kind": "word"
+          },
+          {
+            "start1": 71,
+            "end1": 78,
+            "token": "PRECIOUS",
+            "kind": "word"
+          },
+          {
+            "start1": 79,
+            "end1": 82,
+            "token": "LONG",
+            "kind": "word"
+          },
+          {
+            "start1": 83,
+            "end1": 87,
+            "token": "LOOKE",
+            "kind": "final_prefix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "WJ3",
+      "decoder_id": "P03",
+      "assigned_branch": "B2",
+      "plaintext87": "WILKYANDIHAVEJUSTRETURNEDFROMDINNERANDHAVINGCOMPLETEDACONCERTFORTHEBENEFITOFTHEINMATESO",
+      "plaintext_sha256": "02229b05f77431af08da2d81bf9a88f2742b89df69646917d6d155556f6e997c",
+      "distinct_letters": 23,
+      "alphabet": "ABCDEFGHIJKLMNOPRSTUVWY",
+      "E": 12,
+      "T": 8,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": false,
+        "reachable_boundaries0": [
+          0
+        ],
+        "reason": "No complete permitted known-plaintext segmentation"
+      }
+    },
+    {
+      "id": "WJ4",
+      "decoder_id": "P04",
+      "assigned_branch": "B3",
+      "plaintext87": "IWASVERYAGREEABLYSURPRISEDATGETTINGYOURLETTERAFEWDAYSAFTERARRIVINGHEREANDAMHEARTILYGLAD",
+      "plaintext_sha256": "cdab5c03f809bdc16aec835bddba23e39f3213b10f8e560cfb7ccfd8cc9c7684",
+      "distinct_letters": 20,
+      "alphabet": "ABDEFGHILMNOPRSTUVWY",
+      "E": 12,
+      "T": 7,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": true,
+        "witness": [
+          {
+            "start1": 1,
+            "end1": 1,
+            "token": "I",
+            "kind": "word"
+          },
+          {
+            "start1": 2,
+            "end1": 4,
+            "token": "WAS",
+            "kind": "word"
+          },
+          {
+            "start1": 5,
+            "end1": 8,
+            "token": "VERY",
+            "kind": "word"
+          },
+          {
+            "start1": 9,
+            "end1": 17,
+            "token": "AGREEABLY",
+            "kind": "word"
+          },
+          {
+            "start1": 18,
+            "end1": 25,
+            "token": "SURPRISE",
+            "kind": "word"
+          },
+          {
+            "start1": 26,
+            "end1": 28,
+            "token": "DAT",
+            "kind": "word"
+          },
+          {
+            "start1": 29,
+            "end1": 35,
+            "token": "GETTING",
+            "kind": "word"
+          },
+          {
+            "start1": 36,
+            "end1": 39,
+            "token": "YOUR",
+            "kind": "word"
+          },
+          {
+            "start1": 40,
+            "end1": 41,
+            "token": "LE",
+            "kind": "word"
+          },
+          {
+            "start1": 42,
+            "end1": 43,
+            "token": "TT",
+            "kind": "word"
+          },
+          {
+            "start1": 44,
+            "end1": 46,
+            "token": "ERA",
+            "kind": "word"
+          },
+          {
+            "start1": 47,
+            "end1": 49,
+            "token": "FEW",
+            "kind": "word"
+          },
+          {
+            "start1": 50,
+            "end1": 53,
+            "token": "DAYS",
+            "kind": "word"
+          },
+          {
+            "start1": 54,
+            "end1": 58,
+            "token": "AFTER",
+            "kind": "word"
+          },
+          {
+            "start1": 59,
+            "end1": 66,
+            "token": "ARRIVING",
+            "kind": "word"
+          },
+          {
+            "start1": 67,
+            "end1": 70,
+            "token": "HERE",
+            "kind": "word"
+          },
+          {
+            "start1": 71,
+            "end1": 72,
+            "token": "AN",
+            "kind": "word"
+          },
+          {
+            "start1": 73,
+            "end1": 75,
+            "token": "DAM",
+            "kind": "word"
+          },
+          {
+            "start1": 76,
+            "end1": 83,
+            "token": "HEARTILY",
+            "kind": "word"
+          },
+          {
+            "start1": 84,
+            "end1": 87,
+            "token": "GLAD",
+            "kind": "word"
+          }
+        ]
+      }
+    },
+    {
+      "id": "JK1",
+      "decoder_id": "P05",
+      "assigned_branch": "B0",
+      "plaintext87": "IWILLBEASPUNCTUALASTHEBEETOTHECLOVERVERYGLADAMIATTHETHOUGHTSOFSEEINGSOSOONTHISGLORIOUSH",
+      "plaintext_sha256": "34bd49527398ea77b782cf287b7e64b0757e15d803e720f8e2f1ccb323941d81",
+      "distinct_letters": 21,
+      "alphabet": "ABCDEFGHILMNOPRSTUVWY",
+      "E": 10,
+      "T": 9,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": false,
+        "reachable_boundaries0": [
+          0,
+          1,
+          5,
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "reason": "No complete permitted known-plaintext segmentation"
+      }
+    },
+    {
+      "id": "JK2",
+      "decoder_id": "P06",
+      "assigned_branch": "B1",
+      "plaintext87": "LASTEVENINGWROUGHTMEUPANDICANNOTFORBEARSENDINGYOUTHEFOLLOWINGREMOVEDTOCHEAPSIDEGREATSPI",
+      "plaintext_sha256": "0cd4498b12f6fc441a201b7afeaf475d56abb620c295baf0cd530d906f89ea88",
+      "distinct_letters": 21,
+      "alphabet": "ABCDEFGHILMNOPRSTUVWY",
+      "E": 11,
+      "T": 6,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": true,
+        "witness": [
+          {
+            "start1": 1,
+            "end1": 4,
+            "token": "LAST",
+            "kind": "word"
+          },
+          {
+            "start1": 5,
+            "end1": 11,
+            "token": "EVENING",
+            "kind": "word"
+          },
+          {
+            "start1": 12,
+            "end1": 18,
+            "token": "WROUGHT",
+            "kind": "word"
+          },
+          {
+            "start1": 19,
+            "end1": 20,
+            "token": "ME",
+            "kind": "word"
+          },
+          {
+            "start1": 21,
+            "end1": 22,
+            "token": "UP",
+            "kind": "word"
+          },
+          {
+            "start1": 23,
+            "end1": 24,
+            "token": "AN",
+            "kind": "word"
+          },
+          {
+            "start1": 25,
+            "end1": 26,
+            "token": "DI",
+            "kind": "word"
+          },
+          {
+            "start1": 27,
+            "end1": 32,
+            "token": "CANNOT",
+            "kind": "word"
+          },
+          {
+            "start1": 33,
+            "end1": 39,
+            "token": "FORBEAR",
+            "kind": "word"
+          },
+          {
+            "start1": 40,
+            "end1": 46,
+            "token": "SENDING",
+            "kind": "word"
+          },
+          {
+            "start1": 47,
+            "end1": 49,
+            "token": "YOU",
+            "kind": "word"
+          },
+          {
+            "start1": 50,
+            "end1": 52,
+            "token": "THE",
+            "kind": "word"
+          },
+          {
+            "start1": 53,
+            "end1": 61,
+            "token": "FOLLOWING",
+            "kind": "word"
+          },
+          {
+            "start1": 62,
+            "end1": 68,
+            "token": "REMOVED",
+            "kind": "word"
+          },
+          {
+            "start1": 69,
+            "end1": 70,
+            "token": "TO",
+            "kind": "word"
+          },
+          {
+            "start1": 71,
+            "end1": 75,
+            "token": "CHEAP",
+            "kind": "word"
+          },
+          {
+            "start1": 76,
+            "end1": 79,
+            "token": "SIDE",
+            "kind": "word"
+          },
+          {
+            "start1": 80,
+            "end1": 84,
+            "token": "GREAT",
+            "kind": "word"
+          },
+          {
+            "start1": 85,
+            "end1": 87,
+            "token": "SPI",
+            "kind": "final_prefix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "JK3",
+      "decoder_id": "P07",
+      "assigned_branch": "B2",
+      "plaintext87": "YOURLETTERHASFILLEDMEWITHAPROUDPLEASUREANDSHALLBEKEPTBYMEASASTIMULUSTOEXERTIONIBEGINTOF",
+      "plaintext_sha256": "a30537ecf99834578631421470a3d59030d475d15a504a1eb3726ac0f976b4b9",
+      "distinct_letters": 21,
+      "alphabet": "ABDEFGHIKLMNOPRSTUWXY",
+      "E": 12,
+      "T": 8,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": true,
+        "witness": [
+          {
+            "start1": 1,
+            "end1": 4,
+            "token": "YOUR",
+            "kind": "word"
+          },
+          {
+            "start1": 5,
+            "end1": 10,
+            "token": "LETTER",
+            "kind": "word"
+          },
+          {
+            "start1": 11,
+            "end1": 13,
+            "token": "HAS",
+            "kind": "word"
+          },
+          {
+            "start1": 14,
+            "end1": 19,
+            "token": "FILLED",
+            "kind": "word"
+          },
+          {
+            "start1": 20,
+            "end1": 21,
+            "token": "ME",
+            "kind": "word"
+          },
+          {
+            "start1": 22,
+            "end1": 24,
+            "token": "WIT",
+            "kind": "word"
+          },
+          {
+            "start1": 25,
+            "end1": 26,
+            "token": "HA",
+            "kind": "word"
+          },
+          {
+            "start1": 27,
+            "end1": 31,
+            "token": "PROUD",
+            "kind": "word"
+          },
+          {
+            "start1": 32,
+            "end1": 39,
+            "token": "PLEASURE",
+            "kind": "word"
+          },
+          {
+            "start1": 40,
+            "end1": 42,
+            "token": "AND",
+            "kind": "word"
+          },
+          {
+            "start1": 43,
+            "end1": 47,
+            "token": "SHALL",
+            "kind": "word"
+          },
+          {
+            "start1": 48,
+            "end1": 49,
+            "token": "BE",
+            "kind": "word"
+          },
+          {
+            "start1": 50,
+            "end1": 53,
+            "token": "KEPT",
+            "kind": "word"
+          },
+          {
+            "start1": 54,
+            "end1": 55,
+            "token": "BY",
+            "kind": "word"
+          },
+          {
+            "start1": 56,
+            "end1": 57,
+            "token": "ME",
+            "kind": "word"
+          },
+          {
+            "start1": 58,
+            "end1": 58,
+            "token": "A",
+            "kind": "word"
+          },
+          {
+            "start1": 59,
+            "end1": 60,
+            "token": "SA",
+            "kind": "word"
+          },
+          {
+            "start1": 61,
+            "end1": 68,
+            "token": "STIMULUS",
+            "kind": "word"
+          },
+          {
+            "start1": 69,
+            "end1": 70,
+            "token": "TO",
+            "kind": "word"
+          },
+          {
+            "start1": 71,
+            "end1": 78,
+            "token": "EXERTION",
+            "kind": "word"
+          },
+          {
+            "start1": 79,
+            "end1": 79,
+            "token": "I",
+            "kind": "word"
+          },
+          {
+            "start1": 80,
+            "end1": 82,
+            "token": "BEG",
+            "kind": "word"
+          },
+          {
+            "start1": 83,
+            "end1": 86,
+            "token": "INTO",
+            "kind": "word"
+          },
+          {
+            "start1": 87,
+            "end1": 87,
+            "token": "F",
+            "kind": "final_prefix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "JK4",
+      "decoder_id": "P08",
+      "assigned_branch": "B3",
+      "plaintext87": "YOUMAYNOWLOOKATMINERVASAEGISWITHIMPUNITYSEEINGTHATMYAWFULVISAGEDIDNOTTURNYOUINTOAJOHNDO",
+      "plaintext_sha256": "85992f661ed12ca67fcae1dbc9cf90992e8028eba2bf1a4f4bc0cb79c2b2e868",
+      "distinct_letters": 21,
+      "alphabet": "ADEFGHIJKLMNOPRSTUVWY",
+      "E": 5,
+      "T": 8,
+      "representable": true,
+      "weak_cycles": [],
+      "lexical": {
+        "eligible": true,
+        "witness": [
+          {
+            "start1": 1,
+            "end1": 3,
+            "token": "YOU",
+            "kind": "word"
+          },
+          {
+            "start1": 4,
+            "end1": 6,
+            "token": "MAY",
+            "kind": "word"
+          },
+          {
+            "start1": 7,
+            "end1": 9,
+            "token": "NOW",
+            "kind": "word"
+          },
+          {
+            "start1": 10,
+            "end1": 13,
+            "token": "LOOK",
+            "kind": "word"
+          },
+          {
+            "start1": 14,
+            "end1": 15,
+            "token": "AT",
+            "kind": "word"
+          },
+          {
+            "start1": 16,
+            "end1": 20,
+            "token": "MINER",
+            "kind": "word"
+          },
+          {
+            "start1": 21,
+            "end1": 24,
+            "token": "VASA",
+            "kind": "word"
+          },
+          {
+            "start1": 25,
+            "end1": 26,
+            "token": "EG",
+            "kind": "word"
+          },
+          {
+            "start1": 27,
+            "end1": 28,
+            "token": "IS",
+            "kind": "word"
+          },
+          {
+            "start1": 29,
+            "end1": 32,
+            "token": "WITH",
+            "kind": "word"
+          },
+          {
+            "start1": 33,
+            "end1": 40,
+            "token": "IMPUNITY",
+            "kind": "word"
+          },
+          {
+            "start1": 41,
+            "end1": 46,
+            "token": "SEEING",
+            "kind": "word"
+          },
+          {
+            "start1": 47,
+            "end1": 50,
+            "token": "THAT",
+            "kind": "word"
+          },
+          {
+            "start1": 51,
+            "end1": 52,
+            "token": "MY",
+            "kind": "word"
+          },
+          {
+            "start1": 53,
+            "end1": 57,
+            "token": "AWFUL",
+            "kind": "word"
+          },
+          {
+            "start1": 58,
+            "end1": 63,
+            "token": "VISAGE",
+            "kind": "word"
+          },
+          {
+            "start1": 64,
+            "end1": 66,
+            "token": "DID",
+            "kind": "word"
+          },
+          {
+            "start1": 67,
+            "end1": 69,
+            "token": "NOT",
+            "kind": "word"
+          },
+          {
+            "start1": 70,
+            "end1": 73,
+            "token": "TURN",
+            "kind": "word"
+          },
+          {
+            "start1": 74,
+            "end1": 76,
+            "token": "YOU",
+            "kind": "word"
+          },
+          {
+            "start1": 77,
+            "end1": 80,
+            "token": "INTO",
+            "kind": "word"
+          },
+          {
+            "start1": 81,
+            "end1": 81,
+            "token": "A",
+            "kind": "word"
+          },
+          {
+            "start1": 82,
+            "end1": 85,
+            "token": "JOHN",
+            "kind": "word"
+          },
+          {
+            "start1": 86,
+            "end1": 87,
+            "token": "DO",
+            "kind": "word"
+          }
+        ]
+      }
+    }
+  ]
+}

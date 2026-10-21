@@ -1,0 +1,303 @@
+{
+  "status": "running",
+  "started_utc": "2026-10-02T01:10:31.928683+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "numba": "0.65.1",
+  "lab": "/mnt/data/dorabella_round13_lab/dorabella_lab",
+  "script_sha256": "287439cb640f681a257c52e94ec07c490089649f3ac9ad1f792b1335b8963ba2",
+  "frozen_protocol_sha256": "991b60f70f3f5826c9803938ad572beea5c90f16b32affbb473cd32cb9a29867",
+  "frozen_dependencies": [
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/conditional_v7.py",
+      "expected": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+      "actual": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/data/english_merged24_v5.npz",
+      "expected": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c",
+      "actual": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/model_v5.py",
+      "expected": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b",
+      "actual": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round10/data/elgar_letters.json",
+      "expected": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240",
+      "actual": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round10/data/inputs_base.json",
+      "expected": "cf453ad6d292e53f90b2e03ea4d7d68bb269107acb78f83801831c5bd253484d",
+      "actual": "cf453ad6d292e53f90b2e03ea4d7d68bb269107acb78f83801831c5bd253484d"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/data/cases.json",
+      "expected": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+      "actual": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/data/model_metadata.json",
+      "expected": "713cd16397a0399378926ea3f5a547cb3f91580f69a37514cb76cf914b7ce4a5",
+      "actual": "713cd16397a0399378926ea3f5a547cb3f91580f69a37514cb76cf914b7ce4a5"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/data/protocol.json",
+      "expected": "a4e80712abe32abd08cb63f4bd0b106868a00c30430f137e5e4bcc3536f6a594",
+      "actual": "a4e80712abe32abd08cb63f4bd0b106868a00c30430f137e5e4bcc3536f6a594"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/data/scoring.npz",
+      "expected": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+      "actual": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/data/search_inputs.json",
+      "expected": "29a64d350806e684c3dcaf7268020f8a8fae443fa913fb28d72a8b61b3e6a921",
+      "actual": "29a64d350806e684c3dcaf7268020f8a8fae443fa913fb28d72a8b61b3e6a921"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/engine.py",
+      "expected": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+      "actual": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/prepare.py",
+      "expected": "dee28ed23b139b453a444041029d8f67fc59c8b707158bda73a357adb4146b8b",
+      "actual": "dee28ed23b139b453a444041029d8f67fc59c8b707158bda73a357adb4146b8b"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/run.py",
+      "expected": "20a6fac74904cf542c4e62de39716ff2053b718ef33ff239da8e1491d6521530",
+      "actual": "20a6fac74904cf542c4e62de39716ff2053b718ef33ff239da8e1491d6521530"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/verify.py",
+      "expected": "1aeaa0ff7d119fae5e7767078480f3f71a386ec1d574b07edfb6aa46d039cbf3",
+      "actual": "1aeaa0ff7d119fae5e7767078480f3f71a386ec1d574b07edfb6aa46d039cbf3"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/wordpolish_v3.py",
+      "expected": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+      "actual": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6"
+    },
+    {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/wordscore_v3.py",
+      "expected": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790",
+      "actual": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790"
+    }
+  ],
+  "imported_modules": {
+    "engine": {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/round11/engine.py",
+      "sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14"
+    },
+    "model_v5": {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/model_v5.py",
+      "sha256": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b"
+    },
+    "wordpolish_v3": {
+      "path": "/mnt/data/dorabella_round13_lab/dorabella_lab/wordpolish_v3.py",
+      "sha256": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6"
+    }
+  },
+  "scoring_npz_sha256": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+  "input": {
+    "seed": 1301,
+    "length": 87,
+    "dtype": "int64",
+    "sha256": "10abe79f71717da2c8e1fa71e5b82b82fd72a17a721aaff37f909c37ab8c227a",
+    "values": [
+      2,
+      0,
+      5,
+      20,
+      14,
+      4,
+      3,
+      0,
+      15,
+      2,
+      15,
+      21,
+      15,
+      20,
+      18,
+      19,
+      23,
+      7,
+      4,
+      2,
+      5,
+      7,
+      1,
+      5,
+      20,
+      17,
+      12,
+      11,
+      10,
+      16,
+      4,
+      6,
+      3,
+      5,
+      1,
+      13,
+      14,
+      4,
+      2,
+      5,
+      9,
+      5,
+      17,
+      3,
+      11,
+      22,
+      22,
+      0,
+      23,
+      5,
+      16,
+      18,
+      15,
+      19,
+      18,
+      21,
+      17,
+      3,
+      13,
+      7,
+      21,
+      22,
+      8,
+      9,
+      0,
+      12,
+      2,
+      5,
+      1,
+      5,
+      23,
+      20,
+      21,
+      7,
+      8,
+      15,
+      19,
+      19,
+      0,
+      0,
+      19,
+      18,
+      9,
+      3,
+      22,
+      21,
+      6
+    ],
+    "generation_seconds": 0.0001436969999986104
+  },
+  "arrays": {
+    "g": {
+      "shape": [
+        87
+      ],
+      "dtype": "int64",
+      "sha256": "10abe79f71717da2c8e1fa71e5b82b82fd72a17a721aaff37f909c37ab8c227a"
+    },
+    "lp": {
+      "shape": [
+        456976
+      ],
+      "dtype": "float64",
+      "sha256": "04a9f98a051eaaf87b7d8265ce5ce06fc6c1fc365e1f1f0225d77f809bd0b014"
+    },
+    "children": {
+      "shape": [
+        209460,
+        26
+      ],
+      "dtype": "int32",
+      "sha256": "6abfb560242e71f9beaac5620fdf5c2692c279853c0658743b10ce3c63ecd172"
+    },
+    "vals": {
+      "shape": [
+        209460,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "7965a416872bed3b04c5f6ea07211729b348dcd519338fa8326f3633ab9d02fb"
+    },
+    "p8": {
+      "shape": [
+        40320,
+        8
+      ],
+      "dtype": "int64",
+      "sha256": "420e1fa907707ad373a551928e43b8a8dc101f5517e2993386c6268a79201247"
+    },
+    "q": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "int64",
+      "sha256": "3e19a6383064e2d6773379150551ec3f19c1df613d7e6f886452e7b382609555"
+    },
+    "letter": {
+      "shape": [
+        24
+      ],
+      "dtype": "int64",
+      "sha256": "d1e00be7d60a79eee9bd083c5c72650e33ff709bddd5799d74fb86e4bdfda2f5"
+    }
+  },
+  "protocol": {
+    "ranges": [
+      [
+        0,
+        4
+      ],
+      [
+        10000,
+        10004
+      ],
+      [
+        20000,
+        20004
+      ],
+      [
+        30000,
+        30004
+      ]
+    ],
+    "fresh_repetitions": 3,
+    "conditional_repetitions": 3,
+    "fresh_incumbent": -1e+100,
+    "fresh_incumbent_id": -1,
+    "conditional_incumbent": "same block's first fresh maximum; reset identically each repeat",
+    "per_block_warmups": 1,
+    "kernel": "unchanged round11.engine.scan_block",
+    "score": "unchanged C + 0.5 W on all 87 synthetic symbols",
+    "timer": "perf_counter_ns; only synchronous scan_block call, not I/O/checks/import/JIT",
+    "ties": "engine: exact float64 equality, minimum canonical ID",
+    "compiled_once_explicitly": true,
+    "full_search": false,
+    "planned_inputs_for_scaling": 94
+  },
+  "counter_semantics": {
+    "source": "round11/engine.py",
+    "W_full": "stats[:,4] sums evaluated, incremented exactly after fast_word; also len(sparse_ids)",
+    "pruned_W": "stats[:,5] sums 256-evaluated; C is still computed for every key",
+    "key_count": "768 * (pstop-pstart)",
+    "W_upper_calls": "3 * (pstop-pstart), derived from loop structure, not a returned counter",
+    "local_pm_max": "not used: maxima over evaluated W values can be incomplete under pruning"
+  },
+  "setup_seconds": 0.07633674999999585,
+  "warmups": [],
+  "calls": [],
+  "summaries": []
+}

@@ -1,0 +1,7 @@
+URL: https://www.benzedrine.ch/dorabella.html
+Title: Clues (or red herrings) to the Dorabella Cipher
+Author attribution on page: Daniel Hartmeier, April27 2006; last updateSeptember26 2017.
+The page labels dorabella-hires.jpg as a high-resolution scan (1.6MB).
+It gives no edition/page/archive shelfmark or scan chain for that specific file.
+The separate RobertS credit is attached to an analysis image; not transferred to the hires file.
+Page SHA256 is in fetch_record.json.

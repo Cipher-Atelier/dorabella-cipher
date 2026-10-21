@@ -1,0 +1,1349 @@
+{
+  "archive_matches": [
+    {
+      "passed": true,
+      "path": "data/cases.json",
+      "round11_frozen_sha256": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+      "sha256": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2"
+    },
+    {
+      "passed": true,
+      "path": "data/scoring.npz",
+      "round11_frozen_sha256": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+      "sha256": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00"
+    }
+  ],
+  "blocking_correctness_bugs_found": [],
+  "completed_utc": "2026-10-02T09:20:07.402610+00:00",
+  "elapsed_seconds": 0.4811405090003973,
+  "engine_ast_checks": [
+    {
+      "body_ast_sha256": "6cca8d82aba0feb213732c5fd70b6f34053946d119a1c9be50b3b84335de5920",
+      "function": "fast_word",
+      "passed": true,
+      "source": "dorabella_audit/test_lab/wordpolish_v3.py",
+      "source_sha256": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6"
+    },
+    {
+      "body_ast_sha256": "b9144e0116f7696cfec45bb4c92497350dc3cf87f2850a4af96ebc771b9a42d6",
+      "function": "char_score",
+      "passed": true,
+      "source": "dorabella_audit/test_lab/wordpolish_v3.py",
+      "source_sha256": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6"
+    },
+    {
+      "body_ast_sha256": "a2dbcfb666453979079d9da0e53b61a1b4cb1129ac4dbc17e3d3287466d7abb7",
+      "function": "key_at",
+      "passed": true,
+      "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+      "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14"
+    },
+    {
+      "body_ast_sha256": "5c4de8e170ee190ba05dbfca344788984b5fb8c54fc81271cd300a3f8a81cac4",
+      "function": "ambiguous_word",
+      "passed": true,
+      "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+      "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14"
+    },
+    {
+      "body_ast_sha256": "277781dc0040911bb4608a66f1559cc789b01772ca634da2fd4c5d11e7b3e04a",
+      "function": "scan_block",
+      "passed": true,
+      "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+      "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14"
+    },
+    {
+      "body_ast_sha256": "2faa46576e02db39761fa8750ceaaeb9b7daef2c5739c326559b0127ba9ff8eb",
+      "function": "brute_block",
+      "passed": true,
+      "source": "dorabella_audit/round11/dorabella_lab/round11/engine.py",
+      "source_sha256": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14"
+    }
+  ],
+  "frozen_dependencies": [
+    {
+      "passed": true,
+      "path": "checks/engine_body_provenance.json",
+      "sha256": "e30f68409a2a946d479853ae03cd59785148ce6c62c13492c6acaf4bbecfa4c5"
+    },
+    {
+      "passed": true,
+      "path": "code/engine.py",
+      "sha256": "a176694f8cb0dab1c555f749ac87f3ec2e50927f53376a2744dae9e7d4f377fb"
+    },
+    {
+      "passed": true,
+      "path": "code/freeze.py",
+      "sha256": "ed586d82a46587e9a74c762815a509175f659e3820c370e0445910d0c0710c59"
+    },
+    {
+      "passed": true,
+      "path": "code/run.py",
+      "sha256": "9d22819cda5266bd9bce8a651b0c14a766eded0a6ebdc471fe71e86171e13415"
+    },
+    {
+      "passed": true,
+      "path": "code/verify.py",
+      "sha256": "89128be606f45467b8a2fc2569dada1f8d80ef93f3ac577130de555deb005487"
+    },
+    {
+      "passed": true,
+      "path": "data/cases.json",
+      "sha256": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2"
+    },
+    {
+      "passed": true,
+      "path": "data/round11_frozen_protocol.json",
+      "sha256": "991b60f70f3f5826c9803938ad572beea5c90f16b32affbb473cd32cb9a29867"
+    },
+    {
+      "passed": true,
+      "path": "data/scoring.npz",
+      "sha256": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00"
+    },
+    {
+      "passed": true,
+      "path": "data/search_inputs.json",
+      "sha256": "ad3d5577d222f1d1da0c4a94994174bc64f7aaf7f9e8c5eca224fdbb793cc5f0"
+    }
+  ],
+  "input_checks": {
+    "all_glyph_lengths": 87,
+    "all_plaintext_lengths": 87,
+    "cases": 94,
+    "kinds": {
+      "null": 78,
+      "positive": 12,
+      "real": 2,
+      "regression": 2
+    },
+    "paired_seeds_equal": true,
+    "solver_fields": [
+      "glyph",
+      "id",
+      "kind"
+    ],
+    "solver_inputs_equal": true,
+    "unique_ids": 94
+  },
+  "max_character_error": 2.6645352591003757e-15,
+  "max_word_error": 0.0,
+  "null_regeneration": [
+    {
+      "case": "hauer_real_pair_00",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 9658146450254929427
+    },
+    {
+      "case": "hart_real_pair_00",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 9658146450254929427
+    },
+    {
+      "case": "hauer_real_pair_01",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 1060384203037514974
+    },
+    {
+      "case": "hart_real_pair_01",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 1060384203037514974
+    },
+    {
+      "case": "hauer_real_pair_02",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 7307556951005964874
+    },
+    {
+      "case": "hart_real_pair_02",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 7307556951005964874
+    },
+    {
+      "case": "hauer_real_pair_03",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 7962762182108123334
+    },
+    {
+      "case": "hart_real_pair_03",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 7962762182108123334
+    },
+    {
+      "case": "hauer_real_pair_04",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5797647314087611170
+    },
+    {
+      "case": "hart_real_pair_04",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5797647314087611170
+    },
+    {
+      "case": "hauer_real_pair_05",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 2518712602553290345
+    },
+    {
+      "case": "hart_real_pair_05",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 2518712602553290345
+    },
+    {
+      "case": "hauer_real_pair_06",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17952220465343560256
+    },
+    {
+      "case": "hart_real_pair_06",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17952220465343560256
+    },
+    {
+      "case": "hauer_real_pair_07",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5179233117892781435
+    },
+    {
+      "case": "hart_real_pair_07",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5179233117892781435
+    },
+    {
+      "case": "hauer_real_pair_08",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 4353503161147623498
+    },
+    {
+      "case": "hart_real_pair_08",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 4353503161147623498
+    },
+    {
+      "case": "hauer_real_pair_09",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 14119499974100107374
+    },
+    {
+      "case": "hart_real_pair_09",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 14119499974100107374
+    },
+    {
+      "case": "hauer_real_pair_10",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 4929944838118071900
+    },
+    {
+      "case": "hart_real_pair_10",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 4929944838118071900
+    },
+    {
+      "case": "hauer_real_pair_11",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13523079842796272328
+    },
+    {
+      "case": "hart_real_pair_11",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13523079842796272328
+    },
+    {
+      "case": "hauer_real_pair_12",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15890151436642541725
+    },
+    {
+      "case": "hart_real_pair_12",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15890151436642541725
+    },
+    {
+      "case": "hauer_real_pair_13",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 1447402454560307853
+    },
+    {
+      "case": "hart_real_pair_13",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 1447402454560307853
+    },
+    {
+      "case": "hauer_real_pair_14",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 3504242881622622220
+    },
+    {
+      "case": "hart_real_pair_14",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 3504242881622622220
+    },
+    {
+      "case": "hauer_real_pair_15",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 8094698311409995668
+    },
+    {
+      "case": "hart_real_pair_15",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 8094698311409995668
+    },
+    {
+      "case": "hauer_real_pair_16",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 4532420837078200100
+    },
+    {
+      "case": "hart_real_pair_16",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 4532420837078200100
+    },
+    {
+      "case": "hauer_real_pair_17",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5200019807544258883
+    },
+    {
+      "case": "hart_real_pair_17",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5200019807544258883
+    },
+    {
+      "case": "hauer_real_pair_18",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 366758076361283013
+    },
+    {
+      "case": "hart_real_pair_18",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 366758076361283013
+    },
+    {
+      "case": "hauer_real_pair_19",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13590378717918351778
+    },
+    {
+      "case": "hart_real_pair_19",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13590378717918351778
+    },
+    {
+      "case": "hauer_real_pair_20",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 14029528210443699340
+    },
+    {
+      "case": "hart_real_pair_20",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 14029528210443699340
+    },
+    {
+      "case": "hauer_real_pair_21",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15087710034723100376
+    },
+    {
+      "case": "hart_real_pair_21",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15087710034723100376
+    },
+    {
+      "case": "hauer_real_pair_22",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 124385415634372451
+    },
+    {
+      "case": "hart_real_pair_22",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 124385415634372451
+    },
+    {
+      "case": "hauer_real_pair_23",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15356606189011769001
+    },
+    {
+      "case": "hart_real_pair_23",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15356606189011769001
+    },
+    {
+      "case": "hauer_real_pair_24",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13773070868324271536
+    },
+    {
+      "case": "hart_real_pair_24",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13773070868324271536
+    },
+    {
+      "case": "hauer_real_pair_25",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17017321249610488403
+    },
+    {
+      "case": "hart_real_pair_25",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17017321249610488403
+    },
+    {
+      "case": "hauer_real_pair_26",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 2157532681567520552
+    },
+    {
+      "case": "hart_real_pair_26",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 2157532681567520552
+    },
+    {
+      "case": "hauer_real_pair_27",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 708359910492392515
+    },
+    {
+      "case": "hart_real_pair_27",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 708359910492392515
+    },
+    {
+      "case": "hauer_real_pair_28",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17458151740466752231
+    },
+    {
+      "case": "hart_real_pair_28",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17458151740466752231
+    },
+    {
+      "case": "hauer_real_pair_29",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5139179643019080172
+    },
+    {
+      "case": "hart_real_pair_29",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 5139179643019080172
+    },
+    {
+      "case": "hauer_real_pair_30",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 9718919599952035947
+    },
+    {
+      "case": "hart_real_pair_30",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 9718919599952035947
+    },
+    {
+      "case": "hauer_real_pair_31",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 11604197863353471933
+    },
+    {
+      "case": "hart_real_pair_31",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 11604197863353471933
+    },
+    {
+      "case": "hauer_real_pair_32",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13908191408392618211
+    },
+    {
+      "case": "hart_real_pair_32",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 13908191408392618211
+    },
+    {
+      "case": "hauer_real_pair_33",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 9367584592560054182
+    },
+    {
+      "case": "hart_real_pair_33",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 9367584592560054182
+    },
+    {
+      "case": "hauer_real_pair_34",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17567439295785164103
+    },
+    {
+      "case": "hart_real_pair_34",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 17567439295785164103
+    },
+    {
+      "case": "hauer_real_pair_35",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 16526680509643487087
+    },
+    {
+      "case": "hart_real_pair_35",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 16526680509643487087
+    },
+    {
+      "case": "hauer_real_pair_36",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 2460752296474598550
+    },
+    {
+      "case": "hart_real_pair_36",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 2460752296474598550
+    },
+    {
+      "case": "hauer_real_pair_37",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15799430406507764969
+    },
+    {
+      "case": "hart_real_pair_37",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 15799430406507764969
+    },
+    {
+      "case": "hauer_real_pair_38",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 1945734163308483440
+    },
+    {
+      "case": "hart_real_pair_38",
+      "directed_bigram_counts_equal": true,
+      "endpoints_equal": true,
+      "glyph_counts_equal": true,
+      "length": 87,
+      "regenerated_exactly": true,
+      "seed": 1945734163308483440
+    }
+  ],
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "positive_regeneration": [
+    {
+      "case": "bailey_01",
+      "key_id": 28848947,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_02",
+      "key_id": 19422192,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_03",
+      "key_id": 3932410,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_04",
+      "key_id": 11063914,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_05",
+      "key_id": 23939806,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_06",
+      "key_id": 25407239,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_07",
+      "key_id": 7732237,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_08",
+      "key_id": 29711790,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "bailey_09",
+      "key_id": 26349870,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "brewer_01",
+      "key_id": 28801491,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "brewer_02",
+      "key_id": 17837539,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "brewer_03",
+      "key_id": 4633103,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "elgar_march_1897",
+      "key_id": 24022660,
+      "length": 87,
+      "passed": true
+    },
+    {
+      "case": "elgar_caractacus_postcard",
+      "key_id": 20487333,
+      "length": 87,
+      "passed": true
+    }
+  ],
+  "protocol_sha256": "43de9f2fc5dec87c13e9ec9a68d58295aed951a4d865f32c9648a0ff86f2a4a3",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "review_type": "independent bounded code/data review; reconstructed and rerun checks",
+  "scope_limits": [
+    "No full searches or full unpruned audits were performed by this script.",
+    "Main verifier independently checks all saved C scores, but only sampled, winning and tied W scores; skipped-key verification relies on planned supplemental audits.",
+    "Execution-stage ordering beyond the positive gate relies on orchestration.",
+    "Per-group local maxima in stats columns 7 and 8 concern evaluated keys only, not all keys.",
+    "Tie stress executes exact source bodies in Python and combines cross-block ties by the runner's union rule; it does not exercise checkpoint disk I/O.",
+    "The review found no change to its earlier correctness findings."
+  ],
+  "scoring_arrays": {
+    "children": {
+      "dtype": "int32",
+      "shape": [
+        209460,
+        26
+      ]
+    },
+    "letter": {
+      "dtype": "int64",
+      "shape": [
+        24
+      ]
+    },
+    "lp": {
+      "dtype": "float64",
+      "shape": [
+        456976
+      ]
+    },
+    "vals": {
+      "dtype": "float64",
+      "shape": [
+        209460,
+        3
+      ]
+    }
+  },
+  "script_path": "checks/independent_review/independent_review.py",
+  "script_sha256": "6bce37afd6438a24b113bc053c432fbf38ec4544d2331831a28b568db2672272",
+  "shuffle_source_sha256": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+  "started_utc": "2026-10-02T09:20:06.921566+00:00",
+  "status": "passed",
+  "tie_stress": {
+    "all_ids_0_through_1535_present": true,
+    "blocks": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "keys_evaluated": 1536,
+    "length": 87,
+    "passed": true,
+    "score": -4.0,
+    "ties": 1536,
+    "winning_id": 0
+  },
+  "word_and_decoder_checks": [
+    {
+      "case": "bailey_01",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -6.285315756113192,
+      "independent_word_score": -6.285315756113192,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_01",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -1.743235567592982,
+      "independent_word_score": -1.743235567592982,
+      "key_id": 28848947,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_02",
+      "character_error": 0.0,
+      "forward_word_score": -7.458832244949501,
+      "independent_word_score": -7.458832244949501,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_02",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -1.6798260372947393,
+      "independent_word_score": -1.6798260372947393,
+      "key_id": 19422192,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_03",
+      "character_error": 0.0,
+      "forward_word_score": -6.714225396487239,
+      "independent_word_score": -6.714225396487239,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_03",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -1.8049611310495197,
+      "independent_word_score": -1.8049611310495197,
+      "key_id": 3932410,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_04",
+      "character_error": 1.7763568394002505e-15,
+      "forward_word_score": -6.835243015576698,
+      "independent_word_score": -6.835243015576698,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_04",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -1.8325860102061649,
+      "independent_word_score": -1.8325860102061649,
+      "key_id": 11063914,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_05",
+      "character_error": 0.0,
+      "forward_word_score": -6.960681480298165,
+      "independent_word_score": -6.960681480298165,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_05",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -1.7049203516304348,
+      "independent_word_score": -1.7049203516304348,
+      "key_id": 23939806,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_06",
+      "character_error": 0.0,
+      "forward_word_score": -6.976884865309658,
+      "independent_word_score": -6.976884865309658,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_06",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -1.789171646599168,
+      "independent_word_score": -1.789171646599168,
+      "key_id": 25407239,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_07",
+      "character_error": 0.0,
+      "forward_word_score": -7.229227783516364,
+      "independent_word_score": -7.229227783516364,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_07",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -1.6890303750889744,
+      "independent_word_score": -1.6890303750889744,
+      "key_id": 7732237,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_08",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -6.52120962729201,
+      "independent_word_score": -6.52120962729201,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_08",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -1.78489702862062,
+      "independent_word_score": -1.78489702862062,
+      "key_id": 29711790,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_09",
+      "character_error": 0.0,
+      "forward_word_score": -6.461996787045427,
+      "independent_word_score": -6.461996787045427,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "bailey_09",
+      "character_error": 0.0,
+      "forward_word_score": -2.162748670560332,
+      "independent_word_score": -2.162748670560332,
+      "key_id": 26349870,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "brewer_01",
+      "character_error": 0.0,
+      "forward_word_score": -6.71876776925817,
+      "independent_word_score": -6.71876776925817,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "brewer_01",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -2.220238924333342,
+      "independent_word_score": -2.220238924333342,
+      "key_id": 28801491,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "brewer_02",
+      "character_error": 1.7763568394002505e-15,
+      "forward_word_score": -6.262639880042525,
+      "independent_word_score": -6.262639880042525,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "brewer_02",
+      "character_error": 0.0,
+      "forward_word_score": -2.3177210722137267,
+      "independent_word_score": -2.3177210722137267,
+      "key_id": 17837539,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "brewer_03",
+      "character_error": 0.0,
+      "forward_word_score": -6.619951039616853,
+      "independent_word_score": -6.619951039616853,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "brewer_03",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -1.753711706969009,
+      "independent_word_score": -1.753711706969009,
+      "key_id": 4633103,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "elgar_march_1897",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -6.631796475290793,
+      "independent_word_score": -6.631796475290793,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "elgar_march_1897",
+      "character_error": 0.0,
+      "forward_word_score": -2.176641704375857,
+      "independent_word_score": -2.176641704375857,
+      "key_id": 24022660,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "elgar_caractacus_postcard",
+      "character_error": 0.0,
+      "forward_word_score": -6.589051822998202,
+      "independent_word_score": -6.589051822998202,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "elgar_caractacus_postcard",
+      "character_error": 4.440892098500626e-16,
+      "forward_word_score": -2.585729732094658,
+      "independent_word_score": -2.585729732094658,
+      "key_id": 20487333,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hauer_real",
+      "character_error": 0.0,
+      "forward_word_score": -7.179637979281776,
+      "independent_word_score": -7.179637979281776,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hauer_real",
+      "character_error": 0.0,
+      "forward_word_score": -6.4227684188274345,
+      "independent_word_score": -6.4227684188274345,
+      "key_id": 30965759,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hart_real",
+      "character_error": 2.6645352591003757e-15,
+      "forward_word_score": -7.142958629941149,
+      "independent_word_score": -7.142958629941149,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hart_real",
+      "character_error": 0.0,
+      "forward_word_score": -6.3341888211981106,
+      "independent_word_score": -6.3341888211981106,
+      "key_id": 30965759,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hauer_real_pair_00",
+      "character_error": 0.0,
+      "forward_word_score": -6.993699742361878,
+      "independent_word_score": -6.993699742361878,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hauer_real_pair_00",
+      "character_error": 1.7763568394002505e-15,
+      "forward_word_score": -6.3385573760219875,
+      "independent_word_score": -6.3385573760219875,
+      "key_id": 30965759,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hart_real_pair_00",
+      "character_error": 1.7763568394002505e-15,
+      "forward_word_score": -6.9013883382453445,
+      "independent_word_score": -6.9013883382453445,
+      "key_id": 0,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    },
+    {
+      "case": "hart_real_pair_00",
+      "character_error": 8.881784197001252e-16,
+      "forward_word_score": -6.550823865141618,
+      "independent_word_score": -6.550823865141618,
+      "key_id": 30965759,
+      "length": 87,
+      "passed": true,
+      "word_error": 0.0
+    }
+  ],
+  "word_checks_count": 36
+}

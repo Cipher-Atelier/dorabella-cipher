@@ -1,0 +1,18 @@
+{
+  "accepted_bytes": 32,
+  "ack": false,
+  "actual_error": "INJECT_FLUSH",
+  "checks": {},
+  "chunks_opened": 1,
+  "cleanup_error": null,
+  "closed": false,
+  "expected_error": "INJECT_FLUSH",
+  "failed": true,
+  "fd_cleanup": true,
+  "name": "NEG_FLUSH",
+  "receipt_bytes": 0,
+  "trace": [
+    "open:frames.000.bin",
+    "close_returned"
+  ]
+}

@@ -1,0 +1,1 @@
+CONSUMER_COMPUTED {"chain":{"bytes":4834,"frames":50,"sha256":"4c25e767203540847f7824e76217a05c84e1ee219e83e13948e9b7c9143f529b"},"closed":true,"logical_membership":0,"scores":0,"segments":0,"transactions":25}

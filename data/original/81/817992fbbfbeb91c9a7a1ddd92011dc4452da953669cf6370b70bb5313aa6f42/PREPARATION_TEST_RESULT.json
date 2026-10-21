@@ -1,0 +1,13 @@
+{
+  "status": "PASS_OWN_PREPARATION_CONTRACT_ONLY",
+  "fixture_rows": 84,
+  "lookup_intents": 96,
+  "negative_requests": 11,
+  "negative_numeric_value": 1,
+  "max_synthetic_packet_bytes": 27021,
+  "python_AST_parsed": 10,
+  "Perl_or_glue_or_broker_executed": false,
+  "real_tables_read": false,
+  "elapsed": 0.016237877993262373,
+  "peak_rss_KiB": 12288
+}

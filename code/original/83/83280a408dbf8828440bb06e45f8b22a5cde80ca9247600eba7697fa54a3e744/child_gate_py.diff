@@ -1,0 +1,18 @@
+--- TS_LM_PREFETCH_DIFF_v1/child_gate.py
++++ TS_COMBINED_STORAGE_v1/child_gate.py
+@@ -13,12 +13,12 @@
+ token=os.read(int(gate),1);os.close(int(gate))
+ if token!=b'G':raise SystemExit(3)
+ if role.endswith('_broker'):
+- if ipc:raise SystemExit('IPC_ARGS')
+- argv=[f['python'],'-B','-I','-S',str(B/'broker.py'),role]
++ if len(ipc)!=4:raise SystemExit('IPC_ARGS')
++ argv=[f['python'],'-B','-I','-S',str(B/'broker.py'),role,*ipc]
+ else:
+  args={'reference_perl':['reference',str(B/'fixtures/base')],
+        'adapted_perl':['adapted',str(B/'fixtures/base')],
+        'real_perl':[str(B)]}[role]
+- if len(ipc)!=(0 if role=='reference_perl' else 2):raise SystemExit('IPC_ARGS')
++ if len(ipc)!=(0 if role=='reference_perl' else 4):raise SystemExit('IPC_ARGS')
+  argv=[f['perl'],'-I',str(B/'original'),'-I',str(B),str(B/spec['program']),*args,*ipc]
+ os.chdir(B/'attempt/work');os.execve(argv[0],argv,f['environment'])

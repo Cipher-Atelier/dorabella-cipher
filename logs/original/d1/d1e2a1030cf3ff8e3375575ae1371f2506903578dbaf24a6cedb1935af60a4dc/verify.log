@@ -1,0 +1,1 @@
+{"status": "PASS", "freeze_hashes_unchanged": true, "independently_checked_positions": 1403136, "direction_permutations_checked": 192, "inverse_set_rows_checked": 1218, "representable": 0, "real_cipher_search_performed": false, "limitations": "Code verification and known-text representability only; not cryptanalytic sensitivity or statistical calibration."}

@@ -1,0 +1,8 @@
+{
+  "mode": "development",
+  "cases": 8,
+  "mean_best_score": -2.0369219791107747,
+  "mean_accuracy": 0.9755747126436781,
+  "at_least_90_percent": 8,
+  "at_least_95_percent": 7
+}

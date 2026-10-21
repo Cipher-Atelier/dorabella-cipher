@@ -1,0 +1,127 @@
+{
+  "hauer_real": {
+    "score": -4.686481681057513,
+    "text": "cfnewsledbyamtaxaasffatoboryilalsoedgenaansrmlayashimtoddoyinishinthurinashmirefrisetoe",
+    "segmentation": "cf news led by am tax a as ff a to bory il also edge ?n a an ?s ?r ?m lay as him to ?d do ?y in is hint hur in as hm i re frise to e\u2026",
+    "unigram": {
+      "n": 99,
+      "ge": 4,
+      "p_plus_one": 0.05,
+      "mean": -4.9250385410399655,
+      "range": [
+        -5.195108599402245,
+        -4.467150619927403
+      ]
+    },
+    "bigram": {
+      "n": 99,
+      "ge": 68,
+      "p_plus_one": 0.69,
+      "mean": -4.636389549887784,
+      "range": [
+        -4.842793558850383,
+        -4.45408336016165
+      ]
+    }
+  },
+  "hart_real": {
+    "score": -4.586690081762917,
+    "text": "fbdaysmancrepteveesbbetocourimemsmanladeedsupmereshiptonnoridishidthguideshpitabuisatoa",
+    "segmentation": "\u2026f ?b days man crept eve es ?b be to ?c our i me ms man la deeds up mere ship to ?n no rid is hid th guides ?h pit a bu is a to a",
+    "unigram": {
+      "n": 99,
+      "ge": 1,
+      "p_plus_one": 0.02,
+      "mean": -4.960524393613838,
+      "range": [
+        -5.334824418805443,
+        -4.560124920503086
+      ]
+    },
+    "bigram": {
+      "n": 99,
+      "ge": 24,
+      "p_plus_one": 0.25,
+      "mean": -4.65661930306172,
+      "range": [
+        -4.924339417332394,
+        -4.407304393276889
+      ]
+    }
+  },
+  "positive_sensitivity": [
+    {
+      "id": "positive_00",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_01",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_02",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_03",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_04",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_05",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_06",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_07",
+      "accuracy": 0.9885057471264368,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_08",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_09",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_10",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    },
+    {
+      "id": "positive_11",
+      "accuracy": 1.0,
+      "ge": 0,
+      "n": 9
+    }
+  ],
+  "records": 518
+}

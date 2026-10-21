@@ -1,0 +1,73 @@
+--- baseline/run.py
++++ run.py
+@@ -5,6 +5,7 @@
+ BASE=Path(__file__).resolve().parent
+ sys.path.insert(0,str(BASE))
+ from namespace_view import NamespaceView, Stop
++from verifier_binding import observed_real,final_binding,check_publication
+ ATTEMPT=BASE/'attempt'
+ 
+ def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat()
+@@ -28,7 +29,7 @@
+     if ATTEMPT.exists(): print('REFUSED_EXISTING_ATTEMPT');return 3
+     ATTEMPT.mkdir();(ATTEMPT/'work').mkdir()
+     launch=json.loads((BASE/'launch_evidence.json').read_text());start=launch['monotonic'];global_deadline=launch['global_deadline'];deadline=min(start+90,global_deadline)
+-    result={'version':'TS-COMBINED-STORAGE-v1','status':'INCOMPLETE','start_utc':launch['utc'],
++    result={'version':'TS-JOURNAL-DIAGNOSTIC-v1','status':'INCOMPLETE','start_utc':launch['utc'],
+             'commands':[],'signals':[],'phases':[],'target_inputs':0,'control_87_inputs':0,'full_model_loads':0,'stages':{}}
+     dump('T0.json',{'utc':result['start_utc'],'monotonic':start,'global_deadline':global_deadline})
+     children=[];handles=[];parent_fds=set();ns=None
+@@ -145,21 +146,27 @@
+         if int(result['post_hash_resource']['memory.current'])+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:raise Stop('NO_GO_POST_HASH_RESOURCE')
+         result['hashes_verified']=True
+         dump('phase_deadline.json',{'deadline':deadline-4,'global_deadline':global_deadline})
+-        reference=launch_child('reference_perl',subprocess.DEVNULL,log_handle('reference_perl.jsonl'))
+-        release(reference);observe_until_done([reference])
+-        pair('adapted')
+-        from readback import fixture,real
+-        tick();result['stages']['fixture']=fixture();dump('stage_fixture.json',result['stages']['fixture'])
++        # Existing synthetic evidence is authenticated data, not a new search or re-execution.
++        prior=json.loads((BASE/'prior_evidence/stage_fixture.json').read_text())
++        if prior['status']!='PASS_FINITE_COMBINED_DIFFERENTIAL' or prior['events']!=320 or prior['inverse_records']!=118:
++            raise Stop('STOP_PRIOR_FIXTURE_STATUS')
++        if (BASE/'prior_evidence/reference_perl.jsonl').read_bytes()!=(BASE/'prior_evidence/adapted_perl.jsonl').read_bytes():
++            raise Stop('STOP_PRIOR_FIXTURE_BYTES')
++        result['stages']['prior_synthetic']={'status':'REUSED_HASH_PINNED_EVIDENCE_ONLY','value':prior}
++        dump('prior_synthetic_admission.json',result['stages']['prior_synthetic'])
+         # Combined real-table transport, only after all-input admission and fixture PASS.
+         deadline=min(global_deadline,time.monotonic()+60)
+         dump('phase_deadline.json',{'deadline':deadline-4,'global_deadline':global_deadline})
+         pre=memory();result['real_post_hash_resource']=pre
+         if int(pre['memory.current'])+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
+             result['stages']['real']={'status':'SKIPPED_RESOURCE','phase':'POST_FIXTURE','observed':pre}
+-            result['status']='PASS_COMBINED_FIXTURE_REAL_SKIPPED_RESOURCE';code=0
++            result['status']='SKIPPED_RESOURCE';code=0
+         else:
+-            pair('real');tick();result['stages']['real']=real();tick();verify(freeze['real_inputs'])
+-            result['status']='PASS_FINITE_COMBINED_STORAGE_ONLY';code=0
++            pair('real');tick()
++            dump('wait_before_verifier.json',{'monotonic':time.monotonic(),
++                'terminal_phases':[p for p in result['phases'] if p.get('terminal') in ('real_broker','real_perl')]})
++            result['stages']['real']=observed_real(BASE,tick);tick();verify(freeze['real_inputs'])
++            result['status']='PASS_DIAGNOSTIC_PENDING_BINDING';code=0
+         dump('stage_real.json',result['stages']['real'])
+         verify(freeze['identities'])
+         if digest(BASE/'FREEZE.json',tick)!=result['manifest_sha256']:raise Stop('STOP_MANIFEST_CHANGED')
+@@ -196,7 +203,17 @@
+         result['status']='STOP';result['error']='STOP_SHARED_OOM_EVENT';code=2
+     result['children_peak_rss_KiB']=resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss
+     result['self_peak_rss_KiB']=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
++    if result['status']=='PASS_DIAGNOSTIC_PENDING_BINDING':
++        try:
++            result['binding']=final_binding(BASE,result['terminal'],tick)['status']
++            result['status']='PASS_DIAGNOSTIC_THIS_ATTEMPT_ONLY'
++        except BaseException as e:
++            result['status']='STOP';result['error']=repr(e);result['traceback']=traceback.format_exc();code=2
+     result['file_hashes']={p.name:digest(p) for p in ATTEMPT.iterdir() if p.is_file() and p.name!='result.json'}
++    if result['status']=='PASS_DIAGNOSTIC_THIS_ATTEMPT_ONLY':
++        try:check_publication(BASE,result['file_hashes'],tick)
++        except BaseException as e:
++            result['status']='STOP';result['error']=repr(e);result['traceback']=traceback.format_exc();code=2
+     result['elapsed']=time.monotonic()-start;result['end_utc']=utc()
+     if result['status'].startswith('PASS') and (result['elapsed']>=180 or time.monotonic()>=deadline):
+         result['status']='STOP';result['error']='STOP_SEAL_WALL_ACCOUNTING';code=2

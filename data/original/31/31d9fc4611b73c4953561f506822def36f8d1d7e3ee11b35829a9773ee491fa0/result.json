@@ -1,0 +1,887 @@
+{
+  "version": "TS-TRANSPORT-PROFILE-v2",
+  "status": "PASS_A_PROFILE_SKIPPED_RESOURCE",
+  "start_utc": "2026-10-17T22:50:30.325227+00:00",
+  "commands": [
+    {
+      "role": "fixture_broker",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+        "fixture_broker",
+        "7"
+      ],
+      "pid_local": 6,
+      "start_observed_utc": "2026-10-17T22:50:30.371236+00:00",
+      "anchor": {
+        "visible_pid": 10084,
+        "visible_ppid": 10082,
+        "visible_pgid": 10084,
+        "visible_session": 10084,
+        "state": "S",
+        "starttime": 7697400,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          10084,
+          6
+        ],
+        "nspgid": [
+          10084,
+          6
+        ],
+        "nssid": [
+          10084,
+          6
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+          "fixture_broker",
+          "7"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35728 kB",
+          "VmSize:\t   35684 kB",
+          "VmHWM:\t    8636 kB",
+          "VmRSS:\t    8636 kB"
+        ],
+        "pid": 6,
+        "pgid": 6,
+        "session": 6
+      }
+    },
+    {
+      "role": "fixture_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+        "fixture_perl",
+        "10",
+        "5",
+        "4"
+      ],
+      "pid_local": 7,
+      "start_observed_utc": "2026-10-17T22:50:30.397977+00:00",
+      "anchor": {
+        "visible_pid": 10085,
+        "visible_ppid": 10082,
+        "visible_pgid": 10085,
+        "visible_session": 10085,
+        "state": "S",
+        "starttime": 7697402,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          10085,
+          7
+        ],
+        "nspgid": [
+          10085,
+          7
+        ],
+        "nssid": [
+          10085,
+          7
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+          "fixture_perl",
+          "10",
+          "5",
+          "4"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35736 kB",
+          "VmSize:\t   35688 kB",
+          "VmHWM:\t    8644 kB",
+          "VmRSS:\t    8644 kB"
+        ],
+        "pid": 7,
+        "pgid": 7,
+        "session": 7
+      }
+    },
+    {
+      "role": "large_broker",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+        "large_broker",
+        "8"
+      ],
+      "pid_local": 8,
+      "start_observed_utc": "2026-10-17T22:50:30.638622+00:00",
+      "anchor": {
+        "visible_pid": 10086,
+        "visible_ppid": 10082,
+        "visible_pgid": 10086,
+        "visible_session": 10086,
+        "state": "S",
+        "starttime": 7697426,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          10086,
+          8
+        ],
+        "nspgid": [
+          10086,
+          8
+        ],
+        "nssid": [
+          10086,
+          8
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+          "large_broker",
+          "8"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35728 kB",
+          "VmSize:\t   35684 kB",
+          "VmHWM:\t    8632 kB",
+          "VmRSS:\t    8632 kB"
+        ],
+        "pid": 8,
+        "pgid": 8,
+        "session": 8
+      }
+    },
+    {
+      "role": "large_perl",
+      "launcher_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+        "large_perl",
+        "13",
+        "5",
+        "4"
+      ],
+      "pid_local": 9,
+      "start_observed_utc": "2026-10-17T22:50:30.666029+00:00",
+      "anchor": {
+        "visible_pid": 10087,
+        "visible_ppid": 10082,
+        "visible_pgid": 10087,
+        "visible_session": 10087,
+        "state": "S",
+        "starttime": 7697429,
+        "pid_namespace": "pid:[4026532277]",
+        "nspid": [
+          10087,
+          9
+        ],
+        "nspgid": [
+          10087,
+          9
+        ],
+        "nssid": [
+          10087,
+          9
+        ],
+        "cmdline": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "-I",
+          "-S",
+          "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/child_gate.py",
+          "large_perl",
+          "13",
+          "5",
+          "4"
+        ],
+        "memory_status": [
+          "VmPeak:\t   35736 kB",
+          "VmSize:\t   35688 kB",
+          "VmHWM:\t    8640 kB",
+          "VmRSS:\t    8640 kB"
+        ],
+        "pid": 9,
+        "pgid": 9,
+        "session": 9
+      }
+    }
+  ],
+  "signals": [],
+  "phases": [
+    {
+      "release": "fixture_broker",
+      "utc": "2026-10-17T22:50:30.431976+00:00",
+      "elapsed": 0.10676512800273485
+    },
+    {
+      "release": "fixture_perl",
+      "utc": "2026-10-17T22:50:30.438749+00:00",
+      "elapsed": 0.113538076999248
+    },
+    {
+      "terminal": "fixture_broker",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T22:50:30.636069+00:00",
+      "elapsed": 0.3108564089925494
+    },
+    {
+      "terminal": "fixture_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T22:50:30.637991+00:00",
+      "elapsed": 0.3127777299960144
+    },
+    {
+      "release": "large_broker",
+      "utc": "2026-10-17T22:50:30.696465+00:00",
+      "elapsed": 0.3712535529921297
+    },
+    {
+      "release": "large_perl",
+      "utc": "2026-10-17T22:50:30.703037+00:00",
+      "elapsed": 0.3778255469951546
+    },
+    {
+      "terminal": "large_broker",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T22:50:32.009311+00:00",
+      "elapsed": 1.6840979699918535
+    },
+    {
+      "terminal": "large_perl",
+      "exit": 0,
+      "group": [],
+      "utc": "2026-10-17T22:50:32.010975+00:00",
+      "elapsed": 1.685758949999581
+    }
+  ],
+  "target_inputs": 0,
+  "control_87_inputs": 0,
+  "full_model_loads": 0,
+  "stages": {
+    "A": {
+      "status": "PASS_A_TRANSPORT_ONLY",
+      "fixture_trace_sha256": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290",
+      "fixture_events": 300,
+      "large": {
+        "full_list_queries": 8,
+        "candidate_occurrences": 132856,
+        "max_list_count": 63911
+      },
+      "negative_count": 10,
+      "brokers": {
+        "fixture_broker": {
+          "requests": 1495,
+          "response_frames": 1925,
+          "response_bytes": 38792,
+          "max_frame_bytes": 54,
+          "max_list_count": 7,
+          "closed": true,
+          "adapter": {
+            "list_calls": 282,
+            "list_hits": 201,
+            "list_misses": 81,
+            "evictions": 79,
+            "peak_cache_bytes": 628,
+            "rows_read": 79,
+            "candidates_read": 203,
+            "word_calls": 1211,
+            "word_hits": 925,
+            "word_queries": 286
+          }
+        },
+        "large_broker": {
+          "requests": 10,
+          "response_frames": 2096,
+          "response_bytes": 1476641,
+          "max_frame_bytes": 724,
+          "max_list_count": 63911,
+          "closed": true
+        }
+      },
+      "elapsed_including_initial_checks": 1.7336901859962381
+    },
+    "P": {
+      "status": "SKIPPED_RESOURCE",
+      "reason": "PRE_HASH_CURRENT",
+      "observed": {
+        "memory.max": "8589934592",
+        "memory.current": "6698315776",
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      }
+    }
+  },
+  "manifest_sha256": "ac6f8d99cb78f414b1b0f825c2da79ae25288557a888df35fd338099fa197d98",
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "6687494144",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "memory_stat_before": "anon 95191040\nfile 6382583808\nkernel 208658432\nkernel_stack 720896\npagetables 3481600\nsec_pagetables 0\npercpu 10076\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 1318912\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 50331648\nshmem_thp 0\ninactive_anon 94883840\nactive_anon 86016\ninactive_file 10956800\nactive_file 6371627008\nunevictable 0\nslab_reclaimable 203323184\nslab_unreclaimable 1073680\nslab 204396864\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 11318791\npgmajfault 0\npgrefill 0\npgactivate 1667087\npgdeactivate 0\npglazyfree 92\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+  "namespace_self": {
+    "visible_pid": 10082,
+    "visible_ppid": 10079,
+    "visible_pgid": 10078,
+    "visible_session": 10078,
+    "state": "R",
+    "starttime": 7697392,
+    "pid_namespace": "pid:[4026532277]",
+    "nspid": [
+      10082,
+      5
+    ],
+    "nspgid": [
+      10078,
+      1
+    ],
+    "nssid": [
+      10078,
+      1
+    ],
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   45172 kB",
+      "VmSize:\t   44148 kB",
+      "VmHWM:\t   14592 kB",
+      "VmRSS:\t   13756 kB"
+    ],
+    "pid": 5,
+    "pgid": 1,
+    "session": 1
+  },
+  "process_guard_cases": [
+    {
+      "id": "self_exact",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "actual": "CURRENT_SELF_OR_ANCESTOR"
+    },
+    {
+      "id": "ancestor_exact",
+      "expected": "CURRENT_SELF_OR_ANCESTOR",
+      "actual": "CURRENT_SELF_OR_ANCESTOR"
+    },
+    {
+      "id": "self_pid_reused",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "same_pid_different_namespace",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "same_pid_different_local_pid",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "bad_visible_nspid",
+      "expected": "STOP_MATCH_IDENTITY",
+      "actual": "STOP_MATCH_IDENTITY"
+    },
+    {
+      "id": "bad_local_nspid",
+      "expected": "STOP_MATCH_NSPID",
+      "actual": "STOP_MATCH_NSPID"
+    },
+    {
+      "id": "old_v1_runner",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "foreign_broker_namespace_unknown",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "foreign_perl",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "old_original_perl",
+      "expected": "BLOCK_EXACT_SCRIPT_ARGV",
+      "actual": "BLOCK_EXACT_SCRIPT_ARGV"
+    },
+    {
+      "id": "current_exact_carrier",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    },
+    {
+      "id": "old_same_command_carrier",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "wrong_carrier_executable",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "foreign_shell_command",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "changed_carrier_command",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "carrier_future_start",
+      "expected": "BLOCK_EMBEDDED_UNRESOLVED",
+      "actual": "BLOCK_EMBEDDED_UNRESOLVED"
+    },
+    {
+      "id": "similar_unrelated_path",
+      "expected": "UNRELATED",
+      "actual": "UNRELATED"
+    },
+    {
+      "id": "saved_v1_current_carrier_1",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    },
+    {
+      "id": "saved_v1_current_carrier_2",
+      "expected": "CURRENT_INVOCATION_CARRIER",
+      "actual": "CURRENT_INVOCATION_CARRIER"
+    }
+  ],
+  "process_guard": {
+    "records": [
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 10071,
+          "visible_ppid": 228,
+          "visible_pgid": 10071,
+          "visible_session": 10071,
+          "state": "S",
+          "starttime": 7697388,
+          "pid_namespace": null,
+          "nspid": [
+            10071
+          ],
+          "nspgid": [
+            10071
+          ],
+          "nssid": [
+            10071
+          ],
+          "cmdline": [
+            "bwrap",
+            "--as-pid-1",
+            "--new-session",
+            "--die-with-parent",
+            "--bind",
+            "/",
+            "/",
+            "--dev",
+            "/dev",
+            "--bind-try",
+            "/dev/shm",
+            "/dev/shm",
+            "--unshare-user",
+            "--unshare-ipc",
+            "--unshare-pid",
+            "--unshare-net",
+            "--cap-drop",
+            "ALL",
+            "--argv0",
+            "codex-linux-sandbox",
+            "--",
+            "/opt/codex/bin/codex",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--apply-seccomp-then-exec",
+            "--managed-network",
+            "{\"loopbackPorts\":[41273,41531],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--proxy-route-spec",
+            "{\"routes\":[{\"env_key\":\"ALL_PROXY\",\"control_fd\":4},{\"env_key\":\"BUNDLE_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"BUNDLE_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"FTP_PROXY\",\"control_fd\":4},{\"env_key\":\"HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_PROXY\",\"control_fd\":5},{\"env_key\":\"PIP_PROXY\",\"control_fd\":5},{\"env_key\":\"WSS_PROXY\",\"control_fd\":5},{\"env_key\":\"WS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"all_proxy\",\"control_fd\":4},{\"env_key\":\"ftp_proxy\",\"control_fd\":4},{\"env_key\":\"http_proxy\",\"control_fd\":5},{\"env_key\":\"https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_http_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_proxy\",\"control_fd\":5},{\"env_key\":\"ws_proxy\",\"control_fd\":5},{\"env_key\":\"wss_proxy\",\"control_fd\":5}]}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -I -S /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py > /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stdout.txt 2> /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stderr.txt"
+          ],
+          "memory_status": [
+            "VmPeak:\t    3592 kB",
+            "VmSize:\t    3592 kB",
+            "VmHWM:\t     904 kB",
+            "VmRSS:\t     904 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/workspace/scratch/f24f8fae4976/bwrap"
+        }
+      },
+      {
+        "classification": "CURRENT_INVOCATION_CARRIER",
+        "record": {
+          "visible_pid": 10072,
+          "visible_ppid": 10071,
+          "visible_pgid": 10071,
+          "visible_session": 10071,
+          "state": "S",
+          "starttime": 7697389,
+          "pid_namespace": null,
+          "nspid": [
+            10072
+          ],
+          "nspgid": [
+            10071
+          ],
+          "nssid": [
+            10071
+          ],
+          "cmdline": [
+            "/root/.codex/tmp/arg0/codex-arg0s8zeyZ/codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--managed-network",
+            "{\"loopbackPorts\":[41273,41531],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -I -S /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py > /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stdout.txt 2> /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stderr.txt"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t    5976 kB",
+            "VmRSS:\t    5976 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/opt/codex/bin/codex"
+        }
+      },
+      {
+        "classification": "CURRENT_INVOCATION_CARRIER",
+        "record": {
+          "visible_pid": 10073,
+          "visible_ppid": 10071,
+          "visible_pgid": 10071,
+          "visible_session": 10071,
+          "state": "S",
+          "starttime": 7697389,
+          "pid_namespace": null,
+          "nspid": [
+            10073
+          ],
+          "nspgid": [
+            10071
+          ],
+          "nssid": [
+            10071
+          ],
+          "cmdline": [
+            "/root/.codex/tmp/arg0/codex-arg0s8zeyZ/codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--managed-network",
+            "{\"loopbackPorts\":[41273,41531],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -I -S /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py > /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stdout.txt 2> /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stderr.txt"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t    5976 kB",
+            "VmRSS:\t    5976 kB"
+          ],
+          "pid": null,
+          "pgid": null,
+          "session": null,
+          "proc_exe": null,
+          "exe_read_error": "PermissionError",
+          "argv0_realpath": "/opt/codex/bin/codex"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 10078,
+          "visible_ppid": 10071,
+          "visible_pgid": 10078,
+          "visible_session": 10078,
+          "state": "S",
+          "starttime": 7697390,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            10078,
+            1
+          ],
+          "nspgid": [
+            10078,
+            1
+          ],
+          "nssid": [
+            10078,
+            1
+          ],
+          "cmdline": [
+            "codex-linux-sandbox",
+            "--sandbox-policy-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--command-cwd",
+            "/workspace/scratch/f24f8fae4976",
+            "--permission-profile",
+            "{\"type\":\"managed\",\"file_system\":{\"type\":\"unrestricted\"},\"network\":\"restricted\"}",
+            "--apply-seccomp-then-exec",
+            "--managed-network",
+            "{\"loopbackPorts\":[41273,41531],\"allowLocalBinding\":true,\"allowUnixSockets\":[],\"dangerouslyAllowAllUnixSockets\":false}",
+            "--proxy-route-spec",
+            "{\"routes\":[{\"env_key\":\"ALL_PROXY\",\"control_fd\":4},{\"env_key\":\"BUNDLE_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"BUNDLE_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"DOCKER_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"FTP_PROXY\",\"control_fd\":4},{\"env_key\":\"HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"NPM_CONFIG_PROXY\",\"control_fd\":5},{\"env_key\":\"PIP_PROXY\",\"control_fd\":5},{\"env_key\":\"WSS_PROXY\",\"control_fd\":5},{\"env_key\":\"WS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTPS_PROXY\",\"control_fd\":5},{\"env_key\":\"YARN_HTTP_PROXY\",\"control_fd\":5},{\"env_key\":\"all_proxy\",\"control_fd\":4},{\"env_key\":\"ftp_proxy\",\"control_fd\":4},{\"env_key\":\"http_proxy\",\"control_fd\":5},{\"env_key\":\"https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_http_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_https_proxy\",\"control_fd\":5},{\"env_key\":\"npm_config_proxy\",\"control_fd\":5},{\"env_key\":\"ws_proxy\",\"control_fd\":5},{\"env_key\":\"wss_proxy\",\"control_fd\":5}]}",
+            "--",
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -I -S /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py > /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stdout.txt 2> /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stderr.txt"
+          ],
+          "memory_status": [
+            "VmPeak:\t  284672 kB",
+            "VmSize:\t  284672 kB",
+            "VmHWM:\t   14396 kB",
+            "VmRSS:\t   14396 kB"
+          ],
+          "pid": 1,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/opt/codex/bin/codex",
+          "exe_read_error": null,
+          "argv0_realpath": "/workspace/scratch/f24f8fae4976/codex-linux-sandbox"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 10079,
+          "visible_ppid": 10078,
+          "visible_pgid": 10078,
+          "visible_session": 10078,
+          "state": "S",
+          "starttime": 7697391,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            10079,
+            2
+          ],
+          "nspgid": [
+            10078,
+            1
+          ],
+          "nssid": [
+            10078,
+            1
+          ],
+          "cmdline": [
+            "/bin/bash",
+            "-lc",
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -I -S /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py > /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stdout.txt 2> /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stderr.txt"
+          ],
+          "memory_status": [
+            "VmPeak:\t    7884 kB",
+            "VmSize:\t    7852 kB",
+            "VmHWM:\t    2052 kB",
+            "VmRSS:\t    2052 kB"
+          ],
+          "pid": 2,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/usr/bin/bash",
+          "exe_read_error": null,
+          "argv0_realpath": "/usr/bin/bash"
+        }
+      },
+      {
+        "classification": "CURRENT_SELF_OR_ANCESTOR",
+        "record": {
+          "visible_pid": 10082,
+          "visible_ppid": 10079,
+          "visible_pgid": 10078,
+          "visible_session": 10078,
+          "state": "R",
+          "starttime": 7697392,
+          "pid_namespace": "pid:[4026532277]",
+          "nspid": [
+            10082,
+            5
+          ],
+          "nspgid": [
+            10078,
+            1
+          ],
+          "nssid": [
+            10078,
+            1
+          ],
+          "cmdline": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "-I",
+            "-S",
+            "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py"
+          ],
+          "memory_status": [
+            "VmPeak:\t   45172 kB",
+            "VmSize:\t   44148 kB",
+            "VmHWM:\t   14592 kB",
+            "VmRSS:\t   13872 kB"
+          ],
+          "pid": 5,
+          "pgid": 1,
+          "session": 1,
+          "proc_exe": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+          "exe_read_error": null,
+          "argv0_realpath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12"
+        }
+      }
+    ],
+    "blockers": [],
+    "context": {
+      "carrier_executable": "/opt/codex/bin/codex",
+      "shell_command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 -I -S /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py > /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stdout.txt 2> /workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2_execution_evidence/runner.stderr.txt",
+      "launch_floor_ticks": 7696906,
+      "self_starttime": 7697392
+    },
+    "namespace_self": {
+      "visible_pid": 10082,
+      "visible_ppid": 10079,
+      "visible_pgid": 10078,
+      "visible_session": 10078,
+      "state": "R",
+      "starttime": 7697392,
+      "pid_namespace": "pid:[4026532277]",
+      "nspid": [
+        10082,
+        5
+      ],
+      "nspgid": [
+        10078,
+        1
+      ],
+      "nssid": [
+        10078,
+        1
+      ],
+      "cmdline": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_TRANSPORT_PROFILE_v2/run_staged.py"
+      ],
+      "memory_status": [
+        "VmPeak:\t   45172 kB",
+        "VmSize:\t   44148 kB",
+        "VmHWM:\t   14592 kB",
+        "VmRSS:\t   13756 kB"
+      ],
+      "pid": 5,
+      "pgid": 1,
+      "session": 1
+    },
+    "identity_exclusion": "visible_pid + starttime + full NSpid + pid_namespace; no foreign namespace blanket exclusion"
+  },
+  "prior_live_matches": [],
+  "hashes_verified": true,
+  "P_pre_hash_resource": {
+    "memory.max": "8589934592",
+    "memory.current": "6698315776",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "terminal": [
+    {
+      "role": "fixture_broker",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "fixture_perl",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "large_broker",
+      "exit": 0,
+      "group": []
+    },
+    {
+      "role": "large_perl",
+      "exit": 0,
+      "group": []
+    }
+  ],
+  "terminal_confirmed": true,
+  "elapsed": 1.8123265789909055,
+  "end_utc": "2026-10-17T22:50:32.137549+00:00",
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "6698315776",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "memory_stat_after": "anon 102825984\nfile 6385795072\nkernel 208695296\nkernel_stack 720896\npagetables 3506176\nsec_pagetables 0\npercpu 6908\nsock 0\nvmalloc 4096\nshmem 0\nfile_mapped 65536\nfile_dirty 4497408\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 50331648\nshmem_thp 0\ninactive_anon 102543360\nactive_anon 86016\ninactive_file 12648448\nactive_file 6373040128\nunevictable 0\nslab_reclaimable 203515608\nslab_unreclaimable 914800\nslab 204430408\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 11350361\npgmajfault 0\npgrefill 0\npgactivate 1667430\npgdeactivate 0\npglazyfree 92\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\n",
+  "children_peak_rss_KiB": 19712,
+  "self_peak_rss_KiB": 29976,
+  "file_hashes": {
+    "large_perl_ready.json": "d0951bb91dc1a146556edc8affebd92fa54b1f9f8f4afa8c03b348a364dab819",
+    "large_perl.jsonl": "c14b69b784d203338e4e247721cb21f3c95eef8c8ec28ab9e162686e57cf75c1",
+    "large_broker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fixture_perl_ready.json": "2cb983e91565db89f1c7af4280eeac60fb6947c6e70ba7d0661b09c6a5865c6b",
+    "fixture_perl.jsonl": "46fac4f96f017b2c7b94fa71d5abc209f7188f8df83be0347d0ae176a3a31290",
+    "P_deadline.json": "fddf1f4e943bbac7cea1e0f041bdcd7205339f5c039ea8dfad342487cf875d19",
+    "large_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage_P.json": "4ca90495c36d77e7f386b4c943bda539b28df2f175150fa8007ff1df8e33edf8",
+    "large_broker_terminal.json": "a3edf5d5feeb95c5119b4af251683aa75be55f561328af9453ab2d4f2a52b6e5",
+    "process_guard.json": "edb53da32c4c47e442791e0ddabaec36aee8a0321996a779b5019568a579bfda",
+    "fixture_perl_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fixture_broker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "T0.json": "ff793e55b751a7ada2874146e314e88a911da8725840fd316e090242cb6d3d7a",
+    "fixture_broker_ipc.jsonl": "6537b776211a579dbee5f5de7a7eb2e1945700c67ce1d9dd189b18b855df5cf3",
+    "large_broker_ready.json": "3df6ef29b0b4dcfbf3208a92f7b594d0300f90cf59b1f8f52ff1c0a33e527755",
+    "fixture_broker_ready.json": "147c782f5fd73c56e19a1dd2d60774dc2d6ac6f4f84f4d2b3fc50b89949bed5d",
+    "fixture_broker_terminal.json": "64222929c2b395a1538bbdcf77b810cfa4f6b3ff1cb39e119edf96f6ba157921",
+    "A_deadline.json": "9887cb6e4eec2b19885e91e1029abd49440334462f4a8c38d65bc779f03b6c87",
+    "observations.jsonl": "056b67a13bc1745f0b6962f38145d08d9d885d7821572849571764ecc1b706b9",
+    "large_broker_ipc.jsonl": "b72a7bfcbf063760029df15001d29d16d741cafd960cf74c6d63fc58e15bfd1f",
+    "stage_A.json": "5da53f4239f9c4b3b51f78db82070b131fe3f466b61e574825f1ea2fd88f3531"
+  }
+}

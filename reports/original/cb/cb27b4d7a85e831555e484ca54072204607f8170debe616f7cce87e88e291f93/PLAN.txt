@@ -1,0 +1,13 @@
+One read-only/data-only audit of the preserved BE-W16-v1 case_01 evidence.
+No imports from frozen sources, model reads, broker/Perl/search/scoring or rerun.
+Inputs: case_01 frame shards/events/terminals/seals/stdout, parent seal and raw
+execution receipt, frozen source text, existing exact Library ZIP copies.
+Own parser: 1-based physical frame number; 0-based byte offsets; >BI header.
+Bound: <=32 MiB per individual input read, <=256 MiB address space, CPU 30 s,
+cooperative elapsed 45 s, <=300 MiB total source bytes for this parser phase;
+<=20,000 frames, <=8 MiB per raw shard. Outputs only in this new directory.
+Verify stored hashes and exact archived members; catalogue the actual bytes,
+locate all sequence gaps and rotation boundaries without repairing originals.
+If missing membership packets are uniquely specified by saved event data,
+derive them separately and label them DERIVED, never original evidence.
+STOP is not changed by any diagnostic result. No new pilot is authorized here.

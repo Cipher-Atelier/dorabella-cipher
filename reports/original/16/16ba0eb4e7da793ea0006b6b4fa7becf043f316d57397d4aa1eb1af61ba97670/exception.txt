@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_implementation_v2/run_ts_rc_v2.py", line 719, in main
+    output = attempt.execute('author', plan['author_argv'], cipher)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f24f8fae4976/TREESEARCH_first_control_implementation_v2/run_ts_rc_v2.py", line 599, in execute
+    raise Stop(reason)
+Stop: STOP_AUTHOR_STDERR

@@ -1,0 +1,19 @@
+--- frozen_v1/run_staged.py
++++ prospective_next/run_staged.py
+@@ -132,8 +132,14 @@
+         verify(freeze['identities'])
+         ns=NamespaceView();result['namespace_self']=ns.self_record
+         excluded={ns.visible_self,*[x['visible_pid'] for x in ns.ancestors]}
+-        tokens=(str(BASE),str(BASE.parent/'TS_DIFF_BRIDGE_v1/child_gate.py'),str(BASE.parent/'TS_DIFF_BRIDGE_v1/broker.py'),str(BASE.parent/'TS_DIFF_BRIDGE_v1/differential.pl'),str(BASE.parent/'TREESEARCH_feasibility_20261017/original/masc_solver_mcts.pl'))
+-        matches=[r for r in ns.snapshot() if r['visible_pid'] not in excluded and any(any(token in arg for token in tokens) for arg in r['cmdline'])]
++        exact_scripts={str(BASE/name) for name in ('run_staged.py','child_gate.py','broker.py','differential.pl','transport_probe.pl','load_profile.pl')}
++        exact_scripts.update(str(BASE.parent/'TS_DIFF_BRIDGE_v1'/name) for name in ('run_differential.py','child_gate.py','broker.py','differential.pl'))
++        exact_scripts.add(str(BASE.parent/'TREESEARCH_feasibility_20261017/original/masc_solver_mcts.pl'))
++        # A script path inside a shell-command string is not a standalone workload argv.
++        # A standalone exact path remains a blocker even when namespace/executable cannot be read.
++        snapshot=ns.snapshot()
++        matches=[r for r in snapshot if r['visible_pid'] not in excluded and any(arg in exact_scripts for arg in r['cmdline'])]
++        result['embedded_path_carriers']=[r for r in snapshot if r['visible_pid'] not in excluded and r not in matches and any(any(script in arg for script in exact_scripts) for arg in r['cmdline'])]
+         result['prior_live_matches']=matches
+         if matches:raise Stop('STOP_PREVIOUS_LIVE_PROCESS')
+         result['hashes_verified']=True

@@ -1,0 +1,17 @@
+{
+  "status": "NO_FOREIGN_CODE_CHANGES",
+  "modified_foreign_files": [],
+  "source_reference_copies": "SOURCE_IDENTITIES.json",
+  "new_own_code": [
+    "prepare_bound.py"
+  ],
+  "own_code_scope": "Completed once: control data preparation and metadata-only readonly census; not a broker, solver, port, or modified foreign execution",
+  "not_built": [
+    "new combined decoder entrypoint",
+    "new broker/glue",
+    "foreign-execution supervisor",
+    "ready execution command"
+  ],
+  "reason": "Output lower bound contradicts unchanged 8MiB/file and 32MiB total before first iteration can complete.",
+  "no_hidden_cap_changes": true
+}

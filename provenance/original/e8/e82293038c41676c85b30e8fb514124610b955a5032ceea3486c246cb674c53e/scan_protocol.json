@@ -1,0 +1,37 @@
+{
+  "definitions": 672,
+  "states": 2,
+  "inputs": [
+    "cipher polarity",
+    "arc count",
+    "axis"
+  ],
+  "output": "same axis and arc count, polarity XOR current state",
+  "state_initial_values": [
+    0,
+    1
+  ],
+  "read_order": "left to right, no line/dot resets",
+  "screen_restarts": 2,
+  "screen_iterations": 4000,
+  "shortlist_size": 3,
+  "refine_restarts": 128,
+  "refine_iterations": 20000,
+  "identity_always_refined": true,
+  "canonicalize_symbol_names": true,
+  "deduplicate_equivalent_equality_patterns_per_input": true,
+  "seed": "SHA256(canonical cipher bytes + stage label), first 32 bits little-endian",
+  "primary_statistic": "maximum score over all screened/refined candidates",
+  "secondary_statistic": "maximum score minus identity score",
+  "negative_reference": "permute complete input glyphs, preserve their exact frequencies",
+  "selection_correction": "repeat entire family search, ranking and refinement on every control",
+  "limitations": [
+    "Not an exhaustive search over all finite-state ciphers.",
+    "The definitions were selected using prior exploratory analysis of Dorabella.",
+    "All transformations preserve the entire axis/arc sequence.",
+    "Modern English news model, not Elgar-era personal correspondence.",
+    "Heuristic search, not a proof of a global optimum."
+  ],
+  "negative_controls": 99,
+  "end_to_end_positives": 8
+}

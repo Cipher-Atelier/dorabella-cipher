@@ -1,0 +1,15 @@
+{
+  "case_count": 14,
+  "command": [
+    "dorabella_round13/code/run.py",
+    "--kind",
+    "positive,regression",
+    "--workers",
+    "4"
+  ],
+  "completed_utc": "2026-10-02T09:14:55.114392+00:00",
+  "pid": 6,
+  "started_utc": "2026-10-02T09:14:40.708182+00:00",
+  "status": "completed",
+  "workers": 4
+}

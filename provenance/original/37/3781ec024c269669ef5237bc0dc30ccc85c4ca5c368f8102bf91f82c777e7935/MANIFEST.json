@@ -1,0 +1,135 @@
+{
+  "schema": "TREESEARCH-readonly-feasibility-v1",
+  "created_utc": "2026-10-17T04:17:46.960092+00:00",
+  "decision": "STATIC_PACKAGE_AND_CH1_ADAPTER_FEASIBLE_RUNTIME_NOT_TESTED",
+  "repository": "https://github.com/bmhauer/hhk-decipherment",
+  "commit": "2c7ad49cd4f4fa852168a8ce295bf739bf076adc",
+  "third_party_execution": false,
+  "model_import_or_scoring": false,
+  "crypto_computation": false,
+  "archive_handling": "streamed regular members for identity and text inspection, no extraction or code execution",
+  "public_model_archives_included": false,
+  "prior_references": [
+    {
+      "path": "/workspace/scratch/f24f8fae4976/dorabella_final_readonly/tested_map.csv",
+      "bytes": 12270,
+      "sha256": "5f12a97d89577561241afdb600ffccf0112ac3875fa47749ef39ee59a6c0b635"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/Dorabella_CH1_analytic_completion_addendum_v1_20261017.md",
+      "bytes": 9033,
+      "sha256": "d8db46f3c42fd1dbabe869accafd56fd2e2bb094f8ccdbe765e694c5333fc8b4"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/Dorabella_CH2_blocked_CH3_plan_package/CH3/search_inputs.json",
+      "bytes": 387859,
+      "sha256": "20213ef608d401bd393ff545ba4c854cfc2cd1ddc546f55a96db4917c6f68894"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/Dorabella_handoff_after_SA_20261017.md",
+      "bytes": 21811,
+      "sha256": "4679d0ab10a0ff6053de5cfe3cffa25636ba349dc4c73d07ed52f674572fdb19"
+    }
+  ],
+  "runtime_evidence": {
+    "binary_file": "/usr/bin/perl",
+    "binary_executed": false,
+    "config_file": "/usr/lib/x86_64-linux-gnu/perl/5.38.2/Config.pm",
+    "config_line_110_version": "5.38.2",
+    "compile_import_or_model_load_test": false,
+    "present_files": [
+      "/usr/bin/date",
+      "/usr/lib/x86_64-linux-gnu/perl/5.38.2/Time/HiRes.pm",
+      "/usr/lib/x86_64-linux-gnu/perl/5.38.2/auto/Time/HiRes/HiRes.so",
+      "/usr/share/perl/5.38.2/Getopt/Long.pm",
+      "/usr/share/perl/5.38.2/sort.pm"
+    ]
+  },
+  "files": [
+    {
+      "path": "REPORT_RU.md",
+      "bytes": 16267,
+      "sha256": "1489ac7e6796316254e58de0d89a2c97cd5680199b0d7f1f4084ebba42514629"
+    },
+    {
+      "path": "original/FreqAnalysis.pm",
+      "bytes": 2133,
+      "sha256": "563cce6d2e3af583cebd0f922e5cd7680ae138786572367d72fc9f01465b8f12"
+    },
+    {
+      "path": "original/JMSmoothing.pm",
+      "bytes": 1857,
+      "sha256": "74b033a6899f33be4e70243fe645863252aa379e13739242b7d3fef9c8867357"
+    },
+    {
+      "path": "original/LICENCE",
+      "bytes": 1189,
+      "sha256": "ee9e6e82d5ea179ff189f330b3a54eff791ee4f4874b340fefcf7a1227c300bf"
+    },
+    {
+      "path": "original/NoSpace.pm",
+      "bytes": 1097,
+      "sha256": "6c6f0bc2173a3ae5170f658d36a1b2ab4d31571c41d9e5a10159cc40550c6188"
+    },
+    {
+      "path": "original/README",
+      "bytes": 2078,
+      "sha256": "13b6f059bcf026c96d45a52e9451cd1dd992e84ff9985531eaa72af514723c02"
+    },
+    {
+      "path": "original/ReadLM.pm",
+      "bytes": 1078,
+      "sha256": "bda9cc75ee2303015bb7ac7df2897ebe038e21786cb826df71132d9f897cb8e9"
+    },
+    {
+      "path": "original/Utils.pm",
+      "bytes": 2765,
+      "sha256": "8708e8db3c182004ccb3e3d57d9ed205882ab923a81bf007df27877ab4177b2e"
+    },
+    {
+      "path": "original/masc_solver_beamsearch.pl",
+      "bytes": 11262,
+      "sha256": "0a6a1b0ec4d1c8ef8d264180b8961e9523063755ae358b4bd13096ab043b1c63"
+    },
+    {
+      "path": "original/masc_solver_mcts.pl",
+      "bytes": 14627,
+      "sha256": "5021fcef107d606f641fa4b24e4544bb3eeb159efefb26dc6d4d3966a7068f17"
+    },
+    {
+      "path": "evidence/repo.json",
+      "bytes": 5503,
+      "sha256": "e7d1dc0e335b6642d5a63ab2ba154da956054f57e0b210c13737dd9b354fe275"
+    },
+    {
+      "path": "evidence/master.json",
+      "bytes": 5178,
+      "sha256": "2aef1ea42076d54893c8e4895da65297e51a1ea91c5a82e2d3d6efdbfa243e43"
+    },
+    {
+      "path": "evidence/contents.json",
+      "bytes": 10078,
+      "sha256": "07d5e117e231751b96fe665dc3698c22ea7d86ed6a5960b9031c7ffeacf10d9b"
+    },
+    {
+      "path": "evidence/download_receipts.json",
+      "bytes": 8664,
+      "sha256": "ab28477c3b67f83f95de5d29a84beda9eab03bd661c4b25f58dcb12192d507d8"
+    },
+    {
+      "path": "evidence/archive_readback.json",
+      "bytes": 5627,
+      "sha256": "ff042697117f69ed350951a284de68acabaa81637e5718cc9040f010fb4403be"
+    },
+    {
+      "path": "prior/tested_map.csv",
+      "bytes": 12270,
+      "sha256": "5f12a97d89577561241afdb600ffccf0112ac3875fa47749ef39ee59a6c0b635"
+    },
+    {
+      "path": "prior/CH1_analytic_completion.md",
+      "bytes": 9033,
+      "sha256": "d8db46f3c42fd1dbabe869accafd56fd2e2bb094f8ccdbe765e694c5333fc8b4"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-18T15:26:33.692990+00:00",
+  "status": "READBACK_CONFIRMED_WRAPPER_SMOKE_ONLY",
+  "raw_stdout_bound": true,
+  "closed_files_verified": 9,
+  "old_records_unchanged": 95,
+  "freeze_files_unchanged": 16,
+  "no_reexecution": true,
+  "smoke_result_sha256": "174378b8d34731bae662c0a80a739d4dcfae907876fadf4e81f10ad4523440c0",
+  "raw_receipt_sha256": "aaaccc338b343fc844d43d190c95dc4a7b45bd45185f784e127640e999e23bd9",
+  "diff_sha256": "cd17b6d853236ccf88e4b27da64d2bf29b07c80f2e49455900c261a87ae6be28",
+  "main_search_rerun": false,
+  "scientific_status": "UNCHANGED_STOP_CORRECTNESS"
+}

@@ -1,0 +1,109 @@
+{
+  "complete": false,
+  "record_counts": {
+    "whole24": 52,
+    "routes": 52,
+    "localrules": 10,
+    "relax": 2,
+    "homophonic": 48,
+    "homophonic_emission": 48,
+    "periodic": 8,
+    "fraction": 4,
+    "header": 2,
+    "merged_masc": 2,
+    "keyword_tables": 2,
+    "routes_wordall": 1
+  },
+  "candidates_checked": 5405,
+  "max_score_error": 1.7763568394002505e-15,
+  "frozen_protocols_checked": [
+    "results/v6/homophonic_emission/frozen.json",
+    "results/v6/merged_masc/frozen.json",
+    "results/v6/relax/frozen.json",
+    "results/v6/routes_wordall/frozen.json",
+    "results/v6/routes/frozen.json",
+    "results/v6/periodic/frozen.json",
+    "results/v6/keyword_tables/frozen.json",
+    "results/v6/homophonic/frozen.json",
+    "results/v6/localrules/frozen.json",
+    "results/v6/whole24/frozen.json",
+    "results/v6/header/frozen.json",
+    "results/v6/fraction/frozen.json"
+  ],
+  "old_archive_entries_unchanged": 907,
+  "whole_python_reference_cases": 1000,
+  "whole_exhaustive_roundtrip_rules": 2774016,
+  "keyword_safe_bound_vs_bruteforce_cases": 420,
+  "wordall_stage_counts": {
+    "hauer_real": {
+      "first": 1665,
+      "middle": 33,
+      "final": 17
+    },
+    "hart_real": {
+      "first": 981,
+      "middle": 0,
+      "final": 0
+    },
+    "positive_00": {
+      "first": 0,
+      "middle": 0,
+      "final": 0
+    }
+  },
+  "routes_bijections": 1665,
+  "local_rules_roundtrips": 7425,
+  "missing_declared_cases": {
+    "whole24": [],
+    "routes": [],
+    "localrules": [],
+    "relax": [
+      "hauer_null_00",
+      "hart_null_00",
+      "hauer_null_01",
+      "hart_null_01",
+      "hauer_null_02",
+      "hart_null_02",
+      "hauer_null_03",
+      "hart_null_03",
+      "hauer_null_04",
+      "hart_null_04",
+      "hauer_null_05",
+      "hart_null_05",
+      "hauer_null_06",
+      "hart_null_06",
+      "hauer_null_07",
+      "hart_null_07",
+      "hauer_null_08",
+      "hart_null_08",
+      "hauer_null_09",
+      "hart_null_09",
+      "hauer_null_10",
+      "hart_null_10",
+      "hauer_null_11",
+      "hart_null_11",
+      "hauer_null_12",
+      "hart_null_12",
+      "hauer_null_13",
+      "hart_null_13",
+      "hauer_null_14",
+      "hart_null_14",
+      "hauer_null_15",
+      "hart_null_15",
+      "hauer_null_16",
+      "hart_null_16",
+      "hauer_null_17",
+      "hart_null_17",
+      "hauer_null_18",
+      "hart_null_18"
+    ],
+    "homophonic": [],
+    "homophonic_emission": [],
+    "periodic": []
+  },
+  "notes": [
+    "A round trip is necessary for consistency, not sufficient for historical correctness.",
+    "Null/homophone models were checked for global consistency, not unique inversion without homophone choices."
+  ],
+  "seconds": 10.586302397000054
+}

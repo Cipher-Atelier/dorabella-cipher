@@ -1,0 +1,6 @@
+{
+  "assertions_checked": 196,
+  "assertions_matched": 196,
+  "archives": 6,
+  "method": "Fresh SHA-256 of exact downloaded archive members including nested ZIPs against inert embedded checksum text. Original absolute prefixes resolved only to exact recorded members. No research code executed."
+}

@@ -1,0 +1,472 @@
+{
+  "complete": true,
+  "record_counts": {
+    "whole24": 52,
+    "routes": 52,
+    "localrules": 10,
+    "relax": 2,
+    "homophonic": 48,
+    "homophonic_emission": 48,
+    "periodic": 8,
+    "fraction": 4,
+    "header": 2,
+    "merged_masc": 2,
+    "keyword_tables": 2,
+    "routes_wordall": 3
+  },
+  "candidates_checked": 7854,
+  "max_score_error": 1.7763568394002505e-15,
+  "frozen_protocols_checked": [
+    "results/v6/homophonic_emission/frozen.json",
+    "results/v6/merged_masc/frozen.json",
+    "results/v6/relax/frozen.json",
+    "results/v6/routes_wordall/frozen.json",
+    "results/v6/routes/frozen.json",
+    "results/v6/periodic/frozen.json",
+    "results/v6/keyword_tables/frozen.json",
+    "results/v6/homophonic/frozen.json",
+    "results/v6/localrules/frozen.json",
+    "results/v6/whole24/frozen.json",
+    "results/v6/header/frozen.json",
+    "results/v6/fraction/frozen.json"
+  ],
+  "old_archive_entries_unchanged": 907,
+  "whole_python_reference_cases": 1000,
+  "whole_exhaustive_roundtrip_rules": 2774016,
+  "keyword_safe_bound_vs_bruteforce_cases": 420,
+  "wordall_stage_counts": {
+    "hauer_real": {
+      "first": 1665,
+      "middle": 33,
+      "final": 17
+    },
+    "hart_real": {
+      "first": 1665,
+      "middle": 33,
+      "final": 17
+    },
+    "positive_00": {
+      "first": 1665,
+      "middle": 33,
+      "final": 17
+    }
+  },
+  "routes_bijections": 1665,
+  "local_rules_roundtrips": 7425,
+  "missing_declared_cases": {
+    "whole24": [],
+    "routes": [],
+    "localrules": [],
+    "relax": [
+      "hauer_null_00",
+      "hart_null_00",
+      "hauer_null_01",
+      "hart_null_01",
+      "hauer_null_02",
+      "hart_null_02",
+      "hauer_null_03",
+      "hart_null_03",
+      "hauer_null_04",
+      "hart_null_04",
+      "hauer_null_05",
+      "hart_null_05",
+      "hauer_null_06",
+      "hart_null_06",
+      "hauer_null_07",
+      "hart_null_07",
+      "hauer_null_08",
+      "hart_null_08",
+      "hauer_null_09",
+      "hart_null_09",
+      "hauer_null_10",
+      "hart_null_10",
+      "hauer_null_11",
+      "hart_null_11",
+      "hauer_null_12",
+      "hart_null_12",
+      "hauer_null_13",
+      "hart_null_13",
+      "hauer_null_14",
+      "hart_null_14",
+      "hauer_null_15",
+      "hart_null_15",
+      "hauer_null_16",
+      "hart_null_16",
+      "hauer_null_17",
+      "hart_null_17",
+      "hauer_null_18",
+      "hart_null_18"
+    ],
+    "homophonic": [],
+    "homophonic_emission": [],
+    "periodic": []
+  },
+  "notes": [
+    "A round trip is necessary for consistency, not sufficient for historical correctness.",
+    "Null/homophone models were checked for global consistency, not unique inversion without homophone choices."
+  ],
+  "seconds": 9.160923633000039
+}
+completed: 233
+{
+  "whole24": {
+    "records": 52,
+    "sensitivity": {
+      "n": 12,
+      "mean_accuracy": 0.9990421455938697,
+      "min_accuracy": 0.9885057471264368,
+      "exact": 11,
+      "at_least_90pct": 12,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_08",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_09",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_10",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_11",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 6,
+      "plus_one_tail": 0.35
+    }
+  },
+  "routes": {
+    "records": 52,
+    "sensitivity": {
+      "n": 12,
+      "mean_accuracy": 0.9204980842911877,
+      "min_accuracy": 0.08045977011494253,
+      "exact": 9,
+      "at_least_90pct": 11,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 0.08045977011494253
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 0.9770114942528736
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_08",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_09",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_10",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_11",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 0,
+      "plus_one_tail": 0.05
+    }
+  },
+  "localrules": {
+    "records": 10,
+    "sensitivity": {
+      "n": 8,
+      "mean_accuracy": 0.9971264367816092,
+      "min_accuracy": 0.9885057471264368,
+      "exact": 6,
+      "at_least_90pct": 8,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": null
+  },
+  "relax": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "homophonic": {
+    "records": 48,
+    "sensitivity": {
+      "n": 8,
+      "mean_accuracy": 0.8362068965517242,
+      "min_accuracy": 0.4942528735632184,
+      "exact": 1,
+      "at_least_90pct": 5,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 0.4942528735632184
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 0.9310344827586207
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 0.9195402298850575
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 0.896551724137931
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 0.5057471264367817
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 0.9655172413793104
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 0.9770114942528736
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 4,
+      "plus_one_tail": 0.25
+    }
+  },
+  "homophonic_emission": {
+    "records": 48,
+    "sensitivity": {
+      "n": 8,
+      "mean_accuracy": 0.9612068965517242,
+      "min_accuracy": 0.8390804597701149,
+      "exact": 3,
+      "at_least_90pct": 7,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 0.8390804597701149
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 0.9655172413793104
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 0.9080459770114943
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 0.9885057471264368
+        },
+        {
+          "id": "positive_06",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_07",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": {
+      "n": 19,
+      "exceedances": 3,
+      "plus_one_tail": 0.2
+    }
+  },
+  "periodic": {
+    "records": 8,
+    "sensitivity": {
+      "n": 6,
+      "mean_accuracy": 1.0,
+      "min_accuracy": 1.0,
+      "exact": 6,
+      "at_least_90pct": 6,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_01",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_02",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_03",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_04",
+          "accuracy": 1.0
+        },
+        {
+          "id": "positive_05",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": null
+  },
+  "fraction": {
+    "records": 4,
+    "sensitivity": null,
+    "paired": null
+  },
+  "header": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "merged_masc": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "keyword_tables": {
+    "records": 2,
+    "sensitivity": null,
+    "paired": null
+  },
+  "routes_wordall": {
+    "records": 3,
+    "sensitivity": {
+      "n": 1,
+      "mean_accuracy": 1.0,
+      "min_accuracy": 1.0,
+      "exact": 1,
+      "at_least_90pct": 1,
+      "cases": [
+        {
+          "id": "positive_00",
+          "accuracy": 1.0
+        }
+      ],
+      "not_independent_holdout": true
+    },
+    "paired": null
+  }
+}
+Journal words 2601 lines 206

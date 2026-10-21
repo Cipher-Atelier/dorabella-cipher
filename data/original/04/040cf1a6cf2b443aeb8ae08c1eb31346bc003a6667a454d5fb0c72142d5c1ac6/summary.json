@@ -1,0 +1,7 @@
+{
+  "n": 8,
+  "mean_accuracy": 0.853448275862069,
+  "at_least_90_percent": 5,
+  "min_accuracy": 0.4482758620689655,
+  "mean_best_score": -2.186202178107303
+}

@@ -1,0 +1,787 @@
+{
+  "status": "PASS_SAVED_DATA_READBACK",
+  "utc": "2026-10-18T00:19:38.111957+00:00",
+  "checks": {
+    "tool_exit0_no_session": true,
+    "tool_stdout_status": true,
+    "all_recorded_attempt_hashes": true,
+    "frozen_code_runtime_identities": true,
+    "freeze_unchanged": true,
+    "zip_unchanged": true,
+    "full_320_events_byte_equal": true,
+    "prior_300_events_byte_equal": true,
+    "every_saved_inverse_key_and_all_positions": true,
+    "roots_and_winners": true,
+    "base_accounting": true,
+    "candidate_lists_order_duplicates": true,
+    "raw_values_and_truth": true,
+    "zero_bits": true,
+    "unknown_replacement": true,
+    "exact_error_cases_no_warnings": true,
+    "ties_preserve_input_order": true,
+    "all_11_negative_rejections": true,
+    "full_ipc_accounting": true,
+    "broker_explicit_close": true,
+    "only_three_authorized_child_invocations": true,
+    "limits_ready_evidence": true,
+    "exit_and_groups": true,
+    "empty_stderr": true,
+    "wall_inside_plan": true,
+    "no_oom_delta": true,
+    "skip_exact_frozen_formula": true,
+    "no_real_artifacts_or_scope_expansion": true,
+    "independent_proc_identities_gone": true
+  },
+  "inverse_records_per_trace": 118,
+  "inverse_positions_per_trace": 708,
+  "inverse_details": [
+    {
+      "event_1based": 30,
+      "case": "C1",
+      "kind": "root",
+      "ok": true
+    },
+    {
+      "event_1based": 33,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 34,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 35,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 37,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 38,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 39,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 41,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 42,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 44,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 45,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 46,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 47,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 49,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 50,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 52,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 53,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 54,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 82,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 83,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 84,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 85,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 86,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 87,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 88,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 89,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 90,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 91,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 92,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 93,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 94,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 95,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 96,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 97,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 98,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 102,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 105,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 106,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 107,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 110,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 111,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 112,
+      "case": "C1",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 131,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 132,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 133,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 134,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 135,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 136,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 137,
+      "case": "C1",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 139,
+      "case": "C1",
+      "kind": "winner",
+      "ok": true
+    },
+    {
+      "event_1based": 140,
+      "case": "C2",
+      "kind": "root",
+      "ok": true
+    },
+    {
+      "event_1based": 143,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 144,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 145,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 147,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 148,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 149,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 151,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 152,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 153,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 155,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 156,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 157,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 158,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 160,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 161,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 162,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 164,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 165,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 166,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 167,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 198,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 199,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 200,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 201,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 202,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 203,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 204,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 205,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 206,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 207,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 208,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 209,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 210,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 211,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 212,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 213,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 214,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 215,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 216,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 217,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 221,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 222,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 225,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 226,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 229,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 230,
+      "case": "C2",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 248,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 249,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 250,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 251,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 252,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 253,
+      "case": "C2",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 255,
+      "case": "C2",
+      "kind": "winner",
+      "ok": true
+    },
+    {
+      "event_1based": 256,
+      "case": "C3",
+      "kind": "root",
+      "ok": true
+    },
+    {
+      "event_1based": 259,
+      "case": "C3",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 260,
+      "case": "C3",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 262,
+      "case": "C3",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 264,
+      "case": "C3",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 265,
+      "case": "C3",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 266,
+      "case": "C3",
+      "kind": "candidate",
+      "ok": true
+    },
+    {
+      "event_1based": 280,
+      "case": "C3",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 281,
+      "case": "C3",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 282,
+      "case": "C3",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 283,
+      "case": "C3",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 284,
+      "case": "C3",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 285,
+      "case": "C3",
+      "kind": "child",
+      "ok": true
+    },
+    {
+      "event_1based": 299,
+      "case": "C3",
+      "kind": "winner",
+      "ok": true
+    }
+  ],
+  "terminal_reinspection": [
+    {
+      "visible_pid": 12038,
+      "saved_starttime": 8225036,
+      "proc_exists": false,
+      "current_starttime": null,
+      "old_identity_absent": true
+    },
+    {
+      "visible_pid": 12042,
+      "saved_starttime": 8225046,
+      "proc_exists": false,
+      "current_starttime": null,
+      "old_identity_absent": true
+    },
+    {
+      "visible_pid": 12043,
+      "saved_starttime": 8225055,
+      "proc_exists": false,
+      "current_starttime": null,
+      "old_identity_absent": true
+    },
+    {
+      "visible_pid": 12044,
+      "saved_starttime": 8225057,
+      "proc_exists": false,
+      "current_starttime": null,
+      "old_identity_absent": true
+    }
+  ],
+  "real_gate": {
+    "current": 6814613504,
+    "projected": 7574155264,
+    "threshold": 7516192768,
+    "excess_bytes": 57962496,
+    "strict_current_required_below": 6756651008
+  },
+  "result_sha256": "a85d009fad044c591a10240181d475df2db604e5479625d8448e051f01655723",
+  "raw_receipt_sha256": "30af1a1e52d1fe0f7cb80812464cc09a300173954716d71aa4755f71d86dfcde",
+  "scope": "Saved bytes/keys/positions only; no scoring, solver, IPC, model load or rerun."
+}

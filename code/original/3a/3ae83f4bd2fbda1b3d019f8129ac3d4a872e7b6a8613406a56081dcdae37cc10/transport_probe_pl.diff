@@ -1,0 +1,56 @@
+--- TS_LM_PREFETCH_DIFF_v1/transport_probe.pl
++++ TS_COMBINED_STORAGE_v1/transport_probe.pl
+@@ -1,19 +1,39 @@
+-# Prepared finite real-table byte transport only; no probability/score call.
+-use strict;use warnings;use Config;use JSON::PP;use Time::HiRes qw(clock_gettime CLOCK_MONOTONIC);use Prefetch;
++# NEW UNEXECUTED: both stores, byte transport and original NoSpace only. No scorer/search.
++use strict;use warnings;use Config;use JSON::PP;use Time::HiRes qw(clock_gettime CLOCK_MONOTONIC);
++use Prefetch;use CompactPatList;use NoSpace;
+ BEGIN {die 'RUNTIME' unless "$^V" eq 'v5.38.2' && $Config{nvtype} eq 'double' && $Config{nvsize}==8;}
+-my ($base,$rd,$wr)=@ARGV;die 'ARGS' unless @ARGV==3;
+-my $j=JSON::PP->new->ascii(1)->canonical(1);$|=1;
+-open my $f,'<',"$base/real_queries.json" or die $!;my $q=$j->decode(do {local $/;<$f>});close $f;
+-die 'QUERY_COUNT' unless @$q==36;
+-my $b=Prefetch->attach($rd,$wr);my $t0=clock_gettime(CLOCK_MONOTONIC);my $lookups=0;
++die 'ARGS' unless @ARGV==5;
++my ($base,$lr,$lw,$pr,$pw)=@ARGV;my $j=JSON::PP->new->ascii(1)->canonical(1);$|=1;
++sub load_json {open my $f,'<',$_[0] or die $!;my $v=$j->decode(do {local $/;<$f>});close $f or die $!;return $v;}
++sub emit {print $j->encode($_[0]),"\n" or die 'OUTPUT';}
++my $spec=load_json("$base/real_spec.json");my $q=load_json("$base/real_queries.json");
++my $saved=load_json("$base/evidence/real_lists.json");my $segments=load_json("$base/evidence/real_segmentation.json");
++die 'COUNTS' unless @$q==36 && @{$spec->{patterns}}==8 && @{$spec->{lm_batches}}==9 && @$segments==6;
++my $t0=clock_gettime(CLOCK_MONOTONIC);my $lm=Prefetch->attach($lr,$lw);
++my ($pat,$groups,$words,$maxlen)=CompactPatList->attach($pr,$pw);die 'MAXLEN' unless $maxlen==46;
++my ($nlookup,$nlist,$lm_seconds)=(0,0,0);
+ for my $batch (0..8) {
+- my $n=$batch==0 ? 36 : 776;my (@items,@expected);
++ if ($batch<8) {
++  my $pattern=$spec->{patterns}[$batch];my $values=$groups->[1]{$pattern};
++  die 'LIST_CONTENT' unless $j->encode($values) eq $j->encode($saved->{$pattern});
++  emit({type=>'pat_list',batch=>$batch,pattern=>$pattern,values=>$values});$nlist++;
++  $values->[0]='MUTATED_CALLER_COPY' if defined($values) && $pattern eq 'abcdefgh';
++ } else {
++  for my $s (@$segments) {
++   my $got=NoSpace::FindWords($s->{input},$words,$maxlen);die 'SEGMENTATION' unless $got eq $s->{output};
++   emit({type=>'segmentation',input=>$s->{input},output=>$got});
++  }
++ }
++ my $n=$spec->{lm_batches}[$batch];my (@items,@expected);
+  for my $i (0..$n-1) {my $x=$q->[$i%36];push @items,[$x->{table},$x->{key_hex}];my $r=$x->{result};push @expected,[$r->{found},$r->{value_hex},$r->{last_row_1based}];}
+- my $a=clock_gettime(CLOCK_MONOTONIC);my $got=$b->batch('real',\@items);my $dt=clock_gettime(CLOCK_MONOTONIC)-$a;
+- die 'BYTES_MISMATCH' unless $j->encode($got) eq $j->encode(\@expected);
+- print $j->encode({batch=>$batch,lookups=>$n,ipc_seconds=>$dt,results=>$got}),"\n";
+- $lookups+=$n;die 'THROUGHPUT_DEADLINE' if clock_gettime(CLOCK_MONOTONIC)-$t0>10;
++ my $s=clock_gettime(CLOCK_MONOTONIC);my $got=$lm->batch('real',\@items);my $dt=clock_gettime(CLOCK_MONOTONIC)-$s;$lm_seconds+=$dt;
++ die 'LM_VALUES' unless $j->encode($got) eq $j->encode(\@expected);
++ emit({type=>'lm_batch',batch=>$batch,lookups=>$n,results=>$got,ipc_seconds=>$dt});$nlookup+=$n;
++ die 'LM_ROUNDTRIP_DEADLINE' if $lm_seconds>10;
++ die 'WHOLE_PROBE_DEADLINE' if clock_gettime(CLOCK_MONOTONIC)-$t0>30;
+ }
+-$b->close();my $elapsed=clock_gettime(CLOCK_MONOTONIC)-$t0;die 'THROUGHPUT_DEADLINE' if $elapsed>10;
+-print $j->encode({terminal=>'COMPLETE_BYTE_IPC',lookups=>$lookups,requests=>10,seconds=>$elapsed,score_calls=>0,search_calls=>0}),"\n";
++my $cs=clock_gettime(CLOCK_MONOTONIC);$lm->close();$lm_seconds+=clock_gettime(CLOCK_MONOTONIC)-$cs;
++$pat->close();my $seconds=clock_gettime(CLOCK_MONOTONIC)-$t0;
++die 'FINAL_DEADLINE' if $lm_seconds>10 || $seconds>30;
++emit({terminal=>'COMPLETE_COMBINED_TRANSPORT',lookups=>$nlookup,list_fetches=>$nlist,segmentations=>6,lm_requests=>10,lm_seconds=>$lm_seconds,seconds=>$seconds,score_calls=>0,search_calls=>0});
+ exit 0;

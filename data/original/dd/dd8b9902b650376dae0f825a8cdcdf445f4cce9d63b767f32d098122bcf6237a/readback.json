@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-17T23:06:21.807464+00:00",
+  "status": "READBACK_VERIFIED_SAVED_FIXED_PAIR",
+  "checks": {
+    "freeze_files_unchanged": true,
+    "same_session_exit0": true,
+    "seven_complete_hashes": true,
+    "two_fixed_rows": true,
+    "both87letters_retained": true,
+    "term_accounting": true,
+    "limits_and_events": true,
+    "status": true,
+    "old_result_unchanged": true
+  },
+  "scope": "Saved JSON and raw receipt only; no imports of analyzer, no rescoring, no solver execution. Does not independently prove each rational operation or Perl NV equivalence."
+}

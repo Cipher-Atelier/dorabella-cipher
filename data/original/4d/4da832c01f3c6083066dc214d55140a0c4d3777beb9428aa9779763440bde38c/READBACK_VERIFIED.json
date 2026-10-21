@@ -1,0 +1,46 @@
+{
+  "version": "TS-COMPACT-STORE-v2-artifact-readback",
+  "utc": "2026-10-17T13:25:14.688310+00:00",
+  "status": "VERIFIED_COMPLETE_STORAGE_INDEX",
+  "observed_exit": 0,
+  "raw_receipt_session": 29974,
+  "same_attempt_only": true,
+  "no_model_parsing_or_scoring_repeated": true,
+  "full_rows": 7548932,
+  "full_candidates": 10662322,
+  "source_bytes": 340083717,
+  "index_bytes": 537591808,
+  "index_sha256": "c35f28462555da9982ed975b713a291b654a0e2b0d514e7d498f717bdf386070",
+  "hash_matches_runner_seal": true,
+  "elapsed": 118.64903419100301,
+  "proc_observed_peaks_KiB": {
+    "VmPeak": 52488,
+    "VmSize": 52040,
+    "VmHWM": 23732,
+    "VmRSS": 23732
+  },
+  "cgroup_observed_peak_bytes": 6031908864,
+  "memory_event_deltas": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "old_artifacts_unchanged": [
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_COMPACT_STORE_v2/compact_check.py",
+      "sha256": "7f535d09f47ad102780d858eebf89ca9e54d8688465f4ece9c77321a5fb89f2c"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_COMPACT_STORE_v1/FREEZE.json",
+      "sha256": "6554e45856ae95f7bccec5d7bac2aa90eff2b73e1d931292211927b069e376b9"
+    },
+    {
+      "path": "/workspace/scratch/f24f8fae4976/TS_COMPACT_STORE_v1/attempt/result.json",
+      "sha256": "7724a5ae1d4f9cb4982563f981b604c74200a4a99c99845fd4502678e4e427a1"
+    }
+  ],
+  "scope": "Storage boundary only; not Perl/numerical/search equivalence."
+}

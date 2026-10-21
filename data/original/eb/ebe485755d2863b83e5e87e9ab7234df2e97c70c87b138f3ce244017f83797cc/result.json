@@ -1,0 +1,191 @@
+{
+  "version": "TS-ORIGINAL-ORACLE-v1",
+  "status": "PASS_ORIGINAL_MODULE_FIXTURES_ONLY",
+  "start_utc": "2026-10-17T13:54:15.811096+00:00",
+  "author_invocations": 1,
+  "solver_calls": 0,
+  "score_calls": 0,
+  "target_inputs": 0,
+  "signals": [],
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "6658682880",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "namespace_self": {
+    "visible_pid": 7918,
+    "visible_ppid": 7917,
+    "visible_pgid": 7917,
+    "visible_session": 7917,
+    "state": "R",
+    "starttime": 4479940,
+    "pid_namespace": "pid:[4026532277]",
+    "nspid": [
+      7918,
+      2
+    ],
+    "nspgid": [
+      7917,
+      1
+    ],
+    "nssid": [
+      7917,
+      1
+    ],
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_ORIGINAL_ORACLE_v1/run_oracle.py"
+    ],
+    "memory_status": [
+      "VmPeak:\t   43820 kB",
+      "VmSize:\t   42980 kB",
+      "VmHWM:\t   14180 kB",
+      "VmRSS:\t   12384 kB"
+    ],
+    "pid": 2,
+    "pgid": 1,
+    "session": 1
+  },
+  "previous_live_matches": [],
+  "hashes_verified": true,
+  "anchor_before_exec": {
+    "visible_pid": 7922,
+    "visible_ppid": 7918,
+    "visible_pgid": 7922,
+    "visible_session": 7922,
+    "state": "S",
+    "starttime": 4479948,
+    "pid_namespace": "pid:[4026532277]",
+    "nspid": [
+      7922,
+      5
+    ],
+    "nspgid": [
+      7922,
+      5
+    ],
+    "nssid": [
+      7922,
+      5
+    ],
+    "cmdline": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "-I",
+      "-S",
+      "/workspace/scratch/f24f8fae4976/TS_ORIGINAL_ORACLE_v1/child_gate.py",
+      "3"
+    ],
+    "memory_status": [
+      "VmPeak:\t   35592 kB",
+      "VmSize:\t   35592 kB",
+      "VmHWM:\t    8536 kB",
+      "VmRSS:\t    8536 kB"
+    ],
+    "pid": 5,
+    "pgid": 5,
+    "session": 5
+  },
+  "applied_limits": {
+    "RLIMIT_AS": [
+      536870912,
+      536870912
+    ],
+    "RLIMIT_CPU": [
+      25,
+      28
+    ],
+    "RLIMIT_FSIZE": [
+      16777216,
+      16777216
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ]
+  },
+  "group_before_exec": [
+    {
+      "visible_pid": 7922,
+      "visible_ppid": 7918,
+      "visible_pgid": 7922,
+      "visible_session": 7922,
+      "state": "S",
+      "starttime": 4479948,
+      "pid_namespace": "pid:[4026532277]",
+      "nspid": [
+        7922,
+        5
+      ],
+      "nspgid": [
+        7922,
+        5
+      ],
+      "nssid": [
+        7922,
+        5
+      ],
+      "cmdline": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-I",
+        "-S",
+        "/workspace/scratch/f24f8fae4976/TS_ORIGINAL_ORACLE_v1/child_gate.py",
+        "3"
+      ],
+      "memory_status": [
+        "VmPeak:\t   35592 kB",
+        "VmSize:\t   35592 kB",
+        "VmHWM:\t    8536 kB",
+        "VmRSS:\t    8536 kB"
+      ],
+      "pid": 5,
+      "pgid": 5,
+      "session": 5
+    }
+  ],
+  "author_exec_release_utc": "2026-10-17T13:54:15.895987+00:00",
+  "release_elapsed": 0.08490528599941172,
+  "observed_exit": 0,
+  "terminal_group": [],
+  "terminal_confirmed": true,
+  "comparisons": [
+    {
+      "case": 1,
+      "groups": 5,
+      "candidates": 16,
+      "words": 9,
+      "maxlen": 6,
+      "segmentations": 10,
+      "exact": true
+    },
+    {
+      "case": 2,
+      "groups": 7,
+      "candidates": 68945,
+      "words": 123619,
+      "maxlen": 46,
+      "segmentations": 6,
+      "exact": true
+    }
+  ],
+  "elapsed": 2.12222086499969,
+  "end_utc": "2026-10-17T13:54:17.933314+00:00",
+  "children_ru_maxrss_KiB": 89432,
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "6690385920",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "file_hashes": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ready.json": "38efad18d2a00ce75d2cc221e99668e78255d5056d15bb457cf2906881a7fd14",
+    "stdout.jsonl": "33401873f43b177efd3aab71f54552ebba861c705c6aa33106564ec9649aed30",
+    "T0.json": "77e8e73d7151e41d272a1bb06abbf2e5831642a7fc4d7390d588820e1060897d",
+    "observations.jsonl": "02ff508b27b1e37c7a91d6ab7ba65db3e21f96a14b25ee303801a3e588cd8804"
+  }
+}

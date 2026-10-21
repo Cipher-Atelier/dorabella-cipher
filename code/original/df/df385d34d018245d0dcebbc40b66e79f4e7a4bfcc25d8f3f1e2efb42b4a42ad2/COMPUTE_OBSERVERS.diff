@@ -1,0 +1,58 @@
+--- original lines154-535
++++ traced same functions
+@@ -26,6 +26,7 @@
+   
+     ### SELECTION: Find a leaf to explore.
+     my @path = Selection($root, $children, $key_ucb, $key_visits);
++    Trace('selection',$global_iteration_count,\@path); # OBSERVE_ONLY
+     my $leaf = $path[-1];
+     Message("Selection -- $path[-1] ", scalar @path);
+     
+@@ -45,6 +46,7 @@
+     ### BACKPROPAGATION: Update the tree along the path.
+     Backpropagation(\@path, $key_value, $key_visits, $key_ucb, $cscores);
+     
++    Trace('iteration',$i,$best,[map {[$_,Bits($key_value->{$_}),$key_visits->{$_},Bits($key_ucb->{$_})]} @path[1..$#path]]); # OBSERVE_ONLY
+     Message("Iteration $i complete.");
+   }
+   
+@@ -131,6 +133,7 @@
+     my $new_score = $newdeciphermentscores{$newdeciph};
+     die "Error 4! [$newdeciph], No score" unless $new_score;
+     
++    Trace('child',$global_iteration_count,$leaf,$new_key,$newdeciph,Bits($new_score),Roundtrip($ctext,$new_key)); # OBSERVE_ONLY
+     # Record the score.
+     $key_value->{$new_key} = $new_score;  
+     
+@@ -232,6 +235,7 @@
+       }
+                        
+    
++      Trace('candidates',$global_iteration_count,$cw,$dw,\@sorted,\@candidates,[map {[$_,Bits(Utils::Sim($_,$dw))]} @sorted]); # OBSERVE_ONLY
+       foreach my $match (@candidates) {
+         next if $match eq $dw;
+         
+@@ -242,6 +246,7 @@
+         $seen->{"$new_key"} = 1;          
+            
+         my $newdeciph = Utils::Decipher($ctext,$new_key, @C);
++        Trace('candidate',$global_iteration_count,$cw,$match,$newdeciph,Roundtrip($ctext,$new_key)); # OBSERVE_ONLY
+         $newkeyhash->{$newdeciph} = $new_key
+         
+       }
+@@ -294,6 +299,7 @@
+       }
+                        
+    
++      Trace('candidates',$global_iteration_count,$cw,$dw,\@sorted,\@candidates,[map {[$_,Bits(Utils::Sim($_,$dw))]} @sorted]); # OBSERVE_ONLY
+       foreach my $match (@candidates) {
+         next if $match eq $dw;
+         
+@@ -304,6 +310,7 @@
+         $seen->{"$new_key"} = 1;          
+            
+         my $newdeciph = NoSpace::FindWords(Utils::Decipher($ctext,$new_key, @C), $is_word, $maxlen);
++        Trace('candidate',$global_iteration_count,$cw,$match,$newdeciph,Roundtrip($ctext,$new_key)); # OBSERVE_ONLY
+         $newkeyhash->{$newdeciph} = $new_key
+         
+       }

@@ -1,0 +1,83 @@
+--- TS_LM_PREFETCH_DIFF_v1/run.py
++++ TS_COMBINED_STORAGE_v1/run.py
+@@ -28,7 +28,7 @@
+     if ATTEMPT.exists(): print('REFUSED_EXISTING_ATTEMPT');return 3
+     ATTEMPT.mkdir();(ATTEMPT/'work').mkdir()
+     launch=json.loads((BASE/'launch_evidence.json').read_text());start=launch['monotonic'];global_deadline=launch['global_deadline'];deadline=min(start+90,global_deadline)
+-    result={'version':'TS-LM-PREFETCH-DIFF-v1','status':'INCOMPLETE','start_utc':launch['utc'],
++    result={'version':'TS-COMBINED-STORAGE-v1','status':'INCOMPLETE','start_utc':launch['utc'],
+             'commands':[],'signals':[],'phases':[],'target_inputs':0,'control_87_inputs':0,'full_model_loads':0,'stages':{}}
+     dump('T0.json',{'utc':result['start_utc'],'monotonic':start,'global_deadline':global_deadline})
+     children=[];handles=[];parent_fds=set();ns=None
+@@ -115,10 +115,10 @@
+             if p.stat().st_size!=entry['bytes'] or digest(p,tick)!=entry['sha256']:
+                 raise Stop('STOP_HASH:'+str(p))
+     def pair(prefix):
+-        request_read,request_write=pipe();response_read,response_write=pipe()
+-        broker=launch_child(prefix+'_broker',request_read,response_write)
+-        perl=launch_child(prefix+'_perl',subprocess.DEVNULL,log_handle(prefix+'_perl.jsonl'),(response_read,request_write))
+-        for fd in (request_read,request_write,response_read,response_write):close_fd(fd)
++        lreqr,lreqw=pipe();lrespr,lrespw=pipe();preqr,preqw=pipe();prespr,prespw=pipe()
++        broker=launch_child(prefix+'_broker',subprocess.DEVNULL,log_handle(prefix+'_broker_stdout.txt'),(lreqr,lrespw,preqr,prespw))
++        perl=launch_child(prefix+'_perl',subprocess.DEVNULL,log_handle(prefix+'_perl.jsonl'),(lrespr,lreqw,prespr,preqw))
++        for fd in (lreqr,lreqw,lrespr,lrespw,preqr,preqw,prespr,prespw):close_fd(fd)
+         release(broker);release(perl);observe_until_done([broker,perl])
+     try:
+         freeze=json.loads((BASE/'FREEZE.json').read_text())
+@@ -127,8 +127,8 @@
+         if sys.version_info[:3]!=(3,12,14):raise Stop('STOP_PYTHON_VERSION')
+         result['before']=memory()
+         result['memory_stat_before']=Path('/sys/fs/cgroup/memory.stat').read_text()
+-        if result['before']['memory.max']!='8589934592' or int(result['before']['memory.current'])+freeze['resource']['small_input_page_bytes']+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
+-            raise Stop('STOP_FIXTURE_RESOURCE_GATE')
++        if result['before']['memory.max']!='8589934592' or int(result['before']['memory.current'])+freeze['resource']['all_input_page_bytes']+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
++            raise Stop('NO_GO_INITIAL_RESOURCE')
+         if (ATTEMPT/'Modules').exists():raise Stop('STOP_UNEXPECTED_PERL_INCLUDE_PATH')
+         verify(freeze['identities'])
+         ns=NamespaceView();result['namespace_self']=ns.self_record
+@@ -140,6 +140,9 @@
+         result['prior_live_matches']=guard['blockers']
+         dump('process_guard.json',guard)
+         if guard['blockers']:raise Stop('STOP_PREVIOUS_LIVE_PROCESS')
++        verify(freeze['real_inputs'])
++        result['post_hash_resource']=memory()
++        if int(result['post_hash_resource']['memory.current'])+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:raise Stop('NO_GO_POST_HASH_RESOURCE')
+         result['hashes_verified']=True
+         dump('phase_deadline.json',{'deadline':deadline-4,'global_deadline':global_deadline})
+         reference=launch_child('reference_perl',subprocess.DEVNULL,log_handle('reference_perl.jsonl'))
+@@ -147,27 +150,21 @@
+         pair('adapted')
+         from readback import fixture,real
+         tick();result['stages']['fixture']=fixture();dump('stage_fixture.json',result['stages']['fixture'])
+-        # Conditional real-table byte IPC. No scoring/model hash-load/patlst access.
++        # Combined real-table transport, only after all-input admission and fixture PASS.
+         deadline=min(global_deadline,time.monotonic()+60)
+         dump('phase_deadline.json',{'deadline':deadline-4,'global_deadline':global_deadline})
+-        pre=memory();result['real_pre_hash_resource']=pre
+-        if int(pre['memory.current'])+freeze['resource']['all_input_page_bytes']+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
+-            result['stages']['real']={'status':'SKIPPED_RESOURCE','phase':'PRE_HASH','observed':pre}
+-            result['status']='PASS_FIXTURE_REAL_SKIPPED_RESOURCE';code=0
++        pre=memory();result['real_post_hash_resource']=pre
++        if int(pre['memory.current'])+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
++            result['stages']['real']={'status':'SKIPPED_RESOURCE','phase':'POST_FIXTURE','observed':pre}
++            result['status']='PASS_COMBINED_FIXTURE_REAL_SKIPPED_RESOURCE';code=0
+         else:
+-            verify(freeze['real_inputs'])
+-            post=memory();result['real_post_hash_resource']=post
+-            if int(post['memory.current'])+freeze['resource']['process_AS_sum']+freeze['resource']['allowance']>=7*1024**3:
+-                result['stages']['real']={'status':'SKIPPED_RESOURCE','phase':'POST_HASH','observed':post}
+-                result['status']='PASS_FIXTURE_REAL_SKIPPED_RESOURCE';code=0
+-            else:
+-                pair('real');tick();result['stages']['real']=real();tick();verify(freeze['real_inputs'])
+-                result['status']='PASS_FINITE_PREFETCH_AND_IPC_ONLY';code=0
++            pair('real');tick();result['stages']['real']=real();tick();verify(freeze['real_inputs'])
++            result['status']='PASS_FINITE_COMBINED_STORAGE_ONLY';code=0
+         dump('stage_real.json',result['stages']['real'])
+         verify(freeze['identities'])
+         if digest(BASE/'FREEZE.json',tick)!=result['manifest_sha256']:raise Stop('STOP_MANIFEST_CHANGED')
+     except BaseException as e:
+-        result['status']='STOP';result['error']=repr(e);result['traceback']=traceback.format_exc();code=2
++        result['status']='NO_GO_BEFORE_FOREIGN' if str(e).startswith('NO_GO_') and not children else 'STOP';result['error']=repr(e);result['traceback']=traceback.format_exc();code=3 if result['status']=='NO_GO_BEFORE_FOREIGN' else 2
+     finally:
+         for fd in list(parent_fds):close_fd(fd)
+         try:

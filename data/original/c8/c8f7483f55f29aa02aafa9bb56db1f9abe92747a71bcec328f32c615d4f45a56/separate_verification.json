@@ -1,0 +1,210 @@
+{
+  "status": "passed",
+  "checks": "Separate explicit87number expansion, TSV position/order/input equality, compound expansion, null position, repeated-symbol contradictions. This is a second implementation in the same ChatGPT, not an independent researcher. Manual image reading is NOT independently certified.",
+  "positions_by_Sams_number": {
+    "1": [
+      7,
+      30,
+      34,
+      46
+    ],
+    "2": [
+      51,
+      64,
+      68,
+      75
+    ],
+    "3": [
+      69
+    ],
+    "4": [
+      13,
+      32,
+      45,
+      53,
+      76
+    ],
+    "5": [
+      12,
+      15,
+      17,
+      18,
+      22,
+      31,
+      40,
+      41,
+      47,
+      49,
+      73
+    ],
+    "6": [
+      29,
+      52,
+      60,
+      62,
+      65,
+      71,
+      77,
+      82
+    ],
+    "7": [],
+    "8": [],
+    "9": [
+      2,
+      20,
+      21,
+      80
+    ],
+    "10": [
+      9,
+      36,
+      56,
+      57
+    ],
+    "11": [
+      37
+    ],
+    "12": [],
+    "13": [
+      27,
+      44,
+      70,
+      78,
+      81
+    ],
+    "14": [
+      6,
+      19,
+      33,
+      43,
+      50,
+      63,
+      74,
+      83
+    ],
+    "15": [
+      16
+    ],
+    "16": [
+      14,
+      23,
+      54,
+      67,
+      85
+    ],
+    "17": [
+      3,
+      39,
+      42,
+      61,
+      66,
+      72
+    ],
+    "18": [
+      11,
+      28,
+      48,
+      59
+    ],
+    "19": [
+      5
+    ],
+    "20": [
+      1
+    ],
+    "21": [
+      4,
+      35,
+      38,
+      79,
+      84,
+      87
+    ],
+    "22": [
+      24,
+      26,
+      55,
+      58,
+      86
+    ],
+    "23": [
+      10,
+      25
+    ],
+    "24": []
+  },
+  "nonunique_key_categories": {
+    "2": [
+      51,
+      64,
+      68,
+      75
+    ],
+    "3": [
+      69
+    ],
+    "4": [
+      13,
+      32,
+      45,
+      53,
+      76
+    ],
+    "5": [
+      12,
+      15,
+      17,
+      18,
+      22,
+      31,
+      40,
+      41,
+      47,
+      49,
+      73
+    ],
+    "10": [
+      9,
+      36,
+      56,
+      57
+    ],
+    "13": [
+      27,
+      44,
+      70,
+      78,
+      81
+    ],
+    "14": [
+      6,
+      19,
+      33,
+      43,
+      50,
+      63,
+      74,
+      83
+    ],
+    "15": [
+      16
+    ],
+    "21": [
+      4,
+      35,
+      38,
+      79,
+      84,
+      87
+    ],
+    "22": [
+      24,
+      26,
+      55,
+      58,
+      86
+    ]
+  },
+  "source_digit_at8": "unresolved20/21; note6 corrected17 separately",
+  "exact_original_glyph_roundtrip": "not established; contradictions to both archived readings regardless of uncertain digit"
+}

@@ -1,0 +1,3 @@
+input,trigram_strings,T12_le,T12_fraction,prefix_crib_le,prefix_crib_fraction,row_arc_hist_T12_le,row_arc_hist_support,row_arc_plus_polarity_T12_le,row_arc_plus_polarity_support
+hauer_real,84288,126,0.001494874715261959,42144,0.5,26,187,26,29
+hart_real,42144,159,0.0037727790432801824,20064,0.4760820045558087,26,187,26,29

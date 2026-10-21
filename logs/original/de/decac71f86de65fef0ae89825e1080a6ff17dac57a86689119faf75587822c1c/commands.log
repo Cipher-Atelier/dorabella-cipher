@@ -1,0 +1,8 @@
+2026-10-02T00:45:38Z interactive session unsupported before execution; ordinary invocation
+2026-10-02T00:46:03Z python round11/reproduce.py --case bailey_01 --case bailey_05 --case elgar_caractacus_postcard
+2026-10-02T00:46:27Z python round11/reproduce.py --case bailey_02 --case bailey_03 --case bailey_04 --case bailey_06 --case bailey_07 --case bailey_08 --case bailey_09 --case brewer_01 --case brewer_02 --case brewer_03 --case elgar_march_1897
+2026-10-02T00:46:58Z python round11/reproduce.py --case hauer_real --case hart_real --case hauer_real_pair_00 --case hart_real_pair_00
+
+Recorded after execution from tool-call history: python prepare_audit.py
+Recorded after execution from tool-call history (work/dorabella_lab): python round11/verify.py --kind all --sample-blocks --old-files
+Recorded after execution from tool-call history: python finalize_recheck.py

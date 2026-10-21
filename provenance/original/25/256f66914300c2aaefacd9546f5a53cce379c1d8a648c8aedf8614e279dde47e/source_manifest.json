@@ -1,0 +1,150 @@
+{
+  "full_history/Dorabella_round14_reproducible_20261005.zip": {
+    "size": 4835910,
+    "sha256": "f408eaa3f2d2274d7a6adc99f693d3d3e77d064f3c901a9d2108d1714349125f"
+  },
+  "full_history/dorabella_lab_round10.zip": {
+    "size": 99683669,
+    "sha256": "3dda3655d6322daafa13e455c0ea5b447e30748218bca2b532f594bf3ddd36af"
+  },
+  "full_history/dorabella_research_log.md": {
+    "size": 18774,
+    "sha256": "5b88317dc27d0a35e1f66613c20d05868ff2cc285a286a488c26c236028f0723"
+  },
+  "full_history/dorabella_round10_research_log.md": {
+    "size": 26863,
+    "sha256": "1ee861c0f570db749a1bdcc234740bac3c2f60e59c0880b98701c584987805cb"
+  },
+  "full_history/dorabella_round11_recheck_20261002.md": {
+    "size": 14163,
+    "sha256": "0e2e4c716ba9b61d305572980bc5b2e5efe11073c3a52dc7168bf3c39a519da5"
+  },
+  "full_history/dorabella_round11_research_log.md": {
+    "size": 27117,
+    "sha256": "e09d9ee1e600052d1c664f1175bb0c3603157ca0a3ae19aba743d80d0d024d82"
+  },
+  "full_history/dorabella_round2_research_log.md": {
+    "size": 23041,
+    "sha256": "7dfbaf6ff176e587f1ffb4825744534e35ee4a9a73b85fda5cb0c33cca5378a7"
+  },
+  "full_history/dorabella_round3_research_log.md": {
+    "size": 23722,
+    "sha256": "b63512f8c361b802413c2f16bf12b49d700d548f02a80378f6f67d2fea487cd9"
+  },
+  "full_history/dorabella_round4_research_log.md": {
+    "size": 20935,
+    "sha256": "5cf7cb26b50e9a0afbda01408db7d033cb8d6dd45a1b1d81f12d9300fb739f15"
+  },
+  "full_history/dorabella_round5_research_log.md": {
+    "size": 29641,
+    "sha256": "b196ca102ef6d652357ce29d20c9778c2047cd3b098854fd2137332e7b9212f4"
+  },
+  "full_history/dorabella_round6_research_log.md": {
+    "size": 33442,
+    "sha256": "60d03b66752b9ef77cd720da34c195158fc1b28744676caec0ffbabc95b779cb"
+  },
+  "full_history/dorabella_round7_research_log.md": {
+    "size": 24663,
+    "sha256": "138f29b89724963f03d53113cd0d9bbbe66a4a011d26459abc1af77b05d7b126"
+  },
+  "full_history/dorabella_round8_research_log.md": {
+    "size": 29378,
+    "sha256": "95f6866471ecb44f702d3cf2be5a98c13d7aec91a7e05c32e6867b56dc7c73d3"
+  },
+  "full_history/dorabella_round9_research_log.md": {
+    "size": 33354,
+    "sha256": "41d49b921a4baaf2c766102044543b4f885730e1d962e3f01105156ac0dead3a"
+  },
+  "full_history/dorabella_symbol_prediction_20261002.zip": {
+    "size": 2712811,
+    "sha256": "8aacce4a62539941b3306e45e7e81ec9909547f922d54f6e81991d139fdd4580"
+  },
+  "sources/coordinate_lag/README_REPRODUCE.txt": {
+    "size": 2625,
+    "sha256": "3801a280a6d4a202823272fde0a6e3abc23546ee6a2744d4960136f01f3220f2"
+  },
+  "sources/coordinate_lag/protocol.json": {
+    "size": 2980,
+    "sha256": "d005361d7dfb8b8dec10a887403dfc37b3cc420b8a0a5fbefaf84bf79bd88185"
+  },
+  "sources/dorabella_research_log.md": {
+    "size": 18774,
+    "sha256": "5b88317dc27d0a35e1f66613c20d05868ff2cc285a286a488c26c236028f0723"
+  },
+  "sources/dorabella_round10_research_log.md": {
+    "size": 26863,
+    "sha256": "1ee861c0f570db749a1bdcc234740bac3c2f60e59c0880b98701c584987805cb"
+  },
+  "sources/dorabella_round11_recheck_20261002.md": {
+    "size": 14163,
+    "sha256": "0e2e4c716ba9b61d305572980bc5b2e5efe11073c3a52dc7168bf3c39a519da5"
+  },
+  "sources/dorabella_round11_research_log.md": {
+    "size": 27117,
+    "sha256": "e09d9ee1e600052d1c664f1175bb0c3603157ca0a3ae19aba743d80d0d024d82"
+  },
+  "sources/dorabella_round2_research_log.md": {
+    "size": 23041,
+    "sha256": "7dfbaf6ff176e587f1ffb4825744534e35ee4a9a73b85fda5cb0c33cca5378a7"
+  },
+  "sources/dorabella_round3_research_log.md": {
+    "size": 23722,
+    "sha256": "b63512f8c361b802413c2f16bf12b49d700d548f02a80378f6f67d2fea487cd9"
+  },
+  "sources/dorabella_round4_research_log.md": {
+    "size": 20935,
+    "sha256": "5cf7cb26b50e9a0afbda01408db7d033cb8d6dd45a1b1d81f12d9300fb739f15"
+  },
+  "sources/dorabella_round5_research_log.md": {
+    "size": 29641,
+    "sha256": "b196ca102ef6d652357ce29d20c9778c2047cd3b098854fd2137332e7b9212f4"
+  },
+  "sources/dorabella_round6_research_log.md": {
+    "size": 33442,
+    "sha256": "60d03b66752b9ef77cd720da34c195158fc1b28744676caec0ffbabc95b779cb"
+  },
+  "sources/dorabella_round7_research_log.md": {
+    "size": 24663,
+    "sha256": "138f29b89724963f03d53113cd0d9bbbe66a4a011d26459abc1af77b05d7b126"
+  },
+  "sources/dorabella_round8_research_log.md": {
+    "size": 29378,
+    "sha256": "95f6866471ecb44f702d3cf2be5a98c13d7aec91a7e05c32e6867b56dc7c73d3"
+  },
+  "sources/dorabella_round9_research_log.md": {
+    "size": 33354,
+    "sha256": "41d49b921a4baaf2c766102044543b4f885730e1d962e3f01105156ac0dead3a"
+  },
+  "sources/prior_code/dorabella_lab/localrules_v6.py": {
+    "size": 8391,
+    "sha256": "f406b2a3823d75d3c64c920436e2245893990d581595956dc59c1cd9bacc4942"
+  },
+  "sources/prior_code/dorabella_lab/round9/literal_walk.py": {
+    "size": 5252,
+    "sha256": "979cf15c5f6351a9e87e572f7fdc7ae9dbfe575fac32a0cabc03ea8a9e85db41"
+  },
+  "sources/prior_code/dorabella_lab/whole24_v6.py": {
+    "size": 7719,
+    "sha256": "ae6b7bea599489e603c2b614be261dca88b9e2d4d3d1716f3880aabbb51218ae"
+  },
+  "sources/round13/README_REPRODUCE_RU.md": {
+    "size": 8871,
+    "sha256": "6be12c5fb4c44ca3e74a18beb3e35ebdcf51d2243c45f835572f01f7580399fa"
+  },
+  "sources/round13/frozen_protocol.json": {
+    "size": 7490,
+    "sha256": "43de9f2fc5dec87c13e9ec9a68d58295aed951a4d865f32c9648a0ff86f2a4a3"
+  },
+  "sources/round14/README_REPRODUCE.txt": {
+    "size": 4247,
+    "sha256": "75a44ef63aff4ca35931f04b362b1e4c3878829cd9ae839f9a59d288411bd475"
+  },
+  "sources/round14/checks/results_verified.json": {
+    "size": 53427,
+    "sha256": "f228e49892d485c34c63bc40f65399ccde8f8118c5e70825ecd7c4fb9735b3a6"
+  },
+  "sources/round14/protocol.json": {
+    "size": 4588,
+    "sha256": "ae5d77723a64e36ecef03edf596339b6da027173af0bc601df7fece0bb756996"
+  }
+}

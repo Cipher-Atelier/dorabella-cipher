@@ -1,0 +1,117 @@
+{
+  "frozen_utc": "2026-10-02T09:14:13.134627+00:00",
+  "hashes": {
+    "checks/engine_body_provenance.json": "e30f68409a2a946d479853ae03cd59785148ce6c62c13492c6acaf4bbecfa4c5",
+    "code/engine.py": "a176694f8cb0dab1c555f749ac87f3ec2e50927f53376a2744dae9e7d4f377fb",
+    "code/freeze.py": "ed586d82a46587e9a74c762815a509175f659e3820c370e0445910d0c0710c59",
+    "code/run.py": "9d22819cda5266bd9bce8a651b0c14a766eded0a6ebdc471fe71e86171e13415",
+    "code/verify.py": "89128be606f45467b8a2fc2569dada1f8d80ef93f3ac577130de555deb005487",
+    "data/cases.json": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+    "data/round11_frozen_protocol.json": "991b60f70f3f5826c9803938ad572beea5c90f16b32affbb473cd32cb9a29867",
+    "data/scoring.npz": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+    "data/search_inputs.json": "ad3d5577d222f1d1da0c4a94994174bc64f7aaf7f9e8c5eca224fdbb793cc5f0"
+  },
+  "protocol": {
+    "execution_order": "First bailey_01 full87 and independent verification. Then all14 positive/regression full87 and verification. Then two real full87 and verification. Then78 null full87 and verification. No scorer retuning.",
+    "family": {
+      "P8": "all 40320 lexicographic permutations of 0..7",
+      "Q_m": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "alphabet": "ABCDEFGHIKLMNOPQRSTUWXYZ",
+      "canonical_id": "768*lex_rank(P8) + 256*m + mask",
+      "duplicates_removed": "6 common P3 * 256 masks has a global-reversal redundancy of 2; canonical Q endpoints ascending removes it",
+      "formula": "key[3*o+c] = ASCII_index(A24[3*P8[o] + Q_m[2-c if bit(mask,o) else c]])",
+      "mask": "all integers 0..255; bit o reverses input arcs 1<->3 for orientation o",
+      "round10_included": "all Q with mask=0 or mask=255; 241920 distinct keys",
+      "scope": "No glyph corrections, no position reordering, no state/dot commands. Same fixed triples, common middle rank; not all substitutions, not all 6^8 internal permutations.",
+      "triples": [
+        "ABC",
+        "DEF",
+        "GHI",
+        "KLM",
+        "NOP",
+        "QRS",
+        "TUW",
+        "XYZ"
+      ],
+      "unique_full_keys": 30965760
+    },
+    "id": "round13-direction-reversal-full87-exact-v1",
+    "interpretation": "All87 used for training/selection. NO heldout test or decryption claim. Frozen round11 model, family and94 cases reused; texts previously seen. Exact numerical maximum is not a semantic solution. Matched controls yield separate descriptive conditional tails only; no global adaptive-search correction.",
+    "negative_controls": {
+      "coupling": "Same RNG initial state, different graphs consume it differently. NOT identical positional permutations and not a validated joint null for max across versions.",
+      "method": "archived directed-bigram Euler shuffle with fixed endpoints, independently uniform for each transcription; paired by replicate using same reset RNG seed per replicate for both versions",
+      "n_pairs": 39,
+      "seed_root": 202610011102,
+      "selection": "Each version analyzed separately. No choosing better version or multiplying p-values. Controls preserve full glyph counts, directed bigrams, endpoints, not necessarily prefix counts.",
+      "tail": "(1+count(S87_control>=S87_real-1e-10))/(39+1), separately for each transcription; descriptive conditional tail, not solution probability"
+    },
+    "objective": {
+      "character": "unchanged archived data/english_merged24_v5.npz, mean natural log conditional 4gram in original window order",
+      "key_selection": "Strict largest float64 S87; exact equality retains every tied key and selects smallest canonical ID. No tolerance in key selection.",
+      "not_probability": true,
+      "test": "None. Heldout length0.",
+      "train": "S87=C87+0.5*W87 on all87 glyphs, including all84 within-fulltext 4gram windows.",
+      "whole87": "All87 is optimization input, not heldout.",
+      "word": "unchanged merged24 TextBlob unigram Viterbi; max word24, unknown-8/letter, partial endpoints -2; no added words"
+    },
+    "positive_controls": {
+      "key_generation": "uniform P8 permutation, uniform m in0..2, uniform mask in1..254 (exclude old common-order subfamily); independent by excerpt order",
+      "limitations": "convenience linked letter openings, repeated recipients, merged letters; no guarantee external dictionary lacks author",
+      "n_main": 12,
+      "n_regression": 2,
+      "normalization": "reuse exactly the existing 87 normalized ASCII letters; j->i and v->u; no modernizing spelling",
+      "seed": 202610011101,
+      "source": "unchanged archived round10 letter excerpts; 12 Bailey/Brewer plus 2 round8 regressions",
+      "status": "All 14 texts were already seen in prior rounds. Regression/sensitivity tests, NOT independent new historical holdouts. Fresh nonuniform direction masks, unknown to solver."
+    },
+    "search": {
+      "block_P8": 1024,
+      "budget": "All 40320 P8 * 3 canonical Q * 256 masks. No top-K cut, stochastic search, or data-dependent early stopping.",
+      "checkpoint": "atomic NPZ+JSON after each P8 block, before next block; cumulative score, exact-tie keys, bounds, sparse complete scores, hashes",
+      "method": "Exact enumeration of all 30965760 character scores per input; evaluate W unless admissible ambiguity-word upper bound proves S cannot match incumbent. Bound allows independent lo/hi choices at every position, a superset of all 256 masks for fixed P8,m.",
+      "prune": "C+.5*W_upper < incumbent - 1e-9; conservative float safety margin",
+      "sequential_order": "P8 lexicographic, m0..2. Within group character champion first then remaining mask IDs ascending; ties resolved by canonical ID regardless of order"
+    },
+    "verification": {
+      "acceptance": "Every computation must verify exactly against checkpoints and independent scoring within1e-11. Positive recovery rates are outcomes, never scorer tuning or hidden exclusion criteria. If verification fails stop dependent stages and diagnose. No full experiment result may be reported before it actually runs.",
+      "development": "Preexisting synthetic checks at lengths43 and87: seeds1301..1304, 768keys each; zero actual full-search outputs existed before this freeze.",
+      "full_unpruned_cases": [
+        "bailey_01",
+        "elgar_caractacus_postcard",
+        "hauer_real",
+        "hart_real",
+        "hauer_real_pair_00",
+        "hart_real_pair_00"
+      ],
+      "independent": "All checkpoint chain/hash/shape/count checks; direct C for every saved fully evaluated key; independent Python W for per-block samples, winners and all ties; reencrypt87; 14 brute sampled blocks; six full unpruned audits.",
+      "initial": "existing process/files inventory and archive SHA256; no prior round11 found in accessible runtime/archives; withdrawn12/12 not evidence",
+      "local_stats_caveat": "stats[:,7] and [:,8] contain maxima over evaluated keys only, not exact local maxima; global max and ties exact.",
+      "repeat_cases": [
+        "bailey_01",
+        "bailey_08",
+        "elgar_march_1897",
+        "hauer_real",
+        "hart_real",
+        "hauer_real_pair_00",
+        "hart_real_pair_00"
+      ],
+      "repeat_rule": "missing case name substituted ONLY by actual first old-regression case name before freeze"
+    }
+  }
+}

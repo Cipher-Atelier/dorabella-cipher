@@ -1,0 +1,123 @@
+Hart-only partition jobs: 99
+hart_real_bigram_001 -4.603674 -> -4.600449
+hart_real_bigram_000 -4.670854 -> -4.670854
+hart_real_bigram_002 -4.595665 -> -4.495781
+hart_real_bigram_003 -4.629179 -> -4.548879
+hart_real_bigram_004 -4.615538 -> -4.52272
+hart_real_bigram_005 -4.574765 -> -4.574765
+hart_real_bigram_006 -4.524153 -> -4.524153
+hart_real_bigram_007 -4.740947 -> -4.649422
+hart_real_bigram_009 -4.63181 -> -4.63181
+hart_real_bigram_008 -4.455571 -> -4.455571
+hart_real_bigram_010 -4.592191 -> -4.480143
+hart_real_bigram_012 -4.554245 -> -4.554245
+hart_real_bigram_011 -4.737503 -> -4.660128
+hart_real_bigram_013 -4.504465 -> -4.504465
+hart_real_bigram_014 -4.644286 -> -4.636009
+hart_real_bigram_015 -4.609227 -> -4.609227
+hart_real_bigram_017 -4.723336 -> -4.722681
+hart_real_bigram_016 -4.602971 -> -4.602971
+hart_real_bigram_018 -4.717216 -> -4.566664
+hart_real_bigram_019 -4.835121 -> -4.638377
+hart_real_bigram_020 -4.638979 -> -4.622122
+hart_real_bigram_022 -4.516384 -> -4.516384
+hart_real_bigram_021 -4.599575 -> -4.595283
+hart_real_bigram_023 -4.7069 -> -4.7069
+hart_real_bigram_024 -4.71028 -> -4.636306
+hart_real_bigram_025 -4.627156 -> -4.627156
+hart_real_bigram_026 -4.924339 -> -4.744374
+hart_real_bigram_027 -4.767727 -> -4.688244
+hart_real_bigram_028 -4.660795 -> -4.641447
+hart_real_bigram_029 -4.780803 -> -4.767819
+hart_real_bigram_030 -4.736219 -> -4.722132
+hart_real_bigram_031 -4.73211 -> -4.715794
+hart_real_bigram_032 -4.58456 -> -4.58456
+hart_real_bigram_033 -4.768941 -> -4.768941
+hart_real_bigram_034 -4.534334 -> -4.534334
+hart_real_bigram_035 -4.657132 -> -4.637347
+hart_real_bigram_036 -4.669441 -> -4.669441
+hart_real_bigram_037 -4.778315 -> -4.778315
+hart_real_bigram_038 -4.604724 -> -4.604724
+hart_real_bigram_039 -4.576326 -> -4.576326
+hart_real_bigram_040 -4.652341 -> -4.534369
+hart_real_bigram_041 -4.897152 -> -4.675059
+hart_real_bigram_042 -4.861779 -> -4.809119
+hart_real_bigram_043 -4.708711 -> -4.708711
+hart_real_bigram_044 -4.759677 -> -4.759677
+hart_real_bigram_045 -4.627263 -> -4.627263
+hart_real_bigram_046 -4.701262 -> -4.618296
+hart_real_bigram_047 -4.516491 -> -4.516491
+hart_real_bigram_048 -4.86668 -> -4.655847
+hart_real_bigram_049 -4.703101 -> -4.583879
+hart_real_bigram_050 -4.484074 -> -4.484074
+hart_real_bigram_051 -4.481458 -> -4.481458
+hart_real_bigram_052 -4.785039 -> -4.741528
+hart_real_bigram_053 -4.728679 -> -4.728679
+hart_real_bigram_054 -4.70233 -> -4.681188
+hart_real_bigram_055 -4.6075 -> -4.585115
+hart_real_bigram_056 -4.527014 -> -4.527014
+hart_real_bigram_057 -4.806454 -> -4.686922
+hart_real_bigram_058 -4.407304 -> -4.407304
+hart_real_bigram_059 -4.643005 -> -4.643005
+hart_real_bigram_060 -4.670366 -> -4.670366
+hart_real_bigram_061 -4.7496 -> -4.747952
+hart_real_bigram_062 -4.485509 -> -4.485509
+hart_real_bigram_063 -4.704018 -> -4.704018
+hart_real_bigram_064 -4.826217 -> -4.826217
+hart_real_bigram_065 -4.678879 -> -4.668012
+hart_real_bigram_066 -4.59105 -> -4.59105
+hart_real_bigram_067 -4.629567 -> -4.523585
+hart_real_bigram_068 -4.727155 -> -4.727155
+hart_real_bigram_069 -4.704864 -> -4.651238
+hart_real_bigram_070 -4.778387 -> -4.617449
+hart_real_bigram_071 -4.678126 -> -4.678126
+hart_real_bigram_072 -4.703008 -> -4.648093
+hart_real_bigram_073 -4.645382 -> -4.608756
+hart_real_bigram_075 -4.550904 -> -4.550904
+hart_real_bigram_074 -4.782137 -> -4.761969
+hart_real_bigram_076 -4.585902 -> -4.585902
+hart_real_bigram_077 -4.721496 -> -4.654634
+hart_real_bigram_078 -4.679091 -> -4.678565
+hart_real_bigram_079 -4.647603 -> -4.535329
+hart_real_bigram_080 -4.506539 -> -4.506539
+hart_real_bigram_081 -4.588293 -> -4.564434
+hart_real_bigram_082 -4.65622 -> -4.564545
+hart_real_bigram_083 -4.666946 -> -4.666946
+hart_real_bigram_084 -4.73666 -> -4.611012
+hart_real_bigram_085 -4.525224 -> -4.525224
+hart_real_bigram_086 -4.554502 -> -4.538645
+hart_real_bigram_087 -4.674769 -> -4.636765
+hart_real_bigram_088 -4.518645 -> -4.518645
+hart_real_bigram_089 -4.702611 -> -4.593486
+hart_real_bigram_090 -4.67621 -> -4.638024
+hart_real_bigram_091 -4.785969 -> -4.750426
+hart_real_bigram_092 -4.667291 -> -4.667291
+hart_real_bigram_093 -4.547003 -> -4.547003
+hart_real_bigram_094 -4.615429 -> -4.615429
+hart_real_bigram_095 -4.610657 -> -4.610657
+hart_real_bigram_096 -4.519956 -> -4.519956
+hart_real_bigram_097 -4.534049 -> -4.534049
+hart_real_bigram_098 -4.773999 -> -4.757095
+{
+  "hauer_real": {
+    "score": -4.4721404160180125,
+    "initial_score": -4.686481681057513,
+    "mean": -4.613301876552282,
+    "ge": 3,
+    "n": 99,
+    "p_plus_one": 0.04,
+    "text": "gfroztcondwaspalaatffapidimwecactionboraartmscawathespinniweretherphumerathsemofmetopio",
+    "segmentation": "\u2026g fro ?z ?t cond was pal a at ff a ?p i dim we ?c action ?b or a art ?m sca ?w a the spin ?n i were the ?r ?p hume raths em of me to pio\u2026"
+  },
+  "hart_real": {
+    "score": -4.586690081762917,
+    "initial_score": -4.586690081762917,
+    "mean": -4.621447161693841,
+    "ge": 36,
+    "n": 99,
+    "p_plus_one": 0.37,
+    "text": "fbdaysmancrepteveesbbetocourimemsmanladeedsupmereshiptonnoridishidthguideshpitabuisatoa",
+    "segmentation": "\u2026f ?b days man crept eve es ?b be to ?c our i me ms man la deeds up mere ship to ?n no rid is hid th guides ?h pit a bu is a to a"
+  },
+  "records": 200
+}

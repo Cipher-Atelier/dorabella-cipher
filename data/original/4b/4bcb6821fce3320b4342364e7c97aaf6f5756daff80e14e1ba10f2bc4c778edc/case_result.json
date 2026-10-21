@@ -1,0 +1,21 @@
+{
+  "accepted_bytes": 32,
+  "ack": false,
+  "actual_error": "WRITER_FILE_ID",
+  "checks": {},
+  "chunks_opened": 1,
+  "cleanup_error": null,
+  "closed": false,
+  "expected_error": "WRITER_FILE_ID",
+  "failed": true,
+  "fd_cleanup": true,
+  "name": "NEG_REPLACE",
+  "receipt_bytes": 0,
+  "trace": [
+    "open:frames.000.bin",
+    "flush_returned",
+    "flush_returned",
+    "fsync_returned",
+    "close_returned"
+  ]
+}

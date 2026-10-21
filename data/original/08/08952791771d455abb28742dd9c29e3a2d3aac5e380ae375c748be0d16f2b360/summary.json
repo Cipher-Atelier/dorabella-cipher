@@ -1,0 +1,270 @@
+{
+  "actual": {
+    "container_bytes": 32034495,
+    "frames": 12175,
+    "payload_bytes": 31973620,
+    "requests": 5922,
+    "responses": 6253,
+    "sha256": "eedf9cbb996bbf3e617e8bb004febb60887de422e4553eaa193e664696de3b51"
+  },
+  "boundary": [
+    {
+      "direction": 2,
+      "done": false,
+      "file": "frames.000.bin",
+      "frame_1based": 6646,
+      "global_end": 8189450,
+      "global_start": 8184539,
+      "local_end": 8189450,
+      "local_start": 8184539,
+      "offset": 128,
+      "packet_sha256": "120975d5beec8cf22e5e75514b167cad068d9117981bce1ec9b10997c0f50cf1",
+      "payload_bytes": 4906,
+      "seq": 3283,
+      "value_count": 128
+    },
+    {
+      "direction": 2,
+      "done": true,
+      "file": "frames.000.bin",
+      "frame_1based": 6647,
+      "global_end": 8190185,
+      "global_start": 8189450,
+      "local_end": 8190185,
+      "local_start": 8189450,
+      "offset": 256,
+      "packet_sha256": "d2935a38fe259e844e912b0572f836fc11285f6cc77978f69cbba03317d4da55",
+      "payload_bytes": 730,
+      "seq": 3283,
+      "value_count": 38
+    },
+    {
+      "arg_count": 128,
+      "direction": 1,
+      "file": "frames.000.bin",
+      "frame_1based": 6648,
+      "global_end": 8199969,
+      "global_start": 8190185,
+      "local_end": 8199969,
+      "local_start": 8190185,
+      "op": "words",
+      "packet_sha256": "79ecb6952d4f32db03be20f9704fbc5fffbc79b83eb4bfe50904fdeeb34c1a78",
+      "payload_bytes": 9779,
+      "seq": 3284
+    },
+    {
+      "direction": 2,
+      "done": true,
+      "file": "frames.000.bin",
+      "frame_1based": 6649,
+      "global_end": 8200753,
+      "global_start": 8199969,
+      "local_end": 8200753,
+      "local_start": 8199969,
+      "offset": 0,
+      "packet_sha256": "9dba9edbab20bcec94e833218df4eae69a27a911627e4c8498e59001e67077b4",
+      "payload_bytes": 779,
+      "seq": 3284,
+      "value_count": 128
+    },
+    {
+      "direction": 2,
+      "done": true,
+      "file": "frames.001.bin",
+      "frame_1based": 6650,
+      "global_end": 8201536,
+      "global_start": 8200753,
+      "local_end": 783,
+      "local_start": 0,
+      "offset": 0,
+      "packet_sha256": "b26449094638840d9fbf33fe454da5b7c1759be1374d6606fbcac2d6808f95c7",
+      "payload_bytes": 778,
+      "seq": 3302,
+      "value_count": 128
+    },
+    {
+      "arg_count": 128,
+      "direction": 1,
+      "file": "frames.001.bin",
+      "frame_1based": 6651,
+      "global_end": 8209008,
+      "global_start": 8201536,
+      "local_end": 8255,
+      "local_start": 783,
+      "op": "words",
+      "packet_sha256": "42007270d08c2f969d03290c6ccafbd9d66cfe9779c5a616af6a7dffc33a0cb1",
+      "payload_bytes": 7467,
+      "seq": 3303
+    },
+    {
+      "direction": 2,
+      "done": true,
+      "file": "frames.001.bin",
+      "frame_1based": 6652,
+      "global_end": 8209789,
+      "global_start": 8209008,
+      "local_end": 9036,
+      "local_start": 8255,
+      "offset": 0,
+      "packet_sha256": "53e34666a029d150c9e31e854b1d7bb58404d5848bc9b9d1a007a3d0ed444de3",
+      "payload_bytes": 776,
+      "seq": 3303,
+      "value_count": 128
+    },
+    {
+      "arg_count": 128,
+      "direction": 1,
+      "file": "frames.001.bin",
+      "frame_1based": 6653,
+      "global_end": 8216471,
+      "global_start": 8209789,
+      "local_end": 15718,
+      "local_start": 9036,
+      "op": "words",
+      "packet_sha256": "2a304bfac831885229af50ad2ef9e7f2f5286259a5a04a33bec85dfb65c3d143",
+      "payload_bytes": 6677,
+      "seq": 3304
+    },
+    {
+      "direction": 2,
+      "done": true,
+      "file": "frames.001.bin",
+      "frame_1based": 6654,
+      "global_end": 8217254,
+      "global_start": 8216471,
+      "local_end": 16501,
+      "local_start": 15718,
+      "offset": 0,
+      "packet_sha256": "841c1bf75f50575675178f6311f9cae27f1462a4e348ed8a27f4499ce3626215",
+      "payload_bytes": 778,
+      "seq": 3304,
+      "value_count": 128
+    }
+  ],
+  "difference": {
+    "container_bytes": 187188,
+    "frames": 35,
+    "payload_bytes": 187013
+  },
+  "elapsed": 0.4001181590010674,
+  "first_violation": {
+    "completed_transactions": 3284,
+    "kind": "RESPONSE_SEQ",
+    "next_expected": "request",
+    "next_expected_request_id": 3285,
+    "pending": null,
+    "prior_seq": 3284,
+    "received_variable": 128,
+    "row": {
+      "direction": 2,
+      "done": true,
+      "file": "frames.001.bin",
+      "frame_1based": 6650,
+      "global_end": 8201536,
+      "global_start": 8200753,
+      "local_end": 783,
+      "local_start": 0,
+      "offset": 0,
+      "packet_sha256": "b26449094638840d9fbf33fe454da5b7c1759be1374d6606fbcac2d6808f95c7",
+      "payload_bytes": 778,
+      "seq": 3302,
+      "value_count": 128
+    }
+  },
+  "input_bytes_read": 74147997,
+  "maxrss_KiB": 62284,
+  "missing_request_ids": [
+    3285,
+    3286,
+    3287,
+    3288,
+    3289,
+    3290,
+    3291,
+    3292,
+    3293,
+    3294,
+    3295,
+    3296,
+    3297,
+    3298,
+    3299,
+    3300,
+    3301,
+    3302
+  ],
+  "missing_response_ids": [
+    3285,
+    3286,
+    3287,
+    3288,
+    3289,
+    3290,
+    3291,
+    3292,
+    3293,
+    3294,
+    3295,
+    3296,
+    3297,
+    3298,
+    3299,
+    3300,
+    3301
+  ],
+  "native": {
+    "bytes": 32160633,
+    "frames": 12210,
+    "sha256": "bec96db54f2e97cb9a81a731766adf59c1c91a1ab758d33a56f5eee433d1609c"
+  },
+  "native_counts": {
+    "close": 1,
+    "lm": 220,
+    "lm_lookups": 52798,
+    "prefix": 2419,
+    "words": 3300
+  },
+  "native_hash_provenance": {
+    "broker_stdout.txt": {
+      "native_hash_present": true,
+      "parsed_exactly_equals_terminal": true
+    },
+    "case_seal_in_original_parent_tool_stdout": true,
+    "native_hash_in_original_parent_tool_stdout": false,
+    "perl_stdout.txt": {
+      "native_hash_present": true,
+      "parsed_exactly_equals_terminal": true
+    },
+    "root_seal_in_original_parent_tool_stdout": true
+  },
+  "request_counts": {
+    "close": 1,
+    "lm": 220,
+    "prefix": 2419,
+    "words": 3282
+  },
+  "scope": "data-only; preserved case_01",
+  "shards": [
+    {
+      "end": 8200753,
+      "path": "frames.000.bin",
+      "start": 0
+    },
+    {
+      "end": 16588641,
+      "path": "frames.001.bin",
+      "start": 8200753
+    },
+    {
+      "end": 24972192,
+      "path": "frames.002.bin",
+      "start": 16588641
+    },
+    {
+      "end": 32034495,
+      "path": "frames.003.bin",
+      "start": 24972192
+    }
+  ],
+  "time_utc": "2026-10-18T17:12:03.359464+00:00"
+}

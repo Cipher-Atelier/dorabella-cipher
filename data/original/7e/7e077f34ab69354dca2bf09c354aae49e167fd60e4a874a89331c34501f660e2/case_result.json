@@ -1,0 +1,20 @@
+{
+  "accepted_bytes": 32,
+  "ack": false,
+  "actual_error": "INJECT_FSYNC",
+  "checks": {},
+  "chunks_opened": 1,
+  "cleanup_error": null,
+  "closed": false,
+  "expected_error": "INJECT_FSYNC",
+  "failed": true,
+  "fd_cleanup": true,
+  "name": "NEG_FSYNC",
+  "receipt_bytes": 0,
+  "trace": [
+    "open:frames.000.bin",
+    "flush_returned",
+    "flush_returned",
+    "close_returned"
+  ]
+}

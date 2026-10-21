@@ -1,0 +1,81 @@
+{
+  "schema": "TS-COMPACT-STORE-v1",
+  "status": "STOP",
+  "solver_executions": 0,
+  "scoring_calls": 0,
+  "target_inputs": 0,
+  "phase": "build_patlst_index",
+  "events": [
+    {
+      "phase": "six_frozen_parser_fixtures",
+      "utc": "2026-10-17T13:06:36.768269+00:00",
+      "elapsed": 0.0017930180038092658
+    },
+    {
+      "phase": "identity",
+      "utc": "2026-10-17T13:06:36.768587+00:00",
+      "elapsed": 0.0021088970024720766
+    },
+    {
+      "phase": "build_patlst_index",
+      "utc": "2026-10-17T13:06:37.356137+00:00",
+      "elapsed": 0.5896680099976948
+    }
+  ],
+  "start_utc": "2026-10-17T13:06:36.768014+00:00",
+  "limits": {
+    "RLIMIT_AS": [
+      536870912,
+      536870912
+    ],
+    "RLIMIT_CPU": [
+      170,
+      180
+    ],
+    "RLIMIT_FSIZE": [
+      536870912,
+      536870912
+    ],
+    "RLIMIT_CORE": [
+      0,
+      0
+    ],
+    "RLIMIT_NOFILE": [
+      64,
+      64
+    ]
+  },
+  "before": {
+    "memory.max": "8589934592",
+    "memory.current": "2377433088",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "self_status": [
+      "VmPeak:\t   40136 kB",
+      "VmSize:\t   40136 kB",
+      "VmHWM:\t   10984 kB",
+      "VmRSS:\t   10984 kB"
+    ]
+  },
+  "parser_fixtures": {
+    "positive": 4,
+    "negative": 2,
+    "passed": true
+  },
+  "all_identity_checks": true,
+  "error": "RuntimeError: STOP_ROW_BOUND",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/f24f8fae4976/TS_COMPACT_STORE_v1/compact_check.py\", line 169, in main\n    if n > MAX_ROWS: raise RuntimeError('STOP_ROW_BOUND')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: STOP_ROW_BOUND\n",
+  "end_utc": "2026-10-17T13:07:05.614868+00:00",
+  "elapsed": 28.848400643997593,
+  "after": {
+    "memory.max": "8589934592",
+    "memory.current": "2702053376",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "self_status": [
+      "VmPeak:\t   50884 kB",
+      "VmSize:\t   50884 kB",
+      "VmHWM:\t   22052 kB",
+      "VmRSS:\t   22052 kB"
+    ]
+  },
+  "maxrss_KiB": 21820
+}

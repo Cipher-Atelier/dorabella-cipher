@@ -1,0 +1,82 @@
+{
+  "conditional_v7.py": {
+    "expected": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+    "actual": "240fec60c4c90512091debae682b46ab61141624c4b99e3dd9839ff76d087b67",
+    "match": true
+  },
+  "data/english_merged24_v5.npz": {
+    "expected": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c",
+    "actual": "fb19369e12150cbb74f3d58c46e80fa69c95dea4dad6b847c04c3d203462533c",
+    "match": true
+  },
+  "model_v5.py": {
+    "expected": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b",
+    "actual": "48c5a248e4cd5191631ce92ce4d792fbd0e6f3169f3319ccb418309c944efe0b",
+    "match": true
+  },
+  "round10/data/elgar_letters.json": {
+    "expected": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240",
+    "actual": "d6043cd885269c5e85c76e5a2b8c356dd31d30e794a7516973a0cdb3fb545240",
+    "match": true
+  },
+  "round10/data/inputs_base.json": {
+    "expected": "cf453ad6d292e53f90b2e03ea4d7d68bb269107acb78f83801831c5bd253484d",
+    "actual": "cf453ad6d292e53f90b2e03ea4d7d68bb269107acb78f83801831c5bd253484d",
+    "match": true
+  },
+  "round11/data/cases.json": {
+    "expected": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+    "actual": "8d87880c7e6ec9015c3cd43a2b36366e0e7bf5b15975b1dc0202d84644f6b3e2",
+    "match": true
+  },
+  "round11/data/model_metadata.json": {
+    "expected": "713cd16397a0399378926ea3f5a547cb3f91580f69a37514cb76cf914b7ce4a5",
+    "actual": "713cd16397a0399378926ea3f5a547cb3f91580f69a37514cb76cf914b7ce4a5",
+    "match": true
+  },
+  "round11/data/protocol.json": {
+    "expected": "a4e80712abe32abd08cb63f4bd0b106868a00c30430f137e5e4bcc3536f6a594",
+    "actual": "a4e80712abe32abd08cb63f4bd0b106868a00c30430f137e5e4bcc3536f6a594",
+    "match": true
+  },
+  "round11/data/scoring.npz": {
+    "expected": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+    "actual": "d89a149c8242664b63e9292f10c2c1c277cb76fb87afff8c111687cfae418c00",
+    "match": true
+  },
+  "round11/data/search_inputs.json": {
+    "expected": "29a64d350806e684c3dcaf7268020f8a8fae443fa913fb28d72a8b61b3e6a921",
+    "actual": "29a64d350806e684c3dcaf7268020f8a8fae443fa913fb28d72a8b61b3e6a921",
+    "match": true
+  },
+  "round11/engine.py": {
+    "expected": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "actual": "da3f0e14d088c18203aefb5475cebf5da14b7c1b400f6d6cfe749e97205eaf14",
+    "match": true
+  },
+  "round11/prepare.py": {
+    "expected": "dee28ed23b139b453a444041029d8f67fc59c8b707158bda73a357adb4146b8b",
+    "actual": "dee28ed23b139b453a444041029d8f67fc59c8b707158bda73a357adb4146b8b",
+    "match": true
+  },
+  "round11/run.py": {
+    "expected": "20a6fac74904cf542c4e62de39716ff2053b718ef33ff239da8e1491d6521530",
+    "actual": "20a6fac74904cf542c4e62de39716ff2053b718ef33ff239da8e1491d6521530",
+    "match": true
+  },
+  "round11/verify.py": {
+    "expected": "1aeaa0ff7d119fae5e7767078480f3f71a386ec1d574b07edfb6aa46d039cbf3",
+    "actual": "1aeaa0ff7d119fae5e7767078480f3f71a386ec1d574b07edfb6aa46d039cbf3",
+    "match": true
+  },
+  "wordpolish_v3.py": {
+    "expected": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "actual": "13d666512d13957f3717aebf687b94d610a4f935dba1210de1cef03fcde471a6",
+    "match": true
+  },
+  "wordscore_v3.py": {
+    "expected": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790",
+    "actual": "3600f8a358be42d55c6d477a769a9d853caa06d0d4a9881477cd9959ba76b790",
+    "match": true
+  }
+}

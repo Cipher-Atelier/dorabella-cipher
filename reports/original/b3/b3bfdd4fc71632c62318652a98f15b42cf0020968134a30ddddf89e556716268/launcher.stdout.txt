@@ -1,0 +1,4 @@
+{"phase": "supervisor_probe", "event": "launch", "utc": "2026-10-17T12:07:01.715205+00:00"}
+{"phase": "runtime", "event": "launch", "utc": "2026-10-17T12:07:02.042016+00:00"}
+{"phase": "author", "event": "launch", "utc": "2026-10-17T12:07:02.327584+00:00"}
+{"status": "STOP", "elapsed": 38.56831357399642, "author_launches": 1, "control_feeds": 0, "error": "STOP_AUTHOR_STDERR"}

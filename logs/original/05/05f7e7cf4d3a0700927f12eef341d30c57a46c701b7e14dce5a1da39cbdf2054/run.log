@@ -1,0 +1,7 @@
+hauer_real 20 mismatch positions [8, 32, 34] pair conflicts 22
+hauer_real 21 mismatch positions [32, 34] pair conflicts 15
+hauer_real 17 mismatch positions [8, 32, 34] pair conflicts 27
+hart_real 20 mismatch positions [8, 32, 78] pair conflicts 24
+hart_real 21 mismatch positions [32, 78] pair conflicts 17
+hart_real 17 mismatch positions [8, 32, 78] pair conflicts 29
+87 positions checked; no exact reverse reproduction asserted.

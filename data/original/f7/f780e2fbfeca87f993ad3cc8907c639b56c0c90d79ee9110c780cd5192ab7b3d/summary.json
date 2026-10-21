@@ -1,0 +1,370 @@
+{
+  "frozen_protocol_sha256": "99598f23a05d6008bdced1bfb0133b75637cbda94a1d03c64f537f4f5d9741b9",
+  "records": 216,
+  "real": [
+    {
+      "id": "hauer_real",
+      "kind": "real",
+      "gain_bits": -22.769313794468843,
+      "mixture_log2_probabilities": [
+        -187.89271345387164,
+        -210.66202724834048
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -187.60746348297639,
+          -209.6793760949913
+        ],
+        [
+          -188.24861978934587,
+          -216.04847578587635
+        ]
+      ],
+      "conditional": {
+        "n": 9999,
+        "ge": 6091,
+        "p_plus_one": 0.6092,
+        "unique": 9999,
+        "first_order_log2_range": 8.526512829121202e-14,
+        "mean_gain_bits": -21.467453819811404,
+        "std_gain_bits": 4.464350355654992,
+        "exact_support_size": "1280862720"
+      },
+      "relabel": {
+        "n": 9999,
+        "ge": 7335,
+        "p_plus_one": 0.7336,
+        "mean_gain_bits": -18.718261834458502,
+        "std_gain_bits": 6.720103724953066
+      },
+      "seconds": 5.662710845001129
+    },
+    {
+      "id": "hart_real",
+      "kind": "real",
+      "gain_bits": -28.088762612019707,
+      "mixture_log2_probabilities": [
+        -186.65391661716433,
+        -214.74267922918403
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -186.84155436080567,
+          -214.07291265243072
+        ],
+        [
+          -186.48789826019942,
+          -216.03185603217779
+        ]
+      ],
+      "conditional": {
+        "n": 9999,
+        "ge": 7883,
+        "p_plus_one": 0.7884,
+        "unique": 9999,
+        "first_order_log2_range": 5.684341886080802e-14,
+        "mean_gain_bits": -23.91126447346845,
+        "std_gain_bits": 4.995480925283582,
+        "exact_support_size": "1398435840"
+      },
+      "relabel": {
+        "n": 9999,
+        "ge": 8802,
+        "p_plus_one": 0.8803,
+        "mean_gain_bits": -19.873868531764632,
+        "std_gain_bits": 6.982467941451889
+      },
+      "seconds": 5.977499394000915
+    }
+  ],
+  "synthetic": {
+    "n_each": 100,
+    "second_order_detected": 89,
+    "first_order_false_positives": 0
+  },
+  "real_gate_passed": false,
+  "calibration_gate_passed": true,
+  "decision": "stop_this_model",
+  "historical_challenges": [
+    {
+      "id": "bailey_01",
+      "kind": "positive",
+      "gain_bits": -19.85178623384266,
+      "mixture_log2_probabilities": [
+        -206.43912894156585,
+        -226.29091517540851
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -209.7158409964572,
+          -237.14719139629568
+        ],
+        [
+          -205.515549027939,
+          -225.29130434449422
+        ]
+      ],
+      "seconds": 0.0007640639996679965
+    },
+    {
+      "id": "bailey_02",
+      "kind": "positive",
+      "gain_bits": -23.34176680355276,
+      "mixture_log2_probabilities": [
+        -205.4803817642999,
+        -228.82214856785265
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -204.4807314199456,
+          -231.27808518423853
+        ],
+        [
+          -216.4911005412381,
+          -227.9600020579545
+        ]
+      ],
+      "seconds": 0.0005054439970990643
+    },
+    {
+      "id": "bailey_03",
+      "kind": "positive",
+      "gain_bits": -15.957026555193579,
+      "mixture_log2_probabilities": [
+        -217.52688664052417,
+        -233.48391319571775
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -218.85529963771154,
+          -238.6997415155791
+        ],
+        [
+          -216.84719805424427,
+          -232.5034548696159
+        ]
+      ],
+      "seconds": 0.0003550809997250326
+    },
+    {
+      "id": "bailey_04",
+      "kind": "positive",
+      "gain_bits": -23.89551483779718,
+      "mixture_log2_probabilities": [
+        -211.1323930724483,
+        -235.0279079102455
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -210.30344718111937,
+          -236.13671019701923
+        ],
+        [
+          -213.29331688821262,
+          -234.40842804976722
+        ]
+      ],
+      "seconds": 0.00042038000174215995
+    },
+    {
+      "id": "bailey_05",
+      "kind": "positive",
+      "gain_bits": -18.870179345030238,
+      "mixture_log2_probabilities": [
+        -198.95596740224843,
+        -217.82614674727867
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -197.9605059712576,
+          -217.12404304568125
+        ],
+        [
+          -206.2705492556394,
+          -219.24841710188952
+        ]
+      ],
+      "seconds": 0.00031184800172923133
+    },
+    {
+      "id": "bailey_06",
+      "kind": "positive",
+      "gain_bits": -11.87089788188743,
+      "mixture_log2_probabilities": [
+        -212.20818755604296,
+        -224.0790854379304
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -213.8914900152625,
+          -224.27930818518303
+        ],
+        [
+          -211.45233351036123,
+          -223.90329408807395
+        ]
+      ],
+      "seconds": 0.0005921590018260758
+    },
+    {
+      "id": "bailey_07",
+      "kind": "positive",
+      "gain_bits": 6.296976912565867,
+      "mixture_log2_probabilities": [
+        -211.97770326697488,
+        -205.68072635440902
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -213.5410218781465,
+          -216.20559302582697
+        ],
+        [
+          -211.2451056905514,
+          -204.68121604039774
+        ]
+      ],
+      "seconds": 0.0003721779976331163
+    },
+    {
+      "id": "bailey_08",
+      "kind": "positive",
+      "gain_bits": -13.768361280192266,
+      "mixture_log2_probabilities": [
+        -203.7886160700791,
+        -217.55697735027135
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -202.87115912897377,
+          -218.04134172380031
+        ],
+        [
+          -206.9571664871861,
+          -217.19499786117188
+        ]
+      ],
+      "seconds": 0.0009303789993282408
+    },
+    {
+      "id": "bailey_09",
+      "kind": "positive",
+      "gain_bits": -17.309744567851908,
+      "mixture_log2_probabilities": [
+        -219.11756922742947,
+        -236.42731379528138
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -219.10876950905543,
+          -246.82351719633544
+        ],
+        [
+          -219.12642294924802,
+          -235.42784916777921
+        ]
+      ],
+      "seconds": 0.0005710810000891797
+    },
+    {
+      "id": "brewer_01",
+      "kind": "positive",
+      "gain_bits": -2.5220887221086628,
+      "mixture_log2_probabilities": [
+        -199.13535433587833,
+        -201.657443057987
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -198.5797701126535,
+          -213.9827224275994
+        ],
+        [
+          -200.0506469835042,
+          -200.65758362612934
+        ]
+      ],
+      "seconds": 0.00036030900082550943
+    },
+    {
+      "id": "brewer_02",
+      "kind": "positive",
+      "gain_bits": -15.164996887231581,
+      "mixture_log2_probabilities": [
+        -208.34297943104758,
+        -223.50797631827916
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -207.38743659207904,
+          -222.54539008283155
+        ],
+        [
+          -212.38535766999843,
+          -227.79569619961518
+        ]
+      ],
+      "seconds": 0.00039866000224719755
+    },
+    {
+      "id": "brewer_03",
+      "kind": "positive",
+      "gain_bits": -20.952393858047003,
+      "mixture_log2_probabilities": [
+        -209.00157099549583,
+        -229.95396485354283
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -208.02252025764705,
+          -231.10178717524877
+        ],
+        [
+          -214.1177560821909,
+          -229.32291268323058
+        ]
+      ],
+      "seconds": 0.0003340149996802211
+    },
+    {
+      "id": "elgar_march_1897",
+      "kind": "regression",
+      "gain_bits": -19.75286976297599,
+      "mixture_log2_probabilities": [
+        -202.32754061889156,
+        -222.08041038186755
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -201.37440628823504,
+          -221.46642805698158
+        ],
+        [
+          -206.29500109489877,
+          -223.17114577689983
+        ]
+      ],
+      "seconds": 0.0003067279976676218
+    },
+    {
+      "id": "elgar_caractacus_postcard",
+      "kind": "regression",
+      "gain_bits": -26.344157173798152,
+      "mixture_log2_probabilities": [
+        -204.97969737265936,
+        -231.3238545464575
+      ],
+      "factorization_log2_probabilities": [
+        [
+          -206.55576396650392,
+          -241.2477734871868
+        ],
+        [
+          -204.24451756130463,
+          -230.32459732450872
+        ]
+      ],
+      "seconds": 0.00031762299840920605
+    }
+  ]
+}

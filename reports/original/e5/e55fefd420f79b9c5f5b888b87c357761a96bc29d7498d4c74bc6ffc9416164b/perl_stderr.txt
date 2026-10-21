@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f24f8fae4976/TS_RECOVERED_SEARCH_v2/runtime/child_gate.py", line 5, in <module>
+    for name,value in F['role_limits'][role].items():resource.setrlimit(getattr(resource,name),tuple(value))
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not allowed to raise maximum limit
