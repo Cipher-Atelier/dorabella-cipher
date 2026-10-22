@@ -1,0 +1,30 @@
+# Bounded Dorabella feedback experiment
+
+Result: no coherent plaintext or accepted letter assignments. The best raw strings remain unintelligible; 17/199 and 27/199 frequency-preserving random shuffles respectively achieved at least as high a score. All 24 synthetic messages were recovered exactly (2,088/2,088 letters). This is a negative result for the declared family, not a proof that the note lacks meaning or that other feedback ciphers cannot work.
+
+The tested hypothesis treats orientation and arc count as two coordinates with memory: either differences from the preceding cipher sign, or accumulated values from preceding transformed signs. It combines those operations with clockwise/counterclockwise alphabet layouts, arc permutations, triplet/octet packing, forward/reverse reading, and continuous/per-line state. The alphabet order is constrained; arbitrary substitution keys, transpositions, nonzero independent initial states, phonetic spelling and musical encodings remain outside this experiment. The geometry motivates this possibility but does not establish that Elgar used it.
+
+This experiment does not claim a solution. The rule family, scorer, controls and null budget were locally frozen before real search. This is a local experimental freeze, not external preregistration or independence from prior historical work. An uninspected timing benchmark followed the initial freeze; later amendments added input hashing, stricter shape checks, replay verification and report provenance. Initial script and protocol snapshots are retained.
+
+Exactly 36,864 nominal rules were exhaustively scored per input, control and shuffle. Duplicate parameterizations were retained. Scores are mean log10 smoothed English quadgram probabilities; larger is better.
+
+| Input | Best score | Null maxima ≥ real / 199 | Plus-one descriptive tail | Unique outputs / nominal rules |
+|---|---:|---:|---:|---:|
+| hauer_2021 | -5.940005 | 17 | 0.090 | 34752 / 36864 |
+| hartmeier_2006 | -5.941003 | 27 | 0.140 | 34368 / 36864 |
+
+Each null uniformly shuffles whole signs, preserving their frequencies and physical line lengths, then repeats the entire maximization. The reported (1 + exceedances)/200 is a descriptive randomization tail for this frozen family and transcription. It is neither a historical p-value nor family-wide confirmation across all possible cipher hypotheses or selected transcriptions.
+
+Heldout positive controls: 24/24 exact plaintext recoveries; mean letter recovery 100.000%. The controls use disjoint 87-letter passages from Wells, never used to train. This measures sensitivity on this small prose sample, not on every possible message or Elgar's idiosyncratic spelling.
+
+Validation: 24 control roundtrips; 300 additional inverse roundtrips including zero coefficients and reversed boundaries; 100 compiled/reference comparisons; independent Python decoding and scoring for every real top-ten candidate and an independent full Python maximum for every real case.
+
+Training uses `sources/alice-11.txt` and `sources/sherlock-1661.txt`, with Gutenberg START/END boundaries removed. Holdout: `sources/wells-35.txt`. Alphabet: `abcdefghiklmnopqrstuwxyz` (j→i, v→u), spaces removed; additive smoothing 0.1. No cross-book quadgrams.
+
+Raw top-ten plaintexts and rules, all 199 null scores per case, and positive recovery details are in `results.json`. Frozen plaintexts/encryption rules are in `positive_controls.json`. Asset hashes are in `protocol.json`; input, protocol, script and scorer hashes are in `results.json`. Input coordinates are self-contained in `inputs.json`. Hauer primary archive: `/tmp/dorabella-code-and-data.tar.gz`, SHA256 `83c095505dbb94c82a2c586b772321a78a58ea9437b7a01661885de7efabb422`. Mirror flat labels exactly match that archive, but mirror line boundaries 29/30/28 were corrected to physical 29/31/27. Mirror `dot_after_flat_pos63` is zero-based and therefore denotes after the 64th sign; its embedded DOT likewise falls after the 64th sign under the incorrect 29/30/28 split. The physical dot follows the fifth sign of line three, 65th overall, under 29/31/27. This mismatch follows the incorrect line split; it is not an independent historical discovery. The dot is ignored by the frozen family. Hauer and Hartmeier cases differ only at 1-based positions 34 and 78, by one orientation step. This is computational verification of decoders, not independent historical verification. Geometric rotation motivates the family; it does not establish that Elgar used feedback.
+
+Runtime: 20.8 seconds. Replay the completed run with `python3 feedback_search.py --verify` (including all null maxima). For a fresh full run, copy only `feedback_search.py`, `inputs.json` and the three training/holdout books under `sources/` into a new directory, then run `python3 feedback_search.py --prepare` followed by `python3 feedback_search.py --run`. Preparation refuses to overwrite completed results.
+
+Report provenance prose was corrected post-run for zero-based mirror indexing; the frozen script, protocol, scorer and statistics are unchanged.
+
+Sources: [earlier Cipher Atelier cyclic-stream test](https://github.com/Cipher-Atelier/research-index/blob/main/research-updates/2026-10-09/dorabella.md); [Hauer et al. paper](https://softwareprocess.es/pubs/hauer2021HistoCrypt-dorabella.pdf) and [original data archive](https://doi.org/10.5281/zenodo.4819086); [Hartmeier's transcription, geometric key and facsimile](https://www.benzedrine.ch/dorabella.html); [coordinate mirror](https://github.com/mruckman1/dorabella1/blob/main/data/dorabella_hauer_2021.json). Training books: Project Gutenberg [11](https://www.gutenberg.org/ebooks/11) and [1661](https://www.gutenberg.org/ebooks/1661); separate control book [35](https://www.gutenberg.org/ebooks/35). The experiment, implementation and source comparisons were AI-assisted; no independent human historical review is claimed. Outcome and scope prose were added after the run without changing its protocol or statistics.

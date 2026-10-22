@@ -15,5 +15,7 @@
 | 18 October | BE-W16 v2 and P1 data-only trace | Incomplete pilot/NO_GO; trace is a saved-data diagnostic, not a new search. |
 | 19–20 October | Source checks, P1 census, structural and historical audits | Analysis and eligible metadata separated from withheld source pages/images/crops. |
 | 21 October | Archive assembly and public authorization | 233-object metadata reconciliation; 232 originals acquired and hashed; static screening, exact-byte deposit and 196/196 embedded checksum matches. No new cryptanalysis. |
+| 20–21 October, local experiment tree | Additional model, feedback, Morse, Trifid and word-scoring experiments | Separate from the earlier Library intake. The closeout supplement preserves selected original reports and code; complete raw local materials are held in a private compressed archive. No accepted decipherment. |
+| 22 October | Active research stopped; storage closeout | Owner chose to move to another cipher. No new cryptanalysis; byte-preserving archival checks only. The repository remains editable. |
 
 Dates describe records or reported stages rather than independently certified execution timestamps. See [results](RESULTS.md) and [limitations](LIMITATIONS.md).

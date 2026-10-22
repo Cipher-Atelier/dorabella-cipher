@@ -1,0 +1,19 @@
+{
+  "status": "VERIFIED",
+  "verified_utc": "2026-10-22T00:59:17Z",
+  "archive_name": "dorabella-20261020-full-private.tar.zst",
+  "archive_sha256": "c401b206ea59bde696a141f320fe88ad2a0609ee550f673b9967dd73ab93edf5",
+  "archive_bytes": 3481593775,
+  "inventory_sha256": "a14082c1e0787e83d701e169041e0ad271ce666be712ddc3e8a004e4b8920b01",
+  "entries_verified": 43509,
+  "regular_files_verified": 40972,
+  "regular_file_bytes_verified": 20107626948,
+  "all_file_bytes_sha256_checked": true,
+  "no_research_code_executed": true,
+  "backup_location": "Private local archive outside Git; not uploaded",
+  "coverage": "Complete dorabella-20261020 tree, including symbolic links but not external link targets",
+  "research_status": "Active research stopped at owner request; no accepted decipherment",
+  "unpacked_tree_removed": true,
+  "pointer_file_retained": "ARCHIVED.md",
+  "uncompressed_minus_compressed_bytes": 16626033173
+}

@@ -2,9 +2,11 @@
 
 **No accepted decipherment, plaintext, key or letter assignments are claimed.**
 
+**Active research stopped on 22 October 2026 at the owner's request.** The work is preserved for possible future resumption. See the [closeout status](STATUS.md) and [20–21 October supplement](reports/closeout-20261022/README.md). The GitHub repository remains available for changes.
+
 This archive preserves completed negative tests, incomplete and stopped stages, experimental candidates, historical control results, and source-audit limitations. It does not launch new cryptanalysis.
 
-The 21 October 2026 assembly reconciled a 233-object source inventory. It downloaded and SHA-256-hashed 232 exact originals (1,516,034,060 bytes); one standalone third-party image was intentionally excluded. The public deposit contains **109,726 unique screened own-research objects** (457,327,462 bytes), plus four small recovered legacy records. Original source ZIPs remain intact outside Git; their included content is not automatically cleared for publication.
+The 21 October 2026 assembly reconciled a 233-object source inventory. It downloaded and SHA-256-hashed 232 exact originals (1,516,034,060 bytes); one standalone third-party image was intentionally excluded. That initial public deposit contains **109,726 unique screened own-research objects** (457,327,462 bytes), plus four small recovered legacy records. Original source ZIPs remain intact outside Git; their included content is not automatically cleared for publication.
 
 ## Read the archive
 
@@ -22,8 +24,9 @@ The 21 October 2026 assembly reconciled a 233-object source inventory. It downlo
 | Integrity and transfer evidence | [Manifests](manifests/README.md) |
 | Coverage and explicit holds | [Intake and coverage](INTAKE.md) |
 | Git and Release storage | [Storage plan](STORAGE.md) |
+| Final local experiments and archival closeout | [Closeout status](STATUS.md) · [Supplement](reports/closeout-20261022/README.md) |
 
-The [reviewed evidence release](https://github.com/Cipher-Atelier/dorabella-cipher/releases/tag/archive-2026-10-21) holds the complete screened object set, including the large result/checkpoint collection, original byte hashes and **147,496 provenance mappings**. Git holds 1,178 small originals of code, reports, logs and selected summaries for browsing. Content-identical objects have one canonical copy; the release manifest preserves all retained archive-member/version mappings.
+The [21 October reviewed evidence release](https://github.com/Cipher-Atelier/dorabella-cipher/releases/tag/archive-2026-10-21) holds that complete screened object set, including the large result/checkpoint collection, original byte hashes and **147,496 provenance mappings**. Its Git intake holds 1,178 small originals of code, reports, logs and selected summaries for browsing. Content-identical objects have one canonical copy; the release manifest preserves all retained archive-member/version mappings. The separate [22 October supplement](reports/closeout-20261022/README.md) adds eight browsable originals and a Release capsule of 1,335 screened code/report files; these counts describe separate selections and are not deduplicated across deposits.
 
 ## Interpret evidence carefully
 
